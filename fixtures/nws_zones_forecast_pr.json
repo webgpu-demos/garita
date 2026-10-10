@@ -1,0 +1,385 @@
+{
+    "@context": {
+        "@version": "1.1"
+    },
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "https://api.weather.gov/zones/forecast/PRZ001",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/zones/forecast/PRZ001",
+                "@type": "wx:Zone",
+                "id": "PRZ001",
+                "type": "public",
+                "name": "San Juan and Vicinity",
+                "effectiveDate": "2026-04-16T18:00:00+00:00",
+                "expirationDate": "2200-01-01T00:00:00+00:00",
+                "state": "PR",
+                "forecastOffice": "https://api.weather.gov/offices/SJU",
+                "gridIdentifier": "SJU",
+                "awipsLocationIdentifier": "SJU",
+                "cwa": [
+                    "SJU"
+                ],
+                "forecastOffices": [
+                    "https://api.weather.gov/offices/SJU"
+                ],
+                "timeZone": [
+                    "America/Puerto_Rico"
+                ],
+                "observationStations": [],
+                "radarStation": null
+            }
+        },
+        {
+            "id": "https://api.weather.gov/zones/forecast/PRZ002",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/zones/forecast/PRZ002",
+                "@type": "wx:Zone",
+                "id": "PRZ002",
+                "type": "public",
+                "name": "Northeast",
+                "effectiveDate": "2026-04-16T18:00:00+00:00",
+                "expirationDate": "2200-01-01T00:00:00+00:00",
+                "state": "PR",
+                "forecastOffice": "https://api.weather.gov/offices/SJU",
+                "gridIdentifier": "SJU",
+                "awipsLocationIdentifier": "SJU",
+                "cwa": [
+                    "SJU"
+                ],
+                "forecastOffices": [
+                    "https://api.weather.gov/offices/SJU"
+                ],
+                "timeZone": [
+                    "America/Puerto_Rico"
+                ],
+                "observationStations": [],
+                "radarStation": null
+            }
+        },
+        {
+            "id": "https://api.weather.gov/zones/forecast/PRZ003",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/zones/forecast/PRZ003",
+                "@type": "wx:Zone",
+                "id": "PRZ003",
+                "type": "public",
+                "name": "Southeast",
+                "effectiveDate": "2026-04-16T18:00:00+00:00",
+                "expirationDate": "2200-01-01T00:00:00+00:00",
+                "state": "PR",
+                "forecastOffice": "https://api.weather.gov/offices/SJU",
+                "gridIdentifier": "SJU",
+                "awipsLocationIdentifier": "SJU",
+                "cwa": [
+                    "SJU"
+                ],
+                "forecastOffices": [
+                    "https://api.weather.gov/offices/SJU"
+                ],
+                "timeZone": [
+                    "America/Puerto_Rico"
+                ],
+                "observationStations": [],
+                "radarStation": null
+            }
+        },
+        {
+            "id": "https://api.weather.gov/zones/forecast/PRZ004",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/zones/forecast/PRZ004",
+                "@type": "wx:Zone",
+                "id": "PRZ004",
+                "type": "public",
+                "name": "Eastern Interior",
+                "effectiveDate": "2026-04-16T18:00:00+00:00",
+                "expirationDate": "2200-01-01T00:00:00+00:00",
+                "state": "PR",
+                "forecastOffice": "https://api.weather.gov/offices/SJU",
+                "gridIdentifier": "SJU",
+                "awipsLocationIdentifier": "SJU",
+                "cwa": [
+                    "SJU"
+                ],
+                "forecastOffices": [
+                    "https://api.weather.gov/offices/SJU"
+                ],
+                "timeZone": [
+                    "America/Puerto_Rico"
+                ],
+                "observationStations": [],
+                "radarStation": null
+            }
+        },
+        {
+            "id": "https://api.weather.gov/zones/forecast/PRZ005",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/zones/forecast/PRZ005",
+                "@type": "wx:Zone",
+                "id": "PRZ005",
+                "type": "public",
+                "name": "North Central",
+                "effectiveDate": "2026-04-16T18:00:00+00:00",
+                "expirationDate": "2200-01-01T00:00:00+00:00",
+                "state": "PR",
+                "forecastOffice": "https://api.weather.gov/offices/SJU",
+                "gridIdentifier": "SJU",
+                "awipsLocationIdentifier": "SJU",
+                "cwa": [
+                    "SJU"
+                ],
+                "forecastOffices": [
+                    "https://api.weather.gov/offices/SJU"
+                ],
+                "timeZone": [
+                    "America/Puerto_Rico"
+                ],
+                "observationStations": [],
+                "radarStation": null
+            }
+        },
+        {
+            "id": "https://api.weather.gov/zones/forecast/PRZ006",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/zones/forecast/PRZ006",
+                "@type": "wx:Zone",
+                "id": "PRZ006",
+                "type": "public",
+                "name": "Central Interior",
+                "effectiveDate": "2026-04-16T18:00:00+00:00",
+                "expirationDate": "2200-01-01T00:00:00+00:00",
+                "state": "PR",
+                "forecastOffice": "https://api.weather.gov/offices/SJU",
+                "gridIdentifier": "SJU",
+                "awipsLocationIdentifier": "SJU",
+                "cwa": [
+                    "SJU"
+                ],
+                "forecastOffices": [
+                    "https://api.weather.gov/offices/SJU"
+                ],
+                "timeZone": [
+                    "America/Puerto_Rico"
+                ],
+                "observationStations": [],
+                "radarStation": null
+            }
+        },
+        {
+            "id": "https://api.weather.gov/zones/forecast/PRZ007",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/zones/forecast/PRZ007",
+                "@type": "wx:Zone",
+                "id": "PRZ007",
+                "type": "public",
+                "name": "Ponce and Vicinity",
+                "effectiveDate": "2026-04-16T18:00:00+00:00",
+                "expirationDate": "2200-01-01T00:00:00+00:00",
+                "state": "PR",
+                "forecastOffice": "https://api.weather.gov/offices/SJU",
+                "gridIdentifier": "SJU",
+                "awipsLocationIdentifier": "SJU",
+                "cwa": [
+                    "SJU"
+                ],
+                "forecastOffices": [
+                    "https://api.weather.gov/offices/SJU"
+                ],
+                "timeZone": [
+                    "America/Puerto_Rico"
+                ],
+                "observationStations": [],
+                "radarStation": null
+            }
+        },
+        {
+            "id": "https://api.weather.gov/zones/forecast/PRZ008",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/zones/forecast/PRZ008",
+                "@type": "wx:Zone",
+                "id": "PRZ008",
+                "type": "public",
+                "name": "Northwest",
+                "effectiveDate": "2026-04-16T18:00:00+00:00",
+                "expirationDate": "2200-01-01T00:00:00+00:00",
+                "state": "PR",
+                "forecastOffice": "https://api.weather.gov/offices/SJU",
+                "gridIdentifier": "SJU",
+                "awipsLocationIdentifier": "SJU",
+                "cwa": [
+                    "SJU"
+                ],
+                "forecastOffices": [
+                    "https://api.weather.gov/offices/SJU"
+                ],
+                "timeZone": [
+                    "America/Puerto_Rico"
+                ],
+                "observationStations": [],
+                "radarStation": null
+            }
+        },
+        {
+            "id": "https://api.weather.gov/zones/forecast/PRZ009",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/zones/forecast/PRZ009",
+                "@type": "wx:Zone",
+                "id": "PRZ009",
+                "type": "public",
+                "name": "Western Interior",
+                "effectiveDate": "2026-04-16T18:00:00+00:00",
+                "expirationDate": "2200-01-01T00:00:00+00:00",
+                "state": "PR",
+                "forecastOffice": "https://api.weather.gov/offices/SJU",
+                "gridIdentifier": "SJU",
+                "awipsLocationIdentifier": "SJU",
+                "cwa": [
+                    "SJU"
+                ],
+                "forecastOffices": [
+                    "https://api.weather.gov/offices/SJU"
+                ],
+                "timeZone": [
+                    "America/Puerto_Rico"
+                ],
+                "observationStations": [],
+                "radarStation": null
+            }
+        },
+        {
+            "id": "https://api.weather.gov/zones/forecast/PRZ010",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/zones/forecast/PRZ010",
+                "@type": "wx:Zone",
+                "id": "PRZ010",
+                "type": "public",
+                "name": "Mayaguez and Vicinity",
+                "effectiveDate": "2026-04-16T18:00:00+00:00",
+                "expirationDate": "2200-01-01T00:00:00+00:00",
+                "state": "PR",
+                "forecastOffice": "https://api.weather.gov/offices/SJU",
+                "gridIdentifier": "SJU",
+                "awipsLocationIdentifier": "SJU",
+                "cwa": [
+                    "SJU"
+                ],
+                "forecastOffices": [
+                    "https://api.weather.gov/offices/SJU"
+                ],
+                "timeZone": [
+                    "America/Puerto_Rico"
+                ],
+                "observationStations": [],
+                "radarStation": null
+            }
+        },
+        {
+            "id": "https://api.weather.gov/zones/forecast/PRZ011",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/zones/forecast/PRZ011",
+                "@type": "wx:Zone",
+                "id": "PRZ011",
+                "type": "public",
+                "name": "Southwest",
+                "effectiveDate": "2026-04-16T18:00:00+00:00",
+                "expirationDate": "2200-01-01T00:00:00+00:00",
+                "state": "PR",
+                "forecastOffice": "https://api.weather.gov/offices/SJU",
+                "gridIdentifier": "SJU",
+                "awipsLocationIdentifier": "SJU",
+                "cwa": [
+                    "SJU"
+                ],
+                "forecastOffices": [
+                    "https://api.weather.gov/offices/SJU"
+                ],
+                "timeZone": [
+                    "America/Puerto_Rico"
+                ],
+                "observationStations": [],
+                "radarStation": null
+            }
+        },
+        {
+            "id": "https://api.weather.gov/zones/forecast/PRZ012",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/zones/forecast/PRZ012",
+                "@type": "wx:Zone",
+                "id": "PRZ012",
+                "type": "public",
+                "name": "Culebra",
+                "effectiveDate": "2026-04-16T18:00:00+00:00",
+                "expirationDate": "2200-01-01T00:00:00+00:00",
+                "state": "PR",
+                "forecastOffice": "https://api.weather.gov/offices/SJU",
+                "gridIdentifier": "SJU",
+                "awipsLocationIdentifier": "SJU",
+                "cwa": [
+                    "SJU"
+                ],
+                "forecastOffices": [
+                    "https://api.weather.gov/offices/SJU"
+                ],
+                "timeZone": [
+                    "America/Puerto_Rico"
+                ],
+                "observationStations": [],
+                "radarStation": null
+            }
+        },
+        {
+            "id": "https://api.weather.gov/zones/forecast/PRZ013",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/zones/forecast/PRZ013",
+                "@type": "wx:Zone",
+                "id": "PRZ013",
+                "type": "public",
+                "name": "Vieques",
+                "effectiveDate": "2026-04-16T18:00:00+00:00",
+                "expirationDate": "2200-01-01T00:00:00+00:00",
+                "state": "PR",
+                "forecastOffice": "https://api.weather.gov/offices/SJU",
+                "gridIdentifier": "SJU",
+                "awipsLocationIdentifier": "SJU",
+                "cwa": [
+                    "SJU"
+                ],
+                "forecastOffices": [
+                    "https://api.weather.gov/offices/SJU"
+                ],
+                "timeZone": [
+                    "America/Puerto_Rico"
+                ],
+                "observationStations": [],
+                "radarStation": null
+            }
+        }
+    ]
+}

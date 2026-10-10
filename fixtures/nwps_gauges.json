@@ -1,0 +1,4724 @@
+{
+  "gauges": [
+    {
+      "lid": "ADJP4",
+      "name": "Lago Garzas nr Adjuntas",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.1316487,
+      "longitude": -66.7425802,
+      "pedts": {
+        "observed": "HPIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 2415.14,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "AIBP4",
+      "name": "Rio De La Plata at Proyecto La Plata",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.15801429,
+      "longitude": -66.22850099,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 10.07,
+          "primaryUnit": "ft",
+          "secondary": 0.037,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:15:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "ARCP4",
+      "name": "Lago Caonillas at Damsite",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.27654235,
+      "longitude": -66.656418,
+      "pedts": {
+        "observed": "HPIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 826.08,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "ARDP4",
+      "name": "Rio Tanama at Charco Hondo",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.4121002,
+      "longitude": -66.7143277,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 3.35,
+          "primaryUnit": "ft",
+          "secondary": 0.054,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "AREP4",
+      "name": "Rio Grande De Arecibo near San Pedro",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.3968229,
+      "longitude": -66.6911773,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 7.04,
+          "primaryUnit": "ft",
+          "secondary": 0.333,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "ARGP4",
+      "name": "Lago Dos Bocas at Arecibo",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.33543948,
+      "longitude": -66.6665906,
+      "pedts": {
+        "observed": "HPIRG",
+        "forecast": "HPIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 293.64,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "ARHP4",
+      "name": "Rio Limon above Lago Dos Bocas",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.32410113,
+      "longitude": -66.6206455,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 7.53,
+          "primaryUnit": "ft",
+          "secondary": 0.021,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "AYTP4",
+      "name": "Rio Arroyata at Rio Arroyata",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.220984,
+      "longitude": -66.2028342,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 2.53,
+          "primaryUnit": "ft",
+          "secondary": 0.002,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:15:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "BAUP4",
+      "name": "Rio Bauta near Orocovis",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.23396665,
+      "longitude": -66.45444347,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 3.56,
+          "primaryUnit": "ft",
+          "secondary": 0.008,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "BAYP4",
+      "name": "Rio Bayamon at Bayamon",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.33228474,
+      "longitude": -66.1390891,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 1.88,
+          "primaryUnit": "ft",
+          "secondary": 0.009,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "BCAP4",
+      "name": "Rio Bayamon at Quebrada Santa Catalina",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.4070314,
+      "longitude": -66.118083,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 1.09,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "CABP4",
+      "name": "Rio Bairoa above Bairoa",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.25629848,
+      "longitude": -66.0439017,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 4.2,
+          "primaryUnit": "ft",
+          "secondary": 0.003,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "CAGP4",
+      "name": "Rio Grande De Loiza at Caguas",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.24070482,
+      "longitude": -66.00919819,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 4.58,
+          "primaryUnit": "ft",
+          "secondary": 0.098,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "CAKP4",
+      "name": "Rio Turabo above Borinquen",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.16023654,
+      "longitude": -66.0396094,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 3.76,
+          "primaryUnit": "ft",
+          "secondary": 0.008,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "CAMP4",
+      "name": "Rio Caguitas at Villa Blanca",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.24671282,
+      "longitude": -66.027243,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 7.94,
+          "primaryUnit": "ft",
+          "secondary": 0.009,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:46:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "CAPP4",
+      "name": "Rio Canas at Rio Canas",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.292508,
+      "longitude": -66.0446989,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 9,
+          "primaryUnit": "ft",
+          "secondary": 0.002,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "CAYP4",
+      "name": "Rio de la Plata at Cayey",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.13440423,
+      "longitude": -66.13822187,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 3.8,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "CDPP4",
+      "name": "Canal de Patillas at Intake 113",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 17.98095749,
+      "longitude": -66.26681229,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 1.37,
+          "primaryUnit": "ft",
+          "secondary": 0.006,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "CIAP4",
+      "name": "Rio Grande De Manati near Ciales",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.32243776,
+      "longitude": -66.4595638,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 2.34,
+          "primaryUnit": "ft",
+          "secondary": 0.063,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "CIEP4",
+      "name": "Rio Bayamon below Lago de Cidra Dam",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.2007903,
+      "longitude": -66.1387777,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 5.63,
+          "primaryUnit": "ft",
+          "secondary": 0.003,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:15:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "CIFP4",
+      "name": "Rio Bayamon at Arenas",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.16718065,
+      "longitude": -66.1215551,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 1.28,
+          "primaryUnit": "ft",
+          "secondary": 0,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "CLBP4",
+      "name": "Culebra Tide Gauge (in MLLW)",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.3008,
+      "longitude": -65.3025,
+      "pedts": {
+        "observed": "HMIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 0.96,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:54:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "CMAP4",
+      "name": "Rio Camuy near Bayaney",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.39443982,
+      "longitude": -66.8176066,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 4.98,
+          "primaryUnit": "ft",
+          "secondary": 0.048,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "CNAP4",
+      "name": "Rio Canovanas near Campo Rico",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.31648528,
+      "longitude": -65.88852228,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 2.32,
+          "primaryUnit": "ft",
+          "secondary": 0.011,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:15:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "COAP4",
+      "name": "Rio Coamo at Coamo",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.08152279,
+      "longitude": -66.3544338,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 4.61,
+          "primaryUnit": "ft",
+          "secondary": 0.001,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "COMP4",
+      "name": "Rio De La Plata at Comerio",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.22017012,
+      "longitude": -66.2242317,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 5.42,
+          "primaryUnit": "ft",
+          "secondary": 0.044,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "CORP4",
+      "name": "Rio Corozal at Corozal",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.34258986,
+      "longitude": -66.3219469,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 4.54,
+          "primaryUnit": "ft",
+          "secondary": 0.004,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "CPFP4",
+      "name": "Canal de Patillas at Forest Bay",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.0188539,
+      "longitude": -66.02266408,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 1.57,
+          "primaryUnit": "ft",
+          "secondary": 0.022,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:15:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "CRBP4",
+      "name": "Canal de Riego de Lajas at Bo. Betances",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.036870653,
+      "longitude": -67.1317676,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 1.83,
+          "primaryUnit": "ft",
+          "secondary": 0.017,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "action",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "CRSP4",
+      "name": "Canal de Riego de Lajas Sabana Grande",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.03304715,
+      "longitude": -66.8977375,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 1.13,
+          "primaryUnit": "ft",
+          "secondary": 0,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "DRAP4",
+      "name": "Lago de Cidra at Damsite nr Cidra",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.1991666666667,
+      "longitude": -66.1413888888889,
+      "pedts": {
+        "observed": "HPIR2",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 1314.33,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "ESPP4",
+      "name": "Esperanza, Vieques Tide Gauge (in MLLW)",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.085,
+      "longitude": -65.4675,
+      "pedts": {
+        "observed": "HMIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 0.94,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:54:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "FAEP4",
+      "name": "Rio Fajardo at Paraiso",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.2808247,
+      "longitude": -65.7006729,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 4.5,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:15:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "FAJP4",
+      "name": "Rio Fajardo near Fajardo",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.29696026,
+      "longitude": -65.693434,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 2.84,
+          "primaryUnit": "ft",
+          "secondary": 0.004,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "low_threshold",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "GCRP4",
+      "name": "Rio Guayanes at Central Roig",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.06440843,
+      "longitude": -65.87373727,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 13.08,
+          "primaryUnit": "ft",
+          "secondary": 0.057,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "GRPP4",
+      "name": "Rio Grande de Patillas blw Lago Patillas",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.014409262,
+      "longitude": -66.0232196,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 5.7,
+          "primaryUnit": "ft",
+          "secondary": 0.052,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:15:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "GUAP4",
+      "name": "Rio Guajataca below Lago Guajataca",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.39828094,
+      "longitude": -66.9273999,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 7.28,
+          "primaryUnit": "ft",
+          "secondary": 0.262,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T02:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "GURP4",
+      "name": "Rio Gurabo at Gurabo",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.25649864,
+      "longitude": -65.9676837,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 4.34,
+          "primaryUnit": "ft",
+          "secondary": 0.027,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "GUTP4",
+      "name": "Rio Gurabo below El Mango",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.23216426,
+      "longitude": -65.8849385,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 7.56,
+          "primaryUnit": "ft",
+          "secondary": 0.009,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "GYAP4",
+      "name": "Rio Guayanilla near Guayanilla",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.04225808,
+      "longitude": -66.7977838,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 4.77,
+          "primaryUnit": "ft",
+          "secondary": 0.004,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:15:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "HORP4",
+      "name": "Rio Guanajibo near Hormigueros",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.1406935,
+      "longitude": -67.14837407,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 10.7,
+          "primaryUnit": "ft",
+          "secondary": 0.076,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "IANP4",
+      "name": "Rio Inabon at Real Abajo",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.08449533,
+      "longitude": -66.56269197,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 1.48,
+          "primaryUnit": "ft",
+          "secondary": 0.008,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T02:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "JAXP4",
+      "name": "Rio Caonillas at Paso Palma",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.2294279,
+      "longitude": -66.6367066,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 3.75,
+          "primaryUnit": "ft",
+          "secondary": 0.025,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "JAYP4",
+      "name": "Rio Saliente at Coabey",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.2108288,
+      "longitude": -66.5628032,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 3.14,
+          "primaryUnit": "ft",
+          "secondary": 0.009,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "JCGP4",
+      "name": "Rio Jacaguas Blw 149 nr Villalba",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.0831,
+      "longitude": -66.5039361,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 4.41,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "JLGP4",
+      "name": "Rio Jacaguas above Lago Guayabal",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.11460505,
+      "longitude": -66.5042639,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 4.07,
+          "primaryUnit": "ft",
+          "secondary": 0.019,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "JUAP4",
+      "name": "Rio Jacaguas at Juana Diaz",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.05231572,
+      "longitude": -66.51064169,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 4.63,
+          "primaryUnit": "ft",
+          "secondary": 0.012,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "JUBP4",
+      "name": "Lago Guayabal at Damsite near Juana Diaz",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.08581166,
+      "longitude": -66.5016777,
+      "pedts": {
+        "observed": "HPIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 339.49,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "LAGP4",
+      "name": "Canal de Riego de Lajas Blw Lajas Filtration Plant",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.0433596,
+      "longitude": -67.05490879,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 1.58,
+          "primaryUnit": "ft",
+          "secondary": 0.013,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T02:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "LARP4",
+      "name": "Rio Guajataca at Lares",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.29721058,
+      "longitude": -66.87348497,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 8.05,
+          "primaryUnit": "ft",
+          "secondary": 0.003,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:15:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "LBLP4",
+      "name": "Lago Blanco near Naguabo",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.22389059,
+      "longitude": -65.78142367,
+      "pedts": {
+        "observed": "HPIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 90.43,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "LCSP4",
+      "name": "Lago Carite at Spillway",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.07524014,
+      "longitude": -66.10683237,
+      "pedts": {
+        "observed": "HPIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 1779.44,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:15:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "LFAP4",
+      "name": "Lago Fajardo near Vapor",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.2968966,
+      "longitude": -65.6585783,
+      "pedts": {
+        "observed": "HPIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 157.98,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "LGUP4",
+      "name": "Lago Guayo at Damsite near Castaner",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.21065319,
+      "longitude": -66.8351816,
+      "pedts": {
+        "observed": "HPIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 1454.32,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "LLUP4",
+      "name": "Lago Luccheti at Damsite nr Yauco",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.09194455,
+      "longitude": -66.8646736,
+      "pedts": {
+        "observed": "HPIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 564.76,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "LLYP4",
+      "name": "Rio Yauco above Diversion Monserrate",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.04721348,
+      "longitude": -66.8414844,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 1.52,
+          "primaryUnit": "ft",
+          "secondary": 0.006,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "LOCP4",
+      "name": "Lago Loco at Damsite nr Yauco",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.04252458,
+      "longitude": -66.88794028,
+      "pedts": {
+        "observed": "HPIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 229.18,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "LOGP4",
+      "name": "Rio Loco at Las Latas",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.0071818,
+      "longitude": -66.8763204,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 1.62,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "LOPP4",
+      "name": "Canal de Riego de Lajas at Bo. Palmarejo",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.0373153,
+      "longitude": -67.0785977,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 1.87,
+          "primaryUnit": "ft",
+          "secondary": 0.015,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "LYOP4",
+      "name": "Rio Loco near Yauco",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.039964,
+      "longitude": -66.887953,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 2.56,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "MAUP4",
+      "name": "Rio Maunabo at Lizas",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.0252431,
+      "longitude": -65.9396074,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 3.73,
+          "primaryUnit": "ft",
+          "secondary": 0.004,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "MAYP4",
+      "name": "Rio Rosario near Hormigueros",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.15809875,
+      "longitude": -67.085388,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 2.09,
+          "primaryUnit": "ft",
+          "secondary": 0.085,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "MGIP4",
+      "name": "Magueyes Island Tide Gauge (in MLLW)",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 17.9717,
+      "longitude": -67.0467,
+      "pedts": {
+        "observed": "HMIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": -1.3,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "MGZP4",
+      "name": "Mayaguez Tide Gauge (in MLLW)",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.218,
+      "longitude": -67.159,
+      "pedts": {
+        "observed": "HMIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 1.08,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T04:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "MISP4",
+      "name": "Mona Tide Gauge (in MLLW)",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.09,
+      "longitude": -67.9386,
+      "pedts": {
+        "observed": "HMIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 1.13,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T04:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "MJAP4",
+      "name": "Canal de Riego de Lajas Abv Majinas Filtration Plant",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.043888,
+      "longitude": -66.94876,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 2,
+          "primaryUnit": "ft",
+          "secondary": 0.031,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:15:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "MJBP4",
+      "name": "Canal de Riego de Lajas Blw Majinas Filtration Plant",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.04258528,
+      "longitude": -66.94971559,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 2.9,
+          "primaryUnit": "ft",
+          "secondary": 0.026,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "MOCP4",
+      "name": "Rio Culebrinas at HWY 404 nr Moca",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.35974259,
+      "longitude": -67.0921687,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 9.96,
+          "primaryUnit": "ft",
+          "secondary": 0.217,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "MODP4",
+      "name": "Rio Culebrinas at Margarita Damsite nr Aguada",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.39450277,
+      "longitude": -67.1512,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 9.99,
+          "primaryUnit": "ft",
+          "secondary": 1.57,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "MORP4",
+      "name": "Rio Grande De Manati at HWY 115 nr Morovis",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.29745293,
+      "longitude": -66.40961487,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 2.89,
+          "primaryUnit": "ft",
+          "secondary": 0.02,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:15:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "MSAP4",
+      "name": "Rio Mameyes near Sabana",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.3268221,
+      "longitude": -65.75042089,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 2.21,
+          "primaryUnit": "ft",
+          "secondary": 0.02,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T04:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "NAMP4",
+      "name": "Rio Guadiana near Guadiana",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.29941118,
+      "longitude": -66.2281929,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 1.63,
+          "primaryUnit": "ft",
+          "secondary": 0.003,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "low_threshold",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "NARP4",
+      "name": "Lago La Plata",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.34300093,
+      "longitude": -66.23607079,
+      "pedts": {
+        "observed": "HPIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 143.87,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "NASP4",
+      "name": "Rio De La Plata below La Plata Dam",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.344012,
+      "longitude": -66.23842638,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 6.83,
+          "primaryUnit": "ft",
+          "secondary": 0,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T04:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "NGIP4",
+      "name": "Rio Icacos near Naguabo",
+      "rfc": {
+        "abbreviation": "",
+        "name": ""
+      },
+      "wfo": {
+        "abbreviation": "",
+        "name": ""
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.27523254,
+      "longitude": -65.7854406,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "obs_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "NGKP4",
+      "name": "Rio Blanco at Florida",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.23884539,
+      "longitude": -65.78460718,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 3.76,
+          "primaryUnit": "ft",
+          "secondary": 0.007,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "OROP4",
+      "name": "Lago Matrullas",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.21051212,
+      "longitude": -66.48017167,
+      "pedts": {
+        "observed": "HPIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 2407.07,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "PANP4",
+      "name": "Rio Marin near Patillas",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.03579773,
+      "longitude": -66.0093306,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 6.7,
+          "primaryUnit": "ft",
+          "secondary": 0.024,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "PASP4",
+      "name": "Lago Patillas",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.01774284,
+      "longitude": -66.0184973,
+      "pedts": {
+        "observed": "HPIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 215.77,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "PATP4",
+      "name": "Rio Patillas near Patillas",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.03218668,
+      "longitude": -66.0321088,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 4.82,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "PAXP4",
+      "name": "Canal de Patillas above Guayama Filtration Plant",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 17.98052185,
+      "longitude": -66.10072077,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 1.51,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "PCEP4",
+      "name": "Rio Cerrillos  above Lago Cerrillos",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.11480247,
+      "longitude": -66.6045061,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 0.43,
+          "primaryUnit": "ft",
+          "secondary": 0.011,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "PCXP4",
+      "name": "Lago Cerrillos at Damsite",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.07703459,
+      "longitude": -66.5754698,
+      "pedts": {
+        "observed": "HPIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 546.22,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "PCYP4",
+      "name": "Rio Cerrillos  below Lago Cerrillos",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.0708333333333,
+      "longitude": -66.5808333333333,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 0.93,
+          "primaryUnit": "ft",
+          "secondary": 0.005,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:15:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "PIEP4",
+      "name": "Rio Humacao at Las Piedras",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.17207287,
+      "longitude": -65.8690463,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 0.54,
+          "primaryUnit": "ft",
+          "secondary": 0.01,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "PLOP4",
+      "name": "Lago Loiza near Trujillo Alto",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.32791197,
+      "longitude": -66.016227919,
+      "pedts": {
+        "observed": "HPIRG",
+        "forecast": "HPIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 134.22,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:55:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "PRCP4",
+      "name": "Rio De La Plata below Comerio",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.274275,
+      "longitude": -66.20607778,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 5.8,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "PRNP4",
+      "name": "Rio Portugues at Parque Ceremonial",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.04158904,
+      "longitude": -66.62112579,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 2.25,
+          "primaryUnit": "ft",
+          "secondary": 0.003,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "PRTP4",
+      "name": "Rio Portugues near Tibes",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.09789468,
+      "longitude": -66.64248707,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 4.59,
+          "primaryUnit": "ft",
+          "secondary": 0.012,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T04:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "QJOP4",
+      "name": "Rio Piedras at Quebrada Josefina",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.40717006,
+      "longitude": -66.075166,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 1.62,
+          "primaryUnit": "ft",
+          "secondary": 0.009,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "QMAP4",
+      "name": "Rio Piedras at Quebrada Margarita",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.4135311,
+      "longitude": -66.1029717,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 2.88,
+          "primaryUnit": "ft",
+          "secondary": 0.005,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "QUEP4",
+      "name": "Lago Guajataca at Damsite",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.3983643,
+      "longitude": -66.9226998,
+      "pedts": {
+        "observed": "HPIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 654.67,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "minor",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "RGMP4",
+      "name": "Rio Grande De Manati near Manati",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.39744848,
+      "longitude": -66.49656039,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 10.83,
+          "primaryUnit": "ft",
+          "secondary": 0.203,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "RLCP4",
+      "name": "Canal de Riego de Lajas Abv Lajas Filtration Plant",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.04307352,
+      "longitude": -67.0521754,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 2.7,
+          "primaryUnit": "ft",
+          "secondary": 0.021,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "RPOP4",
+      "name": "Rio Piedras at Hato Rey",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.4075533,
+      "longitude": -66.06894369,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 3.68,
+          "primaryUnit": "ft",
+          "secondary": 0.015,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "SALP4",
+      "name": "Rio Lapa near Rabo del Buey",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.05774042,
+      "longitude": -66.2407232,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 5.35,
+          "primaryUnit": "ft",
+          "secondary": 0.001,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "SAMP4",
+      "name": "Rio Majada at La Plena",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.04274109,
+      "longitude": -66.2071116,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 3.27,
+          "primaryUnit": "ft",
+          "secondary": 0.01,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "SEBP4",
+      "name": "Rio Grande De Anasco near San Sebastian",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.28217419,
+      "longitude": -67.0505845,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 2.69,
+          "primaryUnit": "ft",
+          "secondary": 0.244,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "SJNP4",
+      "name": "San Juan, La Puntilla Tide Gauge (in MLLW)",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.4617,
+      "longitude": -66.1167,
+      "pedts": {
+        "observed": "HMIRG",
+        "forecast": "HMIFV"
+      },
+      "status": {
+        "observed": {
+          "primary": 1.09,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:54:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "SLKP4",
+      "name": "Rio Cayaguas at at Cerro Gordo",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.15187883,
+      "longitude": -65.9563133,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 6.08,
+          "primaryUnit": "ft",
+          "secondary": 0.017,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "SLLP4",
+      "name": "Rio Grande De Loiza at Quebrada Arenas",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.1180165,
+      "longitude": -65.98821947,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 5.14,
+          "primaryUnit": "ft",
+          "secondary": 0.016,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "SLNP4",
+      "name": "Rio Grande De Loiza at HWY 183",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.1837189,
+      "longitude": -65.9610553,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 7.5,
+          "primaryUnit": "ft",
+          "secondary": 0.046,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:15:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "SSAP4",
+      "name": "Rio Sabana at Sabana",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.32896945,
+      "longitude": -65.7306179,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 7.8,
+          "primaryUnit": "ft",
+          "secondary": 0.007,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "TOAP4",
+      "name": "Rio De La Plata near Toa Alta",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.40959249,
+      "longitude": -66.26057109,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 3.42,
+          "primaryUnit": "ft",
+          "secondary": 0.033,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "TOVP4",
+      "name": "Rio Toa Vaca above Lago Toa Vaca",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.1245157,
+      "longitude": -66.4573992,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 1.67,
+          "primaryUnit": "ft",
+          "secondary": 0.004,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:15:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "TOXP4",
+      "name": "Lago Toa Vaca at Damsite",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.1016583,
+      "longitude": -66.4890247,
+      "pedts": {
+        "observed": "HPIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 482.44,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:40:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "TRJP4",
+      "name": "Quebrada Grande at Bo. Dos Bocas",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.34844996,
+      "longitude": -65.99007067,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 3.88,
+          "primaryUnit": "ft",
+          "secondary": 0.004,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "TRUP4",
+      "name": "Rio Grande De Loiza below Dam",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.3402753,
+      "longitude": -66.00558468,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 2.77,
+          "primaryUnit": "ft",
+          "secondary": 0.002,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "USAP4",
+      "name": "Rio Usabon at HWY 162 nr Barranquitas",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.15955316,
+      "longitude": -66.3090357,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 2.93,
+          "primaryUnit": "ft",
+          "secondary": 0.004,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:00:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "UTHP4",
+      "name": "Rio Tanama near Utuado",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.29873289,
+      "longitude": -66.7826336,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 3.1,
+          "primaryUnit": "ft",
+          "secondary": 0.02,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "UTUP4",
+      "name": "Rio Grande De Arecibo above Utuado",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.24220775,
+      "longitude": -66.7219104,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 4.46,
+          "primaryUnit": "ft",
+          "secondary": 0.124,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "UTXP4",
+      "name": "Rio Grande De Arecibo below Utuado",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.3000995,
+      "longitude": -66.703716,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 4.29,
+          "primaryUnit": "ft",
+          "secondary": 0.052,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "VALP4",
+      "name": "Rio Valenciano near Juncos",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.21408426,
+      "longitude": -65.9257775,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 3.11,
+          "primaryUnit": "ft",
+          "secondary": 0.018,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:40:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "VEDP4",
+      "name": "Rio Espiritu Santo near Rio Grande",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.35791434,
+      "longitude": -65.8136078,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 3.4,
+          "primaryUnit": "ft",
+          "secondary": 0.02,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "VERP4",
+      "name": "Rio Grande nr Verde at Rio Grande",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.34341485,
+      "longitude": -65.8415914,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 5.03,
+          "primaryUnit": "ft",
+          "secondary": 0.011,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "VGBP4",
+      "name": "Rio Cibuco at Vega Baja",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.4453298,
+      "longitude": -66.3739892,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 4.39,
+          "primaryUnit": "ft",
+          "secondary": 0.035,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:30:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "VILP4",
+      "name": "Lago El Guineo at Damsite",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.15923943,
+      "longitude": -66.526025,
+      "pedts": {
+        "observed": "HPIRG",
+        "forecast": ""
+      },
+      "status": {
+        "observed": {
+          "primary": 2955.28,
+          "primaryUnit": "ft",
+          "secondary": -999,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "not_defined",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "lid": "YBUP4",
+      "name": "Rio Guayanes at Yabucoa",
+      "rfc": {
+        "abbreviation": "SERFC",
+        "name": "Southeast River Forecast Center"
+      },
+      "wfo": {
+        "abbreviation": "SJU",
+        "name": "San Juan"
+      },
+      "state": {
+        "abbreviation": "PR",
+        "name": "Puerto Rico"
+      },
+      "latitude": 18.05690857,
+      "longitude": -65.90071797,
+      "pedts": {
+        "observed": "HGIRG",
+        "forecast": "HGIFF"
+      },
+      "status": {
+        "observed": {
+          "primary": 10.48,
+          "primaryUnit": "ft",
+          "secondary": 0.033,
+          "secondaryUnit": "kcfs",
+          "floodCategory": "no_flooding",
+          "validTime": "2026-10-10T03:45:00Z"
+        },
+        "forecast": {
+          "primary": -999,
+          "primaryUnit": "",
+          "secondary": -999,
+          "secondaryUnit": "",
+          "floodCategory": "fcst_not_current",
+          "validTime": "0001-01-01T00:00:00Z"
+        }
+      }
+    }
+  ]
+}

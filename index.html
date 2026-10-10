@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Garita · Puerto Rico digital twin</title>
+  <meta name="description" content="A live digital twin of Puerto Rico: real terrain and imagery, public real-time feeds, and an ontology-backed store, for housing recovery and disaster response.">
+  <meta name="theme-color" content="#050f15">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23050f15'/%3E%3Cpath d='M16 4l6 6v3h-2v9h3v4H9v-4h3v-9h-2v-3z' fill='%23ff6a3d'/%3E%3Crect x='14.5' y='14' width='3' height='5' fill='%23050f15'/%3E%3C/svg%3E">
+  <style>
+    html, body { height: 100%; margin: 0; background: #050f15; color: #e9f2ef; overflow: hidden; }
+    #scene { position: fixed; inset: 0; width: 100%; height: 100%; display: block; outline: none; touch-action: none; }
+    #ui { position: fixed; inset: 0; pointer-events: none; }
+    #boot { position: fixed; inset: 0; display: grid; place-items: center; background: radial-gradient(120% 90% at 50% 60%, #0d2a36 0%, #071821 55%, #040b10 100%); z-index: 50; transition: opacity .8s ease; font: 500 12px/1.4 system-ui, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #a8c1c3; }
+    #boot.gone { opacity: 0; pointer-events: none; }
+    #boot b { display: block; font: 800 34px/1 system-ui, sans-serif; letter-spacing: .34em; color: #e9f2ef; margin: 0 0 14px .34em; }
+    #boot i { display: block; width: 220px; height: 2px; background: rgba(255,255,255,.12); margin: 18px auto 0; overflow: hidden; }
+    #boot i::after { content: ''; display: block; width: 40%; height: 100%; background: #ff6a3d; animation: bootbar 1.4s ease-in-out infinite; }
+    @keyframes bootbar { 0% { transform: translateX(-100%); } 100% { transform: translateX(260%); } }
+    @media (prefers-reduced-motion: reduce) { #boot i::after { animation: none; width: 100%; } }
+  </style>
+  <script type="module" crossorigin src="./assets/index-BhT6Bltc.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CAr0eCOi.css">
+</head>
+<body>
+  <canvas id="scene" tabindex="0" aria-label="3D view of Puerto Rico"></canvas>
+  <div id="ui"></div>
+  <div id="boot"><div style="text-align:center"><b>GARITA</b><span id="boot-stage">Starting</span><i></i></div></div>
+</body>
+</html>
