@@ -1,0 +1,7 @@
+{ "shots": [
+  { "id": "t1-sun-p10", "url": "https://webgpu-demos.github.io/garita/?ui=0&t=2026-10-10T21:20:00Z&cam=-66.075,18.452,2600,250,12", "w": 1280, "h": 800, "wait": 4000 },
+  { "id": "t2-sun-p03", "url": "https://webgpu-demos.github.io/garita/?ui=0&t=2026-10-10T21:50:00Z&cam=-66.075,18.452,2600,250,12", "w": 1280, "h": 800, "wait": 4000 },
+  { "id": "t3-night-top", "url": "https://webgpu-demos.github.io/garita/?ui=0&t=2026-10-11T02:00:00Z&cam=-66.105,18.455,9000,200,45", "w": 1280, "h": 800, "wait": 4000 },
+  { "id": "t4-twilight-top", "url": "https://webgpu-demos.github.io/garita/?ui=0&t=2026-10-10T22:30:00Z&cam=-66.105,18.455,9000,200,45", "w": 1280, "h": 800, "wait": 4000 },
+  { "id": "t5-osj-day", "url": "https://webgpu-demos.github.io/garita/?ui=0&t=2026-10-10T15:30:00Z&cam=-66.116,18.466,1600,20,32", "w": 1280, "h": 800, "wait": 4000 }
+] }
