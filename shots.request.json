@@ -1,0 +1,5 @@
+{ "shots": [
+ { "id": "top-p03-basic", "url": "https://webgpu-demos.github.io/garita/dev/sky/?post=basic&ui=0&nofeeds=1&t=2026-10-10T21:50:00Z&cam=-66.105,18.455,9000,200,45", "w": 960, "h": 600, "wait": 3000 },
+ { "id": "sun-p03-basic", "url": "https://webgpu-demos.github.io/garita/dev/sky/?post=basic&ui=0&nofeeds=1&t=2026-10-10T21:50:00Z&cam=-66.075,18.452,2600,250,12", "w": 960, "h": 600, "wait": 3000 },
+ { "id": "sun-m06-basic", "url": "https://webgpu-demos.github.io/garita/dev/sky/?post=basic&ui=0&nofeeds=1&t=2026-10-10T22:30:00Z&cam=-66.075,18.452,2600,250,12", "w": 960, "h": 600, "wait": 3000 }
+] }
