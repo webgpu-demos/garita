@@ -1,0 +1,145 @@
+[   0.0s] bathy build start 2026-10-10T13:30:54.791220+00:00 commit e8ebf25
+[   0.3s] GDAL 3.8.4, released 2024/02/08
+[   0.9s] bucket dem/ has 521 dataset prefixes
+[   0.9s] prefixes that look like Puerto Rico / USVI:
+[   0.9s]     dem/NCEI_ninth_Topobathy_PuertoRico_9525/
+[   0.9s]     dem/NCEI_ninth_Topobathy_USVI_9529/
+[   0.9s]     dem/NCEI_third_Topobathy_PuertoRico_9524/
+[   0.9s]     dem/NCEI_third_Topobathy_USVI_9528/
+[   0.9s]     dem/NGS_PR_DEM_2016_8462/
+[   0.9s]     dem/NGS_PR_Topobathy_DEM_2019_9392/
+[   0.9s]     dem/NGS_USVI_Topobathy_DEM_2019_9414/
+[   0.9s]     dem/NGS_VirginiaRivers_Topobathy_2023_13999/
+[   0.9s]     dem/NOAA_USVI_DEM_2013_8390/
+[   0.9s]     dem/PR_Puerto_Rico_NGS_DEM_2015_6211/
+[   0.9s]     dem/PR_USGS_DEM_2015_8654/
+[   0.9s]     dem/SLR_Viewer_DEM_PR_8998/
+[   0.9s]     dem/SLR_Viewer_DEM_USVI_8999/
+[   0.9s]     dem/USACE_PR_Topobathy_DEM_2018_8571/
+[   0.9s]     dem/USACE_PuertoRico_Topobathy_prvd02_DEM_2016_5154/
+[   0.9s]     dem/USGS_PostMaria_PuertoRico_DEM_2018_9101/
+[   0.9s]     dem/USGS_PostMaria_USVI_DEM_2018_9113/
+[   0.9s]     dem/VA_Fair_Loud_Pr_Wm_DEM_2022_10210/
+[   0.9s] all NCEI (CUDEM) prefixes:
+[   0.9s]     dem/NCEI_ninth_Topobathy_2014_8483/
+[   0.9s]     dem/NCEI_ninth_Topobathy_AmSam_9460/
+[   0.9s]     dem/NCEI_ninth_Topobathy_CNMI_9560/
+[   0.9s]     dem/NCEI_ninth_Topobathy_Guam_9462/
+[   0.9s]     dem/NCEI_ninth_Topobathy_Hawaii_9428/
+[   0.9s]     dem/NCEI_ninth_Topobathy_PuertoRico_9525/
+[   0.9s]     dem/NCEI_ninth_Topobathy_USVI_9529/
+[   0.9s]     dem/NCEI_third_Topobathy_2014_8580/
+[   0.9s]     dem/NCEI_third_Topobathy_AmSam_9461/
+[   0.9s]     dem/NCEI_third_Topobathy_CNMI_9561/
+[   0.9s]     dem/NCEI_third_Topobathy_Guam_9463/
+[   0.9s]     dem/NCEI_third_Topobathy_Hawaii_9429/
+[   0.9s]     dem/NCEI_third_Topobathy_PuertoRico_9524/
+[   0.9s]     dem/NCEI_third_Topobathy_USVI_9528/
+[   1.1s] dem/NCEI_ninth_Topobathy_PuertoRico_9525/: 65 objects, 4.99 GB
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/399919.xml 428
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/CUDEM_Amante_et_al_2023.pdf 8887701
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/NCEI_ninth_Topobathy_PuertoRico_EPSG-4269.vrt 12601
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/cudem_ninth_pr_m9525_met.xml 85844
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/cudem_ninth_pr_m9525_met_forHumans.html 82154
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/index.html 7422
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/ninth_spatial_meta_pr.zip 115071483
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/catalog.json 3017
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/index.html 3948
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x00_w066x00_2022v2.json 4845
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x00_w066x25_2022v2.json 4835
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x00_w066x50_2022v2.json 4841
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x00_w066x75_2022v2.json 4841
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x00_w067x00_2022v2.json 4837
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x00_w067x25_2022v2.json 4841
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x25_w065x50_2022v2.json 4838
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x25_w065x75_2022v2.json 4845
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x25_w066x00_2022v2.json 4845
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x25_w066x25_2022v2.json 4838
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x25_w066x50_2022v2.json 4838
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x25_w066x75_2022v2.json 4842
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x25_w067x00_2022v2.json 4838
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x25_w067x25_2022v2.json 4845
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x25_w068x00_2022v1.json 4835
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x50_w065x50_2022v2.json 4838
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x50_w065x75_2022v2.json 4841
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x50_w066x00_2022v2.json 4842
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x50_w066x25_2022v2.json 4842
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x50_w066x50_2022v2.json 4838
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x50_w066x75_2022v2.json 4838
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x50_w067x00_2022v2.json 4841
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x50_w067x25_2022v2.json 4845
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x50_w067x50_2022v2.json 4842
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x75_w067x00_2022v2.json 4845
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/ncei19_n18x75_w067x25_2022v2.json 4845
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/noaa_dem_collection_m9525.json 0
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/stac/noaa_dem_item_collection_m9525.json 141150
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/tileindex_NCEI_ninth_Topobathy_PuertoRico.zip 2151
+[   1.1s]     non-tif: dem/NCEI_ninth_Topobathy_PuertoRico_9525/urllist9525.txt 7410
+[   1.1s] 1/9" tif names: ncei19_n18x00_w066x00_2022v2.tif ncei19_n18x00_w066x25_2022v2.tif ncei19_n18x00_w066x50_2022v2.tif ncei19_n18x00_w066x75_2022v2.tif ncei19_n18x00_w067x00_2022v2.tif ncei19_n18x00_w067x25_2022v2.tif ncei19_n18x25_w065x50_2022v2.tif ncei19_n18x25_w065x75_2022v2.tif ncei19_n18x25_w066x00_2022v2.tif ncei19_n18x25_w066x25_2022v2.tif ncei19_n18x25_w066x50_2022v2.tif ncei19_n18x25_w066x75_2022v2.tif ncei19_n18x25_w067x00_2022v2.tif ncei19_n18x25_w067x25_2022v2.tif ncei19_n18x25_w068x00_2022v1.tif ncei19_n18x50_w065x50_2022v2.tif ncei19_n18x50_w065x75_2022v2.tif ncei19_n18x50_w066x00_2022v2.tif ncei19_n18x50_w066x25_2022v2.tif ncei19_n18x50_w066x50_2022v2.tif ncei19_n18x50_w066x75_2022v2.tif ncei19_n18x50_w067x00_2022v2.tif ncei19_n18x50_w067x25_2022v2.tif ncei19_n18x50_w067x50_2022v2.tif ncei19_n18x75_w067x00_2022v2.tif ncei19_n18x75_w067x25_2022v2.tif
+[   1.1s] 1/9" tiles inside the island box: 26 of 26
+[   1.6s] gdalinfo ncei19_n18x00_w066x00_2022v2.tif {"size": [8112, 8112], "geoTransform": [-66.00018518518665, 3.08641975312e-05, 0.0, 18.000185185186673, 0.0, -3.08641975312e-05], "crs": "COMPOUNDCRS[\"NAD83 + PRVD02 height\",     GEOGCRS[\"NAD83\",         DATUM[\"North American Datum 1983\",             ELLIPSOID[\"GRS 1980\",6378137,298.257222101,    ", "crs_tail": "d height (H)\",up,                 LENGTHUNIT[\"metre\",1]],         USAGE[             SCOPE[\"Geodesy, engineering survey, topographic mapping.\"],             AREA[\"Puerto Rico - onshore.\"],             BBOX[17.87,-67.97,18.57,-65.19]],         ID[\"EPSG\",6641]]]", "nodata": -9999.0, "type": "Float32", "block": [512, 512], "overviews": [[4056, 4056], [2028, 2028], [1014, 1014], [507, 507]], "image_structure": {"COMPRESSION": "DEFLATE", "INTERLEAVE": "BAND", "LAYOUT": "COG", "PREDICTOR": "3"}, "metadata": {"AREA_OR_POINT": "Area", "NC_GLOBAL#node_offset": "1", "TIFFTAG_COPYRIGHT": "DOC/NOAA/NESDIS/NCEI > National Centers for Environmental Information, NESDIS, NOAA, U.S. Department of Commerce", "TIFFTAG_DATETIME": "20220603053510", "TIFFTAG_IMAGEDESCRIPTION": "Topography-Bathymetry; PRVD02 height", "tos#node_offset": "1"}, "corners": {"upperLeft": [-66.0001852, 18.0001852], "lowerLeft": [-66.0001852, 17.7498148], "lowerRight": [-65.7498148, 17.7498148], "upperRight": [-65.7498148, 18.0001852], "center": [-65.875, 17.875]}}
+[   1.8s] 1/3" candidate dem/NCEI_third_Topobathy_PuertoRico_9524/: 71 objects, 29 tif, 0.89 GB
+[   1.8s]     names: ncei13_n17x75_w065x75_2022v1.tif ncei13_n17x75_w066x00_2022v1.tif ncei13_n17x75_w066x25_2022v1.tif ncei13_n17x75_w066x50_2022v1.tif ncei13_n17x75_w066x75_2022v1.tif ncei13_n17x75_w067x00_2022v1.tif ncei13_n17x75_w067x25_2022v1.tif ncei13_n17x75_w067x50_2022v1.tif ncei13_n18x00_w065x50_2022v1.tif ncei13_n18x00_w065x75_2022v1.tif ncei13_n18x00_w067x50_2022v1.tif ncei13_n18x00_w067x75_2022v1.tif ncei13_n18x00_w068x00_2022v1.tif ncei13_n18x25_w067x50_2022v1.tif ncei13_n18x25_w067x75_2022v1.tif ncei13_n18x50_w067x75_2022v1.tif ncei13_n18x50_w068x00_2022v1.tif ncei13_n18x75_w065x50_2022v1.tif ncei13_n18x75_w065x75_2022v1.tif ncei13_n18x75_w066x00_2022v1.tif ncei13_n18x75_w066x25_2022v1.tif ncei13_n18x75_w066x50_2022v1.tif ncei13_n18x75_w066x75_2022v1.tif ncei13_n18x75_w067x50_2022v1.tif ncei13_n18x75_w067x75_2022v1.tif ncei13_n19x00_w066x75_2022v1.tif ncei13_n19x00_w067x00_2022v1.tif ncei13_n19x00_w067x25_2022v1.tif ncei13_n19x00_w067x50_2022v1.tif
+[   2.3s] gdalinfo ncei13_n18x00_w065x50_2022v1.tif {"size": [2712, 2712], "geoTransform": [-65.50055555555979, 9.25925925957e-05, 0.0, 18.00055555555978, 0.0, -9.25925925957e-05], "crs": "COMPOUNDCRS[\"NAD83 + PRVD02 height\",     GEOGCRS[\"NAD83\",         DATUM[\"North American Datum 1983\",             ELLIPSOID[\"GRS 1980\",6378137,298.257222101,    ", "crs_tail": "d height (H)\",up,                 LENGTHUNIT[\"metre\",1]],         USAGE[             SCOPE[\"Geodesy, engineering survey, topographic mapping.\"],             AREA[\"Puerto Rico - onshore.\"],             BBOX[17.87,-67.97,18.57,-65.19]],         ID[\"EPSG\",6641]]]", "nodata": -9999.0, "type": "Float32", "block": [512, 512], "overviews": [[1356, 1356], [678, 678], [339, 339]], "image_structure": {"COMPRESSION": "DEFLATE", "INTERLEAVE": "BAND", "LAYOUT": "COG", "PREDICTOR": "3"}, "metadata": {"AREA_OR_POINT": "Area", "NC_GLOBAL#node_offset": "1", "TIFFTAG_COPYRIGHT": "DOC/NOAA/NESDIS/NCEI > National Centers for Environmental Information, NESDIS, NOAA, U.S. Department of Commerce", "TIFFTAG_DATETIME": "20220607091316", "TIFFTAG_IMAGEDESCRIPTION": "Bathymetry; PRVD02 height", "tos#node_offset": "1"}, "corners": {"upperLeft": [-65.5005556, 18.0005556], "lowerLeft": [-65.5005556, 17.7494444], "lowerRight": [-65.2494444, 17.7494444], "upperRight": [-65.2494444, 18.0005556], "center": [-65.375, 17.875]}}
+[   8.3s] remote 1/9" VRT built in 6.0s: size [89112, 32412], corners {"upperLeft": [-68.0001852, 18.7501852], "lowerLeft": [-68.0001852, 17.7498148], "lowerRight": [-65.2498148, 17.7498148], "upperRight": [-65.2498148, 18.7501852], "center": [-66.625, 18.25]}
+[   8.3s] probe off La Parguera (17.955 N, 67.05 W), 3x3 points 0.004 deg apart, metres:
+[  10.6s]      -18.9941082000732  -17.5260410308838  -17.6036319732666
+[  12.7s]      -19.090970993042  -1.31210649013519  -1.3357675075531
+[  15.1s]      -20.8070774078369  -19.0142974853516  -18.2058582305908
+[  15.1s] candidate tiles: z12 297, z13 1170
+[  20.8s] staged 26/26 c19 tiles at 25% -> 359.9 MB local
+[  30.1s] warp m13_19: 16896x4608 px z13 average in 9.0s, valid 66.1%, min -3087.326171875 max 1329.8690185546875
+[  30.3s] dem/NCEI_ninth_Topobathy_USVI_9529/: 9 tif, 1 inside the island box: ncei19_n18x50_w065x25_2022v2.tif
+[  30.7s] gdalinfo ncei19_n18x50_w065x25_2022v2.tif {"size": [8112, 8112], "geoTransform": [-65.25018518518665, 3.08641975312e-05, 0.0, 18.500185185186673, 0.0, -3.08641975312e-05], "crs": "COMPOUNDCRS[\"NAD83 + VIVD09 height\",     GEOGCRS[\"NAD83\",         DATUM[\"North American Datum 1983\",             ELLIPSOID[\"GRS 1980\",6378137,298.257222101,    ", "nodata": -9999.0, "overviews": [[4056, 4056], [2028, 2028], [1014, 1014], [507, 507]], "metadata": {"AREA_OR_POINT": "Area", "NC_GLOBAL#node_offset": "1", "TIFFTAG_COPYRIGHT": "DOC/NOAA/NESDIS/NCEI > National Centers for Environmental Information, NESDIS, NOAA, U.S. Department of Commerce", "TIFFTAG_DATETIME": "20220607084253", "TIFFTAG_IMAGEDESCRIPTION": "Topography-Bathymetry; VIVD09 height", "tos#node_offset": "1"}}
+[  32.5s] staged 1/1 u19 tiles at 25% -> 13.1 MB local
+[  33.6s] warp m13_u19: 16896x4608 px z13 average in 1.0s, valid 1.4%, min -60.93048095703125 max 81.95802307128906
+[  33.7s] u19 fills 1.41% of the z13 mosaic that was still empty
+[  39.3s] staged 17/17 c3 tiles at 100% -> 390.6 MB local
+[  48.1s] warp m13_3: 16896x4608 px z13 average in 8.6s, valid 28.2%, min -4478.2978515625 max 10.509923934936523
+[  48.2s] 1/3" underlay fills 28.03% of the z13 mosaic that 1/9" leaves empty
+[  48.5s] dem/NCEI_third_Topobathy_USVI_9528/: 15 tif, 3 inside the island box: ncei13_n18x00_w065x25_2022v1.tif ncei13_n18x25_w065x25_2022v1.tif ncei13_n18x75_w065x25_2022v1.tif
+[  49.0s] gdalinfo ncei13_n18x00_w065x25_2022v1.tif {"size": [2712, 2712], "geoTransform": [-65.25055555555979, 9.25925925957e-05, 0.0, 18.00055555555978, 0.0, -9.25925925957e-05], "crs": "COMPOUNDCRS[\"NAD83 + VIVD09 height\",     GEOGCRS[\"NAD83\",         DATUM[\"North American Datum 1983\",             ELLIPSOID[\"GRS 1980\",6378137,298.257222101,    ", "nodata": -9999.0, "overviews": [[1356, 1356], [678, 678], [339, 339]], "metadata": {"AREA_OR_POINT": "Area", "NC_GLOBAL#node_offset": "1", "TIFFTAG_COPYRIGHT": "DOC/NOAA/NESDIS/NCEI > National Centers for Environmental Information, NESDIS, NOAA, U.S. Department of Commerce", "TIFFTAG_DATETIME": "20220607091407", "TIFFTAG_IMAGEDESCRIPTION": "Bathymetry; VIVD09 height", "tos#node_offset": "1"}}
+[  51.5s] staged 3/3 u3 tiles at 100% -> 67.7 MB local
+[  53.1s] warp m13_u3: 16896x4608 px z13 average in 1.4s, valid 2.9%, min -4535.10546875 max -9.437859535217285
+[  53.2s] u3 fills 2.82% of the z13 mosaic that was still empty
+[ 238.2s] z13: wrote 1164 tiles of 1170 candidates (40.04 MB)
+[ 287.2s] z12: wrote 297 tiles of 297 candidates (13.40 MB)
+[ 287.3s] z13 mosaic: valid 98.4% of 16896x4608 px, min -4535.11 m, max 1329.87 m, below 0 m: 64.5% of valid cells
+[ 287.3s] depth histogram (z13 cells below 0 m):
+[ 287.4s]          0 ..     -2 m :     457674    0.9%
+[ 287.4s]         -2 ..     -5 m :     657918    1.3%
+[ 287.5s]         -5 ..    -10 m :    1521520    3.1%
+[ 287.5s]        -10 ..    -15 m :    2007260    4.1%
+[ 287.6s]        -15 ..    -20 m :    1984526    4.0%
+[ 287.6s]        -20 ..    -30 m :    4018183    8.1%
+[ 287.7s]        -30 ..    -40 m :    1726995    3.5%
+[ 287.7s]        -40 ..    -50 m :    1364501    2.8%
+[ 287.8s]        -50 ..    -60 m :    1689110    3.4%
+[ 287.8s]        -60 ..   -100 m :    1208589    2.4%
+[ 287.9s]       -100 ..   -200 m :     803465    1.6%
+[ 287.9s]       -200 ..   -500 m :    7654450   15.5%
+[ 288.0s]       -500 ..  -1000 m :   10692317   21.6%
+[ 288.0s]      -1000 ..  -9000 m :   13631638   27.6%
+[ 288.3s] land histogram (z13 cells >= 0 m): 0..1 m 625510, 1..5 m 1422110, 5..100 m 8405304, >100 m 16706152
+[ 288.3s] spot depths (native 1/9" window ~90 m square: centre / min / median / max; and the z13 tile cell):
+[ 289.2s]     San Juan Bay entrance channel (18.467, -66.13): {"n": 676, "valid": 1.0, "centre": -10.35, "min": -10.9, "median": -10.19, "max": -3.72, "z13_cell": -10.09, "lat": 18.467, "lon": -66.13}
+[ 290.0s]     San Juan Bay entrance channel (b) (18.469, -66.131): {"n": 676, "valid": 1.0, "centre": -3.38, "min": -6.14, "median": -3.97, "max": -3.07, "z13_cell": -3.52, "lat": 18.469, "lon": -66.131}
+[ 290.9s]     Bahia de Jobos (a) (17.938, -66.235): {"n": 676, "valid": 1.0, "centre": -0.19, "min": -0.31, "median": -0.15, "max": 0.48, "z13_cell": -0.18, "lat": 17.938, "lon": -66.235}
+[ 291.7s]     Bahia de Jobos (b) (17.935, -66.225): {"n": 676, "valid": 1.0, "centre": -6.67, "min": -6.95, "median": -6.64, "max": -6.12, "z13_cell": -6.71, "lat": 17.935, "lon": -66.225}
+[ 292.4s]     Bahia de Jobos (c) (17.945, -66.205): {"n": 676, "valid": 1.0, "centre": -1.5, "min": -3.7, "median": -1.54, "max": 0.72, "z13_cell": -1.55, "lat": 17.945, "lon": -66.205}
+[ 293.3s]     Mosquito Bay, Vieques (18.102, -65.445): {"n": 676, "valid": 1.0, "centre": -3.19, "min": -3.84, "median": -3.13, "max": -1.83, "z13_cell": -3.09, "lat": 18.102, "lon": -65.445}
+[ 294.1s]     La Parguera probe (17.955, -67.05): {"n": 676, "valid": 1.0, "centre": -1.29, "min": -1.8, "median": -1.31, "max": -0.24, "z13_cell": -1.29, "lat": 17.955, "lon": -67.05}
+[ 295.3s] QA image (4197, 2424) quality 76 -> 456 kB
+[ 299.3s] warp m14_san_juan: 2560x1792 px z14 average in 4.0s, valid 99.8%, min -551.7374267578125 max 142.94586181640625
+[ 299.8s] warp m14_san_juan_3: 2560x1792 px z14 bilinear in 0.5s, valid 0.7%, min -558.7212524414062 max -85.73601531982422
+[ 311.1s] z14: wrote 70 tiles of 70 candidates (1.74 MB)
+[ 314.6s] warp m14_la_parguera: 1792x1536 px z14 average in 3.5s, valid 100.0%, min -60.826927185058594 max 297.4137878417969
+[ 315.0s] warp m14_la_parguera_3: 1792x1536 px z14 bilinear in 0.4s, valid 0.0%, min None max None
+[ 321.1s] z14: wrote 42 tiles of 42 candidates (2.73 MB)
+[ 321.1s] total before budget check: 56.16 MB in 1573 tiles
+[ 321.2s] over the 40 MB target: omitted tiles with no cell below 0 m (pure land, no bathymetry in them): {'13': 328, '12': 70, '14': 39}; total now 32.94 MB
+[ 321.2s] z12: 227 tiles, 8.73 MB, 12 with some no-data, 0 skipped as all no-data
+[ 321.2s] z13: 836 tiles, 22.52 MB, 24 with some no-data, 6 skipped as all no-data
+[ 321.2s] z14: 73 tiles, 1.68 MB, 0 with some no-data, 0 skipped as all no-data
+[ 321.2s] TOTAL 32.94 MB; done
+build exit code 0
