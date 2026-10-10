@@ -1,0 +1,4213 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "s": "https://schema.org/",
+            "geo": "http://www.opengis.net/ont/geosparql#",
+            "unit": "http://codes.wmo.int/common/unit/",
+            "@vocab": "https://api.weather.gov/ontology#",
+            "geometry": {
+                "@id": "s:GeoCoordinates",
+                "@type": "geo:wktLiteral"
+            },
+            "city": "s:addressLocality",
+            "state": "s:addressRegion",
+            "distance": {
+                "@id": "s:Distance",
+                "@type": "s:QuantitativeValue"
+            },
+            "bearing": {
+                "@type": "s:QuantitativeValue"
+            },
+            "value": {
+                "@id": "s:value"
+            },
+            "unitCode": {
+                "@id": "s:unitCode",
+                "@type": "@id"
+            },
+            "forecastOffice": {
+                "@type": "@id"
+            },
+            "forecastGridData": {
+                "@type": "@id"
+            },
+            "publicZone": {
+                "@type": "@id"
+            },
+            "county": {
+                "@type": "@id"
+            },
+            "observationStations": {
+                "@container": "@list",
+                "@type": "@id"
+            }
+        }
+    ],
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "https://api.weather.gov/stations/41053",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.1,
+                    18.5
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/41053",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 0
+                },
+                "stationIdentifier": "41053",
+                "name": "Buoy 41053",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/AMZ712"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/41056",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.5,
+                    18.3
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/41056",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 0
+                },
+                "stationIdentifier": "41056",
+                "name": "Vieques Island",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/AMZ726"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/41115",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.3,
+                    18.4
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/41115",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 0
+                },
+                "stationIdentifier": "41115",
+                "name": "Buoy 41115",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/AMZ742"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/42085",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.5,
+                    17.9
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/42085",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 0
+                },
+                "stationIdentifier": "42085",
+                "name": "Buoy 42085",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/AMZ735"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/A4392",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.14166,
+                    18.42839
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/A4392",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 3.9624
+                },
+                "stationIdentifier": "A4392",
+                "name": "Catao 40",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ001",
+                "county": "https://api.weather.gov/zones/county/PRC033",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ016"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/AIBP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.22861,
+                    18.15806
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/AIBP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 273.7104
+                },
+                "stationIdentifier": "AIBP4",
+                "name": "RIO DE LA PLATA AT PROYECTO LA PLATA NEAR AIBONITO 3NE",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ006",
+                "county": "https://api.weather.gov/zones/county/PRC009",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/AP166",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.00333,
+                    18.33167
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/AP166",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 64.529208
+                },
+                "stationIdentifier": "AP166",
+                "name": "WP4MXZ SAN SEBASTIAN",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ009",
+                "county": "https://api.weather.gov/zones/county/PRC131",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ023"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/AV947",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.9145,
+                    18.46667
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/AV947",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 119.99976
+                },
+                "stationIdentifier": "AV947",
+                "name": "WP3OF QUEBRADILLAS",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ008",
+                "county": "https://api.weather.gov/zones/county/PRC115",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ016"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/AV948",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.30728,
+                    18.32625
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/AV948",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 131.670552
+                },
+                "stationIdentifier": "AV948",
+                "name": "WP3OF-1 CULEBRA",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ012",
+                "county": "https://api.weather.gov/zones/county/PRC049",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ026"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/AV949",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.759,
+                    18.23333
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/AV949",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 940.000152
+                },
+                "stationIdentifier": "AV949",
+                "name": "WP3OF-2 UTUADO",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ009",
+                "county": "https://api.weather.gov/zones/county/PRC141",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ023"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/AW063",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.16283,
+                    18.3685
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/AW063",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 34.7472
+                },
+                "stationIdentifier": "AW063",
+                "name": "KP4CRN BAYAMON",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ001",
+                "county": "https://api.weather.gov/zones/county/PRC021",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/AW136",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.207,
+                    18.38583
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/AW136",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 54.864
+                },
+                "stationIdentifier": "AW136",
+                "name": "KP4FJC TOA ALTA",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ001",
+                "county": "https://api.weather.gov/zones/county/PRC135",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ016"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/AW217",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.66033,
+                    18.31867
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/AW217",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 34.7472
+                },
+                "stationIdentifier": "AW217",
+                "name": "NP4KB FAJARDO",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ002",
+                "county": "https://api.weather.gov/zones/county/PRC053",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/AW436",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.6495,
+                    18.32983
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/AW436",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 12.499848
+                },
+                "stationIdentifier": "AW436",
+                "name": "WP4PW FAJARDO",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ002",
+                "county": "https://api.weather.gov/zones/county/PRC053",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/AW715",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.89283,
+                    18.18017
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/AW715",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 113.9952
+                },
+                "stationIdentifier": "AW715",
+                "name": "WP3XM LAS PIEDRAS",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC085",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/AWGP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.93944,
+                    18.02028
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/AWGP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 15.8496
+                },
+                "stationIdentifier": "AWGP4",
+                "name": "ARENAS 1 WELL GUANICA",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ011",
+                "county": "https://api.weather.gov/zones/county/PRC055",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ027"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/AX020",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.92983,
+                    18.41017
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/AX020",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 199.9488
+                },
+                "stationIdentifier": "AX020",
+                "name": "WP3OF-3 QUEBRADILLAS",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ008",
+                "county": "https://api.weather.gov/zones/county/PRC115",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ017"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/AX160",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.90183,
+                    18.37183
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/AX160",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 196.400928
+                },
+                "stationIdentifier": "AX160",
+                "name": "WP3OF-5 QUEBRADILLAS",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ008",
+                "county": "https://api.weather.gov/zones/county/PRC115",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ017"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/AX658",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.00267,
+                    18.33117
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/AX658",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 71.600568
+                },
+                "stationIdentifier": "AX658",
+                "name": "NP4PC-13 SAN SEBASTIAN",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ009",
+                "county": "https://api.weather.gov/zones/county/PRC131",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ023"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/AYGP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.22917,
+                    18.35389
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/AYGP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 68.8848
+                },
+                "stationIdentifier": "AYGP4",
+                "name": "MIRADERO",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ010",
+                "county": "https://api.weather.gov/zones/county/PRC117",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ018"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/BZAP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.07611,
+                    18.28917
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/BZAP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 176.784
+                },
+                "stationIdentifier": "BZAP4",
+                "name": "JAGUEYES ABAJO RAINGAUGE NEAR CAGUAS 5NW",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC007",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/BZBP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.09583,
+                    18.26583
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/BZBP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 388.9248
+                },
+                "stationIdentifier": "BZBP4",
+                "name": "BAIROA ARRIBA RAIN GAUGENEAR CAGUAS 4NW",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC007",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/BZCP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.06694,
+                    18.21361
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/BZCP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 149.9616
+                },
+                "stationIdentifier": "BZCP4",
+                "name": "VAQUERIA EL NINO RAINGAUGE NEAR CAGUAS 3SW",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC025",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/BZDP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.08944,
+                    18.18333
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/BZDP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 381.9144
+                },
+                "stationIdentifier": "BZDP4",
+                "name": "BARRIO BEATRIZ RAINGAUGE NEAR CAGUAS 5SW",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC025",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ024"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/C8756",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.25617,
+                    18.36783
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/C8756",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 41.019984
+                },
+                "stationIdentifier": "C8756",
+                "name": "CW8756 Rincon",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ010",
+                "county": "https://api.weather.gov/zones/county/PRC117",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ018"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/C8822",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.01233,
+                    18.20517
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/C8822",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 194.380104
+                },
+                "stationIdentifier": "C8822",
+                "name": "CW8822 Caguas",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC025",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/CAHP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.10694,
+                    18.21472
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/CAHP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 457.8096
+                },
+                "stationIdentifier": "CAHP4",
+                "name": "CANABONCITO RAINGAUGE NEAR CAGUAS 6WSW",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC025",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/CAIP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.04972,
+                    18.13361
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/CAIP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 436.7784
+                },
+                "stationIdentifier": "CAIP4",
+                "name": "LA PLAZA RAIN GAUGE NEAR CAGUAS 8S",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC025",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ024"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/CAMP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.02722,
+                    18.24667
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/CAMP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 53.9496
+                },
+                "stationIdentifier": "CAMP4",
+                "name": "RIO CAGUAS AT VILLA BLANCA",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC025",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/CAYP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.13861,
+                    18.13639
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/CAYP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 365.76
+                },
+                "stationIdentifier": "CAYP4",
+                "name": "RIO DE LA PLATA AT CAYEY",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC041",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/CLBP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.30247,
+                    18.30086
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/CLBP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 7.0104
+                },
+                "stationIdentifier": "CLBP4",
+                "name": "Culebra",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "NOS-NWLON",
+                "subProvider": "NWLON",
+                "forecast": "https://api.weather.gov/zones/forecast/AMZ726"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/COAP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.35472,
+                    18.08361
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/COAP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 101.8032
+                },
+                "stationIdentifier": "COAP4",
+                "name": "RIO COAMO AT COAMO",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ006",
+                "county": "https://api.weather.gov/zones/county/PRC043",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ014"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/COBP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.17,
+                    17.98
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/COBP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 10.0584
+                },
+                "stationIdentifier": "COBP4",
+                "name": "COMBATE",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ011",
+                "county": "https://api.weather.gov/zones/county/PRC023",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ027"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/COMP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.22472,
+                    18.22222
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/COMP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 196.596
+                },
+                "stationIdentifier": "COMP4",
+                "name": "RIO DE LA PLATA AT COMERIO",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC045",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/CRRP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.16278,
+                    17.97306
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/CRRP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 33.2232
+                },
+                "stationIdentifier": "CRRP4",
+                "name": "CABO ROJO",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "RAWS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ011",
+                "county": "https://api.weather.gov/zones/county/PRC023",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ027"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/CSAP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.28894,
+                    17.98493
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/CSAP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 13.1064
+                },
+                "stationIdentifier": "CSAP4",
+                "name": "CAMP SANTIAGO",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "RAWS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ003",
+                "county": "https://api.weather.gov/zones/county/PRC123",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ014"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/CTAP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.76156,
+                    18.3449
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/CTAP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 363.6264
+                },
+                "stationIdentifier": "CTAP4",
+                "name": "CATALINA",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ002",
+                "county": "https://api.weather.gov/zones/county/PRC119",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ022"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/D0435",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.039,
+                    18.083
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/D0435",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 43.001184
+                },
+                "stationIdentifier": "D0435",
+                "name": "DW0435 San German",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ010",
+                "county": "https://api.weather.gov/zones/county/PRC125",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ018"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/D5492",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.0735,
+                    18.37717
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/D5492",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 45.1104
+                },
+                "stationIdentifier": "D5492",
+                "name": "DW5492 San Juan",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ001",
+                "county": "https://api.weather.gov/zones/county/PRC127",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ016"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/D8435",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.18967,
+                    18.37983
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/D8435",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 18.309336
+                },
+                "stationIdentifier": "D8435",
+                "name": "DW8435 Aguada",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ010",
+                "county": "https://api.weather.gov/zones/county/PRC003",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ018"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/E6754",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.044,
+                    18.22333
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/E6754",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 80.01
+                },
+                "stationIdentifier": "E6754",
+                "name": "EW6754 Caguas",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC025",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/E9889",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.26133,
+                    18.347
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/E9889",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 6.150864
+                },
+                "stationIdentifier": "E9889",
+                "name": "EW9889 Rincon",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ010",
+                "county": "https://api.weather.gov/zones/county/PRC117",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ018"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/ESPP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.47136,
+                    18.09386
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/ESPP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 0
+                },
+                "stationIdentifier": "ESPP4",
+                "name": "Esperanza",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "NOS-NWLON",
+                "subProvider": "NWLON",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ013",
+                "county": "https://api.weather.gov/zones/county/PRC147",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ025"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/F2250",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.17733,
+                    18.345
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/F2250",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 132.139944
+                },
+                "stationIdentifier": "F2250",
+                "name": "FW2250 Aguada",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ010",
+                "county": "https://api.weather.gov/zones/county/PRC003",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ023"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/F2454",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.1955,
+                    18.36483
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/F2454",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 44.558712
+                },
+                "stationIdentifier": "F2454",
+                "name": "FW2454 Aguada",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ010",
+                "county": "https://api.weather.gov/zones/county/PRC003",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ018"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/F2480",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.99567,
+                    18.346
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/F2480",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 73.468992
+                },
+                "stationIdentifier": "F2480",
+                "name": "FW2480 Trujillo Alto",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ001",
+                "county": "https://api.weather.gov/zones/county/PRC139",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/F4300",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.8225,
+                    18.221
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/F4300",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 110.880144
+                },
+                "stationIdentifier": "F4300",
+                "name": "FW4300 Naguabo",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ002",
+                "county": "https://api.weather.gov/zones/county/PRC103",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/F4325",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.12767,
+                    17.9795
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/F4325",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 47.06112
+                },
+                "stationIdentifier": "F4325",
+                "name": "FW4325 Guayama",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ003",
+                "county": "https://api.weather.gov/zones/county/PRC057",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ014"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/F4817",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.139,
+                    18.21083
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/F4817",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 17.6784
+                },
+                "stationIdentifier": "F4817",
+                "name": "FW4817 Mayaguez",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ010",
+                "county": "https://api.weather.gov/zones/county/PRC097",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ018"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/F7712",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.80373,
+                    18.12237
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/F7712",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 12.841224
+                },
+                "stationIdentifier": "F7712",
+                "name": "FW7712 Humacao",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ002",
+                "county": "https://api.weather.gov/zones/county/PRC069",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/F8269",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.614,
+                    17.96933
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/F8269",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 16.760952
+                },
+                "stationIdentifier": "F8269",
+                "name": "FW8269 Ponce",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ007",
+                "county": "https://api.weather.gov/zones/county/PRC113",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ014"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/F8412",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.6425,
+                    18.44467
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/F8412",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 37.801296
+                },
+                "stationIdentifier": "F8412",
+                "name": "FW8412 Arecibo",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ005",
+                "county": "https://api.weather.gov/zones/county/PRC013",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ016"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/F8644",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.398,
+                    18.483
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/F8644",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 12.149328
+                },
+                "stationIdentifier": "F8644",
+                "name": "FW8644 Vega Baja",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ005",
+                "county": "https://api.weather.gov/zones/county/PRC145",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ016"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/F8993",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.155,
+                    18.23117
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/F8993",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 29.998416
+                },
+                "stationIdentifier": "F8993",
+                "name": "FW8993 Mayaguez",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ010",
+                "county": "https://api.weather.gov/zones/county/PRC097",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ018"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/FORP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.53333,
+                    18.03333
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/FORP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 28.3464
+                },
+                "stationIdentifier": "FORP4",
+                "name": "FORTUNA",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ007",
+                "county": "https://api.weather.gov/zones/county/PRC075",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ014"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G0536",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.843,
+                    18.48417
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G0536",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 5.580888
+                },
+                "stationIdentifier": "G0536",
+                "name": "GW0536 Camuy",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ008",
+                "county": "https://api.weather.gov/zones/county/PRC027",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ016"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G0907",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.09117,
+                    18.13467
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G0907",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 443.999112
+                },
+                "stationIdentifier": "G0907",
+                "name": "GW0907 Cayey",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC035",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G0931",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.25683,
+                    18.34567
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G0931",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 53.041296
+                },
+                "stationIdentifier": "G0931",
+                "name": "GW0931 Rincon",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ010",
+                "county": "https://api.weather.gov/zones/county/PRC117",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ018"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G1345",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.43333,
+                    18.56667
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G1345",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 35.000184
+                },
+                "stationIdentifier": "G1345",
+                "name": "GW1345 RINCON",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/AMZ711"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G4429",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.04633,
+                    17.9755
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G4429",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 4.8768
+                },
+                "stationIdentifier": "G4429",
+                "name": "GW4429 LAJAS",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ011",
+                "county": "https://api.weather.gov/zones/county/PRC079",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ027"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G4457",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.12117,
+                    17.986
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G4457",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 166.7256
+                },
+                "stationIdentifier": "G4457",
+                "name": "GW4457 CABO ROJO",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ011",
+                "county": "https://api.weather.gov/zones/county/PRC023",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ027"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G4538",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.04933,
+                    18.24183
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G4538",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 99.9744
+                },
+                "stationIdentifier": "G4538",
+                "name": "GW4538 CAGUAS",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC025",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G4841",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.3025,
+                    18.44183
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G4841",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 77.4192
+                },
+                "stationIdentifier": "G4841",
+                "name": "GW4841 DORADO",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ005",
+                "county": "https://api.weather.gov/zones/county/PRC051",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ016"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G5647",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.10583,
+                    18.02867
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G5647",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 480.9744
+                },
+                "stationIdentifier": "G5647",
+                "name": "GW5647 SALINAS",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ003",
+                "county": "https://api.weather.gov/zones/county/PRC057",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ015"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G5842",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.49433,
+                    18.112
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G5842",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 151.1808
+                },
+                "stationIdentifier": "G5842",
+                "name": "GW5842 VILLALBA",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ006",
+                "county": "https://api.weather.gov/zones/county/PRC149",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ015"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G5869",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.39033,
+                    18.00883
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G5869",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 35.9664
+                },
+                "stationIdentifier": "G5869",
+                "name": "GW5869 SANTA ISABEL",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ007",
+                "county": "https://api.weather.gov/zones/county/PRC133",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ014"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G5985",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.16433,
+                    18.30117
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G5985",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 23.7744
+                },
+                "stationIdentifier": "G5985",
+                "name": "GW5985 ANASCO",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ010",
+                "county": "https://api.weather.gov/zones/county/PRC011",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ018"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G5997",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.24417,
+                    18.31183
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G5997",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 296.8752
+                },
+                "stationIdentifier": "G5997",
+                "name": "GW5997 NARANJITO",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ006",
+                "county": "https://api.weather.gov/zones/county/PRC105",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G6037",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.18533,
+                    18.37633
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G6037",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 36.2712
+                },
+                "stationIdentifier": "G6037",
+                "name": "GW6037 AGUADA",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ010",
+                "county": "https://api.weather.gov/zones/county/PRC003",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ018"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G6435",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.0295,
+                    18.25083
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G6435",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 55.00116
+                },
+                "stationIdentifier": "G6435",
+                "name": "GW6435 CAGUAS",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC025",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G6493",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.93417,
+                    18.25967
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G6493",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 309.999888
+                },
+                "stationIdentifier": "G6493",
+                "name": "GW6493 JUNCOS",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC077",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G6960",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.713,
+                    18.13467
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G6960",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 915.000456
+                },
+                "stationIdentifier": "G6960",
+                "name": "GW6960 ADJUNTAS",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ009",
+                "county": "https://api.weather.gov/zones/county/PRC001",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ023"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G6961",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.71317,
+                    18.15
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G6961",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 619.000032
+                },
+                "stationIdentifier": "G6961",
+                "name": "GW6961 ADJUNTAS",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ009",
+                "county": "https://api.weather.gov/zones/county/PRC001",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ023"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G6979",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.27967,
+                    18.15267
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G6979",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 604.000824
+                },
+                "stationIdentifier": "G6979",
+                "name": "GW6979 AIBONITO",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ006",
+                "county": "https://api.weather.gov/zones/county/PRC009",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ015"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G6997",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.92883,
+                    18.09917
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G6997",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 360.999024
+                },
+                "stationIdentifier": "G6997",
+                "name": "GW6997 SABANA GRANDE",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ009",
+                "county": "https://api.weather.gov/zones/county/PRC121",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ015"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G7070",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.15333,
+                    18.09133
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G7070",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 33.000696
+                },
+                "stationIdentifier": "G7070",
+                "name": "GW7070 CABO ROJO",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ011",
+                "county": "https://api.weather.gov/zones/county/PRC023",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ018"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G7140",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.58983,
+                    18.17317
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G7140",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 1337.998848
+                },
+                "stationIdentifier": "G7140",
+                "name": "GW7140 JAYUYA",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ006",
+                "county": "https://api.weather.gov/zones/county/PRC073",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ023"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G7209",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.95833,
+                    17.9735
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G7209",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 9.140952
+                },
+                "stationIdentifier": "G7209",
+                "name": "GW7209 PATILLAS",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ003",
+                "county": "https://api.weather.gov/zones/county/PRC109",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ015"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G7277",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.05,
+                    18.44983
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G7277",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 10.000488
+                },
+                "stationIdentifier": "G7277",
+                "name": "GW7277 SAN JUAN",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ001",
+                "county": "https://api.weather.gov/zones/county/PRC127",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ016"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G7372",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.57717,
+                    18.1675
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G7372",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 1288.9992
+                },
+                "stationIdentifier": "G7372",
+                "name": "GW7372 PONCE",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ007",
+                "county": "https://api.weather.gov/zones/county/PRC113",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ023"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G7508",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.24033,
+                    18.06283
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G7508",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 130.000248
+                },
+                "stationIdentifier": "G7508",
+                "name": "GW7508 SALINAS",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ003",
+                "county": "https://api.weather.gov/zones/county/PRC123",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ014"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G7537",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.065,
+                    17.963
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G7537",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 15.998952
+                },
+                "stationIdentifier": "G7537",
+                "name": "GW7537 ARROYO",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ003",
+                "county": "https://api.weather.gov/zones/county/PRC015",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ014"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G7695",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.0605,
+                    18.03933
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G7695",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 590.00136
+                },
+                "stationIdentifier": "G7695",
+                "name": "GW7695 ARROYO",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "APRSWXNET",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ003",
+                "county": "https://api.weather.gov/zones/county/PRC015",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ024"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/G7815",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.05883,
+                    17.97333
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/G7815",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 17.99844
+                },
+                "stationIdentifier": "G7815",
+                "name": "GW7815 ARROYO",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ003",
+                "county": "https://api.weather.gov/zones/county/PRC015",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ014"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/GARP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.9125,
+                    18.26722
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/GARP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 284.988
+                },
+                "stationIdentifier": "GARP4",
+                "name": "GURABO ABAJO RAINGAUGE NEAR GURABO 5E",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ002",
+                "county": "https://api.weather.gov/zones/county/PRC029",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/GBOP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.11,
+                    18.39528
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/GBOP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 32.9184
+                },
+                "stationIdentifier": "GBOP4",
+                "name": "RAINGAGE NEAR ALTAMIRA GUAYNABO",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ001",
+                "county": "https://api.weather.gov/zones/county/PRC061",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ016"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/GCAP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.88327,
+                    17.95421
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/GCAP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 16.1544
+                },
+                "stationIdentifier": "GCAP4",
+                "name": "GUANICA",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "RAWS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ011",
+                "county": "https://api.weather.gov/zones/county/PRC055",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ027"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/GRAP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.96444,
+                    18.25806
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/GRAP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 48.768
+                },
+                "stationIdentifier": "GRAP4",
+                "name": "GURABO RAINGAGE AT GURABO",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC063",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/GUIP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.77,
+                    18.15
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/GUIP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 914.0952
+                },
+                "stationIdentifier": "GUIP4",
+                "name": "GUILARTE FOREST",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ009",
+                "county": "https://api.weather.gov/zones/county/PRC001",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ023"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/GUJP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.9125,
+                    18.35944
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/GUJP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 205.74
+                },
+                "stationIdentifier": "GUJP4",
+                "name": "GUAJATACA RAINGAUGE",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ009",
+                "county": "https://api.weather.gov/zones/county/PRC131",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ017"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/GUSP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.83222,
+                    18.24833
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/GUSP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 339.852
+                },
+                "stationIdentifier": "GUSP4",
+                "name": "PUEBLITO DEL RIO RAIN GAUGE NEAR LAS PIEDRAS NEAR JUNCOS 7ENE",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC085",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ022"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/GUVP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.84111,
+                    18.20417
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/GUVP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 111.8616
+                },
+                "stationIdentifier": "GUVP4",
+                "name": "LAS PIEDRAS CONSTRUCTION RAINGAUGE NEAR JUNCOS 6ESE",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC085",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/ISSP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.04361,
+                    18.47028
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/ISSP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 119.7864
+                },
+                "stationIdentifier": "ISSP4",
+                "name": "ISABELA SCAN",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ008",
+                "county": "https://api.weather.gov/zones/county/PRC071",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ016"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/JCOP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.91834,
+                    18.22268
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/JCOP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 674.2176
+                },
+                "stationIdentifier": "JCOP4",
+                "name": "RAWS-2 JUNCOS",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "RAWS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC077",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/JOXP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.22306,
+                    17.95667
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/JOXP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 9.144
+                },
+                "stationIdentifier": "JOXP4",
+                "name": "Jobos Bay Weather",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "MARITIME",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ003",
+                "county": "https://api.weather.gov/zones/county/PRC123",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ014"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/JWGP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.16694,
+                    17.98083
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/JWGP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 37.7952
+                },
+                "stationIdentifier": "JWGP4",
+                "name": "JUA 5 WELL GUAYAMA",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ003",
+                "county": "https://api.weather.gov/zones/county/PRC057",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ014"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/LARP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.87389,
+                    18.29917
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/LARP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 289.8648
+                },
+                "stationIdentifier": "LARP4",
+                "name": "RIO GUAJATACA AT LARES",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ009",
+                "county": "https://api.weather.gov/zones/county/PRC081",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ017"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/LCOP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.39056,
+                    18.01639
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/LCOP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 50.292
+                },
+                "stationIdentifier": "LCOP4",
+                "name": "LAGO COAMO NEAR LOS LLANOS",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ007",
+                "county": "https://api.weather.gov/zones/county/PRC133",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ014"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/LCSP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.10722,
+                    18.07722
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/LCSP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 529.7424
+                },
+                "stationIdentifier": "LCSP4",
+                "name": "LAGO CARITE AT SPILLWAY NEAR GUAYAMA",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ003",
+                "county": "https://api.weather.gov/zones/county/PRC057",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ024"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/LLYP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.84194,
+                    18.04917
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/LLYP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 35.052
+                },
+                "stationIdentifier": "LLYP4",
+                "name": "RIO YAUCO ABOVE DIVERSION MONSERRATE NEAR YAUCO 1NNE",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ007",
+                "county": "https://api.weather.gov/zones/county/PRC153",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ015"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/LOCP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.88778,
+                    18.04528
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/LOCP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 74.9808
+                },
+                "stationIdentifier": "LOCP4",
+                "name": "LAGO LOCO AT DAMSITE NEAR YAUCO 3NW",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ007",
+                "county": "https://api.weather.gov/zones/county/PRC153",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ018"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/MAFP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67,
+                    18.15
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/MAFP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 488.8992
+                },
+                "stationIdentifier": "MAFP4",
+                "name": "MARICAO FOREST",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ010",
+                "county": "https://api.weather.gov/zones/county/PRC125",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ015"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/MAOP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.02611,
+                    18.16167
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/MAOP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 493.1664
+                },
+                "stationIdentifier": "MAOP4",
+                "name": "MARICAO",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "RAWS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ010",
+                "county": "https://api.weather.gov/zones/county/PRC125",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ015"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/MELP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.14528,
+                    17.98139
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/MELP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 49.9872
+                },
+                "stationIdentifier": "MELP4",
+                "name": "LAGO MELANIA NEAR GUAYAMA 2WSW",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ003",
+                "county": "https://api.weather.gov/zones/county/PRC057",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ014"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/MGIP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.04642,
+                    17.97008
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/MGIP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 4.8768
+                },
+                "stationIdentifier": "MGIP4",
+                "name": "Magueyes Island",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "NOS-NWLON",
+                "subProvider": "NWLON",
+                "forecast": "https://api.weather.gov/zones/forecast/AMZ735"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/MGZP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.16,
+                    18.22
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/MGZP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 11.8872
+                },
+                "stationIdentifier": "MGZP4",
+                "name": "Mayaguez",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "NOS-NWLON",
+                "subProvider": "PRSN",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ010",
+                "county": "https://api.weather.gov/zones/county/PRC097",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ018"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/MISP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.9385,
+                    18.09
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/MISP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 0
+                },
+                "stationIdentifier": "MISP4",
+                "name": "Mona Island",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "NOS-NWLON",
+                "subProvider": "NWLON",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ010",
+                "county": "https://api.weather.gov/zones/county/PRC097",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ027"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/MNAP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.51983,
+                    18.46783
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/MNAP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 11.8872
+                },
+                "stationIdentifier": "MNAP4",
+                "name": "MANATI",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "RAWS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ005",
+                "county": "https://api.weather.gov/zones/county/PRC091",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ016"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/NDBCESPP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.471,
+                    18.094
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/NDBCESPP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 1.999488
+                },
+                "stationIdentifier": "NDBCESPP4",
+                "name": "9752695 - Esperanza, Viequez Island, PR",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ013",
+                "county": "https://api.weather.gov/zones/county/PRC147",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ025"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/NDBCJOXP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.223,
+                    17.956
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/NDBCJOXP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 9.000744
+                },
+                "stationIdentifier": "NDBCJOXP4",
+                "name": "Jobos Bay Weather, Jobos Bay Reserve, PR",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ003",
+                "county": "https://api.weather.gov/zones/county/PRC123",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ014"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/NDBCMGIP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.046,
+                    17.97
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/NDBCMGIP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 0.89916
+                },
+                "stationIdentifier": "NDBCMGIP4",
+                "name": "9759110 - Magueyes Islands, PR",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ011",
+                "county": "https://api.weather.gov/zones/county/PRC079",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ027"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/NDBCMGZP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.159,
+                    18.218
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/NDBCMGZP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 3.099816
+                },
+                "stationIdentifier": "NDBCMGZP4",
+                "name": "9759394 - Mayaguez, PR",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ010",
+                "county": "https://api.weather.gov/zones/county/PRC097",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ018"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/NRJP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.25667,
+                    18.28556
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/NRJP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 341.9856
+                },
+                "stationIdentifier": "NRJP4",
+                "name": "BO. ANONES RAINGAGE NEAR NARANJ",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ006",
+                "county": "https://api.weather.gov/zones/county/PRC105",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/OROP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.48056,
+                    18.2125
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/OROP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 724.5096
+                },
+                "stationIdentifier": "OROP4",
+                "name": "LAGO DE MATRULLAS AT DAMSITE NEAR OROCOVIS 6SW",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ006",
+                "county": "https://api.weather.gov/zones/county/PRC107",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ023"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/PASP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.01833,
+                    18.01778
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/PASP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 75.8952
+                },
+                "stationIdentifier": "PASP4",
+                "name": "LAGO PATILLAS AT DAMSITE NEAR PATILLAS 1NE",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ003",
+                "county": "https://api.weather.gov/zones/county/PRC109",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ015"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/PAXP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.10111,
+                    17.9825
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/PAXP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 49.9872
+                },
+                "stationIdentifier": "PAXP4",
+                "name": "CANAL DE PATILLAS ABOVE GUAYAMA FILTRATION PLANT NEAR GUAYAMA 1SE",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ003",
+                "county": "https://api.weather.gov/zones/county/PRC057",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ014"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/PCEP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.605,
+                    18.11667
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/PCEP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 308.1528
+                },
+                "stationIdentifier": "PCEP4",
+                "name": "RIO CERRILLOS ABOVE LAGO CERRILLOS NEAR PONCE 9N",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ007",
+                "county": "https://api.weather.gov/zones/county/PRC113",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ023"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/PCXP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.57722,
+                    18.07806
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/PCXP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 183.7944
+                },
+                "stationIdentifier": "PCXP4",
+                "name": "LAGO CERRILLOS AT DAMSITE NEAR PONCE 5NNE",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ007",
+                "county": "https://api.weather.gov/zones/county/PRC113",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ015"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/PRCP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.20611,
+                    18.27417
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/PRCP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 87.7824
+                },
+                "stationIdentifier": "PRCP4",
+                "name": "RIO DE LA PLATA BELOW REPRESA COMERIO",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC045",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/PRNP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.62139,
+                    18.04361
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/PRNP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 74.9808
+                },
+                "stationIdentifier": "PRNP4",
+                "name": "RIO PORTUGUES AT PARQUE CEREMONIAL TIBES NEAR PONCE",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ007",
+                "county": "https://api.weather.gov/zones/county/PRC113",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ015"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/PRTP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.64306,
+                    18.1
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/PRTP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 284.988
+                },
+                "stationIdentifier": "PRTP4",
+                "name": "RIO PORTUGUES NEAR TIBES NEAR PONCE 7N",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ007",
+                "county": "https://api.weather.gov/zones/county/PRC113",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ015"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/QMAP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.10278,
+                    18.41361
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/QMAP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 10.9728
+                },
+                "stationIdentifier": "QMAP4",
+                "name": "QUEBRADA MARGARITA NEAR GUAYNABO 4N",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ001",
+                "county": "https://api.weather.gov/zones/county/PRC061",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ016"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/RABP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.16722,
+                    18.17222
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/RABP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 407.8224
+                },
+                "stationIdentifier": "RABP4",
+                "name": "BO. RABANAL RAINGAGE AT CIDRA",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC041",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/RCLP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.03,
+                    18.32
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/RCLP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 120.0912
+                },
+                "stationIdentifier": "RCLP4",
+                "name": "COROZAL",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ001",
+                "county": "https://api.weather.gov/zones/county/PRC139",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/REGP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.02944,
+                    18.45917
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/REGP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 144.78
+                },
+                "stationIdentifier": "REGP4",
+                "name": "LAGO REGULADOR DE ISABELA NEAR HWY 112 NEAR MORA",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ008",
+                "county": "https://api.weather.gov/zones/county/PRC071",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ016"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/RPCP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.12389,
+                    18.41639
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/RPCP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 9.7536
+                },
+                "stationIdentifier": "RPCP4",
+                "name": "LAS CASAS LAKE AT FORT BUCHANAN",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ001",
+                "county": "https://api.weather.gov/zones/county/PRC021",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ016"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/SAAP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.0975,
+                    18.45472
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/SAAP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 1.8288
+                },
+                "stationIdentifier": "SAAP4",
+                "name": "STORMWATER STATION AT ARMY AVIATION SAN JUAN",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ001",
+                "county": "https://api.weather.gov/zones/county/PRC127",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ016"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/SFDP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.29639,
+                    18.01167
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/SFDP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 62.7888
+                },
+                "stationIdentifier": "SFDP4",
+                "name": "STORMWATER STATION FUEL DISPENSING SALINAS",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ003",
+                "county": "https://api.weather.gov/zones/county/PRC123",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ014"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/SJNP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.11642,
+                    18.45894
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/SJNP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 0
+                },
+                "stationIdentifier": "SJNP4",
+                "name": "San Juan",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "NOS-NWLON",
+                "subProvider": "NWLON",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ001",
+                "county": "https://api.weather.gov/zones/county/PRC127",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ016"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/SLEP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.97722,
+                    18.17333
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/SLEP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 113.9952
+                },
+                "stationIdentifier": "SLEP4",
+                "name": "QUEBRADA SALVATIERRA RAINGAGE NEAR SAN LORENZO 3WSW",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC129",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/SLGP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.99639,
+                    18.16194
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/SLGP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 199.644
+                },
+                "stationIdentifier": "SLGP4",
+                "name": "QUEBRADA BLANCA NEAR SAN LORENZO 3SSW",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC129",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/SLKP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.95639,
+                    18.15167
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/SLKP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 164.8968
+                },
+                "stationIdentifier": "SLKP4",
+                "name": "RIO CAYAGUAS AT CERRO GORDO NEAR SAN LORENZO 2S",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC129",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/SLMP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.94694,
+                    18.11389
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/SLMP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 274.0152
+                },
+                "stationIdentifier": "SLMP4",
+                "name": "QUEBRADA ARENAS RAIN GAUGE NEAR SAN LORENZO 6S",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC129",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ024"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/TJBQ",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -67.13333,
+                    18.5
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/TJBQ",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 71.9328
+                },
+                "stationIdentifier": "TJBQ",
+                "name": "Aquadilla, Rafael Hernandez Airport",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "OTHER-MTR",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ008",
+                "county": "https://api.weather.gov/zones/county/PRC005",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ016"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/TJIG",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.0981,
+                    18.4568
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/TJIG",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 3.048
+                },
+                "stationIdentifier": "TJIG",
+                "name": "San Juan Fernando Luis Ribas Dominicci",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "OTHER-MTR",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ001",
+                "county": "https://api.weather.gov/zones/county/PRC127",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ016"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/TJNR",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.64333,
+                    18.25528
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/TJNR",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 11.8872
+                },
+                "stationIdentifier": "TJNR",
+                "name": "Roosevelt Roads, Roosevelt Roads Naval Station, Ofstie Field",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "ASOS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ002",
+                "county": "https://api.weather.gov/zones/county/PRC037",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/TJPS",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.56667,
+                    18.01667
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/TJPS",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 7.9248
+                },
+                "stationIdentifier": "TJPS",
+                "name": "Ponce, Mercedita Airport",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "OTHER-MTR",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ007",
+                "county": "https://api.weather.gov/zones/county/PRC113",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ014"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/TJSJ",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66,
+                    18.45
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/TJSJ",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 3.048
+                },
+                "stationIdentifier": "TJSJ",
+                "name": "San Juan, Luis Munoz Marin International Airport",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "OTHER-MTR",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/AMZ712"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/TOXP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.48944,
+                    18.105
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/TOXP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 167.9448
+                },
+                "stationIdentifier": "TOXP4",
+                "name": "LAGO TOA VACA AT DAMSITE NEAR VILLALBA",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ006",
+                "county": "https://api.weather.gov/zones/county/PRC149",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ015"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/USAP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.30889,
+                    18.15944
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/USAP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 570.8904
+                },
+                "stationIdentifier": "USAP4",
+                "name": "RIO USABON AT HIGHWAY 162 NEAR BARRAN",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ006",
+                "county": "https://api.weather.gov/zones/county/PRC019",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ015"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/UTHP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.78278,
+                    18.30056
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/UTHP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 293.5224
+                },
+                "stationIdentifier": "UTHP4",
+                "name": "RIO TANAMA NEAR UTUADO 6WNW",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ009",
+                "county": "https://api.weather.gov/zones/county/PRC141",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ017"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/VALP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.92611,
+                    18.21611
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/VALP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 97.536
+                },
+                "stationIdentifier": "VALP4",
+                "name": "RIO VALENCIANO NEAR JUNCOS 1S",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC077",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/VAMP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.91083,
+                    18.16333
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/VAMP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 183.7944
+                },
+                "stationIdentifier": "VAMP4",
+                "name": "BARRIO MONTONES RAIN GUAGE",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ004",
+                "county": "https://api.weather.gov/zones/county/PRC085",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ019"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/VEQP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.46778,
+                    18.1
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/VEQP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 8.8392
+                },
+                "stationIdentifier": "VEQP4",
+                "name": "VIEQUES A1 WELL VIEQUES PR",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ013",
+                "county": "https://api.weather.gov/zones/county/PRC147",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ025"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/VIEP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.41583,
+                    18.12167
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/VIEP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 11.2776
+                },
+                "stationIdentifier": "VIEP4",
+                "name": "VIEQUES",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "RAWS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ013",
+                "county": "https://api.weather.gov/zones/county/PRC147",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ025"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/VILP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.52639,
+                    18.16111
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/VILP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 926.8968
+                },
+                "stationIdentifier": "VILP4",
+                "name": "LAGO EL GUINEO AT DAMSITE NEAR VILLALBA 3NW",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ006",
+                "county": "https://api.weather.gov/zones/county/PRC039",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ023"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/VINP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.45944,
+                    18.15861
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/VINP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 361.4928
+                },
+                "stationIdentifier": "VINP4",
+                "name": "BARRIO APEADERO RAINGAGE NEAR VILLALBA 3NE",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ006",
+                "county": "https://api.weather.gov/zones/county/PRC149",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ015"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/VIVP4",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -66.67917,
+                    18.23111
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/VIVP4",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 330.4032
+                },
+                "stationIdentifier": "VIVP4",
+                "name": "LAGO VIVI NEAR UTUADO 4SSE",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "HADS",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ009",
+                "county": "https://api.weather.gov/zones/county/PRC141",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ023"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/WSIPRI5",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -65.99194,
+                    18.43167
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/WSIPRI5",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 3.998976
+                },
+                "stationIdentifier": "WSIPRI5",
+                "name": "SAN JUANINT. PUERTO RICO",
+                "timeZone": "America/Puerto_Rico",
+                "provider": "",
+                "subProvider": "",
+                "forecast": "https://api.weather.gov/zones/forecast/PRZ001",
+                "county": "https://api.weather.gov/zones/county/PRC031",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/PRZ016"
+            }
+        }
+    ],
+    "observationStations": [
+        "https://api.weather.gov/stations/41053",
+        "https://api.weather.gov/stations/41056",
+        "https://api.weather.gov/stations/41115",
+        "https://api.weather.gov/stations/42085",
+        "https://api.weather.gov/stations/A4392",
+        "https://api.weather.gov/stations/AIBP4",
+        "https://api.weather.gov/stations/AP166",
+        "https://api.weather.gov/stations/AV947",
+        "https://api.weather.gov/stations/AV948",
+        "https://api.weather.gov/stations/AV949",
+        "https://api.weather.gov/stations/AW063",
+        "https://api.weather.gov/stations/AW136",
+        "https://api.weather.gov/stations/AW217",
+        "https://api.weather.gov/stations/AW436",
+        "https://api.weather.gov/stations/AW715",
+        "https://api.weather.gov/stations/AWGP4",
+        "https://api.weather.gov/stations/AX020",
+        "https://api.weather.gov/stations/AX160",
+        "https://api.weather.gov/stations/AX658",
+        "https://api.weather.gov/stations/AYGP4",
+        "https://api.weather.gov/stations/BZAP4",
+        "https://api.weather.gov/stations/BZBP4",
+        "https://api.weather.gov/stations/BZCP4",
+        "https://api.weather.gov/stations/BZDP4",
+        "https://api.weather.gov/stations/C8756",
+        "https://api.weather.gov/stations/C8822",
+        "https://api.weather.gov/stations/CAHP4",
+        "https://api.weather.gov/stations/CAIP4",
+        "https://api.weather.gov/stations/CAMP4",
+        "https://api.weather.gov/stations/CAYP4",
+        "https://api.weather.gov/stations/CLBP4",
+        "https://api.weather.gov/stations/COAP4",
+        "https://api.weather.gov/stations/COBP4",
+        "https://api.weather.gov/stations/COMP4",
+        "https://api.weather.gov/stations/CRRP4",
+        "https://api.weather.gov/stations/CSAP4",
+        "https://api.weather.gov/stations/CTAP4",
+        "https://api.weather.gov/stations/D0435",
+        "https://api.weather.gov/stations/D5492",
+        "https://api.weather.gov/stations/D8435",
+        "https://api.weather.gov/stations/E6754",
+        "https://api.weather.gov/stations/E9889",
+        "https://api.weather.gov/stations/ESPP4",
+        "https://api.weather.gov/stations/F2250",
+        "https://api.weather.gov/stations/F2454",
+        "https://api.weather.gov/stations/F2480",
+        "https://api.weather.gov/stations/F4300",
+        "https://api.weather.gov/stations/F4325",
+        "https://api.weather.gov/stations/F4817",
+        "https://api.weather.gov/stations/F7712",
+        "https://api.weather.gov/stations/F8269",
+        "https://api.weather.gov/stations/F8412",
+        "https://api.weather.gov/stations/F8644",
+        "https://api.weather.gov/stations/F8993",
+        "https://api.weather.gov/stations/FORP4",
+        "https://api.weather.gov/stations/G0536",
+        "https://api.weather.gov/stations/G0907",
+        "https://api.weather.gov/stations/G0931",
+        "https://api.weather.gov/stations/G1345",
+        "https://api.weather.gov/stations/G4429",
+        "https://api.weather.gov/stations/G4457",
+        "https://api.weather.gov/stations/G4538",
+        "https://api.weather.gov/stations/G4841",
+        "https://api.weather.gov/stations/G5647",
+        "https://api.weather.gov/stations/G5842",
+        "https://api.weather.gov/stations/G5869",
+        "https://api.weather.gov/stations/G5985",
+        "https://api.weather.gov/stations/G5997",
+        "https://api.weather.gov/stations/G6037",
+        "https://api.weather.gov/stations/G6435",
+        "https://api.weather.gov/stations/G6493",
+        "https://api.weather.gov/stations/G6960",
+        "https://api.weather.gov/stations/G6961",
+        "https://api.weather.gov/stations/G6979",
+        "https://api.weather.gov/stations/G6997",
+        "https://api.weather.gov/stations/G7070",
+        "https://api.weather.gov/stations/G7140",
+        "https://api.weather.gov/stations/G7209",
+        "https://api.weather.gov/stations/G7277",
+        "https://api.weather.gov/stations/G7372",
+        "https://api.weather.gov/stations/G7508",
+        "https://api.weather.gov/stations/G7537",
+        "https://api.weather.gov/stations/G7695",
+        "https://api.weather.gov/stations/G7815",
+        "https://api.weather.gov/stations/GARP4",
+        "https://api.weather.gov/stations/GBOP4",
+        "https://api.weather.gov/stations/GCAP4",
+        "https://api.weather.gov/stations/GRAP4",
+        "https://api.weather.gov/stations/GUIP4",
+        "https://api.weather.gov/stations/GUJP4",
+        "https://api.weather.gov/stations/GUSP4",
+        "https://api.weather.gov/stations/GUVP4",
+        "https://api.weather.gov/stations/ISSP4",
+        "https://api.weather.gov/stations/JCOP4",
+        "https://api.weather.gov/stations/JOXP4",
+        "https://api.weather.gov/stations/JWGP4",
+        "https://api.weather.gov/stations/LARP4",
+        "https://api.weather.gov/stations/LCOP4",
+        "https://api.weather.gov/stations/LCSP4",
+        "https://api.weather.gov/stations/LLYP4",
+        "https://api.weather.gov/stations/LOCP4",
+        "https://api.weather.gov/stations/MAFP4",
+        "https://api.weather.gov/stations/MAOP4",
+        "https://api.weather.gov/stations/MELP4",
+        "https://api.weather.gov/stations/MGIP4",
+        "https://api.weather.gov/stations/MGZP4",
+        "https://api.weather.gov/stations/MISP4",
+        "https://api.weather.gov/stations/MNAP4",
+        "https://api.weather.gov/stations/NDBCESPP4",
+        "https://api.weather.gov/stations/NDBCJOXP4",
+        "https://api.weather.gov/stations/NDBCMGIP4",
+        "https://api.weather.gov/stations/NDBCMGZP4",
+        "https://api.weather.gov/stations/NRJP4",
+        "https://api.weather.gov/stations/OROP4",
+        "https://api.weather.gov/stations/PASP4",
+        "https://api.weather.gov/stations/PAXP4",
+        "https://api.weather.gov/stations/PCEP4",
+        "https://api.weather.gov/stations/PCXP4",
+        "https://api.weather.gov/stations/PRCP4",
+        "https://api.weather.gov/stations/PRNP4",
+        "https://api.weather.gov/stations/PRTP4",
+        "https://api.weather.gov/stations/QMAP4",
+        "https://api.weather.gov/stations/RABP4",
+        "https://api.weather.gov/stations/RCLP4",
+        "https://api.weather.gov/stations/REGP4",
+        "https://api.weather.gov/stations/RPCP4",
+        "https://api.weather.gov/stations/SAAP4",
+        "https://api.weather.gov/stations/SFDP4",
+        "https://api.weather.gov/stations/SJNP4",
+        "https://api.weather.gov/stations/SLEP4",
+        "https://api.weather.gov/stations/SLGP4",
+        "https://api.weather.gov/stations/SLKP4",
+        "https://api.weather.gov/stations/SLMP4",
+        "https://api.weather.gov/stations/TJBQ",
+        "https://api.weather.gov/stations/TJIG",
+        "https://api.weather.gov/stations/TJNR",
+        "https://api.weather.gov/stations/TJPS",
+        "https://api.weather.gov/stations/TJSJ",
+        "https://api.weather.gov/stations/TOXP4",
+        "https://api.weather.gov/stations/USAP4",
+        "https://api.weather.gov/stations/UTHP4",
+        "https://api.weather.gov/stations/VALP4",
+        "https://api.weather.gov/stations/VAMP4",
+        "https://api.weather.gov/stations/VEQP4",
+        "https://api.weather.gov/stations/VIEP4",
+        "https://api.weather.gov/stations/VILP4",
+        "https://api.weather.gov/stations/VINP4",
+        "https://api.weather.gov/stations/VIVP4",
+        "https://api.weather.gov/stations/WSIPRI5"
+    ],
+    "pagination": {
+        "next": "https://api.weather.gov/stations?state%5B0%5D=PR&limit=500&cursor=eyJzIjo1MDB9"
+    }
+}

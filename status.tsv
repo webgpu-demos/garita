@@ -1,0 +1,61 @@
+nws_alerts.json	200	224	application/geo+json	https://api.weather.gov/alerts/active?area=PR
+nws_alerts_all_recent.json	200	287204	application/geo+json	https://api.weather.gov/alerts?area=PR&limit=40
+nws_obs_TJSJ.json	200	4935	application/geo+json	https://api.weather.gov/stations/TJSJ/observations/latest
+nws_stations_pr.json	200	162188	application/geo+json	https://api.weather.gov/stations?state=PR&limit=500
+nws_zones_forecast_pr.json	200	14165	application/geo+json	https://api.weather.gov/zones?area=PR&type=forecast&include_geometry=false
+nws_zones_county_pr.json	200	83706	application/geo+json	https://api.weather.gov/zones?area=PR&type=county&include_geometry=false
+nws_points_sanjuan.json	200	3930	application/geo+json	https://api.weather.gov/points/18.4655,-66.1057
+usgs_quakes_30d.json	200	192543	application/json; charset=utf-8	https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&minlatitude=16.8&maxlatitude=19.8&minlongitude=-68.6&maxlongitude=-64.2&starttime=2026-09-10&minmagnitude=2&orderby=time
+usgs_nwis_iv.json	200	447953	application/json	https://waterservices.usgs.gov/nwis/iv/?format=json&stateCd=pr&parameterCd=00065,00060,00045,62614&siteStatus=active
+usgs_nwis_sites.rdb	200	57689	text/plain;charset=UTF-8	https://waterservices.usgs.gov/nwis/site/?format=rdb&stateCd=pr&siteStatus=active&hasDataTypeCd=iv&siteOutput=expanded
+nwps_gauges.json	200	119378	application/json	https://api.water.noaa.gov/nwps/v1/gauges?bbox.xmin=-67.99&bbox.ymin=17.6&bbox.xmax=-65.1&bbox.ymax=18.7&srid=EPSG_4326
+coops_stations.json	200	777371	application/json	https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations.json?type=waterlevels
+coops_wl_9755371.json	200	53828	application/json;charset=UTF-8	https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?range=72&station=9755371&product=water_level&datum=MSL&time_zone=gmt&units=metric&format=json&application=garita
+coops_pred_9755371.json	200	27610	application/json;charset=UTF-8	https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?range=72&station=9755371&product=predictions&datum=MSL&time_zone=gmt&units=metric&interval=6&format=json&application=garita
+coops_latest_9755371.json	200	193	application/json;charset=UTF-8	https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=latest&station=9755371&product=water_level&datum=MSL&time_zone=gmt&units=metric&format=json&application=garita
+coops_datums_9755371.json	200	2248	application/json	https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/9755371/datums.json?units=metric
+coops_floodlevels_9755371.json	200	260	application/json	https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/9755371/floodlevels.json?units=metric
+coops_slr_9755371.json	200	31337	application/json	https://api.tidesandcurrents.noaa.gov/dpapi/prod/webapi/product/slr_projections.json?station=9755371&units=metric
+coops_slr_9759110.json	200	31637	application/json	https://api.tidesandcurrents.noaa.gov/dpapi/prod/webapi/product/slr_projections.json?station=9759110&units=metric
+coops_met_9755371.json	200	198	application/json;charset=UTF-8	https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?date=latest&station=9755371&product=wind&time_zone=gmt&units=metric&format=json&application=garita
+openfema_declarations.json	200	910459	application/json; charset=utf-8	https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries?$filter=state%20eq%20'PR'&$orderby=declarationDate%20desc&$top=1000
+openfema_ha_owners_sample.json	200	3776	application/json; charset=utf-8	https://www.fema.gov/api/open/v2/HousingAssistanceOwners?$filter=state%20eq%20'PR'&$top=5
+openfema_ha_renters_sample.json	200	3060	application/json; charset=utf-8	https://www.fema.gov/api/open/v2/HousingAssistanceRenters?$filter=state%20eq%20'PR'&$top=5
+openfema_datasets.json	200	8488	application/json; charset=utf-8	https://www.fema.gov/api/open/v1/OpenFemaDataSets?$select=name,title,version,recordCount,lastRefresh&$top=200
+open_meteo_grid.json	200	14043	application/json; charset=utf-8	https://api.open-meteo.com/v1/forecast?latitude=18.46,18.01,18.2,18.47,18.15,18.34&longitude=-66.1,-66.61,-67.14,-66.72,-65.44,-65.65&current=temperature_2m,relative_humidity_2m,wind_speed_10m,wind_direction_10m,wind_gusts_10m,precipitation,cloud_cover,pressure_msl&hourly=precipitation,wind_speed_10m,cloud_cover&forecast_days=2&wind_speed_unit=ms&timezone=GMT
+open_meteo_marine.json	200	2710	application/json; charset=utf-8	https://marine-api.open-meteo.com/v1/marine?latitude=18.6,17.85,18.25,18.25&longitude=-66.1,-66.5,-67.4,-65.1&current=wave_height,wave_direction,wave_period,swell_wave_height,swell_wave_direction,swell_wave_period,sea_surface_temperature,sea_level_height_msl&timezone=GMT
+open_meteo_air.json	200	904	application/json; charset=utf-8	https://air-quality-api.open-meteo.com/v1/air-quality?latitude=18.46,18.01&longitude=-66.1,-66.61&current=pm10,pm2_5,dust,us_aqi,aerosol_optical_depth&timezone=GMT
+rainviewer.json	200	818	application/json	https://api.rainviewer.com/public/weather-maps.json
+celestrak_stations.json	200	9293	application/json; charset=UTF-8	https://celestrak.org/NORAD/elements/gp.php?GROUP=stations&FORMAT=json
+openfreemap_planet.json	200	19254	application/json	https://tiles.openfreemap.org/planet
+nhc_arcgis_layers.json	200	2343337	application/json;charset=UTF-8	https://mapservices.weather.noaa.gov/tropical/rest/services/tropical/NHC_tropical_weather/MapServer/layers?f=json
+nhc_current.json	200	12234	application/json	https://www.nhc.noaa.gov/CurrentStorms.json
+ndbc_41053.txt	200	605172	text/plain; charset=ISO-8859-1	https://www.ndbc.noaa.gov/data/realtime2/41053.txt
+ndbc_41043.txt	200	609402	text/plain; charset=ISO-8859-1	https://www.ndbc.noaa.gov/data/realtime2/41043.txt
+ndbc_42085.txt	200	603104	text/plain; charset=ISO-8859-1	https://www.ndbc.noaa.gov/data/realtime2/42085.txt
+ndbc_latest_obs.txt	200	104125	text/plain; charset=ISO-8859-1	https://www.ndbc.noaa.gov/data/latest_obs/latest_obs.txt
+ndbc_stations.xml	200	272962	text/xml	https://www.ndbc.noaa.gov/activestations.xml
+luma_regions.json	200	2102	application/json	https://api.miluma.lumapr.com/miluma-outage-api/outage/regionsWithoutService
+luma_towns.json	200	92	application/json	https://api.miluma.lumapr.com/miluma-outage-api/outage/municipality/towns
+adsb_lol.json	200	17201	application/json	https://api.adsb.lol/v2/point/18.2/-66.4/160
+adsb_fi.json	200	36295	application/json	https://opendata.adsb.fi/api/v2/lat/18.2/lon/-66.4/dist/160
+airplanes_live.json	403	164	application/json	https://api.airplanes.live/v2/point/18.2/-66.4/160
+tsunami_atom.xml	200	2618	text/xml	https://www.tsunami.gov/events/xml/PAAQAtom.xml
+prsn_recent.json	404	11868	text/html; charset=UTF-8	https://redsismica.uprm.edu/spanish/sismos/recent.json
+census_acs.json	200	8531	text/html	https://api.census.gov/data/2023/acs/acs5?get=NAME,B01003_001E,B25001_001E,B25002_003E,B19013_001E,B17001_002E,B17001_001E&for=county:*&in=state:72
+census_acs_2022.json	200	8531	text/html	https://api.census.gov/data/2022/acs/acs5?get=NAME,B01003_001E&for=county:*&in=state:72
+tigerweb_layers.json	200	490195	application/json;charset=UTF-8	https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer/layers?f=json
+hud_catalog.json	200	53910	application/json; charset=utf-8	https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services?f=json
+usgs_img_meta.json	200	9263	application/json;charset=UTF-8	https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer?f=json
+usgs_img_8.jpg	200	12135	image/jpeg	https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/tile/8/114/80
+usgs_img_10.jpg	404	572	text/html;charset=utf-8	https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/tile/10/458/323
+usgs_img_13.jpg	200	114527	image/png	https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/tile/13/3668/2592
+usgs_img_16.jpg	200	12614	image/jpeg	https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/tile/16/29347/20741
+terrarium_12.png	200	68304	image/png	https://s3.amazonaws.com/elevation-tiles-prod/terrarium/12/1296/1834.png
+terrarium_15.png	200	6040	image/png	https://s3.amazonaws.com/elevation-tiles-prod/terrarium/15/10370/14673.png
+nfhl_count.json	200	14	application/json;charset=UTF-8	https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/28/query?where=DFIRM_ID%20LIKE%20'72%25'&returnCountOnly=true&f=json
+slr_services.json	200	2652	application/json; charset=UTF-8	https://coast.noaa.gov/arcgis/rest/services/dc_slr?f=json
+shelters_2026.pdf	200	51061444	application/pdf	https://docs.pr.gov/files/Vivienda/vivienda.pr.gov/Home/DVAVP_Refugios_Temporada_de_Huracanes_2026.pdf
+svi_services.json	200	1509	application/json;charset=UTF-8	https://onemap.cdc.gov/OneMapServices/rest/services/SVI?f=json
+usa_structures_meta.json	200	22587	application/json; charset=utf-8	https://services2.arcgis.com/FiaPA4ga0iQKduv3/arcgis/rest/services/USA_Structures_View/FeatureServer/0?f=json
+hurdat2_index.html	200	12660	text/html;charset=ISO-8859-1	https://www.nhc.noaa.gov/data/hurdat/
