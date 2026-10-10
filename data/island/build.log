@@ -1,0 +1,32 @@
+05:08:30 stage 2, node v22.23.3, sharp 0.33.5, out /home/runner/work/pr-digital-twin/pr-digital-twin/out, cache /home/runner/work/pr-digital-twin/pr-digital-twin/tile-cache
+05:08:30 coverage dem: z8=6 z9=24 z10=96 z11=85 z12=297 z13=20 z14=70 z15=247
+05:08:30 coverage img: z8=6 z9=24 z10=96 z11=85 z12=297 z13=1170 z14=70 z15=247 z16=888
+05:08:30   dem: 500/845
+05:08:30   img: 500/2883
+05:08:30 download dem: 845 tiles {"cached":845}
+05:08:30   img: 1000/2883
+05:08:30   img: 1500/2883
+05:08:30   img: 2000/2883
+05:08:30   img: 2500/2883
+05:08:30 download img: 2883 tiles {"cached":2748,"cached404":135}
+05:08:48 dem: 845 tiles, raw 47.97 MB -> re-encoded 17.10 MB (35.7 %), round-trip max abs error 0.2500 m, range -32768 .. 3979 m
+05:08:48 dem range per zoom (m, no-data excluded): z8 -7946..1287  z9 -7948..3979  z10 -7948..2448  z11 -1387..1319.5  z12 -1312..1327.5  z13 -21..147  z14 -5466.5..147  z15 -22783..147
+05:08:48 dem tiles with no-data pixels (-32768 m, RGB 0,0,0 upstream) [x,y,pixels]: {"15":[[10379,14678,247]]}
+05:08:48 dem tiles with spike pixels (> 250 m from the median of the 4 neighbours): z8: 3 tiles, 7 px; z9: 4 tiles, 21 px; z10: 6 tiles, 50 px; z11: 3 tiles, 9 px; z12: 8 tiles, 25 px; z15: 10 tiles, 370 px
+05:09:08 img z8: wanted 6, written 6 (served as jpeg 6, as png 0, of which with transparency 0), 404 0, blank white not written 0, failed 0, partly white (>=0.5 %) 0, 0.06 MB (raw 0.06 MB)
+05:09:08 img z9: wanted 24, written 0 (served as jpeg 0, as png 0, of which with transparency 0), 404 24, blank white not written 0, failed 0, partly white (>=0.5 %) 0, 0.00 MB (raw 0.00 MB)
+05:09:08 img z10: wanted 96, written 0 (served as jpeg 0, as png 0, of which with transparency 0), 404 96, blank white not written 0, failed 0, partly white (>=0.5 %) 0, 0.00 MB (raw 0.00 MB)
+05:09:08 img z11: wanted 85, written 54 (served as jpeg 12, as png 58, of which with transparency 58), 404 15, blank white not written 16, failed 0, partly white (>=0.5 %) 33, 0.47 MB (raw 2.43 MB)
+05:09:08 img z12: wanted 297, written 167 (served as jpeg 68, as png 229, of which with transparency 229), 404 0, blank white not written 130, failed 0, partly white (>=0.5 %) 78, 1.87 MB (raw 7.54 MB)
+05:09:08 img z13: wanted 1170, written 572 (served as jpeg 398, as png 772, of which with transparency 772), 404 0, blank white not written 598, failed 0, partly white (>=0.5 %) 162, 7.95 MB (raw 19.07 MB)
+05:09:08 img z14: wanted 70, written 64 (served as jpeg 50, as png 20, of which with transparency 20), 404 0, blank white not written 6, failed 0, partly white (>=0.5 %) 10, 1.59 MB (raw 2.68 MB)
+05:09:08 img z15: wanted 247, written 234 (served as jpeg 207, as png 40, of which with transparency 40), 404 0, blank white not written 13, failed 0, partly white (>=0.5 %) 21, 6.16 MB (raw 8.21 MB)
+05:09:08 img z16: wanted 888, written 849 (served as jpeg 828, as png 60, of which with transparency 60), 404 0, blank white not written 39, failed 0, partly white (>=0.5 %) 36, 22.68 MB (raw 25.83 MB)
+05:09:08 img: total 40.78 MB
+05:09:16 mosaic dem_z10.png 3072x2048 3995 kB, -7948 .. 2448 m, land 10.0 % of pixels
+05:09:18 dem_z10 outliers (> 250 m from the median of the 8 neighbours, upstream artefacts, NOT corrected): 56 [{"px":[304,436],"lon":-68.48808,"lat":18.74446,"m":240,"neighbourMedian_m":-16.25},{"px":[3019,661],"lon":-64.7596,"lat":18.4516,"m":-387,"neighbourMedian_m":20.5},{"px":[3020,661],"lon":-64.75822,"lat":18.4516,"m":644,"neighbourMedian_m":41},{"px":[3019,662],"lon":-64.7596,"lat":18.4503,"m":-201,"neighbourMedian_m":69.5},{"px":[3020,662],"lon":-64.75822,"lat":18.4503,"m":407,"neighbourMedian_m":76.5},{"px":[3015,663],"lon":-64.76509,"lat":18.449,"m":260,"neighbourMedian_m":-8},{"px":[3014,664],"lon":-64.76646,"lat":18.4477,"m":-1900,"neighbourMedian_m":137},{"px":[3015,664],"lon":-64.76509,"lat":18.4477,"m":-2706,"neighbourMedian_m":221.5}]
+05:09:21 mosaic img_z10.jpg 3072x2048 284 kB, layers [{"zoom":8,"tiles":6,"method":"assembled, enlarged 4x (bicubic)"},{"zoom":11,"tiles":54,"method":"each tile reduced 2x (lanczos3)","tilesWithWhiteNoDataCutOut":34},{"zoom":12,"tiles":167,"method":"each tile reduced 4x (lanczos3)","tilesWithWhiteNoDataCutOut":78},{"zoom":13,"tiles":572,"method":"each tile reduced 8x (lanczos3)","tilesWithWhiteNoDataCutOut":165}], pixels with no imagery at any zoom (neutral deep blue): 0.00 %
+05:09:22 qa_hillshade.jpg 3072 px wide, q82, 344 kB
+05:09:22 index dem: z8=6 z9=24 z10=96 z11=85 z12=297 z13=20 z14=70 z15=247
+05:09:22 index img: z8=6 z11=54 z12=167 z13=572 z14=64 z15=234 z16=849
+05:09:22 sizes: dem tiles 17.10 MB, img tiles 40.78 MB, total tiles 57.88 MB; done in 53 s

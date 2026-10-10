@@ -1,0 +1,469 @@
+{
+ "generated": "2026-10-10T05:07:03.000Z",
+ "flood_attached": true,
+ "buildings": {
+  "total": 1500471,
+  "osm_features_read": 1500584,
+  "dropped_degenerate": 29,
+  "multipolygon": 43,
+  "rings_simplified_over_64": 279,
+  "vertices": 8451048,
+  "height_from_height_tag": 203069,
+  "height_from_levels": 3419,
+  "height_unknown": 1293983,
+  "share_with_height": 0.1376,
+  "by_kind": {
+   "0": 1446240,
+   "1": 1735,
+   "2": 3204,
+   "3": 1030,
+   "4": 2040,
+   "5": 614,
+   "6": 45608
+  },
+  "top_building_tags": [
+   [
+    "yes",
+    1427299
+   ],
+   [
+    "house",
+    50104
+   ],
+   [
+    "detached",
+    10169
+   ],
+   [
+    "residential",
+    2934
+   ],
+   [
+    "apartments",
+    1732
+   ],
+   [
+    "roof",
+    1713
+   ],
+   [
+    "commercial",
+    1024
+   ],
+   [
+    "school",
+    931
+   ],
+   [
+    "industrial",
+    894
+   ],
+   [
+    "construction",
+    646
+   ],
+   [
+    "shed",
+    611
+   ],
+   [
+    "grandstand",
+    403
+   ],
+   [
+    "retail",
+    294
+   ],
+   [
+    "church",
+    177
+   ],
+   [
+    "garage",
+    169
+   ],
+   [
+    "university",
+    162
+   ],
+   [
+    "greenhouse",
+    146
+   ],
+   [
+    "hospital",
+    136
+   ],
+   [
+    "ruins",
+    84
+   ],
+   [
+    "barn",
+    65
+   ],
+   [
+    "stadium",
+    64
+   ],
+   [
+    "warehouse",
+    54
+   ],
+   [
+    "hotel",
+    49
+   ],
+   [
+    "service",
+    43
+   ],
+   [
+    "hangar",
+    43
+   ]
+  ],
+  "outside_municipios": 37
+ },
+ "tiles": {
+  "count": 1771,
+  "bytes": 45822128,
+  "vertices_clamped": 0,
+  "max_per_tile": 9148
+ },
+ "elevation": {
+  "tiles": 1772,
+  "fetched": 0,
+  "cached": 1772,
+  "failed": 0,
+  "unknown": 0,
+  "below_0": 1368,
+  "lt_1m": 8757,
+  "lt_2m": 24543,
+  "lt_3m": 61520,
+  "at_or_below": {
+   "1": 12344,
+   "2": 25953,
+   "3": 94324,
+   "5": 138479,
+   "0.5": 4954,
+   "1.5": 18202
+  },
+  "above_10": 1272488,
+  "note": "lt_X = strictly below X m (histogram bins); at_or_below = inclusive. They differ a lot at 1, 3 m because of the whole-metre terraces in the elevation source.",
+  "integer_plateaus": {
+   "note": "buildings whose sampled ground elevation is a whole metre to within 5 mm, by metre, among buildings between 0.5 and 15.5 m",
+   "by_metre": {
+    "1": 4178,
+    "2": 2071,
+    "3": 39107,
+    "4": 1304,
+    "5": 958,
+    "6": 486,
+    "7": 10530,
+    "8": 220,
+    "9": 175,
+    "10": 8090,
+    "11": 172,
+    "12": 137,
+    "13": 5694,
+    "14": 146,
+    "15": 348
+   },
+   "total": 73616,
+   "buildings_0p5_to_15p5m": 310654,
+   "share": 0.237
+  }
+ },
+ "flood": {
+  "nfhl": {
+   "polygons": 4894,
+   "by_class": {
+    "0": 729,
+    "1": 1648,
+    "2": 1978,
+    "3": 539
+   },
+   "by_zone": {
+    "AE": 1622,
+    "AE | FLOODWAY": 138,
+    "VE": 538,
+    "A": 191,
+    "AO": 24,
+    "AO | FLOODWAY": 1,
+    "AH": 1,
+    "VE | RIVERINE FLOODWAY SHOWN IN COASTAL ZONE": 1,
+    "A99": 1,
+    "X | 0.2 PCT ANNUAL CHANCE FLOOD HAZARD": 1648,
+    "X | AREA OF MINIMAL FLOOD HAZARD": 720,
+    "D": 9
+   }
+  },
+  "island_zone_counts": {
+   "0": 1306623,
+   "1": 54600,
+   "2": 135886,
+   "3": 3362
+  },
+  "top5_zone2": [
+   {
+    "geoid": "72127",
+    "name": "San Juan",
+    "buildings": 103767,
+    "zone2": 14334,
+    "zone3": 44,
+    "sfha": 14378
+   },
+   {
+    "geoid": "72113",
+    "name": "Ponce",
+    "buildings": 62155,
+    "zone2": 13985,
+    "zone3": 78,
+    "sfha": 14063
+   },
+   {
+    "geoid": "72031",
+    "name": "Carolina",
+    "buildings": 51645,
+    "zone2": 12974,
+    "zone3": 10,
+    "sfha": 12984
+   },
+   {
+    "geoid": "72123",
+    "name": "Salinas",
+    "buildings": 17220,
+    "zone2": 7988,
+    "zone3": 189,
+    "sfha": 8177
+   },
+   {
+    "geoid": "72097",
+    "name": "Mayagüez",
+    "buildings": 34356,
+    "zone2": 7961,
+    "zone3": 26,
+    "sfha": 7987
+   }
+  ],
+  "top5_sfha": [
+   {
+    "geoid": "72127",
+    "name": "San Juan",
+    "buildings": 103767,
+    "zone2": 14334,
+    "zone3": 44,
+    "sfha": 14378
+   },
+   {
+    "geoid": "72113",
+    "name": "Ponce",
+    "buildings": 62155,
+    "zone2": 13985,
+    "zone3": 78,
+    "sfha": 14063
+   },
+   {
+    "geoid": "72031",
+    "name": "Carolina",
+    "buildings": 51645,
+    "zone2": 12974,
+    "zone3": 10,
+    "sfha": 12984
+   },
+   {
+    "geoid": "72123",
+    "name": "Salinas",
+    "buildings": 17220,
+    "zone2": 7988,
+    "zone3": 189,
+    "sfha": 8177
+   },
+   {
+    "geoid": "72097",
+    "name": "Mayagüez",
+    "buildings": 34356,
+    "zone2": 7961,
+    "zone3": 26,
+    "sfha": 7987
+   }
+  ],
+  "reference": {
+   "note": "An earlier study by the same owner (OSM building tiles, same FEMA layer) found 6,862 of 33,461 buildings in the 1 % zones in Toa Baja and 3,806 of 9,915 in Catano.",
+   "toa_baja": {
+    "in_1pct": 6862,
+    "buildings": 33461
+   },
+   "catano": {
+    "in_1pct": 3806,
+    "buildings": 9915
+   }
+  },
+  "toa_baja": {
+   "geoid": "72137",
+   "name": "Toa Baja",
+   "buildings": 30977,
+   "zone_counts": {
+    "0": 14992,
+    "1": 9704,
+    "2": 6249,
+    "3": 32
+   },
+   "sfha": 6281,
+   "sfha_share": 0.2028,
+   "lt_1m": 491,
+   "at_or_below_1m": 560,
+   "at_or_below_2m": 1434,
+   "at_or_below_3m": 11988
+  },
+  "catano": {
+   "geoid": "72033",
+   "name": "Cataño",
+   "buildings": 9237,
+   "zone_counts": {
+    "0": 703,
+    "1": 5153,
+    "2": 2994,
+    "3": 387
+   },
+   "sfha": 3381,
+   "sfha_share": 0.366,
+   "lt_1m": 1640,
+   "at_or_below_1m": 1758,
+   "at_or_below_2m": 3001,
+   "at_or_below_3m": 6622
+  },
+  "san_juan": {
+   "geoid": "72127",
+   "name": "San Juan",
+   "buildings": 103767,
+   "zone_counts": {
+    "0": 85875,
+    "1": 3514,
+    "2": 14334,
+    "3": 44
+   },
+   "sfha": 14378,
+   "sfha_share": 0.1386,
+   "lt_1m": 1509,
+   "at_or_below_1m": 1635,
+   "at_or_below_2m": 3959,
+   "at_or_below_3m": 14047
+  }
+ },
+ "facilities": {
+  "total": 3084,
+  "counts": {
+   "airport": 24,
+   "clinic": 430,
+   "fire_station": 70,
+   "hospital": 87,
+   "police_station": 127,
+   "power_plant": 67,
+   "school": 1802,
+   "seaport": 14,
+   "substation": 401,
+   "water_plant": 62
+  },
+  "without_municipio": 0,
+  "dropped_outside_puerto_rico": 1,
+  "in_sfha": 391,
+  "in_sfha_by_type": {
+   "airport": 8,
+   "clinic": 53,
+   "fire_station": 7,
+   "hospital": 8,
+   "police_station": 25,
+   "power_plant": 11,
+   "school": 181,
+   "seaport": 12,
+   "substation": 70,
+   "water_plant": 16
+  }
+ },
+ "top5_buildings": [
+  {
+   "geoid": "72127",
+   "name": "San Juan",
+   "buildings": 103767,
+   "zone2": 14334,
+   "zone3": 44,
+   "sfha": 14378
+  },
+  {
+   "geoid": "72021",
+   "name": "Bayamón",
+   "buildings": 66744,
+   "zone2": 2125,
+   "zone3": 0,
+   "sfha": 2125
+  },
+  {
+   "geoid": "72113",
+   "name": "Ponce",
+   "buildings": 62155,
+   "zone2": 13985,
+   "zone3": 78,
+   "sfha": 14063
+  },
+  {
+   "geoid": "72031",
+   "name": "Carolina",
+   "buildings": 51645,
+   "zone2": 12974,
+   "zone3": 10,
+   "sfha": 12984
+  },
+  {
+   "geoid": "72013",
+   "name": "Arecibo",
+   "buildings": 46619,
+   "zone2": 2211,
+   "zone3": 459,
+   "sfha": 2670
+  }
+ ],
+ "bottom5_buildings": [
+  {
+   "geoid": "72049",
+   "name": "Culebra",
+   "buildings": 1836,
+   "zone2": 28,
+   "zone3": 119,
+   "sfha": 147
+  },
+  {
+   "geoid": "72093",
+   "name": "Maricao",
+   "buildings": 3447,
+   "zone2": 62,
+   "zone3": 0,
+   "sfha": 62
+  },
+  {
+   "geoid": "72083",
+   "name": "Las Marías",
+   "buildings": 5335,
+   "zone2": 11,
+   "zone3": 0,
+   "sfha": 11
+  },
+  {
+   "geoid": "72054",
+   "name": "Florida",
+   "buildings": 5436,
+   "zone2": 0,
+   "zone3": 0,
+   "sfha": 0
+  },
+  {
+   "geoid": "72095",
+   "name": "Maunabo",
+   "buildings": 5687,
+   "zone2": 330,
+   "zone3": 1,
+   "sfha": 331
+  }
+ ]
+}

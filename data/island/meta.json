@@ -1,0 +1,630 @@
+{
+ "generated": "2026-10-10T05:09:22.714Z",
+ "zoom": 10,
+ "x0": 316,
+ "y0": 456,
+ "tilesX": 12,
+ "tilesY": 8,
+ "tileSize": 256,
+ "width": 3072,
+ "height": 2048,
+ "bounds": {
+  "west": -68.90625,
+  "south": 16.636191878397657,
+  "east": -64.6875,
+  "north": 19.311143355064637
+ },
+ "projection": "Web Mercator (EPSG:3857): columns are equal steps in longitude, rows equal steps in Mercator y (not latitude); row 0 is north",
+ "dem": {
+  "file": "dem_z10.png",
+  "encoding": "terrarium: metres = R*256 + G + B/256 - 32768",
+  "quantisation_m": 0.5,
+  "min_m": -7948,
+  "max_m": 2448,
+  "bytes": 4091376,
+  "outliersNote": "pixels more than 250 m from the median of their 8 neighbours: garbage in the upstream tiles (present at every zoom near the same places), kept as served. Clamp or median-filter them when meshing.",
+  "outliers": [
+   {
+    "px": [
+     304,
+     436
+    ],
+    "lon": -68.48808,
+    "lat": 18.74446,
+    "m": 240,
+    "neighbourMedian_m": -16.25
+   },
+   {
+    "px": [
+     3019,
+     661
+    ],
+    "lon": -64.7596,
+    "lat": 18.4516,
+    "m": -387,
+    "neighbourMedian_m": 20.5
+   },
+   {
+    "px": [
+     3020,
+     661
+    ],
+    "lon": -64.75822,
+    "lat": 18.4516,
+    "m": 644,
+    "neighbourMedian_m": 41
+   },
+   {
+    "px": [
+     3019,
+     662
+    ],
+    "lon": -64.7596,
+    "lat": 18.4503,
+    "m": -201,
+    "neighbourMedian_m": 69.5
+   },
+   {
+    "px": [
+     3020,
+     662
+    ],
+    "lon": -64.75822,
+    "lat": 18.4503,
+    "m": 407,
+    "neighbourMedian_m": 76.5
+   },
+   {
+    "px": [
+     3015,
+     663
+    ],
+    "lon": -64.76509,
+    "lat": 18.449,
+    "m": 260,
+    "neighbourMedian_m": -8
+   },
+   {
+    "px": [
+     3014,
+     664
+    ],
+    "lon": -64.76646,
+    "lat": 18.4477,
+    "m": -1900,
+    "neighbourMedian_m": 137
+   },
+   {
+    "px": [
+     3015,
+     664
+    ],
+    "lon": -64.76509,
+    "lat": 18.4477,
+    "m": -2706,
+    "neighbourMedian_m": 221.5
+   },
+   {
+    "px": [
+     3016,
+     664
+    ],
+    "lon": -64.76372,
+    "lat": 18.4477,
+    "m": -1444,
+    "neighbourMedian_m": 170
+   },
+   {
+    "px": [
+     3018,
+     664
+    ],
+    "lon": -64.76097,
+    "lat": 18.4477,
+    "m": 470,
+    "neighbourMedian_m": 125.5
+   },
+   {
+    "px": [
+     3045,
+     665
+    ],
+    "lon": -64.72389,
+    "lat": 18.44639,
+    "m": 363.5,
+    "neighbourMedian_m": 5.5
+   },
+   {
+    "px": [
+     3014,
+     666
+    ],
+    "lon": -64.76646,
+    "lat": 18.44509,
+    "m": 628,
+    "neighbourMedian_m": 69.5
+   },
+   {
+    "px": [
+     3015,
+     666
+    ],
+    "lon": -64.76509,
+    "lat": 18.44509,
+    "m": 871,
+    "neighbourMedian_m": 264.5
+   },
+   {
+    "px": [
+     3016,
+     666
+    ],
+    "lon": -64.76372,
+    "lat": 18.44509,
+    "m": 528,
+    "neighbourMedian_m": 145
+   },
+   {
+    "px": [
+     3019,
+     724
+    ],
+    "lon": -64.7596,
+    "lat": 18.36951,
+    "m": -337,
+    "neighbourMedian_m": -19.5
+   },
+   {
+    "px": [
+     3020,
+     724
+    ],
+    "lon": -64.75822,
+    "lat": 18.36951,
+    "m": 384,
+    "neighbourMedian_m": -58.25
+   },
+   {
+    "px": [
+     2355,
+     730
+    ],
+    "lon": -65.67146,
+    "lat": 18.36169,
+    "m": 265,
+    "neighbourMedian_m": -4.25
+   },
+   {
+    "px": [
+     1944,
+     749
+    ],
+    "lon": -66.23589,
+    "lat": 18.33693,
+    "m": 456,
+    "neighbourMedian_m": 135.5
+   },
+   {
+    "px": [
+     1944,
+     750
+    ],
+    "lon": -66.23589,
+    "lat": 18.33562,
+    "m": 338,
+    "neighbourMedian_m": 60.5
+   },
+   {
+    "px": [
+     70,
+     757
+    ],
+    "lon": -68.80943,
+    "lat": 18.3265,
+    "m": -623,
+    "neighbourMedian_m": -27
+   },
+   {
+    "px": [
+     71,
+     757
+    ],
+    "lon": -68.80806,
+    "lat": 18.3265,
+    "m": -515,
+    "neighbourMedian_m": 4.5
+   },
+   {
+    "px": [
+     71,
+     758
+    ],
+    "lon": -68.80806,
+    "lat": 18.3252,
+    "m": -399,
+    "neighbourMedian_m": -29
+   },
+   {
+    "px": [
+     73,
+     761
+    ],
+    "lon": -68.80531,
+    "lat": 18.32128,
+    "m": 873,
+    "neighbourMedian_m": -83.5
+   },
+   {
+    "px": [
+     73,
+     762
+    ],
+    "lon": -68.80531,
+    "lat": 18.31998,
+    "m": 732,
+    "neighbourMedian_m": -121
+   },
+   {
+    "px": [
+     74,
+     762
+    ],
+    "lon": -68.80394,
+    "lat": 18.31998,
+    "m": -665,
+    "neighbourMedian_m": -80.5
+   },
+   {
+    "px": [
+     74,
+     763
+    ],
+    "lon": -68.80394,
+    "lat": 18.31868,
+    "m": -1026,
+    "neighbourMedian_m": -92.5
+   },
+   {
+    "px": [
+     76,
+     763
+    ],
+    "lon": -68.80119,
+    "lat": 18.31868,
+    "m": 311,
+    "neighbourMedian_m": -14.5
+   },
+   {
+    "px": [
+     73,
+     764
+    ],
+    "lon": -68.80531,
+    "lat": 18.31737,
+    "m": -598,
+    "neighbourMedian_m": -128
+   },
+   {
+    "px": [
+     74,
+     764
+    ],
+    "lon": -68.80394,
+    "lat": 18.31737,
+    "m": -718,
+    "neighbourMedian_m": -128
+   },
+   {
+    "px": [
+     76,
+     764
+    ],
+    "lon": -68.80119,
+    "lat": 18.31737,
+    "m": 265,
+    "neighbourMedian_m": -13
+   },
+   {
+    "px": [
+     73,
+     765
+    ],
+    "lon": -68.80531,
+    "lat": 18.31607,
+    "m": -494,
+    "neighbourMedian_m": -53
+   },
+   {
+    "px": [
+     102,
+     820
+    ],
+    "lon": -68.76549,
+    "lat": 18.24435,
+    "m": -388,
+    "neighbourMedian_m": -3.5
+   },
+   {
+    "px": [
+     107,
+     825
+    ],
+    "lon": -68.75862,
+    "lat": 18.23783,
+    "m": -285,
+    "neighbourMedian_m": -1.5
+   },
+   {
+    "px": [
+     113,
+     841
+    ],
+    "lon": -68.75038,
+    "lat": 18.21696,
+    "m": -264,
+    "neighbourMedian_m": 0.5
+   },
+   {
+    "px": [
+     112,
+     843
+    ],
+    "lon": -68.75175,
+    "lat": 18.21435,
+    "m": -569,
+    "neighbourMedian_m": -10
+   },
+   {
+    "px": [
+     113,
+     843
+    ],
+    "lon": -68.75038,
+    "lat": 18.21435,
+    "m": 410,
+    "neighbourMedian_m": -18
+   },
+   {
+    "px": [
+     112,
+     844
+    ],
+    "lon": -68.75175,
+    "lat": 18.21305,
+    "m": -655,
+    "neighbourMedian_m": -9.75
+   },
+   {
+    "px": [
+     113,
+     844
+    ],
+    "lon": -68.75038,
+    "lat": 18.21305,
+    "m": 531,
+    "neighbourMedian_m": 8
+   },
+   {
+    "px": [
+     112,
+     845
+    ],
+    "lon": -68.75175,
+    "lat": 18.21174,
+    "m": -349,
+    "neighbourMedian_m": -4.25
+   },
+   {
+    "px": [
+     113,
+     845
+    ],
+    "lon": -68.75038,
+    "lat": 18.21174,
+    "m": 302,
+    "neighbourMedian_m": 1
+   },
+   {
+    "px": [
+     2340,
+     858
+    ],
+    "lon": -65.69206,
+    "lat": 18.19478,
+    "m": 352,
+    "neighbourMedian_m": 15.5
+   },
+   {
+    "px": [
+     2341,
+     858
+    ],
+    "lon": -65.69069,
+    "lat": 18.19478,
+    "m": 659,
+    "neighbourMedian_m": 43.5
+   },
+   {
+    "px": [
+     2340,
+     859
+    ],
+    "lon": -65.69206,
+    "lat": 18.19348,
+    "m": -482,
+    "neighbourMedian_m": -27.5
+   },
+   {
+    "px": [
+     2341,
+     859
+    ],
+    "lon": -65.69069,
+    "lat": 18.19348,
+    "m": -904,
+    "neighbourMedian_m": 19.75
+   },
+   {
+    "px": [
+     2340,
+     860
+    ],
+    "lon": -65.69206,
+    "lat": 18.19217,
+    "m": -950,
+    "neighbourMedian_m": -27.5
+   },
+   {
+    "px": [
+     2341,
+     860
+    ],
+    "lon": -65.69069,
+    "lat": 18.19217,
+    "m": -1789,
+    "neighbourMedian_m": 16
+   },
+   {
+    "px": [
+     2340,
+     861
+    ],
+    "lon": -65.69206,
+    "lat": 18.19087,
+    "m": 1331,
+    "neighbourMedian_m": 6.25
+   },
+   {
+    "px": [
+     2338,
+     862
+    ],
+    "lon": -65.69481,
+    "lat": 18.18956,
+    "m": -398,
+    "neighbourMedian_m": -29.5
+   },
+   {
+    "px": [
+     2338,
+     863
+    ],
+    "lon": -65.69481,
+    "lat": 18.18826,
+    "m": -411,
+    "neighbourMedian_m": -68
+   },
+   {
+    "px": [
+     2340,
+     864
+    ],
+    "lon": -65.69206,
+    "lat": 18.18695,
+    "m": 2448,
+    "neighbourMedian_m": 8.25
+   },
+   {
+    "px": [
+     2340,
+     865
+    ],
+    "lon": -65.69206,
+    "lat": 18.18565,
+    "m": 503,
+    "neighbourMedian_m": 2.25
+   },
+   {
+    "px": [
+     2340,
+     866
+    ],
+    "lon": -65.69206,
+    "lat": 18.18434,
+    "m": -271,
+    "neighbourMedian_m": 2.25
+   },
+   {
+    "px": [
+     102,
+     887
+    ],
+    "lon": -68.76549,
+    "lat": 18.15694,
+    "m": 714,
+    "neighbourMedian_m": 52.25
+   },
+   {
+    "px": [
+     103,
+     887
+    ],
+    "lon": -68.76411,
+    "lat": 18.15694,
+    "m": 552,
+    "neighbourMedian_m": 67
+   },
+   {
+    "px": [
+     103,
+     888
+    ],
+    "lon": -68.76411,
+    "lat": 18.15564,
+    "m": -791,
+    "neighbourMedian_m": 0.25
+   },
+   {
+    "px": [
+     104,
+     889
+    ],
+    "lon": -68.76274,
+    "lat": 18.15433,
+    "m": -441,
+    "neighbourMedian_m": 1
+   }
+  ]
+ },
+ "img": {
+  "file": "img_z10.jpg",
+  "jpegQuality": 85,
+  "bytes": 291040,
+  "composition": "Resampled from the real USGSImageryOnly tiles of every mirrored zoom <= 13, painted coarse to fine (finer zoom wins where it has data; upstream transparency respected; upstream pure-white no-data areas (runs of >= 12 pixels with all channels >= 248, grown 2 px) are cut out so the coarser layer shows). The service answers 404 for zoom 10 itself, so no zoom-10 tile is used unless listed in layers.",
+  "layers": [
+   {
+    "zoom": 8,
+    "tiles": 6,
+    "method": "assembled, enlarged 4x (bicubic)"
+   },
+   {
+    "zoom": 11,
+    "tiles": 54,
+    "method": "each tile reduced 2x (lanczos3)",
+    "tilesWithWhiteNoDataCutOut": 34
+   },
+   {
+    "zoom": 12,
+    "tiles": 167,
+    "method": "each tile reduced 4x (lanczos3)",
+    "tilesWithWhiteNoDataCutOut": 78
+   },
+   {
+    "zoom": 13,
+    "tiles": 572,
+    "method": "each tile reduced 8x (lanczos3)",
+    "tilesWithWhiteNoDataCutOut": 165
+   }
+  ],
+  "fill": "No imagery is invented. Pixels with no imagery at any mirrored zoom are neutral deep blue rgb(11,42,74).",
+  "neutralFillFraction": 0
+ },
+ "qa": {
+  "file": "qa_hillshade.jpg",
+  "note": "hillshade (sun NW, land exaggerated 6x, sea 1.2x) of dem_z10.png, 0 m contour in red"
+ },
+ "sources": {
+  "dem": "AWS Terrain Tiles (Mapzen/Tilezen Terrarium; USGS 3DEP on land, GEBCO/ETOPO1 bathymetry), https://registry.opendata.aws/terrain-tiles/ ; re-encoded, heights quantised to 0.5 m",
+  "img": "USGS The National Map: USGSImageryOnly (public domain), https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer"
+ }
+}

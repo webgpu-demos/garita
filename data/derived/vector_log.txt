@@ -1,0 +1,100 @@
+05:06:02 municipios offset 0 got 78 total 78
+05:06:02 municipios Census 2020 POP100/HU100 rows 78 layer 82
+05:06:02 municipios {"with_pop100":78,"pop100_total":3285874,"hu100_total":1598159,"count":78,"server_count":78,"bytes":621414,"extra_simplify_deg":0}
+05:06:02 barrios offset 0 got 100 total 100
+05:06:03 barrios offset 100 got 100 total 200
+05:06:03 barrios offset 200 got 100 total 300
+05:06:04 barrios offset 300 got 100 total 400
+05:06:04 barrios offset 400 got 100 total 500
+05:06:05 barrios offset 500 got 100 total 600
+05:06:05 barrios offset 600 got 100 total 700
+05:06:06 barrios offset 700 got 100 total 800
+05:06:06 barrios offset 800 got 100 total 900
+05:06:06 barrios offset 900 got 39 total 939
+05:06:07 barrios Census 2020 POP100/HU100 rows 939 layer 20
+05:06:07 barrios {"with_pop100":936,"pop100_total":3279731,"hu100_total":1595039,"count":939,"server_count":939,"bytes":2331493,"extra_simplify_deg":0}
+05:06:07 tracts offset 0 got 100 total 100
+05:06:08 tracts offset 100 got 100 total 200
+05:06:08 tracts offset 200 got 100 total 300
+05:06:08 tracts offset 300 got 100 total 400
+05:06:09 tracts offset 400 got 100 total 500
+05:06:09 tracts offset 500 got 100 total 600
+05:06:10 tracts offset 600 got 100 total 700
+05:06:10 tracts offset 700 got 100 total 800
+05:06:11 tracts offset 800 got 100 total 900
+05:06:11 tracts offset 900 got 81 total 981
+05:06:11 tracts Census 2020 POP100/HU100 rows 981 layer 6
+05:06:11 tracts {"with_pop100":981,"pop100_total":3285874,"hu100_total":1598159,"count":981,"server_count":981,"bytes":2203556,"extra_simplify_deg":0}
+05:06:11 sample names: Añasco, Bayamón, Canóvanas, Cataño, Comerío, Guánica, Juana Díaz, Las Marías, Loíza, Manatí, Mayagüez, Peñuelas, Rincón, Río Grande, San Germán, San Sebastián
+-rw-r--r-- 1 runner runner 74018096 Oct 10 04:55 /home/runner/work/pr-digital-twin/pr-digital-twin/work/cache/puerto-rico-latest.osm.pbf
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+osmium version 1.16.0
+File:
+  Name: /home/runner/work/pr-digital-twin/pr-digital-twin/work/cache/puerto-rico-latest.osm.pbf
+  Format: PBF
+  Compression: none
+  Size: 74018096
+Header:
+  Bounding boxes:
+    (-68.310244,17.515728,-65.092622,18.81272)
+  With history: no
+  Options:
+    generator=osmium/1.16.0
+    osmosis_replication_base_url=https://download.geofabrik.de/north-america/us/puerto-rico-updates
+    osmosis_replication_sequence_number=3273
+    osmosis_replication_timestamp=2026-10-09T20:21:04Z
+    pbf_dense_nodes=true
+    pbf_optional_feature_0=Sort.Type_then_ID
+    sorting=Type_then_ID
+    timestamp=2026-10-09T20:21:04Z
+  1500584 /home/runner/work/pr-digital-twin/pr-digital-twin/work/osm/buildings.geojsonl
+     1135 /home/runner/work/pr-digital-twin/pr-digital-twin/work/osm/coast.geojsonl
+     5685 /home/runner/work/pr-digital-twin/pr-digital-twin/work/osm/facilities.geojsonl
+  1507404 total
+total 551080
+-rw-r--r-- 1 runner runner        91 Oct 10 05:06 all.json
+-rw-r--r-- 1 runner runner        92 Oct 10 05:06 areas.json
+-rw-r--r-- 1 runner runner         0 Oct 10 05:06 buildings.err
+-rw-r--r-- 1 runner runner 508563790 Oct 10 05:06 buildings.geojsonl
+-rw-r--r-- 1 runner runner  50147014 Oct 10 05:06 buildings.osm.pbf
+-rw-r--r-- 1 runner runner         0 Oct 10 05:06 coast.err
+-rw-r--r-- 1 runner runner   1774131 Oct 10 05:06 coast.geojsonl
+-rw-r--r-- 1 runner runner    388286 Oct 10 05:06 coast.osm.pbf
+-rw-r--r-- 1 runner runner         0 Oct 10 05:06 facilities.err
+-rw-r--r-- 1 runner runner   3075428 Oct 10 05:06 facilities.geojsonl
+-rw-r--r-- 1 runner runner    328457 Oct 10 05:06 facilities.osm.pbf
+-rw-r--r-- 1 runner runner       614 Oct 10 05:06 fileinfo.txt
+-rw-r--r-- 1 runner runner        92 Oct 10 05:06 lines.json
+{"type":"Feature","id":"a41771464","geometry":{"type":"MultiPolygon","coordinates":[[[[-66.0445718,18.402646],[-66.0445454,18.402325],[-66.0445363,18.4022138],[-66.0445281,18.4021147],[-66.043692,18.4021822],[-66.0437361,18.4027132],[-66.0445718,18.402646]]]]},"properties":{"@type":"way","@id":20885732,"access":"yes","addr:postcode":"00925","amenity":"parking","building":"yes","fee":"yes","name":"Multipisos UPRRP","operator":"UPR Parking System","parking":"multi-storey"}}
+{"type":"Feature","id":"a41774008","geometry":{"type":"MultiPolygon","coordinates":[[[[-66.0463973,18.4021623],[-66.0460674
+{"type":"Feature","id":"a41771464","geometry":{"type":"MultiPolygon","coordinates":[[[[-66.0445718,18.402646],[-66.0445454,18.402325],[-66.0445363,18.4022138],[-66.0445281,18.4021147],[-66.043692,18.4021822],[-66.0437361,18.4027132],[-66.0445718,18.402646]]]]},"properties":{"@type":"way","@id":20885732,"access":"yes","addr:postcode":"00925","amenity":"parking","building":"yes","fee":"yes","name":"
+{"type":"Feature","id":"n238054139","geometry":{"type":"Point","coordinates":[-66.0473769,18.2401997]},"properties":{"@type":"node","@id":238054139,"addr:full":"Urb. Valle Tolima Calle Milagros Carrillo, Blq. Q","addr:postcode":"00726","amenity":"school","contact:fax":"+1-787-7453120","contact:phone":"+1-787-7464262","isced:level":"1","name":"Escuela Pepita Arenas","operator":"Departamento de Educ
+NFHL cached - skipping the interim build
+05:06:36 coastline ways 1135 closed rings 908 open chains 0
+05:06:36 land rings 878 largest 17043 vertices; enclosed-water rings 0
+05:06:40 municipios_land 78 clipped 78 failed 0 bytes 1281079 extra tol 0 4.0s
+05:06:41 nfhl_zones tolerance 0.000050 features 3830 bytes 5138271
+05:06:41 NFHL display file 3830 features 5138271 bytes; polygons by class {"0":729,"1":1648,"2":1978,"3":539}
+05:06:44 municipios 78
+05:06:51 buildings {"features":1500584,"kept":1500471,"degenerate":29,"multi":43,"simplified":279,"height_tag":203069,"height_levels":3419,"height_none":1293983,"vertices":8451048}
+05:06:51 facilities 3084 {"airport":24,"clinic":430,"fire_station":70,"hospital":87,"police_station":127,"power_plant":67,"school":1802,"seaport":14,"substation":401,"water_plant":62}
+05:06:51 zoom-14 tiles with buildings or facilities 1772
+05:06:53 elevation tiles 400 / 1772
+05:06:54 elevation tiles 800 / 1772
+05:06:56 elevation tiles 1200 / 1772
+05:06:57 elevation tiles 1600 / 1772
+05:06:58 elevation {"tiles":1772,"fetched":0,"cached":1772,"failed":0}
+05:06:58 NFHL polygons {"0":729,"1":1648,"2":1978,"3":539}
+05:06:58 flood class for 1500471 buildings in 0.4 s
+05:07:00 coast distance for 3084 facilities against 60036 coastline segments
+05:07:03 tiles written 1771 bytes 45822128 vertices clamped 0
+05:07:03 done {"buildings":1500471,"tiles":1771,"bytes":45822128,"facilities":3084,"floodAttached":true,"lt_1m":8757,"at_or_below":{"1":12344,"2":25953,"3":94324,"5":138479,"0.5":4954,"1.5":18202},"zone_counts":{"0":1306623,"1":54600,"2":135886,"3":3362}}

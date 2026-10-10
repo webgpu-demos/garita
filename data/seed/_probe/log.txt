@@ -1,0 +1,245 @@
+[municipios] Counties: 78 rows; fields: MTFCC,OID,GEOID,STATE,COUNTY,COUNTYNS,BASENAME,NAME,LSADC,FUNCSTAT,COUNTYCC,AREALAND,AREAWATER,OBJECTID,STGEOMETRY,CENTLAT,CENTLON,INTPTLAT,INTPTLON
+[nws] NWS county zone properties: @id,@type,id,type,name,effectiveDate,expirationDate,state,forecastOffice,gridIdentifier,awipsLocationIdentifier,cwa,forecastOffices,timeZone,observationStations,radarStation
+[usgs] wrote 21-usgs-sites: {"stream_gauge":114,"reservoir":28} links 142
+[census_tiger] County Subdivisions: 939 rows; fields: MTFCC,OID,GEOID,STATE,COUNTY,COUSUB,COUSUBNS,BASENAME,NAME,LSADC,FUNCSTAT,COUSUBCC,AREALAND,AREAWATER,OBJECTID,STGEOMETRY,CENTLAT,CENTLON,INTPTLAT,INTPTLON
+[census_tiger] Census Tracts: 981 rows; fields: MTFCC,OID,GEOID,STATE,COUNTY,TRACT,BASENAME,NAME,LSADC,FUNCSTAT,AREALAND,AREAWATER,STGEOMETRY,CENTLAT,CENTLON,INTPTLAT,INTPTLON,OBJECTID
+[census_tiger] wrote 01-places: {"municipio":78,"barrio":901,"tract":981} links 1882
+[shelters] Title:           DV/AVP Refugios Temporada de Huracanes 2026 
+Keywords:        DAHK45A6j68,BAFgjxmZdKs,0
+Author:          Vivienda
+Creator:         Canva
+Producer:        Canva
+CreationDate:    Wed May 27 19:36:51 2026 UTC
+ModDate:         Wed May 27 19:36:51 2026 UTC
+Custom Metadata: no
+Metadata Stream: yes
+Tagged:          yes
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           19
+Encrypted:       no
+Page size:       5685.75 x 2472 pts
+Page rot:        0
+File size:       51061444 bytes
+Optimized:       no
+PDF version:     1.4
+
+[shelters] shelters: 19 pages, 75453 chars via pdftotext -layout
+  Lista de
+Refugios 2026
+                     MUNICIPIO                        FACILIDAD                                    DIRECCIÓN                                    Google Maps
+                Adjuntas         Esc. José Emilio Lugo                   75 calle Francisco Pietri, urb. Los Cerros              https://maps.app.goo.gl/cFmTAjJhM4iNN4zU9
+                Adjuntas         Esc. Rafael Aparicio Jiménez            Calle Rodulfo González final                            https://maps.app.goo.gl/igPYAK5RTvGGb7rH6
+                Aguada           Esc. Anselmo Villarubia                 Ramal 4416, km 1.8, Bo. Malpaso                         https://maps.app.goo.gl/xuFbs8ZRSCCZKsYF7
+                Aguada           Esc. Eladio Tirado López                Carr. 417, km 3 hm 6, Bo. Guanábano                     https://maps.app.goo.gl/vCbVhYLow2r6EJA9A
+                Aguada           Esc. Lydia Meléndez                     Carr. 115, km. 23 hm 9, Bo. Asomante                     https://maps.app.goo.gl/2ByXe4BTEZ37773D7
+                Aguada           Esc. Profesora Juana Rosario Carrero    Ave. Nativo Alers desvío sur                            https://maps.app.goo.gl/bxrhv5oHovMMSd7N8
+                Aguada           Esc. S. U. Epifanio Estrada             Carr. 411, km 2 hm 8, Bo. Jagüey                        https://maps.app.goo.gl/HwFZ28PpeQssdoyU6
+   Lista de     Aguadilla
+                Aguadilla
+                                 Esc. Benito Cerezo Vázquez
+                                 Esc. Conchita Igartúa de Suárez.
+                                                                         Carr. 107 int. 458, bda. Borinquen
+                                                                         Carr. 2, km 1022, Bo. Caimital Alto
+                                                                                                                                  https://maps.app.goo.gl/i2SzvE5cHu92EFEV6
+                                                                                                                                 https://maps.app.goo.gl/aYLRWccGAGEB8UXc7
+Refugios 2026   Aguadilla
+                Aguadilla
+                                 Esc. Ester Feliciano Mendoza
+                                 Esc. Juan Suárez Pelegrina
+                                                                         Calle E, Base Ramey
+                                                                         Carr. 459, Bo. Montaña
+                                                                                                                                 https://maps.app.goo.gl/RQPSQtyHufuo8fC76
+                                                                                                                                 https://maps.app.goo.gl/PFXZ6EAHw6ZQUWKBA
+                Aguas Buenas     Esc. Dr. Pedro Albizu Campos            Carr. 156 Ramal 794 Bo. Cagüitas, sector Camino Verde   https://maps.app.goo.gl/Ferm5tDHT58nMX69A
+                Aguas Buenas     Esc. Superior Urbana                    Carr. 156 km 52.5, Bo. Cagüitas                          https://maps.app.goo.gl/gZBSQex1w7eLoFL38
+                Aibonito         Esc Federico Degetau II                 Calle San José, esq. Ignacio López                      https://maps.app.goo.gl/nmvhv9S2tw2VAPgJA
+                Aibonito         Esc. Dra. Carmen Delia Colón Martínez   Carr. 725, Bo. Llanos sector El Juicio                   https://maps.app.goo.gl/N1jWpviNPBk5SEvU9
+                Añasco           Esc. Carmen Casasús Martí               Carr. 405, km 0 hm 9, Bo. Carreras                       https://maps.app.goo.gl/c81hYZgHfLbzw9A19
+                Añasco           Esc. Isabel Suárez                      Calle 65 de Infantería                                  https://maps.app.goo.gl/ogU2ru5QSrbjWSvw6
+                Añasco           Esc. Luis Muñoz Marín                   Carr. 402, km 1 hm 4, Bo. Marías                        https://maps.app.goo.gl/ntJ95ebQwMTiLvoh9
+                Arecibo          Esc. Dr. Cayetano Coll y Toste          Carr. 638, hm 5, Bo. Miraflores                          https://maps.app.goo.gl/NgrdY7YXf58ciudV8
+                   MUNICIPIO                          FACILIDAD                                             DIRECCIÓN                                                Google Maps
+                Arecibo        Esc. Factor 5                                    1 secc. Animas, Bo. Factor                                            https://maps.app.goo.gl/xtcfGsQDxJDvULmY7
+                Arecibo        Esc. María Cadilla de Martínez                   Carr. 129, sector Las Cunetas, int. carr. 490 frente urb. Villa To    https://maps.app.goo.gl/h75F4EpsheCuBCpY9
+                Arecibo        Esc. S. U. Manuel Ruiz Gandía                    Carr. 635, km 2, Bo. Dominguito                                       https://maps.app.goo.gl/Qh7FrbdhgU5HmFts5
+                Arecibo        Esc. S.U. Barrio Sabana Hoyos (Nueva)            Carr. 639, km 3 hm 2, Bo. Sabana Hoyos                                https://maps.app.goo.gl/YPmpHXHxPfic2SBQ6
+                Arecibo        Esc. Trina Padilla de Sanz                       Urb. Villa de los Santos, carr. 653, km 1                            https://maps.app.goo.gl/Aq4QE6Et9euqWmbQ9
+                Arecibo        Centro Comunal Res. Antonio Marquez Arbona       Calle Fraternidad Bo. Hato Abajo                                     https://maps.app.goo.gl/W6B4XuumrwhEUGCP8
+                Arroyo         Esc. José Horacio Cora                           Carr. 753, km 2 hm 2, bda. Marín                                      https://maps.app.goo.gl/fVKQTpBioWn6RaT67
+   Lista de     Arroyo
+                Arroyo
+                               Esc. José M. Massari                             Calle Morse #162
+                               Esc. Superior Urbana Nueva (Natividad Rodríguez) PR-178, km 2.9, Bo. Guasima
+                                                                                                                                                     https://maps.app.goo.gl/mW5XaFmuCmWaiFRV6
+                                                                                                                                                      https://maps.app.goo.gl/3RB6QY6b8Es9tTDu9
+Refugios 2026   Barceloneta
+                Barceloneta
+                               Centro Comunal Magueyes
+                               Esc. Eli Ramos Rosario
+                                                                                carr. 664 int carr 140
+                                                                                carr. 140, Bo. Fortuna
+                                                                                                                                                     https://maps.app.goo.gl/zHMw1mSW1zRC6Fmq8
+                                                                                                                                                      https://maps.app.goo.gl/ozU8y3qQCPxxxcic6
+                Barceloneta    Esc. Fernando Suria Chávez                       1 calle Georgetti pueblo Barceloneta                                  https://maps.app.goo.gl/NRyZXQCaDsejnZM68
+                Barceloneta    Esc. Vicente Acevedo Ballester                   Carr. 664, km 1 hm 0, Bo. Magueyes                                    https://maps.app.goo.gl/grNL6QC9VNLh6Yvu9
+                Barranquitas   Centro Geriátrico La Hermandad                   Carr. 152 KM 6.2 Bo. Quebradilla                                      https://maps.app.goo.gl/2e3ZF9Sx4XDWwVqF7
+                Barranquitas   Esc. Antonio Vázquez Ramos - La Loma             carr. 156, km 20 hm 1, Bo. Quebrada Grande                             https://maps.app.goo.gl/X6c353v7sjuSo5FS6
+[hud] Public Housing Developments: 304 rows; fields: OBJECTID,PARTICIPANT_CODE,FORMAL_PARTICIPANT_NAME,DEVELOPMENT_CODE,PROJECT_NAME,SCATTERED_SITE_IND,PD_STATUS_TYPE_CODE,TOTAL_DWELLING_UNITS,ACC_UNITS,TOTAL_OCCUPIED,REGULAR_VACANT,TOTAL_UNITS,PCT_OCCUPIED,NUMBER_REPORTED,PCT_REPORTED,MONTHS_SINCE_REPORT,PCT_MOVEIN,PEOPLE_PER_UNIT,PEOPLE_TOTAL,RENT_PER_MONTH,SPENDING_PER_MONTH,SPENDING_PER_MONTH_PREV_YR,HH_INCOME,PERSON_INCOME,PCT_LT5K,PCT_5K_LT10K,PCT_10K_LT15K,PCT_15K_LT20K,PCT_GE20K,PCT_WAGE_MAJOR,PCT_WELFARE_MAJOR,PCT_OTHER_MAJOR,PCT_MEDIAN,PCT_LT50_MEDIAN,PCT_LT30_MEDIAN,PCT_2ADULTS,PCT_1ADULT,PCT_FEMALE_HEAD,PCT_FEMALE_HEAD_CHILD,PCT_DISABLED_LT62,PCT_DISABLED_GE62,PCT_DISABLED_ALL,PCT_LT24_HEAD,PCT_AGE25_50,PCT_AGE51_61,PCT_AGE62PLUS,PCT_AGE85PLUS,PCT_MINORITY,PCT_BLACK,PCT_NATIVE_AMERICAN,PCT_ASIAN,PCT_HISPANIC,MONTHS_WAITING,MONTHS_FROM_MOVEIN,PCT_UTILITY_ALLOW,AVE_UTIL_ALLOW,PCT_BED1,PCT_BED2,PCT_BED3,PCT_OVERHOUSED,TMINORITY,TPOVERTY,TPCT_OWNSFD,CHLDRN_MBR_CNT,ELDLY_PRCNT,PCT_DISABLED_LT62_ALL,PCT_LT80_MEDIAN,MEDIAN_INC_AMNT,STATE2KX,CNTY_NM2KX,CNTY2KX,TRACT2KX,BG2KX,BLOCK2KX,DPVACT,DPVNOST,CURCNTY_NM,CURCNTY,CURCOSUB,CURCOSUB_NM,PLACE2KX,PLACE_NM2KX,PLACE_CC2KX,PLACE_INC2KX,MSA,MSA_NM,CBSA,CBSA_NM,NECTA,NECTA_NM,METRO,MICRO,FCD_FIPS91,HLC,DPV,DPVRC,STD_ADDR,URB_OUT,STD_CITY,STD_ST,STD_ZIP5,STD_ZIP9,ZIP_CLASS,ZCTA2KX,DPBC,DPBC_CKSUM,STD_ZIP11,ADDR_TYPE,APT_NO,APT_TYPE,C1PGRC,C1PPRB,C1PDRC,C1PSRC,C1PARC,C1PZRC,MSGUSPS,LAT,LON,RC2KX,STM2KX,LVL2KX,UR,MSG2KX,COUNTY_LEVEL,PLACE_LEVEL,TRACT_LEVEL,BLKGRP_LEVEL,LAST_UPDT_DTTM,ANNL_EXPNS_AMNT,ANNL_EXPNS_AMNT_PREV_YR,PHA_TOTAL_UNITS,HA_PHN_NUM,HA_FAX_NUM,HA_EMAIL_ADDR_TEXT,EXEC_DIR_PHONE,EXEC_DIR_FAX,EXEC_DIR_EMAIL
+[openfema] DisasterDeclarationsSummaries skip 0: 2116
+[nws] wrote 23-nws-zones: {"forecast_zone":13,"municipio":78} links 78
+[nws] wrote 24-weather-stations: {"weather_station":149} links 0
+[cdc_svi] SVI2022 PR tract: 939 rows; fields: ST,STATE,ST_ABBR,STCNTY,COUNTY,FIPS,LOCATION,AREA_SQMI,E_TOTPOP,M_TOTPOP,E_HU,M_HU,E_HH,M_HH,E_POV150,M_POV150,E_UNEMP,M_UNEMP,E_HBURD,M_HBURD,E_NOHSDP,M_NOHSDP,E_UNINSUR,M_UNINSUR,E_AGE65,M_AGE65,E_AGE17,M_AGE17,E_DISABL,M_DISABL,E_SNGPNT,M_SNGPNT,E_LIMENG,M_LIMENG,E_MINRTY,M_MINRTY,E_MUNIT,M_MUNIT,E_MOBILE,M_MOBILE,E_CROWD,M_CROWD,E_NOVEH,M_NOVEH,E_GROUPQ,M_GROUPQ,EP_POV150,MP_POV150,EP_UNEMP,MP_UNEMP,EP_HBURD,MP_HBURD,EP_NOHSDP,MP_NOHSDP,EP_UNINSUR,MP_UNINSUR,EP_AGE65,MP_AGE65,EP_AGE17,MP_AGE17,EP_DISABL,MP_DISABL,EP_SNGPNT,MP_SNGPNT,EP_LIMENG,MP_LIMENG,EP_MINRTY,MP_MINRTY,EP_MUNIT,MP_MUNIT,EP_MOBILE,MP_MOBILE,EP_CROWD,MP_CROWD,EP_NOVEH,MP_NOVEH,EP_GROUPQ,MP_GROUPQ,EPL_POV150,EPL_UNEMP,EPL_HBURD,EPL_NOHSDP,EPL_UNINSUR,SPL_THEME1,RPL_THEME1,EPL_AGE65,EPL_AGE17,EPL_DISABL,EPL_SNGPNT,EPL_LIMENG,SPL_THEME2,RPL_THEME2,EPL_MINRTY,SPL_THEME3,RPL_THEME3,EPL_MUNIT,EPL_MOBILE,EPL_CROWD,EPL_NOVEH,EPL_GROUPQ,SPL_THEME4,RPL_THEME4,SPL_THEMES,RPL_THEMES,F_POV150,F_UNEMP,F_HBURD,F_NOHSDP,F_UNINSUR,F_THEME1,F_AGE65,F_AGE17,F_DISABL,F_SNGPNT,F_LIMENG,F_THEME2,F_MINRTY,F_THEME3,F_MUNIT,F_MOBILE,F_CROWD,F_NOVEH,F_GROUPQ,F_THEME4,F_TOTAL,E_DAYPOP,E_NOINT,M_NOINT,E_AFAM,M_AFAM,E_HISP,M_HISP,E_ASIAN,M_ASIAN,E_AIAN,M_AIAN,E_NHPI,M_NHPI,E_TWOMORE,M_TWOMORE,E_OTHERRACE,M_OTHERRACE,EP_NOINT,MP_NOINT,EP_AFAM,MP_AFAM,EP_HISP,MP_HISP,EP_ASIAN,MP_ASIAN,EP_AIAN,MP_AIAN,EP_NHPI,MP_NHPI,EP_TWOMORE,MP_TWOMORE,EP_OTHERRACE,MP_OTHERRACE,GRASP_ID,Shape__Area,Shape__Length
+[hurdat2] hurdat2 hurdat2-1851-2025-092326.txt: 1988 storms, 30 kept: Gert 1981 2km; Klaus 1984 7km; Chris 1988 25.6km; Hugo 1989 2.4km; Marilyn 1995 21.1km; Bertha 1996 49.8km; Hortense 1996 5.6km; Georges 1998 0.6km; Jose 1999 52.3km; Debby 2000 47.4km; Dean 2001 28.9km; Jeanne 2004 1.1km; Noel 2007 1.9km; Olga 2007 0.5km; Fay 2008 17.1km; Gaston 2010 78.6km; Irene 2011 0.8km; Gabrielle 2013 49km; Bertha 2014 6.7km; Erika 2015 49km; Irma 2017 53.1km; María 2017 0.4km; Beryl 2018 81.7km; Dorian 2019 22.8km; Karen 2019 2.9km; Isaias 2020 74km; Laura 2020 8.6km; Fred 2021 35km; Fiona 2022 1.6km; Ernesto 2024 28.7km
+[openfema] HousingAssistanceOwners skip 0: 10000
+[cdc_svi] SVI2022 PR municipio: 78 rows; fields: ST,STATE,ST_ABBR,STCNTY,COUNTY,FIPS,LOCATION,AREA_SQMI,E_TOTPOP,M_TOTPOP,E_HU,M_HU,E_HH,M_HH,E_POV150,M_POV150,E_UNEMP,M_UNEMP,E_HBURD,M_HBURD,E_NOHSDP,M_NOHSDP,E_UNINSUR,M_UNINSUR,E_AGE65,M_AGE65,E_AGE17,M_AGE17,E_DISABL,M_DISABL,E_SNGPNT,M_SNGPNT,E_LIMENG,M_LIMENG,E_MINRTY,M_MINRTY,E_MUNIT,M_MUNIT,E_MOBILE,M_MOBILE,E_CROWD,M_CROWD,E_NOVEH,M_NOVEH,E_GROUPQ,M_GROUPQ,EP_POV150,MP_POV150,EP_UNEMP,MP_UNEMP,EP_HBURD,MP_HBURD,EP_NOHSDP,MP_NOHSDP,EP_UNINSUR,MP_UNINSUR,EP_AGE65,MP_AGE65,EP_AGE17,MP_AGE17,EP_DISABL,MP_DISABL,EP_SNGPNT,MP_SNGPNT,EP_LIMENG,MP_LIMENG,EP_MINRTY,MP_MINRTY,EP_MUNIT,MP_MUNIT,EP_MOBILE,MP_MOBILE,EP_CROWD,MP_CROWD,EP_NOVEH,MP_NOVEH,EP_GROUPQ,MP_GROUPQ,EPL_POV150,EPL_UNEMP,EPL_HBURD,EPL_NOHSDP,EPL_UNINSUR,SPL_THEME1,RPL_THEME1,EPL_AGE65,EPL_AGE17,EPL_DISABL,EPL_SNGPNT,EPL_LIMENG,SPL_THEME2,RPL_THEME2,EPL_MINRTY,SPL_THEME3,RPL_THEME3,EPL_MUNIT,EPL_MOBILE,EPL_CROWD,EPL_NOVEH,EPL_GROUPQ,SPL_THEME4,RPL_THEME4,SPL_THEMES,RPL_THEMES,F_POV150,F_UNEMP,F_HBURD,F_NOHSDP,F_UNINSUR,F_THEME1,F_AGE65,F_AGE17,F_DISABL,F_SNGPNT,F_LIMENG,F_THEME2,F_MINRTY,F_THEME3,F_MUNIT,F_MOBILE,F_CROWD,F_NOVEH,F_GROUPQ,F_THEME4,F_TOTAL,E_DAYPOP,E_NOINT,M_NOINT,E_AFAM,M_AFAM,E_HISP,M_HISP,E_ASIAN,M_ASIAN,E_AIAN,M_AIAN,E_NHPI,M_NHPI,E_TWOMORE,M_TWOMORE,E_OTHERRACE,M_OTHERRACE,EP_NOINT,MP_NOINT,EP_AFAM,MP_AFAM,EP_HISP,MP_HISP,EP_ASIAN,MP_ASIAN,EP_AIAN,MP_AIAN,EP_NHPI,MP_NHPI,EP_TWOMORE,MP_TWOMORE,EP_OTHERRACE,MP_OTHERRACE,GRASP_ID,Shape__Area,Shape__Length
+[cdc_svi] wrote 02-svi: {"tract":939,"municipio":78} links 0
+[hud] Multifamily Properties - Assisted: 196 rows; fields: OBJECTID,PROPERTY_ID,UGLG_KEY,HUB_NAME_TEXT,SERVICING_SITE_NAME_TEXT,PROJECT_MANAGER_NAME_TEXT,PROPERTY_NAME_TEXT,ADDRESS_LINE1_TEXT,ADDRESS_LINE2_TEXT,AUTOMATIC_GEOCODE_IND,CONGRESSIONAL_DISTRICT_CODE,PLACED_BASE_CITY_NAME_TEXT,TOTAL_ASSISTED_UNIT_COUNT,TOTAL_UNIT_COUNT,PROPERTY_ON_SITE_PHONE_NUMBER,PROPERTY_CATEGORY_NAME,CLIENT_GROUP_CODE,CLIENT_GROUP_NAME,CLIENT_GROUP_TYPE,REAC_LAST_INSPECTION_ID,REAC_LAST_INSPECTION_SCORE,FASS_LAST_PERFORMANCE_VALUE,FASS_LST_TOT_MGMT_COND_CNT,FASS_LAST_REFERRED_TO_CODE,IS_AFS_REQUIRED_IND,AFS_FISCAL_YR_END_DATE,HAS_ACTIVE_FINANCING_IND,PRIMARY_FINANCING_TYPE,IS_ALL_FINANCING_PIPELINE_IND,IS_ALL_CONTRACT_PIPELINE_IND,IS_UNDER_MANAGEMENT_IND,HAS_SERVICE_AGREEMENT_IND,HAS_USE_RESTRICTION_IND,HAS_ACTIVE_IRP_IND,IS_SERVICE_COORDINATOR_IND,PRIMARY_FHA_NUMBER,ASSOCIATED_FHA_NUMBER,ASSOCIATED_CONTRACT_NUMBER,TROUBLED_CODE,OPIIS_RISK_CATEGORY,OPIIS_SIZE_CATEGORY,OPIIS_INT_RISK_SCORE,IS_ACTIVE_DEC_CASE_IND,WAS_EVER_DEC_CASE_IND,IS_INSURED_IND,WAS_EVER_INSURED_IND,IS_202_811_IND,WAS_EVER_202_811_IND,IS_HUD_HELD_IND,IS_HUD_OWNED_IND,IS_FLEXIBLE_SUBSIDY_IND,IS_HOSPITAL_IND,IS_NURSING_HOME_IND,IS_BOARD_AND_CARE_IND,IS_ASSISTED_LIVING_IND,IS_REFINANCED_IND,IS_221D3_IND,IS_221D4_IND,IS_236_IND,IS_IN_DEFAULT_DELINQUENT_IND,IS_NON_INSURED_IND,IS_BMIR_IND,IS_RISK_SHARING_IND,IS_MIP_IND,IS_CO_INSURED_IND,IS_SUBSIDIZED_IND,WAS_EVER_SUBSIDIZED_IND,HAS_ACTIVE_ASSISTANCE_IND,WAS_EVER_ASSISTED_IND,IS_ACC_OLD_IND,IS_ACC_PERFORMANCE_BASED_IND,IS_SEC8_IND,IS_PAC_IND,IS_PRAC_IND,IS_RENT_SUPPLEMENT_IND,IS_SECTION_236_RAP_IND,IS_SEC8_202_IND,IS_SEC8_FMHA_515_IND,IS_SEC8_STATE_AGENCY_HFA_IND,IS_SEC8_LMSA_IND,IS_SEC8_PRPRTY_DISPOSITION_IND,IS_SEC8_PRESERVATION_IND,IS_SEC8_OTHR_NW_CNSTRCTION_IND,IS_SEC8_OTHER_SUB_REHAB_IND,IS_PENSION_FUND_IND,IS_PAC_202_IND,IS_PAC_811_IND,IS_PRAC_202_IND,IS_PRAC_811_IND,HAS_FULL_DEBT_RESTRUCTURE_IND,LAST_CRITICAL_DATE_DESC,OAHP_PROJECT_RECOMMENDATION_TX,OAHP_PROCESSING_TYPE,IS_ON_WATCH_LIST_IND,IS_GREEN_RETROFIT_IND,IS_202_DIRECT_LOAN_IND,IS_202_CAPITAL_ADVANCE_IND,IS_811_CAPITAL_ADVANCE_IND,ENERGY_PERFORMANCE_CONTRCT_IND,IS_SEC8_RAD_DEMO_CONV_IND,FINANCIAL_STMNT_REQ_IND,IS_811_PRA_DEMO_IND,CONTRACT1,CONTRACT2,CONTRACT_COUNT,UNITS1,UNITS2,MAXIMUM_CONTRACT_UNIT_COUNT,PROGRAM_TYPE1,PROGRAM_TYPE2,EXPIRATION_DATE1,EXPIRATION_DATE2,RENT_TO_FMR_RATIO1,RENT_TO_FMR_RATIO2,BD0_CNT1,BD0_CNT2,BD1_CNT1,BD1_CNT2,BD2_CNT1,BD2_CNT2,BD3_CNT1,BD3_CNT2,BD4_CNT1,BD4_CNT2,BD5_CNT1,BD5_CNT2,FHA_NUM1,FHA_NUM2,SOACODE1,SOACODE2,SOA_NAME1,SOA_NAME2,TAXCREDIT1,TAXCREDIT2,FHA_COUNT,STATE2KX,CNTY_NM2KX,CNTY2KX,TRACT2KX,BG2KX,BLOCK2KX,CURCNTY_NM,CURCNTY,CURCOSUB,CURCOSUB_NM,PLACE2KX,PLACE_NM2KX,PLACE_CC2KX,PLACE_INC2KX,MSA,MSA_NM,CBSA,CBSA_NM,NECTA,NECTA_NM,METRO,MICRO,FCD_FIPS91,HLC,DPV,DPVRC,DPVACT,DPVNOST,STD_ADDR,URB_OUT,STD_CITY,STD_ST,STD_ZIP5,STD_ZIP9,ZIP_CLASS,ZCTA2KX,DPBC,DPBC_CKSUM,STD_ZIP11,ADDR_TYPE,APT_NO,APT_TYPE,C1PGRC,C1PPRB,C1PDRC,C1PSRC,C1PARC,C1PRC9,MSGUSPS,LAT,LON,RC2KX,STM2KX,LVL2KX,UR,MSG2KX,COUNTY_LEVEL,PLACE_LEVEL,TRACT_LEVEL,BLKGRP_LEVEL,CAT_LATEST_MROC_SCORE_COLOR,CAT_LTST_INTGRTD_RSK_SCORE_CAT,MTR_LATEST_DSCR,MGMT_AGENT_ORG_NAME,MGMT_CONTACT_FULL_NAME,MGMT_CONTACT_INDV_TITLE_TEXT,MGMT_CONTACT_ADDRESS_LINE1,MGMT_CONTACT_ADDRESS_LINE2,MGMT_CONTACT_CITY_NAME,MGMT_CONTACT_STATE_CODE,MGMT_CONTACT_ZIP_CODE,MGMT_CONTACT_MAIN_PHN_NBR,MGMT_CONTACT_EMAIL_TEXT,LOAN_MATURITY_DATE,DEMO_RESTRUCTURE_CLOSING_DATE,REAC_LAST_INSPCT_RELEASE_DATE,MARK_TO_MARKET_RESTRUCTURE_DT,REAC_LAST_INSPECTION_DATE,FASS_LAST_AFS_CLOSED_DATE,FASS_LAST_REPORTING_END_DT,FULL_DEBT_RESTRUCTURE_DATE,LAST_CRITICAL_DATE,NGHBRHD_NTWRK_EST_DATE,OCCUPANCY_DATE,OPIIS_RISK_CATEGORY_CHANGE_DT,TROUBLED_STATUS_UPDATE_DATE,WATCH_LIST_DATE,ORIGINAL_LOAN_AMOUNT,UNIT_MRKT_RENT_CNT,INITIAL_ENDORSEMENT_DATE,TOTAL_AVBL_UNITS,PCT_OCCUPIED,NUMBER_REPORTED,PCT_REPORTED,MONTHS_SINCE_REPORT,PCT_MOVEIN,PEOPLE_PER_UNIT,PEOPLE_TOTAL,RENT_PER_MONTH,SPENDING_PER_MONTH,HH_INCOME,PERSON_INCOME,PCT_LT5K,PCT_5K_LT10K,PCT_10K_LT15K,PCT_15K_LT20K,PCT_GE20K,PCT_WAGE_MAJOR,PCT_WELFARE_MAJOR,PCT_OTHER_MAJOR,PCT_MEDIAN,PCT_LT50_MEDIAN,PCT_LT30_MEDIAN,PCT_2ADULTS,PCT_1ADULT,PCT_FEMALE_HEAD,PCT_FEMALE_HEAD_CHILD,PCT_DISABLED_LT62,PCT_DISABLED_GE62,PCT_DISABLED_ALL,PCT_LT24_HEAD,PCT_AGE25_50,PCT_AGE51_61,PCT_AGE62PLUS,PCT_AGE85PLUS,PCT_MINORITY,PCT_BLACK,PCT_NATIVE_AMERICAN,PCT_ASIAN,PCT_HISPANIC,MONTHS_WAITING,MONTHS_FROM_MOVEIN,PCT_UTILITY_ALLOW,AVE_UTIL_ALLOW,PCT_BED1,PCT_BED2,PCT_BED3,PCT_OVERHOUSED,TMINORITY,TPOVERTY,TPCT_OWNSFD,CHLDRN_MBR_CNT,ELDLY_PRCNT,PCT_DISABLED_LT62_ALL,PCT_LT80_MEDIAN,MEDIAN_INC_AMNT,LAST_UPDT_DTTM,ANNL_EXPNS_AMNT,ANNL_EXPNS_AMNT_PREV_YR
+[luma] wrote 26-power-regions: {"power_region":7} links 0
+[openfema] HousingAssistanceOwners skip 10000: 5095
+[openfema] HousingAssistanceRenters skip 0: 10000
+[openfema] HousingAssistanceRenters skip 10000: 177
+[openfema] wrote 30-declarations: {"disaster_declaration":51,"municipio":78} links 2112
+[openfema] wrote 31-housing-assistance: {"disaster_impact":432,"municipio":78} links 855
+[hud] Low_Income_Housing_Tax_Credit_Properties: 231 rows; fields: OBJECTID,HUD_ID,PROJECT,PROJ_ADD,PROJ_CTY,PROJ_ST,PROJ_ZIP,STATE_ID,CONTACT,COMPANY,CO_ADD,CO_CTY,CO_ST,CO_ZIP,CO_TEL,ALLOCAMT,N_UNITS,LI_UNITS,N_0BR,N_1BR,N_2BR,N_3BR,N_4BR,INC_CEIL,LOW_CEIL,CEILUNIT,YR_PIS,YR_ALLOC,NON_PROF,BASIS,BOND,MFF_RA,FMHA_514,FMHA_515,FMHA_538,HOME,HOME_AMT,TCAP,TCAP_AMT,CDBG,CDBG_AMT,FHA,HOPEVI,HPVI_AMT,TCEP,TCEP_AMT,RENTASSIST,TRGT_POP,TRGT_FAM,TRGT_ELD,TRGT_DIS,TRGT_HML,TRGT_OTHER,TRGT_SPC,TYPE,CREDIT,N_UNITSR,LI_UNITR,DDA,QCT,NONPROG,DATANOTE,METRO_TRACT,STATE2KX,CNTY_NM2KX,CNTY2KX,TRACT2KX,BG2KX,BLOCK2KX,CURCNTY_NM,CURCNTY,CURCOSUB,CURCOSUB_NM,PLACE2KX,PLACE_NM2KX,PLACE_CC2KX,PLACE_INC2KX,MSA,MSA_NM,METRO,MICRO,FCD_FIPS91,HLC,DPV,DPVRC,STD_ADDR,URB_OUT,STD_CITY,STD_ST,STD_ZIP5,STD_ZIP9,ZIP_CLASS,ZCTA2KX,DPBC,DPBC_CKSUM,STD_ZIP11,ADDR_TYPE,APT_NO,APT_TYPE,C1PGRC,C1PPRB,C1PDRC,C1PSRC,C1PARC,C1PRC9,MSGUSPS,LAT,LON,RC2KX,STM2KX,LVL2KX,UR,MSG2KX,CBSA,CBSA_NM,NECTA,NECTA_NM,COUNTY_LEVEL,PLACE_LEVEL,TRACT_LEVEL,BLKGRP_LEVEL
+[hud] wrote 10-public-housing: {"public_housing":304,"municipio":75} links 304
+[hud] wrote 11-multifamily-assisted: {"assisted_housing":196} links 196
+[hud] wrote 12-lihtc: {"assisted_housing":231} links 227
+[cdbg] LowModTractCDBG-DR: 977 rows; fields: OBJECTID,GEOID,Nombre_Geo,Ingr_Med_H,Ingr_Med_F,Ingr_Med_N,Personas_T,Est_LowMod,Est_LowM_1,Shape__Area,Shape__Length
+[cdbg] wrote 03-cdbg-lmi: {"tract":885,"municipio":78} links 0
+[census_acs] SVI2022 PR municipio: 78 rows; fields: ST,STATE,ST_ABBR,STCNTY,COUNTY,FIPS,LOCATION,AREA_SQMI,E_TOTPOP,M_TOTPOP,E_HU,M_HU,E_HH,M_HH,E_POV150,M_POV150,E_UNEMP,M_UNEMP,E_HBURD,M_HBURD,E_NOHSDP,M_NOHSDP,E_UNINSUR,M_UNINSUR,E_AGE65,M_AGE65,E_AGE17,M_AGE17,E_DISABL,M_DISABL,E_SNGPNT,M_SNGPNT,E_LIMENG,M_LIMENG,E_MINRTY,M_MINRTY,E_MUNIT,M_MUNIT,E_MOBILE,M_MOBILE,E_CROWD,M_CROWD,E_NOVEH,M_NOVEH,E_GROUPQ,M_GROUPQ,EP_POV150,MP_POV150,EP_UNEMP,MP_UNEMP,EP_HBURD,MP_HBURD,EP_NOHSDP,MP_NOHSDP,EP_UNINSUR,MP_UNINSUR,EP_AGE65,MP_AGE65,EP_AGE17,MP_AGE17,EP_DISABL,MP_DISABL,EP_SNGPNT,MP_SNGPNT,EP_LIMENG,MP_LIMENG,EP_MINRTY,MP_MINRTY,EP_MUNIT,MP_MUNIT,EP_MOBILE,MP_MOBILE,EP_CROWD,MP_CROWD,EP_NOVEH,MP_NOVEH,EP_GROUPQ,MP_GROUPQ,EPL_POV150,EPL_UNEMP,EPL_HBURD,EPL_NOHSDP,EPL_UNINSUR,SPL_THEME1,RPL_THEME1,EPL_AGE65,EPL_AGE17,EPL_DISABL,EPL_SNGPNT,EPL_LIMENG,SPL_THEME2,RPL_THEME2,EPL_MINRTY,SPL_THEME3,RPL_THEME3,EPL_MUNIT,EPL_MOBILE,EPL_CROWD,EPL_NOVEH,EPL_GROUPQ,SPL_THEME4,RPL_THEME4,SPL_THEMES,RPL_THEMES,F_POV150,F_UNEMP,F_HBURD,F_NOHSDP,F_UNINSUR,F_THEME1,F_AGE65,F_AGE17,F_DISABL,F_SNGPNT,F_LIMENG,F_THEME2,F_MINRTY,F_THEME3,F_MUNIT,F_MOBILE,F_CROWD,F_NOVEH,F_GROUPQ,F_THEME4,F_TOTAL,E_DAYPOP,E_NOINT,M_NOINT,E_AFAM,M_AFAM,E_HISP,M_HISP,E_ASIAN,M_ASIAN,E_AIAN,M_AIAN,E_NHPI,M_NHPI,E_TWOMORE,M_TWOMORE,E_OTHERRACE,M_OTHERRACE,EP_NOINT,MP_NOINT,EP_AFAM,MP_AFAM,EP_HISP,MP_HISP,EP_ASIAN,MP_ASIAN,EP_AIAN,MP_AIAN,EP_NHPI,MP_NHPI,EP_TWOMORE,MP_TWOMORE,EP_OTHERRACE,MP_OTHERRACE,GRASP_ID,Shape__Area,Shape__Length
+[census_acs] County: 78 rows; fields: OBJECTID,COUNTYNS,GEOID,ALAND,AWATER,NAME,State,B25002_001E,B25002_001M,B25004_001E,B25004_001M,B25004_002E,B25004_002M,B25004_003E,B25004_003M,B25004_004E,B25004_004M,B25004_005E,B25004_005M,B25004_006E,B25004_006M,B25004_007E,B25004_007M,B25004_008E,B25004_008M,B25004_calc_pctVacE,B25004_calc_pctVacM,B25003_001E,B25003_001M,B25003_002E,B25003_002M,B25003_003E,B25003_003M,B25004_calc_numOwnE,B25004_calc_numOwnM,B25004_calc_pctHOVE,B25004_calc_pctHOVM,B25004_calc_numRentE,B25004_calc_numRentM,B25004_calc_pctRVE,B25004_calc_pctRVM,B25004_calc_numTotE,B25004_calc_numTotM,B25004_calc_numAvailE,B25004_calc_numAvailM,B25004_calc_pctAHVE,B25004_calc_pctAHVM,Shape__Area,Shape__Length
+[nwps] wrote 22-nwps-gauges: {"reservoir":19,"stream_gauge":99} links 117
+[census_acs] County: 78 rows; fields: OBJECTID,COUNTYNS,GEOID,ALAND,AWATER,NAME,State,B19049_001E,B19049_001M,B19049_002E,B19049_002M,B19049_003E,B19049_003M,B19049_004E,B19049_004M,B19049_005E,B19049_005M,B19013B_001E,B19013B_001M,B19013C_001E,B19013C_001M,B19013D_001E,B19013D_001M,B19013E_001E,B19013E_001M,B19013F_001E,B19013F_001M,B19013G_001E,B19013G_001M,B19013H_001E,B19013H_001M,B19013I_001E,B19013I_001M,B19053_001E,B19053_001M,B19053_002E,B19053_002M,B19053_003E,B19053_003M,B19053_calc_pctSelfempE,B19053_calc_pctSelfempM,Shape__Area,Shape__Length,Update_Field
+[census_acs] County: 78 rows; fields: OBJECTID,COUNTYNS,GEOID,ALAND,AWATER,NAME,State,B25034_001E,B25034_001M,B25034_002E,B25034_002M,B25034_003E,B25034_003M,B25034_004E,B25034_004M,B25034_005E,B25034_005M,B25034_006E,B25034_006M,B25034_007E,B25034_007M,B25034_008E,B25034_008M,B25034_009E,B25034_009M,B25034_010E,B25034_010M,B25034_011E,B25034_011M,B25036_002E,B25036_002M,B25036_003E,B25036_003M,B25036_004E,B25036_004M,B25036_005E,B25036_005M,B25036_006E,B25036_006M,B25036_007E,B25036_007M,B25036_008E,B25036_008M,B25036_009E,B25036_009M,B25036_010E,B25036_010M,B25036_011E,B25036_011M,B25036_012E,B25036_012M,B25036_013E,B25036_013M,B25036_014E,B25036_014M,B25036_015E,B25036_015M,B25036_016E,B25036_016M,B25036_017E,B25036_017M,B25036_018E,B25036_018M,B25036_019E,B25036_019M,B25036_020E,B25036_020M,B25036_021E,B25036_021M,B25036_022E,B25036_022M,B25036_023E,B25036_023M,B25035_001E,B25035_001M,B25037_001E,B25037_001M,B25037_002E,B25037_002M,B25037_003E,B25037_003M,B25035_calc_txt001E,B25035_calc_txt001M,B25037_calc_txt001E,B25037_calc_txt001M,B25037_calc_txt002E,B25037_calc_txt002M,B25037_calc_txt003E,B25037_calc_txt003M,Shape__Area,Shape__Length,Update_Field
+[census_acs] wrote 04-acs: {"municipio":78} links 0
+[shelters] wrote 40-shelters: {"shelter":343,"municipio":78} links 572
+[coops] wrote 20-tide-stations: {"tide_station":13} links 0
+[ndbc] wrote 25-buoys: {"buoy":25} links 0
+{
+ "census_tiger": {
+  "status": "ok",
+  "objects": {
+   "municipio": 78,
+   "barrio": 901,
+   "tract": 981
+  },
+  "links": 1882,
+  "problems": 0
+ },
+ "hud": {
+  "status": "ok",
+  "objects": {
+   "public_housing": 304,
+   "municipio": 75,
+   "assisted_housing": 427
+  },
+  "links": 727,
+  "problems": 2
+ },
+ "openfema": {
+  "status": "ok",
+  "objects": {
+   "disaster_declaration": 51,
+   "municipio": 156,
+   "disaster_impact": 432
+  },
+  "links": 2967,
+  "problems": 2
+ },
+ "coops": {
+  "status": "ok",
+  "objects": {
+   "tide_station": 13
+  },
+  "links": 0,
+  "problems": 18
+ },
+ "usgs": {
+  "status": "ok",
+  "objects": {
+   "stream_gauge": 114,
+   "reservoir": 28
+  },
+  "links": 142,
+  "problems": 0
+ },
+ "nws": {
+  "status": "ok",
+  "objects": {
+   "forecast_zone": 13,
+   "municipio": 78,
+   "weather_station": 149
+  },
+  "links": 78,
+  "problems": 0
+ },
+ "cdc_svi": {
+  "status": "ok",
+  "objects": {
+   "tract": 939,
+   "municipio": 78
+  },
+  "links": 0,
+  "problems": 0
+ },
+ "shelters": {
+  "status": "ok",
+  "objects": {
+   "shelter": 343,
+   "municipio": 78
+  },
+  "links": 572,
+  "problems": 10
+ },
+ "census_acs": {
+  "status": "ok",
+  "objects": {
+   "municipio": 78
+  },
+  "links": 0,
+  "problems": 0
+ },
+ "nwps": {
+  "status": "ok",
+  "objects": {
+   "reservoir": 19,
+   "stream_gauge": 99
+  },
+  "links": 117,
+  "problems": 0
+ },
+ "hurdat2": {
+  "status": "ok",
+  "objects": {},
+  "links": 0,
+  "problems": 0
+ },
+ "luma": {
+  "status": "ok",
+  "objects": {
+   "power_region": 7
+  },
+  "links": 0,
+  "problems": 0
+ },
+ "cdbg": {
+  "status": "ok",
+  "objects": {
+   "tract": 885,
+   "municipio": 78
+  },
+  "links": 0,
+  "problems": 1
+ },
+ "ndbc": {
+  "status": "ok",
+  "objects": {
+   "buoy": 25
+  },
+  "links": 0,
+  "problems": 0
+ }
+}
