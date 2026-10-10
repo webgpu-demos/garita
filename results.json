@@ -1,0 +1,718 @@
+{
+ "at": "2026-10-10T21:43:35.092Z",
+ "results": [
+  {
+   "id": "01-app-wide",
+   "url": "https://webgpu-demos.github.io/garita/?post=basic&t=2026-10-10T15:30:00Z",
+   "loadMs": 205154,
+   "debug": {
+    "stats": {
+     "fps": 10,
+     "tiles": 50,
+     "pending": 0,
+     "drawCalls": 1,
+     "tris": 1
+    },
+    "view": {
+     "lon": -66.26,
+     "lat": 18.2,
+     "range": 265030.74019199505,
+     "heading": 0,
+     "pitch": 50,
+     "altitude": 209010.8286950104
+    },
+    "terrain": {
+     "tiles": 50,
+     "pending": 0,
+     "maxZoom": 10
+    },
+    "post": {
+     "mode": "basic",
+     "lutsReady": false,
+     "clouds": false,
+     "units": 0.42058823529411765,
+     "elevation": 62.83335416488195,
+     "dark": 0,
+     "daylight": 1,
+     "moonlight": 0,
+     "warmth": 0,
+     "lowSun": 0,
+     "exposure": 0.95,
+     "bloom": 0.25,
+     "shadows": false,
+     "shadowExtent": 0,
+     "sun": [
+      0.184,
+      0.89,
+      0.418
+     ]
+    },
+    "store": {
+     "persistent": true,
+     "seedVersion": "2026.10.10c",
+     "openedMs": 381,
+     "objects": 7018,
+     "links": 12792,
+     "obs": 0
+    },
+    "feeds": {
+     "nws_alerts": {
+      "state": "ok",
+      "nextAt": 1791668173638.7346,
+      "lastOkAt": 1791668055852,
+      "lastObjects": 0,
+      "lastMs": 107,
+      "dataAt": 1791668019000
+     },
+     "nhc": {
+      "state": "ok",
+      "nextAt": 1791668492120.978,
+      "lastOkAt": 1791667939307,
+      "lastObjects": 1,
+      "lastMs": 1174,
+      "dataAt": 1791667682518
+     },
+     "usgs_quakes": {
+      "state": "ok",
+      "nextAt": 1791668234541.8682,
+      "lastOkAt": 1791667940070,
+      "lastObjects": 265,
+      "lastMs": 1094,
+      "dataAt": 1791667921000
+     },
+     "usgs_nwis": {
+      "state": "ok",
+      "nextAt": 1791668867428.5203,
+      "lastOkAt": 1791667941079,
+      "lastObjects": 131,
+      "lastMs": 2099,
+      "dataAt": 1791667500000
+     },
+     "nwps": {
+      "state": "ok",
+      "nextAt": 1791668816924.7283,
+      "lastOkAt": 1791667942026,
+      "lastObjects": 118,
+      "lastMs": 3043,
+      "dataAt": 1791666000000
+     },
+     "coops": {
+      "state": "ok",
+      "nextAt": 1791668334906.4077,
+      "lastOkAt": 1791667940381,
+      "lastObjects": 6,
+      "lastMs": 1349,
+      "dataAt": 1791667440000
+     },
+     "open_meteo": {
+      "state": "ok",
+      "nextAt": 1791668926697.7158,
+      "lastOkAt": 1791667940532,
+      "lastObjects": 8,
+      "lastMs": 1472,
+      "dataAt": 1791667800000
+     },
+     "nws_obs": {
+      "state": "ok",
+      "nextAt": 1791668542294.872,
+      "lastOkAt": 1791667941560,
+      "lastObjects": 12,
+      "lastMs": 2059,
+      "dataAt": 1791666660000
+     },
+     "luma": {
+      "state": "ok",
+      "nextAt": 1791668488744.4763,
+      "lastOkAt": 1791667941202,
+      "lastObjects": 7,
+      "lastMs": 1248,
+      "dataAt": 1791667682668
+     },
+     "ndbc": {
+      "state": "ok",
+      "nextAt": 1791668582027.6025,
+      "lastOkAt": 1791667941433,
+      "lastObjects": 15,
+      "lastMs": 1031,
+      "dataAt": 1791667682538
+     },
+     "adsb": {
+      "state": "ok",
+      "nextAt": 1791668490268.1653,
+      "lastOkAt": 1791667942286,
+      "lastObjects": 28,
+      "lastMs": 1435,
+      "dataAt": 1791667683221
+     }
+    },
+    "layers": [
+     {
+      "overlay": null,
+      "source": null,
+      "aboveWater": false,
+      "lastError": "",
+      "legend": null
+     },
+     {
+      "municipios": 78,
+      "vertices": 123952,
+      "queued": 0,
+      "lift": 376,
+      "selected": null,
+      "footprint": 0,
+      "highlights": 0,
+      "selectedId": null
+     },
+     {
+      "tiles": 0,
+      "buildings": 0,
+      "triangles": 0,
+      "pending": 0,
+      "photos": 0,
+      "photoPending": 0,
+      "textureMB": 0
+     },
+     {
+      "storm": null,
+      "info": null,
+      "legend": null,
+      "live": [
+       {
+        "id": "tropical_cyclone:al092026",
+        "name": "Isaias",
+        "category": "Tropical depression",
+        "wind_kt": 25,
+        "distance_km": 2650,
+        "bearing": "NW",
+        "advisory": null,
+        "hasCone": false,
+        "points": 0,
+        "drawn": false,
+        "text": "Isaias · Tropical depression · 2,650 km NW"
+       }
+      ],
+      "highlights": 0
+     },
+     {
+      "layer": "markers",
+      "types": {
+       "shelter": 336,
+       "public_housing": 304,
+       "assisted_housing": 264,
+       "hospital": 87,
+       "clinic": 430,
+       "school": 1802,
+       "fire_station": 70,
+       "police_station": 127,
+       "power_plant": 67,
+       "substation": 401,
+       "water_plant": 61,
+       "airport": 24,
+       "seaport": 14,
+       "reservoir": 28,
+       "stream_gauge": 126,
+       "tide_station": 13,
+       "buoy": 25,
+       "weather_station": 157,
+       "weather_alert": 0,
+       "earthquake": 265,
+       "tropical_cyclone": 1,
+       "aircraft": 28
+      },
+      "drawn": 654,
+      "dots": 374,
+      "clustered": 0,
+      "hidden": 278,
+      "labels": 9,
+      "cellM": 11585,
+      "ms": 3.68
+     }
+    ]
+   },
+   "frameMs": 3000,
+   "ok": true,
+   "ms": 230806,
+   "logs": [
+    "[warning] Ignoring inability to install OPFS sqlite3_vfs: Cannot install OPFS: Missing SharedArrayBuffer and/or Atomics. The server must emit the COOP/COEP response headers to enable those. See https://sqlite.org/wasm/doc/trunk/persistence.md#coop-co",
+    "[error] Failed to load resource: the server responded with a status of 400 ()"
+   ],
+   "failedHosts": {}
+  },
+  {
+   "id": "02-condado",
+   "url": "https://webgpu-demos.github.io/garita/?ui=0&post=basic&t=2026-10-10T15:30:00Z&cam=-66.075,18.452,2600,250,12",
+   "loadMs": 406618,
+   "debug": {
+    "stats": {
+     "fps": 11,
+     "tiles": 39,
+     "pending": 74,
+     "drawCalls": 1,
+     "tris": 1
+    },
+    "view": {
+     "lon": -66.075,
+     "lat": 18.452,
+     "range": 2600,
+     "heading": 250,
+     "pitch": 12,
+     "altitude": 562.4624750426234
+    },
+    "terrain": {
+     "tiles": 39,
+     "pending": 71,
+     "maxZoom": 15
+    },
+    "post": {
+     "mode": "basic",
+     "lutsReady": false,
+     "clouds": false,
+     "units": 0.42058823529411765,
+     "elevation": 62.83335416488195,
+     "dark": 0,
+     "daylight": 1,
+     "moonlight": 0,
+     "warmth": 0,
+     "lowSun": 0,
+     "exposure": 0.95,
+     "bloom": 0.25,
+     "shadows": true,
+     "shadowExtent": 2067.8773777350007,
+     "sun": [
+      0.184,
+      0.89,
+      0.418
+     ]
+    },
+    "store": {
+     "persistent": true,
+     "seedVersion": "2026.10.10c",
+     "openedMs": 691,
+     "objects": 7018,
+     "links": 12792,
+     "obs": 0
+    },
+    "feeds": {
+     "nws_alerts": {
+      "state": "ok",
+      "nextAt": 1791668412685.9001,
+      "lastOkAt": 1791668293864,
+      "lastObjects": 0,
+      "lastMs": 186,
+      "dataAt": 1791668166000
+     },
+     "nhc": {
+      "state": "ok",
+      "nextAt": 1791668519489.6619,
+      "lastOkAt": 1791667921166,
+      "lastObjects": 1,
+      "lastMs": 611,
+      "dataAt": 1791667682518
+     },
+     "usgs_quakes": {
+      "state": "ok",
+      "nextAt": 1791668486291.8943,
+      "lastOkAt": 1791668199053,
+      "lastObjects": 11,
+      "lastMs": 355,
+      "dataAt": 1791668198000
+     },
+     "usgs_nwis": {
+      "state": "ok",
+      "nextAt": 1791668871485.1697,
+      "lastOkAt": 1791667923583,
+      "lastObjects": 131,
+      "lastMs": 2128,
+      "dataAt": 1791667500000
+     },
+     "nwps": {
+      "state": "ok",
+      "nextAt": 1791668918081.9346,
+      "lastOkAt": 1791667932063,
+      "lastObjects": 118,
+      "lastMs": 10158,
+      "dataAt": 1791666000000
+     },
+     "coops": {
+      "state": "ok",
+      "nextAt": 1791668601949.452,
+      "lastOkAt": 1791668276532,
+      "lastObjects": 6,
+      "lastMs": 324,
+      "dataAt": 1791667800000
+     },
+     "open_meteo": {
+      "state": "ok",
+      "nextAt": 1791668778356.1704,
+      "lastOkAt": 1791667924024,
+      "lastObjects": 8,
+      "lastMs": 1219,
+      "dataAt": 1791667800000
+     },
+     "nws_obs": {
+      "state": "ok",
+      "nextAt": 1791668488036.3242,
+      "lastOkAt": 1791667932063,
+      "lastObjects": 12,
+      "lastMs": 8808,
+      "dataAt": 1791666660000
+     },
+     "luma": {
+      "state": "ok",
+      "nextAt": 1791668572309.5315,
+      "lastOkAt": 1791667924181,
+      "lastObjects": 7,
+      "lastMs": 461,
+      "dataAt": 1791667682668
+     },
+     "ndbc": {
+      "state": "ok",
+      "nextAt": 1791668540541.9448,
+      "lastOkAt": 1791667932063,
+      "lastObjects": 15,
+      "lastMs": 7906,
+      "dataAt": 1791667682538
+     },
+     "adsb": {
+      "state": "ok",
+      "nextAt": 1791668551404.571,
+      "lastOkAt": 1791667934951,
+      "lastObjects": 28,
+      "lastMs": 2883,
+      "dataAt": 1791667683221
+     }
+    },
+    "layers": [
+     {
+      "overlay": null,
+      "source": null,
+      "aboveWater": false,
+      "lastError": "",
+      "legend": null
+     },
+     {
+      "municipios": 78,
+      "vertices": 123952,
+      "queued": 0,
+      "lift": 8.6,
+      "selected": null,
+      "footprint": 0,
+      "highlights": 0,
+      "selectedId": null
+     },
+     {
+      "tiles": 12,
+      "buildings": 46459,
+      "triangles": 1105506,
+      "pending": 0,
+      "photos": 12,
+      "photoPending": 0,
+      "textureMB": 36
+     },
+     {
+      "storm": null,
+      "info": null,
+      "legend": null,
+      "live": [
+       {
+        "id": "tropical_cyclone:al092026",
+        "name": "Isaias",
+        "category": "Tropical depression",
+        "wind_kt": 25,
+        "distance_km": 2650,
+        "bearing": "NW",
+        "advisory": null,
+        "hasCone": false,
+        "points": 0,
+        "drawn": false,
+        "text": "Isaias · Tropical depression · 2,650 km NW"
+       }
+      ],
+      "highlights": 0
+     },
+     {
+      "layer": "markers",
+      "types": {
+       "shelter": 336,
+       "public_housing": 304,
+       "assisted_housing": 264,
+       "hospital": 87,
+       "clinic": 430,
+       "school": 1802,
+       "fire_station": 70,
+       "police_station": 127,
+       "power_plant": 67,
+       "substation": 401,
+       "water_plant": 61,
+       "airport": 24,
+       "seaport": 14,
+       "reservoir": 28,
+       "stream_gauge": 126,
+       "tide_station": 13,
+       "buoy": 25,
+       "weather_station": 157,
+       "weather_alert": 0,
+       "earthquake": 265,
+       "tropical_cyclone": 1,
+       "aircraft": 28
+      },
+      "drawn": 60,
+      "dots": 0,
+      "clustered": 2,
+      "hidden": 21,
+      "labels": 0,
+      "cellM": 128,
+      "ms": 0.57
+     }
+    ]
+   },
+   "frameMs": 6000,
+   "ok": true,
+   "ms": 438974,
+   "logs": [
+    "[warning] Ignoring inability to install OPFS sqlite3_vfs: Cannot install OPFS: Missing SharedArrayBuffer and/or Atomics. The server must emit the COOP/COEP response headers to enable those. See https://sqlite.org/wasm/doc/trunk/persistence.md#coop-co",
+    "[error] Failed to load resource: the server responded with a status of 400 ()",
+    "[shot] ready flag never set"
+   ],
+   "failedHosts": {}
+  },
+  {
+   "id": "03-lineage",
+   "url": "https://webgpu-demos.github.io/garita/?post=basic&t=2026-10-10T15:30:00Z&cam=-66.105,18.455,9000,200,28",
+   "loadMs": 441124,
+   "debug": {
+    "stats": {
+     "fps": 12,
+     "tiles": 31,
+     "pending": 51,
+     "drawCalls": 1,
+     "tris": 1
+    },
+    "view": {
+     "lon": -66.105,
+     "lat": 18.455,
+     "range": 9000.000000000004,
+     "heading": 200,
+     "pitch": 28,
+     "altitude": 4415.417124130753
+    },
+    "terrain": {
+     "tiles": 31,
+     "pending": 51,
+     "maxZoom": 14
+    },
+    "post": {
+     "mode": "basic",
+     "lutsReady": false,
+     "clouds": false,
+     "units": 0.42058823529411765,
+     "elevation": 62.83335416488195,
+     "dark": 0,
+     "daylight": 1,
+     "moonlight": 0,
+     "warmth": 0,
+     "lowSun": 0,
+     "exposure": 0.95,
+     "bloom": 0.25,
+     "shadows": false,
+     "shadowExtent": 0,
+     "sun": [
+      0.184,
+      0.89,
+      0.418
+     ]
+    },
+    "store": {
+     "persistent": true,
+     "seedVersion": "2026.10.10c",
+     "openedMs": 366,
+     "objects": 7018,
+     "links": 12792,
+     "obs": 0
+    },
+    "feeds": {
+     "nws_alerts": {
+      "state": "ok",
+      "nextAt": 1791668657441.2444,
+      "lastOkAt": 1791668547187,
+      "lastObjects": 0,
+      "lastMs": 238,
+      "dataAt": 1791668441000
+     },
+     "nhc": {
+      "state": "ok",
+      "nextAt": 1791668782930.436,
+      "lastOkAt": 1791668192122,
+      "lastObjects": 1,
+      "lastMs": 929,
+      "dataAt": 1791667682518
+     },
+     "usgs_quakes": {
+      "state": "ok",
+      "nextAt": 1791668809422.5708,
+      "lastOkAt": 1791668508559,
+      "lastObjects": 11,
+      "lastMs": 153,
+      "dataAt": 1791668508000
+     },
+     "usgs_nwis": {
+      "state": "ok",
+      "nextAt": 1791669016543.916,
+      "lastOkAt": 1791668193294,
+      "lastObjects": 131,
+      "lastMs": 2062,
+      "dataAt": 1791667500000
+     },
+     "nwps": {
+      "state": "ok",
+      "nextAt": 1791669017973.5862,
+      "lastOkAt": 1791668193743,
+      "lastObjects": 118,
+      "lastMs": 2511,
+      "dataAt": 1791666900000
+     },
+     "coops": {
+      "state": "ok",
+      "nextAt": 1791668936990.5369,
+      "lastOkAt": 1791668562353,
+      "lastObjects": 6,
+      "lastMs": 361,
+      "dataAt": 1791668160000
+     },
+     "open_meteo": {
+      "state": "ok",
+      "nextAt": 1791669074150.1294,
+      "lastOkAt": 1791668192893,
+      "lastObjects": 8,
+      "lastMs": 1661,
+      "dataAt": 1791667800000
+     },
+     "nws_obs": {
+      "state": "ok",
+      "nextAt": 1791668754237.6196,
+      "lastOkAt": 1791668192288,
+      "lastObjects": 12,
+      "lastMs": 1055,
+      "dataAt": 1791666660000
+     },
+     "luma": {
+      "state": "ok",
+      "nextAt": 1791668803555.3513,
+      "lastOkAt": 1791668191471,
+      "lastObjects": 7,
+      "lastMs": 237,
+      "dataAt": 1791667682668
+     },
+     "ndbc": {
+      "state": "ok",
+      "nextAt": 1791668838070.469,
+      "lastOkAt": 1791668192018,
+      "lastObjects": 15,
+      "lastMs": 784,
+      "dataAt": 1791667974740
+     },
+     "adsb": {
+      "state": "ok",
+      "nextAt": 1791668800406.8337,
+      "lastOkAt": 1791668191959,
+      "lastObjects": 28,
+      "lastMs": 725,
+      "dataAt": 1791667683221
+     }
+    },
+    "layers": [
+     {
+      "overlay": null,
+      "source": null,
+      "aboveWater": false,
+      "lastError": "",
+      "legend": null
+     },
+     {
+      "municipios": 78,
+      "vertices": 123952,
+      "queued": 1,
+      "lift": 17.6,
+      "selected": null,
+      "footprint": 0,
+      "highlights": 0,
+      "selectedId": null
+     },
+     {
+      "tiles": 36,
+      "buildings": 118215,
+      "triangles": 2741136,
+      "pending": 0,
+      "photos": 36,
+      "photoPending": 0,
+      "textureMB": 76
+     },
+     {
+      "storm": null,
+      "info": null,
+      "legend": null,
+      "live": [
+       {
+        "id": "tropical_cyclone:al092026",
+        "name": "Isaias",
+        "category": "Tropical depression",
+        "wind_kt": 25,
+        "distance_km": 2650,
+        "bearing": "NW",
+        "advisory": null,
+        "hasCone": false,
+        "points": 0,
+        "drawn": false,
+        "text": "Isaias · Tropical depression · 2,650 km NW"
+       }
+      ],
+      "highlights": 0
+     },
+     {
+      "layer": "markers",
+      "types": {
+       "shelter": 336,
+       "public_housing": 304,
+       "assisted_housing": 264,
+       "hospital": 87,
+       "clinic": 430,
+       "school": 1802,
+       "fire_station": 70,
+       "police_station": 127,
+       "power_plant": 67,
+       "substation": 401,
+       "water_plant": 61,
+       "airport": 24,
+       "seaport": 14,
+       "reservoir": 28,
+       "stream_gauge": 126,
+       "tide_station": 13,
+       "buoy": 25,
+       "weather_station": 157,
+       "weather_alert": 0,
+       "earthquake": 265,
+       "tropical_cyclone": 1,
+       "aircraft": 28
+      },
+      "drawn": 112,
+      "dots": 0,
+      "clustered": 18,
+      "hidden": 6,
+      "labels": 8,
+      "cellM": 362,
+      "ms": 0.81
+     }
+    ]
+   },
+   "frameMs": -1,
+   "ok": true,
+   "ms": 464126,
+   "logs": [
+    "[warning] Ignoring inability to install OPFS sqlite3_vfs: Cannot install OPFS: Missing SharedArrayBuffer and/or Atomics. The server must emit the COOP/COEP response headers to enable those. See https://sqlite.org/wasm/doc/trunk/persistence.md#coop-co",
+    "[error] Failed to load resource: the server responded with a status of 400 ()",
+    "[shot] ready flag never set"
+   ],
+   "failedHosts": {}
+  }
+ ]
+}
