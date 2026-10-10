@@ -1,0 +1,60 @@
+{
+ "shots": [
+  {
+   "id": "sun-p10",
+   "url": "https://webgpu-demos.github.io/garita/dev/sky/?ui=0&nofeeds=1&t=2026-10-10T21:20:00Z&cam=-66.075,18.452,2600,250,12",
+   "w": 960,
+   "h": 600,
+   "wait": 4000
+  },
+  {
+   "id": "sun-p03",
+   "url": "https://webgpu-demos.github.io/garita/dev/sky/?ui=0&nofeeds=1&t=2026-10-10T21:50:00Z&cam=-66.075,18.452,2600,250,12",
+   "w": 960,
+   "h": 600,
+   "wait": 4000
+  },
+  {
+   "id": "sun-p00",
+   "url": "https://webgpu-demos.github.io/garita/dev/sky/?ui=0&nofeeds=1&t=2026-10-10T22:06:00Z&cam=-66.075,18.452,2600,250,12",
+   "w": 960,
+   "h": 600,
+   "wait": 4000
+  },
+  {
+   "id": "sun-m06",
+   "url": "https://webgpu-demos.github.io/garita/dev/sky/?ui=0&nofeeds=1&t=2026-10-10T22:30:00Z&cam=-66.075,18.452,2600,250,12",
+   "w": 960,
+   "h": 600,
+   "wait": 4000
+  },
+  {
+   "id": "dawn",
+   "url": "https://webgpu-demos.github.io/garita/dev/sky/?ui=0&nofeeds=1&t=2026-10-10T10:20:00Z&cam=-66.075,18.452,2600,100,12",
+   "w": 960,
+   "h": 600,
+   "wait": 4000
+  },
+  {
+   "id": "top-p03",
+   "url": "https://webgpu-demos.github.io/garita/dev/sky/?ui=0&nofeeds=1&t=2026-10-10T21:50:00Z&cam=-66.105,18.455,9000,200,45",
+   "w": 960,
+   "h": 600,
+   "wait": 4000
+  },
+  {
+   "id": "top-m06",
+   "url": "https://webgpu-demos.github.io/garita/dev/sky/?ui=0&nofeeds=1&t=2026-10-10T22:30:00Z&cam=-66.105,18.455,9000,200,45",
+   "w": 960,
+   "h": 600,
+   "wait": 4000
+  },
+  {
+   "id": "night",
+   "url": "https://webgpu-demos.github.io/garita/dev/sky/?ui=0&nofeeds=1&t=2026-10-11T02:00:00Z&cam=-66.105,18.455,9000,200,45",
+   "w": 960,
+   "h": 600,
+   "wait": 4000
+  }
+ ]
+}
