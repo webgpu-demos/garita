@@ -1,0 +1,8 @@
+{ "shots": [
+ { "id": "radar", "url": "https://webgpu-demos.github.io/garita/dev/sky/?post=basic&ui=0&overlay=radar&cam=-66.45,18.15,400000,0,60", "w": 1280, "h": 800, "wait": 6000 },
+ { "id": "radar-near", "url": "https://webgpu-demos.github.io/garita/dev/sky/?post=basic&ui=0&overlay=radar&cam=-66.2,18.6,120000,0,70", "w": 1280, "h": 800, "wait": 6000 },
+ { "id": "goes", "url": "https://webgpu-demos.github.io/garita/dev/sky/?post=basic&ui=0&overlay=goes&cam=-66.45,18.15,900000,0,60", "w": 1280, "h": 800, "wait": 6000 },
+ { "id": "goes-wide", "url": "https://webgpu-demos.github.io/garita/dev/sky/?post=basic&ui=0&overlay=goes&cam=-66.45,18.15,2600000,0,75", "w": 1280, "h": 800, "wait": 6000 },
+ { "id": "island-day", "url": "https://webgpu-demos.github.io/garita/dev/sky/?post=basic&ui=0&nofeeds=1&t=2026-10-10T16:00:00Z&cam=-66.45,18.15,400000,0,60", "w": 1280, "h": 800, "wait": 4000 },
+ { "id": "island-pm", "url": "https://webgpu-demos.github.io/garita/dev/sky/?post=basic&ui=0&nofeeds=1&t=2026-10-10T20:30:00Z&cam=-66.45,18.15,250000,20,50", "w": 1280, "h": 800, "wait": 4000 }
+] }
