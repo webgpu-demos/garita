@@ -1,0 +1,5 @@
+{ "shots": [
+  { "id": "01-app-wide", "url": "https://webgpu-demos.github.io/garita/?post=basic&t=2026-10-10T15:30:00Z", "w": 1600, "h": 900, "wait": 9000 },
+  { "id": "02-condado", "url": "https://webgpu-demos.github.io/garita/?ui=0&post=basic&t=2026-10-10T15:30:00Z&cam=-66.075,18.452,2600,250,12", "w": 1280, "h": 800, "wait": 6000 },
+  { "id": "03-lineage", "url": "https://webgpu-demos.github.io/garita/?post=basic&t=2026-10-10T15:30:00Z&cam=-66.105,18.455,9000,200,28", "w": 1600, "h": 900, "wait": 12000 }
+] }
