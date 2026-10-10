@@ -1,0 +1,10 @@
+{ "shots": [
+  { "id": "b1-app", "url": "https://webgpu-demos.github.io/garita/?post=basic&t=2026-10-10T15:30:00Z", "w": 1600, "h": 900, "wait": 9000 },
+  { "id": "b2-night-sj", "url": "https://webgpu-demos.github.io/garita/?ui=0&post=basic&t=2026-10-11T02:00:00Z&cam=-66.105,18.455,9000,200,45", "w": 1280, "h": 800, "wait": 5000 },
+  { "id": "b3-island-night", "url": "https://webgpu-demos.github.io/garita/?ui=0&post=basic&t=2026-10-11T02:00:00Z&cam=-66.2,18.2,260000,0,48", "w": 1280, "h": 800, "wait": 4000 },
+  { "id": "b4-radar", "url": "https://webgpu-demos.github.io/garita/?post=basic&overlay=radar&cam=-66.45,18.15,400000,0,60", "w": 1600, "h": 900, "wait": 9000 },
+  { "id": "b5-goes", "url": "https://webgpu-demos.github.io/garita/?post=basic&ui=0&overlay=goes&cam=-66.45,18.15,900000,0,60", "w": 1280, "h": 800, "wait": 9000 },
+  { "id": "b6-sea1", "url": "https://webgpu-demos.github.io/garita/?post=basic&sea=1&t=2026-10-10T15:30:00Z&cam=-66.105,18.455,9000,200,45", "w": 1600, "h": 900, "wait": 9000 },
+  { "id": "b7-parguera", "url": "https://webgpu-demos.github.io/garita/?ui=0&post=basic&t=2026-10-10T15:30:00Z&cam=-67.05,17.955,5000,0,45", "w": 1280, "h": 800, "wait": 6000 },
+  { "id": "b8-dusk-sj", "url": "https://webgpu-demos.github.io/garita/?ui=0&post=basic&t=2026-10-10T21:50:00Z&cam=-66.075,18.452,2600,250,12", "w": 1280, "h": 800, "wait": 5000 }
+] }
