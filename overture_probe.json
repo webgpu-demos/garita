@@ -1,0 +1,549 @@
+{
+ "kv_meta": [
+  [
+   "geo",
+   "{\"version\": \"1.1.0\", \"primary_column\": \"geometry\", \"columns\": {\"geometry\": {\"encoding\": \"WKB\", \"geometry_types\": [\"MultiPolygon\", \"Polygon\"], \"covering\": {\"bbox\": {\"xmin\": [\"bbox\", \"xmin\"], \"ymin\": [\"bbox\", \"ymin\"], \"xmax\": [\"bbox\", \"xmax\"], \"ymax\": [\"bbox\", \"ymax\"]}}}}}"
+  ],
+  [
+   "schema_versions",
+   "{\"overture-schema-system\": \"2.0.0.post0+main.b574b73\", \"overture-schema-pyspark\": \"2.0.0\"}"
+  ]
+ ],
+ "n_sources": [
+  [
+   1,
+   2157363
+  ]
+ ],
+ "by_first_dataset": [
+  [
+   "OpenStreetMap",
+   1500399,
+   0,
+   null,
+   null,
+   null,
+   203060,
+   8499
+  ],
+  [
+   "Google Open Buildings",
+   536571,
+   536571,
+   0.65,
+   0.757148952701515,
+   0.9791,
+   0,
+   0
+  ],
+  [
+   "Microsoft ML Buildings",
+   120393,
+   928,
+   0.7279000282287598,
+   0.967325647329462,
+   1.0,
+   0,
+   0
+  ]
+ ],
+ "all_datasets": [
+  [
+   "OpenStreetMap",
+   1500399
+  ],
+  [
+   "Google Open Buildings",
+   536571
+  ],
+  [
+   "Microsoft ML Buildings",
+   120393
+  ]
+ ],
+ "dataset_combos": [
+  [
+   "[OpenStreetMap]",
+   1500399
+  ],
+  [
+   "[Google Open Buildings]",
+   536571
+  ],
+  [
+   "[Microsoft ML Buildings]",
+   120393
+  ]
+ ],
+ "source_property": [
+  [
+   "OpenStreetMap",
+   "",
+   1500399
+  ],
+  [
+   "Google Open Buildings",
+   "",
+   536571
+  ],
+  [
+   "Microsoft ML Buildings",
+   "",
+   120393
+  ]
+ ],
+ "license_field": [
+  [
+   "OpenStreetMap",
+   "ODbL-1.0",
+   1500399
+  ],
+  [
+   "Google Open Buildings",
+   null,
+   536571
+  ],
+  [
+   "Microsoft ML Buildings",
+   "ODbL-1.0",
+   120393
+  ]
+ ],
+ "update_time": [
+  [
+   "Microsoft ML Buildings",
+   null,
+   null
+  ],
+  [
+   "OpenStreetMap",
+   "2010-05-18T21:03:46.000Z",
+   "2026-09-07T18:26:30.000Z"
+  ],
+  [
+   "Google Open Buildings",
+   "2023-05-01T00:00:00.000Z",
+   "2023-05-01T00:00:00.000Z"
+  ]
+ ],
+ "conf_hist": [
+  [
+   "Google Open Buildings",
+   0.6,
+   140030
+  ],
+  [
+   "Google Open Buildings",
+   0.7,
+   247945
+  ],
+  [
+   "Google Open Buildings",
+   0.8,
+   132909
+  ],
+  [
+   "Google Open Buildings",
+   0.9,
+   15687
+  ],
+  [
+   "Microsoft ML Buildings",
+   0.7,
+   2
+  ],
+  [
+   "Microsoft ML Buildings",
+   0.8,
+   26
+  ],
+  [
+   "Microsoft ML Buildings",
+   0.9,
+   870
+  ],
+  [
+   "Microsoft ML Buildings",
+   1.0,
+   30
+  ]
+ ],
+ "height_by_ds": [
+  [
+   "Microsoft ML Buildings",
+   0,
+   null,
+   null,
+   null,
+   0
+  ],
+  [
+   "Google Open Buildings",
+   0,
+   null,
+   null,
+   null,
+   0
+  ],
+  [
+   "OpenStreetMap",
+   203060,
+   3.5732206985986785,
+   0.1,
+   246.34,
+   8499
+  ]
+ ],
+ "class_subtype": [
+  [
+   "OpenStreetMap",
+   null,
+   null,
+   1424862
+  ],
+  [
+   "Google Open Buildings",
+   null,
+   null,
+   536571
+  ],
+  [
+   "Microsoft ML Buildings",
+   null,
+   null,
+   120393
+  ],
+  [
+   "OpenStreetMap",
+   "residential",
+   "house",
+   50066
+  ],
+  [
+   "OpenStreetMap",
+   "residential",
+   "detached",
+   10169
+  ],
+  [
+   "OpenStreetMap",
+   "residential",
+   "residential",
+   2932
+  ],
+  [
+   "OpenStreetMap",
+   "residential",
+   "apartments",
+   1732
+  ],
+  [
+   "OpenStreetMap",
+   "outbuilding",
+   "roof",
+   1539
+  ],
+  [
+   "OpenStreetMap",
+   "commercial",
+   null,
+   1143
+  ],
+  [
+   "OpenStreetMap",
+   "commercial",
+   "commercial",
+   1016
+  ],
+  [
+   "OpenStreetMap",
+   "education",
+   "school",
+   930
+  ],
+  [
+   "OpenStreetMap",
+   "industrial",
+   "industrial",
+   894
+  ],
+  [
+   "OpenStreetMap",
+   "outbuilding",
+   "shed",
+   611
+  ],
+  [
+   "OpenStreetMap",
+   "civic",
+   null,
+   563
+  ],
+  [
+   "OpenStreetMap",
+   "religious",
+   null,
+   417
+  ],
+  [
+   "OpenStreetMap",
+   "entertainment",
+   "grandstand",
+   402
+  ],
+  [
+   "OpenStreetMap",
+   "civic",
+   "shelter",
+   332
+  ],
+  [
+   "OpenStreetMap",
+   "commercial",
+   "retail",
+   291
+  ],
+  [
+   "OpenStreetMap",
+   "medical",
+   null,
+   281
+  ],
+  [
+   "OpenStreetMap",
+   "transportation",
+   "parking",
+   186
+  ],
+  [
+   "OpenStreetMap",
+   "entertainment",
+   null,
+   181
+  ],
+  [
+   "OpenStreetMap",
+   "religious",
+   "church",
+   175
+  ],
+  [
+   "OpenStreetMap",
+   "residential",
+   "garage",
+   165
+  ],
+  [
+   "OpenStreetMap",
+   "education",
+   "university",
+   160
+  ],
+  [
+   "OpenStreetMap",
+   "outbuilding",
+   "shelter",
+   157
+  ],
+  [
+   "OpenStreetMap",
+   "agricultural",
+   "greenhouse",
+   146
+  ],
+  [
+   "OpenStreetMap",
+   "medical",
+   "hospital",
+   136
+  ],
+  [
+   "OpenStreetMap",
+   "civic",
+   "post_office",
+   67
+  ],
+  [
+   "OpenStreetMap",
+   "agricultural",
+   "barn",
+   65
+  ],
+  [
+   "OpenStreetMap",
+   "entertainment",
+   "stadium",
+   64
+  ]
+ ],
+ "geomtype": [
+  [
+   "OpenStreetMap",
+   "POLYGON",
+   1500355
+  ],
+  [
+   "Google Open Buildings",
+   "POLYGON",
+   536569
+  ],
+  [
+   "Microsoft ML Buildings",
+   "POLYGON",
+   120391
+  ],
+  [
+   "OpenStreetMap",
+   "MULTIPOLYGON",
+   44
+  ],
+  [
+   "Microsoft ML Buildings",
+   "MULTIPOLYGON",
+   2
+  ],
+  [
+   "Google Open Buildings",
+   "MULTIPOLYGON",
+   2
+  ]
+ ],
+ "area_q": [
+  [
+   "OpenStreetMap",
+   [
+    5.069982613360323,
+    12.240349268542824,
+    26.492645929714705,
+    90.42646313382387,
+    138.26281041365473,
+    191.7838238259627,
+    329.9816227726818,
+    818.0154406124444,
+    4738.187355290206
+   ],
+   113716.31115840736
+  ],
+  [
+   "Microsoft ML Buildings",
+   [
+    11.363461322024156,
+    14.275972938874718,
+    17.972362121185103,
+    28.636461404461294,
+    46.03839803580042,
+    81.91256482277575,
+    184.41715308907584,
+    364.83685977730244,
+    1105.17418003486
+   ],
+   32906.70729660813
+  ],
+  [
+   "Google Open Buildings",
+   [
+    10.03623462052495,
+    10.24255263065455,
+    11.269374053469821,
+    16.548641215130356,
+    25.682527412095503,
+    46.474101824790836,
+    141.32811288886256,
+    295.1490247982006,
+    1136.2353961287358
+   ],
+   25426.367096830734
+  ]
+ ],
+ "area_small": [
+  [
+   "Microsoft ML Buildings",
+   0,
+   0,
+   1797,
+   10075,
+   5,
+   1,
+   0
+  ],
+  [
+   "Google Open Buildings",
+   0,
+   91,
+   104331,
+   194668,
+   29,
+   1,
+   0
+  ],
+  [
+   "OpenStreetMap",
+   1506,
+   8980,
+   24803,
+   46426,
+   1114,
+   76,
+   8
+  ]
+ ],
+ "bbox_extent": [
+  [
+   -67.94172668457031,
+   17.88581657409668,
+   -65.227294921875,
+   18.515155792236328
+  ]
+ ],
+ "has_parts": [
+  [
+   false,
+   2157285
+  ],
+  [
+   true,
+   78
+  ]
+ ],
+ "sample_ml": [
+  [
+   "b46443dd-549e-4386-bccf-a52a6e28a3f8",
+   "[{'property': '', 'dataset': 'Microsoft ML Buildings', 'license': 'ODbL-1.0', 'record_id': None, 'update_time': None, 'confidence': None, 'between': None, 'provider': 'microsoft', 'resource': 'ml_buildings', 'version': '2026-08-11'}]",
+   "None",
+   "None",
+   "None",
+   "None",
+   "POLYGON ((-67.028821 18.0255532, -67.0288239 18.0254947, -67.0287423 18.025491, -67.0287393 18.0255495, -67.028821 18.0255532))",
+   "4"
+  ]
+ ],
+ "sample_osm": [
+  [
+   "215e8676-dc6f-41a1-801e-d2af5b4de405",
+   "[{'property': '', 'dataset': 'OpenStreetMap', 'license': 'ODbL-1.0', 'record_id': 'w535320716@1', 'update_time': '2017-10-25T18:22:02.000Z', 'confidence': None, 'between': None, 'provider': 'osm', 'resource': 'planet', 'version': '2026-09-06T00:00:00.000Z'}]",
+   "None",
+   "None",
+   "None",
+   "None",
+   "None",
+   "1"
+  ]
+ ],
+ "osm_record_id": [
+  [
+   "w135655887@2"
+  ],
+  [
+   "w715371541@1"
+  ],
+  [
+   "w715371535@1"
+  ],
+  [
+   "w715371542@1"
+  ],
+  [
+   "w715371536@1"
+  ]
+ ]
+}

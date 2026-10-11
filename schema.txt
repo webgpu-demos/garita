@@ -1,0 +1,24 @@
+id	VARCHAR
+names	STRUCT("primary" VARCHAR, common MAP(VARCHAR, VARCHAR), rules STRUCT(variant VARCHAR, "language" VARCHAR, perspectives STRUCT("mode" VARCHAR, countries VARCHAR[]), "value" VARCHAR, "between" DOUBLE[], side VARCHAR)[])
+sources	STRUCT(property VARCHAR, dataset VARCHAR, license VARCHAR, record_id VARCHAR, update_time VARCHAR, confidence DOUBLE, "between" DOUBLE[], provider VARCHAR, resource VARCHAR, "version" VARCHAR)[]
+level	INTEGER
+height	DOUBLE
+min_height	DOUBLE
+is_underground	BOOLEAN
+num_floors	INTEGER
+num_floors_underground	INTEGER
+min_floor	INTEGER
+subtype	VARCHAR
+class	VARCHAR
+facade_color	VARCHAR
+facade_material	VARCHAR
+roof_material	VARCHAR
+roof_shape	VARCHAR
+roof_direction	DOUBLE
+roof_orientation	VARCHAR
+roof_color	VARCHAR
+roof_height	DOUBLE
+geometry	GEOMETRY('OGC:CRS84')
+has_parts	BOOLEAN
+version	INTEGER
+bbox	STRUCT(xmin DOUBLE, xmax DOUBLE, ymin DOUBLE, ymax DOUBLE)

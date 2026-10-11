@@ -1,0 +1,5 @@
+tr: write error: Broken pipe
+sed: couldn't write 100 items to stdout: Broken pipe
+ERROR: Pipe to stdout was broken
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='utf-8'>
+BrokenPipeError: [Errno 32] Broken pipe
