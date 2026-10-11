@@ -1,0 +1,83 @@
+[    0.0s] lidar plan run 38105835208 sha f478c5644d8fe81d6111859926b7ff1095577ae8
+[    4.7s] points: 1500471 buildings (2026-10-10T05:07:03.000Z), 3988 assets, 8 spots; old ground known for 1500471
+[    6.6s] projects in the bucket: ['PR_PRVI_A_2018', 'PR_PRVI_C_2018', 'PR_PRVI_D_2018', 'PR_PRVI_E_2018', 'PR_PRVI_F_2018', 'PR_PRVI_G_2018', 'PR_PRVI_H_2018', 'PR_PRVI_VI_B1_2018', 'PR_PRVI_VI_B2_2018', 'PR_PuertoRicoUSVI_D24']
+[    6.8s]   PR_PRVI_A_2018: 67 tiles, 10.7 GB
+[    6.9s]   PR_PRVI_C_2018: 13 tiles, 0.9 GB
+[    7.0s]   PR_PRVI_D_2018: 58 tiles, 10.9 GB
+[    7.2s]   PR_PRVI_E_2018: 26 tiles, 3.2 GB
+[    7.3s]   PR_PRVI_F_2018: 19 tiles, 4.3 GB
+[    7.5s]   PR_PRVI_G_2018: 24 tiles, 5.5 GB
+[    7.6s]   PR_PRVI_H_2018: 86 tiles, 18.2 GB
+[    7.8s]   PR_PRVI_VI_B1_2018: 11 tiles, 0.6 GB
+[    7.9s]   PR_PRVI_VI_B2_2018: 9 tiles, 1.0 GB
+[    8.2s]   PR_PuertoRicoUSVI_D24: 215 tiles, 56.0 GB
+[    8.2s] TEST RUN: only tiles matching /x80y20[45]|x81y204/ -> 11
+[    8.7s] headers read: 11, failed 0; zones [19]; crs ['NAD83 / UTM zone 19N']; nodata ['-3.4028230607370965e+38', '-999999.0']; vertical CRS in the GeoTIFF ['None']; unit type ["''"]; sizes [(10012, 10012)]; pixel [(1.0, -1.0)]
+[    8.9s] projection check zone 19 (EPSG:26919): max difference to PROJ 0.0000 m over 2000 points
+[    9.0s] tiles holding at least one point: 11 of 11, 1.9 GB; points inside no tile at all: 1330117 buildings, 3196 assets
+[    9.0s] shard load (GB): [0.4, 0.4, 0.3, 0.3, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.0, 0.0]
+[   13.1s] vertical reference per USGS WESM: [('PR_PRVI_D_2018', '6641', 'GEOID12B'), ('PR_PRVI_E_2018', '6641', 'GEOID12B'), ('PR_PRVI_G_2018', '6641', 'GEOID12B'), ('PR_PuertoRicoUSVI_1_D24', '6641', 'GEOID18'), ('PR_PuertoRicoUSVI_2_D24', '6641', 'GEOID18'), ('PR_PuertoRicoUSVI_3_D24', '6641', 'GEOID18'), ('PR_PuertoRicoUSVI_4_D24', '6641', 'GEOID18'), ('PR_PuertoRicoUSVI_5_D24', '6642', 'GEOID18'), ('PR_PuertoRicoUSVI_6_D24', '6641', 'GEOID18')]
+[   13.1s] vendor DEM metadata: [('PR_PRVI_D_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_D_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_D_2018', ['Puerto Rico Vertical Datum of 2002, Geoid 12B'], ['Meters']), ('PR_PRVI_G_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_G_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_G_2018', ['Puerto Rico Vertical Datum of 2002, Geoid 12B'], ['Meters']), ('PR_PRVI_E_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_E_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_E_2018', ['Puerto Rico Vertical Datum of 2002, Geoid 12B'], ['Meters']), ('PR_PuertoRicoUSVI_4_D24', ['Puerto Rico Vertical Datum of 2002'], ['meters']), ('PR_PuertoRicoUSVI_3_D24', ['Puerto Rico Vertical Datum of 2002'], ['meters']), ('PR_PuertoRicoUSVI_1_D24', ['Puerto Rico Vertical Datum of 2002'], ['meters']), ('PR_PuertoRicoUSVI_2_D24', ['Puerto Rico Vertical Datum of 2002'], ['meters']), ('PR_PuertoRicoUSVI_5_D24', ['Virgin Islands Vertical Datum of 2009'], ['meters'])] errors: []
+[   13.8s] plan written, ok = True
+[    0.0s] lidar shard run 38105835208 sha f478c5644d8fe81d6111859926b7ff1095577ae8
+[    0.4s] shard 0: 1 tiles, 0.4 GB, 71996 point lookups
+[   15.1s]   USGS_1M_19_x80y204_PR_PuertoRicoUSVI_D24.tif: 71996 points, 71996 accepted, 0 without any cell; download 12.8 s, read+sample 1.9 s
+[   15.2s] shard 0 done in 15.2 s, ok = True
+[    0.0s] lidar shard run 38105835208 sha f478c5644d8fe81d6111859926b7ff1095577ae8
+[    0.4s] shard 1: 1 tiles, 0.4 GB, 83167 point lookups
+[   14.9s]   USGS_1M_19_x81y204_PR_PuertoRicoUSVI_D24.tif: 83167 points, 83167 accepted, 0 without any cell; download 12.8 s, read+sample 1.7 s
+[   14.9s] shard 1 done in 14.9 s, ok = True
+[    0.0s] lidar shard run 38105835208 sha f478c5644d8fe81d6111859926b7ff1095577ae8
+[    0.8s] shard 2: 1 tiles, 0.3 GB, 71996 point lookups
+[   13.3s]   USGS_1m_x80y204_PR_PRVI_G_2018.tif: 71996 points, 54639 accepted, 17328 without any cell; download 10.3 s, read+sample 2.2 s
+[   13.4s] shard 2 done in 13.4 s, ok = True
+[    0.0s] lidar shard run 38105835208 sha f478c5644d8fe81d6111859926b7ff1095577ae8
+[    0.4s] shard 3: 1 tiles, 0.2 GB, 83167 point lookups
+[    9.6s]   USGS_1m_x81y204_PR_PRVI_G_2018.tif: 83167 points, 49075 accepted, 34063 without any cell; download 8.0 s, read+sample 1.2 s
+[    9.7s] shard 3 done in 9.7 s, ok = True
+[    0.0s] lidar shard run 38105835208 sha f478c5644d8fe81d6111859926b7ff1095577ae8
+[    0.7s] shard 4: 1 tiles, 0.1 GB, 16175 point lookups
+[    3.9s]   USGS_1M_19_x80y205_PR_PuertoRicoUSVI_D24.tif: 16175 points, 16170 accepted, 5 without any cell; download 2.1 s, read+sample 1.1 s
+[    3.9s] shard 4 done in 3.9 s, ok = True
+[    0.0s] lidar shard run 38105835208 sha f478c5644d8fe81d6111859926b7ff1095577ae8
+[    0.7s] shard 5: 1 tiles, 0.1 GB, 71996 point lookups
+[    5.0s]   USGS_1m_x80y204_PR_PRVI_E_2018.tif: 71996 points, 12764 accepted, 59216 without any cell; download 2.2 s, read+sample 2.0 s
+[    5.0s] shard 5 done in 5.0 s, ok = True
+[    0.0s] lidar shard run 38105835208 sha f478c5644d8fe81d6111859926b7ff1095577ae8
+[    0.7s] shard 6: 1 tiles, 0.1 GB, 83167 point lookups
+[    4.5s]   USGS_1m_x81y204_PR_PRVI_E_2018.tif: 83167 points, 29880 accepted, 53266 without any cell; download 1.7 s, read+sample 2.0 s
+[    4.5s] shard 6 done in 4.5 s, ok = True
+[    0.0s] lidar shard run 38105835208 sha f478c5644d8fe81d6111859926b7ff1095577ae8
+[    0.5s] shard 7: 1 tiles, 0.1 GB, 16175 point lookups
+[    3.7s]   USGS_1m_x80y205_PR_PRVI_E_2018.tif: 16175 points, 15058 accepted, 1117 without any cell; download 2.3 s, read+sample 0.9 s
+[    3.7s] shard 7 done in 3.7 s, ok = True
+[    0.0s] lidar shard run 38105835208 sha f478c5644d8fe81d6111859926b7ff1095577ae8
+[    0.5s] shard 8: 1 tiles, 0.1 GB, 83167 point lookups
+[    5.0s]   USGS_1m_x81y204_PR_PRVI_D_2018.tif: 83167 points, 4214 accepted, 78942 without any cell; download 2.5 s, read+sample 2.0 s
+[    5.0s] shard 8 done in 5.0 s, ok = True
+[    0.0s] lidar shard run 38105835208 sha f478c5644d8fe81d6111859926b7ff1095577ae8
+[    0.9s] shard 9: 1 tiles, 0.1 GB, 71996 point lookups
+[    3.9s]   USGS_1m_x80y204_PR_PRVI_D_2018.tif: 71996 points, 4596 accepted, 67387 without any cell; download 0.9 s, read+sample 2.0 s
+[    3.9s] shard 9 done in 3.9 s, ok = True
+[    0.0s] lidar shard run 38105835208 sha f478c5644d8fe81d6111859926b7ff1095577ae8
+[    0.7s] shard 10: 1 tiles, 0.0 GB, 16175 point lookups
+[    3.3s]   USGS_1m_x80y205_PR_PRVI_G_2018.tif: 16175 points, 1115 accepted, 15057 without any cell; download 1.7 s, read+sample 0.9 s
+[    3.3s] shard 10 done in 3.3 s, ok = True
+[    0.0s] lidar shard run 38105835208 sha f478c5644d8fe81d6111859926b7ff1095577ae8
+[    0.2s] shard 11: 0 tiles, 0.0 GB, 0 point lookups
+[    0.2s] shard 11 done in 0.2 s, ok = True
+[    0.0s] lidar merge run 38105835208 sha f478c5644d8fe81d6111859926b7ff1095577ae8
+[    0.1s] merge: 12 shard results, missing shards [], tiles sampled 11 of 11, failed []
+[    0.9s] spot {"place": "Old San Juan, Plaza de Armas", "lon": -66.1165, "lat": 18.4655, "expect": "on the ridge of the islet, roughly 20 m", "lidar_m": 21.0, "project": "PR_PuertoRicoUSVI_D24", "by_collection_m": {"2024": 21.0, "2018": 21.03}, "buildings_within_150m": 151, "their_median_lidar_m": 20.3, "their_median_old_m": 20.0}
+[    0.9s] spot {"place": "Cataño waterfront (malecón)", "lon": -66.118, "lat": 18.4445, "expect": "bay shore, 1 to 2 m", "lidar_m": null, "project": "none", "by_collection_m": {"2024": null, "2018": null}, "buildings_within_150m": 0, "their_median_lidar_m": null, "their_median_old_m": null}
+[    0.9s] spot {"place": "Loíza, town plaza", "lon": -65.88, "lat": 18.4313, "expect": "coastal plain, a few metres", "lidar_m": null, "project": "none", "by_collection_m": {"2024": null, "2018": null}, "buildings_within_150m": 163, "their_median_lidar_m": null, "their_median_old_m": 3.0}
+[    1.0s] spot {"place": "Ponce, La Playa", "lon": -66.617, "lat": 17.98, "expect": "harbour barrio, 1 to 3 m", "lidar_m": null, "project": "none", "by_collection_m": {"2024": null, "2018": null}, "buildings_within_150m": 201, "their_median_lidar_m": null, "their_median_old_m": 3.0}
+[    1.0s] spot {"place": "Aibonito, town plaza", "lon": -66.266, "lat": 18.14, "expect": "hill town, roughly 600 to 700 m", "lidar_m": null, "project": "none", "by_collection_m": {"2024": null, "2018": null}, "buildings_within_150m": 181, "their_median_lidar_m": null, "their_median_old_m": 603.5}
+[    1.0s] spot {"place": "San Juan airport (SJU), apron", "lon": -66.0018, "lat": 18.4394, "expect": "published field elevation 9 ft = 2.7 m", "lidar_m": null, "project": "none", "by_collection_m": {"2024": null, "2018": null}, "buildings_within_150m": 0, "their_median_lidar_m": null, "their_median_old_m": null}
+[    1.0s] spot {"place": "Aguadilla airport (BQN), runway", "lon": -67.1294, "lat": 18.4949, "expect": "published field elevation 237 ft = 72 m", "lidar_m": null, "project": "none", "by_collection_m": {"2024": null, "2018": null}, "buildings_within_150m": 0, "their_median_lidar_m": null, "their_median_old_m": null}
+[    1.0s] spot {"place": "Condado, Ashford Avenue", "lon": -66.072, "lat": 18.457, "expect": "barrier strip, 2 to 4 m", "lidar_m": 1.12, "project": "PR_PuertoRicoUSVI_D24", "by_collection_m": {"2024": 1.12, "2018": 0.44}, "buildings_within_150m": 33, "their_median_lidar_m": 4.5, "their_median_old_m": 3.0}
+[    1.0s] qa {"buildings": 1500471, "buildings_with_value": 170354, "buildings_no_data": 1330117, "share_with_value": 0.11353, "buildings_no_data_but_some_cells_nearby": 0, "buildings_inside_no_tile": 1330117, "assets": 3988, "assets_with_value": 791, "new_elevation_m": {"min": -1.0, "p01": 0.9, "median": 26.5, "p99": 128.5, "max": 202.1, "below_zero": 51}, "new_minus_old_m": {"n": 170354, "median": 0.7, "p05": -3.7, "p95": 5.9, "mean": 0.778, "median_abs": 1.5, "share_within_0.25m": 0.0948, "share_within_0.5m": 0.2059, "share_within_1m": 0.3776, "share_beyond_3m": 0.2214, "note": "old = the ground field of tiles/bld today (10 m elevation model, decimetres)"}, "at_or_below": {"0.5m": {"old": 5213, "new": 592, "old_where_both": 2385, "new_where_both": 592}, "1m": {"old": 13531, "new": 2238, "old_where_both": 3476, "new_where_both": 2238}, "1.5m": {"old": 18672, "new": 4772, "old_where_both": 4515, "new_where_both": 4772}, "2m": {"old": 27516, "new": 7971, "old_where_both": 5974, "new_where_both": 7971}, "3m": {"old": 106288, "new": 15218, "old_where_both": 23950, "new_where_both": 15218}}, "old_values_known": 1500471, "compared": 170354, "median_minus_centre_cell_m": {"n": 170354, "median": 0.0, "p05": -0.049, "p95": 0.043, "mean": -0.001, "median_abs": 0.009, "share_within_0.25m": 0.9951, "share_within_0.5m": 0.9995, "share_within_1m": 1.0, "share_beyond_3m": 0.0}, "collections_compared": {"n": 170354, "median": -0.043, "p05": -0.288, "p95": 0.173, "mean": -0.046, "median_abs": 0.077, "share_within_0.25m": 0.9071, "share_within_0.5m": 0.9719, "share_within_1m": 0.9913, "share_beyond_3m": 0.0008, "note": "2024 minus 2018 at buildings where both have a value", "only_newest": 0, "only_older": 0}}
+[    1.0s] counts {"by_project": {"PR_PuertoRicoUSVI_D24": 170354, "none": 1330117}, "by_collection_year": {"none": 1330117, "2024": 170354}}
+[    1.3s] merge done: complete = True
+merge exit code 0 (0 complete, 2 published but incomplete, 1 failed)
+run 38105835208 sha f478c5644d8fe81d6111859926b7ff1095577ae8 finished 2026-10-11T02:41:04Z
