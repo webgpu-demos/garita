@@ -1,0 +1,36 @@
+# Runs a small shell script on a GitHub runner and publishes what it writes. The development sandbox has no route
+# to data hosts, so this is how a source is looked at (file listings, headers, a sample) before a pipeline stage is
+# written for it. Triggered by pushing a branch named probe/<name> that carries probe.sh; whatever the script
+# writes under $OUT lands on the branch probe-out/<name>. See tools/probe.sh.
+name: probe
+on:
+  push:
+    branches: ['probe/**']
+permissions:
+  contents: write
+jobs:
+  probe:
+    # Free on a public repository; private repositories are billed by the minute. Never run there.
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run
+        run: |
+          mkdir -p out
+          export OUT="$PWD/out"
+          set +e
+          timeout 17m bash probe.sh > out/stdout.txt 2> out/stderr.txt
+          echo "exit code $?" >> out/stdout.txt
+          du -sh out | tee -a out/stdout.txt
+      - name: Publish
+        if: always()
+        run: |
+          NAME="${GITHUB_REF_NAME#probe/}"
+          # keep the published result small: nothing over 20 MB
+          find out -type f -size +20M -print -delete | sed 's/^/dropped (over 20 MB): /' >> out/stdout.txt || true
+          cd out && git init -q -b "probe-out/$NAME" && git config user.name "garita-pipeline" && git config user.email "actions@users.noreply.github.com"
+          cp ../probe.stamp . 2>/dev/null || true
+          git add -A && git commit -q -m "probe $NAME $(date -u +%FT%TZ)"
+          git push -q -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" "HEAD:refs/heads/probe-out/$NAME"
