@@ -1,4 +1,6 @@
-// Buildings: every OpenStreetMap footprint in Puerto Rico (1.5 million), streamed as zoom-14 tiles around the
+// Buildings: every OpenStreetMap footprint in Puerto Rico (1.5 million), plus the footprints a machine detected on
+// imagery where OpenStreetMap has none (Overture Maps: Google Open Buildings, Microsoft ML Buildings; flagged in
+// the tile, drawn the same, named as detections in the tooltip), streamed as zoom-14 tiles around the
 // orbit target when the camera is low, meshed in a Worker into one geometry per tile, drawn with one material.
 //
 // REAL (from the tiles): footprints, the heights OpenStreetMap carries (13.8 %), ground elevation at the centroid,
@@ -54,9 +56,12 @@ export const createBuildings: LayerFactory = async (ctx) => {
 
   // which tiles exist (so the sea and the forest never cost a 404)
   const have = new Set<string>();
+  let addedBy = '';   // who detected the added footprints, from the tile index: "Google, Microsoft via Overture Maps"
   try {
     const idx = await fetch(dataUrl('tiles/bld/index.json')).then((r) => (r.ok ? r.json() : null));
     for (const t of (idx?.tiles ?? []) as [number, number, number][]) have.add(t[0] + '/' + t[1]);
+    const fam = [...new Set(((idx?.added_source?.datasets ?? []) as { family?: string; added?: number }[]).filter((d) => d.family && d.added).map((d) => d.family as string))];
+    if (fam.length) addedBy = fam.join(', ');
   } catch (e) { console.warn('[garita/buildings] no building index', e); }
 
   const worker = new Worker(new URL('./worker.ts', import.meta.url), { type: 'module' });
@@ -236,9 +241,16 @@ export const createBuildings: LayerFactory = async (ctx) => {
     }
     if (!bt || bi < 0) return false;
     const p = bt.pick!, m = p.meta[bi], es = S.lang.value === 'es';
-    const kind = (es ? KIND.es : KIND.en)[m & 7], flood = (es ? FLOOD.es : FLOOD.en)[(m >> 3) & 3], est = (m & 32) !== 0;
+    const kind = (es ? KIND.es : KIND.en)[m & 7], flood = (es ? FLOOD.es : FLOOD.en)[(m >> 3) & 3], est = (m & 32) !== 0, added = (m & 64) !== 0;
     const parts = [(es ? 'Edificio' : 'Building') + (kind ? ` (${kind})` : '')];
-    parts.push(`${p.height[bi].toFixed(1)} m ` + (est ? (es ? '(altura estimada)' : '(height estimated)') : (es ? '(altura de OpenStreetMap)' : '(height from OpenStreetMap)')));
+    // An added footprint is a machine detection, never presented as a mapped building; its kind is a guess from its area.
+    if (added) {
+      parts.push(es
+        ? `huella detectada por máquina en imágenes${addedBy ? ` (${addedBy}, vía Overture Maps)` : ''}; no está en OpenStreetMap`
+        : `footprint detected from imagery by machine${addedBy ? ` (${addedBy}, via Overture Maps)` : ''}; not in OpenStreetMap`);
+    }
+    const hSrc = added ? 'Overture Maps' : 'OpenStreetMap';
+    parts.push(`${p.height[bi].toFixed(1)} m ` + (est ? (es ? '(altura estimada)' : '(height estimated)') : (es ? `(altura de ${hSrc})` : `(height from ${hSrc})`)));
     if (p.ground[bi] !== -32768) {
       const gm = p.ground[bi] / 10, sea = world.seaLevel;
       parts.push((es ? 'terreno ' : 'ground ') + gm.toFixed(1) + ' m' + (sea > 0.05 && gm <= sea
