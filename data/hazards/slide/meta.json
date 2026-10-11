@@ -11,7 +11,7 @@
   ],
   "file": "landslide_susceptibility_raster/landslide_susceptibility_raster.tif",
   "version": "data release published 2021-08-17; report published 2020",
-  "retrieved": "2026-10-11T02:38:48Z",
+  "retrieved": "2026-10-11T02:41:37Z",
   "licence": "U.S. Government work in the public domain. Metadata: access constraints \"None.  Please see 'Distribution Info' for details.\"; use constraints \"none\".",
   "citation": "Hughes, K.S., and Schulz, W.H., 2020, Map depicting susceptibility to landslides triggered by intense rainfall, Puerto Rico: U.S. Geological Survey Open-File Report 2020\u20131022, 91 p., 1 plate, scale 1:150,000, https://doi.org/10.3133/ofr20201022.",
   "citation_data": "Hughes, K.S., and Schulz, W.H., 2021, Geographic Information System Layer of a Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico: U.S. Geological Survey data release, https://doi.org/10.5066/P990ZP4C.",
@@ -245,6 +245,33 @@
     "3": 0,
     "4": 0,
     "5": 0
+   }
+  },
+  "highest_class_within_25_m": {
+   "buildings_by_class": {
+    "0": 9177,
+    "1": 753821,
+    "2": 355527,
+    "3": 227394,
+    "4": 130243,
+    "5": 24309
+   },
+   "buildings_pct_by_class": {
+    "0": 0.61,
+    "1": 50.24,
+    "2": 23.69,
+    "3": 15.15,
+    "4": 8.68,
+    "5": 1.62
+   },
+   "buildings_pct_high_or_above": 25.46,
+   "assets_by_class": {
+    "0": 52,
+    "1": 2712,
+    "2": 780,
+    "3": 276,
+    "4": 147,
+    "5": 21
    }
   },
   "raster_pct_of_mapped_cells_by_class": {
@@ -550,11 +577,16 @@
     "5": 1.0
    }
   },
-  "seconds": 66
+  "seconds": 72
  },
- "generated": "2026-10-11T02:38:48Z",
- "commit": "140980c",
- "run": "38105807824",
+ "generated": "2026-10-11T02:41:37Z",
+ "commit": "263e23f",
+ "run": "38105959375",
+ "extras": {
+  "buildings_max25m.bin": "uint8 per building, canonical order. NOT a published value: the highest class among the 5 m cells whose centre is within 25 m (5 cells) of the building's own cell; 0 where the building itself has no data. Offered because a building's own cell is often a graded pad that reads Low while the slope cut beside it does not; the 25 m radius is our choice, not the publisher's. buildings.bin remains the class at the point.",
+  "assets_max25m.json": "the same for assets: { \"<type>:<key>\": class }",
+  "slide_limits_es.txt": "not published; in the repository (pipeline/hazards/), the Spanish use limits as extracted from the Spanish plate"
+ },
  "stage": "slide",
  "buildings": {
   "file": "buildings.bin",
