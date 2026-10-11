@@ -1,0 +1,569 @@
+{
+ "source": {
+  "name": "Geographic Information System Layer of a Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico (USGS data release), the GIS layer of USGS Open-File Report 2020-1022",
+  "publisher": "U.S. Geological Survey",
+  "urls": [
+   "https://doi.org/10.5066/P990ZP4C",
+   "https://www.sciencebase.gov/catalog/item/61087009d34ef8d70565c154",
+   "https://www.sciencebase.gov/catalog/file/get/61087009d34ef8d70565c154",
+   "https://doi.org/10.3133/ofr20201022",
+   "https://pubs.usgs.gov/of/2020/1022/"
+  ],
+  "file": "landslide_susceptibility_raster/landslide_susceptibility_raster.tif",
+  "version": "data release published 2021-08-17; report published 2020",
+  "retrieved": "2026-10-11T02:38:48Z",
+  "licence": "U.S. Government work in the public domain. Metadata: access constraints \"None.  Please see 'Distribution Info' for details.\"; use constraints \"none\".",
+  "citation": "Hughes, K.S., and Schulz, W.H., 2020, Map depicting susceptibility to landslides triggered by intense rainfall, Puerto Rico: U.S. Geological Survey Open-File Report 2020\u20131022, 91 p., 1 plate, scale 1:150,000, https://doi.org/10.3133/ofr20201022.",
+  "citation_data": "Hughes, K.S., and Schulz, W.H., 2021, Geographic Information System Layer of a Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico: U.S. Geological Survey data release, https://doi.org/10.5066/P990ZP4C.",
+  "raster": {
+   "crs": "EPSG:32619 (WGS 84 / UTM zone 19N)",
+   "cell_size_m": 5,
+   "width": 35756,
+   "height": 13008,
+   "dtype": "int8",
+   "nodata": -128.0,
+   "bounds_utm": [
+    682396.735,
+    1983312.914,
+    861176.735,
+    2048352.914
+   ],
+   "bounds_lonlat": [
+    -67.27793,
+    17.908,
+    -65.58022,
+    18.51784
+   ],
+   "cells_by_value": {
+    "-128": 117101846,
+    "1": 139248136,
+    "2": 104373102,
+    "3": 69621553,
+    "4": 31308491,
+    "5": 3460920
+   }
+  }
+ },
+ "method": "Each building (area centroid of its footprint) and each asset (its stored point) is converted from longitude/latitude (WGS 84) to the raster's own grid, WGS 84 / UTM zone 19N, and given the value of the 5 m cell it falls in: nearest cell, no interpolation, no buffer, no smoothing. Values are the publisher's classes 1..5; 0 means no data (the point is outside the raster or its cell is empty: the sea, and every island other than the main one). The class is a relative ranking of where landslides start; it says nothing about where they run out. Overlay tiles: the raster is resampled once by nearest neighbour to the Web Mercator pixel grid of zoom 15 (about 4.5 m on the ground); Each tile pixel shows the majority class of the 5 m cells it covers (16 cells at zoom 13, about 16,000 at zoom 8; ties go to the higher class) and is transparent where fewer than half of them have data. Majority rather than highest class, because the classes are area percentiles and \"highest\" would overstate them at island scale; bands narrower than a tile pixel therefore thin out at low zoom. The values at points never pass through the tiles.",
+ "classes": {
+  "0": {
+   "en": "No data",
+   "es": "Sin datos",
+   "meaning": "Outside the map (sea, Vieques, Culebra, Mona and the smaller islands) or an empty cell. Not a susceptibility."
+  },
+  "1": {
+   "en": "Low",
+   "es": "Baja",
+   "color": "#aeadae",
+   "meaning": "Relative susceptibility to landslides triggered by intense rainfall: Low; about 40 percent of the island (the remainder). Measured share of mapped cells: 40.01%."
+  },
+  "2": {
+   "en": "Moderate",
+   "es": "Moderada",
+   "color": "#fbf7bc",
+   "meaning": "Relative susceptibility to landslides triggered by intense rainfall: Moderate; about 30 percent of the island. Measured share of mapped cells: 29.99%."
+  },
+  "3": {
+   "en": "High",
+   "es": "Alta",
+   "color": "#ffd580",
+   "meaning": "Relative susceptibility to landslides triggered by intense rainfall: High; about 20 percent of the island. Measured share of mapped cells: 20.01%."
+  },
+  "4": {
+   "en": "Very High",
+   "es": "Muy Alta",
+   "color": "#f3807f",
+   "meaning": "Relative susceptibility to landslides triggered by intense rainfall: Very High; about 9 percent of the island. Measured share of mapped cells: 9.0%."
+  },
+  "5": {
+   "en": "Extremely High",
+   "es": "Extremadamente Alta",
+   "color": "#85a4d6",
+   "meaning": "Relative susceptibility to landslides triggered by intense rainfall: Extremely High; about 1 percent of the island. Measured share of mapped cells: 0.99%."
+  }
+ },
+ "classes_note": "Class names are the raster attribute rainLSsuc as published; Spanish names are those printed in the legend of the Spanish edition of the plate. The classes rank relative susceptibility by share of the island's area: \"The Extremely High classification occurs over 1 percent of the island, whereas the Very High, High, and Moderate classifications occur over 9, 20, and 30 percent of the island, respectively.\" (data release abstract).",
+ "colours": "The publisher's own: the fills of the five legend boxes in the EXPLANATION of the plate of USGS Open-File Report 2020-1022 (ofr20201022_sheet.pdf, same in the Spanish edition), read from the PDF's vector drawing. Note that Extremely High is blue on the published map, not a darker red. The data release itself carries no colour table (the GeoTIFF has none; the SLD beside it is a generic two-colour gradient).",
+ "disclaimer": {
+  "en": "This map depicts estimated relative susceptibility to landslide occurrence during or soon after intense rainfall, such as that produced during tropical cyclones. It is intended to illustrate relative potential landslide hazard to help provide a framework for site-specific landslide susceptibility assessments, plan for future development, and plan for future widespread landslide events. For example, locations with higher landslide susceptibility could (1) be excluded from future development; (2) require slope-stability studies prior to development, and grading, foundation, and drainage design and construction that considers potential slope instability; (3) be targeted for evaluation and mitigation of potentially adverse conditions; (4) be monitored for signs of incipient landsliding, such as cracks in roadways and structures, leaning utility poles and trees, and broken water or sewer lines; and (or) (5) be considered for evacuation prior to forecasted landslide-inducing rainfall and for targeted emergency response activities after such rainfall. When used in consideration of specific atmospheric events, the map should be evaluated alongside event-specific rainfall conditions, with landslides being more likely where larger amounts of rainfall occur in locations with higher landslide susceptibility. The map is not a substitute for site-specific, slope-stability investigation by licensed geologists and engineers. Additionally, many landslides in Puerto Rico move far from the locations where they originate and can result in the loss of life and property as they move downslope; the map does not depict this significant hazard resulting from mobile landslides. Finally, locations of landslides triggered by earthquakes or prolonged, relatively low-intensity rainfall may significantly differ from High, Very High, and Extremely High susceptibility locations shown on the map.\n\nMost landslides in Puerto Rico triggered by intense rainfall are shallow (to several meters deep) and occur in unconsolidated material (soil and saprolite) overlying rock (for example, Jibson, 1989; Larsen and Torres Sanchez, 1992; Bessette-Kirton and others, 2019). These are the types of landslides most well represented by the landslide susceptibility map because the map was produced using an inventory of landslides triggered by Hurricane Mar\u00eda (Hughes and others, 2019) and most of those landslides were shallow. Hurricane Mar\u00eda also triggered landslides in rock and some reached depths of approximately 30 meters (Bessette-Kirton and others, 2019), so the map also depicts susceptibility to deeper landslides and those in rock. However, landslides such as this are relatively poorly represented by the susceptibility map because relatively few were triggered by Hurricane Mar\u00eda so did not provide statistically robust measures with which similar landslides could be forecast. The tragic landslide that occurred at Mameyes in Ponce municipality during 1985 and which killed more than 129 people (Silva-Tulla, 1986) is an example of a type of landslide that is likely poorly represented by the susceptibility map. Additionally, many landslides worldwide are triggered by human activities, such as hillslope grading and redirection of drainage. Local activities such as these cannot be accounted for on the map.\n\nCommon to nearly all modeling efforts, accuracy of the landslide susceptibility map relies upon accuracy and completeness of input data utilized for its development. Among others, we expect that the following omissions and conditions detract from the accuracy of the map: (1) variability within given geological terranes of bedrock strength and hydrologic properties, discontinuity orientation and condition; (2) variability within given soil types of soil strength and hydrologic properties; (3) consideration of only part of the road network, including omission of most undocumented farm roads, paths, and trails; and (4) use of a 2015\u20132016 topographic model that predates landslides triggered by Hurricane Mar\u00eda and other topographic changes.\n\nUnless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data on any other system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty.",
+  "source": "FGDC metadata of the data release (landslide_susceptibility_raster.xml): abstract section \"USE AND LIMITATIONS OF THE LANDSLIDE SUSCEPTIBILITY MAP\" and the distribution liability statement, verbatim",
+  "paragraphs": [
+   "This map depicts estimated relative susceptibility to landslide occurrence during or soon after intense rainfall, such as that produced during tropical cyclones. It is intended to illustrate relative potential landslide hazard to help provide a framework for site-specific landslide susceptibility assessments, plan for future development, and plan for future widespread landslide events. For example, locations with higher landslide susceptibility could (1) be excluded from future development; (2) require slope-stability studies prior to development, and grading, foundation, and drainage design and construction that considers potential slope instability; (3) be targeted for evaluation and mitigation of potentially adverse conditions; (4) be monitored for signs of incipient landsliding, such as cracks in roadways and structures, leaning utility poles and trees, and broken water or sewer lines; and (or) (5) be considered for evacuation prior to forecasted landslide-inducing rainfall and for targeted emergency response activities after such rainfall. When used in consideration of specific atmospheric events, the map should be evaluated alongside event-specific rainfall conditions, with landslides being more likely where larger amounts of rainfall occur in locations with higher landslide susceptibility. The map is not a substitute for site-specific, slope-stability investigation by licensed geologists and engineers. Additionally, many landslides in Puerto Rico move far from the locations where they originate and can result in the loss of life and property as they move downslope; the map does not depict this significant hazard resulting from mobile landslides. Finally, locations of landslides triggered by earthquakes or prolonged, relatively low-intensity rainfall may significantly differ from High, Very High, and Extremely High susceptibility locations shown on the map.",
+   "Most landslides in Puerto Rico triggered by intense rainfall are shallow (to several meters deep) and occur in unconsolidated material (soil and saprolite) overlying rock (for example, Jibson, 1989; Larsen and Torres Sanchez, 1992; Bessette-Kirton and others, 2019). These are the types of landslides most well represented by the landslide susceptibility map because the map was produced using an inventory of landslides triggered by Hurricane Mar\u00eda (Hughes and others, 2019) and most of those landslides were shallow. Hurricane Mar\u00eda also triggered landslides in rock and some reached depths of approximately 30 meters (Bessette-Kirton and others, 2019), so the map also depicts susceptibility to deeper landslides and those in rock. However, landslides such as this are relatively poorly represented by the susceptibility map because relatively few were triggered by Hurricane Mar\u00eda so did not provide statistically robust measures with which similar landslides could be forecast. The tragic landslide that occurred at Mameyes in Ponce municipality during 1985 and which killed more than 129 people (Silva-Tulla, 1986) is an example of a type of landslide that is likely poorly represented by the susceptibility map. Additionally, many landslides worldwide are triggered by human activities, such as hillslope grading and redirection of drainage. Local activities such as these cannot be accounted for on the map.",
+   "Common to nearly all modeling efforts, accuracy of the landslide susceptibility map relies upon accuracy and completeness of input data utilized for its development. Among others, we expect that the following omissions and conditions detract from the accuracy of the map: (1) variability within given geological terranes of bedrock strength and hydrologic properties, discontinuity orientation and condition; (2) variability within given soil types of soil strength and hydrologic properties; (3) consideration of only part of the road network, including omission of most undocumented farm roads, paths, and trails; and (4) use of a 2015\u20132016 topographic model that predates landslides triggered by Hurricane Mar\u00eda and other topographic changes."
+  ],
+  "distribution_liability": "Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data on any other system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty.",
+  "es": "Este mapa muestra la susceptibilidad relativa estimada a la ocurrencia de deslizamientos de tierra durante o poco despu\u00e9s de una precipitaci\u00f3n intensa, como la que se produce durante ciclones tropicales. El mapa busca ilustrar la amenaza relativa y potencial de los deslizamientos de tierra para proveer un marco de referencia para evaluaciones de susceptibilidad en lugares espec\u00edficos y ayudar con la planificaci\u00f3n para medidas de mitigaci\u00f3n m\u00e1s adelante en el futuro. Por ejemplo, localizaciones con alta susceptibilidad a deslizamientos pueden (1) ser excluidas de futuros desarrollos; (2) requerir estudios de estabilidad de taludes previo al desarrollo, nivelaci\u00f3n, cimentaci\u00f3n, dise\u00f1o de drenaje y construcci\u00f3n que tomen en consideraci\u00f3n el potencial de inestabilidad de taludes; (3) ser objeto de evaluaci\u00f3n y mitigaci\u00f3n de condiciones potencialmente adversas; (4) ser monitoreadas para detectar signos de inicio de deslizamientos, tales como grietas en carreteras y estructuras, postes y \u00e1rboles inclinados, y l\u00edneas de agua y alcantarillados rotos; y/o (5) ser consideradas para desalojo previo a la precipitaci\u00f3n pronosticada conducente a deslizamientos y para esfuerzos de respuesta de emergencia luego de dicha lluvia intensa. Cuando se utiliza en consideraci\u00f3n a eventos atmosf\u00e9ricos espec\u00edficos, el mapa debe evaluarse junto con las condiciones de precipitaci\u00f3n espec\u00edficas del evento, siendo los deslizamientos de tierra m\u00e1s probables donde ocurren mayores cantidades de precipitaci\u00f3n en localizaciones con mayor susceptibilidad a deslizamientos de tierra. Adem\u00e1s, los datos estimados de la humedad de suelos en la zona radicular de la misi\u00f3n \u201cSoil Moisture Active Passive\u201d de la Administraci\u00f3n Nacional de la Aeron\u00e1utica y del Espacio (https://smap.jpl.nasa.gov/ accedido por \u00faltima vez el 26 de diciembre de 2019) pueden combinarse con los estimados de susceptibilidad a deslizamientos para este prop\u00f3sito (v\u00e9ase \u201cUso y Limitaciones del Mapa de Susceptibilidad a Deslizamientos de Tierra en el folleto que acompa\u00f1a este mapa para una metodolog\u00eda m\u00e1s detallada). El mapa no es un sustituto de investigaciones de lugares espec\u00edficos y estabilidad de taludes por ge\u00f3logos e ingenieros licenciados. Adem\u00e1s, muchos de los deslizamientos en Puerto Rico se mueven lejos de las localizaciones de donde se originan y pueden ocasionar la p\u00e9rdida de vidas y propiedades a medida que avanzan cuesta abajo; el mapa no muestra esta amenaza significativa como resultado de la movilidad de deslizamientos. Finalmente, las ubicaciones de deslizamientos detonados por terremotos o precipitaci\u00f3n prolongada y de intensidad relativamente baja pueden diferir considerablemente de ubicaciones en el mapa con susceptibilidad Alta, Muy Alta y Extremadamente Alta.\n\nLa mayor\u00eda de los deslizamientos en Puerto Rico que ocurren a consecuencia de las lluvias torrenciales son poco profundos (a varios metros de profundidad) y ocurren en material no consolidado (suelo y saprolita) encima de rocas (por ejemplo, Jibson, 1989; Larsen y Torres S\u00e1nchez, 1992; Bessette-Kirton y otros, 2019). Estos son los tipos de movimiento de masa mejor representados por el mapa de susceptibilidad a deslizamientos de tierra ya que este se produjo mediante un inventario de los deslizamientos causados por el hurac\u00e1n Mar\u00eda (Hughes y otros, 2019) y muchos de estos deslizamientos fueron poco profundos. El hurac\u00e1n Mar\u00eda tambi\u00e9n provoc\u00f3 deslizamientos de tierra en rocas y algunos alcanzaron profundidades de aproximadamente 30 metros (Bessette-Kirton y otros, 2019), por lo que el mapa tambi\u00e9n muestra la susceptibilidad a deslizamientos de tierra m\u00e1s profundos y en roca. Sin embargo, este tipo de movimiento de masa est\u00e1 relativamente poco representado por el mapa de susceptibilidad dado que pocos fueron provocados por el hurac\u00e1n Mar\u00eda y, por ende, no proveyeron medidas estad\u00edsticamente s\u00f3lidas con las cuales pueden pronosticarse. El tr\u00e1gico deslizamiento que ocurri\u00f3 en Mameyes en el municipio de Ponce en 1985, que acab\u00f3 con la vida de m\u00e1s de 129 personas (Silva-Tulla, 1986), es un ejemplo de un tipo de deslizamiento de tierra probablemente poco representado por el mapa de susceptibilidad. Adem\u00e1s, muchos deslizamientos en todo el mundo se desencadenan por actividad humana, tal como la nivelaci\u00f3n de laderas y redirecci\u00f3n del drenaje. Dichas actividades locales no pueden contemplarse en el mapa.\n\nCom\u00fan a casi todos los esfuerzos de modelaje, la exactitud del mapa de susceptibilidad a deslizamientos de tierra se basa en cu\u00e1n exactos y completos son los datos de entrada empleados para su desarrollo. Entre otros, anticipamos que las siguientes omisiones y condiciones afecten la exactitud del mapa: (1) variabilidad de la resistencia del basamento rocoso y propiedades hidrol\u00f3gicas, orientaci\u00f3n y condici\u00f3n de discontinuidades dentro de terrenos geol\u00f3gicos; (2) variabilidad de la resistencia del suelo y propiedades hidrol\u00f3gicas dentro del tipo de suelo; (3) consideraci\u00f3n de solo algunas partes de la red de carreteras, como omisiones de la mayor\u00eda de las carreteras, caminos y senderos de granjas no documentadas; y (4) el uso de un modelo topogr\u00e1fico de 2015\u20132016, previo a los deslizamientos de tierra causados por el hurac\u00e1n Mar\u00eda y otros cambios topogr\u00e1ficos.",
+  "es_source": "Spanish edition of the plate of USGS Open-File Report 2020-1022 (https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_esp.pdf), section \"USO Y LIMITACIONES DEL MAPA DE SUSCEPTIBILIDAD A DESLIZAMIENTOS DE TIERRA\", the publisher's own Spanish text, extracted from the PDF with only the line breaks removed (pipeline/hazards/slide_limits_es.txt). It is the plate's wording, so it is close to, but not a sentence-for-sentence match of, the English taken from the data release metadata.",
+  "es_paragraphs": [
+   "Este mapa muestra la susceptibilidad relativa estimada a la ocurrencia de deslizamientos de tierra durante o poco despu\u00e9s de una precipitaci\u00f3n intensa, como la que se produce durante ciclones tropicales. El mapa busca ilustrar la amenaza relativa y potencial de los deslizamientos de tierra para proveer un marco de referencia para evaluaciones de susceptibilidad en lugares espec\u00edficos y ayudar con la planificaci\u00f3n para medidas de mitigaci\u00f3n m\u00e1s adelante en el futuro. Por ejemplo, localizaciones con alta susceptibilidad a deslizamientos pueden (1) ser excluidas de futuros desarrollos; (2) requerir estudios de estabilidad de taludes previo al desarrollo, nivelaci\u00f3n, cimentaci\u00f3n, dise\u00f1o de drenaje y construcci\u00f3n que tomen en consideraci\u00f3n el potencial de inestabilidad de taludes; (3) ser objeto de evaluaci\u00f3n y mitigaci\u00f3n de condiciones potencialmente adversas; (4) ser monitoreadas para detectar signos de inicio de deslizamientos, tales como grietas en carreteras y estructuras, postes y \u00e1rboles inclinados, y l\u00edneas de agua y alcantarillados rotos; y/o (5) ser consideradas para desalojo previo a la precipitaci\u00f3n pronosticada conducente a deslizamientos y para esfuerzos de respuesta de emergencia luego de dicha lluvia intensa. Cuando se utiliza en consideraci\u00f3n a eventos atmosf\u00e9ricos espec\u00edficos, el mapa debe evaluarse junto con las condiciones de precipitaci\u00f3n espec\u00edficas del evento, siendo los deslizamientos de tierra m\u00e1s probables donde ocurren mayores cantidades de precipitaci\u00f3n en localizaciones con mayor susceptibilidad a deslizamientos de tierra. Adem\u00e1s, los datos estimados de la humedad de suelos en la zona radicular de la misi\u00f3n \u201cSoil Moisture Active Passive\u201d de la Administraci\u00f3n Nacional de la Aeron\u00e1utica y del Espacio (https://smap.jpl.nasa.gov/ accedido por \u00faltima vez el 26 de diciembre de 2019) pueden combinarse con los estimados de susceptibilidad a deslizamientos para este prop\u00f3sito (v\u00e9ase \u201cUso y Limitaciones del Mapa de Susceptibilidad a Deslizamientos de Tierra en el folleto que acompa\u00f1a este mapa para una metodolog\u00eda m\u00e1s detallada). El mapa no es un sustituto de investigaciones de lugares espec\u00edficos y estabilidad de taludes por ge\u00f3logos e ingenieros licenciados. Adem\u00e1s, muchos de los deslizamientos en Puerto Rico se mueven lejos de las localizaciones de donde se originan y pueden ocasionar la p\u00e9rdida de vidas y propiedades a medida que avanzan cuesta abajo; el mapa no muestra esta amenaza significativa como resultado de la movilidad de deslizamientos. Finalmente, las ubicaciones de deslizamientos detonados por terremotos o precipitaci\u00f3n prolongada y de intensidad relativamente baja pueden diferir considerablemente de ubicaciones en el mapa con susceptibilidad Alta, Muy Alta y Extremadamente Alta.",
+   "La mayor\u00eda de los deslizamientos en Puerto Rico que ocurren a consecuencia de las lluvias torrenciales son poco profundos (a varios metros de profundidad) y ocurren en material no consolidado (suelo y saprolita) encima de rocas (por ejemplo, Jibson, 1989; Larsen y Torres S\u00e1nchez, 1992; Bessette-Kirton y otros, 2019). Estos son los tipos de movimiento de masa mejor representados por el mapa de susceptibilidad a deslizamientos de tierra ya que este se produjo mediante un inventario de los deslizamientos causados por el hurac\u00e1n Mar\u00eda (Hughes y otros, 2019) y muchos de estos deslizamientos fueron poco profundos. El hurac\u00e1n Mar\u00eda tambi\u00e9n provoc\u00f3 deslizamientos de tierra en rocas y algunos alcanzaron profundidades de aproximadamente 30 metros (Bessette-Kirton y otros, 2019), por lo que el mapa tambi\u00e9n muestra la susceptibilidad a deslizamientos de tierra m\u00e1s profundos y en roca. Sin embargo, este tipo de movimiento de masa est\u00e1 relativamente poco representado por el mapa de susceptibilidad dado que pocos fueron provocados por el hurac\u00e1n Mar\u00eda y, por ende, no proveyeron medidas estad\u00edsticamente s\u00f3lidas con las cuales pueden pronosticarse. El tr\u00e1gico deslizamiento que ocurri\u00f3 en Mameyes en el municipio de Ponce en 1985, que acab\u00f3 con la vida de m\u00e1s de 129 personas (Silva-Tulla, 1986), es un ejemplo de un tipo de deslizamiento de tierra probablemente poco representado por el mapa de susceptibilidad. Adem\u00e1s, muchos deslizamientos en todo el mundo se desencadenan por actividad humana, tal como la nivelaci\u00f3n de laderas y redirecci\u00f3n del drenaje. Dichas actividades locales no pueden contemplarse en el mapa.",
+   "Com\u00fan a casi todos los esfuerzos de modelaje, la exactitud del mapa de susceptibilidad a deslizamientos de tierra se basa en cu\u00e1n exactos y completos son los datos de entrada empleados para su desarrollo. Entre otros, anticipamos que las siguientes omisiones y condiciones afecten la exactitud del mapa: (1) variabilidad de la resistencia del basamento rocoso y propiedades hidrol\u00f3gicas, orientaci\u00f3n y condici\u00f3n de discontinuidades dentro de terrenos geol\u00f3gicos; (2) variabilidad de la resistencia del suelo y propiedades hidrol\u00f3gicas dentro del tipo de suelo; (3) consideraci\u00f3n de solo algunas partes de la red de carreteras, como omisiones de la mayor\u00eda de las carreteras, caminos y senderos de granjas no documentadas; y (4) el uso de un modelo topogr\u00e1fico de 2015\u20132016, previo a los deslizamientos de tierra causados por el hurac\u00e1n Mar\u00eda y otros cambios topogr\u00e1ficos."
+  ]
+ },
+ "qa": {
+  "buildings_total": 1500471,
+  "buildings_by_class": {
+   "0": 9177,
+   "1": 1166508,
+   "2": 280064,
+   "3": 39670,
+   "4": 4801,
+   "5": 251
+  },
+  "buildings_pct_by_class": {
+   "0": 0.61,
+   "1": 77.74,
+   "2": 18.67,
+   "3": 2.64,
+   "4": 0.32,
+   "5": 0.02
+  },
+  "buildings_pct_high_or_above": 2.98,
+  "buildings_no_data": {
+   "total": 9177,
+   "outside_raster_extent": 8327,
+   "inside_extent_cell_without_data": 850,
+   "east_of_65.58W (Vieques, Culebra and the eastern cays, which the map does not cover)": 8300,
+   "west_of_67.28W (Mona, Desecheo)": 27
+  },
+  "assets_total": 3988,
+  "assets_by_class": {
+   "0": 52,
+   "1": 3533,
+   "2": 323,
+   "3": 56,
+   "4": 23,
+   "5": 1
+  },
+  "assets_no_data": {
+   "total": 52,
+   "outside_raster_extent": 33,
+   "inside_extent_cell_without_data": 19
+  },
+  "assets_by_type_and_class": {
+   "airport": {
+    "0": 6,
+    "1": 17,
+    "2": 1,
+    "3": 0,
+    "4": 0,
+    "5": 0
+   },
+   "assisted_housing": {
+    "0": 3,
+    "1": 209,
+    "2": 34,
+    "3": 10,
+    "4": 7,
+    "5": 1
+   },
+   "clinic": {
+    "0": 3,
+    "1": 417,
+    "2": 9,
+    "3": 1,
+    "4": 0,
+    "5": 0
+   },
+   "fire_station": {
+    "0": 2,
+    "1": 67,
+    "2": 1,
+    "3": 0,
+    "4": 0,
+    "5": 0
+   },
+   "hospital": {
+    "0": 1,
+    "1": 85,
+    "2": 1,
+    "3": 0,
+    "4": 0,
+    "5": 0
+   },
+   "police_station": {
+    "0": 2,
+    "1": 120,
+    "2": 5,
+    "3": 0,
+    "4": 0,
+    "5": 0
+   },
+   "power_plant": {
+    "0": 2,
+    "1": 62,
+    "2": 2,
+    "3": 0,
+    "4": 1,
+    "5": 0
+   },
+   "public_housing": {
+    "0": 6,
+    "1": 266,
+    "2": 23,
+    "3": 7,
+    "4": 2,
+    "5": 0
+   },
+   "school": {
+    "0": 9,
+    "1": 1539,
+    "2": 207,
+    "3": 35,
+    "4": 12,
+    "5": 0
+   },
+   "seaport": {
+    "0": 11,
+    "1": 3,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0
+   },
+   "shelter": {
+    "0": 3,
+    "1": 311,
+    "2": 21,
+    "3": 1,
+    "4": 0,
+    "5": 0
+   },
+   "substation": {
+    "0": 3,
+    "1": 386,
+    "2": 9,
+    "3": 2,
+    "4": 1,
+    "5": 0
+   },
+   "water_plant": {
+    "0": 1,
+    "1": 51,
+    "2": 10,
+    "3": 0,
+    "4": 0,
+    "5": 0
+   }
+  },
+  "raster_pct_of_mapped_cells_by_class": {
+   "1": 40.01,
+   "2": 29.99,
+   "3": 20.01,
+   "4": 9.0,
+   "5": 0.99
+  },
+  "raster_mapped_km2": 8700.3,
+  "spots": [
+   {
+    "place": "San Juan, Hato Rey (coastal plain)",
+    "lon": -66.058,
+    "lat": 18.4215,
+    "class_at_point": 1,
+    "name_at_point": "Low",
+    "within_1_km": {
+     "cells_with_data_pct": 100.0,
+     "pct_by_class": {
+      "1": 100.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0
+     },
+     "pct_high_or_above": 0.0
+    },
+    "expected": "low"
+   },
+   {
+    "place": "Carolina, SJU airport runway (coastal plain)",
+    "lon": -66.0018,
+    "lat": 18.4394,
+    "class_at_point": 1,
+    "name_at_point": "Low",
+    "within_1_km": {
+     "cells_with_data_pct": 92.3,
+     "pct_by_class": {
+      "1": 100.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0
+     },
+     "pct_high_or_above": 0.0
+    },
+    "expected": "low"
+   },
+   {
+    "place": "Ponce, Plaza Las Delicias (southern plain)",
+    "lon": -66.6141,
+    "lat": 18.0111,
+    "class_at_point": 1,
+    "name_at_point": "Low",
+    "within_1_km": {
+     "cells_with_data_pct": 100.0,
+     "pct_by_class": {
+      "1": 98.9,
+      "2": 1.1,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0
+     },
+     "pct_high_or_above": 0.0
+    },
+    "expected": "low"
+   },
+   {
+    "place": "Lajas valley",
+    "lon": -67.06,
+    "lat": 18.03,
+    "class_at_point": 1,
+    "name_at_point": "Low",
+    "within_1_km": {
+     "cells_with_data_pct": 100.0,
+     "pct_by_class": {
+      "1": 99.8,
+      "2": 0.2,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0
+     },
+     "pct_high_or_above": 0.0
+    },
+    "expected": "low"
+   },
+   {
+    "place": "Utuado, pueblo (valley floor in the mountains)",
+    "lon": -66.7005,
+    "lat": 18.2655,
+    "class_at_point": 1,
+    "name_at_point": "Low",
+    "within_1_km": {
+     "cells_with_data_pct": 100.0,
+     "pct_by_class": {
+      "1": 32.3,
+      "2": 23.9,
+      "3": 21.7,
+      "4": 19.8,
+      "5": 2.3
+     },
+     "pct_high_or_above": 43.8
+    },
+    "expected": "low at the point, high around"
+   },
+   {
+    "place": "Naranjito, pueblo",
+    "lon": -66.2449,
+    "lat": 18.3008,
+    "class_at_point": 1,
+    "name_at_point": "Low",
+    "within_1_km": {
+     "cells_with_data_pct": 100.0,
+     "pct_by_class": {
+      "1": 13.1,
+      "2": 29.4,
+      "3": 35.9,
+      "4": 21.4,
+      "5": 0.1
+     },
+     "pct_high_or_above": 57.4
+    },
+    "expected": "high around"
+   },
+   {
+    "place": "Jayuya, pueblo",
+    "lon": -66.5916,
+    "lat": 18.2186,
+    "class_at_point": 1,
+    "name_at_point": "Low",
+    "within_1_km": {
+     "cells_with_data_pct": 100.0,
+     "pct_by_class": {
+      "1": 34.2,
+      "2": 26.1,
+      "3": 23.1,
+      "4": 14.1,
+      "5": 2.4
+     },
+     "pct_high_or_above": 39.7
+    },
+    "expected": "high around"
+   },
+   {
+    "place": "Maricao, pueblo",
+    "lon": -66.9799,
+    "lat": 18.1808,
+    "class_at_point": 1,
+    "name_at_point": "Low",
+    "within_1_km": {
+     "cells_with_data_pct": 100.0,
+     "pct_by_class": {
+      "1": 12.5,
+      "2": 26.8,
+      "3": 29.8,
+      "4": 23.7,
+      "5": 7.2
+     },
+     "pct_high_or_above": 60.7
+    },
+    "expected": "high around"
+   },
+   {
+    "place": "Cerro de Punta (highest point)",
+    "lon": -66.5919,
+    "lat": 18.1722,
+    "class_at_point": 1,
+    "name_at_point": "Low",
+    "within_1_km": {
+     "cells_with_data_pct": 100.0,
+     "pct_by_class": {
+      "1": 0.8,
+      "2": 15.1,
+      "3": 49.1,
+      "4": 34.9,
+      "5": 0.0
+     },
+     "pct_high_or_above": 84.0
+    },
+    "expected": "high"
+   },
+   {
+    "place": "El Yunque peak",
+    "lon": -65.7925,
+    "lat": 18.3106,
+    "class_at_point": 4,
+    "name_at_point": "Very High",
+    "within_1_km": {
+     "cells_with_data_pct": 100.0,
+     "pct_by_class": {
+      "1": 3.1,
+      "2": 49.9,
+      "3": 34.0,
+      "4": 13.0,
+      "5": 0.0
+     },
+     "pct_high_or_above": 47.0
+    },
+    "expected": "high"
+   },
+   {
+    "place": "Vieques, Isabel Segunda (not on the map)",
+    "lon": -65.443,
+    "lat": 18.149,
+    "class_at_point": 0,
+    "name_at_point": "no data",
+    "within_1_km": null,
+    "expected": "no data"
+   },
+   {
+    "place": "Culebra, Dewey (not on the map)",
+    "lon": -65.301,
+    "lat": 18.303,
+    "class_at_point": 0,
+    "name_at_point": "no data",
+    "within_1_km": null,
+    "expected": "no data"
+   }
+  ],
+  "tiles": {
+   "count": 683,
+   "bytes": 5844950,
+   "zoom": [
+    8,
+    13
+   ],
+   "per_zoom": {
+    "8": {
+     "tiles": 4,
+     "bytes": 6577,
+     "pct_of_mapped_pixels_by_class": {
+      "1": 39.52,
+      "2": 32.94,
+      "3": 19.73,
+      "4": 7.59,
+      "5": 0.23
+     }
+    },
+    "9": {
+     "tiles": 6,
+     "bytes": 21231,
+     "pct_of_mapped_pixels_by_class": {
+      "1": 39.24,
+      "2": 32.78,
+      "3": 19.92,
+      "4": 7.78,
+      "5": 0.29
+     }
+    },
+    "10": {
+     "tiles": 17,
+     "bytes": 77377,
+     "pct_of_mapped_pixels_by_class": {
+      "1": 39.04,
+      "2": 32.37,
+      "3": 20.03,
+      "4": 8.19,
+      "5": 0.38
+     }
+    },
+    "11": {
+     "tiles": 45,
+     "bytes": 291211,
+     "pct_of_mapped_pixels_by_class": {
+      "1": 39.03,
+      "2": 31.7,
+      "3": 20.12,
+      "4": 8.68,
+      "5": 0.47
+     }
+    },
+    "12": {
+     "tiles": 138,
+     "bytes": 1123743,
+     "pct_of_mapped_pixels_by_class": {
+      "1": 39.11,
+      "2": 31.05,
+      "3": 20.1,
+      "4": 9.13,
+      "5": 0.6
+     }
+    },
+    "13": {
+     "tiles": 473,
+     "bytes": 4324811,
+     "pct_of_mapped_pixels_by_class": {
+      "1": 38.89,
+      "2": 30.44,
+      "3": 20.29,
+      "4": 9.59,
+      "5": 0.79
+     }
+    }
+   },
+   "dropped": null,
+   "format": "PNG, 4-bit indexed colour with a transparency table",
+   "alpha_by_class": {
+    "1": 0.4,
+    "2": 1.0,
+    "3": 1.0,
+    "4": 1.0,
+    "5": 1.0
+   }
+  },
+  "seconds": 66
+ },
+ "generated": "2026-10-11T02:38:48Z",
+ "commit": "140980c",
+ "run": "38105807824",
+ "stage": "slide",
+ "buildings": {
+  "file": "buildings.bin",
+  "dtype": "u1",
+  "shape": [
+   1500471
+  ],
+  "order": "tiles/bld/index.json order, then tile order",
+  "bld_generated": "2026-10-10T05:07:03.000Z"
+ },
+ "assets": 3988
+}
