@@ -1,0 +1,56 @@
+== https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-25/GoogleMapsCompatible_Level8/6/28/20.png
+HTTP/2 502 
+content-type: text/html
+content-length: 122
+x-content-type-options: nosniff
+<html>..<head><title>502 Bad Gateway</title></head>..<body>..<center><h1>502 Bad Gateway</h1></center>..</body>..</html>..
+== https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-15/GoogleMapsCompatible_Level8/6/28/20.png
+HTTP/2 502 
+content-type: text/html
+content-length: 122
+x-content-type-options: nosniff
+<html>..<head><title>502 Bad Gateway</title></head>..<body>..<center><h1>502 Bad Gateway</h1></center>..</body>..</html>..
+== https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-25/GoogleMapsCompatible_Level7/6/28/20.png
+HTTP/2 400 
+content-type: text/xml
+content-length: 431
+access-control-allow-origin: *
+x-content-type-options: nosniff
+<?xml version="1.0" encoding="UTF-8"?>.<ExceptionReport xmlns="http://www.opengis.net/ows/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.opengis.net/ows/
+== https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2022-09-20/GoogleMapsCompatible_Level8/6/28/20.png
+HTTP/2 200 
+content-type: image/png
+content-length: 60064
+access-control-expose-headers: layer-identifier-request, layer-identifier-actual, layer-time-request, layer-time-actual
+access-control-allow-origin: *
+x-content-type-options: nosniff
+.PNG........IHDR.............k.XT....PLTE................................................................................................   !!!"""###$$$%%%&&&'''((()))***+++,,,---...///000111222333444
+== https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-25/GoogleMapsCompatible_Level8/7/57/40.png
+HTTP/2 502 
+content-type: text/html
+content-length: 122
+x-content-type-options: nosniff
+<html>..<head><title>502 Bad Gateway</title></head>..<body>..<center><h1>502 Bad Gateway</h1></center>..</body>..</html>..
+== https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_At_Sensor_Radiance/default/2022-09-20/GoogleMapsCompatible_Level8/6/28/20.png
+HTTP/2 200 
+content-type: image/png
+content-length: 25526
+access-control-expose-headers: layer-identifier-request, layer-identifier-actual, layer-time-request, layer-time-actual
+access-control-allow-origin: *
+x-content-type-options: nosniff
+.PNG........IHDR.............k.XT....PLTE..................!!!%%%)))---000444777:::===@@@CCCEEEHHHJJJMMMOOOQQQSSSUUUWWWYYY[[[]]]___```bbbdddeeegggiiijjjlllmmmooopppqqqssstttuuuvvvxxxyyyzzz{{{}}}~~~...
+== https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_At_Sensor_Radiance/default/2026-10-11/GoogleMapsCompatible_Level8/6/28/20.png
+HTTP/2 404 
+content-type: text/html; charset=iso-8859-1
+content-length: 196
+access-control-allow-origin: *
+x-content-type-options: nosniff
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">.<html><head>.<title>404 Not Found</title>.</head><body>.<h1>Not Found</h1>.<p>The requested URL was not found on this server.</p>.</body></html>.
+== https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_Black_Marble/default/2016-01-01/GoogleMapsCompatible_Level8/6/28/20.png
+HTTP/2 200 
+content-type: image/png
+content-length: 35466
+access-control-expose-headers: layer-identifier-request, layer-identifier-actual, layer-time-request, layer-time-actual
+access-control-allow-origin: *
+x-content-type-options: nosniff
+.PNG........IHDR...............?1.. .IDATx...y.d.u.v.......6==.F.p8.U.F.8.(jM...L[.,CA....#q,8...a.X...........h....Q...P3$g..uOO.{...o....QU.~.....h..A.{U.~.Y..w....=DB.T..!..'..D..[.B......o.H?.?0..
