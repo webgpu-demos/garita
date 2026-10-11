@@ -153,18 +153,24 @@ log('buildings', JSON.stringify({ ...stats, by_building_tag: undefined }));
 //     Any geometric overlap, however small, drops the candidate: in doubt, OpenStreetMap wins. Outer rings only,
 //     so a detection inside the courtyard of an OSM building is dropped too. The same test runs against the
 //     additions already accepted, so two detections of one roof cannot both get in.
-//  2. PLAUSIBILITY. Dropped if tiny (under ADD.min_area_m2), if the source gives a confidence below
-//     ADD.min_confidence (Google Open Buildings publishes 0.65 to 1; its lowest band, 0.65 to 0.70, is left out;
-//     Microsoft ML Buildings mostly carries none and is kept), or if larger than ADD.large_area_m2 without a
-//     confidence of at least ADD.large_min_confidence.
+//     Candidates arrive in order of preference (Microsoft first, then Google by falling confidence).
+//  2. PLAUSIBILITY. Dropped if tiny (under ADD.min_area_m2 = 25 m2: smaller than 95 % of the buildings mapped
+//     in OpenStreetMap here; what the detectors find below that is mostly sheds, carports, tanks and vehicles
+//     beside houses that are already mapped), if the source gives a confidence below ADD.min_confidence (Google
+//     Open Buildings publishes 0.65 to 1; its lowest band, 0.65 to 0.70, is left out; Microsoft ML Buildings
+//     mostly carries none and is kept), or if larger than ADD.large_area_m2 without a confidence of at least
+//     ADD.large_min_confidence. qa.json added.sensitivity says what other thresholds would have let in.
 //  3. LAND. Dropped if its centroid is not inside a land-clipped municipio (in the sea, or outside Puerto Rico).
 // Kind follows the building=yes rule (house under 400 m2, otherwise other) with bit 7 set in the tile; height only
 // if the source carries one (none does in Puerto Rico as of release 2026-09-23.1), otherwise 0 = unknown.
-const ADD = { min_area_m2: Number(process.env.ADD_MIN_AREA || 15), min_confidence: Number(process.env.ADD_MIN_CONF || 0.7), large_area_m2: Number(process.env.ADD_LARGE_AREA || 5000), large_min_confidence: 0.8 };
+const ADD = { min_area_m2: Number(process.env.ADD_MIN_AREA || 25), min_confidence: Number(process.env.ADD_MIN_CONF || 0.7), large_area_m2: Number(process.env.ADD_LARGE_AREA || 5000), large_min_confidence: 0.8 };
 const addStats = { candidates: 0, candidates_by_dataset: {}, degenerate: 0,
   dropped_overlap: { centroid_inside_osm: 0, osm_centroid_inside: 0, outlines_intersect_osm: 0, overlaps_accepted_addition: 0 },
   dropped_implausible: { tiny: 0, low_confidence: 0, large_without_confidence: 0 }, dropped_not_on_land: 0,
-  added: 0, added_by_dataset: {}, added_with_height: 0, added_confidence_hist: {}, dropped_low_confidence_by_dataset: {}, land_test: false };
+  added: 0, added_by_dataset: {}, added_with_height: 0, added_confidence_hist: {}, dropped_low_confidence_by_dataset: {}, land_test: false,
+  not_overlapping_area_hist: {}, sensitivity: {} };
+const AREA_BINS = [15, 20, 25, 30, 40, 60, 100, 200, 400, 1000, 5000];
+const areaBin = (a) => { for (const b of AREA_BINS) if (a < b) return '<' + b; return '>=5000'; };
 const ovtDir = path.join(WORK, 'overture');
 const ovtMeta = fs.existsSync(path.join(ovtDir, 'meta.json')) ? JSON.parse(fs.readFileSync(path.join(ovtDir, 'meta.json'), 'utf8')) : null;
 const DS = []; // dataset names, index kept per added building
@@ -236,6 +242,10 @@ if (ovtMeta && fs.existsSync(path.join(ovtDir, 'added.jsonl')) && process.env.NO
     const why = overlap(ring, n, cx, cy, x0, y0, x1, y1);
     if (why) { addStats.dropped_overlap[why]++; continue; }
     const conf = typeof f.conf === 'number' ? f.conf : null;
+    { // what other thresholds would let in (candidates clear of OSM and of the additions accepted in this run)
+      const h = addStats.not_overlapping_area_hist[f.ds] || (addStats.not_overlapping_area_hist[f.ds] = {}); const ab = areaBin(areaM2); h[ab] = (h[ab] || 0) + 1;
+      for (const a of [15, 20, 25, 30, 40]) for (const c of [0.65, 0.7, 0.75, 0.8]) if (areaM2 >= a && (conf === null || conf >= c)) { const k = `area>=${a},conf>=${c}`; addStats.sensitivity[k] = (addStats.sensitivity[k] || 0) + 1; }
+    }
     if (areaM2 < ADD.min_area_m2) { addStats.dropped_implausible.tiny++; continue; }
     if (conf !== null && conf < ADD.min_confidence) { addStats.dropped_implausible.low_confidence++; addStats.dropped_low_confidence_by_dataset[f.ds] = (addStats.dropped_low_confidence_by_dataset[f.ds] || 0) + 1; continue; }
     if (areaM2 > ADD.large_area_m2 && !(conf !== null && conf >= ADD.large_min_confidence)) { addStats.dropped_implausible.large_without_confidence++; continue; }
@@ -524,6 +534,8 @@ writeOut('data/derived/qa.json', JSON.stringify({
     dropped_overlap: addStats.dropped_overlap, dropped_overlap_total: Object.values(addStats.dropped_overlap).reduce((a, b) => a + b, 0),
     dropped_implausible: addStats.dropped_implausible, dropped_implausible_total: Object.values(addStats.dropped_implausible).reduce((a, b) => a + b, 0), dropped_low_confidence_by_dataset: addStats.dropped_low_confidence_by_dataset,
     dropped_not_on_land: addStats.dropped_not_on_land, land_test_applied: addStats.land_test,
+    not_overlapping_area_hist_m2: addStats.not_overlapping_area_hist,
+    sensitivity: { note: 'Approximate count of additions other thresholds would give: candidates clear of OSM and of the additions accepted in this run, by minimum area (m2) and minimum confidence (candidates without a confidence always pass it). Before the land test.', counts: addStats.sensitivity },
     added: NB_ADDED, added_by_dataset: addStats.added_by_dataset, added_with_height: addStats.added_with_height, added_confidence_hist: addStats.added_confidence_hist,
     added_by_kind: (() => { const k = { 0: 0, 6: 0 }; for (let i = NB_OSM; i < NB; i++) k[B.kind[i]]++; return k; })(), added_outside_municipios: (() => { let n = 0; for (let i = NB_OSM; i < NB; i++) if (!B.muni[i]) n++; return n; })(),
     top10_added_share: addRank.slice(0, 10), bottom10_added_share: addRank.slice(-10).reverse(), by_municipio: addRank,

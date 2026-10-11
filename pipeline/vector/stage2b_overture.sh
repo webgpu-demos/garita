@@ -49,10 +49,13 @@ meta = {
   'multi_source_features': q(f"select count(*) from '{pq}' where len(sources) > 1")[0][0],
   'osm_origin': q(f"select count(*) from '{pq}' where {is_osm}")[0][0],
 }
-# One line per candidate: every feature without an OpenStreetMap source.
+# One line per candidate: every feature without an OpenStreetMap source. The order is the order of preference
+# where two detections cover the same roof (build.mjs keeps the first): Microsoft ML Buildings first (the newer
+# set, version 2026-08, with regularised outlines), then Google Open Buildings (2023-05) by falling confidence.
 c.execute(f"""copy (select id, sources[1].dataset as ds, sources[1].confidence as conf, height as h, num_floors as floors,
                            ST_AsGeoJSON(geometry)::JSON as g
-                    from '{pq}' where not {is_osm} order by bbox.xmin, bbox.ymin)
+                    from '{pq}' where not {is_osm}
+                    order by (sources[1].dataset = 'Microsoft ML Buildings') desc, sources[1].confidence desc nulls first, bbox.xmin, bbox.ymin, id)
               to '{ovt}/added.jsonl' (format json)""")
 meta['candidates'] = q(f"select count(*) from '{pq}' where not {is_osm}")[0][0]
 json.dump(meta, open(f'{ovt}/meta.json', 'w'), indent=1)

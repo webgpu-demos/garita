@@ -93,6 +93,7 @@ def check(sel):
     if other.any():
         with np.errstate(all='ignore'):
             ia6[other] = shapely.area(shapely.intersection(shapely.make_valid(g[a6[other]]), shapely.make_valid(polys[add_i[b6[other]]]))) * KX * KY
+    worst = [{'lon': round(float(cx[add_i[np.asarray(sel)[a6[k]]]]), 6), 'lat': round(float(cy[add_i[np.asarray(sel)[a6[k]]]]), 6), 'shared_m2': round(float(ia6[k]), 2)} for k in np.argsort(-ia6)[:6] if ia6[k] > 0.5]
     gr = grounds[add_i[sel]]
     fail = set(over.tolist()) | set(np.unique(a2).tolist()) | set(np.unique(a4[cin]).tolist()) | set(np.unique(a6[ia6 > 0.5]).tolist())
     if sea is not None: fail |= set(np.flatnonzero(~on).tolist())
@@ -101,6 +102,7 @@ def check(sel):
         'intersects_osm_over_0p5_m2': int(len(over)), 'touches_osm_at_all': int(len(touch)), 'largest_shared_area_m2': round(float(ia.max()), 2) if len(ia) else 0.0,
         'centroid_inside_osm': int(len(np.unique(a2))), 'contains_osm_centroid': int(len(np.unique(a4[cin]))),
         'centroid_not_on_land': sea, 'intersects_other_added_over_0p5_m2': int(len(np.unique(a6[ia6 > 0.5]))),
+        'largest_area_shared_with_other_added_m2': round(float(ia6.max()), 2) if len(ia6) else 0.0, 'worst_added_pairs': worst,
         'failures_any': int(len(fail)),
         'hint_ground_at_or_below_0m': int(((gr <= 0) & (gr != -32768)).sum()), 'hint_ground_unknown': int((gr == -32768).sum()),
     }
@@ -135,8 +137,10 @@ for row, r in enumerate([top, sj]):
     for col in (0, 1):
         ax = axes[row][col]
         bx = (x0, y0, x1, y1) if col == 0 else win
-        so = mo[(cx[mo] >= bx[0]) & (cx[mo] <= bx[2]) & (cy[mo] >= bx[1]) & (cy[mo] <= bx[3])] if col else mo
-        sa = ma[(cx[ma] >= bx[0]) & (cx[ma] <= bx[2]) & (cy[ma] >= bx[1]) & (cy[ma] <= bx[3])] if col else ma
+        if col:  # the close-up shows every footprint in the window, whichever municipio it is in
+            inw = np.flatnonzero((cx >= bx[0]) & (cx <= bx[2]) & (cy >= bx[1]) & (cy <= bx[3]))
+            so, sa = inw[~added[inw]], inw[added[inw]]
+        else: so, sa = mo, ma
         lw = 0.0 if col == 0 else 0.4
         ax.add_collection(PolyCollection(verts_of(so), facecolors=OSM_C, edgecolors=OSM_C, linewidths=0.25 if col == 0 else lw))
         ax.add_collection(PolyCollection(verts_of(sa), facecolors=ADD_C, edgecolors=ADD_C, linewidths=0.25 if col == 0 else lw))
@@ -151,9 +155,9 @@ for row, r in enumerate([top, sj]):
             ax.set_title(f"{r['name']}, close-up of the blue box (the 1.6 km window with most additions): {len(so):,} OSM, {len(sa):,} added", fontsize=10)
     picture.append({'geoid': r['geoid'], 'name': r['name'], 'buildings_osm': r['buildings_osm'], 'buildings_added': r['buildings_added'], 'added_share': r['added_share'], 'closeup_centre': [round(wx, 5), round(wy, 5)]})
 src = idx['added_source']
-fig.suptitle(f"Garita building footprints: OpenStreetMap (grey) and footprints added from Overture Maps {src['release']} (orange: "
+fig.suptitle(f"Garita building footprints: OpenStreetMap (grey) and footprints added from Overture Maps {src['release']}\n(orange: "
              + ', '.join(d['dataset'] for d in src['datasets']) + f"; machine detections, not in OSM). Island: {idx['osm']:,} OSM + {idx['added']:,} added.", fontsize=11)
-fig.tight_layout(rect=(0, 0, 1, 0.975))
+fig.tight_layout(rect=(0, 0, 1, 0.965))
 os.makedirs(f'{OUT}/data/derived', exist_ok=True)
 fig.savefig(f'{OUT}/data/derived/bld_added_qa.jpg', pil_kwargs={'quality': 82})
 res['picture'] = {'file': 'data/derived/bld_added_qa.jpg', 'panels': picture}
