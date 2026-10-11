@@ -1,0 +1,103 @@
+Results and Discussion    49
+Map Performance
+Convention and experience indicate that landslide susceptibility maps are best understood when susceptibility is classified 
+into several groups. Rankings of Low, Moderate, High, Very High, and Extremely High landslide susceptibility were assigned 
+after binning the SIAm raster data into 100 equal-area quantiles. The categorization scheme is shown in table 5. The lower 
+40 percent of pixel values islandwide are considered representative of areas of low susceptibility. The 40th–70th percentile range 
+corresponds to zones of moderate susceptibility. The 70th–90th percentile range is classified as having high susceptibility. The 
+highest 10–1 percent of pixel values are classified as having very high vulnerability and the highest 1 percent are classified as 
+having extremely high potential for failure. The ranking scheme was scrutinized in detail throughout the island at known sites 
+and is consistent with the authors’ field experience. The final map is provided as plate 1.
+The final SIA and SIAm model values were calculated using only 75 percent of the landslide inventory. The remaining 
+25 percent of the sites were used to independently test the validity of the model. The data were used to generate ROC plots to 
+calculate area under curve (AUC) values, which are commonly used to evaluate slope hazard modeling (for example, Lepore 
+and others, 2012; Xu and others, 2012; Li and others, 2016; Regmi and Poudel, 2016). The ROC plots were generated at incre­
+ments of 5 for the full range (−50 to 20) of SIA/SIAm values. The true positive rate for a given boundary of SIA/SIAm values 
+was the number of landslides with SIA/SIAm values greater than any given increment (true positives) divided by the total number 
+of landslides. The false positive rate for a given increment of SIA/SIAm values was the total number of pixels in the SIA/SIAm 
+raster from which the number of landslides (true positives) and the number of pixels with values lower than the boundary were 
+subtracted, and this difference was divided by the total number of pixels in the SIA/SIAm raster. AUC values can vary from 0.5 to 
+1.0 and quantify the false versus true predictions from a model. A value of 1.0 indicates perfect model performance and a value 
+of 0.5 corresponds to a model that is equivalent to random prediction (Fawcett, 2006). The AUC value for SIA and SIAm were 
+compared to the AUC for the slope factor alone (fig. 36). Analysis of slope alone yields an AUC value of 0.83. The AUC for 
+SIA and SIAm are higher at 0.88 and 0.87, respectively. The AUC of the composite SI of all nonslope and non-SMAP factors 
+(figs. 36 and 37) is 0.94. This verification indicates that the model is both statistically viable and provides an improved prediction 
+versus a slope-only model. Slope represents almost 50 percent of the final model. The nonslope and non-SMAP factors also 
+represent almost 50 percent of the final susceptibility model and considered together yield the highest AUC value of the analysis. 
+A composite map of these seven factors (curvature, proximity to road surface, geologic terrane, mean annual precipitation, 
+proximity to fluvial channel, land cover, and soil classification) shows the highest correlating zones to be in the western interior 
+region (fig. 37). Even though it has a much higher AUC value (0.94), the nonslope composite SI model was not adopted as the 
+preferred model because the importance of slope cannot be overlooked in any mass movement model (for example, Carson and 
+Petley, 1970). The lower performance of the slope-only dataset indicated by its lowest AUC value is likely due to the abundance 
+of very high slopes on the flanks of mogotes, sinkholes, zanjones, and gorges in the karst terrain that do not usually suffer the 
+same weathering and mass wasting processes as the remainder of the island, and because of factors described previously that are 
+captured by inclusion of nonslope and non-SMAP factors. The decrease in AUC from SIA to SIAm shows that the incorporation 
+of SMAP data in the model slightly decreases its performance against the Hurricane María event inventory, as expected. Incor­
+poration of the SMAP factor in SIAm was intended to buffer the influence of site-specific conditions related to the single event 
+used for developing the predictive map. SMAP data incorporation also permits evaluation of variable soil moisture from future 
+events and its effect on landsliding, as described in the “Use and Limitations of the Landslide Susceptibility Map” section.
+Table 5.  Results from comparison of the susceptibility map to locations of landslides in the Hurricane María inventory.
+[SI, Susceptibility Index; km2, square kilometer; %, percent; #, number; —, not applicable]
+Susceptibility 
+ranking
+Approximate SI 
+range
+Percentile
+Area (km2)
+Area (%)
+Landslides in 
+category (#)1
+Landslides in 
+category (%)1
+Density 
+(landslides/km2)1
+Low
+−4.84–−1.6
+0–40
+3481.2
+40
+843
+1.2
+0.2
+Moderate
+−1.6– −0.1
+40–70
+2609.3
+30
+7,108
+10.0
+2.7
+High
+.0.1–0.9
+70–90
+1740.5
+20
+20,988
+29.4
+12.1
+Very High
+0.90–1.40
+90–99
+782.7
+9
+31,850
+44.6
+40.7
+Extremely 
+High
+.1.40–1.97
+99–100
+86.5
+1
+10,642
+14.9
+123.0
+Total
+—
+—
+8,700.2
+100
+71,431
+100.1
+—
+1Values calculated using the Hurricane María event inventory (Hughes and others, 2019).

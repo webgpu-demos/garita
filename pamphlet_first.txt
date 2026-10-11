@@ -1,0 +1,565 @@
+
+
+=== page 1 ===
+U.S. Department of the Interior
+U.S. Geological Survey
+Open-File Report 2020–1022
+Landslide Hazards Program
+Map Depicting Susceptibility to Landslides Triggered by 
+Intense Rainfall, Puerto Rico
+
+
+=== page 2 ===
+Cover.  View from the landslide susceptibility map (plate 1) along the border between 
+Ciales and Morovis municipalities, Puerto Rico. 
+
+
+=== page 3 ===
+Map Depicting Susceptibility to Landslides 
+Triggered by Intense Rainfall, Puerto Rico
+By K. Stephen Hughes and William H. Schulz 
+Landslide Hazards Program
+Open-File Report 2020–1022
+U.S. Department of the Interior
+U.S. Geological Survey
+
+
+=== page 4 ===
+U.S. Department of the Interior
+DAVID BERNHARDT, Secretary
+U.S. Geological Survey
+James F. Reilly II, Director
+U.S. Geological Survey, Reston, Virginia: 2020
+For more information on the USGS—the Federal source for science about the Earth, its natural and living 
+resources, natural hazards, and the environment—visit https://www.usgs.gov or call 1–888–ASK–USGS.
+For an overview of USGS information products, including maps, imagery, and publications, visit https://store.usgs.gov.
+Any use of trade, firm, or product names is for descriptive purposes only and does not imply endorsement by the 
+U.S. Government.
+Although this information product, for the most part, is in the public domain, it also may contain copyrighted materials 
+as noted in the text. Permission to reproduce copyrighted items must be secured from the copyright owner.
+Suggested citation:
+Hughes, K.S., and Schulz, W.H., 2020, Map depicting susceptibility to landslides triggered by intense rainfall, Puerto Rico: 
+U.S. Geological Survey Open-File Report 2020–1022, 91 p., 1 plate, scale 1:150,000, https://doi.org/10.3133/ofr20201022.
+Associated data for this publication: 
+Hughes, K.S., and Schulz, W.H., 2020, Results from frequency-ratio analyses of soil classification and land use 
+related to landslide locations in Puerto Rico following Hurricane María: U.S. Geological Survey data release, 
+https://doi.org/10.5066/P9VK2FAL.
+ISSN 2331-1258 (online)
+
+
+=== page 5 ===
+iii
+Acknowledgments
+The authors thank many colleagues and partners for their direct and indirect support of this 
+project. K. Stephen Hughes (KSH) acknowledges the dedication of a terrific group of students in 
+the Department of Geology at the University of Puerto Rico at Mayagüez who worked diligently 
+to manually identify tens of thousands of landslide headscarps in aerial photographs taken 
+across Puerto Rico after Hurricane María. These students include Sahira Cancel, Xavier García, 
+Selena González, Edwin Irizarry, Raquel Lugo, Priscilla Ortiz, César Rodríguez, Amos Santiago, 
+Yanira Santiago, Stephanie Soto, and Karla Torres. Additional support was provided by U.S. 
+Department of Agriculture Natural Resource Conservation Service personnel Luis Aponte, 
+Brendaly Rodríguez, and Misha Vargas. Special thanks to team members Desireé Bayouth and 
+Gabriel Martínez who performed the tedious final verification of all landslide sites across the 
+island. KSH is grateful to Chiara Lepore for sharing her previous susceptibility analysis data. 
+KSH also thanks colleague James Joyce for helpful counsel in the subject matter in addition to 
+the University of Puerto Rico at Mayagüez College of Arts and Sciences for providing release 
+time to devote to the project.
+KSH and William H. Schulz thank Arleen Reyes Rodriguez and Félix Rivera Santiago of the 
+Puerto Rico Planning Board for their suggestions and assistance while developing the suscepti­
+bility map. Both authors also wish to thank Jim Hibbard and Félix Rivera Santiago for thoughtful 
+and constructive review of the report. Desireé Bayouth is thanked for translating the report into 
+Spanish. Both authors also thank Rex Baum, Jeffrey Coe, Eric Jones, and Robert Schmitt of the 
+U.S. Geological Survey for their suggestions and assistance while developing the susceptibility 
+map. Rex Baum and Jeffrey Coe are also thanked for their thoughtful and constructive review of 
+the report.
+
+
+=== page 6 ===
+iv
+Contents
+Acknowledgments.........................................................................................................................................iii
+Executive Summary........................................................................................................................................1
+Abstract............................................................................................................................................................1
+Introduction.....................................................................................................................................................2
+Background............................................................................................................................................2
+Mass Wasting in Puerto Rico.....................................................................................................2
+General Geology of Puerto Rico..............................................................................................11
+Natural Landslide-Provoking Phenomena in Puerto Rico...................................................11
+Anthropogenic Topographic Perturbations...........................................................................12
+Previous Landslide Susceptibility Studies for Puerto Rico..........................................................12
+Datasets and Methodology.........................................................................................................................15
+Results and Discussion...............................................................................................................................38
+Factor Performance............................................................................................................................38
+Map Performance...............................................................................................................................49
+Use and Limitations of the Landslide Susceptibility Map.............................................................64
+Conclusion.....................................................................................................................................................64
+References Cited..........................................................................................................................................65
+Appendix 1. Key for Municipality Abbreviations.....................................................................................73
+Appendix 2. Results from Analyses of Land Cover.................................................................................74
+Appendix 3. Results from Analyses of Soil Class....................................................................................76
+Figures
+	
+1.  Map showing the topography of the U.S. territory of Puerto Rico.......................................3
+	
+2.  Photograph of the headscarp and body of the large block landslide in 1985 at 
+Mameyes, Ponce, Puerto Rico....................................................................................................4
+	
+3.  Photograph of a large block landslide along Highway PR–9 in Ponce, Puerto Rico.........5
+	
+4.  Photograph of a large block failure along uncompleted section of PR–385 in 
+Peñuelas, Puerto Rico..................................................................................................................6
+	
+ 5.  Photograph of debris flows triggered by Hurricane Georges along the Rio Grande 
+de Arecibo in Utuado, Puerto Rico.................................................................................................6
+	
+6.  Photograph of a landslide along Highway PR–4131 in the municipality of Lares, 
+Puerto Rico.....................................................................................................................................7
+	
+7.  Photograph of abundant shallow mass movements and debris flows on the eastern 
+side of the upper reach of Lago Caonillas, Puerto Rico.........................................................8
+	
+8.  Photograph of a landslide that transitioned to debris flow along Highway 
+PR–143 in Barranquitas, Puerto Rico.........................................................................................9
+	
+9.  Photograph of a shallow failure in Río Blanco watershed of Naguabo, 
+Puerto Rico...................................................................................................................................10
+	
+10.  Hand-drawn landslide susceptibility map modified from Monroe (1979)..........................13
+	
+11.  Landslide susceptibility map modified from Lepore and others (2012)..............................14
+
+
+=== page 7 ===
+v
+	
+12.  Map of the Hurricane María event slope failure inventory..................................................16
+	
+13.  Map showing the density of landslide sites from the Hurricane María 
+event inventory............................................................................................................................17
+	
+14.  Flowchart depicting the process followed to develop the SIAm raster..............................18
+	
+15.  Slope map for the island of Puerto Rico..................................................................................21
+	
+16.  Map showing curvature values calculated from lidar-derived digital elevation 
+model for the island of Puerto Rico..........................................................................................22
+	
+17.  Map showing the missing zones for the 2015–2016 airborne lidar survey of 
+Puerto Rico...................................................................................................................................27
+	
+18.  Map showing paved roads on the island of Puerto Rico......................................................28
+	
+19.  Hillshade raster from a lidar-derived digital elevation model and aerial 
+photograph of a dense improvised farm road network that is not digitized as 
+part of the U.S. Census Bureau TIGER roads shapefile........................................................29
+	
+20.  Map showing digitized 1:20,000 geologic map units of Puerto Rico...................................30
+	
+21.  Map showing the mean annual precipitation in Puerto Rico..............................................31
+	
+ 22.  Map of fluvial channels for Puerto Rico from the National Hydrography 
+Dataset geodatabase file...........................................................................................................33
+	
+23.  Map of the Puerto Rico Gap Analysis Program land cover dataset...................................34
+	
+24.  U.S. Department of Agriculture Natural Resources Conservation Service 
+soil classification map for the island of Puerto Rico.............................................................35
+	
+25.  Map showing raw Soil Moisture Active Passive root zone soil moisture data 
+for 9:30 a.m. Atlantic Standard Time on 21 September 2017................................................36
+	
+ 26.  Map showing interpolated Soil Moisture Active Passive root zone soil moisture 
+data at 9:30 a.m. Atlantic Standard Time on 21 September 2017.........................................37
+	
+ 27.  Map and a graphical representation of the results of the slope Susceptibility 
+Index analysis..............................................................................................................................40
+	
+28.  Map and a graphical representation of the results of the curvature Susceptibility 
+Index analysis..............................................................................................................................41
+	
+29.  Map and a graphical representation of the results from the proximity to road factor 
+Susceptibility Index analysis.....................................................................................................42
+	
+30.  Map showing Susceptibility Index results for geological terranes....................................43
+	
+31.  Map and a graphical representation of the results from Susceptibility Index 
+analysis of mean annual precipitation.....................................................................................44
+	
+32.  Map and a graphical representation of the results from Susceptibility Index 
+analysis of the proximity to fluvial channel factor.................................................................45
+	
+33.  Map of the results from analysis of Susceptibility Index values for the 66 unique 
+land cover classes......................................................................................................................46
+	
+34.  Map of the results from Susceptibility Index analysis of 697 soil classes........................47
+	
+35.  Map of the results from Susceptibility Index analysis of Soil Moisture Active 
+Passive data.................................................................................................................................48
+	
+36.  Graph of receiver operating characteristic area under curve analyses for different 
+combinations of data results.....................................................................................................50
+	
+37.  Composite Susceptibility Index map of the seven nonslope and non-Soil Moisture 
+Active Passive datasets used in the analysis........................................................................51
+	
+38.  Map of residual values of Susceptibility Index model output from this study 
+compared with the frequency ratio model output of a previous study..............................52
+
+
+=== page 8 ===
+vi
+	
+39.  An example of the Susceptibility Index model output for the Santa Ana mogote 
+landslide at the Villa España Urbanization in the municipality of Bayamón, 
+Puerto Rico, including a hillshade raster of the 2016 lidar survey data, an aerial 
+view of the same location, the final susceptibility map dataset overlayed on the 
+hillshade raster, the final susceptibility map dataset overlayed on the aerial 
+imagery, an oblique aerial photograph of the site in 2013, and a location map 
+of the area....................................................................................................................................55
+	
+40.  Example of the Susceptibility Index model output for the Las Lomas Urbanization 
+failure in the municipality of Ceiba, Puerto Rico, including a hillshade raster of the 
+2016 lidar survey data, an aerial view of the same location, the final susceptibility 
+map dataset overlayed on the hillshade raster, the final susceptibility map dataset 
+overlayed on the aerial imagery, a photograph of the headscarp, and a location 
+map of the area............................................................................................................................57
+	
+41.  Example of the Susceptibility Index model output for the PR–143 kilometer 56.2 
+landslide site in the municipality of Barranquitas, Puerto Rico, including a hillshade 
+raster of the 2016 lidar survey data, an aerial view of the same location, the final 
+susceptibility map dataset overlayed on the hillshade raster, the final susceptibility 
+map dataset overlayed on the satellite imagery, a photograph of the headscarp, 
+and a location map of the area.................................................................................................59
+	
+42.  Example of the Susceptibility Index model output for a landslide in the urban 
+center of Utuado, Puerto Rico, caused by Hurricane María, including a hillshade 
+raster of the 2016 lidar survey data, an aerial view of the same location, the final 
+susceptibility map dataset overlayed on the hillshade raster, the final susceptibility 
+map dataset overlayed on the aerial imagery, a photograph of the site, and a 
+location map.................................................................................................................................61
+	
+43.  Example of the Susceptibility Index model output for a landslide at kilometer 209.3 
+along Highway PR–2 in the municipality of Guayanilla, Puerto Rico, including a 
+hillshade raster of the 2016 lidar survey data, an aerial view of the same location, 
+the final susceptibility map dataset overlayed on the hillshade raster, the final 
+susceptibility map dataset overlayed on the aerial imagery, a photograph of the 
+site, and a location map.............................................................................................................63
+Tables
+	
+1.  Hypothetical examples of a set of frequency-ratio values and corresponding 
+Susceptibility Index values for a given bin of any characteristic.......................................18
+	
+2.  Data utilized in the frequency-ratio analyses.........................................................................19
+	
+3.  Results from frequency-ratio analyses of potential landslide-contributing factors........23
+	
+4.  Susceptibility Index values for potential landslide-contributing factors...........................38
+	
+5.  Results from comparison of the susceptibility map to locations of landslides in 
+the Hurricane María inventory..................................................................................................49
+	
+6.  Factors considered in quantitative Puerto Rico landslide susceptibility maps................53
+	
+7.  Comparison of performance of Puerto Rico landslide susceptibility maps against 
+the Hurricane María inventory..................................................................................................53
+
+
+=== page 9 ===
+vii
+Conversion Factors
+U.S. customary units to International System of Units
+Multiply
+By
+To obtain
+Area
+acre
+0.004047
+square kilometer (km2)
+International System of Units to U.S. customary units
+Multiply
+By
+To obtain
+Length
+centimeter (cm)
+0.3937
+inch (in.)
+millimeter (mm)
+0.03937
+inch (in.)
+meter (m)
+3.281
+foot (ft) 
+kilometer (km)
+0.6214
+mile (mi)
+Area
+square kilometer (km2)
+247.1
+acre
+Volume
+cubic meter (m3)
+264.2
+gallon (gal) 
+cubic meter (m3)
+0.0002642
+million gallons (Mgal) 
+cubic meter (m3)
+35.31
+cubic foot (ft3)
+cubic meter (m3)
+1.308
+cubic yard (yd3) 
+Datum
+Horizontal coordinate information is referenced to the World Geodetic System of 1984 (WGS84).
+
+
+=== page 10 ===
+viii
+Abbreviations
+°	
+degree
+AUC	
+area under curve
+DEM	
+digital elevation model 
+FR	
+frequency ratio 
+GAP	
+Gap Analysis Program
+GIS	
+geographic information system
+KSH	
+K. Stephen Hughes
+lidar	
+light detection and ranging
+MUKEY	
+mapunit key 
+NASA	
+National Aeronautics and Space Administration
+ROC	
+receiver operating characteristic
+SI	
+Susceptibility Index 
+SIA	
+aggregate SI value
+SIAm	
+the final modified SI value at each 5-meter pixel islandwide
+SMAP	
+Soil Moisture Active Passive 
+USGS	
+U.S. Geological Survey
+
+
+=== page 11 ===
+Map Depicting Susceptibility to Landslides Triggered by 
+Intense Rainfall, Puerto Rico
+By K. Stephen Hughes,1 and William H. Schulz2 
+Executive Summary
+Puerto Rico is vulnerable to landsliding. This report summarizes creation of a new high-resolution model of rainfall-induced 
+landslide susceptibility for the main island. The main island of Puerto Rico was classified at 5-meter pixel scale into categories of 
+Low, Moderate, High, Very High, or Extremely High susceptibility to landsliding during and soon after intense rainfall, such as is 
+produced during tropical cyclones. The map data can be downloaded as georeferenced files in multiple formats by the public or 
+government agencies and used in a geographic information system platform. The model is intended for use in planning, development, 
+and emergency management. The map highlights areas susceptible to landsliding that may warrant further site-specific evaluation 
+by licensed professionals.
+This map product highlights an important collaboration between the U.S. Geological Survey and the Department of Geology 
+at the University of Puerto Rico at Mayagüez that materialized after the destructive Hurricanes Irma and María in September 2017. 
+An inventory of more than 70,000 mass wasting sites triggered by Hurricane María represents one of the initial products of this 
+partnership and was an essential dataset in the modeling effort described in the report. Characteristics of the inventoried sites 
+were statistically analyzed to produce Susceptibility Index values for various geospatial factors that were combined to form the 
+new map product. The model output demonstrates how post-disaster data can be used to better understand risks and hazards for 
+the future. The project benefited from diverse feedback among colleagues in the U.S. Geological Survey, at the University of 
+Puerto Rico at Mayagüez, and government agencies in Puerto Rico. In addition, the inventory and present study satisfy sections 
+(a), (b), (c), (d), and (i) of Article 4 in Puerto Rico Law 24 of 2008—Protocol for the Mitigation of Landslide Risks in Puerto 
+Rico. The susceptibility map also represents an important step in understanding erosion, sedimentation, and hazards that arise 
+from heavy rainfall in Puerto Rico and the tropics.
+Abstract
+Landslides in Puerto Rico range from nuisances to deadly events. Centuries of agricultural and urban modification of the 
+landscape have perturbed many already unstable hillsides on the tropical island. One of the main triggers of mass wasting on the island is 
+the high-intensity rainfall that is associated with tropical atmospheric systems. Puerto Rico’s geographic position and rugged topography 
+render millions of residents vulnerable to widespread landslide events. In this study, a high-resolution (5 meters), high-intensity rainfall-
+induced landslide susceptibility model was produced using the frequency-ratio method. Datasets utilized in the model included a com-
+plete-island landslide inventory created from imagery obtained after Hurricanes Irma and María impacted the island during September 
+2017, slope inclination, land-surface curvature, soil type, geologic terrane, mean annual precipitation, land use, soil moisture, and 
+distance to roadways and streams. The final data product (plate 1) is a statistically viable representation of where landslides are 
+likely to initiate during or soon after intense rainfall, with a robust receiver operating characteristic area-under-curve value of 0.87. The 
+model output raster pixel values were binned into 100 equal-area quantiles and then classified into Low, Moderate, High, Very High, and 
+Extremely High classes of susceptibility. The Extremely High susceptibility classification represents the most vulnerable 1 percent of the 
+island, whereas Very High, High, Moderate, and Low classifications cover 9, 20, 30, and 40 percent of the island, respectively. The sus-
+ceptibility map is intended to assist in planning future development, mitigation measures, and post-event emergency response; however, 
+it is not a substitute for site-specific, slope-stability assessments performed by licensed geologists and engineers. Additionally, the map 
+does not portray locations where landslide material may travel after mobilization, and which may be at extreme risk; nor does it necessar-
+ily portray where landslides may occur during earthquakes or mass wasting triggered by prolonged, relatively low-intensity rainfall.
+1University of Puerto Rico, Mayagüez, Puerto Rico.
+2U.S. Geological Survey.
+
+
+=== page 12 ===
+2    Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico
+Introduction
+Puerto Rico (18.25°N., 66.50°W.) is an approximately 9,000-square kilometers (km2) Caribbean territory of the United 
+States and is the easternmost island of the Greater Antilles archipelago. Home to more than 3 million citizens, the archipelago’s 
+population density is the fourth highest of any U.S. State or State-equivalent jurisdiction, behind only the District of Columbia, 
+New Jersey, and Rhode Island (U.S. Census Bureau, 2010). Unlike those locations, most of the Puerto Rican landscape is moun­
+tainous, a consequence of its location along the tectonically active North American-Caribbean plate boundary zone. A narrow, 
+discontinuous coastal plain rings a rugged interior where the highest peaks on the main island are more than 1,300 meters (m) 
+above sea level and lie within 150 kilometers (km) of the more than 8,000 m deep Puerto Rico trench, which marks the plate 
+boundary. The island’s terrain is demarcated by the east-west trending Cordillera Central (fig. 1), which is the main north-south 
+fluvial divide, and the Sierra de Luquillo that lies in the northeast corner of the territory. Because of the high-relief, rugged 
+topography that covers most of the land surface, and relatively higher risk of tectonic or climatic conditions that can induce 
+landslides, millions of residents in Puerto Rico are disproportionately more likely to suffer the effects of mass wasting than their 
+counterparts in the continental United States (Jibson, 1987).
+The purpose of the landslide susceptibility map product presented herein (plate 1) is to provide high-resolution (5-m pixel) 
+hazard data that can be directly used by citizens and government agencies to assess and plan effectively for future extreme 
+precipitation events that induce widespread slope failure across the main island of the territory. Given that long-term tropical 
+cyclone forecasts predict more frequent high-intensity events that will likely directly affect Puerto Rico in the future (Knutson 
+and others, 2010; Jennings and others, 2014; Keellings and Hernández Ayala, 2019; Ramos-Scharrón and Arima, 2019), this 
+landslide susceptibility map can be used as a tool to potentially avoid the loss of life and property. 
+Background
+Mass Wasting in Puerto Rico
+Mass movements present persistent hazards in Puerto Rico. Landslides, rockfalls, slumps, debris flows, and other mass 
+movements are responsible for the loss of human life, private property, transportation routes, utility infrastructure, and the 
+temporary isolation of remote communities across the densely populated, rugged Caribbean island (for example, Jibson, 1987; 
+Larsen, 2012; Bessette-Kirton and others, 2019). For this report, the term “landslide” is used to include all types of slope failure. 
+The mountainous interior of the island is most at risk from landslides; however, landslides also present risks in an extensive 
+karst province and coastal zones marked by steep cliffs and terraces. The 1985 landslide disaster at Mameyes in Ponce (fig. 2), 
+which claimed at least 129 lives, serves as a reminder of the vulnerability to landslides on the island and remains the deadliest 
+landslide event to have occurred in any jurisdiction of the United States (Jibson, 1986; Silva-Tulla, 1986). Large block land­
+slides like the Mameyes example exist at other locations across the island (figs. 3 and 4), including Cerca del Cielo (Wang, 
+2012, 2013; Rivera Santiago, 2015), Lago Guajataca Dam (Monroe, 1967; Silva-Tulla and others, 2018); El Yunque (Wang and 
+others, 2013), Highway PR-10 in Utuado (Rodriguez-Pérez and others, 1988; Deere and others, 1989), Highway PR-9 in Ponce 
+(García López, 2018), and scattered along the southern karst escarpment (Monroe, 1964). Much more frequent and widespread 
+are shallow mass movements that usually mobilize into fast-moving channelized debris flows that deliver sediment directly to 
+the fluvial network (figs. 5–9; Campbell and others, 1985; Jibson, 1986, 1989; Larsen and Simon, 1990, 1993; Simon and others, 
+1990; Larsen and Torres Sánchez, 1992; Larsen and Santiago Román, 2001; Pando and others, 2005; Larsen, 2012; Hughes and 
+Morales Vélez, 2017; Morales Vélez and Hughes, 2018; Silva-Tulla and others, 2018; Bessette-Kirton and others, 2019). The 
+introduction of liberated sediment into a river system also has negative consequences related to sedimentation, especially in 
+watersheds that have impounded reservoirs (for example, Soler-López, 2000; Rodríguez Feliciano and others, 2019).
+
+
+=== page 13 ===
+Introduction    3
+ARE
+UTU
+PON
+CIA
+COA
+SAL
+SSB
+RIO
+YAU
+ADJ
+CBR
+ISA
+JDZ
+LAJ
+LAR
+GMA
+ORO
+YAB
+CAG
+MAY
+SLO
+CAY
+SJU
+PAT
+JAY
+SGM
+VIL
+NAG
+VBA
+BAY
+CAR
+LPI
+PEN
+MOC
+LMA
+CID
+HAT
+SIB
+CAM
+MAN
+HUM
+COR
+GNA
+ANA
+AIB
+CEI
+AGL
+SAB
+GUA
+MOR
+FAJ
+MAR
+BAQ
+CAN
+TAL
+VAL
+AGA
+AGB
+JUN
+NAR
+GUR
+GYB
+LUQ
+COM
+LOI
+TBA
+QUE
+DOR
+TRU
+MAU
+BAR
+RIN
+FLO
+ARY
+HOR
+CAT
+66°W
+66°30'W
+67°W
+18°30'N
+18°15'N
+18°N
+0
+10
+5
+km
+Elevation (m)
+1,300
+0
+Florida
+C
+O
+R
+D
+I
+L
+L
+E
+R
+A
+ 
+C
+E
+N
+T R
+A
+L
+K a r s t t e r r a i n
+Sierra de
+Luquillo
+Great Northern Puerto     Rico Fault Zone
+Great Southern Puerto Rico Fault Zone
+Figure 1.  Topography of the U.S. territory of Puerto Rico (U.S. Geological Survey, 2017). The east–west trending Cordillera Central is the principal topographic feature on the 
+island. It reaches more than 1,300 meters (m) above sea level and is the primary drainage divide between rivers to the north that drain to the Atlantic Ocean and rivers to the 
+south that drain to the Caribbean Sea. The north coast karst terrain covers about 20 percent of the island’s surface. The prominent Sierra de Luquillo in eastern Puerto Rico is 
+the site of El Yunque National Forest. Puerto Rico is the easternmost of the Greater Antilles archipelago and lies approximately 1,600 kilometers (km) southeast of the State of 
+Florida (see inset). Approximate locations of the Great Northern and Great Southern Puerto Rico Fault Zones are modified from Zachariasen and von Hillebrandt-Andrade (2005). 
+Explanation of municipality abbreviations can be found in appendix 1.
+
+
+=== page 14 ===
+4    Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico
+Figure 2.  Headscarp and body of the large block landslide in 1985 at Mameyes, Ponce, Puerto Rico (18.024, −66.619). Photograph taken October 1985 by James Joyce, 
+University of Puerto Rico at Mayagüez, used with permission. View is looking west.

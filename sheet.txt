@@ -1,0 +1,1083 @@
+-200
+-800
+-1600
+-200
+-400
+-600
+-800
+-200
+-800
+-1400
+-1800
+-2000
+-1800
+-1600
+-1400
+-2000
+-1200
+-1000
+-800
+-400
+-600
+-1000
+-1200
+-1200
+-1000
+-800
+-200
+Base topography from U.S. Geological Survey 3D Elevation Program. 
+Bathymetry from NOAA National Geophysical Data Center. Waterbodies 
+from U.S. Geological Survey National Hydrography Dataset. Roadways 
+from Puerto Rico Department of Transportation and Public Works
+World Geodetic System of 1984 (WGS84)
+DEVELOPMENT OF THE 
+LANDSLIDE SUSCEPTIBILITY MAP
+Landslides commonly occur in Puerto Rico during or soon after intense 
+rainfall and present significant hazards to the built environment and human 
+safety (for example, Jibson, 1986; Larsen and Torres Sanchez, 1992; 
+Bessette-Kirton and others, 2019). This was illustrated during September 
+2017, when Hurricane María triggered more than 70,000 landslides (Hughes 
+and others, 2019) across the main island of Puerto Rico that caused loss of 
+life and widespread destruction. We used a statistical approach (see accompa-
+nying pamphlet for detailed methodology) along with an inventory of the 
+Hurricane María-triggered landslides and geospatial datasets of ground- 
+surface slope and curvature, proximity to roads and streams, geologic terrane, 
+soil classification, mean annual precipitation, land cover, and soil moisture 
+estimated to result from Hurricane María to develop this 5-meter-resolution 
+map depicting relative susceptibility to landslide occurrence during and soon 
+after intense rainfall. Estimated soil moisture resulting from Hurricane María 
+was used to temper effects on the final susceptibility map from using an 
+inventory of landslides triggered by a single event. The Extremely High 
+classification occurs over 1 percent of the island, whereas the Very High, 
+High, and Moderate classifications occur over 9, 20, and 30 percent of the 
+island, respectively. 
+USE AND LIMITATIONS OF THE 
+LANDSLIDE SUSCEPTIBILITY MAP
+This map depicts estimated relative susceptibility to landslide occur-
+rence during or soon after intense rainfall, such as that produced during 
+tropical cyclones. It is intended to illustrate relative potential landslide hazard 
+to help provide a framework for site-specific landslide susceptibility assess-
+ments, plan for future development, and plan for future widespread landslide 
+events. For example, locations with higher landslide susceptibility could 
+(1) be excluded from future development; (2) require slope-stability studies 
+prior to development, and grading, foundation, and drainage design and 
+construction that considers potential slope instability; (3) be targeted for 
+evaluation and mitigation of potentially adverse conditions; (4) be monitored 
+for signs of incipient landsliding, such as cracks in roadways and structures, 
+leaning utility poles and trees, and broken water or sewer lines; and (or) 
+(5) be considered for evacuation prior to forecasted landslide-inducing 
+rainfall and for targeted emergency response activities after such rainfall. 
+When used in consideration of specific atmospheric events, the map should 
+be evaluated alongside event-specific rainfall conditions, with landslides 
+being more likely where larger amounts of rainfall occur in locations with 
+higher landslide susceptibility. Additionally, event-specific, root-zone soil 
+moisture data estimated by the National Aeronautics and Space Administra-
+tion Soil Moisture Active Passive mission (https://smap.jpl.nasa.gov/ last 
+accessed December 26, 2019) may be combined with landslide susceptibility 
+estimates for this purpose (see “Use and Limitations of the Landslide 
+Susceptibility Map” in the accompanying pamphlet for detailed methodol-
+ogy). The map is not a substitute for site-specific, slope-stability investiga-
+tion by licensed geologists and engineers. Additionally, many landslides in 
+Puerto Rico move far from the locations where they originate and can result 
+in the loss of life and property as they move downslope; the map does not 
+depict this significant hazard resulting from mobile landslides. Finally, 
+locations of landslides triggered by earthquakes or prolonged, relatively 
+low-intensity rainfall may significantly differ from High, Very High, and 
+Extremely High susceptibility locations shown on the map.
+Most landslides in Puerto Rico triggered by intense rainfall are shallow 
+(to several meters deep) and occur in unconsolidated material (soil and 
+saprolite) overlying rock (for example, Jibson, 1989; Larsen and Torres 
+Sanchez, 1992; Bessette-Kirton and others, 2019). These are the types of 
+landslides most well represented by the landslide susceptibility map because 
+the map was produced using an inventory of landslides triggered by Hurricane 
+María (Hughes and others, 2019) and most of those landslides were shallow. 
+Hurricane María also triggered landslides in rock and some reached depths of 
+approximately 30 meters (Bessette-Kirton and others, 2019), so the map also 
+EXPLANATION
+LANDSLIDE SUSCEPTIBILITY
+Low
+Moderate
+High
+Very High
+Extremely High
+ROADS AND BOUNDARIES
+Highways
+Primary routes
+Secondary routes
+Tertiary routes
+Municipal boundaries
+AREAL FEATURE
+Shoreline—Showing open water
+depicts susceptibility to deeper landslides and those in rock. However, 
+landslides such as this are relatively poorly represented by the susceptibility 
+map because relatively few were triggered by Hurricane María so did not 
+provide statistically robust measures with which similar landslides could be 
+forecast. The tragic landslide that occurred at Mameyes in Ponce municipal-
+ity during 1985 and which killed more than 129 people (Silva-Tulla, 1986) is 
+an example of a type of landslide that is likely poorly represented by the 
+susceptibility map. Additionally, many landslides worldwide are triggered by 
+human activities, such as hillslope grading and redirection of drainage. Local 
+activities such as these cannot be accounted for on the map.
+Common to nearly all modeling efforts, accuracy of the landslide 
+susceptibility map relies upon accuracy and completeness of input data 
+utilized for its development. Among others, we expect that the following 
+omissions and conditions detract from the accuracy of the map: (1) variabil-
+ity within given geological terranes of bedrock strength and hydrologic 
+properties, discontinuity orientation and condition; (2) variability within 
+given soil types of soil strength and hydrologic properties; (3) consideration 
+of only part of the road network, including omission of most undocumented 
+farm roads, paths, and trails; and (4) use of a 2015–2016 topographic model 
+that predates landslides triggered by Hurricane María and other topographic 
+changes.
+REFERENCES CITED
+Bessette-Kirton, E.K., Cerovski-Darriau, C., Schulz, W.H., Coe, J.A., Kean, 
+J.W., Godt, J.W., Thomas, M.A., and Hughes, K.S., 2019, Landslides 
+triggered by Hurricane María—Assessment of an extreme event in Puerto 
+Rico: GSA Today, v. 29, no. 6, p. 4–10. [Also available at 
+https://www.geosociety.org/gsatoday/science/G383A/article.htm.]
+Hughes, K.S., Bayouth García, D., Martínez Milian, G.O., Schulz, W.H., and 
+Baum, R.L., 2019, Map of slope-failure locations in Puerto Rico after 
+Hurricane María: U.S. Geological Survey data release, accessed 
+September 12, 2019, at https://doi.org/10.5066/P9BVMD74.
+Jibson, R.W., 1986, Evaluation of landslide hazards resulting from the 
+5–8 October 1985, storm in Puerto Rico: U.S. Geological Survey 
+Open-File Report 86–26, 40 p. [Also available at 
+https://doi.org/10.3133/ofr8626.]
+Jibson, R.W., 1989, Debris flows in southern Puerto Rico, in Schultz, A.P., and 
+Jibson, R.W., eds., Landslide processes of the eastern United States and 
+Puerto Rico: Geological Society of America Special Paper 236, p. 29–55. 
+[Also available at https://doi.org/10.1130/SPE236-p29.]
+Larsen, M.C., and Torres Sanchez, A.J., 1992, Landslides triggered by 
+Hurricane Hugo in eastern Puerto Rico, September 1989: Caribbean 
+Journal of Science, v. 28, no. 3–4, p. 113–125.
+Silva-Tulla, F., 1986, The October 1985 landslide at Barrio Mameyes, Ponce, 
+Puerto Rico: Washington, D.C., National Academies Press, 14 p.
+Landslides in Utuado triggered by Hurricane María, 2017. Photograph by E. Bessette-Kirton, public domain.
+Landslides in Corozal triggered by Hurricane María, 2017. Photograph by W. Schulz, public domain.
+·
+40
+·
+38
+·
+16
+·
+42
+·
+36
+·
+9
+·
+6
+·
+24
+·
+9
+·
+19
+·
+34
+·
+41
+·
+47
+·
+25
+·
+1
+·
+29
+·
+60
+·
+8
+·
+35
+·
+21
+·
+27
+·
+64
+·
+18
+·
+28
+·
+23
+·
+37
+·
+12
+·
+32
+·
+25
+·
+20
+·
+17
+·
+26
+·
+15
+·
+31
+·
+30
+·
+10
+·
+10
+·
+14
+·
+1
+·
+2
+·
+14
+·
+2
+·
+2
+·
+1
+·
+3
+·
+3
+·
+3
+·
+3
+·
+1
+·
+2
+·
+2
+I
+I
+111
+I
+I
+190
+I
+I
+101
+I
+I
+168
+I
+I
+104
+I
+I
+122
+I
+I
+122
+I
+I
+190
+I
+I
+138
+I
+I
+166
+I
+I
+199
+I
+I
+196
+I
+I
+192
+I
+I
+119
+I
+I
+195
+I
+I
+112
+I
+I
+194
+I
+I
+154
+I
+I
+107
+I
+I
+163
+I
+I
+118
+I
+I
+169
+I
+I
+119
+I
+I
+103
+I
+I
+164
+I
+I
+188
+I
+I
+149
+I
+I
+145
+I
+I
+113
+I
+I
+103
+I
+I
+131
+I
+I
+171
+I
+I
+162
+I
+I
+142
+I
+I
+173
+I
+I
+164
+I
+I
+110
+I
+I
+162
+I
+I
+173
+I
+I
+177
+I
+I
+176
+I
+I
+199
+I
+I
+151
+I
+I
+120
+I
+I
+173
+I
+I
+130
+I
+I
+113
+I
+I
+191
+I
+I
+155
+I
+I
+117
+I
+I
+165
+I
+I
+175
+I
+I
+106
+I
+I
+112
+I
+I
+153
+I
+I
+198
+I
+I
+114
+I
+I
+160
+I
+I
+167
+I
+I
+189
+I
+I
+129
+I
+I
+121
+I
+I
+119
+I
+I
+182
+I
+I
+100
+I
+I
+134
+I
+I
+101
+I
+I
+127
+I
+I
+144
+I
+I
+137
+I
+I
+120
+I
+I
+141
+I
+I
+179
+I
+I
+152
+I
+I
+159
+I
+I
+183
+I
+I
+185
+I
+I
+125
+I
+I
+108
+I
+I
+135
+I
+I
+150
+I
+I
+123
+I
+I
+174
+I
+I
+157
+I
+I
+110
+I
+I
+119
+I
+I
+139
+I
+I
+140
+I
+I
+132
+I
+I
+124
+I
+I
+165
+I
+I
+186
+I
+I
+116
+I
+I
+143
+I
+I
+129
+I
+I
+146
+I
+I
+172
+I
+I
+115
+I
+I
+109
+I
+I
+143
+I
+I
+119
+I
+I
+187
+I
+I
+181
+I
+I
+184
+I
+I
+111
+I
+I
+181
+I
+I
+105
+I
+I
+140
+I
+I
+102
+I
+I
+155
+I
+I
+123
+I
+I
+128
+I
+I
+156
+I
+I
+149
+I
+I
+129
+I
+I
+128
+I
+I
+123
+·
+53
+·
+53
+·
+54
+·
+5
+·
+5
+·
+53
+·
+66
+·
+53
+·
+22
+·
+52
+·
+22
+·
+22
+·
+52
+·
+52
+·
+52
+65°40' W
+65°40' W
+66° W
+66° W
+66°20' W
+66°20' W
+66°40' W
+66°40' W
+67° W
+67° W
+18°20' N
+18°20' N
+18° N
+18° N
+C a r i b b e a n S e a
+C a r i b b e a n S e a
+A t l a n t i c O c e a n
+A t l a n t i c O c e a n
+Adjuntas
+Aguada
+Aguadilla
+Aguas Buenas
+Aibonito
+Arecibo
+Arroyo
+Añasco
+Barceloneta
+Barranquitas
+Bayamón
+Cabo Rojo
+Caguas
+Camuy
+Canóvanas
+Carolina
+Cataño
+Cayey
+Ceiba
+Ciales
+Cidra
+Coamo
+Comerío
+Corozal
+Dorado
+Fajardo
+Florida
+Guayama
+Guayanilla
+Guaynabo
+Gurabo
+Hatillo
+Hormigueros
+Humacao
+Isabela
+Jayuya
+Juana Díaz
+Juncos
+Lajas
+Lares
+Las Marías
+Las Piedras
+Loíza
+Luquillo
+Manatí
+Maricao
+Maunabo
+Mayagüez
+Moca
+Morovis
+Naguabo
+Naranjito
+Orocovis
+Patillas
+Peñuelas
+Ponce
+Quebradillas
+Rincón
+Río Grande
+Salinas
+San Juan
+San Lorenzo
+San Sebastián
+Santa Isabel
+Toa Alta
+Toa Baja
+Trujillo Alto
+Utuado
+Vega Alta
+Vega Baja
+Villalba
+Yabucoa
+Yauco
+Guánica
+San Germán
+Sabana
+Grande
+Adjuntas
+Adjuntas
+Aguada
+Aguada
+Aguadilla
+Aguadilla
+Aguas Buenas
+Aibonito
+Aibonito
+Arecibo
+Arecibo
+Arroyo
+Arroyo
+Añasco
+Añasco
+Barceloneta
+Barceloneta
+Barranquitas
+Barranquitas
+Bayamón
+Bayamón
+Cabo Rojo
+Cabo Rojo
+Caguas
+Caguas
+Camuy
+Camuy
+Canóvanas
+Canóvanas
+Carolina
+Carolina
+Cataño
+Cataño
+Cayey
+Cayey
+Ceiba
+Ceiba
+Ciales
+Ciales
+Cidra
+Cidra
+Coamo
+Coamo
+Comerío
+Comerío
+Corozal
+Corozal
+Dorado
+Dorado
+Fajardo
+Fajardo
+Florida
+Florida
+Guayama
+Guayama
+Guayanilla
+Guayanilla
+Guaynabo
+Guaynabo
+Gurabo
+Gurabo
+Hatillo
+Hatillo
+Hormigueros
+Hormigueros
+Humacao
+Humacao
+Isabela
+Isabela
+Jayuya
+Jayuya
+Juana Díaz
+Juncos
+Juncos
+Lajas
+Lajas
+Lares
+Lares
+Las Marías
+Las Marías
+Las Piedras
+Loíza
+Loíza
+Luquillo
+Luquillo
+Manatí
+Manatí
+Maricao
+Maricao
+Maunabo
+Maunabo
+Mayagüez
+Mayagüez
+Moca
+Moca
+Morovis
+Morovis
+Naguabo
+Naguabo
+Naranjito
+Naranjito
+Orocovis
+Orocovis
+Patillas
+Patillas
+Peñuelas
+Peñuelas
+Ponce
+Ponce
+Quebradillas
+Quebradillas
+Rincón
+Rincón
+Río Grande
+Salinas
+Salinas
+San Juan
+San Juan
+San Lorenzo
+San Lorenzo
+San Sebastián
+San Sebastián
+Santa Isabel
+Toa Alta
+Toa Baja
+Trujillo Alto
+Trujillo Alto
+Utuado
+Utuado
+Vega Alta
+Vega Baja
+Villalba
+Villalba
+Yabucoa
+Yabucoa
+Yauco
+Yauco
+Guánica
+Guánica
+San Germán
+San Germán
+Sabana
+Sabana
+Grande
+Grande
+Adjuntas
+Aguada
+Aguadilla
+Aguas Buenas
+Aibonito
+Arecibo
+Arroyo
+Añasco
+Barceloneta
+Barranquitas
+Bayamón
+Cabo Rojo
+Caguas
+Camuy
+Canóvanas
+Carolina
+Cataño
+Cayey
+Ceiba
+Ciales
+Cidra
+Coamo
+Comerío
+Corozal
+Dorado
+Fajardo
+Florida
+Guayama
+Guayanilla
+Guaynabo
+Gurabo
+Hatillo
+Hormigueros
+Humacao
+Isabela
+Jayuya
+Juana Díaz
+Juncos
+Lajas
+Lares
+Las Marías
+Las Piedras
+Loíza
+Luquillo
+Manatí
+Maricao
+Maunabo
+Mayagüez
+Moca
+Morovis
+Naguabo
+Naranjito
+Orocovis
+Patillas
+Peñuelas
+Ponce
+Quebradillas
+Rincón
+Río Grande
+Salinas
+San Juan
+San Lorenzo
+San Sebastián
+Santa Isabel
+Toa Alta
+Toa Baja
+Trujillo Alto
+Utuado
+Vega Alta
+Vega Baja
+Villalba
+Yabucoa
+Yauco
+Guánica
+San Germán
+Sabana
+Grande
+Adjuntas
+Aguada
+Aguadilla
+Aguas Buenas
+Aibonito
+Arecibo
+Arroyo
+Añasco
+Barceloneta
+Barranquitas
+Bayamón
+Cabo Rojo
+Caguas
+Camuy
+Canóvanas
+Carolina
+Cataño
+Cayey
+Ceiba
+Ciales
+Cidra
+Coamo
+Comerío
+Corozal
+Dorado
+Fajardo
+Florida
+Guayama
+Guayanilla
+Guaynabo
+Gurabo
+Hatillo
+Hormigueros
+Humacao
+Isabela
+Jayuya
+Juana Díaz
+Juncos
+Lajas
+Lares
+Las Marías
+Las Piedras
+Loíza
+Luquillo
+Manatí
+Maricao
+Maunabo
+Mayagüez
+Moca
+Morovis
+Naguabo
+Naranjito
+Orocovis
+Patillas
+Peñuelas
+Ponce
+Quebradillas
+Rincón
+Río Grande
+Salinas
+San Juan
+San Lorenzo
+San Sebastián
+Santa Isabel
+Toa Alta
+Toa Baja
+Trujillo Alto
+Utuado
+Vega Alta
+Vega Baja
+Villalba
+Yabucoa
+Yauco
+Guánica
+San Germán
+Sabana
+Grande
+Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico
+By
+K. Stephen Hughes1 and William H. Schulz2
+2020
+1University of Puerto Rico, Mayagüez, Puerto Rico;
+2U.S. Geological Survey
+U.S. Department of the Interior
+U.S. Geological Survey
+Open-File Report 2020−1022
+Pamphlet accompanies map
+TRUE  NORTH
+DECLINATION AT
+CENTER OF SHEET, 2019
+MAGNETIC  NORTH
+°
+13.1
+For more information concerning this publication, contact the
+Center Director, USGS Geologic Hazards Science Center
+Box 25046, Mail Stop 966
+Denver, CO 80225
+(303) 273-8579
+Or visit the Geologic Hazards Science Center website at
+ https://www.usgs.gov/centers/geohazards
+To learn about the USGS and its information products visit
+http://www.usgs.gov/  
+1-888-ASK-USGS
+For product and ordering information visit
+http://store.usgs.gov/
+Report digital files available at https://doi.org/10.3133/ofr20201022
+Suggested citation: Hughes, K.S., and Schulz, W.H., 2020, Map depicting susceptibility to 
+landslides triggered by intense rainfall, Puerto Rico: U.S. Geological Survey Open-File Report 
+2020–1022, 91 p., 1 plate, scale 1:150,000, https://doi.org/10.3133/ofr20201022.
+Associated data for this publication: Hughes, K.S., and Schulz, W.H., 2020, Results from frequency- 
+ratio analyses of soil classification and land use related to landslide locations in Puerto Rico 
+following Hurricane María: U.S. Geological Survey data release, https://doi.org/10.5066/P9VK2FAL.
+ISSN 2331-1258 (online)
+https://doi.org/10.3133/ofr20201022
+Publishing support provided by the Science Publishing 
+Network, Denver Publishing Service Center
+Manuscript approved for publication March 3, 2020
+Any use of trade, firm, or product names is for descriptive 
+purposes only and does not imply endorsement by the U.S. 
+Government.
+This map is offered as an online-only, digital publication. 
+Users should be aware that, because of differences in 
+rendering processes and pixel resolution, some slight 
+distortion of scale may occur when viewing it on a 
+computer screen or when printing it on an electronic 
+plotter, even when it is viewed or printed at its intended 
+publication scale.

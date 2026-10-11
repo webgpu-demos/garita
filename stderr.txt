@@ -1,0 +1,16 @@
++ mkdir -p /tmp/w
++ cd /tmp/w
++ pip install -q pymupdf pillow
++ tail -2
++ for f in sheet sheet_esp pamphlet_esp pamphlet
++ for f in sheet sheet_esp pamphlet_esp pamphlet
++ curl -sSL -m 200 https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet.pdf -o sheet.pdf
++ for f in sheet sheet_esp pamphlet_esp pamphlet
++ curl -sSL -m 200 https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_esp.pdf -o sheet_esp.pdf
++ for f in sheet sheet_esp pamphlet_esp pamphlet
++ curl -sSL -m 200 https://pubs.usgs.gov/of/2020/1022/ofr20201022_pamphlet_esp.pdf -o pamphlet_esp.pdf
++ wait
++ curl -sSL -m 200 https://pubs.usgs.gov/of/2020/1022/ofr20201022_pamphlet.pdf -o pamphlet.pdf
++ ls -la
++ python3 -
++ ls -la /home/runner/work/garita/garita/out

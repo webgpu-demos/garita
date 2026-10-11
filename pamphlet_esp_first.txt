@@ -1,0 +1,623 @@
+
+
+=== page 1 ===
+Programa de Peligros de Deslizamientos de Tierra
+Mapa de Susceptibilidad a Deslizamientos de Tierra 
+Desencadenados por Precipitación Intensa en Puerto Rico
+Reporte de Archivo Abierto 2020–1022
+Departamento del Interior de los Estados Unidos 
+Servicio Geológico de los Estados Unidos
+
+
+=== page 2 ===
+Portada.  Vista del mapa de susceptibilidad a deslizamientos de tierra (placa 1) a lo 
+largo del límite entre los municipios de Ciales y Morovis, Puerto Rico.
+
+
+=== page 3 ===
+Mapa de Susceptibilidad a Deslizamientos 
+de Tierra Desencadenados por 
+Precipitación Intensa en Puerto Rico
+Por K. Stephen Hughes y William H. Schulz 
+Programa de Peligros de Deslizamientos de Tierra
+Preparado en cooperación con la Universidad de Puerto Rico Recinto Universitario 
+de Mayagüez
+Reporte de Archivo Abierto 2020–1022 
+Departamento del Interior de los Estados Unidos 
+Servicio Geológico de los Estados Unidos
+
+
+=== page 4 ===
+Departamento del Interior de los Estados Unidos
+DAVID BERNHARDT, Secretario
+Servicio Geológico de los Estados Unidos 
+James F. Reilly II, Director
+Servicio Geológico de los Estados Unidos, Reston, Virginia: 2020
+Para más información sobre el USGS—la Fuente Federal para las ciencias de la Tierra, sus recursos naturales y 
+vivientes, peligros naturales y el ambiente—visite https://www.usgs.gov/ o llame al 1–888–ASK–USGS 
+(1–888–275–8747).
+Para obtener detalles sobre los productos de información del USGS, incluyendo mapas, imágenes y publicaciones 
+visite https://store.usgs.gov/.
+Cualquier uso de nombres comerciales, empresas o productos es solamente para fines descriptivos y no implica el 
+endoso del gobierno de los Estados Unidos.
+Aunque este producto de información, en su mayor parte, está en el dominio público, puede también contener materi­
+ales protegidos por derechos de autor. Para reproducir el contenido protegido por derechos de autor se debe asegurar 
+el permiso del dueño de los derechos de autor.
+Nota aclaratoria: La versión en español de este informe se tradujo de la versión en inglés por una estudiante grad­
+uada y facultad de la Universidad de Puerto Rico, Recinto Universitario de Mayagüez y un empleado de la Junta de 
+Planificación de Puerto Rico.
+Citación sugerida: 
+Hughes, K.S., and Schulz, W.H., 2020, Map depicting susceptibility to landslides triggered by intense rainfall, Puerto 
+Rico: U.S. Geological Survey Open-File Report 2020–1022, 94 p., 1 plate, scale 1:150000, https://doi.org/10.3133/
+ofr20201022.
+Datos asociados para esta publicación: 
+Hughes, K.S., and Schulz, W.H., 2020, Results from frequency-ratio analyses of soil classification and land use related 
+to landslide locations in Puerto Rico following Hurricane María: U.S. Geological Survey data release, https://www.
+sciencebase.gov/catalog/item/5e2f53f5e4b0a79317d42330. 
+ISSN 2331-1258 (en línea)
+
+
+=== page 5 ===
+iii
+Agradecimientos
+Los autores agradecen a todos los colegas y socios por su apoyo directo e indirecto en este 
+proyecto. K. Stephen Hughes (KSH) reconoce la dedicación de un estupendo grupo de estudi­
+antes en el Departamento de Geología de la Universidad de Puerto Rico, Recinto Universitario 
+de Mayagüez, que trabajó de manera diligente para identificar manualmente decenas de miles 
+de escarpes de deslizamientos en fotografías aéreas tomadas en Puerto Rico luego del huracán 
+María. Algunos de estos estudiantes son Sahira Cancel, Xavier García, Selena González, Edwin 
+Irizarry, Raquel Lugo, Priscilla Ortiz, César Rodríguez, Amos Santiago, Yanira Santiago, Stepha­
+nie Soto, y Karla Torres. Apoyo adicional fue provisto por Luis Aponte, Brendaly Rodríguez y 
+Misha Vargas, personal del Servicio de Conservación de Recursos Naturales del Departamento 
+de Agricultura de los Estados Unidos. Un agradecimiento especial a Desireé Bayouth y Gabriel 
+Martínez, miembros del equipo y quienes realizaron la tediosa verificación final de todos los 
+deslizamientos de tierra a lo largo de la isla. KSH le agradece a Chiara Lepore por compartir sus 
+datos previos del análisis de susceptibilidad. KSH también le agradece al colega James Joyce 
+por su útil asesoramiento en el tema, además al Colegio de Artes y Ciencias de la UPRM por 
+proveer tiempo libre para dedicar al proyecto. KSH y William H. Schulz le agradecen a Arleen 
+Reyes Rodríguez y Félix Rivera Santiago de la Junta de Planificación de Puerto Rico por sus sug­
+erencias y asistencia durante el desarrollo del mapa de susceptibilidad. Ambos autores también 
+desean agradecer a Jim Hibbard y Félix Rivera Santiago por su consideración y revisión con­
+structiva del informe. Se agradece a Desireé Bayouth por traducir el informe al español. Ambos 
+autores también agradecen a Rex Baum, Jeffrey Coe, Eric Jones y Robert Schmitt del Servicio 
+Geológico de los Estados Unidos por sus sugerencias y ayuda durante el desarrollo del mapa 
+de susceptibilidad. Se agradece también a Rex Baum y Jeffrey Coe por su atenta y constructiva 
+revisión del reporte.
+
+
+=== page 6 ===
+iv
+Contenidos
+Agradecimientos...........................................................................................................................................iii
+Resumen Ejecutivo.........................................................................................................................................1
+Resumen..........................................................................................................................................................1
+Introducción....................................................................................................................................................2
+Trasfondo................................................................................................................................................2
+Movimientos de Masa en Puerto Rico.....................................................................................2
+Geología General de Puerto Rico............................................................................................11
+Fenómenos Naturales que Provocan Deslizamientos de Tierra en Puerto Rico.............11
+Perturbaciones Topográficas Antropogénicas.....................................................................11
+Estudios Previos de Susceptibilidad a Deslizamientos de Tierra para Puerto Rico................12
+Conjunto de Datos y Metodología.............................................................................................................15
+Resultados y Discusión...............................................................................................................................39
+Rendimiento de Factores...................................................................................................................40
+Rendimiento del Mapa........................................................................................................................51
+Uso y Limitaciones del Mapa de Susceptibilidad a Deslizamientos de Tierra.........................66
+Conclusión.....................................................................................................................................................67
+Referencias Citadas.....................................................................................................................................67
+Apéndice 1.  Clave para las Abreviaturas de los Municipios.............................................................75
+Apéndice 2.  Resultados de los Análisis de Cobertura del Terreno..................................................76
+Apéndice 3.  Resultados de los Análisis de Clase de Suelo...............................................................78
+Figuras
+1.
+Mapa que ilustra la topografía de Puerto Rico, territorio de los EE. UU.............................3
+2.
+Fotografía del escarpe y cuerpo del deslizamiento de tierra masivo en Mameyes,
+Ponce, Puerto Rico, en el 1985....................................................................................................4
+3.
+Fotografía de un deslizamiento de tierra masivo a lo largo de la carretera
+PR–9 en Ponce, Puerto Rico........................................................................................................5
+4.
+Fotografía de un deslizamiento de tierra masivo a lo largo de un segmento
+incompleto de la carretera PR–385 en Peñuelas, Puerto Rico..............................................6
+5.
+Fotografía de flujos de escombros desencadenados por el huracán Georges
+a lo largo del Río Grande de Arecibo en Utuado, Puerto Rico..............................................6
+6.
+Fotografía de un deslizamiento de tierra a lo largo de la carretera PR–4131
+en el municipio de Lares, Puerto Rico.......................................................................................7
+7.
+Fotografía de movimientos de masa y flujos de escombros abuntantes y poco
+profundos en el lado este del tramo superior del Lago Caonillas, Puerto Rico..................8
+8.
+Fotografía de un deslizamiento de tierra que evolucionó a flujo de escombros
+a lo largo de la carretera PR–143 en Barranquitas, Puerto Rico..........................................9
+9.
+Fotografía de un deslizamiento poco profundo en la cuenca hidrográfica del Río
+Blanco de Naguabo, Puerto Rico.............................................................................................10
+10.
+Mapa de susceptibilidad a deslizamientos de tierra dibujado a mano,
+adaptado de Monroe (1979).......................................................................................................13
+
+
+=== page 7 ===
+v
+11.
+Mapa de susceptibilidad a deslizamientos de tierra, adaptado de
+Lepore y otros (2012)...................................................................................................................14
+12.
+Mapa del inventario de deslizamientos de tierra provocados por el
+huracán María.............................................................................................................................16
+13.
+Mapa que ilustra la densidad de lugares con deslizamientos de tierra,
+del inventario del evento del huracán María.........................................................................17
+14.
+Diagrama de flujo que muestra el proceso seguido para desarrollar el ráster
+del SIAm................................................................................................................................................19
+15.
+Mapa de pendiente para la isla de Puerto Rico.....................................................................21
+16.
+Mapa que muestra los valores de curvatura calculados a partir del modelo
+digital de elevación derivado de lidar para la isla de Puerto Rico.....................................22
+17.
+Mapa que muestra las zonas que faltaron para el estudio de lidar aéreo
+de Puerto Rico de 2015–2016.....................................................................................................27
+18.
+Mapa que muestra las carreteras pavimentadas en la isla de Puerto Rico.....................28
+19.
+Ráster de sombreado de un modelo digital de elevación derivado de lidar y una
+fotografía aérea de una densa e improvisada red de carreteras en una granja
+que no está digitalizada como parte del shapefile de carreteras TIGER de la
+Oficina del Censo de los EE. UU................................................................................................29
+20.
+Mapa que muestra las unidades digitalizadas del mapa geológico de
+Puerto Rico a una escala de 1:20,000......................................................................................30
+21.
+Mapa que muestra la precipitación media anual en Puerto Rico......................................31
+22.
+Mapa de canales fluviales para Puerto Rico del archivo de la base de datos
+geoespacial del “National Hydrography Dataset”................................................................34
+23.
+Mapa del conjunto de datos de cobertura del terreno del Proyecto de Análisis
+Gap de Puerto Rico.....................................................................................................................35
+24.
+Mapa de clasificación del suelo para la isla de Puerto Rico del Servicio de
+Conservación de Recursos Naturales del Departamento de Agricultura de
+los EE. UU......................................................................................................................................36
+25.
+Mapa que muestra los datos sin procesar de “Soil Moisture Active Passive”
+de la humedad del suelo en la zona radicular para el 21 de septiembre de 2017
+a las 9:30 a. m. Hora Estándar del Atlántico...........................................................................37
+26.
+Mapa que muestra los datos interpolados de SMAP de la humedad del suelo en
+la zona radicular para el 21 de septiembre de 2017 a las 9:30 a. m. Hora Estándar
+del Atlántico.................................................................................................................................38
+27.
+Mapa y una representación gráfica de los resultados del análisis del Índice
+de Susceptiblidad (SI) para la pendiente................................................................................42
+28.
+Mapa y una representación gráfica de los resultados del análisis del Índice
+de Susceptibilidad (SI) para la curvatura...............................................................................43
+29.
+Mapa y una representación gráfica de los resultados del análisis del Índice
+de Susceptibilidad para el factor de proximidad a las carreteras.....................................44
+30.
+Mapa que muestra los resultados del Índice de Susceptibilidad para los terrenos
+geológicos....................................................................................................................................45
+31.
+Mapa y una representación gráfica de los resultados del análisis del Índice
+de Susceptibilidad (SI) para la precipitación media anual..................................................46
+32.
+Mapa y representación gráfica de los resultados del análisis del Índice de
+Susceptibilidad (SI) para el factor de proximidad al canal fluvial......................................47
+33.
+Mapa de los resultados del análisis de los valores del Índice de Susceptibilidad para
+las 66 clases únicas de cobertura del terreno.......................................................................48
+
+
+=== page 8 ===
+vi
+	
+34.	 Mapa de los resultados del análisis del Índice de Susceptibilidad para 697 clases 
+de suelos.......................................................................................................................................49
+	
+35.	 Mapa de los resultados del análisis del Índice de Susceptibilidad de los 
+datos de “Soil Moisture Active Passive”................................................................................50
+	
+36.	 Gráfica de los análisis del área bajo la curva de la característica operativa 
+del receptor para diferentes combinaciones de resultados de datos...............................52
+	
+37.	 Mapa compuesto del Índice de Susceptibilidad de los siete conjuntos de 
+datos distintos a la pendiente y “Soil Moisture Active Passive” utilizados 
+en el análisis................................................................................................................................53
+	
+38.	 Mapa de los valores residuales del modelo final del Índice de Susceptibilidad 
+de este estudio comparado con el modelo final de la razón de frecuencia 
+de un estudio previo...................................................................................................................54
+	
+39.	 Ejemplo del modelo final del Índice de Susceptibilidad para el derrumbe del 
+mogote de Santa Ana en la Urbanización Villa España en el municipio de 
+Bayamón, Puerto Rico, incluidos un ráster de sombreado del estudio de 
+lidar de 2016, vista aérea de la misma localización, conjunto de datos del 
+mapa de susceptibilidad final superpuesto en el ráster de sombreado, 
+conjunto de datos del mapa de susceptibilidad final superpuesto en la 
+imagen aérea, fotografía aérea oblicua del lugar en el 2013 y mapa que 
+muestra la ubicación del área..................................................................................................57
+	
+40.	 Ejemplo del modelo final del Índice de Susceptibilidad para el derrumbe 
+de la Urbanización Las Lomas en el municipio de Ceiba, Puerto Rico, 
+incluidos un ráster de sombreado del estudio de lidar de 2016, vista 
+aérea de la misma localización, conjunto de datos del mapa de 
+susceptibilidad final superpuesto en el ráster de sombreado, conjunto 
+de datos del mapa de susceptibilidad final superpuesto en la imagen 
+aérea, fotografía del escarpe y mapa que muestra la ubicación del área.......................59
+	
+41.	 Ejemplo del modelo final del Índice de Susceptibilidad para el lugar del 
+derrumbe en la carretera PR–143 kilómetro 56.2 en el municipio de 
+Barranquitas, Puerto Rico, incluidos un ráster de sombreado del estudio 
+de lidar de 2016, vista aérea de la misma localización, conjunto de datos 
+del mapa de susceptibilidad final superpuesto en el ráster de sombreado, 
+conjunto de datos del mapa de susceptibilidad final superpuesto en la 
+imagen aérea, fotografía del escarpe y mapa que muestra la ubicación 
+del área.........................................................................................................................................61
+	
+42.	 Ejemplo del modelo final del Índice de Susceptibilidad para un derrumbe 
+provocado por el huracán María en el centro urbano de Utuado, Puerto Rico, 
+incluidos un ráster de sombreado del estudio de lidar de 2016, vista aérea 
+de la misma localización, conjunto de datos del mapa de susceptibilidad 
+final superpuesto en el ráster de sombreado, conjunto de datos del mapa 
+de susceptibilidad final superpuesto en la imagen aérea, fotografía del 
+lugar y mapa que muestra la ubicación del área..................................................................63
+	
+ 43.	 Ejemplo del modelo final del Índice de Susceptibilidad para un derrumbe 
+a lo largo de la carretera PR–2 kilómetro 209.3 en el municipio de Guayanilla, 
+Puerto Rico, incluidos un ráster de sombreado del estudio de lidar de 2016, 
+vista aérea de la misma localización, conjunto de datos del mapa de 
+susceptibilidad final superpuesto en el ráster de sombreado, conjunto 
+de datos del mapa de susceptibilidad final superpuesto en la imagen aérea, 
+fotografía del lugar y mapa que muestra la ubicación del área.........................................65
+
+
+=== page 9 ===
+vii
+Tablas
+	
+1.  Ejemplos hipotéticos de un conjunto de valores de la razón de frecuencia y 
+los valores correspondientes del Índice de Susceptibilidad para un grupo dado 
+de cualquier factor...........................................................................................................................19
+	
+2.  Datos utilizados en los análisis de la razón de frecuencia..................................................20
+	
+3.  Resultados de los análisis de la razón de frecuencia para factores que 
+contribuyen potencialmente a deslizamientos de tierra......................................................23
+	
+4.  Valores del Índice de Susceptibilidad para factores que contribuyen 
+potencialmente a deslizamientos de tierra.............................................................................39
+	
+5.  Resultados de la comparación entre el mapa de susceptibilidad y las 
+ubicaciones de los deslizamientos en el inventario del huracán María...........................51
+	
+6.  Factores considerados en los mapas cuantitativos de susceptibilidad a 
+deslizamientos de tierra en Puerto Rico.................................................................................55
+	
+7.  Comparación entre el rendimiento de los mapas de susceptibilidad a 
+deslizamientos de tierra en Puerto Rico y el inventario del huracán María.....................55
+Factores de Conversión
+Sistema anglosajón de unidades al Sistema Internacional de Unidades
+Multiplica
+Por
+Para obtener
+Área
+acre
+0.004047
+kilómetro cuadrado (km2)
+Sistema Internacional de Unidades al sistema anglosajón de unidades
+Multiplica
+Por
+Para obtener
+Largo
+centímetro (cm)
+0.3937
+pulgada (in.)
+milímetro (mm)
+0.03937
+pulgada (in.)
+metro (m)
+3.281
+pie (ft) 
+kilómetro (km)
+0.6214
+milla (mi)
+Área
+kilómetro cuadrado (km2)
+247.1
+acre
+Volumen
+metro cúbico (m3)
+264.2
+galón (gal) 
+metro cúbico (m3)
+0.0002642
+millón de galones (Mgal) 
+metro cúbico (m3)
+35.31
+pie cúbico (ft3)
+metro cúbico (m3)
+1.308
+yarda cúbica (yd3) 
+Datum
+La información de las coordenadas horizontales está referenciada al “World Geodetic System” 
+de 1984 (WGS84).
+
+
+=== page 10 ===
+viii
+Abreviaturas
+°	
+grado
+AUC	
+área bajo la curva
+DEM	
+modelo digital de elevación
+FR	
+razón de frecuencia 
+GAP	
+Proyecto de Análisis Gap de Puerto Rico
+KSH	
+K. Stephen Hughes
+lidar	
+detección y alcance de luz
+MUKEY	
+clave de la unidad de mapa 
+NASA	
+Administración Nacional de la Aeronáutica y del Espacio 
+SI	
+Índice de Susceptibilidad 
+SIA	
+valor agregado del SI
+SIAm	
+el valor final modificado del SI en cada píxel de 5 m en toda la isla
+SMAP	
+“Soil Moisture Active Passive” 
+USGS	
+Servicio Geológico de los Estados Unidos
+
+
+=== page 11 ===
+Mapa de Susceptibilidad a Deslizamientos de Tierra 
+Desencadenados por Precipitación Intensa en Puerto Rico
+Por K. Stephen Hughes1 y William H. Schulz2 
+Resumen Ejecutivo
+Puerto Rico es vulnerable a los deslizamientos de tierra. Este reporte resume la creación de un nuevo modelo de alta resolución 
+de susceptibilidad a deslizamientos de tierra inducidos por precipitación para la isla principal. La isla principal de Puerto Rico se 
+clasificó en una escala de píxeles de 5 metros en las categorías de susceptibilidad Baja, Moderada, Alta, Muy Alta y Extremadamente 
+Alta a deslizamientos de tierra durante y poco después de una precipitación intensa, como la que se produce durante ciclones 
+tropicales. Los datos del mapa pueden descargarse como archivos georreferenciados en múltiples formatos por el público o agencias 
+del gobierno y pueden utilizarse en una plataforma de sistemas geográficos de información. El modelo está diseñado para el uso en 
+planificación, desarrollo y manejo de emergencias. El mapa resalta áreas susceptibles a deslizamientos de tierra que puedan requerir 
+una evaluación adicional de lugares específicos por profesionales licenciados. 
+Este mapa resalta una importante colaboración entre el Servicio Geológico de los Estados Unidos y el Departamento de 
+Geología en la Universidad de Puerto Rico, Recinto Universitario de Mayagüez, que se materializó luego de los destructivos 
+huracanes Irma y María en septiembre de 2017. Un inventario de más de 70,000 derrumbes causados por el huracán María (Hughes 
+y otros, 2019) representa uno de los productos iniciales de esta colaboración y fue un conjunto de datos esencial para el modelo 
+descrito en este reporte. Las características de los derrumbes identificados en el inventario se analizaron estadísticamente para pro­
+ducir valores del Índice de Susceptibilidad para varios factores geoespaciales combinados para formar el nuevo mapa. El modelo 
+final muestra cómo se pueden utilizar los datos obtenidos luego de un desastre para entender mejor los riesgos y peligros futuros. 
+El proyecto se benefició de diversa retroalimentación entre colegas en el Servicio Geológico de los Estados Unidos, la Universidad 
+de Puerto Rico, Recinto Universitario de Mayagüez, y agencias de gobierno en Puerto Rico. Además, el inventario y estudio actual 
+satisfacen las secciones (a), (b), (c), (d) e (i) del Artículo 4 de la Ley Número 24 del 2008: Ley del Protocolo para la Mitigación 
+de Riesgos por Deslizamientos de Terreno de Puerto Rico. El mapa de susceptibilidad también representa un paso importante para 
+entender la erosión, sedimentación y peligros que surgen a consecuencia de lluvias fuertes en Puerto Rico y los trópicos.
+Resumen
+Los deslizamientos de tierra en Puerto Rico van de eventos con pocos efectos a eventos mortales. La modificación agrícola 
+y urbana en el paisaje durante siglos ha perturbado muchas laderas inestables en la isla tropical. Uno de los desencadenantes 
+principales del movimiento de masa en la isla es la precipitación intensa asociada con sistemas atmosféricos tropicales. La 
+posición geográfica y topografía rugosa de Puerto Rico hacen que millones de residentes sean vulnerables a extensos eventos de 
+deslizamientos de tierra. En este estudio se utilizó el método de la razón de frecuencia para producir un modelo de alta resolu­
+ción (5 metros) y de susceptibilidad a deslizamientos de tierra inducidos por precipitación de alta intensidad. Los conjuntos de 
+datos utilizados en el modelo incluyeron un inventario de deslizamientos de tierra de la isla entera creado a partir de imágenes 
+obtenidas luego de que los huracanes Irma y María impactaran la isla durante septiembre de 2017, inclinación de la pendiente, 
+curvatura de la superficie, tipo de suelo, terreno geológico, precipitación media anual, uso del terreno, humedad del suelo y 
+distancia a carreteras y cuerpos de agua. El producto final de los datos (Placa 1) es una representación estadísticamente viable 
+del lugar estimado del comienzo de los derrumbes durante o poco después de una precipitación intensa, con un valor robusto de 
+0.87 del área bajo la curva característica operativa del receptor. Los valores de píxel del ráster del modelo de salida se agruparon 
+en grupos de 100 cuantiles de igual área, y luego se clasificaron en clases de susceptibilidad Baja, Moderada, Alta, Muy Alta 
+y Extremadamente Alta. La clasificación de susceptibilidad Extremadamente Alta representa el 1 por ciento más vulnerable de 
+la isla, mientras que las clasificaciones de susceptibilidad Muy Alta, Alta, Moderada y Baja comprenden el 9, 20, 30 y 40 por 
+1Departamento de Geología, Universidad de Puerto Rico - Recinto Universitario de Mayagüez.
+2Servicio Geológico de los Estados Unidos.
+
+
+=== page 12 ===
+2    Mapa de Susceptibilidad a Deslizamientos de Tierra Desencadenados por Precipitación Intensa en Puerto Rico
+ciento de la isla, respectivamente. El mapa de susceptibilidad tiene como propósito ser de asistencia en futura planificación de 
+desarrollo, medidas de mitigación y respuesta de emergencia luego de un evento; sin embargo, no es un sustituto para evalu­
+aciones de estabilidad de taludes hechas en lugares específicos por geólogos e ingenieros licenciados. Además, este mapa no 
+presenta las zonas donde el material del deslizamiento de tierra puede viajar luego de movilizarse, y que puedan estar en alto 
+peligro; tampoco representa necesariamente las zonas en donde los deslizamientos de tierra pueden ocurrir durante terremotos o 
+movimientos de masa desencadenados por precipitación prolongada y de intensidad relativamente baja.
+Introducción
+Puerto Rico (18.25°N., 66.50°W.) es un territorio caribeño de los Estados Unidos con un área aproximada de 9,000 kilómetros 
+cuadrados (km2), y es la isla más al este del archipiélago de las Antillas Mayores. El hogar de más de 3 millones de ciudadanos, la 
+densidad poblacional del archipiélago es la cuarta más alta de cualquier estado de los Estados Unidos o jurisdicción estatal equiva­
+lente, superada solo por el Distrito de Columbia, Nueva Jersey y Rhode Island (U.S. Census Bureau, 2010). A diferencia de estos 
+lugares, la mayoría del paisaje puertorriqueño es montañoso, como consecuencia de su ubicación en el margen tectónicamente 
+activo de las placas de Norteamérica y el Caribe. Una ancha y discontinua planicie costera rodea un interior rugoso en donde los 
+picos más altos de la isla principal sobrepasan los 1,300 metros (m) sobre el nivel del mar y se encuentran a 150 kilómetros de 
+(km) de la trinchera de Puerto Rico, cuya profundidad es mayor de 8,000 m y marca el límite de la placa tectónica. El terreno de la 
+isla está demarcado por la Cordillera Central orientada de este a oeste (fig. 1), la cual es la principal división fluvial de norte a sur, 
+y la Sierra de Luquillo que se encuentra en la zona noreste del territorio. Debido a la topografía rugosa de alto relieve que cubre 
+la mayor parte de la superficie de la tierra y el relativamente alto riesgo de condiciones climáticas o tectónicas que pueden inducir 
+deslizamientos de tierra, los millones de residentes en Puerto Rico tienen una probabilidad desproporcional y más alta de sufrir los 
+efectos de los movimientos de masa que sus contrapartes en los Estados Unidos continentales (Jibson, 1987).
+El propósito del mapa de susceptibilidad a deslizamientos de tierra presentado en este reporte (Placa 1) es proveer datos 
+de peligro de alta resolución (píxel de 5 m) que puedan ser utilizados directamente por ciudadanos y agencias del gobierno para 
+evaluar y planificar efectivamente para futuros eventos de precipitación extrema que causen extensas fallas de taludes en la isla 
+principal del territorio. Dado que los pronósticos de ciclones tropicales a largo plazo predicen eventos de alta intensidad a mayor 
+frecuencia que muy probablemente afectarán directamente a Puerto Rico en el futuro (Knutson y otros, 2010; Jennings y otros, 
+2014; Keellings y Hernández Ayala, 2019; Ramos-Scharrón y Arima, 2019), este mapa de susceptibilidad a deslizamientos de 
+tierra puede utilizarse como una herramienta para evitar potencialmente la pérdida de vidas y propiedades.
+Trasfondo
+Movimientos de Masa en Puerto Rico
+Los movimientos de masa presentan peligros persistentes en Puerto Rico. Los derrumbes, caídas de rocas, asentamientos, 
+flujos y otros movimientos de masa son responsables de las pérdidas de vida humana, propiedad privada, rutas de transpor­
+tación, infraestructura de utilidades y aislamiento temporero de comunidades remotas a través de esta isla caribeña densam­
+ente poblada y rugosa (por ejemplo, Jibson, 1987; Larsen, 2012, Bessette-Kirton y otros, 2019). En este reporte se utilizan los 
+términos “deslizamiento de tierra” o “derrumbe” para incluir y referirse a todo tipo de fallas de taludes. El interior montañoso 
+de la isla está en mayor riesgo a deslizamientos de tierra; sin embargo, los deslizamientos de tierra también presentan riesgos en 
+el extenso terreno del carso y zonas costeras marcadas por acantilados empinados y terrazas. El desastre del deslizamiento de 
+tierra de Mameyes en Ponce en 1985 (fig. 2), que acabó con al menos 129 vidas, sirve como un recordatorio de la vulnerabilidad 
+a derrumbes en la isla y continúa siendo el evento de deslizamiento de tierra más fatal que ha ocurrido en una jurisdicción de 
+los Estados Unidos (Jibson, 1986; Silva-Tulla, 1986). Grandes deslizamientos de tierra como el ejemplo de Mameyes existen en 
+otros lugares alrededor de la isla (figs. 3 y 4), entre ellos, Cerca del Cielo (Wang, 2012, 2013; Rivera Santiago, 2015), la represa 
+del lago Guajataca (Monroe, 1967; Silva-Tulla y otros, 2018), El Yunque (Wang y otros, 2013), la carretera PR-10 en Utuado 
+(Rodríguez-Pérez y otros, 1988; Deere y otros, 1989), la carretera PR-9 en Ponce (García López, 2018) y dispersos a lo largo del 
+escarpe cársico del sur (Monroe, 1964). Los movimientos de tierra poco profundos usualmente se movilizan en flujos canaliza­
+dos que proveen sedimentos directamente a la red fluvial y ocurren a mayor frecuencia y extensión (figs. 5-9; Campbell y otros, 
+1985; Jibson, 1986, 1989; Larsen y Simon, 1990, 1993; Simon y otros, 1990; Larsen y Torres Sánchez, 1992; Larsen y Santiago 
+Román, 2001; Pando y otros, 2005; Larsen, 2012; Hughes y Morales Vélez, 2017; Morales Vélez y Hughes, 2018; Silva-Tulla y 
+otros, 2018; Bessette-Kirton y otros, 2019). La entrada de sedimento liberado en un sistema de río también tiene consecuencias 
+negativas relacionadas a la sedimentación, particularmente en cuencas hidrográficas con embalses confinados (por ejemplo, 
+Soler-López, 2000; Rodríguez Feliciano y otros, 2019).
+
+
+=== page 13 ===
+Introducción    3
+ARE
+UTU
+PON
+CIA
+COA
+SAL
+SSB
+RIO
+YAU
+ADJ
+CBR
+ISA
+JDZ
+LAJ
+LAR
+GMA
+ORO
+YAB
+CAG
+MAY
+SLO
+CAY
+SJU
+PAT
+JAY
+SGM
+VIL
+NAG
+VBA
+BAY
+CAR
+LPI
+PEN
+MOC
+LMA
+CID
+HAT
+SIB
+CAM
+MAN
+HUM
+COR
+GNA
+ANA
+AIB
+CEI
+AGL
+SAB
+GUA
+MOR
+FAJ
+MAR
+BAQ
+CAN
+TAL
+VAL
+AGA
+AGB
+JUN
+NAR
+GUR
+GYB
+LUQ
+COM
+LOI
+TBA
+QUE
+DOR
+TRU
+MAU
+BAR
+RIN
+FLO
+ARY
+HOR
+CAT
+66°W
+66°30'W
+67°W
+18°30'N
+18°15'N
+18°N
+0
+10
+5
+km
+Elevation (m)
+1,300
+0
+Florida
+C
+O
+R
+D
+I
+L
+L
+E
+R
+A
+ 
+C
+E
+N
+T R
+A
+L
+K a r s t t e r r a i n
+Sierra de
+Luquillo
+Great Northern Puerto     Rico Fault Zone
+Great Southern Puerto Rico Fault Zone
+, 2017). La Cordillera Central que va de este oeste es la característica topográfica 
+íos al norte que desembocan en el océano Atlántico 
+ficie de la isla. El Bosque Nacional El 
+chipiélago de las Antillas Mayores y se encuentra 
+imadas de la Gran Zona de Falla del Norte de 
+on adaptadas de Zachariasen y von Hillebrandt-
+opografía de Puerto Rico, territorio de los Estados Unidos (U.S. Geological Survey
+T
+ 
+Figura 1.
+principal en la isla. Sobrepasa los 1,300 metros (m) sobre el nivel del mar y es la división de drenaje principal entre los r
+y aquellos al sur que desembocan en el Mar Caribe. El terreno del carso norteño cubre aproximadamente 20 por ciento de la super
+unque se encuentra en la prominente Sierra de Luquillo al este de Puerto Rico. Puerto Rico es la región más oriental del ar
+Y
+aproximadamente a 1,600 kilómetros (km) al sureste del estado de Florida (ver mapa complementario). Las localizaciones aprox
+Puerto Rico y la Gran Zona de Falla del Sur de Puerto Rico (GNPRFZ y GSPRFZ respectivamente, por sus siglas en inglés) s
+Andrade (2005). La explicación de las abreviaturas de los municipios se encuentra en el apéndice 1.
+
+
+=== page 14 ===
+4    Mapa de Susceptibilidad a Deslizamientos de Tierra Desencadenados por Precipitación Intensa en Puerto Rico
+ada en octubre de 1985 por 
+Escarpe y cuerpo del deslizamiento de tierra masivo de Mameyes en Ponce, Puerto Rico, en 1985 (18.024, −66.619). Fotografía tom
+ 
+Figura 2.
+James Joyce, Universidad de Puerto Rico, Recinto Universitario de Mayagüez, utilizada con autorización. Vista al oeste.

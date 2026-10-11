@@ -1,0 +1,110 @@
+Resultados y Discusión    51
+Rendimiento del Mapa
+El uso y la experiencia indican que los mapas de susceptibilidad a deslizamientos de tierra se comprenden mejor cuando la 
+susceptibilidad se clasifica en varios grupos. Las clasificaciones de susceptibilidad Baja, Moderada, Alta, Muy Alta y Extremada­
+mente Alta a deslizamientos de tierra se asignaron luego de agrupar los datos del ráster del SIAm en 100 cuantiles de igual área. El 
+esquema de categorización se muestra en la tabla 5. El 40 por ciento más bajo de los valores de píxeles para toda la isla se considera 
+representativo de áreas de susceptibilidad baja. El rango de percentiles de 40–70 corresponde a zonas de susceptibilidad moderada. 
+El rango de percentiles de 70–90 se clasifica como uno de susceptibilidad alta. El 10–1 por ciento más alto de los valores de píxeles 
+se clasifica como uno de vulnerabilidad muy alta, y el 1 por ciento más alto se clasifica como uno con un potencial de fallas de 
+pendiente extremadamente alto. El esquema de clasificación se examinó en detalle a través de la isla en lugares conocidos donde 
+ocurrieron derrumbes y es consistente con la experiencia de los autores en el campo. El mapa final se provee como Placa 1.
+Los valores finales del modelo del SIA y SIAm se calcularon con solo el 75 por ciento del inventario de deslizamientos. El 25 
+por ciento restante de lugares con deslizamientos se utilizó para probar independientemente la validez del modelo. Los datos se 
+utilizaron para generar gráficas ROC para calcular los valores del área bajo la curva (AUC), los cuales se utilizan comúnmente para 
+evaluar el modelaje de peligro de las pendientes (por ejemplo, Lepore y otros, 2012; Xu y otros, 2012; Li y otros, 2016; Regmi y 
+Poudel, 2016). Las gráficas ROC se generaron en incrementos de 5 para el rango completo (−50 a 20) de valores del SIA/SIAm. La 
+razón de verdadero positivo para un límite dado de valores del SIA/SIAm fue el número de deslizamientos con valores del SIA/SIAm 
+mayores que cualquier incremento dado (verdaderos positivos) dividido entre el número total de deslizamientos. La razón de 
+falso positivo para un incremento dado de valores del SIA/SIAm fue el número total de píxeles en el ráster del SIA/SIAm, del cual 
+se restaron el número de deslizamientos (verdaderos positivos) y número de píxeles con valores más bajos que el límite, y esta 
+diferencia se dividió entre el número total de píxeles en el ráster del SIA/SIAm. Los valores del AUC pueden variar desde 0.5 a 1.0 y 
+cuantificar las predicciones falsas contra las ciertas de un modelo. Un valor de 1.0 indica un rendimiento perfecto del modelo y un 
+valor de 0.5 corresponde a un modelo que es equivalente a una predicción aleatoria (Fawcett, 2006). El valor del AUC para el SIA 
+y SIAm se comparó con el AUC solamente para el factor de la pendiente (fig. 36). El análisis de la pendiente produce únicamente un 
+valor del AUC de 0.83. Las AUC son mayores para el SIA y SIAm, con valores de 0.88 y 0.87, respectivamente. El AUC del SI com­
+puesto para los factores distintos a la pendiente y SMAP (figs. 36 y 37) es 0.94. Esta verificación indica que el modelo es estadísti­
+camente viable y proporciona una predicción mejorada en comparación con un modelo que solo incluye la pendiente. La pendiente 
+representa casi el 50 por ciento del modelo final. Los factores distintos a la pendiente y SMAP también representan casi el 50 por 
+ciento del modelo final de susceptibilidad, y en conjunto producen el valor más alto del AUC del análisis. Un mapa compuesto de 
+estos siete factores (curvatura, proximidad a la superficie de carretera, terreno geológico, precipitación media anual, proximidad al 
+canal fluvial, cobertura del terreno y clasificación del suelo) muestra que las zonas de mayor correlación se encuentran en la región 
+interior occidental (fig. 37). El modelo compuesto del SI de factores distintos a la pendiente no se adoptó como el modelo preferido, 
+aunque tiene un valor del AUC mucho más alto (0.94), dado que la importancia de la pendiente no puede descartarse de ningún 
+modelo de movimiento de masa (por ejemplo, Carson y Petley, 1970). El bajo rendimiento del conjunto de datos que involucra 
+únicamente la pendiente, indicado por el valor más bajo del AUC, se debe probablemente a la abundancia de pendientes muy altas 
+en los flancos de los mogotes, sumideros, zanjones y cañones en el terreno del carso que no tienden a experimentar los mismos 
+procesos de meteorización y movimiento de masa que el resto de la isla, y debido a factores descritos previamente que se capturan 
+mediante la inclusión de factores distintos a la pendiente y SMAP. La disminución en el AUC de SIA a SIAm muestra que la incor­
+poración de los datos de SMAP en el modelo disminuye levemente su rendimiento ante el inventario del evento del huracán María, 
+tal como se esperaba. El factor de SMAP se incorporó en el SIAm con la intención de atenuar el efecto de las condiciones de lugares 
+específicos relacionadas al único evento utilizado para desarrollar este mapa. La incorporación de los datos SMAP también permite 
+evaluar la humedad del suelo variable de futuros eventos y sus efectos en los derrumbes, tal como se describe en la sección de “Uso 
+y Limitaciones del Mapa de Susceptibilidad a Deslizamientos de Tierra”.
+Tabla 5.  Resultados de la comparación entre el mapa de susceptibilidad y las ubicaciones de los deslizamientos en el inventario del 
+huracán María.
+[SI, Índice de Susceptibilidad; km2, kilómetro cuadrado; %, por ciento; #, número; —, no aplica]
+Clasificación de 
+Susceptibilidad
+Rango aproximado 
+del SI 
+Percentil
+Área 
+(km2)
+Área 
+(%)
+Deslizamientos en 
+la categoría (#)1
+Deslizamientos en 
+la categoría (%)1
+Densidad 
+(deslizamientos/km2)1
+Baja
+−4.84–−1.6
+0–40
+3481.2
+40
+843
+1.2
+0.2
+Moderada
+−1.6– −0.1
+40–70
+2609.3
+30
+7,108
+10.0
+2.7
+Alta
+0.1–0.9
+70–90
+1740.5
+20
+20,988
+29.4
+12.1
+Muy Alta
+0.90–1.40
+90–99
+782.7
+9
+31,850
+44.6
+40.7
+Extremadamente Alta
+1.40–1.97
+99–100
+86.5
+1
+10,642
+14.9
+123.0
+Total
+—
+—
+8700.2
+100
+71,431
+100.1
+—
+1Valores calculados utilizando el inventario del evento del huracán María (Hughes y otros, 2019).

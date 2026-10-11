@@ -1,0 +1,1106 @@
+-200
+-800
+-1600
+-200
+-400
+-600
+-800
+-200
+-800
+-1400
+-1800
+-2000
+-1800
+-1600
+-1400
+-2000
+-1200
+-1000
+-800
+-400
+-600
+-1000
+-1200
+-1200
+-1000
+-800
+-200
+La topografía base se obtuvo del U.S. Geological Survey 3D Elevation 
+Program. La batimetría se obtuvo del NOAA National Geophysical Data 
+Center. Los cuerpos de agua se obtuvieron del U.S. Geological Survey 
+National Hydrography Dataset. Las carreteras se obtuvieron del Puerto 
+Rico Department of Transportation and Public Works
+World Geodetic System of 1984 (WGS84)
+DESARROLLO DEL MAPA DE SUSCEPTIBILIDAD A 
+DESLIZAMIENTOS DE TIERRA
+Los deslizamientos de tierra que ocurren comúnmente en Puerto Rico 
+durante o poco después de una precipitación intensa presentan amenazas 
+significativas al entorno construido y a la seguridad humana (por ejemplo, 
+Jibson, 1986; Larsen y Torres Sánchez, 1992; Bessette-Kirton y otros, 2019). 
+Esto se demostró en septiembre de 2017, cuando el huracán María provocó 
+más de 70,000 derrumbes (Hughes y otros, 2019) a través de la isla principal 
+de Puerto Rico, lo que causó pérdidas de vida y destrucción extensa. Para 
+desarrollar este mapa con resolución de 5 metros que muestra la 
+susceptibilidad relativa a la ocurrencia de deslizamientos durante y poco 
+después de las lluvias torrenciales, utilizamos un enfoque estadístico (véase 
+folleto adjunto que acompaña este mapa para la metodología detallada). 
+Principalmente, analizamos el inventario de deslizamientos provocados por 
+el huracán María y un conjunto de datos geoespaciales: la pendiente y 
+curvatura de la superficie, la proximidad a las carreteras y los cauces 
+fluviales, los terrenos geológicos, la clasificación de suelos, la precipitación 
+media anual, la cobertura de terrenos, y el contenido de la humedad del suelo 
+estimada como resultado del huracán María. El contenido de la humedad del 
+suelo estimada como resultado del huracán María se utilizó para atenuar los 
+efectos del uso de un inventario de deslizamientos causados por un solo 
+evento en el mapa de susceptibilidad final. La clasificación de 
+Extremadamente Alta ocurre sobre un 1 por ciento de la isla, mientras que las 
+clasificaciones de Muy Alta, Alta y Moderada ocurren sobre 9, 20 y 30 por 
+ciento de la isla, respectivamente.  
+USO Y LIMITACIONES DEL MAPA DE 
+SUSCEPTIBILIDAD A DESLIZAMIENTOS DE TIERRA
+Este mapa muestra la susceptibilidad relativa estimada a la ocurrencia 
+de deslizamientos de tierra durante o poco después de una precipitación 
+intensa, como la que se produce durante ciclones tropicales. El mapa busca 
+ilustrar la amenaza relativa y potencial de los deslizamientos de tierra para 
+proveer un marco de referencia para evaluaciones de susceptibilidad en 
+lugares específicos y ayudar con la planificación para medidas de mitigación 
+más adelante en el futuro. Por ejemplo, localizaciones con alta 
+susceptibilidad a deslizamientos pueden (1) ser excluidas de futuros 
+desarrollos; (2) requerir estudios de estabilidad de taludes previo al 
+desarrollo, nivelación, cimentación, diseño de drenaje y construcción que 
+tomen en consideración el potencial de inestabilidad de taludes; (3) ser objeto 
+de evaluación y mitigación de condiciones potencialmente adversas; (4) ser 
+monitoreadas para detectar signos de inicio de deslizamientos, tales como 
+grietas en carreteras y estructuras, postes y árboles inclinados, y líneas de 
+agua y alcantarillados rotos; y/o (5) ser consideradas para desalojo previo a la 
+precipitación pronosticada conducente a deslizamientos y para esfuerzos de 
+respuesta de emergencia luego de dicha lluvia intensa. Cuando se utiliza en 
+consideración a eventos atmosféricos específicos, el mapa debe evaluarse 
+junto con las condiciones de precipitación específicas del evento, siendo los 
+deslizamientos de tierra más probables donde ocurren mayores cantidades de 
+precipitación en localizaciones con mayor susceptibilidad a deslizamientos 
+de tierra. Además, los datos estimados de la humedad de suelos en la zona 
+radicular de la misión “Soil Moisture Active Passive” de la Administración 
+Nacional de la Aeronáutica y del Espacio (https://smap.jpl.nasa.gov/ 
+accedido por última vez el 26 de diciembre de 2019) pueden combinarse con 
+los estimados de susceptibilidad a deslizamientos para este propósito (véase 
+“Uso y Limitaciones del Mapa de Susceptibilidad a Deslizamientos de Tierra 
+en el folleto que acompaña este mapa para una metodología más detallada). 
+El mapa no es un sustituto de investigaciones de lugares específicos y 
+estabilidad de taludes por geólogos e ingenieros licenciados. Además, 
+muchos de los deslizamientos en Puerto Rico se mueven lejos de las 
+localizaciones de donde se originan y pueden ocasionar la pérdida de vidas y 
+propiedades a medida que avanzan cuesta abajo; el mapa no muestra esta 
+amenaza significativa como resultado de la movilidad de deslizamientos. 
+Finalmente, las ubicaciones de deslizamientos detonados por terremotos o 
+precipitación prolongada y de intensidad relativamente baja pueden diferir 
+considerablemente de ubicaciones en el mapa con susceptibilidad Alta, Muy 
+Alta y Extremadamente Alta. 
+La mayoría de los deslizamientos en Puerto Rico que ocurren a 
+consecuencia de las lluvias torrenciales son poco profundos (a varios metros 
+de profundidad) y ocurren en material no consolidado (suelo y saprolita) 
+encima de rocas (por ejemplo, Jibson, 1989; Larsen y Torres Sánchez, 1992; 
+Bessette-Kirton y otros, 2019). Estos son los tipos de movimiento de masa 
+mejor representados por el mapa de susceptibilidad a deslizamientos de tierra 
+ya que este se produjo mediante un inventario de los deslizamientos causados 
+por el huracán María (Hughes y otros, 2019) y muchos de estos 
+deslizamientos fueron poco profundos. El huracán María también provocó 
+deslizamientos de tierra en rocas y algunos alcanzaron profundidades de 
+EXPLICACIÓN
+SUSCEPTIBILIDAD A DESLIZAMIENTOS DE TIERRA
+Baja
+Moderada
+Alta
+Muy Alta
+Extremadamente Alta
+CARRETERAS Y LÍMITES
+Autopistas
+Rutas primarias
+Rutas secundarias
+Rutas terciarias
+Límites municipales
+ESTRUCTURA REGIONAL
+Cuerpo de agua
+aproximadamente 30 metros (Bessette-Kirton y otros, 2019), por lo que el 
+mapa también muestra la susceptibilidad a deslizamientos de tierra más 
+profundos y en roca. Sin embargo, este tipo de movimiento de masa está 
+relativamente poco representado por el mapa de susceptibilidad dado que 
+pocos fueron provocados por el huracán María y, por ende, no proveyeron 
+medidas estadísticamente sólidas con las cuales pueden pronosticarse. El 
+trágico deslizamiento que ocurrió en Mameyes en el municipio de Ponce en 
+1985, que acabó con la vida de más de 129 personas (Silva-Tulla, 1986), es 
+un ejemplo de un tipo de deslizamiento de tierra probablemente poco 
+representado por el mapa de susceptibilidad. Además, muchos deslizamientos 
+en todo el mundo se desencadenan por actividad humana, tal como la 
+nivelación de laderas y redirección del drenaje. Dichas actividades locales no 
+pueden contemplarse en el mapa. 
+Común a casi todos los esfuerzos de modelaje, la exactitud del mapa de 
+susceptibilidad a deslizamientos de tierra se basa en cuán exactos y 
+completos son los datos de entrada empleados para su desarrollo. Entre otros, 
+anticipamos que las siguientes omisiones y condiciones afecten la exactitud 
+del mapa: (1) variabilidad de la resistencia del basamento rocoso y 
+propiedades hidrológicas, orientación y condición de discontinuidades dentro 
+de terrenos geológicos; (2) variabilidad de la resistencia del suelo y 
+propiedades hidrológicas dentro del tipo de suelo; (3) consideración de solo 
+algunas partes de la red de carreteras, como omisiones de la mayoría de las 
+carreteras, caminos y senderos de granjas no documentadas; y (4) el uso de 
+un modelo topográfico de 2015–2016, previo a los deslizamientos de tierra 
+causados por el huracán María y otros cambios topográficos. 
+REFERENCIAS CITADAS
+Bessette-Kirton, E.K., Cerovski-Darriau, C., Schulz, W.H., Coe, J.A., Kean, 
+J.W., Godt, J.W., Thomas, M.A., and Hughes, K.S., 2019, Landslides 
+triggered by Hurricane María—Assessment of an extreme event in Puerto 
+Rico: GSA Today, v. 29, no. 6, p. 4–10. [Also available at 
+https://www.geosociety.org/gsatoday/science/G383A/article.htm.]
+Hughes, K.S., Bayouth García, D., Martínez Milian, G.O., Schulz, W.H., and 
+Baum, R.L., 2019, Map of slope-failure locations in Puerto Rico after 
+Hurricane María: U.S. Geological Survey data release, accessed 
+September 12, 2019, at https://doi.org/10.5066/P9BVMD74.
+Jibson, R.W., 1986, Evaluation of landslide hazards resulting from the 
+5–8 October 1985, storm in Puerto Rico: U.S. Geological Survey 
+Open-File Report 86–26, 40 p. [Also available at 
+https://doi.org/10.3133/ofr8626.]
+Jibson, R.W., 1989, Debris flows in southern Puerto Rico, in Schultz, A.P., and 
+Jibson, R.W., eds., Landslide processes of the eastern United States and 
+Puerto Rico: Geological Society of America Special Paper 236, p. 29–55. 
+[Also available at https://doi.org/10.1130/SPE236-p29.]
+Larsen, M.C., and Torres Sanchez, A.J., 1992, Landslides triggered by 
+Hurricane Hugo in eastern Puerto Rico, September 1989: Caribbean 
+Journal of Science, v. 28, no. 3–4, p. 113–125.
+Silva-Tulla, F., 1986, The October 1985 landslide at Barrio Mameyes, Ponce, 
+Puerto Rico: Washington, D.C., National Academies Press, 14 p.
+Deslizamientos de tierra provocadas por el huracán María en Utuado, 2017. Fotografía por E. Bessette-Kirton, dominio público.
+Deslizamientos de tierra provocados por el huracán María en Corozal, 2017. Fotografía por W. Schulz, dominio público.
+·
+40
+·
+38
+·
+16
+·
+42
+·
+36
+·
+9
+·
+6
+·
+24
+·
+9
+·
+19
+·
+34
+·
+41
+·
+47
+·
+25
+·
+1
+·
+29
+·
+60
+·
+8
+·
+35
+·
+21
+·
+27
+·
+64
+·
+18
+·
+28
+·
+23
+·
+37
+·
+12
+·
+32
+·
+25
+·
+20
+·
+17
+·
+26
+·
+15
+·
+31
+·
+30
+·
+10
+·
+10
+·
+14
+·
+1
+·
+2
+·
+14
+·
+2
+·
+2
+·
+1
+·
+3
+·
+3
+·
+3
+·
+3
+·
+1
+·
+2
+·
+2
+I
+I
+111
+I
+I
+190
+I
+I
+101
+I
+I
+168
+I
+I
+104
+I
+I
+122
+I
+I
+122
+I
+I
+190
+I
+I
+138
+I
+I
+166
+I
+I
+199
+I
+I
+196
+I
+I
+192
+I
+I
+119
+I
+I
+195
+I
+I
+112
+I
+I
+194
+I
+I
+154
+I
+I
+107
+I
+I
+163
+I
+I
+118
+I
+I
+169
+I
+I
+119
+I
+I
+103
+I
+I
+164
+I
+I
+188
+I
+I
+149
+I
+I
+145
+I
+I
+113
+I
+I
+103
+I
+I
+131
+I
+I
+171
+I
+I
+162
+I
+I
+142
+I
+I
+173
+I
+I
+164
+I
+I
+110
+I
+I
+162
+I
+I
+173
+I
+I
+177
+I
+I
+176
+I
+I
+199
+I
+I
+151
+I
+I
+120
+I
+I
+173
+I
+I
+130
+I
+I
+113
+I
+I
+191
+I
+I
+155
+I
+I
+117
+I
+I
+165
+I
+I
+175
+I
+I
+106
+I
+I
+112
+I
+I
+153
+I
+I
+198
+I
+I
+114
+I
+I
+160
+I
+I
+167
+I
+I
+189
+I
+I
+129
+I
+I
+121
+I
+I
+119
+I
+I
+182
+I
+I
+100
+I
+I
+134
+I
+I
+101
+I
+I
+127
+I
+I
+144
+I
+I
+137
+I
+I
+120
+I
+I
+141
+I
+I
+179
+I
+I
+152
+I
+I
+159
+I
+I
+183
+I
+I
+185
+I
+I
+125
+I
+I
+108
+I
+I
+135
+I
+I
+150
+I
+I
+123
+I
+I
+174
+I
+I
+157
+I
+I
+110
+I
+I
+119
+I
+I
+139
+I
+I
+140
+I
+I
+132
+I
+I
+124
+I
+I
+165
+I
+I
+186
+I
+I
+116
+I
+I
+143
+I
+I
+129
+I
+I
+146
+I
+I
+172
+I
+I
+115
+I
+I
+109
+I
+I
+143
+I
+I
+119
+I
+I
+187
+I
+I
+181
+I
+I
+184
+I
+I
+111
+I
+I
+181
+I
+I
+105
+I
+I
+140
+I
+I
+102
+I
+I
+155
+I
+I
+123
+I
+I
+128
+I
+I
+156
+I
+I
+149
+I
+I
+129
+I
+I
+128
+I
+I
+123
+·
+53
+·
+53
+·
+54
+·
+5
+·
+5
+·
+53
+·
+66
+·
+53
+·
+22
+·
+52
+·
+22
+·
+22
+·
+52
+·
+52
+·
+52
+65°40' W
+65°40' W
+66° W
+66° W
+66°20' W
+66°20' W
+66°40' W
+66°40' W
+67° W
+67° W
+18°20' N
+18°20' N
+18° N
+18° N
+M a r C a r i b e
+M a r C a r i b e
+O c é a n o A t l á n t i c o
+O c é a n o A t l á n t i c o
+Adjuntas
+Aguada
+Aguadilla
+Aguas Buenas
+Aibonito
+Arecibo
+Arroyo
+Añasco
+Barceloneta
+Barranquitas
+Bayamón
+Cabo Rojo
+Caguas
+Camuy
+Canóvanas
+Carolina
+Cataño
+Cayey
+Ceiba
+Ciales
+Cidra
+Coamo
+Comerío
+Corozal
+Dorado
+Fajardo
+Florida
+Guayama
+Guayanilla
+Guaynabo
+Gurabo
+Hatillo
+Hormigueros
+Humacao
+Isabela
+Jayuya
+Juana Díaz
+Juncos
+Lajas
+Lares
+Las Marías
+Las Piedras
+Loíza
+Luquillo
+Manatí
+Maricao
+Maunabo
+Mayagüez
+Moca
+Morovis
+Naguabo
+Naranjito
+Orocovis
+Patillas
+Peñuelas
+Ponce
+Quebradillas
+Rincón
+Río Grande
+Salinas
+San Juan
+San Lorenzo
+San Sebastián
+Santa Isabel
+Toa Alta
+Toa Baja
+Trujillo Alto
+Utuado
+Vega Alta
+Vega Baja
+Villalba
+Yabucoa
+Yauco
+Guánica
+San Germán
+Sabana
+Grande
+Adjuntas
+Adjuntas
+Aguada
+Aguada
+Aguadilla
+Aguadilla
+Aguas Buenas
+Aibonito
+Aibonito
+Arecibo
+Arecibo
+Arroyo
+Arroyo
+Añasco
+Añasco
+Barceloneta
+Barceloneta
+Barranquitas
+Barranquitas
+Bayamón
+Bayamón
+Cabo Rojo
+Cabo Rojo
+Caguas
+Caguas
+Camuy
+Camuy
+Canóvanas
+Canóvanas
+Carolina
+Carolina
+Cataño
+Cataño
+Cayey
+Cayey
+Ceiba
+Ceiba
+Ciales
+Ciales
+Cidra
+Cidra
+Coamo
+Coamo
+Comerío
+Comerío
+Corozal
+Corozal
+Dorado
+Dorado
+Fajardo
+Fajardo
+Florida
+Florida
+Guayama
+Guayama
+Guayanilla
+Guayanilla
+Guaynabo
+Guaynabo
+Gurabo
+Gurabo
+Hatillo
+Hatillo
+Hormigueros
+Hormigueros
+Humacao
+Humacao
+Isabela
+Isabela
+Jayuya
+Jayuya
+Juana Díaz
+Juncos
+Juncos
+Lajas
+Lajas
+Lares
+Lares
+Las Marías
+Las Marías
+Las Piedras
+Loíza
+Loíza
+Luquillo
+Luquillo
+Manatí
+Manatí
+Maricao
+Maricao
+Maunabo
+Maunabo
+Mayagüez
+Mayagüez
+Moca
+Moca
+Morovis
+Morovis
+Naguabo
+Naguabo
+Naranjito
+Naranjito
+Orocovis
+Orocovis
+Patillas
+Patillas
+Peñuelas
+Peñuelas
+Ponce
+Ponce
+Quebradillas
+Quebradillas
+Rincón
+Rincón
+Río Grande
+Salinas
+Salinas
+San Juan
+San Juan
+San Lorenzo
+San Lorenzo
+San Sebastián
+San Sebastián
+Santa Isabel
+Toa Alta
+Toa Baja
+Trujillo Alto
+Trujillo Alto
+Utuado
+Utuado
+Vega Alta
+Vega Baja
+Villalba
+Villalba
+Yabucoa
+Yabucoa
+Yauco
+Yauco
+Guánica
+Guánica
+San Germán
+San Germán
+Sabana
+Sabana
+Grande
+Grande
+Adjuntas
+Aguada
+Aguadilla
+Aguas Buenas
+Aibonito
+Arecibo
+Arroyo
+Añasco
+Barceloneta
+Barranquitas
+Bayamón
+Cabo Rojo
+Caguas
+Camuy
+Canóvanas
+Carolina
+Cataño
+Cayey
+Ceiba
+Ciales
+Cidra
+Coamo
+Comerío
+Corozal
+Dorado
+Fajardo
+Florida
+Guayama
+Guayanilla
+Guaynabo
+Gurabo
+Hatillo
+Hormigueros
+Humacao
+Isabela
+Jayuya
+Juana Díaz
+Juncos
+Lajas
+Lares
+Las Marías
+Las Piedras
+Loíza
+Luquillo
+Manatí
+Maricao
+Maunabo
+Mayagüez
+Moca
+Morovis
+Naguabo
+Naranjito
+Orocovis
+Patillas
+Peñuelas
+Ponce
+Quebradillas
+Rincón
+Río Grande
+Salinas
+San Juan
+San Lorenzo
+San Sebastián
+Santa Isabel
+Toa Alta
+Toa Baja
+Trujillo Alto
+Utuado
+Vega Alta
+Vega Baja
+Villalba
+Yabucoa
+Yauco
+Guánica
+San Germán
+Sabana
+Grande
+Adjuntas
+Aguada
+Aguadilla
+Aguas Buenas
+Aibonito
+Arecibo
+Arroyo
+Añasco
+Barceloneta
+Barranquitas
+Bayamón
+Cabo Rojo
+Caguas
+Camuy
+Canóvanas
+Carolina
+Cataño
+Cayey
+Ceiba
+Ciales
+Cidra
+Coamo
+Comerío
+Corozal
+Dorado
+Fajardo
+Florida
+Guayama
+Guayanilla
+Guaynabo
+Gurabo
+Hatillo
+Hormigueros
+Humacao
+Isabela
+Jayuya
+Juana Díaz
+Juncos
+Lajas
+Lares
+Las Marías
+Las Piedras
+Loíza
+Luquillo
+Manatí
+Maricao
+Maunabo
+Mayagüez
+Moca
+Morovis
+Naguabo
+Naranjito
+Orocovis
+Patillas
+Peñuelas
+Ponce
+Quebradillas
+Rincón
+Río Grande
+Salinas
+San Juan
+San Lorenzo
+San Sebastián
+Santa Isabel
+Toa Alta
+Toa Baja
+Trujillo Alto
+Utuado
+Vega Alta
+Vega Baja
+Villalba
+Yabucoa
+Yauco
+Guánica
+San Germán
+Sabana
+Grande
+Mapa de Susceptibilidad a Deslizamientos de Tierra Desencadenados por Precipitación Intensa en Puerto Rico
+K. Stephen Hughes1 y William H. Schulz2
+1Universidad de Puerto Rico, Mayagüez, Puerto Rico;
+2U.S. Geological Survey
+U.S. Department of the Interior
+U.S. Geological Survey
+Open-File Report 2020−1022
+El folleto acompaña el mapa
+NORTE VERDADERO
+DECLINACIÓN EN EL
+CENTRO DE LA HOJA, 2019
+NORTE MAGNÉTICO
+°
+13.1
+MILLAS
+ESCALA
+UBICACIÓN DEL MAPA
+Para más información sobre esta publicación, contacte al
+Center Director, USGS Geologic Hazards Science Center
+Box 25046, Mail Stop 966
+Denver, CO 80225
+(303) 273-8579
+O visite la página web del Geologic Hazards Science Center en
+https://www.usgs.gov/centers/geohazards
+Para aprender sobre el USGS y sus productos de información visite
+http://www.usgs.gov/  
+1-888-ASK-USGS
+Para información de productos y pedidos visite 
+http://store.usgs.gov/
+Los archivos digitales del reporte están disponibles en https://doi.org/10.3133/ofr20201022
+Citación sugerida: Hughes, K.S., and Schulz, W.H., 2020, Map depicting susceptibility to landslides 
+triggered by intense rainfall, Puerto Rico: U.S. Geological Survey Open-File Report 2020–1022, 91 p., 
+1 plate, scale 1:150,000, https://doi.org/10.3133/ofr20201022.
+Datos asociados para esta publicación: Hughes, K.S., and Schulz, W.H., 2020, Results from 
+frequency- ratio analyses of soil classification and land use related to landslide locations in Puerto 
+Rico following Hurricane María: U.S. Geological Survey data release, 
+https://doi.org/10.5066/P9VK2FAL.
+ISSN 2331-1258 (en línea)
+https://doi.org/10.3133/ofr20201022
+El apoyo para la publicación fue proveído por el Science 
+Publishing Network, Denver Publishing Service Center
+El manuscrito fue aprobado para publicación el 3 de 
+Marzo de 2020
+Cualquier uso de nombres comerciales, empresas o 
+productos es solamente para fines descriptivos y no 
+implica el endoso del gobierno de EE.UU.
+Este mapa se ofrece solamente como una publicación 
+digital y en línea. Los usuarios deben tener en cuenta que 
+dadas las diferencias en los procesos de renderización y 
+la resolución de pixéles puede ocurrir una leve distorción 
+de la escala al verlo en la pantalla de una computadora o 
+al imprimirlo en un plóter electrónico, incluso cuando se 
+ve o se imprime en su escala de publicación destinada. 
+KILÓMETROS
+Por
+2020
