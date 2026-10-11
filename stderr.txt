@@ -1,0 +1,22 @@
+++ mktemp -d
++ cd /tmp/tmp.xTS13Lf8JT
++ UA='garita (github.com/webgpu-demos/garita)'
++ curl -sSL -A 'garita (github.com/webgpu-demos/garita)' -o pr.zip https://www.nhc.noaa.gov/gis/hazardmaps/PR_SLOSH_MOM_Inundation.zip
++ ls -la pr.zip
++ sha256sum pr.zip
++ mkdir z
++ cd z
++ unzip -o -q ../pr.zip
++ cd ..
++ find z -type f -printf '%s %p\n'
++ sort -k2
++ cat /home/runner/work/garita/garita/out/files.txt
++ mkdir -p /home/runner/work/garita/garita/out/side
++ find z -type f '!' -iname '*.tif' -size -400k -exec cp '{}' /home/runner/work/garita/garita/out/side/ ';'
++ pip install -q rasterio numpy pillow
++ tail -2
++ cat
++ python3 p.py
++ cat
++ python3 v.py
++ ls -la /home/runner/work/garita/garita/out

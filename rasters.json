@@ -1,0 +1,908 @@
+{
+ "PR_Category1_MOM_Inundation_HighTide.tif": {
+  "crs": "EPSG:4269",
+  "wkt": "GEOGCS[\"NAD83\",DATUM[\"North_American_Datum_1983\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6269\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4269\"]]",
+  "transform": [
+   8.983152799999983e-05,
+   0.0,
+   -67.32562373311394,
+   0.0,
+   -8.983152799999988e-05,
+   18.57019789422725
+  ],
+  "w": 31329,
+  "h": 10580,
+  "bounds": [
+   -67.32562373311394,
+   17.61978032798725,
+   -64.51129179240195,
+   18.57019789422725
+  ],
+  "dtype": [
+   "uint8"
+  ],
+  "nodata": 255.0,
+  "count": 1,
+  "colorinterp": [
+   "1"
+  ],
+  "block": [
+   [
+    128,
+    128
+   ]
+  ],
+  "compress": "Compression.lzw",
+  "tags": {
+   "AREA_OR_POINT": "Area",
+   "DataType": "Generic"
+  },
+  "btags": {
+   "RepresentationType": "THEMATIC",
+   "STATISTICS_COVARIANCES": "1.246378733911133",
+   "STATISTICS_MAXIMUM": "7",
+   "STATISTICS_MEAN": "2.2411189922175",
+   "STATISTICS_MINIMUM": "1",
+   "STATISTICS_SKIPFACTORX": "1",
+   "STATISTICS_SKIPFACTORY": "1",
+   "STATISTICS_STDDEV": "1.1164133347068"
+  },
+  "overviews": [
+   2,
+   4,
+   8,
+   16,
+   32,
+   64
+  ],
+  "colormap": "NULL color table",
+  "values": {
+   "1": 318573,
+   "2": 353174,
+   "3": 230156,
+   "4": 102986,
+   "5": 44484,
+   "6": 534,
+   "7": 2,
+   "255": 330410911
+  },
+  "bounds4326": [
+   -67.32562373311394,
+   17.61978032798725,
+   -64.51129179240195,
+   18.57019789422725
+  ],
+  "spots": {
+   "Catano waterfront": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Loiza Pinones": [
+    1,
+    [
+     1,
+     2,
+     255
+    ]
+   ],
+   "La Parguera": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Ponce Playa": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Old San Juan hill": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Caguas inland": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Isabel Segunda Vieques": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Esperanza Vieques": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Dewey Culebra": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Mayaguez waterfront": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Fajardo Puerto Real": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Mona island": "outside"
+  },
+  "valid_rows": [
+   605,
+   7669
+  ],
+  "valid_cols": [
+   605,
+   23426
+  ],
+  "east_islands_window": [
+   2228,
+   19209,
+   5790,
+   23662
+  ],
+  "east_islands_values": {
+   "1": 20260,
+   "2": 35031,
+   "3": 12302,
+   "4": 2364,
+   "5": 65,
+   "6": 1,
+   "255": 15791563
+  }
+ },
+ "PR_Category2_MOM_Inundation_HighTide.tif": {
+  "crs": "EPSG:4269",
+  "wkt": "GEOGCS[\"NAD83\",DATUM[\"North_American_Datum_1983\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6269\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4269\"]]",
+  "transform": [
+   8.983152799999983e-05,
+   0.0,
+   -67.32562373311394,
+   0.0,
+   -8.983152799999988e-05,
+   18.57019789422725
+  ],
+  "w": 31329,
+  "h": 10580,
+  "bounds": [
+   -67.32562373311394,
+   17.61978032798725,
+   -64.51129179240195,
+   18.57019789422725
+  ],
+  "dtype": [
+   "uint8"
+  ],
+  "nodata": 255.0,
+  "count": 1,
+  "colorinterp": [
+   "1"
+  ],
+  "block": [
+   [
+    128,
+    128
+   ]
+  ],
+  "compress": "Compression.lzw",
+  "tags": {
+   "AREA_OR_POINT": "Area",
+   "DataType": "Generic"
+  },
+  "btags": {
+   "RepresentationType": "THEMATIC",
+   "STATISTICS_COVARIANCES": "2.139453430778848",
+   "STATISTICS_MAXIMUM": "8",
+   "STATISTICS_MEAN": "2.7581028237218",
+   "STATISTICS_MINIMUM": "1",
+   "STATISTICS_SKIPFACTORX": "1",
+   "STATISTICS_SKIPFACTORY": "1",
+   "STATISTICS_STDDEV": "1.4626870583891"
+  },
+  "overviews": [
+   2,
+   4,
+   8,
+   16,
+   32,
+   64
+  ],
+  "colormap": "NULL color table",
+  "values": {
+   "1": 404989,
+   "2": 407246,
+   "3": 389435,
+   "4": 234924,
+   "5": 162849,
+   "6": 73656,
+   "7": 7203,
+   "8": 69,
+   "255": 329780449
+  },
+  "bounds4326": [
+   -67.32562373311394,
+   17.61978032798725,
+   -64.51129179240195,
+   18.57019789422725
+  ],
+  "spots": {
+   "Catano waterfront": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Loiza Pinones": [
+    2,
+    [
+     1,
+     2,
+     3,
+     255
+    ]
+   ],
+   "La Parguera": [
+    1,
+    [
+     1,
+     2,
+     3,
+     255
+    ]
+   ],
+   "Ponce Playa": [
+    2,
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "Old San Juan hill": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Caguas inland": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Isabel Segunda Vieques": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Esperanza Vieques": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Dewey Culebra": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Mayaguez waterfront": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Fajardo Puerto Real": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Mona island": "outside"
+  },
+  "valid_rows": [
+   605,
+   7669
+  ],
+  "valid_cols": [
+   605,
+   23426
+  ],
+  "east_islands_window": [
+   2228,
+   19209,
+   5790,
+   23662
+  ],
+  "east_islands_values": {
+   "1": 14506,
+   "2": 19306,
+   "3": 37204,
+   "4": 12077,
+   "5": 2949,
+   "6": 271,
+   "7": 5,
+   "255": 15775268
+  }
+ },
+ "PR_Category3_MOM_Inundation_HighTide.tif": {
+  "crs": "EPSG:4269",
+  "wkt": "GEOGCS[\"NAD83\",DATUM[\"North_American_Datum_1983\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6269\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4269\"]]",
+  "transform": [
+   8.983152799999983e-05,
+   0.0,
+   -67.32562373311394,
+   0.0,
+   -8.983152799999988e-05,
+   18.57019789422725
+  ],
+  "w": 31329,
+  "h": 10580,
+  "bounds": [
+   -67.32562373311394,
+   17.61978032798725,
+   -64.51129179240195,
+   18.57019789422725
+  ],
+  "dtype": [
+   "uint8"
+  ],
+  "nodata": 255.0,
+  "count": 1,
+  "colorinterp": [
+   "1"
+  ],
+  "block": [
+   [
+    128,
+    128
+   ]
+  ],
+  "compress": "Compression.lzw",
+  "tags": {
+   "AREA_OR_POINT": "Area",
+   "DataType": "Generic"
+  },
+  "btags": {
+   "RepresentationType": "THEMATIC",
+   "STATISTICS_COVARIANCES": "3.519566825951741",
+   "STATISTICS_MAXIMUM": "11",
+   "STATISTICS_MEAN": "3.5342885171899",
+   "STATISTICS_MINIMUM": "1",
+   "STATISTICS_SKIPFACTORX": "1",
+   "STATISTICS_SKIPFACTORY": "1",
+   "STATISTICS_STDDEV": "1.8760508591058"
+  },
+  "overviews": [
+   2,
+   4,
+   8,
+   16,
+   32,
+   64
+  ],
+  "colormap": "NULL color table",
+  "values": {
+   "1": 379750,
+   "2": 434975,
+   "3": 424296,
+   "4": 419482,
+   "5": 306041,
+   "6": 221539,
+   "7": 109948,
+   "8": 57967,
+   "9": 4530,
+   "10": 245,
+   "11": 5,
+   "255": 329102042
+  },
+  "bounds4326": [
+   -67.32562373311394,
+   17.61978032798725,
+   -64.51129179240195,
+   18.57019789422725
+  ],
+  "spots": {
+   "Catano waterfront": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Loiza Pinones": [
+    3,
+    [
+     1,
+     2,
+     3,
+     4
+    ]
+   ],
+   "La Parguera": [
+    1,
+    [
+     1,
+     2,
+     3,
+     255
+    ]
+   ],
+   "Ponce Playa": [
+    3,
+    [
+     3,
+     4
+    ]
+   ],
+   "Old San Juan hill": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Caguas inland": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Isabel Segunda Vieques": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Esperanza Vieques": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Dewey Culebra": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Mayaguez waterfront": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Fajardo Puerto Real": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Mona island": "outside"
+  },
+  "valid_rows": [
+   604,
+   7669
+  ],
+  "valid_cols": [
+   604,
+   23426
+  ],
+  "east_islands_window": [
+   2228,
+   19209,
+   5790,
+   23662
+  ],
+  "east_islands_values": {
+   "1": 11834,
+   "2": 16098,
+   "3": 22224,
+   "4": 35769,
+   "5": 11185,
+   "6": 3007,
+   "7": 463,
+   "8": 6,
+   "255": 15761000
+  }
+ },
+ "PR_Category4_MOM_Inundation_HighTide.tif": {
+  "crs": "EPSG:4269",
+  "wkt": "GEOGCS[\"NAD83\",DATUM[\"North_American_Datum_1983\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6269\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4269\"]]",
+  "transform": [
+   8.983152799999983e-05,
+   0.0,
+   -67.32562373311394,
+   0.0,
+   -8.983152799999988e-05,
+   18.57019789422725
+  ],
+  "w": 31329,
+  "h": 10580,
+  "bounds": [
+   -67.32562373311394,
+   17.61978032798725,
+   -64.51129179240195,
+   18.57019789422725
+  ],
+  "dtype": [
+   "uint8"
+  ],
+  "nodata": 255.0,
+  "count": 1,
+  "colorinterp": [
+   "1"
+  ],
+  "block": [
+   [
+    128,
+    128
+   ]
+  ],
+  "compress": "Compression.lzw",
+  "tags": {
+   "AREA_OR_POINT": "Area",
+   "DataType": "Generic"
+  },
+  "btags": {
+   "RepresentationType": "THEMATIC",
+   "STATISTICS_COVARIANCES": "5.441746622020445",
+   "STATISTICS_MAXIMUM": "14",
+   "STATISTICS_MEAN": "4.3315817036132",
+   "STATISTICS_MINIMUM": "1",
+   "STATISTICS_SKIPFACTORX": "1",
+   "STATISTICS_SKIPFACTORY": "1",
+   "STATISTICS_STDDEV": "2.332755156895"
+  },
+  "overviews": [
+   2,
+   4,
+   8,
+   16,
+   32,
+   64
+  ],
+  "colormap": "NULL color table",
+  "values": {
+   "1": 381322,
+   "2": 430823,
+   "3": 435089,
+   "4": 426542,
+   "5": 413078,
+   "6": 366200,
+   "7": 276139,
+   "8": 183066,
+   "9": 98429,
+   "10": 33218,
+   "11": 5595,
+   "12": 1770,
+   "13": 163,
+   "14": 10,
+   "255": 328409376
+  },
+  "bounds4326": [
+   -67.32562373311394,
+   17.61978032798725,
+   -64.51129179240195,
+   18.57019789422725
+  ],
+  "spots": {
+   "Catano waterfront": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Loiza Pinones": [
+    5,
+    [
+     3,
+     4,
+     5,
+     6
+    ]
+   ],
+   "La Parguera": [
+    3,
+    [
+     1,
+     2,
+     3,
+     4,
+     5,
+     255
+    ]
+   ],
+   "Ponce Playa": [
+    5,
+    [
+     4,
+     5,
+     6
+    ]
+   ],
+   "Old San Juan hill": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Caguas inland": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Isabel Segunda Vieques": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Esperanza Vieques": [
+    255,
+    [
+     1,
+     255
+    ]
+   ],
+   "Dewey Culebra": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Mayaguez waterfront": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Fajardo Puerto Real": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Mona island": "outside"
+  },
+  "valid_rows": [
+   604,
+   7669
+  ],
+  "valid_cols": [
+   604,
+   23426
+  ],
+  "east_islands_window": [
+   2228,
+   19209,
+   5790,
+   23662
+  ],
+  "east_islands_values": {
+   "1": 12111,
+   "2": 13253,
+   "3": 16698,
+   "4": 24625,
+   "5": 33541,
+   "6": 11162,
+   "7": 3225,
+   "8": 936,
+   "9": 37,
+   "255": 15745998
+  }
+ },
+ "PR_Category5_MOM_Inundation_HighTide.tif": {
+  "crs": "EPSG:4269",
+  "wkt": "GEOGCS[\"NAD83\",DATUM[\"North_American_Datum_1983\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6269\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4269\"]]",
+  "transform": [
+   8.983152799999983e-05,
+   0.0,
+   -67.32562373311394,
+   0.0,
+   -8.983152799999988e-05,
+   18.57019789422725
+  ],
+  "w": 31329,
+  "h": 10580,
+  "bounds": [
+   -67.32562373311394,
+   17.61978032798725,
+   -64.51129179240195,
+   18.57019789422725
+  ],
+  "dtype": [
+   "uint8"
+  ],
+  "nodata": 255.0,
+  "count": 1,
+  "colorinterp": [
+   "1"
+  ],
+  "block": [
+   [
+    128,
+    128
+   ]
+  ],
+  "compress": "Compression.lzw",
+  "tags": {
+   "AREA_OR_POINT": "Area",
+   "DataType": "Generic"
+  },
+  "btags": {
+   "RepresentationType": "THEMATIC",
+   "STATISTICS_COVARIANCES": "7.999660773973218",
+   "STATISTICS_MAXIMUM": "16",
+   "STATISTICS_MEAN": "5.1224524101518",
+   "STATISTICS_MINIMUM": "1",
+   "STATISTICS_SKIPFACTORX": "1",
+   "STATISTICS_SKIPFACTORY": "1",
+   "STATISTICS_STDDEV": "2.8283671568545"
+  },
+  "overviews": [
+   2,
+   4,
+   8,
+   16,
+   32,
+   64
+  ],
+  "colormap": "NULL color table",
+  "values": {
+   "1": 427925,
+   "2": 457503,
+   "3": 430155,
+   "4": 425077,
+   "5": 431300,
+   "6": 424259,
+   "7": 396444,
+   "8": 366038,
+   "9": 262857,
+   "10": 150371,
+   "11": 78037,
+   "12": 23426,
+   "13": 7388,
+   "14": 3312,
+   "15": 539,
+   "16": 21,
+   "255": 327576168
+  },
+  "bounds4326": [
+   -67.32562373311394,
+   17.61978032798725,
+   -64.51129179240195,
+   18.57019789422725
+  ],
+  "spots": {
+   "Catano waterfront": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Loiza Pinones": [
+    6,
+    [
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   ],
+   "La Parguera": [
+    5,
+    [
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
+   ],
+   "Ponce Playa": [
+    6,
+    [
+     6,
+     7,
+     8
+    ]
+   ],
+   "Old San Juan hill": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Caguas inland": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Isabel Segunda Vieques": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Esperanza Vieques": [
+    1,
+    [
+     1,
+     2,
+     255
+    ]
+   ],
+   "Dewey Culebra": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Mayaguez waterfront": [
+    2,
+    [
+     1,
+     2,
+     3,
+     255
+    ]
+   ],
+   "Fajardo Puerto Real": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Mona island": "outside"
+  },
+  "valid_rows": [
+   604,
+   7669
+  ],
+  "valid_cols": [
+   604,
+   23426
+  ],
+  "east_islands_window": [
+   2228,
+   19209,
+   5790,
+   23662
+  ],
+  "east_islands_values": {
+   "1": 12355,
+   "2": 12259,
+   "3": 14196,
+   "4": 19052,
+   "5": 27257,
+   "6": 27935,
+   "7": 10878,
+   "8": 3540,
+   "9": 1413,
+   "10": 45,
+   "11": 3,
+   "255": 15732653
+  }
+ }
+}

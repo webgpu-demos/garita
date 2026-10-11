@@ -1,0 +1,1 @@
+https://basemaps.arcgis.com/arcgis/rest/services/World_Hillshade_v2/VectorTileServer

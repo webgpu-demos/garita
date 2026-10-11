@@ -1,0 +1,495 @@
+-rw-r--r-- 1 runner runner 7271715 Oct 11 02:29 pr.zip
+6edd6660c211512b06c3e2d5846ea22937c5d056092aa14a654694433833dd74  pr.zip
+82 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category1_MOM_Inundation_HighTide.tfw
+4742467 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category1_MOM_Inundation_HighTide.tif
+1003 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category1_MOM_Inundation_HighTide.tif.aux.xml
+597064 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category1_MOM_Inundation_HighTide.tif.ovr
+2118 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category1_MOM_Inundation_HighTide.tif.vat.dbf
+21463 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category1_MOM_Inundation_HighTide.tif.xml
+82 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category2_MOM_Inundation_HighTide.tfw
+4932243 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category2_MOM_Inundation_HighTide.tif
+1012 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category2_MOM_Inundation_HighTide.tif.aux.xml
+701142 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category2_MOM_Inundation_HighTide.tif.ovr
+2402 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category2_MOM_Inundation_HighTide.tif.vat.dbf
+21463 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category2_MOM_Inundation_HighTide.tif.xml
+82 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category3_MOM_Inundation_HighTide.tfw
+5137507 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category3_MOM_Inundation_HighTide.tif
+1032 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category3_MOM_Inundation_HighTide.tif.aux.xml
+807856 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category3_MOM_Inundation_HighTide.tif.ovr
+3254 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category3_MOM_Inundation_HighTide.tif.vat.dbf
+21463 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category3_MOM_Inundation_HighTide.tif.xml
+82 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category4_MOM_Inundation_HighTide.tfw
+5351959 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category4_MOM_Inundation_HighTide.tif
+1050 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category4_MOM_Inundation_HighTide.tif.aux.xml
+915598 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category4_MOM_Inundation_HighTide.tif.ovr
+4106 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category4_MOM_Inundation_HighTide.tif.vat.dbf
+21463 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category4_MOM_Inundation_HighTide.tif.xml
+82 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category5_MOM_Inundation_HighTide.tfw
+5594768 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category5_MOM_Inundation_HighTide.tif
+1065 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category5_MOM_Inundation_HighTide.tif.aux.xml
+1037933 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category5_MOM_Inundation_HighTide.tif.ovr
+4674 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category5_MOM_Inundation_HighTide.tif.vat.dbf
+21463 z/PR_SLOSH_MOM_Inundation_11_2018/PR_Category5_MOM_Inundation_HighTide.tif.xml
+{
+ "PR_Category1_MOM_Inundation_HighTide.tif": {
+  "crs": "EPSG:4269",
+  "wkt": "GEOGCS[\"NAD83\",DATUM[\"North_American_Datum_1983\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6269\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4269\"]]",
+  "transform": [
+   8.983152799999983e-05,
+   0.0,
+   -67.32562373311394,
+   0.0,
+   -8.983152799999988e-05,
+   18.57019789422725
+  ],
+  "w": 31329,
+  "h": 10580,
+  "bounds": [
+   -67.32562373311394,
+   17.61978032798725,
+   -64.51129179240195,
+   18.57019789422725
+  ],
+  "dtype": [
+   "uint8"
+  ],
+  "nodata": 255.0,
+  "count": 1,
+  "colorinterp": [
+   "1"
+  ],
+  "block": [
+   [
+    128,
+    128
+   ]
+  ],
+  "compress": "Compression.lzw",
+  "tags": {
+   "AREA_OR_POINT": "Area",
+   "DataType": "Generic"
+  },
+  "btags": {
+   "RepresentationType": "THEMATIC",
+   "STATISTICS_COVARIANCES": "1.246378733911133",
+   "STATISTICS_MAXIMUM": "7",
+   "STATISTICS_MEAN": "2.2411189922175",
+   "STATISTICS_MINIMUM": "1",
+   "STATISTICS_SKIPFACTORX": "1",
+   "STATISTICS_SKIPFACTORY": "1",
+   "STATISTICS_STDDEV": "1.1164133347068"
+  },
+  "overviews": [
+   2,
+   4,
+   8,
+   16,
+   32,
+   64
+  ],
+  "colormap": "NULL color table",
+  "values": {
+   "1": 318573,
+   "2": 353174,
+   "3": 230156,
+   "4": 102986,
+   "5": 44484,
+   "6": 534,
+   "7": 2,
+   "255": 330410911
+  },
+  "bounds4326": [
+   -67.32562373311394,
+   17.61978032798725,
+   -64.51129179240195,
+   18.57019789422725
+  ],
+  "spots": {
+   "Catano waterfront": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Loiza Pinones": [
+    1,
+    [
+     1,
+     2,
+     255
+    ]
+   ],
+   "La Parguera": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Ponce Playa": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Old San Juan hill": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Caguas inland": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Isabel Segunda Vieques": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Esperanza Vieques": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Dewey Culebra": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Mayaguez waterfront": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Fajardo Puerto Real": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Mona island": "outside"
+  },
+  "valid_rows": [
+   605,
+   7669
+  ],
+  "valid_cols": [
+   605,
+   23426
+  ],
+  "east_islands_window": [
+   2228,
+   19209,
+   5790,
+   23662
+  ],
+  "east_islands_values": {
+   "1": 20260,
+   "2": 35031,
+   "3": 12302,
+   "4": 2364,
+   "5": 65,
+   "6": 1,
+   "255": 15791563
+  }
+ },
+ "PR_Category2_MOM_Inundation_HighTide.tif": {
+  "crs": "EPSG:4269",
+  "wkt": "GEOGCS[\"NAD83\",DATUM[\"North_American_Datum_1983\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6269\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4269\"]]",
+  "transform": [
+   8.983152799999983e-05,
+   0.0,
+   -67.32562373311394,
+   0.0,
+   -8.983152799999988e-05,
+   18.57019789422725
+  ],
+  "w": 31329,
+  "h": 10580,
+  "bounds": [
+   -67.32562373311394,
+   17.61978032798725,
+   -64.51129179240195,
+   18.57019789422725
+  ],
+  "dtype": [
+   "uint8"
+  ],
+  "nodata": 255.0,
+  "count": 1,
+  "colorinterp": [
+   "1"
+  ],
+  "block": [
+   [
+    128,
+    128
+   ]
+  ],
+  "compress": "Compression.lzw",
+  "tags": {
+   "AREA_OR_POINT": "Area",
+   "DataType": "Generic"
+  },
+  "btags": {
+   "RepresentationType": "THEMATIC",
+   "STATISTICS_COVARIANCES": "2.139453430778848",
+   "STATISTICS_MAXIMUM": "8",
+   "STATISTICS_MEAN": "2.7581028237218",
+   "STATISTICS_MINIMUM": "1",
+   "STATISTICS_SKIPFACTORX": "1",
+   "STATISTICS_SKIPFACTORY": "1",
+   "STATISTICS_STDDEV": "1.4626870583891"
+  },
+  "overviews": [
+   2,
+   4,
+   8,
+   16,
+   32,
+   64
+  ],
+  "colormap": "NULL color table",
+  "values": {
+   "1": 404989,
+   "2": 407246,
+   "3": 389435,
+   "4": 234924,
+   "5": 162849,
+   "6": 73656,
+   "7": 7203,
+   "8": 69,
+   "255": 329780449
+  },
+  "bounds4326": [
+   -67.32562373311394,
+   17.61978032798725,
+   -64.51129179240195,
+   18.57019789422725
+  ],
+  "spots": {
+   "Catano waterfront": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Loiza Pinones": [
+    2,
+    [
+     1,
+     2,
+     3,
+     255
+    ]
+   ],
+   "La Parguera": [
+    1,
+    [
+     1,
+     2,
+     3,
+     255
+    ]
+   ],
+   "Ponce Playa": [
+    2,
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "Old San Juan hill": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Caguas inland": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Isabel Segunda Vieques": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Esperanza Vieques": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Dewey Culebra": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Mayaguez waterfront": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Fajardo Puerto Real": [
+    255,
+    [
+     255
+    ]
+   ],
+   "Mona island": "outside"
+  },
+  "valid_rows": [
+   605,
+   7669
+  ],
+  "valid_cols": [
+   605,
+   23426
+  ],
+  "east_islands_window": [
+   2228,
+   19209,
+   5790,
+   23662
+  ],
+  "east_islands_values": {
+   "1": 14506,
+   "2": 19306,
+   "3": 37204,
+   "4": 12077,
+   "5": 2949,
+   "6": 271,
+   "7": 5,
+   "255": 15775268
+  }
+ },
+ "PR_Category3_MOM_Inundation_HighTide.tif": {
+  "crs": "EPSG:4269",
+  "wkt": "GEOGCS[\"NAD83\",DATUM[\"North_American_Datum_1983\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6269\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4269\"]]",
+  "transform": [
+   8.983152799999983e-05,
+   0.0,
+   -67.32562373311394,
+   0.0,
+   -8.983152799999988e-05,
+   18.57019789422725
+  ],
+  "w": 31329,
+  "h": 10580,
+  "bounds": [
+   -67.32562373311394,
+   17.61978032798725,
+   -64.51129179240195,
+   18.57019789422725
+  ],
+  "dtype": [
+   "uint8"
+  ],
+  "nodata": 255.0,
+[('203f772571cb48b1b8b50fdcc3272e2c', 'Web Experience', 'NHC Storm Surge Risk Maps', 'https://experience.arcgis.com/experience/203f772571cb48b1b8b50fdcc3272e2c'), ('2e7bd65166a04e64af579b7dc7354fe2', None, None, None), ('2db03c10dfb246b7a0888407e4d423bb', None, None, None), ('84aacba5b9d34549a523c69e174247bf', 'Web Map', 'Category 5 Hurricane Storm Surge Risk Maps', ''), ('ff59f3db4131490c85b1a8cd5dfcfaa8', 'Map Service', 'Tile Layer - Category 5 Hurricane Storm Surge Risk Maps', 'https://tiles.arcgis.com/tiles/C8EMgrsFcRFL6LrL/arcgis/rest/services/Storm_Surge_HazardMaps_Category5_v3/MapServer'), ('d38e980fc20141a49231b9fcea1c9bc0', 'Vector Tile Service', 'World Topographic Map (with Contours and Hillshade) (US Edition)', 'https://basemaps.arcgis.com/arcgis/rest/services/World_Basemap_v2/VectorTileServer'), ('68efc5ce1e0b43cb819f7bba4a6bd7ea', None, None, None), ('c908722b0841404ba6a87d6221f201e4', 'PDF', 'Esri Vector Basemap Reference Document (v2)', None), ('86617e57ff8b4e8dab6a82700d37e010', None, None, None), ('8d57f09b9df345e79945f0f3da1d4d0f', 'Web Map', 'Topographic (Vector)', ''), ('d6fbac1881b2b16a2aba774564c4ae80', None, None, None), ('c0dc86760fd84baa9de86c870d213696', 'GeoJson', 'nhc_surge_risk_maps_cat5_map_window', None), ('7676f2ae71024aad8833d0e7a2cc4164', 'Web Map', 'Category 4 Hurricane Storm Surge Risk Maps', ''), ('450d249d501b44ea8e7b09f59fe4825d', 'Map Service', 'Tile Layer - Category 4 Hurricane Storm Surge Risk Maps', 'https://tiles.arcgis.com/tiles/C8EMgrsFcRFL6LrL/arcgis/rest/services/Storm_Surge_HazardMaps_Category4_v3/MapServer'), ('3972b3793e98465a9a5d60f458315aa3', 'GeoJson', 'nhc_surge_risk_maps_cat4_map_window', None), ('9aa67cef9ff74df8bf4bc732a99c789c', 'Web Map', 'Category 3 Hurricane Storm Surge Risk Maps', ''), ('876a38efe537489fb3bc6b490519117f', 'Map Service', 'Tile Layer - Category 3 Hurricane Storm Surge Risk Maps', 'https://tiles.arcgis.com/tiles/C8EMgrsFcRFL6LrL/arcgis/rest/services/Storm_Surge_HazardMaps_Category3_v3/MapServer'), ('e87764c2bb474d59ae44437eeaba3aee', 'GeoJson', 'nhc_surge_risk_maps_cat3_map_window', None), ('e20eb3ee477943389a59e3050a8cb6a5', 'Web Map', 'Category 2 Hurricane Storm Surge Risk Maps', ''), ('e3cbf3218318409989d44774dece33c3', 'GeoJson', 'nhc_surge_risk_maps_cat2_map_window', None), ('b4e4f410fe9746d5898d98bb7467c1c2', 'Map Service', 'Tile Layer - Category 2 Hurricane Storm Surge Risk Maps', 'https://tiles.arcgis.com/tiles/C8EMgrsFcRFL6LrL/arcgis/rest/services/Storm_Surge_HazardMaps_Category2_v3/MapServer'), ('92f2ce6fec77428db3e6c579249c3c80', 'Web Map', 'Category 1 Hurricane Storm Surge Risk Maps', ''), ('5fcf93cb8f684318b62d7460a00abbdc', 'GeoJson', 'nhc_surge_risk_maps_cat1_map_window', None), ('49badb9332f14079b69cfa49b56809dc', 'Map Service', 'Tile Layer - Category 1 Hurricane Storm Surge Risk Maps', 'https://tiles.arcgis.com/tiles/C8EMgrsFcRFL6LrL/arcgis/rest/services/Storm_Surge_HazardMaps_Category1_v3/MapServer'), ('36d695d869a94664a74d919cfbe8813f', 'Image', 'Shared Theme Logo - NOAA_seal-shadowed', None), ('18d593553e1393f6b82aab778be2562e', None, None, None), ('938b1fd37dd044c2b5460f4916147966', None, None, None), ('2b822c139c684345b9f7a65f2bb0a4a9', None, None, None), ('4f4bc866be3649e6b7cc2bb35add1e97', None, None, None)]
+['https://basemaps.arcgis.com/arcgis/rest/services/World_Basemap_v2/VectorTileServer', 'https://basemaps.arcgis.com/arcgis/rest/services/World_Contours_v2/VectorTileServer', 'https://basemaps.arcgis.com/arcgis/rest/services/World_Hillshade_v2/VectorTileServer', 'https://tiles.arcgis.com/tiles/C8EMgrsFcRFL6LrL/arcgis/rest/services/Storm_Surge_HazardMaps_Category1_v3/MapServer', 'https://tiles.arcgis.com/tiles/C8EMgrsFcRFL6LrL/arcgis/rest/services/Storm_Surge_HazardMaps_Category2_v3/MapServer', 'https://tiles.arcgis.com/tiles/C8EMgrsFcRFL6LrL/arcgis/rest/services/Storm_Surge_HazardMaps_Category3_v3/MapServer', 'https://tiles.arcgis.com/tiles/C8EMgrsFcRFL6LrL/arcgis/rest/services/Storm_Surge_HazardMaps_Category4_v3/MapServer', 'https://tiles.arcgis.com/tiles/C8EMgrsFcRFL6LrL/arcgis/rest/services/Storm_Surge_HazardMaps_Category5_v3/MapServer']
+total 3760
+drwxr-xr-x  3 runner runner   4096 Oct 11 02:30 .
+drwxr-xr-x 11 runner runner   4096 Oct 11 02:29 ..
+-rw-r--r--  1 runner runner   2541 Oct 11 02:29 files.txt
+-rw-r--r--  1 runner runner    113 Oct 11 02:30 item_18d593553e1393f6b82aab778be2562e_data.json
+-rw-r--r--  1 runner runner    113 Oct 11 02:30 item_18d593553e1393f6b82aab778be2562e_info.json
+-rw-r--r--  1 runner runner 277166 Oct 11 02:29 item_203f772571cb48b1b8b50fdcc3272e2c_data.json
+-rw-r--r--  1 runner runner  11553 Oct 11 02:29 item_203f772571cb48b1b8b50fdcc3272e2c_info.json
+-rw-r--r--  1 runner runner    151 Oct 11 02:30 item_2b822c139c684345b9f7a65f2bb0a4a9_data.json
+-rw-r--r--  1 runner runner    151 Oct 11 02:30 item_2b822c139c684345b9f7a65f2bb0a4a9_info.json
+-rw-r--r--  1 runner runner    151 Oct 11 02:29 item_2db03c10dfb246b7a0888407e4d423bb_data.json
+-rw-r--r--  1 runner runner    151 Oct 11 02:29 item_2db03c10dfb246b7a0888407e4d423bb_info.json
+-rw-r--r--  1 runner runner    113 Oct 11 02:29 item_2e7bd65166a04e64af579b7dc7354fe2_data.json
+-rw-r--r--  1 runner runner    113 Oct 11 02:29 item_2e7bd65166a04e64af579b7dc7354fe2_info.json
+-rw-r--r--  1 runner runner 311426 Oct 11 02:30 item_36d695d869a94664a74d919cfbe8813f_data.json
+-rw-r--r--  1 runner runner   1094 Oct 11 02:30 item_36d695d869a94664a74d919cfbe8813f_info.json
+-rw-r--r--  1 runner runner 400000 Oct 11 02:29 item_3972b3793e98465a9a5d60f458315aa3_data.json
+-rw-r--r--  1 runner runner   2045 Oct 11 02:29 item_3972b3793e98465a9a5d60f458315aa3_info.json
+-rw-r--r--  1 runner runner      0 Oct 11 02:29 item_450d249d501b44ea8e7b09f59fe4825d_data.json
+-rw-r--r--  1 runner runner  14270 Oct 11 02:29 item_450d249d501b44ea8e7b09f59fe4825d_info.json
+-rw-r--r--  1 runner runner      0 Oct 11 02:30 item_49badb9332f14079b69cfa49b56809dc_data.json
+-rw-r--r--  1 runner runner  14270 Oct 11 02:30 item_49badb9332f14079b69cfa49b56809dc_info.json
+-rw-r--r--  1 runner runner    151 Oct 11 02:30 item_4f4bc866be3649e6b7cc2bb35add1e97_data.json
+-rw-r--r--  1 runner runner    151 Oct 11 02:30 item_4f4bc866be3649e6b7cc2bb35add1e97_info.json
+-rw-r--r--  1 runner runner 400000 Oct 11 02:29 item_5fcf93cb8f684318b62d7460a00abbdc_data.json
+-rw-r--r--  1 runner runner   2030 Oct 11 02:29 item_5fcf93cb8f684318b62d7460a00abbdc_info.json
+-rw-r--r--  1 runner runner    113 Oct 11 02:29 item_68efc5ce1e0b43cb819f7bba4a6bd7ea_data.json
+-rw-r--r--  1 runner runner    113 Oct 11 02:29 item_68efc5ce1e0b43cb819f7bba4a6bd7ea_info.json
+-rw-r--r--  1 runner runner   2303 Oct 11 02:29 item_7676f2ae71024aad8833d0e7a2cc4164_data.json
+-rw-r--r--  1 runner runner  12037 Oct 11 02:29 item_7676f2ae71024aad8833d0e7a2cc4164_info.json
+-rw-r--r--  1 runner runner   2299 Oct 11 02:29 item_84aacba5b9d34549a523c69e174247bf_data.json
+-rw-r--r--  1 runner runner  11962 Oct 11 02:29 item_84aacba5b9d34549a523c69e174247bf_info.json
+-rw-r--r--  1 runner runner    113 Oct 11 02:29 item_86617e57ff8b4e8dab6a82700d37e010_data.json
+-rw-r--r--  1 runner runner    113 Oct 11 02:29 item_86617e57ff8b4e8dab6a82700d37e010_info.json
+-rw-r--r--  1 runner runner      0 Oct 11 02:29 item_876a38efe537489fb3bc6b490519117f_data.json
+-rw-r--r--  1 runner runner  14270 Oct 11 02:29 item_876a38efe537489fb3bc6b490519117f_info.json
+-rw-r--r--  1 runner runner    769 Oct 11 02:29 item_8d57f09b9df345e79945f0f3da1d4d0f_data.json
+-rw-r--r--  1 runner runner   6467 Oct 11 02:29 item_8d57f09b9df345e79945f0f3da1d4d0f_info.json
+-rw-r--r--  1 runner runner   2305 Oct 11 02:29 item_92f2ce6fec77428db3e6c579249c3c80_data.json
+-rw-r--r--  1 runner runner  11325 Oct 11 02:29 item_92f2ce6fec77428db3e6c579249c3c80_info.json
+-rw-r--r--  1 runner runner    151 Oct 11 02:30 item_938b1fd37dd044c2b5460f4916147966_data.json
+-rw-r--r--  1 runner runner    151 Oct 11 02:30 item_938b1fd37dd044c2b5460f4916147966_info.json
+-rw-r--r--  1 runner runner   2301 Oct 11 02:29 item_9aa67cef9ff74df8bf4bc732a99c789c_data.json
+-rw-r--r--  1 runner runner  12068 Oct 11 02:29 item_9aa67cef9ff74df8bf4bc732a99c789c_info.json
+-rw-r--r--  1 runner runner      0 Oct 11 02:29 item_b4e4f410fe9746d5898d98bb7467c1c2_data.json
+-rw-r--r--  1 runner runner  14253 Oct 11 02:29 item_b4e4f410fe9746d5898d98bb7467c1c2_info.json
+-rw-r--r--  1 runner runner 400000 Oct 11 02:29 item_c0dc86760fd84baa9de86c870d213696_data.json
+-rw-r--r--  1 runner runner   2030 Oct 11 02:29 item_c0dc86760fd84baa9de86c870d213696_info.json
+-rw-r--r--  1 runner runner 721855 Oct 11 02:29 item_c908722b0841404ba6a87d6221f201e4_data.json
+-rw-r--r--  1 runner runner   6663 Oct 11 02:29 item_c908722b0841404ba6a87d6221f201e4_info.json
+-rw-r--r--  1 runner runner      0 Oct 11 02:29 item_d38e980fc20141a49231b9fcea1c9bc0_data.json
+-rw-r--r--  1 runner runner  12182 Oct 11 02:29 item_d38e980fc20141a49231b9fcea1c9bc0_info.json
+-rw-r--r--  1 runner runner    113 Oct 11 02:29 item_d6fbac1881b2b16a2aba774564c4ae80_data.json
+-rw-r--r--  1 runner runner    113 Oct 11 02:29 item_d6fbac1881b2b16a2aba774564c4ae80_info.json
+-rw-r--r--  1 runner runner   2306 Oct 11 02:29 item_e20eb3ee477943389a59e3050a8cb6a5_data.json
+-rw-r--r--  1 runner runner  12180 Oct 11 02:29 item_e20eb3ee477943389a59e3050a8cb6a5_info.json
+-rw-r--r--  1 runner runner 400000 Oct 11 02:29 item_e3cbf3218318409989d44774dece33c3_data.json
+-rw-r--r--  1 runner runner   2030 Oct 11 02:29 item_e3cbf3218318409989d44774dece33c3_info.json
+-rw-r--r--  1 runner runner 400000 Oct 11 02:29 item_e87764c2bb474d59ae44437eeaba3aee_data.json
+-rw-r--r--  1 runner runner   2030 Oct 11 02:29 item_e87764c2bb474d59ae44437eeaba3aee_info.json
+-rw-r--r--  1 runner runner      0 Oct 11 02:29 item_ff59f3db4131490c85b1a8cd5dfcfaa8_data.json
+-rw-r--r--  1 runner runner  14294 Oct 11 02:29 item_ff59f3db4131490c85b1a8cd5dfcfaa8_info.json
+-rw-r--r--  1 runner runner  13737 Oct 11 02:29 rasters.json
+drwxr-xr-x  2 runner runner   4096 Oct 11 02:29 side
+-rw-r--r--  1 runner runner    698 Oct 11 02:30 stderr.txt
+-rw-r--r--  1 runner runner  12789 Oct 11 02:30 stdout.txt
+-rw-r--r--  1 runner runner     29 Oct 11 02:30 svc01_legend.json
+-rw-r--r--  1 runner runner   2666 Oct 11 02:30 svc01_svc.json
+-rw-r--r--  1 runner runner     82 Oct 11 02:30 svc01_url.txt
+-rw-r--r--  1 runner runner     29 Oct 11 02:30 svc02_legend.json
+-rw-r--r--  1 runner runner   2562 Oct 11 02:30 svc02_svc.json
+-rw-r--r--  1 runner runner     83 Oct 11 02:30 svc02_url.txt
+-rw-r--r--  1 runner runner     29 Oct 11 02:30 svc03_legend.json
+-rw-r--r--  1 runner runner   2544 Oct 11 02:30 svc03_svc.json
+-rw-r--r--  1 runner runner     84 Oct 11 02:30 svc03_url.txt
+-rw-r--r--  1 runner runner   1805 Oct 11 02:30 svc04_legend.json
+-rw-r--r--  1 runner runner  13504 Oct 11 02:30 svc04_svc.json
+-rw-r--r--  1 runner runner    114 Oct 11 02:30 svc04_url.txt
+-rw-r--r--  1 runner runner   1805 Oct 11 02:30 svc05_legend.json
+-rw-r--r--  1 runner runner  13504 Oct 11 02:30 svc05_svc.json
+-rw-r--r--  1 runner runner    114 Oct 11 02:30 svc05_url.txt
+-rw-r--r--  1 runner runner   1805 Oct 11 02:30 svc06_legend.json
+-rw-r--r--  1 runner runner  13504 Oct 11 02:30 svc06_svc.json
+-rw-r--r--  1 runner runner    114 Oct 11 02:30 svc06_url.txt
+-rw-r--r--  1 runner runner   1805 Oct 11 02:30 svc07_legend.json
+-rw-r--r--  1 runner runner  13504 Oct 11 02:30 svc07_svc.json
+-rw-r--r--  1 runner runner    114 Oct 11 02:30 svc07_url.txt
+-rw-r--r--  1 runner runner   1805 Oct 11 02:30 svc08_legend.json
+-rw-r--r--  1 runner runner  13528 Oct 11 02:30 svc08_svc.json
+-rw-r--r--  1 runner runner    114 Oct 11 02:30 svc08_url.txt
+-rw-r--r--  1 runner runner   3236 Oct 11 02:30 viewer_items.txt
+exit code 0
+3.9M	out
