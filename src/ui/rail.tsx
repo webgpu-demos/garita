@@ -6,13 +6,14 @@ import { t, L } from '../i18n/index';
 import { Icon } from './icons';
 import { num, DASH } from './format';
 import { railGroup, storeTick, useQuery, narrow, dockCollapsed } from './uistate';
+import { OverlayOptions } from './hover';
 
 const GROUPS: { id: string; icon: string }[] = [
   { id: 'hazards', icon: 'alert' }, { id: 'water', icon: 'drop' }, { id: 'housing', icon: 'housing' }, { id: 'infrastructure', icon: 'bolt' },
   { id: 'boundaries', icon: 'boundary' }, { id: 'atmosphere', icon: 'wind' }, { id: 'tracks', icon: 'plane' }, { id: 'records', icon: 'fema' },
 ];
 const SCENE: S.SceneLayerId[] = ['buildings', 'clouds', 'labels', 'municipios', 'ocean_detail', 'markers'];
-const OVERLAYS: (S.OverlayId)[] = [null, 'radar', 'goes', 'nfhl', 'slr', 'choropleth', 'elevation'];
+const OVERLAYS: (S.OverlayId)[] = [null, 'radar', 'goes', 'nightlights', 'nfhl', 'slr', 'surge', 'slide', 'choropleth', 'elevation'];
 
 const setLayer = (id: string, on: boolean) => { S.layerOn.value = { ...S.layerOn.value, [id]: on }; };
 
@@ -93,6 +94,7 @@ function OverlayRows({ store }: { store: TwinStore }) {
           </select>
         </label>
       )}
+      {(cur === 'surge' || cur === 'nightlights') && <div class="field"><OverlayOptions />{cur === 'nightlights' && <span class="fly-help">{t('ov.nl.baseline.help')}</span>}</div>}
       <label class={'field' + (cur == null ? ' is-disabled' : '')}>
         <span class="label">{t('ov.opacity')} <span class="num">{Math.round(S.overlayOpacity.value * 100)}%</span></span>
         <input type="range" min="0" max="1" step="0.05" disabled={cur == null} value={S.overlayOpacity.value}

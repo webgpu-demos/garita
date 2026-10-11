@@ -4,12 +4,14 @@ import { useEffect, useMemo, useState } from 'preact/hooks';
 import type { TwinStore, ObjectSummary } from '../../ontology/types';
 import * as S from '../../core/state';
 import { loadStorms, stormAt, windBandAt, saffirSimpson, type Storm } from '../../core/storms';
-import { tr } from '../../i18n/index';
+import { t, tr } from '../../i18n/index';
 import { Icon } from '../icons';
 import { num, dmm, fmtDateTime, haversineKm, SAN_JUAN, DASH } from '../format';
 import { storeTick, useQuery } from '../uistate';
 
 const H = 3600e3;
+/** First day of the daily night-light layers NASA GIBS serves (src/world/overlays.ts, NIGHT_FIRST). */
+const NL_FIRST = Date.UTC(2012, 2, 1);
 
 export function exitReplay() {
   S.replayStormId.value = null; S.playbackRate.value = 0; S.sceneTime.value = Date.now(); S.clockMode.value = 'live'; S.highlightIds.value = [];
@@ -104,6 +106,7 @@ export function ReplayPanel({ store }: { store: TwinStore }) {
   const t0 = storm.points[0].t, t1 = storm.points[storm.points.length - 1].t;
   const ss = p ? saffirSimpson(p.wind_kt) : null;
   const playing = S.playbackRate.value > 0 && S.clockMode.value === 'manual';
+  const nlOn = S.overlay.value === 'nightlights';
   const band = (kt: number, label: string) => {
     const b = inside?.bands[kt];
     return (
@@ -138,6 +141,18 @@ export function ReplayPanel({ store }: { store: TwinStore }) {
               <div><dt>{tr('Distance to San Juan', 'Distancia a San Juan')}</dt><dd class="num">{num(haversineKm(p.lat, p.lon, SAN_JUAN.lat, SAN_JUAN.lon))} km</dd></div>
               <div class="wide-text"><dt>{tr('Centre', 'Centro')}</dt><dd class="num">{dmm(p.lat, 'lat')}  {dmm(p.lon, 'lon')}</dd></div>
             </dl>
+          )}
+        </section>
+        <section class="sec rp-nl">
+          <h3 class="label">{t('rp.nl.title')}</h3>
+          {t1 < NL_FIRST ? <p class="muted rp-fine">{t('rp.nl.none')}</p> : (
+            <>
+              <div class="sql-bar">
+                <button class={'btn' + (nlOn ? ' on' : '')} aria-pressed={nlOn} onClick={() => { if (nlOn) S.overlay.value = null; else { S.nightBaseline.value = false; S.overlay.value = 'nightlights'; } }}><Icon name="overlay" size={12} />{nlOn ? t('rp.nl.hide') : t('rp.nl.show')}</button>
+                {nlOn && <label class="ov-opt ov-check"><input type="checkbox" checked={S.nightBaseline.value} onChange={(e) => { S.nightBaseline.value = (e.target as HTMLInputElement).checked; }} /><span>{t('ov.nl.baseline')}</span></label>}
+              </div>
+              <p class="muted rp-fine">{t('rp.nl.help')}</p>
+            </>
           )}
         </section>
         <section class="sec">

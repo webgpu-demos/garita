@@ -334,7 +334,7 @@ ${mask}`)
     const q = S.quality.value, cover = S.weather.value.cloudCover;
     // Observed rain or cloud is on the map (radar, GOES): our procedural clouds, their shading of the ground and the
     // 2D field from orbit are switched off, so that nothing of ours can be read as part of the observation.
-    const ov = S.overlay.value, observed = ov === 'radar' || ov === 'goes';
+    const ov = S.overlay.value, observed = ov === 'radar' || ov === 'goes' || ov === 'nightlights';
     if (want !== mode || q !== lastQuality || observed !== st.observed) {
       st.observed = observed;
       lastQuality = q;

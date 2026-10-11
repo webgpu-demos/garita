@@ -27,11 +27,19 @@ export const layerOn = signal<Record<string, boolean>>({
   buildings: true, clouds: true, labels: true, municipios: true, ocean_detail: true, markers: true,
 });
 /** One raster overlay draped on the terrain at a time. null = none. */
-export type OverlayId = 'radar' | 'goes' | 'nfhl' | 'slr' | 'choropleth' | 'elevation' | null;
+export type OverlayId = 'radar' | 'goes' | 'nightlights' | 'nfhl' | 'slr' | 'surge' | 'slide' | 'choropleth' | 'elevation' | null;
 export const overlay = signal<OverlayId>(null);
 export const overlayOpacity = signal(0.75);
 /** For overlay === 'choropleth': a municipio property id (see ontology.json), e.g. 'poverty_pct'. */
 export const choroplethProp = signal<string>('vacancy_pct');
+/** For overlay === 'surge': the hurricane category whose tile set is shown, 1..5 (?surge=4). */
+export const surgeCategory = signal<number>(3);
+/** Tile sets the published surge index offers, written by the overlay layer once tiles/surge/index.json is read. */
+export const surgeSets = signal<{ id: string; label: { en: string; es: string } }[]>([]);
+/** For overlay === 'nightlights': show the 2016 cloud-free composite instead of the night of the scene date (?nl=baseline). */
+export const nightBaseline = signal<boolean>(false);
+/** The publisher's own use limits for the active overlay, shown in full with the legend (never behind a click). */
+export const overlayDisclaimer = signal<string | null>(null);
 
 // ---- scene clock ----
 /** live = follows the wall clock; manual = the timeline scrubber or a replay drives it. */

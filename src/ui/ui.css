@@ -486,9 +486,24 @@ table.grid.sc-top td.name-cell { padding-left: 0; }
 .legend-stops li { display: flex; align-items: center; gap: 8px; font-size: var(--fs-1); }
 .legend-sw { width: 14px; height: 10px; border: 1px solid var(--line-strong); border-radius: 1px; flex: none; }
 .legend-note { font-size: var(--fs-0); color: var(--fg-2); line-height: 1.4; }
+.legend { max-height: calc(100vh - var(--bar-h) - var(--timeline-h) - 90px); overflow-y: auto; }
+.legend > * { min-width: 0; }
+.legend-note, .legend-disc { overflow-wrap: anywhere; }
+.legend-wide { width: 340px; }
+/* an open layer flyout sits where the legend is: the legend moves beside it instead of covering it */
+@media (min-width: 761px) { .flyout ~ .legend { left: calc(var(--rail-w) + 304px + 2 * var(--gap)); } }
+/* the publisher's use limits: always in view with the map (a long text scrolls in place, it is never behind a click) */
+.legend-disc { font-size: var(--fs-0); color: var(--fg); line-height: 1.4; border-left: 2px solid var(--flame); padding-left: 7px; white-space: pre-line; max-height: 12.6em; overflow-y: auto; }
+.legend-disc .label { display: block; margin-bottom: 2px; }
+.ov-opt { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: var(--fs-1); }
+.ov-check { justify-content: flex-start; cursor: pointer; }
+.ov-check input { accent-color: var(--flame); flex: none; }
+.rp-nl { display: grid; gap: 6px; }
+.rp-nl .sql-bar { flex-wrap: wrap; }
 @media (max-width: 760px) {
   .legend { left: 8px; right: 8px; width: auto; top: calc(var(--bar-h) + var(--kpi-h) + var(--strip-h) + 18px); bottom: auto; padding: 5px 8px; grid-template-columns: auto 1fr; align-items: center; gap: 4px 10px; }
   .legend-stops { display: flex; flex-wrap: wrap; gap: 2px 10px; } .legend-note { display: none; }
+  .legend { max-height: 46vh; } .legend-wide { width: auto; } .legend-disc, .legend .ov-opt { grid-column: 1 / -1; } .legend-disc { max-height: 7.2em; overflow-y: auto; }
 }
 
 .tb-brand:hover .wordmark { color: var(--flame); }

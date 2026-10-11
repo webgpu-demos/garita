@@ -37,14 +37,47 @@ export function HoverTip({ store }: { store: TwinStore }) {
   );
 }
 
+/** The options of the active overlay: the surge category (sets come from the published index) and the night-lights
+ *  baseline. Shown in the legend card and in the overlay flyout. */
+export function OverlayOptions() {
+  const ov = S.overlay.value;
+  if (ov === 'surge') {
+    const sets = S.surgeSets.value, cur = `c${S.surgeCategory.value}`;
+    if (!sets.length) return null;
+    return (
+      <div class="ov-opt">
+        <span class="label">{t('ov.surge.cat')}</span>
+        <div class="seg" role="group" aria-label={t('ov.surge.cat')}>
+          {sets.map((s) => {
+            const n = +s.id.replace(/^c/, '');
+            return <button key={s.id} class={cur === s.id ? 'on' : ''} aria-pressed={cur === s.id} title={L(s.label)} aria-label={L(s.label)} onClick={() => { if (Number.isFinite(n)) S.surgeCategory.value = n; }}>{Number.isFinite(n) ? n : L(s.label)}</button>;
+          })}
+        </div>
+      </div>
+    );
+  }
+  if (ov === 'nightlights') {
+    const on = S.nightBaseline.value;
+    return (
+      <label class="ov-opt ov-check" title={t('ov.nl.baseline.help')}>
+        <input type="checkbox" checked={on} onChange={(e) => { S.nightBaseline.value = (e.target as HTMLInputElement).checked; }} />
+        <span>{t('ov.nl.baseline')}</span>
+      </label>
+    );
+  }
+  return null;
+}
+
 export function LegendCard() {
-  const g = S.overlayLegend.value;
+  const g = S.overlayLegend.value, disc = S.overlayDisclaimer.value;
   if (!g) return null;
   return (
-    <aside class="legend panel" aria-label={g.title}>
+    <aside class={'legend panel' + (disc ? ' legend-wide' : '')} aria-label={g.title}>
       <div class="legend-head"><b>{g.title}</b>{g.unit && <span class="num muted">{g.unit}</span>}</div>
-      <ul class="legend-stops">{g.stops.map((s, i) => <li key={i}><span class="legend-sw" style={{ background: s.color }} /><span class="num">{s.label}</span></li>)}</ul>
+      <OverlayOptions />
+      {g.stops.length > 0 && <ul class="legend-stops">{g.stops.map((s, i) => <li key={i}><span class="legend-sw" style={{ background: s.color }} /><span class="num">{s.label}</span></li>)}</ul>}
       {g.note && <p class="legend-note">{g.note}</p>}
+      {disc && <p class="legend-disc"><span class="label">{t('ov.disclaimer')}</span>{disc}</p>}
       {g.source && <p class="legend-note muted">{g.source}</p>}
     </aside>
   );
