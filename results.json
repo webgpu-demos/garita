@@ -1,0 +1,962 @@
+{
+ "at": "2026-10-11T03:45:42.431Z",
+ "results": [
+  {
+   "id": "nl-maria-after",
+   "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&overlay=nightlights&t=2017-09-25T06:00:00Z&cam=-66.45,18.2,330000,0,55",
+   "loadMs": 29860,
+   "debug": {
+    "stats": {
+     "fps": 10,
+     "tiles": 6,
+     "pending": 0,
+     "drawCalls": 1,
+     "tris": 1
+    },
+    "view": {
+     "lon": -66.45,
+     "lat": 18.2,
+     "range": 330000.0000000001,
+     "heading": 0,
+     "pitch": 55,
+     "altitude": 282338.81502522837
+    },
+    "terrain": {
+     "tiles": 6,
+     "pending": 0,
+     "maxZoom": 8
+    },
+    "post": {
+     "mode": "basic",
+     "lutsReady": false,
+     "clouds": false,
+     "units": 0.42058823529411765,
+     "elevation": -59.48331652225431,
+     "dark": 1,
+     "daylight": 0,
+     "moonlight": 1,
+     "warmth": 1,
+     "lowSun": 0,
+     "fill": 0,
+     "ground": 0.723414520192371,
+     "observed": true,
+     "exposure": 3.2,
+     "bloom": 0.5,
+     "shadows": false,
+     "shadowExtent": 0,
+     "sun": [
+      0.432,
+      -0.861,
+      -0.266
+     ]
+    },
+    "store": {
+     "persistent": true,
+     "seedVersion": "2026.10.10d",
+     "openedMs": 547,
+     "objects": 6960,
+     "links": 12792,
+     "obs": 0
+    },
+    "feeds": {
+     "nws_alerts": {
+      "state": "ok",
+      "nextAt": 1791687698399.0486,
+      "lastOkAt": 1791687580812,
+      "lastObjects": 0,
+      "lastMs": 868,
+      "dataAt": 1791687453000
+     },
+     "nhc": {
+      "state": "ok",
+      "nextAt": 1791688126320.8787,
+      "lastOkAt": 1791687581335,
+      "lastObjects": 1,
+      "lastMs": 1333,
+      "dataAt": 1791687411501
+     },
+     "usgs_quakes": {
+      "state": "ok",
+      "nextAt": 1791687861998.2332,
+      "lastOkAt": 1791687583741,
+      "lastObjects": 262,
+      "lastMs": 3737,
+      "dataAt": 1791687580000
+     },
+     "usgs_nwis": {
+      "state": "ok",
+      "nextAt": 1791688504925.5537,
+      "lastOkAt": 1791687581675,
+      "lastObjects": 131,
+      "lastMs": 1669,
+      "dataAt": 1791687000000
+     },
+     "nwps": {
+      "state": "ok",
+      "nextAt": 1791688549968.4966,
+      "lastOkAt": 1791687583736,
+      "lastObjects": 118,
+      "lastMs": 3730,
+      "dataAt": 1791685800000
+     },
+     "coops": {
+      "state": "ok",
+      "nextAt": 1791687950230.2573,
+      "lastOkAt": 1791687582043,
+      "lastObjects": 6,
+      "lastMs": 2037,
+      "dataAt": 1791687240000
+     },
+     "open_meteo": {
+      "state": "ok",
+      "nextAt": 1791688509217.0137,
+      "lastOkAt": 1791687581741,
+      "lastObjects": 8,
+      "lastMs": 1735,
+      "dataAt": 1791686700000
+     },
+     "nws_obs": {
+      "state": "ok",
+      "nextAt": 1791688239639.8643,
+      "lastOkAt": 1791687581096,
+      "lastObjects": 12,
+      "lastMs": 1087,
+      "dataAt": 1791685800000
+     },
+     "luma": {
+      "state": "ok",
+      "nextAt": 1791688224361.8445,
+      "lastOkAt": 1791687580782,
+      "lastObjects": 7,
+      "lastMs": 773,
+      "dataAt": 1791687411561
+     },
+     "ndbc": {
+      "state": "ok",
+      "nextAt": 1791688227558.5874,
+      "lastOkAt": 1791687580557,
+      "lastObjects": 15,
+      "lastMs": 547,
+      "dataAt": 1791687411596
+     },
+     "adsb": {
+      "state": "ok",
+      "nextAt": 1791688220615.6147,
+      "lastOkAt": 1791687580403,
+      "lastObjects": 1,
+      "lastMs": 392,
+      "dataAt": 1791687412031
+     }
+    },
+    "layers": [
+     {
+      "overlay": "nightlights",
+      "source": "nightlights:VIIRS_SNPP_DayNightBand_ENCC:2017-09-25",
+      "aboveWater": true,
+      "lastError": "",
+      "legend": {
+       "title": "Night lights · 2017-09-25",
+       "note": "13 map tiles did not arrive from NASA's service: the gaps show the base map, not darkness. Suomi NPP satellite, VIIRS Day/Night Band, enhanced near-constant contrast (ENCC). Image dated 2017-09-25 (UTC): a single overpass at about 1:30 a.m. Puerto Rico time. Chosen by the scene date. Cloud hides or smears lights, and moonlight brightens cloud, sea and land, so two nights differ for reasons other than electricity. A picture, not a calibrated measure of light or of outages. Pixels are about 750 m.",
+       "stops": 3
+      }
+     },
+     {
+      "municipios": 78,
+      "vertices": 123952,
+      "queued": 0,
+      "lift": 450,
+      "selected": null,
+      "footprint": 0,
+      "highlights": 0,
+      "selectedId": null
+     },
+     {
+      "tiles": 0,
+      "buildings": 0,
+      "triangles": 0,
+      "pending": 0,
+      "photos": 0,
+      "photoPending": 0,
+      "textureMB": 0
+     },
+     {
+      "storm": null,
+      "info": null,
+      "legend": null,
+      "live": [
+       {
+        "id": "tropical_cyclone:al092026",
+        "name": "Isaias",
+        "category": "Tropical depression",
+        "wind_kt": 20,
+        "distance_km": 2734,
+        "bearing": "NW",
+        "advisory": null,
+        "hasCone": false,
+        "points": 0,
+        "drawn": false,
+        "text": "Isaias · Tropical depression · 2,734 km NW"
+       }
+      ],
+      "highlights": 0
+     },
+     {
+      "layer": "markers",
+      "types": {
+       "shelter": 336,
+       "public_housing": 304,
+       "assisted_housing": 264,
+       "hospital": 87,
+       "clinic": 430,
+       "school": 1802,
+       "fire_station": 70,
+       "police_station": 127,
+       "power_plant": 67,
+       "substation": 401,
+       "water_plant": 61,
+       "airport": 24,
+       "seaport": 14,
+       "reservoir": 28,
+       "stream_gauge": 126,
+       "tide_station": 13,
+       "buoy": 25,
+       "weather_station": 157,
+       "weather_alert": 0,
+       "earthquake": 262,
+       "tropical_cyclone": 1,
+       "aircraft": 1
+      },
+      "drawn": 584,
+      "dots": 327,
+      "clustered": 0,
+      "hidden": 325,
+      "labels": 3,
+      "cellM": 16384,
+      "ms": 1.65
+     }
+    ]
+   },
+   "frameMs": 2000,
+   "ok": true,
+   "ms": 47195,
+   "logs": [
+    "[warning] Ignoring inability to install OPFS sqlite3_vfs: Cannot install OPFS: Missing SharedArrayBuffer and/or Atomics. The server must emit the COOP/COEP response headers to enable those. See https://sqlite.org/wasm/doc/trunk/persistence.md#coop-co",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-25/GoogleMapsCompatible_Level8/6/28/20.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: No",
+    "[error] Failed to load resource: net::ERR_FAILED",
+    "[error] Failed to load resource: the server responded with a status of 400 ()",
+    "[error] Failed to load resource: the server responded with a status of 404 ()",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-25/GoogleMapsCompatible_Level8/6/30/19.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: No",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-25/GoogleMapsCompatible_Level8/6/27/20.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: No",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-25/GoogleMapsCompatible_Level8/6/30/20.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: No",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-25/GoogleMapsCompatible_Level8/6/27/19.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: No",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-25/GoogleMapsCompatible_Level8/6/29/18.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: No",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-25/GoogleMapsCompatible_Level8/6/27/21.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: No",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-25/GoogleMapsCompatible_Level8/6/29/19.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: No",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-25/GoogleMapsCompatible_Level8/6/28/21.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: No",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-25/GoogleMapsCompatible_Level8/6/30/18.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: No",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-25/GoogleMapsCompatible_Level8/6/30/21.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: No",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-25/GoogleMapsCompatible_Level8/6/28/19.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: No",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-25/GoogleMapsCompatible_Level8/8/114/80.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: N",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-25/GoogleMapsCompatible_Level8/8/114/81.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: N",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-25/GoogleMapsCompatible_Level8/8/115/80.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: N",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-25/GoogleMapsCompatible_Level8/8/115/79.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: N",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-25/GoogleMapsCompatible_Level8/8/114/79.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: N",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-25/GoogleMapsCompatible_Level8/8/115/81.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: N"
+   ],
+   "failedHosts": {
+    "gibs.earthdata.nasa.gov": 44
+   }
+  },
+  {
+   "id": "nl-maria-before",
+   "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&overlay=nightlights&t=2017-09-15T06:00:00Z&cam=-66.45,18.2,330000,0,55",
+   "loadMs": 34272,
+   "debug": {
+    "stats": {
+     "fps": 10,
+     "tiles": 6,
+     "pending": 0,
+     "drawCalls": 1,
+     "tris": 1
+    },
+    "view": {
+     "lon": -66.45,
+     "lat": 18.2,
+     "range": 330000.0000000001,
+     "heading": 0,
+     "pitch": 55,
+     "altitude": 282338.81491199567
+    },
+    "terrain": {
+     "tiles": 6,
+     "pending": 0,
+     "maxZoom": 8
+    },
+    "post": {
+     "mode": "basic",
+     "lutsReady": false,
+     "clouds": false,
+     "units": 0.42058823529411765,
+     "elevation": -57.72697096365606,
+     "dark": 1,
+     "daylight": 0,
+     "moonlight": 1,
+     "warmth": 1,
+     "lowSun": 0,
+     "fill": 0,
+     "ground": 0.3609286358900867,
+     "observed": true,
+     "exposure": 3.2,
+     "bloom": 0.5,
+     "shadows": false,
+     "shadowExtent": 0,
+     "sun": [
+      0.418,
+      -0.846,
+      -0.332
+     ]
+    },
+    "store": {
+     "persistent": true,
+     "seedVersion": "2026.10.10d",
+     "openedMs": 871,
+     "objects": 6960,
+     "links": 12792,
+     "obs": 0
+    },
+    "feeds": {
+     "nws_alerts": {
+      "state": "ok",
+      "nextAt": 1791687712680.4531,
+      "lastOkAt": 1791687589350,
+      "lastObjects": 0,
+      "lastMs": 914,
+      "dataAt": 1791687453000
+     },
+     "nhc": {
+      "state": "ok",
+      "nextAt": 1791688212697.1736,
+      "lastOkAt": 1791687589446,
+      "lastObjects": 1,
+      "lastMs": 955,
+      "dataAt": 1791687411501
+     },
+     "usgs_quakes": {
+      "state": "ok",
+      "nextAt": 1791687906154.3665,
+      "lastOkAt": 1791687589336,
+      "lastObjects": 262,
+      "lastMs": 840,
+      "dataAt": 1791687580000
+     },
+     "usgs_nwis": {
+      "state": "ok",
+      "nextAt": 1791688492352.4043,
+      "lastOkAt": 1791687589888,
+      "lastObjects": 131,
+      "lastMs": 1392,
+      "dataAt": 1791687000000
+     },
+     "nwps": {
+      "state": "ok",
+      "nextAt": 1791688501305.8147,
+      "lastOkAt": 1791687591163,
+      "lastObjects": 118,
+      "lastMs": 2550,
+      "dataAt": 1791685800000
+     },
+     "coops": {
+      "state": "ok",
+      "nextAt": 1791687938462.1707,
+      "lastOkAt": 1791687590414,
+      "lastObjects": 6,
+      "lastMs": 1351,
+      "dataAt": 1791687240000
+     },
+     "open_meteo": {
+      "state": "ok",
+      "nextAt": 1791688403970.9153,
+      "lastOkAt": 1791687590717,
+      "lastObjects": 8,
+      "lastMs": 1204,
+      "dataAt": 1791686700000
+     },
+     "nws_obs": {
+      "state": "ok",
+      "nextAt": 1791688239945.2798,
+      "lastOkAt": 1791687590565,
+      "lastObjects": 12,
+      "lastMs": 599,
+      "dataAt": 1791685800000
+     },
+     "luma": {
+      "state": "ok",
+      "nextAt": 1791688137275.668,
+      "lastOkAt": 1791687591312,
+      "lastObjects": 7,
+      "lastMs": 899,
+      "dataAt": 1791687411561
+     },
+     "ndbc": {
+      "state": "ok",
+      "nextAt": 1791688158364.9573,
+      "lastOkAt": 1791687591432,
+      "lastObjects": 15,
+      "lastMs": 569,
+      "dataAt": 1791687411596
+     },
+     "adsb": {
+      "state": "ok",
+      "nextAt": 1791688134540.0544,
+      "lastOkAt": 1791687591694,
+      "lastObjects": 1,
+      "lastMs": 381,
+      "dataAt": 1791687412031
+     }
+    },
+    "layers": [
+     {
+      "overlay": "nightlights",
+      "source": "nightlights:VIIRS_SNPP_DayNightBand_ENCC:2017-09-15",
+      "aboveWater": true,
+      "lastError": "",
+      "legend": {
+       "title": "Night lights · 2017-09-15",
+       "note": "7 map tiles did not arrive from NASA's service: the gaps show the base map, not darkness. Suomi NPP satellite, VIIRS Day/Night Band, enhanced near-constant contrast (ENCC). Image dated 2017-09-15 (UTC): a single overpass at about 1:30 a.m. Puerto Rico time. Chosen by the scene date. Cloud hides or smears lights, and moonlight brightens cloud, sea and land, so two nights differ for reasons other than electricity. A picture, not a calibrated measure of light or of outages. Pixels are about 750 m.",
+       "stops": 3
+      }
+     },
+     {
+      "municipios": 78,
+      "vertices": 123952,
+      "queued": 8,
+      "lift": 450,
+      "selected": null,
+      "footprint": 0,
+      "highlights": 0,
+      "selectedId": null
+     },
+     {
+      "tiles": 0,
+      "buildings": 0,
+      "triangles": 0,
+      "pending": 0,
+      "photos": 0,
+      "photoPending": 0,
+      "textureMB": 0
+     },
+     {
+      "storm": null,
+      "info": null,
+      "legend": null,
+      "live": [
+       {
+        "id": "tropical_cyclone:al092026",
+        "name": "Isaias",
+        "category": "Tropical depression",
+        "wind_kt": 20,
+        "distance_km": 2734,
+        "bearing": "NW",
+        "advisory": null,
+        "hasCone": false,
+        "points": 0,
+        "drawn": false,
+        "text": "Isaias · Tropical depression · 2,734 km NW"
+       }
+      ],
+      "highlights": 0
+     },
+     {
+      "layer": "markers",
+      "types": {
+       "shelter": 336,
+       "public_housing": 304,
+       "assisted_housing": 264,
+       "hospital": 87,
+       "clinic": 430,
+       "school": 1802,
+       "fire_station": 70,
+       "police_station": 127,
+       "power_plant": 67,
+       "substation": 401,
+       "water_plant": 61,
+       "airport": 24,
+       "seaport": 14,
+       "reservoir": 28,
+       "stream_gauge": 126,
+       "tide_station": 13,
+       "buoy": 25,
+       "weather_station": 157,
+       "weather_alert": 0,
+       "earthquake": 262,
+       "tropical_cyclone": 1,
+       "aircraft": 1
+      },
+      "drawn": 584,
+      "dots": 327,
+      "clustered": 0,
+      "hidden": 325,
+      "labels": 3,
+      "cellM": 16384,
+      "ms": 2.27
+     }
+    ]
+   },
+   "frameMs": 3000,
+   "ok": true,
+   "ms": 56553,
+   "logs": [
+    "[warning] Ignoring inability to install OPFS sqlite3_vfs: Cannot install OPFS: Missing SharedArrayBuffer and/or Atomics. The server must emit the COOP/COEP response headers to enable those. See https://sqlite.org/wasm/doc/trunk/persistence.md#coop-co",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-15/GoogleMapsCompatible_Level8/6/27/18.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: No",
+    "[error] Failed to load resource: net::ERR_FAILED",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-15/GoogleMapsCompatible_Level8/6/28/18.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: No",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-15/GoogleMapsCompatible_Level8/6/28/20.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: No",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-15/GoogleMapsCompatible_Level8/6/28/21.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: No",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-15/GoogleMapsCompatible_Level8/6/30/19.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: No",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-15/GoogleMapsCompatible_Level8/6/30/21.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: No",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-15/GoogleMapsCompatible_Level8/6/30/18.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: No",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-15/GoogleMapsCompatible_Level8/8/115/81.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: N",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-15/GoogleMapsCompatible_Level8/6/30/20.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: No",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-15/GoogleMapsCompatible_Level8/8/114/80.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: N",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-15/GoogleMapsCompatible_Level8/8/114/79.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: N",
+    "[error] Access to fetch at 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-15/GoogleMapsCompatible_Level8/8/114/81.png' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: N",
+    "[error] Failed to load resource: the server responded with a status of 400 ()",
+    "[error] Failed to load resource: the server responded with a status of 404 ()"
+   ],
+   "failedHosts": {
+    "gibs.earthdata.nasa.gov": 28
+   }
+  },
+  {
+   "id": "surge-c1",
+   "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&nofeeds=1&overlay=surge&surge=1&cam=-66.14,18.44,12000,180,60",
+   "loadMs": 962968,
+   "debug": {
+    "stats": {
+     "fps": 10,
+     "tiles": 2,
+     "pending": 7,
+     "drawCalls": 1,
+     "tris": 1
+    },
+    "view": {
+     "lon": -66.14,
+     "lat": 18.44,
+     "range": 11999.999999999993,
+     "heading": 180,
+     "pitch": 60,
+     "altitude": 10678.109492056177
+    },
+    "terrain": {
+     "tiles": 2,
+     "pending": 7,
+     "maxZoom": 9
+    },
+    "post": {
+     "mode": "basic",
+     "lutsReady": false,
+     "clouds": false,
+     "units": 0.42058823529411765,
+     "elevation": -76.71993195479085,
+     "dark": 1,
+     "daylight": 0,
+     "moonlight": 1,
+     "warmth": 1,
+     "lowSun": 0,
+     "fill": 0,
+     "ground": 0.723414520192371,
+     "observed": false,
+     "exposure": 3.2,
+     "bloom": 0.5,
+     "shadows": false,
+     "shadowExtent": 0,
+     "sun": [
+      -0.126,
+      -0.973,
+      -0.192
+     ]
+    },
+    "store": {
+     "persistent": true,
+     "seedVersion": "2026.10.10d",
+     "openedMs": 551,
+     "objects": 6960,
+     "links": 12792,
+     "obs": 0
+    },
+    "layers": [
+     {
+      "overlay": "surge",
+      "source": "surge:tiles/surge/c1:2026-10-11T02:40:46Z",
+      "aboveWater": false,
+      "lastError": "",
+      "legend": {
+       "title": "Storm surge flooding by hurricane category (NOAA NHC) · Category 1",
+       "note": "Zoom in to see this map: its tiles start closer in. Near worst-case storm surge flooding above ground for a hurricane of the chosen category at high tide (NOAA NHC SLOSH maximum of maximums with wave setup, 2018). No single storm floods all of the area shown. Colours are the NHC viewer's four depth groups; the files hold one-foot classes. Each map pixel shows the deepest class of the roughly 10 m source cells inside it, so flooded areas look larger when zoomed out. Where nothing is drawn the source has no value: it does not distinguish dry ground from open water or from places its model grid does not reach.",
+       "stops": 4
+      }
+     },
+     {
+      "municipios": 78,
+      "vertices": 123952,
+      "queued": 0,
+      "lift": 21.8,
+      "selected": null,
+      "footprint": 0,
+      "highlights": 0,
+      "selectedId": null
+     },
+     {
+      "tiles": 8,
+      "buildings": 21486,
+      "triangles": 339666,
+      "pending": 34,
+      "photos": 2,
+      "photoPending": 0,
+      "textureMB": 10.7
+     },
+     {
+      "storm": null,
+      "info": null,
+      "legend": null,
+      "live": [],
+      "highlights": 0
+     },
+     {
+      "layer": "markers",
+      "types": {
+       "shelter": 336,
+       "public_housing": 304,
+       "assisted_housing": 264,
+       "hospital": 87,
+       "clinic": 430,
+       "school": 1802,
+       "fire_station": 70,
+       "police_station": 127,
+       "power_plant": 67,
+       "substation": 401,
+       "water_plant": 61,
+       "airport": 24,
+       "seaport": 14,
+       "reservoir": 28,
+       "stream_gauge": 125,
+       "tide_station": 13,
+       "buoy": 25,
+       "weather_station": 149,
+       "weather_alert": 0,
+       "earthquake": 0,
+       "tropical_cyclone": 0,
+       "aircraft": 0
+      },
+      "drawn": 53,
+      "dots": 0,
+      "clustered": 13,
+      "hidden": 1,
+      "labels": 2,
+      "cellM": 512,
+      "ms": 2.68
+     }
+    ]
+   },
+   "frameMs": 1889,
+   "ok": true,
+   "ms": 2612913,
+   "logs": [
+    "[warning] Ignoring inability to install OPFS sqlite3_vfs: Cannot install OPFS: Missing SharedArrayBuffer and/or Atomics. The server must emit the COOP/COEP response headers to enable those. See https://sqlite.org/wasm/doc/trunk/persistence.md#coop-co",
+    "[shot] ready flag never set",
+    "[warning] sqlite3_step() rc= 1 SQLITE_ERROR SQL = SELECT type, COUNT(*) AS n FROM object WHERE expired = 0 GROUP BY type ORDER BY type",
+    "[warning] [ui] query failed Error: SQLITE_ERROR: sqlite3 result code 1: no such table: object\n    at AI.e.onmessage (https://webgpu-demos.github.io/garita/dev/ui/assets/index-BUY6WPin.js:10023:8946)",
+    "[warning] sqlite3_step() rc= 1 SQLITE_ERROR SQL = SELECT * FROM ingest_run WHERE id IN (SELECT MAX(id) FROM ingest_run GROUP BY source_id)",
+    "[warning] sqlite3_step() rc= 1 SQLITE_ERROR SQL = SELECT o.rid, o.id, o.type, o.key, o.name, o.lon, o.lat, o.status, o.severity, o.valid_from, o.valid_to, o.first_seen, o.updated_at, o.source_id, o.expired, o.name AS ord FROM object o WHERE o.type IN",
+    "[warning] [ui] query failed Error: SQLITE_ERROR: sqlite3 result code 1: no such table: ingest_run\n    at AI.e.onmessage (https://webgpu-demos.github.io/garita/dev/ui/assets/index-BUY6WPin.js:10023:8946)",
+    "[warning] sqlite3_step() rc= 1 SQLITE_ERROR SQL = SELECT o.rid, o.id, o.type, o.key, o.name, o.lon, o.lat, o.status, o.severity, o.valid_from, o.valid_to, o.first_seen, o.updated_at, o.source_id, o.expired, o.updated_at AS ord FROM object o WHERE o.t"
+   ],
+   "failedHosts": {}
+  },
+  {
+   "id": "surge-c5-es",
+   "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&nofeeds=1&overlay=surge&surge=5&lang=es&cam=-66.14,18.44,12000,180,60",
+   "loadMs": 2582833,
+   "debug": {
+    "stats": {
+     "fps": 11,
+     "tiles": 2,
+     "pending": 8,
+     "drawCalls": 1,
+     "tris": 1
+    },
+    "view": {
+     "lon": -66.14,
+     "lat": 18.44,
+     "range": 11999.999999999993,
+     "heading": 180,
+     "pitch": 60,
+     "altitude": 10678.080310391462
+    },
+    "terrain": {
+     "tiles": 2,
+     "pending": 8,
+     "maxZoom": 9
+    },
+    "post": {
+     "mode": "basic",
+     "lutsReady": false,
+     "clouds": false,
+     "units": 0.42058823529411765,
+     "elevation": -76.71260789483757,
+     "dark": 1,
+     "daylight": 0,
+     "moonlight": 1,
+     "warmth": 1,
+     "lowSun": 0,
+     "fill": 0,
+     "ground": 0.723414520192371,
+     "observed": false,
+     "exposure": 3.2,
+     "bloom": 0.5,
+     "shadows": false,
+     "shadowExtent": 0,
+     "sun": [
+      -0.126,
+      -0.973,
+      -0.192
+     ]
+    },
+    "store": {
+     "persistent": true,
+     "seedVersion": "2026.10.10d",
+     "openedMs": 333,
+     "objects": 6960,
+     "links": 12792,
+     "obs": 0
+    },
+    "layers": [
+     {
+      "overlay": "surge",
+      "source": "surge:tiles/surge/c5:2026-10-11T02:40:46Z",
+      "aboveWater": false,
+      "lastError": "",
+      "legend": {
+       "title": "Inundación por marejada ciclónica según la categoría del huracán (NOAA NHC) · Categoría 5",
+       "note": "Acérquese para ver este mapa: sus teselas empiezan más cerca. Inundación por marejada ciclónica sobre el terreno en el caso cercano al peor posible para un huracán de la categoría elegida con marea alta (NOAA NHC, máximo de máximos de SLOSH con sobreelevación por oleaje, 2018). Ninguna tormenta individual inunda toda el área mostrada. Los colores son los cuatro grupos de profundidad del visor del NHC; los archivos contienen clases de un pie. Cada píxel del mapa muestra la clase más profunda de las celdas de origen (de unos 10 m) que contiene, por lo que las áreas inundadas se ven más grandes al alejar el mapa. Donde no se dibuja nada la fuente no tiene valor: no distingue el terreno seco del agua abierta ni de los lugares que su modelo no cubre.",
+       "stops": 4
+      }
+     },
+     {
+      "municipios": 78,
+      "vertices": 123952,
+      "queued": 0,
+      "lift": 21.8,
+      "selected": null,
+      "footprint": 0,
+      "highlights": 0,
+      "selectedId": null
+     },
+     {
+      "tiles": 6,
+      "buildings": 13712,
+      "triangles": 201056,
+      "pending": 36,
+      "photos": 2,
+      "photoPending": 0,
+      "textureMB": 10.7
+     },
+     {
+      "storm": null,
+      "info": null,
+      "legend": null,
+      "live": [],
+      "highlights": 0
+     },
+     {
+      "layer": "markers",
+      "types": {
+       "shelter": 336,
+       "public_housing": 304,
+       "assisted_housing": 264,
+       "hospital": 87,
+       "clinic": 430,
+       "school": 1802,
+       "fire_station": 70,
+       "police_station": 127,
+       "power_plant": 67,
+       "substation": 401,
+       "water_plant": 61,
+       "airport": 24,
+       "seaport": 14,
+       "reservoir": 28,
+       "stream_gauge": 125,
+       "tide_station": 13,
+       "buoy": 25,
+       "weather_station": 149,
+       "weather_alert": 0,
+       "earthquake": 0,
+       "tropical_cyclone": 0,
+       "aircraft": 0
+      },
+      "drawn": 53,
+      "dots": 0,
+      "clustered": 13,
+      "hidden": 1,
+      "labels": 2,
+      "cellM": 512,
+      "ms": 8.13
+     }
+    ]
+   },
+   "frameMs": -1,
+   "ok": true,
+   "ms": 2609684,
+   "logs": [
+    "[warning] Ignoring inability to install OPFS sqlite3_vfs: Cannot install OPFS: Missing SharedArrayBuffer and/or Atomics. The server must emit the COOP/COEP response headers to enable those. See https://sqlite.org/wasm/doc/trunk/persistence.md#coop-co",
+    "[shot] ready flag never set",
+    "[warning] sqlite3_step() rc= 1 SQLITE_ERROR SQL = SELECT type, COUNT(*) AS n FROM object WHERE expired = 0 GROUP BY type ORDER BY type",
+    "[warning] [ui] query failed Error: SQLITE_ERROR: sqlite3 result code 1: no such table: object\n    at AI.e.onmessage (https://webgpu-demos.github.io/garita/dev/ui/assets/index-BUY6WPin.js:10023:8946)",
+    "[warning] sqlite3_step() rc= 1 SQLITE_ERROR SQL = SELECT * FROM ingest_run WHERE id IN (SELECT MAX(id) FROM ingest_run GROUP BY source_id)",
+    "[warning] [ui] query failed Error: SQLITE_ERROR: sqlite3 result code 1: no such table: ingest_run\n    at AI.e.onmessage (https://webgpu-demos.github.io/garita/dev/ui/assets/index-BUY6WPin.js:10023:8946)",
+    "[warning] sqlite3_step() rc= 1 SQLITE_ERROR SQL = SELECT o.rid, o.id, o.type, o.key, o.name, o.lon, o.lat, o.status, o.severity, o.valid_from, o.valid_to, o.first_seen, o.updated_at, o.source_id, o.expired, o.name AS ord FROM object o WHERE o.type IN",
+    "[warning] sqlite3_step() rc= 1 SQLITE_ERROR SQL = SELECT o.rid, o.id, o.type, o.key, o.name, o.lon, o.lat, o.status, o.severity, o.valid_from, o.valid_to, o.first_seen, o.updated_at, o.source_id, o.expired, o.updated_at AS ord FROM object o WHERE o.t"
+   ],
+   "failedHosts": {}
+  },
+  {
+   "id": "surge-rail",
+   "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&nofeeds=1&overlay=surge&surge=4&cam=-66.61,17.975,14000,0,58",
+   "loadMs": 96000,
+   "debug": {
+    "stats": {
+     "fps": 10,
+     "tiles": 20,
+     "pending": 0,
+     "drawCalls": 1,
+     "tris": 1
+    },
+    "view": {
+     "lon": -66.61,
+     "lat": 17.975,
+     "range": 14000,
+     "heading": 0,
+     "pitch": 58,
+     "altitude": 12235.27675337874
+    },
+    "terrain": {
+     "tiles": 20,
+     "pending": 0,
+     "maxZoom": 13
+    },
+    "post": {
+     "mode": "basic",
+     "lutsReady": false,
+     "clouds": false,
+     "units": 0.42058823529411765,
+     "elevation": -76.9588188381012,
+     "dark": 1,
+     "daylight": 0,
+     "moonlight": 1,
+     "warmth": 1,
+     "lowSun": 0,
+     "fill": 0,
+     "ground": 0.723414520192371,
+     "observed": false,
+     "exposure": 3.2,
+     "bloom": 0.5,
+     "shadows": false,
+     "shadowExtent": 0,
+     "sun": [
+      -0.118,
+      -0.974,
+      -0.192
+     ]
+    },
+    "store": {
+     "persistent": true,
+     "seedVersion": "2026.10.11a",
+     "openedMs": 914,
+     "objects": 6960,
+     "links": 12792,
+     "obs": 0
+    },
+    "layers": [
+     {
+      "overlay": "surge",
+      "source": "surge:tiles/surge/c4:2026-10-11T02:40:46Z",
+      "aboveWater": false,
+      "lastError": "",
+      "legend": {
+       "title": "Storm surge flooding by hurricane category (NOAA NHC) · Category 4",
+       "note": "Near worst-case storm surge flooding above ground for a hurricane of the chosen category at high tide (NOAA NHC SLOSH maximum of maximums with wave setup, 2018). No single storm floods all of the area shown. Colours are the NHC viewer's four depth groups; the files hold one-foot classes. Each map pixel shows the deepest class of the roughly 10 m source cells inside it, so flooded areas look larger when zoomed out. Where nothing is drawn the source has no value: it does not distinguish dry ground from open water or from places its model grid does not reach.",
+       "stops": 4
+      }
+     },
+     {
+      "municipios": 78,
+      "vertices": 123952,
+      "queued": 0,
+      "lift": 24.6,
+      "selected": null,
+      "footprint": 0,
+      "highlights": 0,
+      "selectedId": null
+     },
+     {
+      "tiles": 0,
+      "buildings": 0,
+      "triangles": 0,
+      "pending": 0,
+      "photos": 0,
+      "photoPending": 0,
+      "textureMB": 0
+     },
+     {
+      "storm": null,
+      "info": null,
+      "legend": null,
+      "live": [],
+      "highlights": 0
+     },
+     {
+      "layer": "markers",
+      "types": {
+       "shelter": 336,
+       "public_housing": 304,
+       "assisted_housing": 264,
+       "hospital": 87,
+       "clinic": 430,
+       "school": 1802,
+       "fire_station": 70,
+       "police_station": 127,
+       "power_plant": 67,
+       "substation": 401,
+       "water_plant": 61,
+       "airport": 24,
+       "seaport": 14,
+       "reservoir": 28,
+       "stream_gauge": 125,
+       "tide_station": 13,
+       "buoy": 25,
+       "weather_station": 149,
+       "weather_alert": 0,
+       "earthquake": 0,
+       "tropical_cyclone": 0,
+       "aircraft": 0
+      },
+      "drawn": 28,
+      "dots": 0,
+      "clustered": 9,
+      "hidden": 2,
+      "labels": 1,
+      "cellM": 724,
+      "ms": 0.36
+     }
+    ]
+   },
+   "frameMs": 1500,
+   "ok": true,
+   "ms": 110529,
+   "logs": [
+    "[warning] Ignoring inability to install OPFS sqlite3_vfs: Cannot install OPFS: Missing SharedArrayBuffer and/or Atomics. The server must emit the COOP/COEP response headers to enable those. See https://sqlite.org/wasm/doc/trunk/persistence.md#coop-co"
+   ],
+   "failedHosts": {}
+  }
+ ]
+}
