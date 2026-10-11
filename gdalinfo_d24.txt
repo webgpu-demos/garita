@@ -1,0 +1,69 @@
+Driver: GTiff/GeoTIFF
+Files: /vsicurl/https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/PR_PuertoRicoUSVI_D24/TIFF/USGS_1M_19_x80y205_PR_PuertoRicoUSVI_D24.tif
+Size is 10012, 10012
+Coordinate System is:
+PROJCRS["NAD83 / UTM zone 19N",
+    BASEGEOGCRS["NAD83",
+        DATUM["North American Datum 1983",
+            ELLIPSOID["GRS 1980",6378137,298.257222101,
+                LENGTHUNIT["metre",1]]],
+        PRIMEM["Greenwich",0,
+            ANGLEUNIT["degree",0.0174532925199433]],
+        ID["EPSG",4269]],
+    CONVERSION["UTM zone 19N",
+        METHOD["Transverse Mercator",
+            ID["EPSG",9807]],
+        PARAMETER["Latitude of natural origin",0,
+            ANGLEUNIT["degree",0.0174532925199433],
+            ID["EPSG",8801]],
+        PARAMETER["Longitude of natural origin",-69,
+            ANGLEUNIT["degree",0.0174532925199433],
+            ID["EPSG",8802]],
+        PARAMETER["Scale factor at natural origin",0.9996,
+            SCALEUNIT["unity",1],
+            ID["EPSG",8805]],
+        PARAMETER["False easting",500000,
+            LENGTHUNIT["metre",1],
+            ID["EPSG",8806]],
+        PARAMETER["False northing",0,
+            LENGTHUNIT["metre",1],
+            ID["EPSG",8807]]],
+    CS[Cartesian,2],
+        AXIS["(E)",east,
+            ORDER[1],
+            LENGTHUNIT["metre",1]],
+        AXIS["(N)",north,
+            ORDER[2],
+            LENGTHUNIT["metre",1]],
+    USAGE[
+        SCOPE["Engineering survey, topographic mapping."],
+        AREA["North America - between 72°W and 66°W - onshore and offshore. Canada - Labrador; New Brunswick; Nova Scotia; Nunavut; Quebec. Puerto Rico. United States (USA) - Connecticut; Maine; Massachusetts; New Hampshire; New York (Long Island); Rhode Island; Vermont."],
+        BBOX[14.92,-72,84,-66]],
+    ID["EPSG",26919]]
+Data axis to CRS axis mapping: 1,2
+Origin = (799993.999953520833515,2050006.000017859507352)
+Pixel Size = (1.000000000000000,-1.000000000000000)
+Metadata:
+  AREA_OR_POINT=Area
+Image Structure Metadata:
+  COMPRESSION=LZW
+  INTERLEAVE=BAND
+  LAYOUT=COG
+  PREDICTOR=3
+Corner Coordinates:
+Upper Left  (  799994.000, 2050006.000) ( 66d 9'31.30"W, 18d31' 9.53"N)
+Lower Left  (  799994.000, 2039994.000) ( 66d 9'36.67"W, 18d25'44.17"N)
+Upper Right (  810006.000, 2050006.000) ( 66d 3'50.26"W, 18d31' 4.32"N)
+Lower Right (  810006.000, 2039994.000) ( 66d 3'55.80"W, 18d25'38.98"N)
+Center      (  805000.000, 2045000.000) ( 66d 6'43.51"W, 18d28'24.27"N)
+Band 1 Block=512x512 Type=Float32, ColorInterp=Gray
+  Min=-10.104 Max=46.153 
+  Minimum=-10.104, Maximum=46.153, Mean=3.466, StdDev=5.059
+  NoData Value=-999999
+  Overviews: 5006x5006, 2503x2503, 1251x1251, 625x625, 312x312
+  Metadata:
+    STATISTICS_MAXIMUM=46.153301239014
+    STATISTICS_MEAN=3.4657631563797
+    STATISTICS_MINIMUM=-10.104206085205
+    STATISTICS_STDDEV=5.0586105227771
+    STATISTICS_VALID_PERCENT=28.22

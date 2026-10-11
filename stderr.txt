@@ -1,0 +1,131 @@
+++ date +%s
++ t0=1791685845
++ nproc
++ free -g
++ head -2
++ df -h .
++ tail -1
++ sudo apt-get update -qq
++ sudo apt-get install -y -qq gdal-bin python3-gdal python3-numpy python3-pil
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+++ date +%s
++ echo 'apt took 23 s'
++ gdalinfo --version
++ B=https://prd-tnm.s3.amazonaws.com
++ P=StagedProducts/Elevation/1m/Projects
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_&delimiter=/'
+++ grep -o '<Prefix>[^<]*</Prefix>' /home/runner/work/garita/garita/out/projects.xml
+++ sed 's/<[^>]*>//g'
+++ grep '/$'
++ for p in $(grep -o '<Prefix>[^<]*</Prefix>' $OUT/projects.xml | sed 's/<[^>]*>//g' | grep '/$')
+++ basename StagedProducts/Elevation/1m/Projects/PR_PRVI_A_2018/
++ n=PR_PRVI_A_2018
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_A_2018/&delimiter=/'
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_A_2018/TIFF/'
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_A_2018/metadata/&max-keys=20'
++ for p in $(grep -o '<Prefix>[^<]*</Prefix>' $OUT/projects.xml | sed 's/<[^>]*>//g' | grep '/$')
+++ basename StagedProducts/Elevation/1m/Projects/PR_PRVI_C_2018/
++ n=PR_PRVI_C_2018
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_C_2018/&delimiter=/'
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_C_2018/TIFF/'
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_C_2018/metadata/&max-keys=20'
++ for p in $(grep -o '<Prefix>[^<]*</Prefix>' $OUT/projects.xml | sed 's/<[^>]*>//g' | grep '/$')
+++ basename StagedProducts/Elevation/1m/Projects/PR_PRVI_D_2018/
++ n=PR_PRVI_D_2018
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_D_2018/&delimiter=/'
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_D_2018/TIFF/'
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_D_2018/metadata/&max-keys=20'
++ for p in $(grep -o '<Prefix>[^<]*</Prefix>' $OUT/projects.xml | sed 's/<[^>]*>//g' | grep '/$')
+++ basename StagedProducts/Elevation/1m/Projects/PR_PRVI_E_2018/
++ n=PR_PRVI_E_2018
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_E_2018/&delimiter=/'
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_E_2018/TIFF/'
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_E_2018/metadata/&max-keys=20'
++ for p in $(grep -o '<Prefix>[^<]*</Prefix>' $OUT/projects.xml | sed 's/<[^>]*>//g' | grep '/$')
+++ basename StagedProducts/Elevation/1m/Projects/PR_PRVI_F_2018/
++ n=PR_PRVI_F_2018
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_F_2018/&delimiter=/'
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_F_2018/TIFF/'
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_F_2018/metadata/&max-keys=20'
++ for p in $(grep -o '<Prefix>[^<]*</Prefix>' $OUT/projects.xml | sed 's/<[^>]*>//g' | grep '/$')
+++ basename StagedProducts/Elevation/1m/Projects/PR_PRVI_G_2018/
++ n=PR_PRVI_G_2018
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_G_2018/&delimiter=/'
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_G_2018/TIFF/'
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_G_2018/metadata/&max-keys=20'
++ for p in $(grep -o '<Prefix>[^<]*</Prefix>' $OUT/projects.xml | sed 's/<[^>]*>//g' | grep '/$')
+++ basename StagedProducts/Elevation/1m/Projects/PR_PRVI_H_2018/
++ n=PR_PRVI_H_2018
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_H_2018/&delimiter=/'
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_H_2018/TIFF/'
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_H_2018/metadata/&max-keys=20'
++ for p in $(grep -o '<Prefix>[^<]*</Prefix>' $OUT/projects.xml | sed 's/<[^>]*>//g' | grep '/$')
+++ basename StagedProducts/Elevation/1m/Projects/PR_PRVI_VI_B1_2018/
++ n=PR_PRVI_VI_B1_2018
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_VI_B1_2018/&delimiter=/'
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_VI_B1_2018/TIFF/'
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_VI_B1_2018/metadata/&max-keys=20'
++ for p in $(grep -o '<Prefix>[^<]*</Prefix>' $OUT/projects.xml | sed 's/<[^>]*>//g' | grep '/$')
+++ basename StagedProducts/Elevation/1m/Projects/PR_PRVI_VI_B2_2018/
++ n=PR_PRVI_VI_B2_2018
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_VI_B2_2018/&delimiter=/'
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_VI_B2_2018/TIFF/'
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PRVI_VI_B2_2018/metadata/&max-keys=20'
++ for p in $(grep -o '<Prefix>[^<]*</Prefix>' $OUT/projects.xml | sed 's/<[^>]*>//g' | grep '/$')
+++ basename StagedProducts/Elevation/1m/Projects/PR_PuertoRicoUSVI_D24/
++ n=PR_PuertoRicoUSVI_D24
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PuertoRicoUSVI_D24/&delimiter=/'
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PuertoRicoUSVI_D24/TIFF/'
++ curl -s 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR_PuertoRicoUSVI_D24/metadata/&max-keys=20'
++ export GDAL_DISABLE_READDIR_ON_OPEN=EMPTY_DIR CPL_VSIL_CURL_ALLOWED_EXTENSIONS=.tif
++ GDAL_DISABLE_READDIR_ON_OPEN=EMPTY_DIR
++ CPL_VSIL_CURL_ALLOWED_EXTENSIONS=.tif
++ D24=https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/PR_PuertoRicoUSVI_D24/TIFF/USGS_1M_19_x80y205_PR_PuertoRicoUSVI_D24.tif
++ gdalinfo -json /vsicurl/https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/PR_PuertoRicoUSVI_D24/TIFF/USGS_1M_19_x80y205_PR_PuertoRicoUSVI_D24.tif
+
+real	0m0.507s
+user	0m0.051s
+sys	0m0.017s
++ gdalinfo /vsicurl/https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/PR_PuertoRicoUSVI_D24/TIFF/USGS_1M_19_x80y205_PR_PuertoRicoUSVI_D24.tif
+++ grep -oh '<Key>[^<]*x80y205[^<]*\.tif</Key>' /home/runner/work/garita/garita/out/tiff_PR_PRVI_A_2018.xml /home/runner/work/garita/garita/out/tiff_PR_PRVI_C_2018.xml /home/runner/work/garita/garita/out/tiff_PR_PRVI_D_2018.xml /home/runner/work/garita/garita/out/tiff_PR_PRVI_E_2018.xml /home/runner/work/garita/garita/out/tiff_PR_PRVI_F_2018.xml /home/runner/work/garita/garita/out/tiff_PR_PRVI_G_2018.xml /home/runner/work/garita/garita/out/tiff_PR_PRVI_H_2018.xml /home/runner/work/garita/garita/out/tiff_PR_PRVI_VI_B1_2018.xml /home/runner/work/garita/garita/out/tiff_PR_PRVI_VI_B2_2018.xml
+++ sed 's/<[^>]*>//g'
++ for k in $(grep -oh '<Key>[^<]*x80y205[^<]*\.tif</Key>' $OUT/tiff_*2018*.xml | sed 's/<[^>]*>//g')
+++ basename StagedProducts/Elevation/1m/Projects/PR_PRVI_E_2018/TIFF/USGS_1m_x80y205_PR_PRVI_E_2018.tif .tif
++ n=USGS_1m_x80y205_PR_PRVI_E_2018
++ gdalinfo /vsicurl/https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/PR_PRVI_E_2018/TIFF/USGS_1m_x80y205_PR_PRVI_E_2018.tif
++ gdalinfo -json /vsicurl/https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/PR_PRVI_E_2018/TIFF/USGS_1m_x80y205_PR_PRVI_E_2018.tif
++ LAST=https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/PR_PRVI_E_2018/TIFF/USGS_1m_x80y205_PR_PRVI_E_2018.tif
++ for k in $(grep -oh '<Key>[^<]*x80y205[^<]*\.tif</Key>' $OUT/tiff_*2018*.xml | sed 's/<[^>]*>//g')
+++ basename StagedProducts/Elevation/1m/Projects/PR_PRVI_G_2018/TIFF/USGS_1m_x80y205_PR_PRVI_G_2018.tif .tif
++ n=USGS_1m_x80y205_PR_PRVI_G_2018
++ gdalinfo /vsicurl/https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/PR_PRVI_G_2018/TIFF/USGS_1m_x80y205_PR_PRVI_G_2018.tif
++ gdalinfo -json /vsicurl/https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/PR_PRVI_G_2018/TIFF/USGS_1m_x80y205_PR_PRVI_G_2018.tif
++ LAST=https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/PR_PRVI_G_2018/TIFF/USGS_1m_x80y205_PR_PRVI_G_2018.tif
++ curl -s https://thor-f5.er.usgs.gov/ngtoc/metadata/waf/elevation/1_meter/geotiff/PR_PuertoRicoUSVI_D24/USGS_1M_19_x80y205_PR_PuertoRicoUSVI_D24.xml -m 30
++ curl -s -o /tmp/d24.tif https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/PR_PuertoRicoUSVI_D24/TIFF/USGS_1M_19_x80y205_PR_PuertoRicoUSVI_D24.tif
+
+real	0m4.204s
+user	0m0.052s
+sys	0m0.187s
++ ls -l /tmp/d24.tif
++ curl -s -o /tmp/o18.tif https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/PR_PRVI_G_2018/TIFF/USGS_1m_x80y205_PR_PRVI_G_2018.tif
+
+real	0m1.842s
+user	0m0.028s
+sys	0m0.029s
++ ls -l /tmp/o18.tif
++ python3 -
+/usr/lib/python3/dist-packages/osgeo/gdal.py:312: FutureWarning: Neither gdal.UseExceptions() nor gdal.DontUseExceptions() has been explicitly called. In GDAL 4.0, exceptions will be enabled by default.
+  warnings.warn(
+<stdin>:20: RuntimeWarning: overflow encountered in multiply
+++ date +%s
++ echo 'total 46 s'
