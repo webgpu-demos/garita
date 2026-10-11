@@ -65,6 +65,22 @@ zoom-8 tiles x 79..81, y 114..115.
 
 Deeper zooms are streamed at run time from the upstream services (terrain to z 15, imagery to z 16).
 
+## Rebuilding the buildings
+
+Building tiles are the root of a chain; a rebuild goes through all of it or the parts disagree.
+
+1. `vector.yml` (push to `pipe-vector`): OSM extract, Overture additions, flood zones, tiles. It publishes under
+   `staging/` on `gh-pages` (tiles only when the commit message contains `[publish-tiles]`), never over the live paths.
+2. Promote: in a checkout of `gh-pages`, replace `tiles/bld`, `data/osm`, `data/derived`, `data/geo` with their
+   `staging/` copies, delete `staging/`, push.
+3. Run `lidar.yml`, `surge.yml`, `slide.yml` (workflow dispatch): each samples its raster at every building in tile
+   order and publishes `data/hazards/<stage>/`.
+4. In the checkout: `node pipeline/hazards/merge.mjs <site>` (lidar ground into the tiles, exposure per municipio),
+   `node pipeline/derive.mjs <site>` (batches 50 to 53), `node src/ontology/build-seed.ts <site>/data/seed
+   <site>/data/twin.db --version <v>`, new `data/manifest.json`, push, then `tools/deploy.sh`.
+
+Between steps 2 and 4 the live tiles carry the coarse terrain elevation instead of lidar; nothing breaks.
+
 ## Store and ontology
 
 `src/ontology/types.ts` is the contract; read it first. Summary:
