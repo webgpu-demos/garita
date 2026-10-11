@@ -161,12 +161,17 @@ log('buildings', JSON.stringify({ ...stats, by_building_tag: undefined }));
 //     mostly carries none and is kept), or if larger than ADD.large_area_m2 without a confidence of at least
 //     ADD.large_min_confidence. qa.json added.sensitivity says what other thresholds would have let in.
 //  3. LAND. Dropped if its centroid is not inside a land-clipped municipio (in the sea, or outside Puerto Rico).
+//  4. ATTACHED. Dropped if it is small (under ADD.near_max_area_m2) and its outline comes within ADD.near_m metres
+//     of an OSM footprint: that is inside the misregistration between the imagery the detectors saw and the
+//     imagery OSM was traced from, so it is as likely the edge, the annex or the carport of the mapped building
+//     as a building of its own. In doubt, dropped. ADD_NEAR_M=0 switches the rule off.
 // Kind follows the building=yes rule (house under 400 m2, otherwise other) with bit 7 set in the tile; height only
 // if the source carries one (none does in Puerto Rico as of release 2026-09-23.1), otherwise 0 = unknown.
-const ADD = { min_area_m2: Number(process.env.ADD_MIN_AREA || 25), min_confidence: Number(process.env.ADD_MIN_CONF || 0.7), large_area_m2: Number(process.env.ADD_LARGE_AREA || 5000), large_min_confidence: 0.8 };
+const ADD = { min_area_m2: Number(process.env.ADD_MIN_AREA || 25), min_confidence: Number(process.env.ADD_MIN_CONF || 0.7), large_area_m2: Number(process.env.ADD_LARGE_AREA || 5000), large_min_confidence: 0.8,
+  near_m: Number(process.env.ADD_NEAR_M ?? 1.5), near_max_area_m2: Number(process.env.ADD_NEAR_MAX_AREA || 60) };
 const addStats = { candidates: 0, candidates_by_dataset: {}, degenerate: 0,
   dropped_overlap: { centroid_inside_osm: 0, osm_centroid_inside: 0, outlines_intersect_osm: 0, overlaps_accepted_addition: 0 },
-  dropped_implausible: { tiny: 0, low_confidence: 0, large_without_confidence: 0 }, dropped_not_on_land: 0,
+  dropped_implausible: { tiny: 0, low_confidence: 0, large_without_confidence: 0 }, dropped_not_on_land: 0, dropped_attached_to_osm: 0, distance_to_osm_hist: {},
   added: 0, added_by_dataset: {}, added_with_height: 0, added_confidence_hist: {}, dropped_low_confidence_by_dataset: {}, land_test: false,
   not_overlapping_area_hist: {}, sensitivity: {} };
 const AREA_BINS = [15, 20, 25, 30, 40, 60, 100, 200, 400, 1000, 5000];
@@ -220,6 +225,28 @@ if (ovtMeta && fs.existsSync(path.join(ovtDir, 'added.jsonl')) && process.env.NO
     }
     return why;
   };
+  /** Distance in metres from candidate ring r to the nearest OSM outline, looking no further than `lim` (returns lim if none). */
+  const distOsm = (r, n, x0, y0, x1, y1, lat, lim) => {
+    const kx = mLon(lat), ky = M_LAT, px = lim / kx, py = lim / ky; let best = lim * lim; const seen = new Set();
+    const ps = (ax, ay, bx, by, qx, qy) => { // squared distance point q to segment a-b, metres
+      const dx = (bx - ax) * kx, dy = (by - ay) * ky, ex = (qx - ax) * kx, ey = (qy - ay) * ky, l2 = dx * dx + dy * dy;
+      let t = l2 ? (ex * dx + ey * dy) / l2 : 0; t = t < 0 ? 0 : t > 1 ? 1 : t; const fx = ex - t * dx, fy = ey - t * dy; return fx * fx + fy * fy;
+    };
+    for (let gx = Math.floor((x0 - px + 180) / C); gx <= Math.floor((x1 + px + 180) / C); gx++) for (let gy = Math.floor((y0 - py + 90) / C); gy <= Math.floor((y1 + py + 90) / C); gy++) {
+      const a = grid.get(gkey(gx, gy)); if (!a) continue;
+      for (const i of a) {
+        if (i >= NB_OSM || seen.has(i)) continue; seen.add(i);
+        if (bb.x0[i] > x1 + px || bb.x1[i] < x0 - px || bb.y0[i] > y1 + py || bb.y1[i] < y0 - py) continue;
+        const s = B.start[i] * 2, m = B.nv[i];
+        for (let k = 0, j = n - 1; k < n; j = k++) for (let p = 0, q = m - 1; p < m; q = p++) {
+          const d = Math.min(ps(r[j][0], r[j][1], r[k][0], r[k][1], coords[s + 2 * p], coords[s + 2 * p + 1]), ps(coords[s + 2 * q], coords[s + 2 * q + 1], coords[s + 2 * p], coords[s + 2 * p + 1], r[k][0], r[k][1]));
+          if (d < best) best = d;
+        }
+      }
+    }
+    return Math.sqrt(best);
+  };
+  const DIST_BINS = [0.5, 1, 1.5, 2, 3, 5], distBin = (d) => { for (const b of DIST_BINS) if (d < b) return '<' + b; return '>=5'; };
   const t0 = Date.now();
   for await (const l of lines(path.join(ovtDir, 'added.jsonl'))) {
     let f; try { f = JSON.parse(l); } catch { continue; }
@@ -250,6 +277,12 @@ if (ovtMeta && fs.existsSync(path.join(ovtDir, 'added.jsonl')) && process.env.NO
     if (conf !== null && conf < ADD.min_confidence) { addStats.dropped_implausible.low_confidence++; addStats.dropped_low_confidence_by_dataset[f.ds] = (addStats.dropped_low_confidence_by_dataset[f.ds] || 0) + 1; continue; }
     if (areaM2 > ADD.large_area_m2 && !(conf !== null && conf >= ADD.large_min_confidence)) { addStats.dropped_implausible.large_without_confidence++; continue; }
     if (landIdx && landIdx.first(cx, cy) === null) { addStats.dropped_not_on_land++; continue; }
+    { // how close to a mapped building (for every candidate that got this far), then the ATTACHED rule
+      const d = distOsm(ring, n, x0, y0, x1, y1, cy, 5);
+      const ac = areaM2 < 40 ? 'area<40' : areaM2 < 60 ? 'area<60' : areaM2 < 100 ? 'area<100' : 'area>=100';
+      const h = addStats.distance_to_osm_hist[ac] || (addStats.distance_to_osm_hist[ac] = {}); const db = distBin(d); h[db] = (h[db] || 0) + 1;
+      if (ADD.near_m > 0 && areaM2 < ADD.near_max_area_m2 && d < ADD.near_m) { addStats.dropped_attached_to_osm++; continue; }
+    }
     if (nc + n * 2 > cap) { cap *= 2; const c2 = new Float64Array(cap); c2.set(coords.subarray(0, nc)); coords = c2; }
     const i = B.cx.length;
     B.start.push(nc / 2); B.nv.push(n);
@@ -445,7 +478,7 @@ const LICENCES = {
   'Google Open Buildings': { family: 'Google', licence: 'CC BY 4.0', attribution: 'Google Open Buildings. Available under CC BY 4.0. Via Overture Maps Foundation.' },
   'Microsoft ML Buildings': { family: 'Microsoft', licence: 'ODbL 1.0', attribution: 'Global ML Building Footprints. Licensed by Microsoft under the Open Database License. Via Overture Maps Foundation.' },
 };
-const RULE = `OpenStreetMap is the base: every building of our own OSM extract is kept unchanged. An Overture building is added only if none of its sources is OpenStreetMap and (1) it does not overlap our OSM extract or an addition already accepted: dropped if its centroid is inside an OSM footprint, an OSM centroid is inside it, or the outlines intersect at all (outer rings); (2) it is plausible: at least ${ADD.min_area_m2} m2, confidence at least ${ADD.min_confidence} where the source gives one, and not above ${ADD.large_area_m2} m2 unless its confidence is at least ${ADD.large_min_confidence}; (3) its centroid is on land inside a municipio. Tests run in that order and a candidate is counted under the first one it fails. Added records have bit 7 (0x80) of kind set; kind is house under 400 m2, otherwise other; height is the source's own or 0.`;
+const RULE = `OpenStreetMap is the base: every building of our own OSM extract is kept unchanged. An Overture building is added only if none of its sources is OpenStreetMap and (1) it does not overlap our OSM extract or an addition already accepted: dropped if its centroid is inside an OSM footprint, an OSM centroid is inside it, or the outlines intersect at all (outer rings); (2) it is plausible: at least ${ADD.min_area_m2} m2, confidence at least ${ADD.min_confidence} where the source gives one, and not above ${ADD.large_area_m2} m2 unless its confidence is at least ${ADD.large_min_confidence}; (3) its centroid is on land inside a municipio; (4) it is not a small footprint (under ${ADD.near_max_area_m2} m2) whose outline comes within ${ADD.near_m} m of an OSM footprint (taken as part of the mapped building). Tests run in that order and a candidate is counted under the first one it fails. Added records have bit 7 (0x80) of kind set; kind is house under 400 m2, otherwise other; height is the source's own or 0.`;
 const addedSource = ovtMeta && {
   name: 'Overture Maps Foundation, buildings theme: features whose origin is not OpenStreetMap (footprints detected from imagery by machine learning)',
   release: ovtMeta.release, url: ovtMeta.file, bbox: ovtMeta.bbox, licence: 'ODbL 1.0 (Overture: "License for theme: ODbL"); per origin dataset below', attribution: '© OpenStreetMap contributors, Overture Maps Foundation', attribution_page: 'https://docs.overturemaps.org/attribution/',
@@ -454,7 +487,7 @@ const addedSource = ovtMeta && {
     version: d.version_max ?? null, observed: d.update_time_max ?? null, candidates: addStats.candidates_by_dataset[d.dataset] || 0, added: addStats.added_by_dataset[d.dataset] || 0, confidence: d.with_confidence ? { features_with_value: d.with_confidence, min: d.confidence_min, max: d.confidence_max } : null, with_height: d.with_height })),
   overture_osm_snapshot: (ovtMeta.datasets || []).find((d) => d.dataset === 'OpenStreetMap')?.version_max ?? null,
   rule: RULE, thresholds: ADD,
-  counts: { candidates: addStats.candidates, added: NB_ADDED, added_by_dataset: addStats.added_by_dataset, dropped_overlap: addStats.dropped_overlap, dropped_implausible: addStats.dropped_implausible, dropped_not_on_land: addStats.dropped_not_on_land, degenerate: addStats.degenerate },
+  counts: { candidates: addStats.candidates, added: NB_ADDED, added_by_dataset: addStats.added_by_dataset, dropped_overlap: addStats.dropped_overlap, dropped_implausible: addStats.dropped_implausible, dropped_not_on_land: addStats.dropped_not_on_land, dropped_attached_to_osm: addStats.dropped_attached_to_osm, degenerate: addStats.degenerate },
 };
 writeOut('tiles/bld/index.json', JSON.stringify({
   zoom: Z, format: 'GBL1', generated, source: osmSource, added_source: addedSource || null,
@@ -534,6 +567,8 @@ writeOut('data/derived/qa.json', JSON.stringify({
     dropped_overlap: addStats.dropped_overlap, dropped_overlap_total: Object.values(addStats.dropped_overlap).reduce((a, b) => a + b, 0),
     dropped_implausible: addStats.dropped_implausible, dropped_implausible_total: Object.values(addStats.dropped_implausible).reduce((a, b) => a + b, 0), dropped_low_confidence_by_dataset: addStats.dropped_low_confidence_by_dataset,
     dropped_not_on_land: addStats.dropped_not_on_land, land_test_applied: addStats.land_test,
+    dropped_attached_to_osm: addStats.dropped_attached_to_osm,
+    distance_to_osm_hist: { note: 'Candidates that passed tests 1 to 3, by footprint area (m2) and distance from their outline to the nearest OSM outline (m, looked for up to 5 m). Rule 4 drops the cells with area under near_max_area_m2 and distance under near_m.', counts: addStats.distance_to_osm_hist },
     not_overlapping_area_hist_m2: addStats.not_overlapping_area_hist,
     sensitivity: { note: 'Approximate count of additions other thresholds would give: candidates clear of OSM and of the additions accepted in this run, by minimum area (m2) and minimum confidence (candidates without a confidence always pass it). Before the land test.', counts: addStats.sensitivity },
     added: NB_ADDED, added_by_dataset: addStats.added_by_dataset, added_with_height: addStats.added_with_height, added_confidence_hist: addStats.added_confidence_hist,
