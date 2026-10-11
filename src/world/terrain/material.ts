@@ -13,14 +13,14 @@ export interface TileUniforms {
 }
 export interface GlobalUniforms {
   uOvOpacity: { value: number }; uRelief: { value: number }; uLod: { value: number };
-  uNight: { value: number }; uTintMode: { value: number }; uLightGain: { value: number };
+  uNight: { value: number }; uTintMode: { value: number }; uLightGain: { value: number }; uOvEmit: { value: number };
   uOvAbove: { value: number }; tDensity: { value: THREE.Texture };
 }
 
 const PARS = /* glsl */`
 uniform sampler2D tPhoto; uniform sampler2D tNorm; uniform sampler2D tOverlay;
 uniform vec4 uOvXf; uniform float uHasPhoto; uniform float uOvOpacity; uniform float uRelief; uniform float uLod; uniform vec3 uTint;
-uniform float uNight; uniform float uTintMode; uniform float uLightGain; uniform float uOvAbove; uniform sampler2D tDensity; uniform vec4 uDenXf;
+uniform float uNight; uniform float uTintMode; uniform float uLightGain; uniform float uOvEmit; uniform float uOvAbove; uniform sampler2D tDensity; uniform vec4 uDenXf;
 varying float vH; varying vec2 vWxz;
 vec3 gEmit; float gOvCov;
 vec3 gToLin(vec3 c) { return pow(max(c, 0.0), vec3(2.2)); }
@@ -96,12 +96,15 @@ const ALBEDO = /* glsl */`
   }
   vec2 ouv = vUv * uOvXf.xy + uOvXf.zw;
   vec4 ov = texture2D(tOverlay, ouv);
-  alb = mix(alb, gToLin(pow(ov.rgb, vec3(1.0 / 2.2))), ov.a * uOvOpacity);
+  vec3 ovLin = gToLin(pow(ov.rgb, vec3(1.0 / 2.2)));
+  alb = mix(alb, ovLin, ov.a * uOvOpacity);
   gOvCov = ov.a * uOvOpacity;
   alb = mix(alb, alb * 0.35 + uTint * 0.65, uLod);
   diffuseColor.rgb = alb;
   // Town lights: built-up surface in the photo emits a sodium/LED mix, as points close up and as a glow from afar.
-  gEmit = vec3(0.0);
+  // An image of light (satellite night lights) shows by its own light after dark: as a surface colour under
+  // the night's dim light it would be nearly black.
+  gEmit = ovLin * (ov.a * uOvOpacity * uOvEmit);
   if (uNight > 0.01) {
     // Building density (buildings per zoom-14 tile, baked at start) decides where the lights are; the photo decides
     // their fine pattern. Dense metro glows, the Cordillera is dark with scattered points.
@@ -119,7 +122,7 @@ const ALBEDO = /* glsl */`
     // (the glow is at full strength only from far enough that a pixel covers a block: closer, it would wash the
     //  whole built-up area in one flat cream instead of leaving dark ground between lights)
     float glow = (0.12 + 1.7 * wd) * mix(0.12, 1.0, smoothstep(40.0, 250.0, fw));   // (0.12: about the mean of the points it replaces)
-    gEmit = col * lit * mix(pt * (0.30 + 0.70 * wd), glow, far) * uNight * uLightGain * (1.0 - ov.a * uOvOpacity * 0.7);
+    gEmit += col * lit * mix(pt * (0.30 + 0.70 * wd), glow, far) * uNight * uLightGain * (1.0 - ov.a * uOvOpacity * 0.7);
   }
 }
 `;

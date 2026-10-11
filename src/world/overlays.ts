@@ -324,9 +324,8 @@ export const createOverlays: LayerFactory = ({ world, store }) => {
     if (live) again(3600000);
   }
 
-  /** Two things the night-lights legend must own up to while they are true: tiles that never arrived, and the
-   *  scene's own modelled town lights, which the terrain and the buildings draw at night from building density and
-   *  only dim (they do not switch off) under an overlay. Neither is part of NASA's image. */
+  /** What the night-lights legend must own up to: tiles that never arrived, and that the scene's own modelled town
+   *  and window lights (terrain/index.ts, buildings/index.ts) are switched off while NASA's image is shown. */
   function nightNote(force = false) {
     if (!nightLegend || untracked(() => S.overlay.value) !== 'nightlights') return;
     const dark = (world.night ?? 0) > 0.05;
@@ -335,7 +334,7 @@ export const createOverlays: LayerFactory = ({ world, store }) => {
     const n = nightLost;
     S.overlayLegend.value = {
       ...nightLegend,
-      note: (dark ? tr('The scene is at night, so Garita also draws its own modelled town lights (from building density, dimmed here): they are not part of this image. Set the scene clock to daytime to see the image alone. ', 'La escena está de noche, así que Garita también dibuja sus propias luces modeladas (según la densidad de edificios, atenuadas aquí): no son parte de esta imagen. Ponga el reloj de la escena de día para ver solo la imagen. ') : '')
+      note: tr('Garita\'s own modelled town and window lights are switched off while this image is shown. ', 'Las luces modeladas de Garita (pueblos y ventanas) se apagan mientras se muestra esta imagen. ')
         + (n ? tr(`${n} map tile${n === 1 ? '' : 's'} did not arrive from NASA's service: the gaps show the base map, not darkness. `, `${n} tesela${n === 1 ? '' : 's'} no llegaron del servicio de la NASA: los huecos muestran el mapa base, no oscuridad. `) : '')
         + (nightLegend.note ?? ''),
     };
