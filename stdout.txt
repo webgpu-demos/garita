@@ -1,0 +1,192 @@
+PROFILE {'driver': 'GTiff', 'dtype': 'int8', 'nodata': -128.0, 'width': 35756, 'height': 13008, 'count': 1, 'crs': CRS.from_wkt('PROJCS["WGS 84 / UTM zone 19N",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",-69],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","32619"]]'), 'transform': Affine(5.0, 0.0, 682396.735381683,
+       0.0, -5.0, 2048352.9139339412), 'blockxsize': 128, 'blockysize': 128, 'tiled': True, 'compress': 'lzw', 'interleave': 'band'}
+CRS PROJCS["WGS 84 / UTM zone 19N",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",-69],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","32619"]]
+EPSG 32619
+BOUNDS BoundingBox(left=682396.735381683, bottom=1983312.9139339412, right=861176.735381683, top=2048352.9139339412)
+RES (5.0, 5.0)
+NODATA -128.0 DTYPES ('int8',) TAGS {'AREA_OR_POINT': 'Area'} {'STATISTICS_MAXIMUM': '5', 'STATISTICS_MEAN': '2.0096926457768', 'STATISTICS_MINIMUM': '1', 'STATISTICS_SKIPFACTORX': '1', 'STATISTICS_SKIPFACTORY': '1', 'STATISTICS_STDDEV': '1.0244236309155'}
+no colormap NULL color table
+colorinterp (<ColorInterp.gray: 1>,) block [(128, 128)] overviews [2, 4, 8, 16, 32, 64, 128]
+read 0.8s (13008, 35756) int8
+VALUES {-128: 117101846, 1: 139248136, 2: 104373102, 3: 69621553, 4: 31308491, 5: 3460920}
+SHARES {1: np.float64(40.01), 2: np.float64(29.99), 3: np.float64(20.01), 4: np.float64(9.0), 5: np.float64(0.99)}
+DBF b'\x03x\x01\x0e\x05\x00\x00\x00\x81\x00P\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00Value\x00\x00\x00\x00\x00\x00N\x00\x00\x00\x00\n\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00Count\x00\x00\x00\x00\x00\x00F\x00\x00\x00\x00\x13\x0b\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00rainLSsuc\x00\x00C\x00\x00\x00\x002\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\r          1  1.39248136000e+08Low                                                         2  1.04373102000e+08Moderate                                                    3  6.96215530000e+07High                                                        4  3.13084910000e+07Very High                                                   5  3.46092000000e+06Extremely High                                    \x1a'
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+                              <StyledLayerDescriptor version="1.0.0"
+
+                                 xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd"
+
+                                 xmlns="http://www.opengis.net/sld"
+
+                                 xmlns:ogc="http://www.opengis.net/ogc"
+
+                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+
+                                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+                                 <NamedLayer>
+
+                                     <Name>Two color gradient</Name>
+
+                                     <UserStyle>
+
+                                         <Title>SLD Cook Book: Two color gradient</Title>
+
+                                         <FeatureTypeStyle>
+
+                                             <Rule>
+
+                                                 <RasterSymbolizer>
+
+                                                     <ChannelSelection>
+
+                                                         <GrayChannel>
+
+                                                             <SourceChannelName>1</SourceChannelName>
+
+                                                         </GrayChannel>
+
+                                                     </ChannelSelection>
+
+                                                     <ColorMap>
+
+                                                         <ColorMapEntry color="#0000ff" opacity="0" quantity="-128.0" />
+<ColorMapEntry color="#191970" quantity="1.0" />
+
+
+                                                         <ColorMapEntry color="#87cefa" quantity="5.0" />
+
+
+                                                    </ColorMap>
+
+                                                 </RasterSymbolizer>
+
+                                             </Rule>
+
+                                         </FeatureTypeStyle>
+
+                                     </UserStyle>
+
+                                 </NamedLayer>
+
+                              </StyledLayerDescriptor>
+
+<PAMDataset>
+  <PAMRasterBand band="1">
+    <Histograms>
+      <HistItem>
+        <HistMin>1</HistMin>
+        <HistMax>5</HistMax>
+        <BucketCount>256</BucketCount>
+        <IncludeOutOfRange>1</IncludeOutOfRange>
+        <Approximate>0</Approximate>
+        <HistCounts>0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|139248136|104373102|69621553|31308491|3460920|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0</HistCounts>
+      </HistItem>
+    </Histograms>
+  </PAMRasterBand>
+</PAMDataset>
+
+3MG
+5Zq
+X@<
+K8@
+=E5
+j.@
+bS@
+M@m
+L@K 
+2EgG
++y~F
+1W&
+$A$
+PC>A
+G*A$
+`A?A
+)	F
+lYS
+gb*
+PROJCS["WGS_1984_UTM_Zone_19N",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Transverse_Mercator"],PARAMETER["False_Easting",500000.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",-69.0],PARAMETER["Scale_Factor",0.9996],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]
+MbP?
+MbP?
+MbP?
+rp0
+$A$
+PC>A
+G*A$
+`A?A
+gb*
+Root Entry
+Root Entry
+Layer
+landslide_susceptibility_raster.tif
+landslide_susceptibility_raster.tif
+RASTER: Workspace = D:\GIS\puertorico\draft_susceptibility\; RasterDataset = landslide_susceptibility_raster.tif;
+Raster Dataset
+D:\GIS\puertorico\draft_susceptibility\
+Raster Workspace = D:\GIS\puertorico\draft_susceptibility\;
+Raster Data
+DATABASE
+D:\GIS\puertorico\draft_susceptibility\
+Value
+rainLSsuc
+<all other values>
+rainLSsuc
+Low
+Moderate
+High
+Very High
+Extremely High
+Low
+Moderate
+High
+Very High
+Extremely High
+Random Color Ramp
+ServiceLayerID
+HTTP/2 200 
+content-length: 39824698
+HTTP/2 200 
+content-length: 61078608
+HTTP/2 200 
+content-length: 102320097
+HTTP/2 200 
+content-length: 68308629
+HTTP/2 200 
+content-length: 53216449
+HTTP/2 200 
+content-length: 44318483
+Archive:  kmz.zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+     2729  2020-03-12 14:59   kml/OFR20201022_plate_10_561_320.kmz
+     1389  2020-03-12 14:59   kml/OFR20201022_plate_10_561_321.kmz
+     2626  2020-03-12 14:59   kml/OFR20201022_plate_10_561_322.kmz
+     3668  2020-03-12 14:59   kml/OFR20201022_plate_10_561_323.kmz
+     2019  2020-03-12 15:01   kml/OFR20201022_plate_10_561_324.kmz
+     7075  2020-03-12 15:01   kml/OFR20201022_plate_10_561_325.kmz
+    30131  2020-03-12 14:59   kml/OFR20201022_plate_10_562_320.kmz
+total 324044
+drwxr-xr-x  3 runner runner      4096 Oct 11 02:32 .
+drwxrwxrwt 14 root   root        4096 Oct 11 02:31 ..
+-rw-r--r--  1 runner runner  60249068 Oct 11 02:31 all.zip
+-rw-r--r--  1 runner runner  68308629 Oct 11 02:32 kmz.zip
+drwxr-xr-x  2 runner runner      4096 Oct 11 02:31 landslide_susceptibility_raster
+-rw-r--r--  1 runner runner     18610 Oct 10 20:31 landslide_susceptibility_raster.xml
+-rw-r--r--  1 runner runner  39824698 Oct 11 02:32 pam_esp.pdf
+-rw-r--r--  1 runner runner  61078608 Oct 11 02:32 sheet.pdf
+-rw-r--r--  1 runner runner 102320097 Oct 11 02:31 sheet_esp.pdf
+total 64
+drwxr-xr-x  2 runner runner 4096 Oct 11 02:31 .
+drwxr-xr-x 11 runner runner 4096 Oct 11 02:31 ..
+-rw-r--r--  1 runner runner   90 Oct 11 02:31 landslide_susceptibility_raster.tfw
+-rw-r--r--  1 runner runner 2117 Oct 11 02:31 landslide_susceptibility_raster.tif-ColorRamp.SLD
+-rw-r--r--  1 runner runner  907 Oct 11 02:31 landslide_susceptibility_raster.tif.aux.xml
+-rw-r--r--  1 runner runner 7168 Oct 11 02:31 landslide_susceptibility_raster.tif.lyr
+-rw-r--r--  1 runner runner    5 Oct 11 02:31 landslide_susceptibility_raster.tif.vat.cpg
+-rw-r--r--  1 runner runner  530 Oct 11 02:31 landslide_susceptibility_raster.tif.vat.dbf
+-rw-r--r--  1 runner runner 7118 Oct 11 02:31 ofr20201022_readme.txt
+-rw-r--r--  1 runner runner 4581 Oct 11 02:32 stderr.txt
+-rw-r--r--  1 runner runner 8568 Oct 11 02:32 stdout.txt
+exit code 0
+60K	out

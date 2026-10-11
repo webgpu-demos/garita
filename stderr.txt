@@ -1,0 +1,74 @@
++ ID=61087009d34ef8d70565c154
++ mkdir -p /tmp/w
++ cd /tmp/w
++ curl -sSL -m 300 https://www.sciencebase.gov/catalog/file/get/61087009d34ef8d70565c154 -o all.zip
+
+real	0m22.380s
+user	0m0.099s
+sys	0m0.162s
++ unzip -q all.zip
++ D=landslide_susceptibility_raster
++ cp landslide_susceptibility_raster/landslide_susceptibility_raster.tfw landslide_susceptibility_raster/landslide_susceptibility_raster.tif.aux.xml landslide_susceptibility_raster/landslide_susceptibility_raster.tif-ColorRamp.SLD landslide_susceptibility_raster/landslide_susceptibility_raster.tif.vat.dbf landslide_susceptibility_raster/landslide_susceptibility_raster.tif.vat.cpg landslide_susceptibility_raster/landslide_susceptibility_raster.tif.lyr /home/runner/work/garita/garita/out/
++ pip install -q rasterio pillow numpy pypdf
++ tail -2
+
+real	0m6.428s
+user	0m4.247s
+sys	0m0.629s
++ python3 -
++ cat landslide_susceptibility_raster/landslide_susceptibility_raster.tif-ColorRamp.SLD
++ echo
++ cat landslide_susceptibility_raster/landslide_susceptibility_raster.tif.aux.xml
++ echo
++ strings -n 3 landslide_susceptibility_raster/landslide_susceptibility_raster.tif.lyr
++ head -80
++ strings -el -n 3 landslide_susceptibility_raster/landslide_susceptibility_raster.tif.lyr
++ head -120
++ cd /home/runner/work/garita/garita/out
++ for f in ofr20201022_readme.txt
++ curl -sSL -m 60 https://pubs.usgs.gov/of/2020/1022/ofr20201022_readme.txt -o ofr20201022_readme.txt
++ for f in ofr20201022_pamphlet_esp.pdf ofr20201022_sheet.pdf ofr20201022_sheet_esp.pdf ofr20201022_kmz.zip ofr20201022_pamphlet.pdf ofr20201022_sheet_georeferenced.tif
++ curl -sSL -m 20 -I https://pubs.usgs.gov/of/2020/1022/ofr20201022_pamphlet_esp.pdf
++ grep -iE '^HTTP|content-length'
++ for f in ofr20201022_pamphlet_esp.pdf ofr20201022_sheet.pdf ofr20201022_sheet_esp.pdf ofr20201022_kmz.zip ofr20201022_pamphlet.pdf ofr20201022_sheet_georeferenced.tif
++ curl -sSL -m 20 -I https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet.pdf
++ grep -iE '^HTTP|content-length'
++ for f in ofr20201022_pamphlet_esp.pdf ofr20201022_sheet.pdf ofr20201022_sheet_esp.pdf ofr20201022_kmz.zip ofr20201022_pamphlet.pdf ofr20201022_sheet_georeferenced.tif
++ curl -sSL -m 20 -I https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_esp.pdf
++ grep -iE '^HTTP|content-length'
++ for f in ofr20201022_pamphlet_esp.pdf ofr20201022_sheet.pdf ofr20201022_sheet_esp.pdf ofr20201022_kmz.zip ofr20201022_pamphlet.pdf ofr20201022_sheet_georeferenced.tif
++ curl -sSL -m 20 -I https://pubs.usgs.gov/of/2020/1022/ofr20201022_kmz.zip
++ grep -iE '^HTTP|content-length'
++ for f in ofr20201022_pamphlet_esp.pdf ofr20201022_sheet.pdf ofr20201022_sheet_esp.pdf ofr20201022_kmz.zip ofr20201022_pamphlet.pdf ofr20201022_sheet_georeferenced.tif
++ curl -sSL -m 20 -I https://pubs.usgs.gov/of/2020/1022/ofr20201022_pamphlet.pdf
++ grep -iE '^HTTP|content-length'
++ for f in ofr20201022_pamphlet_esp.pdf ofr20201022_sheet.pdf ofr20201022_sheet_esp.pdf ofr20201022_kmz.zip ofr20201022_pamphlet.pdf ofr20201022_sheet_georeferenced.tif
++ curl -sSL -m 20 -I https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_georeferenced.tif
++ grep -iE '^HTTP|content-length'
++ cd /tmp/w
++ curl -sSL -m 120 https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_esp.pdf -o sheet_esp.pdf
++ curl -sSL -m 120 https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet.pdf -o sheet.pdf
++ curl -sSL -m 120 https://pubs.usgs.gov/of/2020/1022/ofr20201022_pamphlet_esp.pdf -o pam_esp.pdf
++ curl -sSL -m 120 https://pubs.usgs.gov/of/2020/1022/ofr20201022_kmz.zip -o kmz.zip
++ unzip -l kmz.zip
++ head
++ which pdftotext pdftoppm
++ sudo apt-get install -y -qq poppler-utils
++ pdftotext -layout sheet_esp.pdf /home/runner/work/garita/garita/out/sheet_esp.txt
+probe.sh: line 32: pdftotext: command not found
++ pdftotext -layout sheet.pdf /home/runner/work/garita/garita/out/sheet.txt
+probe.sh: line 32: pdftotext: command not found
++ pdftotext -layout -l 12 pam_esp.pdf /home/runner/work/garita/garita/out/pam_esp_p1-12.txt
+probe.sh: line 33: pdftotext: command not found
++ pdftoppm -r 40 -jpeg -jpegopt quality=80 sheet.pdf /home/runner/work/garita/garita/out/sheet40
+probe.sh: line 34: pdftoppm: command not found
++ pdftoppm -r 40 -jpeg -jpegopt quality=80 sheet_esp.pdf /home/runner/work/garita/garita/out/sheet_esp40
+probe.sh: line 34: pdftoppm: command not found
++ pdftoppm -r 150 -png sheet.pdf /tmp/w/sheet150
+probe.sh: line 35: pdftoppm: command not found
++ ls -la /tmp/w
++ python3 -
+Traceback (most recent call last):
+  File "<stdin>", line 4, in <module>
+IndexError: list index out of range
++ ls -la /home/runner/work/garita/garita/out
