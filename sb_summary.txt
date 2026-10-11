@@ -1,0 +1,8 @@
+Results from frequency-ratio analyses of soil classification and land use related to landslide locations in Puerto Rico following Hurricane Maria
+Hughes, K.S., and Schulz, W.H., 2020, Results from frequency-ratio analyses of soil classification and land use related to landslide locations in Puerto Rico following Hurricane Maria: U.S. Geological Survey data release, https://doi.org/10.5066/P9VK2FAL.
+[{'type': 'Related_Primary_Publication', 'typeLabel': 'Related Primary Publication', 'uri': 'https://doi.org/10.3133/ofr20201022', 'title': 'Hughes, K.S., and Schulz, W.H., 2020, Map depicting susceptibility to landslides triggered by intense rainfall, Puerto Rico: U.S. Geological Survey Open-File Report 2020–1022, 91 p., 1 plate, scale 1:150000, https://doi.org/10.3133/ofr20201022.', 'hidden': False}]
+soil_classification_results.csv 55445 https://www.sciencebase.gov/catalog/file/get/5e2f53f5e4b0a79317d42330?f=__disk__fa%2Ff8%2F68%2Ffaf86834fe30de7d3f3f552dd979d3301dfc276d
+land_cover_results.csv 5316 https://www.sciencebase.gov/catalog/file/get/5e2f53f5e4b0a79317d42330?f=__disk__f4%2F74%2F39%2Ff4743936abd3bddb84e3fbf7af9fea9b3ea04185
+readme.txt 4443 https://www.sciencebase.gov/catalog/file/get/5e2f53f5e4b0a79317d42330?f=__disk__65%2F04%2Fe3%2F6504e39865a0bb21ecc3bcc24ed0665c5850d216
+metadata.xml 17079 https://www.sciencebase.gov/catalog/file/get/5e2f53f5e4b0a79317d42330?f=__disk__48%2Fc4%2F5a%2F48c45aec38d7133c4fbd4c97040285dd5ebd9c9a
+hasChildren False {'rel': 'self', 'url': 'https://www.sciencebase.gov/catalog/item/5e2f53f5e4b0a79317d42330'}

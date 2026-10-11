@@ -1,0 +1,22 @@
+total 2016
+drwxr-xr-x  2 runner runner    4096 Oct 11 02:24 .
+drwxr-xr-x 11 runner runner    4096 Oct 11 02:24 ..
+-rw-r--r--  1 runner runner     377 Oct 11 02:24 3dep_getsamples.json
+-rw-r--r--  1 runner runner   56882 Oct 11 02:24 gibs_night_layers.txt
+-rw-r--r--  1 runner runner   10767 Oct 11 02:24 gibs_tiles.txt
+-rw-r--r--  1 runner runner   53713 Oct 11 02:24 last_tile.png
+-rw-r--r--  1 runner runner    1213 Oct 11 02:24 nhc_head.txt
+-rw-r--r--  1 runner runner    1247 Oct 11 02:24 nhc_links.txt
+-rw-r--r--  1 runner runner   43681 Oct 11 02:24 nhc_page.html
+-rw-r--r--  1 runner runner    1337 Oct 11 02:24 s3_1m_projects.xml
+-rw-r--r--  1 runner runner     200 Oct 11 02:24 sb_children.json
+-rw-r--r--  1 runner runner   17533 Oct 11 02:24 sb_item.json
+-rw-r--r--  1 runner runner   14877 Oct 11 02:24 sb_search.json
+-rw-r--r--  1 runner runner    1565 Oct 11 02:24 sb_summary.txt
+-rw-r--r--  1 runner runner    2403 Oct 11 02:24 stderr.txt
+-rw-r--r--  1 runner runner       0 Oct 11 02:24 stdout.txt
+-rw-r--r--  1 runner runner 1765574 Oct 11 02:24 tnm_1m.json
+-rw-r--r--  1 runner runner    2892 Oct 11 02:24 tnm_1m_summary.txt
+-rw-r--r--  1 runner runner   42707 Oct 11 02:24 tnm_datasets.json
+exit code 0
+2.0M	out

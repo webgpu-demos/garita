@@ -1,0 +1,18 @@
++ UA='garita (github.com/webgpu-demos/garita)'
++ curl -sL -A 'garita (github.com/webgpu-demos/garita)' https://www.nhc.noaa.gov/nationalsurge/ -o /home/runner/work/garita/garita/out/nhc_page.html
++ grep -oiE '(href|src)="[^"]+"' /home/runner/work/garita/garita/out/nhc_page.html
++ grep -iE 'zip|tif|arcgis|mapserver|imageserver|tiles|pr_|puerto|hazardmap'
++ sort -u
++ curl -sL -A 'garita (github.com/webgpu-demos/garita)' 'https://tnmaccess.nationalmap.gov/api/v1/products?datasets=Digital%20Elevation%20Model%20(DEM)%201%20meter&bbox=-67.35,17.85,-65.2,18.55&max=500&outputFormat=JSON' -o /home/runner/work/garita/garita/out/tnm_1m.json
++ python3 -
++ curl -sL -A 'garita (github.com/webgpu-demos/garita)' 'https://prd-tnm.s3.amazonaws.com/?list-type=2&prefix=StagedProducts/Elevation/1m/Projects/PR&delimiter=/' -o /home/runner/work/garita/garita/out/s3_1m_projects.xml
++ curl -sL -A 'garita (github.com/webgpu-demos/garita)' https://tnmaccess.nationalmap.gov/api/v1/datasets -o /home/runner/work/garita/garita/out/tnm_datasets.json
++ curl -sL -A 'garita (github.com/webgpu-demos/garita)' 'https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/getSamples?geometry=%7B%22points%22%3A%5B%5B-66.105%2C18.455%5D%2C%5B-66.13%2C18.44%5D%5D%2C%22spatialReference%22%3A%7B%22wkid%22%3A4326%7D%7D&geometryType=esriGeometryMultipoint&returnFirstValueOnly=true&f=json' -o /home/runner/work/garita/garita/out/3dep_getsamples.json
++ curl -sL -A 'garita (github.com/webgpu-demos/garita)' 'https://www.sciencebase.gov/catalog/item/5e2f53f5e4b0a79317d42330?format=json' -o /home/runner/work/garita/garita/out/sb_item.json
++ python3 -
++ curl -sL -A 'garita (github.com/webgpu-demos/garita)' 'https://www.sciencebase.gov/catalog/items?parentId=5e2f53f5e4b0a79317d42330&format=json&max=50&fields=title,files,webLinks' -o /home/runner/work/garita/garita/out/sb_children.json
++ curl -sL -A 'garita (github.com/webgpu-demos/garita)' 'https://www.sciencebase.gov/catalog/items?q=Puerto%20Rico%20landslide%20susceptibility&format=json&max=20&fields=title,files,citation' -o /home/runner/work/garita/garita/out/sb_search.json
++ curl -sL -A 'garita (github.com/webgpu-demos/garita)' https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/1.0.0/WMTSCapabilities.xml -o /tmp/caps.xml
++ python3 -
++ cp /tmp/t.png /home/runner/work/garita/garita/out/last_tile.png
++ ls -la /home/runner/work/garita/garita/out

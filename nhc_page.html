@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>National Storm Surge Risk Maps - Version 4</title>
+  <meta charset="utf-8">
+  <script async="" src="/assets/js/uswds-init.min.js"></script>
+  <link rel="preload" as="style" href="/assets/css/uswds-styles-22f6e7a4a2.min.css" />
+  <link rel="stylesheet" href="/assets/css/uswds-styles-22f6e7a4a2.min.css" type="text/css" />
+  
+  </head>
+  <body>
+    <div class="skipheader">
+      <a href="#contents"><img height="1" alt="Skip Navigation Links" src="/css/images/skipgraphic.gif" width="1" border="0"></a>
+    </div>
+    
+    <!-- Top Menu Navigation Section -->
+<div class="altformatcenter">
+  <div class="altformatcontent">
+    <script src="https://www.weather.gov/source/nws/govshutdown.js" defer></script>
+    <div class="altformat">
+      <div class="format-type">
+        <a href="/index.shtml">Home</a>
+      </div>
+      <div class="format-type">
+        <a href="/mobile">Mobile Site</a>
+      </div>
+      <div class="format-type">
+        <a href="?text">Text Version</a>
+      </div>
+      <div class="format-type">
+        <a href="/aboutrss.shtml">RSS</a>
+      </div>
+
+      <div class="local-forecast">
+        <form name="getForecast" id="getForecast" action="https://forecast.weather.gov/zipcity.php" method="get">
+    <!--    <label for="inputstring">Local forecast by "City, St" or ZIP code</label> -->
+        <input id="inputstring" name="inputstring" type="text" size="8" value="Enter City,St or ZIP code" onclick="this.value=''">
+        <input name="btnSearch" id="btnSearch" type="submit" value="Go">
+        </form>
+      </div>
+      <div class="forecast-description">
+        <a href="https://www.weather.gov">Local Forecast</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+<!-- Header Section -->
+<div class="header">
+  <div class="header-content">
+    <a href="http://www.noaa.gov"><img class="header-noaa-icon" src="/assets/images/NOAA_noText_logo.svg" alt="National Oceanic and Atmospheric Administration logo" role="img" style="height: 68px; margin-top: 5px;"></a>
+    <a href="http://www.weather.gov"><img class="header-nws-icon" src="/assets/images/NWS_logo.svg" alt="National Weather Service logo" role="img" style="height: 68px; margin-top: 5px;"></a>
+    <a href="http://www.commerce.gov" class="header-doc"><img src="/assets/images/DOC_logo.svg" alt="United States Department of Commerce" role="img" style="height: 68px; margin-top: 5px; margin-right: 6px;"></a>
+    <div class="header-center-text"><a class="header-center-text" href="/index.php" style="height:auto;">NATIONAL HURRICANE CENTER and<br>CENTRAL PACIFIC HURRICANE CENTER</a></div>
+    <div class="header-noaa-text"><a class="header-noaa-text">National Oceanic and Atmospheric Administration</a></div>
+  </div>
+</div>
+<div class="header-shadow"><div class="header-shadow-content"></div></div>
+
+    <div class="center">
+      <div class="content">
+    <div class="usa-overlay"></div>
+<header class="usa-header nhc-header">
+  <div class="usa-nav-container">
+    <nav id="nhc-main-nav" aria-label="Primary navigation" class="usa-nav bg-white border-bottom-1px border-base-lighter">      
+      <ul class="usa-nav__primary usa-accordion margin-0 padding-0 display-flex flex-wrap">
+
+        <!-- Forecast Links -->
+        <li class="usa-nav__primary-item">
+          <button
+            type="button"
+            class="usa-accordion__button usa-nav__link"
+            aria-expanded="false"
+            aria-controls="nav-forecast-menu"
+          >
+            <span>Analysis & Forecasts</span>
+          </button>
+          <ul id="nav-forecast-menu" class="usa-nav__submenu bg-white" hidden>
+            <li><a class="usa-link" href="/cyclones">Tropical Cyclone Products</a></li>
+            <li><a class="usa-link" href="/gtwo.php">Tropical Weather Outlooks</a></li>
+            <li><a class="usa-link" href="/marine">Marine Products</a></li>
+            <li><a class="usa-link" href="/rip-currents/map.html">Rip Currents Map</a></li>
+            <li><a class="usa-link" href="/aboutrss.shtml">RSS Feeds</a></li>
+            <li><a class="usa-link" href="/gis/">GIS Products</a></li>
+            <li><a class="usa-link" href="/aboutalternate.shtml">Alternate Formats</a></li>
+            <li><a class="usa-link" href="/aboutnhcprod.shtml">Tropical Cyclone Product Descriptions</a></li>
+            <li><a class="usa-link" href="/productexamples/">Tropical Cyclone Product Examples</a></li>
+            <li><a class="usa-link" href="/abouttafbprod.shtml">Marine Product Descriptions</a></li>
+          </ul>
+        </li>
+        
+        <!-- Data & Tools -->
+        <li class="usa-nav__primary-item">
+          <button
+            type="button"
+            class="usa-accordion__button usa-nav__link"
+            aria-expanded="false"
+            aria-controls="nav-data-menu"
+          >
+            <span>Data & Tools</span>
+          </button>
+          <ul id="nav-data-menu" class="usa-nav__submenu bg-white" hidden>
+            <li><a class="usa-link" href="/satellite.php">Satellite Imagery</a></li>
+            <li><a class="usa-link" href="/radar.php">Radar Imagery</a></li>
+            <li><a class="usa-link" href="/recon.php">Aircraft Reconnaissance</a></li>
+            <li><a class="usa-link" href="/analysis_tools.php">Tropical Analysis Tools</a></li>
+            <li><a class="usa-link" href="/experimental/">Experimental Products</a></li>
+            <li><a class="usa-link" href="/gccalc.shtml">Lat/Lon Distance Calculator</a></li>
+            <li><a class="usa-link" href="/tracking_charts.shtml">Blank Tracking Maps</a></li>
+          </ul>
+        </li>
+
+        <!-- Outreach & Education-->
+        <li class="usa-nav__primary-item">
+          <button
+            type="button"
+            class="usa-accordion__button usa-nav__link"
+            aria-expanded="false"
+            aria-controls="nav-education-menu"
+          >
+            <span>Educational Resources</span>
+          </button>
+          <ul id="nav-education-menu" class="usa-nav__submenu bg-white" hidden>
+            <li>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="http://www.weather.gov/wrn/hurricane-preparedness"
+                target="_blank"
+              >
+                Be Prepared!<br>NWS Hurricane Prep Week
+              </a>
+            </li>
+            <li><a class="usa-link" href="/outreach">Outreach Documents</a></li>
+            <li><a class="usa-link" href="/TCvideos.shtml">TC Videos</a></li>
+            <li><a class="usa-link" href="/rip-currents/">Rip Currents</a></li>
+            <li><a class="usa-link" href="/surge/">Storm Surge</a></li>
+            <li><a class="usa-link" href="/breakpoints/">Watch/Warning Breakpoints</a></li>
+            <li><a class="usa-link" href="/climo/">Climatology</a></li>
+            <li><a class="usa-link" href="/aboutnames.shtml">Tropical Cyclone Names</a></li>
+            <li><a class="usa-link" href="/aboutsshws.php">Wind Scale</a></li>
+            <li><a class="usa-link" href="/dcmi.shtml">Records and Facts</a></li>
+            <li><a class="usa-link" href="/outreach/history">Historical Hurricane Summaries</a></li>
+            <li><a class="usa-link" href="/modelsummary.shtml">Forecast Models</a></li>
+            <li><a class="usa-link" href="/aboutpubs.shtml">NHC Publications</a></li>
+            <li><a class="usa-link" href="/aboutgloss.shtml">NHC Glossary</a></li>
+            <li><a class="usa-link" href="/acronyms.shtml">Acronyms</a></li>
+            <li><a class="usa-link" href="/faq.shtml">Frequent Questions</a></li>
+          </ul>
+        </li>
+
+        <!-- Archives -->
+        <li class="usa-nav__primary-item">
+          <button
+            type="button"
+            class="usa-accordion__button usa-nav__link"
+            aria-expanded="false"
+            aria-controls="nav-archive-menu"
+          >
+            <span>Archives</span>
+          </button>
+          <ul id="nav-archive-menu" class="usa-nav__submenu bg-white" hidden>
+            <li><a class="usa-link" href="/archive/2026/">Tropical Cyclone Advisories</a></li>
+            <li><a class="usa-link" href="/archive/xgtwo/gtwo_archive.php">Tropical Weather Outlooks</a></li>
+            <li><a class="usa-link" href="/data/tcr/index.php">Tropical Cyclone Reports and Season Summaries</a></li>
+            <li><a class="usa-link" href="/verification/">Tropical Cyclone Forecast Verification</a></li> 
+            <li><a class="usa-link" href="/newsarchive.shtml">NHC News Archive</a></li>
+            <li><a class="usa-link" href="/data/">Other Archives: HURDAT, Track Maps, Marine Products, and more</a></li>
+          </ul>
+        </li>
+
+        <!-- About NHC/CPHC -->
+        <li class="usa-nav__primary-item">
+          <button
+            type="button"
+            class="usa-accordion__button usa-nav__link"
+            aria-expanded="false"
+            aria-controls="nav-about-menu"
+          >
+            <span>About</span>
+          </button>
+          <ul id="nav-about-menu" class="usa-nav__submenu bg-white" hidden>
+            <li><a class="usa-link" href="/aboutintro.shtml">National Hurricane Center</a></li>
+            <li><a class="usa-link" href="/aboutcphc.php">Central Pacific Hurricane Center</a></li>
+            <li><a class="usa-link" href="/aboutlibrary.php">Library</a></li>
+            <li><a class="usa-link" href="/contact.shtml">Contact Us</a></li>
+          </ul>
+        </li>
+
+        <!-- Search -->
+        <li class="usa-nav__primary-item">
+          <button
+            type="button"
+            class="usa-accordion__button usa-nav__link"
+            aria-expanded="false"
+            aria-controls="nav-search-menu"
+          >
+            <span>Search</span>
+          </button>
+          <ul id="nav-search-menu" class="usa-nav__submenu bg-white" hidden>
+            <li>
+              <form id="search-form" method="get" action="https://search.usa.gov/search" class="usa-search usa-search--small padding-1" role="search">
+                <fieldset class="usa-fieldset">
+                  <legend class="usa-legend usa-legend">Search for</legend>
+                  <input type="hidden" name="v:project" value="firstgov">
+                  <input type="hidden" name="affiliate" value="nws.noaa.gov">
+                  <label class="usa-sr-only" for="search-field-en-small">Search</label>
+                  <input
+                    class="usa-input width-auto"
+                    id="search-field-en-small"
+                    type="search"
+                    name="query"
+                  />
+                  <button class="usa-button" type="submit">
+                    <img
+                      src="/assets/img/usa-icons-bg/search--white.svg"
+                      class="usa-search__submit-icon"
+                      alt="Search"
+                    />
+                  </button>
+                </fieldset>
+              </form>
+            </li>
+          </ul>
+        </li>
+      </ul>
+  
+    </nav>
+  </div>
+</header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Find the sub-menu that contains the search form
+  const searchMenuContainer = document.querySelector('#nav-search-menu');
+
+  if (searchMenuContainer) {
+    // Prevent the 'click' event from bubbling up to the document.
+    // This stops the USWDS script from closing the menu when you
+    // interact with the form inside it.
+    searchMenuContainer.addEventListener('click', function(event) {
+      event.stopPropagation();
+    });
+  }
+});
+</script>
+
+    <!-- BEGIN Google Analytics code -->
+<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+<script src="//dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&amp;subagency=NOAA" id="_fed_an_ua_tag"></script>
+<!-- END Google Analytics code -->
+
+    <a name="contents" id="contents"></a><br>
+    <!-- START OF CONTENT -->
+    <h2 align="center" style="width: 100%;">National Storm Surge Risk Maps - Version 4</h2>
+    <hr width="100%" align="left">
+<!-- Content here -->
+<!-- This _public page copied by nhcWeb -->
+<style type="text/css">
+.currentPage {
+ color: gray;
+}
+</style>
+
+<div class="tiny" style="margin-top: 0; text-align:center; font-weight:bold;">
+<a href="/surge/ssu.php">Storm Surge Unit</a> | <a href="/surge/">Surge Overview</a> | <span class="currentPage">National Surge Hazard Maps</span> | <a href="/surge/international/">International Surge Viewer</a> | <a href="/surge/products.php">Operational Products</a> | <a href="/surge/resources.php">Resources</a></div>
+<hr noshade align="left" width="100%" />
+
+<h4>Contents</h4>
+ <ul>
+  <li><a href="#intro">Introduction to the Risk Maps</a></li>
+  <li><a href="#map">Interactive Map Viewer</a></li>
+  <li><a href="#tech">Technical Description</a></li>
+  <li><a href="#pop">Population at Risk from Storm Surge Inundation</a></li>
+  <li><a href="#data">Data Availability and Download</a></li>
+  <li><a href="#disclaimer">Data Citation and Disclaimer</a></li>
+</ul> 
+
+<a name="intro"></a>
+<h4>Introduction to the Risk Maps</h4>
+
+<p>
+This national depiction of storm surge flooding vulnerability helps people living in hurricane-prone 
+coastal areas. These maps make it clear that storm surge is not just a beachfront problem, with 
+the risk of storm surge extending many miles inland from the immediate coastline in some areas. 
+Storm Surge Risk Maps are provided for the U.S. Gulf and East Coasts, Hawaii, Southern California, 
+U.S. territories - Puerto Rico, U.S. Virgin Islands, Guam, and American Samoa. Additional 
+international areas that are mapped include Hispaniola,parts of the Yucatan Peninsula, Jamaica, 
+Bahamas, and Cayman Islands. If you discover via these maps that you live in an area vulnerable to 
+storm surge, find out today if you live in a hurricane storm surge evacuation zone as prescribed by 
+your local emergency management agency. If you do live in such an evacuation zone, decide today 
+where you will go and how you will get there, if and when you're instructed by your emergency manager 
+to evacuate. If you don't live in one of those evacuation zones, then perhaps you can identify someone 
+you care about who does live in an evacuation zone, and you could plan in advance to be their inland 
+evacuation destination – if you live in a structure that is safe from the wind and outside of flood-prone 
+areas.
+</p>
+
+<h4>What's New with Version 4</h4>
+ <ul>
+  <li>Reprocessed U.S. Gulf and East Coast with the latest SLOSH grids in 2025, improving spatial resolution 
+and friction effects from land cover types.</li>
+  <li>Addition of the Bahamas, Cayman Islands, and Jamaica inundation maps.</li>
+ </ul>
+
+
+<a name="map"></a>
+<h4>Interactive Map Viewer</h4>
+<center>
+<table>
+  <tr>
+    <td width=40%>
+      <center>
+        <a href="/nhcexit.php?outurl=https://experience.arcgis.com/experience/203f772571cb48b1b8b50fdcc3272e2c"><b>Storm Surge Risk Maps</b><br>
+        <!--<img alt="Thumbnail of Texas to Maine Storm Surge Hazard Map" src="/nationalsurge/images/RiskMapThumbnail.JPG">-->
+        <img alt="Thumbnail of Storm Surge Risk Maps" src="/nationalsurge/images/RiskMapsThumbnail.JPG" width="500" height = "300">
+        </a>
+      </center>
+    </td>
+
+  </tr>
+</table>
+</center>
+
+<a name="tech"></a>
+<h4>Technical Description</h4>
+<h5>Introduction</h5>
+<p>The National Oceanic and Atmospheric Administration (NOAA), specifically the National Weather Service's 
+(NWS) National Hurricane Center (NHC), utilizes the hydrodynamic Sea, Lake, and Overland Surges from 
+Hurricanes model to simulate storm surge from tropical cyclones. Storm surge information is provided 
+to federal, state, and local partners to assist in a range of planning processes, risk assessment studies, 
+and operational decision-making. In regards to the former, tens of thousands of climatology-based 
+hypothetical tropical cyclones are simulated in each SLOSH basin (or grid), and the potential storm 
+surges are calculated. Storm surge composites – Maximum Envelopes of Water (MEOWs) and Maximum of MEOWs 
+(MOMs) – are created to assess and visualize storm surge risk under varying conditions. While MEOWs and 
+MOMs provide a local assessment of storm surge risk, they do not provide a seamless perspective of the 
+hazard owing to the many discrete SLOSH grids. This section briefly describes the scientific techniques 
+used to create the seamless inundation maps for Category 1-5 hurricanes using the SLOSH MOM product, as 
+well as a description of the datasets and map viewer available to the public.</p>
+
+<h5>SLOSH Storm Surge Modeling</h5>
+<p>SLOSH has been used operationally for more than three decades. Over this time, SLOSH has provided 
+valuable and accurate storm surge forecasts. For planning purposes, the NHC uses a representative sample 
+of hypothetical storms to estimate the near worst–case scenario of flooding for each hurricane category. 
+These SLOSH simulations are used to create a set of operational and planning products.</p>
+
+<p>The NHC provides two products based on hypothetical hurricanes: MEOWs and MOMs. MEOWs are created by 
+computing the maximum storm surge resulting from up to 100,000 hypothetical storms simulated through each 
+SLOSH grid of varying forward speed, radius of maximum wind, intensity (Categories 1-5), landfall location, 
+tide level, and storm direction. A MEOW product is created for each combination of category, forward speed, 
+storm direction, and tide level. SLOSH products exclude Category 5 storms north of the NC/VA border and for 
+Hawaii. For each storm combination, parallel storms make landfall in 5 to 10 mile increments along the coast 
+within the SLOSH grid, and the maximum storm surge footprint from each simulation is composited, retaining 
+the maximum height of storm surge in a given basin grid cell. These are called MEOWs and no single hurricane 
+will produce the regional flooding depicted in the MEOWs. SLOSH model MOMs are an ensemble product of maximum 
+storm surge heights. SLOSH MOMs are created for each storm category by retaining the maximum storm surge value 
+in each grid cell for all the MEOWs, regardless of the forward speed, storm trajectory, or landfall location. 
+SLOSH MOMs are available for mean tide and high tide scenarios and represent the near worst-case scenario of 
+flooding under ideal storm conditions. A high tide initial water level was used for the storm surge risk maps.</p>
+
+<p>
+SLOSH employs curvilinear polar, elliptical, and hyperbolic telescoping mesh grids to simulate the storm 
+surge hazard. The spatial coverage for each SLOSH grid ranges from an area the size of a few counties to a 
+few states. The resolution of individual grid cells within each basin ranges from tens to hundreds of 
+meters to a kilometer or more. Sub–grid scale water features and topographic obstructions such as channels, 
+rivers, cuts, levees, barriers, and roads, respectively, are parameterized to improve the modeled water levels. 
+Figure 1 shows the SLOSH basins used to create the surge risk maps.
+</p>
+
+<!--<p style="text-align:center;"><a href="images/SLOSHOperationalBasins_HazardMaps.jpg"><img src="images/SLOSHOperationalBasins_HazardMaps_sm.jpg" class="caption" alt="Image of SLOSH basins"></a><br>Figure 1. The SLOSH basins used to create the storm surge hazard maps.  SLOSH grids are not drawn to scale.</p>-->
+<!--<p style="text-align:center;"><a href="/nationalsurge/images/SLOSH_basins.png"><img src="/nationalsurge/images/SLOSH_basins_sm.png" class="caption" alt="Image of SLOSH basins"></a><br>Figure 1. The SLOSH basins used to create the storm surge risk maps.  SLOSH grids are not drawn to scale.</p>-->
+<p style="text-align:center;"><a href="images/SLOSHOperationalBasins_2025.png"><img src="images/SLOSHOperationalBasins_2025.png" width="600" height="500" class="caption" alt="Image of SLOSH basins"></a><br>Figure 1. The SLOSH basins used to create the storm surge hazard maps.  SLOSH grids are not drawn to scale.</p>
+
+<h5>Storm Surge and Wave Modeling in Puerto Rico, USVI, Hawaii, and Southern California<!-- and Oahu--></h5>
+<p>
+In locations that have a steep and narrow continental shelf, wave setup can be a substantial contributor 
+to the total water level rise observed during a tropical cyclone. Wave setup is defined as the increase 
+in mean water level due to momentum transfer to the water column by waves that are breaking or otherwise 
+dissipating their energy. Through NOAA's Integrated Ocean Observing System (IOOS) Coastal and Ocean 
+Modeling Testbed (COMT) the SLOSH model has been loosely coupled to the Simulating Waves Nearshore 
+(SWAN) third-generation wave model, developed at Delft University of Technology
+(<a href="/nhcexit.php?outurl=http://www.swan.tudelft.nl/">http://www.swan.tudelft.nl/</a>), 
+for storm surge modeling applications in island regions such as Puerto Rico, USVI, and Hawaii.  In these 
+locations, SLOSH+SWAN simulations were conducted to create MEOW and MOM products that account 
+for the increase in the mean water level due to wave setup.</p> 
+
+<h5>Storm Surge Wave Modeling for Guam and American Samoa</h5>
+<p>For Guam and American Samoa, the SLOSH model has been coupled with an efficient parametric wind wave 
+model courtesy of NOAA/NCEP/EMC. SLOSH+Wave simulations were conducted to create MEOW and MOM products 
+that account for the increase in the mean water level due to wave setup. Data has been processed by the 
+National Hurricane Center (NHC) Storm Surge Unit.</p>
+
+<h5>Digital Elevation Model</h5>
+<p>An accurate digital elevation model (DEM) takes considerable time, resources, and expertise to 
+develop and is required to compute inundation. Two datasets were used to create the DEM: </p>
+<ol>
+<li> The NOAA Office for Coastal Management (OCM) high-resolution seamless raster elevation 
+dataset (<a href="https://coast.noaa.gov/slr/">https://coast.noaa.gov/slr/</a>)
+<li> U.S. Geological Survey (USGS) 3D Elevation Program (3DEP) dataset 
+(<a href="/nhcexit.php?outurl=https://www.usgs.gov/3d-elevation-program">https://www.usgs.gov/3d-elevation-program</a>). 
+</ol>
+<p>To create this map for the US Gulf and East Coasts, the 3DEP and OCM DEMs were resampled to 1/3 arc-second (about 10 m) using a 
+bilinear interpolation and mosaicked together to produce a seamless raster elevation dataset.</p> 
+
+<p>The NOAA OCM high-resolution DEMs were used for Puerto Rico, USVI, Hawaii, Guam, and American Samoa. 
+The native grid cell size for that data is approximately 3 meters, and for the purposes of this analysis, 
+the data was resampled to a grid cell size of about 9 meters.
+</p>
+
+<p>In International areas outside of the U.S., such as Hispaniola and the Yucatan Peninsula, the analysis uses 
+TanDEM-X (TDX) DEM data provided by the German Aerospace Center (DLR). Resolution of TDX DEM is 0.4 arc 
+seconds in latitudinal direction and varies in longitudinal direction between 0.4 arc seconds (equator) and 
+4 arc seconds (85 degrees N/S) (Wessel, 2016). In partnership with the Department of Earth and Environment/International 
+Hurricane Research Center at Florida International University, the raw data were filtered to remove non-ground features.</p>
+
+<h5>Seamless Mapping Methodology</h5>
+<p>The process of creating storm surge inundation maps from existing SLOSH MOM products involves several technical steps. 
+First, the usable areas of the SLOSH grids were reduced to ignore spurious data along the grid boundaries. The SLOSH 
+basins have considerable overlap to allow for complete storm surge coverage for planning and operations. Merging these 
+basins into a seamless product requires specialized technical considerations. Since the grid boundaries yield unreliable 
+data, basin overlap was minimized, and the high-resolution and center portions of grids were retained. The process used 
+herein leveraged both SLOSH basin building and surge modeling expertise at NHC. Second, the maximum water levels in each 
+MOM were merged onto a uniform grid for processing. The data were merged onto the NWS National Digital Forecast Database 
+(NDFD) Lambert Conformal projected grid with a horizontal resolution of roughly 625 m (the actual resolution varies by 
+latitude). Lastly, the merged MOM grids were processed through Esri ArcGIS to subtract the land elevation and create a 
+seamless raster of inundation. It should be noted that the SLOSH MOM storm surge risk data used to create these maps are 
+constrained by the extent of the SLOSH grids. High-quality maps are essential for effective risk communication. </p>
+
+<h5>Concluding Remarks</h5>
+<p>This page outlines the approach to merging the SLOSH MOM products to create a seamless view of storm surge inundation 
+and risk for Category 1-5 hurricanes. Using social science research, the carefully derived and high resolution inundation 
+maps provide a means for effective risk communication and analysis. The maps show that all coastal regions mapped are 
+vulnerable to storm surge inundation, and the risk increases significantly with higher hurricane categories. Locations 
+along the Gulf of America are extremely vulnerable to storm surge, in terms of both height and inland extent due to a wide 
+and flat continental shelf over the majority of the region and low-lying land elevations extending well inland. Puerto Rico, 
+USVI, Hawaii, Southern California, American Samoa, Guam, Hispaniola, and the Yucatan Peninsula are also vulnerable to storm 
+surge and wave impacts. Large bays, tidal rivers, etc. are extremely vulnerable to storm surge flooding. These data and this 
+approach taken to inform the public of storm surge risk are valuable to federal, state, and local NOAA partners, academic, 
+private, and other various organizations. </p>
+
+<!--<p style="text-align:center;"><a href="images/Population_Table.png"><img src="images/Population_Table.png" class="caption" alt="Population at Risk from Storm Surge by US State" /></a><br>Table 1. The population at risk from storm surge in each U.S. State for different hurricane intensities.</p> -->
+
+<a name="data"></a> 
+<h4>Data Availability and Download</h4>
+<h5>Download Data</h5>
+<p>Storm surge risk maps are available for Texas to Maine, Puerto Rico, USVI, Hawaii, Southern California, Guam, American Samoa, Hispaniola, and the Yucatan Peninsula. The data are 
+available in GeoTIFF (<a href="/nhcexit.php?outurl=https://www.ogc.org/standards/geotiff/">https://www.ogc.org/standards/geotiff/</a>) 
+format for use in Geographic Information Systems (GIS) software. Comprehensive metadata are provided with 
+each GIS file describing the data and its limitations. Storm surge inundation datasets are created using 
+the high tide scenario SLOSH MOM products for all regions.  Each dataset contains an ESRI 
+World File (.tfw) and metadata .xml file. These GeoTIFFs are 8-bit unsigned integer raster datasets that 
+correspond to 1 ft inundation bins (e.g., Class Value 1 corresponds to the 0-1 ft inundation bin, Class Value 2 
+corresponds to the 1-2 ft inundation bin, and so on). The maximum Class Value is 21, and inundation 
+in excess of 20 ft is assigned a Class Value of 21.  A Class Value of 99 is assigned to leveed areas. 
+A more detailed description of the data can be found in the associated metadata.
+</p>
+<ul>
+<li><a href="/gis/hazardmaps/US_SLOSH_MOM_Inundation_v4.zip">Download &ndash; Texas to Maine (high tide scenario)</a> (Updated Version 4- 6/18/2026)</li>
+<li><a href="/gis/hazardmaps/PR_SLOSH_MOM_Inundation.zip">Download &ndash; Puerto Rico (high tide scenario)</a> (Updated 11/30/2018)</li>
+<li><a href="/gis/hazardmaps/USVI_SLOSH_MOM_Inundation.zip">Download &ndash; U.S. Virgin Islands (high tide scenario)</a> (Updated 11/30/2018)</li>
+<li><a href="/gis/hazardmaps/Hawaii_SLOSH_MOM_Inundation.zip">Download &ndash; Hawaii (high tide scenario)</a> (Updated 11/30/2018)</li>
+<li><a href="/gis/hazardmaps/Southern_California_SLOSH_MOM_Inundation_v3.zip">Download &ndash; Southern California (high tide scenario)</a> (Added Version 3 - 6/2022))</li>
+<li><a href="/gis/hazardmaps/Guam_SLOSH_MOM_Inundation_v3.zip">Download &ndash; Guam (high tide scenario)</a> (Added Version 3 - 6/2022))</li>
+<li><a href="/gis/hazardmaps/American_Samoa_SLOSH_MOM_Inundation_v3.zip">Download &ndash; American Samoa (high tide scenario)</a> (Added Version 3 - 6/2022))</li>
+<li><a href="/gis/hazardmaps/Hispaniola_SLOSH_MOM_Inundation.zip">Download &ndash; Hispaniola (high tide scenario)</a> (Updated 11/30/2018)</li>
+<li><a href="/gis/hazardmaps/Yucatan_SLOSH_MOM_Inundation_v3.zip">Download &ndash; Yucatan Peninsula (high tide scenario)</a> (Added Version 3 - 6/2022))</li>
+<li><a href="/gis/hazardmaps/CentralBahamas_SLOSH_MOM_Inundation_v4.zip">Download &ndash; Central Bahamas (high tide scenario)</a> (Added Version 4 - 9/2025)</li>
+<li><a href="/gis/hazardmaps/NorthwestBahamas_SLOSH_MOM_Inundation_v4.zip">Download &ndash; Northwest Bahamas (high tide scenario)</a> (Added Version 4 - 9/2025)</li>
+<li><a href="/gis/hazardmaps/SoutheastBahamas_SLOSH_MOM_Inundation_v4.zip">Download &ndash; Southeast Bahamas (high tide scenario)</a> (Added Version 4 - 9/2025)</li>
+<li><a href="/gis/hazardmaps/Jamaica_SLOSH_MOM_Inundation_v4.zip">Download &ndash; Jamaica (high tide scenario)</a> (Added Version 4 - 9/2025)</li>
+<li><a href="/gis/hazardmaps/GrandCayman_SLOSH_MOM_Inundation_v4.zip">Download &ndash; Grand Cayman (high tide scenario)</a> (Added Version 4 - 9/2025)</li>
+<li><a href="/gis/hazardmaps/LittleCayman_CaymanBrac_SLOSH_MOM_Inundation_v4.zip">Download &ndash; Little Cayman and Cayman Brac (high tide scenario)</a> (Added Version 4 - 9/2025)</li>
+</ul> 
+
+<a href= "/nhcexit.php?outurl=https://experience.arcgis.com/experience/203f772571cb48b1b8b50fdcc3272e2c">Link to Risk Maps on NOAA Geoplatform</a>
+
+<!--Tile layers can be found on the NOAA Geoplatform at the following links:>
+<ul>
+<li><a href="/gis/hazardmaps/US_SLOSH_MOM_Inundation.zip">Tile Layer &ndash; Category 1 Hurricane Storm Surge Risk Maps</a></li>
+<li><a href="/gis/hazardmaps/US_SLOSH_MOM_Inundation.zip">Tile Layer &ndash; Category 2 Hurricane Storm Surge Risk Maps</a></li>
+<li><a href="/gis/hazardmaps/US_SLOSH_MOM_Inundation.zip">Tile Layer &ndash; Category 3 Hurricane Storm Surge Risk Maps</a></li>
+<li><a href="/gis/hazardmaps/US_SLOSH_MOM_Inundation.zip">Tile Layer &ndash; Category 4 Hurricane Storm Surge Risk Maps</a></li>
+<li><a href="/gis/hazardmaps/US_SLOSH_MOM_Inundation.zip">Tile Layer &ndash; Category 5 Hurricane Storm Surge Risk Maps</a></li>
+</ul>
+-->
+
+<h5>Update Schedule</h5>
+<p> The storm surge risk maps and GIS data (if a new version is available) 
+will be updated as new SLOSH grids and DEM data are processed.</p>
+
+<a name="disclaimer"></a>
+<h4>Data Citation and Disclaimer</h4>
+
+<h5>Preferred Data Citation</h5>
+<p>The first version of the SLOSH storm surge hazard maps, released in November 2014,
+was published in the American Meteorological Society (AMS) Journal of Weather, Climate and
+Society, titled "A National View of Storm Surge Risk and Inundation".
+The publication is available online at   
+<a href="/nhcexit.php?outurl=http://journals.ametsoc.org/doi/abs/10.1175/WCAS-D-14-00049.1">http://journals.ametsoc.org/doi/abs/10.1175/WCAS-D-14-00049.1</a>
+ and the preferred citation for the data and map service is as follows:</p>
+<p>
+Zachry, B. C., W. J. Booth, J. R. Rhome, and T. M. Sharon, 2015: A National View of Storm Surge Risk and Inundation.
+<i>Weather, Climate, and Society</i>, <b>7</b>(2), 109&ndash;117. DOI: http://dx.doi.org/10.1175/WCAS&ndash;D&ndash;14&ndash;00049.1
+</p>
+
+<h5>Disclaimer</h5>
+<p>The data and maps in this tool illustrate the height of possible storm surge flooding under
+certain scenarios, and do not account for erosion, subsidence, sea-level change or future construction. Water 
+levels are based on storm surge scenarios in the referenced SLOSH MOM tide scenario. The data, maps, and information 
+provided should only be used as a tool for general education/awareness of the storm surge 
+hazard at a city/community level (not for a parcel level/grid cell assessment). The SLOSH MOM storm surge risk data 
+used to create these maps are constrained by the extent of the SLOSH grids and users should be aware that risk due 
+to storm surge flooding could extend beyond the areas depicted in these maps.  This map 
+should not be used to replace the maps used for hurricane evacuation zones. Hurricane 
+evacuation zones are drawn at a local and state level and consider additional information 
+and specific criteria for a particular region in addition to the storm surge hazard. 
+Users are urged to consult local officials for flood risk inside the hatched areas marked as 
+leveed areas in the map.  The data and maps in this tool are provided 
+"as is", without warranty to their performance, merchantable state, or fitness for any particular 
+purpose. The entire risk associated with the results and performance of these data is assumed by 
+the user. This tool should be used strictly as a planning reference and storm surge risk awareness 
+tool and not for navigation, permitting, legal, or regulatory purposes.  Any conclusions drawn from the 
+analysis of this information are not the responsibility of the National Weather Service, National Hurricane 
+Center, Office for Coastal Management, or its partners. </p>
+
+<!-- End content -->
+
+            <br><br>
+        <div class="footer">
+          <div class="footer-content">
+            <div class='footer-header'>
+               Quick Links and Additional Resources<br>
+            </div>
+            <div class='footer-column'>
+              <a class='footer-column-head' href='/cyclones/'>Tropical Cyclone Forecasts</a><br>
+              <a class="usa-link" href='/cyclones'>Tropical Cyclone Advisories</a><br>
+              <a class="usa-link" href='/gtwo.php'>Tropical Weather Outlook</a><br>
+              <a class="usa-link" href='/audio'>Audio/Podcasts</a><br>
+              <a class="usa-link" href='/aboutnhcprod.shtml'>About Advisories</a><br>
+              <br>
+              <a class='footer-column-head' href='/marine'>Marine Forecasts</a><br>
+              <a class="usa-link" href='/marine/offshores.php'>Offshore Waters Forecasts</a><br>
+              <a class="usa-link" href='/marine/grids.php'>Gridded Forecasts</a><br>
+              <a class="usa-link" href='/marine/graphicast.php'>Graphicast</a><br>
+              <a class="usa-link" href='/abouttafbprod.shtml'>About Marine</a><br>
+            </div>
+            <div class='footer-column'>
+              <a class='footer-column-head' href='/socialmedia'>Social Media</a><br>
+              <a 
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="/nhcexit.php?outurl=http://www.facebook.com/NWSNHC"
+              >
+                <img src="/css/images/f_logo.png" alt="Follow the National Hurricane Center on Facebook" width="15" height="15"> &nbsp; NHC on Facebook
+              </a><br>
+              <a 
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="/x.php"
+              >
+                <img src="/css/images/x-logo.png" alt="Follow the National Hurricane Center on X" height="13" width="15"> &nbsp; NHC on X
+              </a><br>
+              <a 
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="/nhcexit.php?outurl=http://www.youtube.com/user/NWSNHC"
+              >
+                <img src="/css/images/youtube_logo.png" alt="Subscribe the National Hurricane Center on YouTube" height="12" width="15"> &nbsp; NHC on YouTube
+              </a><br>
+              <a 
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="/nhcexit.php?outurl=http://noaanhc.wordpress.com/"
+              >
+                <img src="/css/images/w_logo.png" alt="Read the National Hurricane Center Inside the Eye blog on WordPress" height="15" width="15"> &nbsp; NHC Blog:<br>&nbsp; &nbsp; &nbsp; "Inside the Eye"
+              </a><br>
+              <br>
+              <a class='footer-column-head' href="/prepare">Hurricane Preparedness</a><br>
+              <a 
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="https://www.weather.gov/safety/hurricane-plan"
+              >
+                Preparedness Guide
+              </a><br>
+              <a class="usa-link" href="/prepare/hazards.php">Hurricane Hazards</a><br>
+              <a
+                class="usa-link usa-link--external" 
+                rel="noreferrer"
+                href="https://www.weather.gov/safety/hurricane-ww"
+              >
+                Watches and Warnings
+              </a><br>
+              <a class="usa-link" href="/prepare/marine.php">Marine Safety</a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="http://www.ready.gov/hurricanes"
+              >
+                Ready.gov Hurricanes
+              </a><br>
+              <a class="usa-link" href="https://www.weather.gov/wrn/force">Weather-Ready Nation</a><br>
+              <a 
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="http://www.fema.gov/emergency-management-agencies"
+              >
+                Emergency Management Offices
+              </a><br>
+            </div>
+            <div class='footer-column'>
+              <a class='footer-column-head' href='/aboutresearch.shtml'>Research and Development</a><br>
+              <a 
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="http://www.aoml.noaa.gov/hrd/"
+              >
+                NOAA Hurricane Research Division
+              </a><br>
+              <a class="usa-link" href="/hot/">Hurricane and Ocean Testbed</a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="/nhcexit.php?outurl=http://www.hfip.org"
+              >
+                Hurricane Forecast Improvement Program
+              </a><br>
+              <br>
+              <a class='footer-column-head' href='/aboutintro.shtml'>Other Resources</a><br>
+              <a class="usa-link" href="/qa/">Q & A with NHC</a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="http://www.aoml.noaa.gov/general/lib/lib1/nhclib/"
+              >
+                NHC/AOML Library Branch
+              </a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="http://www.aoml.noaa.gov/hrd/tcfaq/tcfaqHED.html"
+              >
+                NOAA: Hurricane FAQs
+              </a><br>
+              <a class="usa-link" href="/nhop">National Hurricane Operations Plan</a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="/nhcexit.php?outurl=http://www.wx4nhc.org"
+              >
+                WX4NHC Amateur Radio
+              </a><br>
+            </div>
+            <div class='footer-column'>
+              <a class='footer-column-head' href="http://www.ncep.noaa.gov">NWS Forecast Offices</a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="http://www.wpc.ncep.noaa.gov"
+              >
+                Weather Prediction Center
+              </a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="http://www.spc.noaa.gov"
+              >
+                Storm Prediction Center
+              </a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="https://ocean.weather.gov"
+              >
+                Ocean Prediction Center
+              </a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="http://www.weather.gov"
+              >
+                Local Forecast Offices
+              </a><br>
+              <br>
+              <a class='footer-column-head' href="/aboutrsmc.shtml">Worldwide Tropical Cyclone Centers</a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="/nhcexit.php?outurl=https://www.canada.ca/hurricanes"
+              >
+                Canadian Hurricane Centre
+              </a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="/nhcexit.php?outurl=https://www.metoc.navy.mil/jtwc/jtwc.html"
+              >
+                Joint Typhoon Warning Center
+              </a><br>
+              <a class="usa-link" href="/aboutrsmc.shtml">Other Tropical Cyclone Centers</a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="/nhcexit.php?outurl=http://severe.worldweather.org"
+              >
+                WMO Severe Weather Info Centre
+              </a>
+            </div>
+          </div>
+        </div>
+        
+
+    <!-- legal footer area -->
+<div class="footer-legal">
+  <div class="footer-legal-content">
+    <div class="footer-legal-gov">
+      <a href="http://www.usa.gov"><img src="/css/images/usa_gov.png" alt="usa.gov" width="110" height="30"></a>
+    </div> 
+    <div class="footer-legal-column" style="width:200px;">
+      <p> 
+          <a 
+            class="usa-link usa-link--external"
+            rel="noreferrer"
+            href="http://www.commerce.gov"
+          >
+            US Dept of Commerce
+          </a><br>
+          <a 
+            class="usa-link usa-link--external"
+            rel="noreferrer"
+            href="http://www.noaa.gov"
+          >
+            National Oceanic and Atmospheric Administration
+          </a><br>
+          National Hurricane Center<br>
+          11691 SW 17th Street<br>
+          Miami, FL, 33165<br>
+          <a href='mailto:nhcwebmaster@noaa.gov'>nhcwebmaster@noaa.gov</a>
+      </p>
+    </div>
+
+    <div class="footer-legal-column" style="width:200px;">
+      <p>
+          Central Pacific Hurricane Center<br>
+          2525 Correa Rd<br>
+          Suite 250<br>
+          Honolulu, HI 96822<br>
+          <a href='mailto:W-HFO.webmaster@noaa.gov'>W-HFO.webmaster@noaa.gov</a>
+      </p>
+    </div>
+
+    <div class="footer-legal-column2">
+      <p>
+        <a href="http://www.weather.gov/disclaimer">Disclaimer</a><br>
+        <a href="http://www.cio.noaa.gov/Policy_Programs/info_quality.html">Information Quality</a><br>
+        <a href="http://www.weather.gov/help">Help</a><br>
+        <a href="http://www.weather.gov/glossary">Glossary</a>
+      </p>
+    </div>
+
+    <div class="footer-legal-column3">
+      <p>
+        <a href="http://www.weather.gov/privacy">Privacy Policy</a><br>
+        <a href="http://www.rdc.noaa.gov/~foia">Freedom of Information Act (FOIA)</a><br>
+        <a href="http://www.weather.gov/about">About Us</a><br>
+        <a href="http://www.weather.gov/careers">Career Opportunities</a>
+      </p>
+    </div>
+  </div>
+</div><!-- end of <div class="footer-legal"> -->
+      </div><!-- End of content div -->
+    </div><!-- End of center div -->
+    <div id="wrap"> </div>
+        <script async src="/assets/js/uswds.min.js"></script>
+    
+  </body>
+</html>

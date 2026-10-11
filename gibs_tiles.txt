@@ -1,0 +1,116 @@
++ for L in VIIRS_SNPP_DayNightBand_At_Sensor_Radiance VIIRS_NOAA20_DayNightBand_At_Sensor_Radiance VIIRS_SNPP_DayNightBand_ENCC VIIRS_Black_Marble
++ for D in 2026-10-08 2026-10-01 2017-09-25 2016-01-01
++ curl -s -o /tmp/t.png -D - -H 'Origin: https://webgpu-demos.github.io' https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_At_Sensor_Radiance/default/2026-10-08/GoogleMapsCompatible_Level8/7/57/40.png
++ grep -iE '^HTTP|content-type|access-control-allow-origin|content-length'
++ tr '\r\n' '  '
+HTTP/2 200   content-type: image/png  content-length: 33841  access-control-allow-origin: *  x-content-type-options: nosniff  ++ stat -c %s /tmp/t.png
++ echo ' <- VIIRS_SNPP_DayNightBand_At_Sensor_Radiance 2026-10-08 33841'
+ <- VIIRS_SNPP_DayNightBand_At_Sensor_Radiance 2026-10-08 33841
++ for D in 2026-10-08 2026-10-01 2017-09-25 2016-01-01
++ curl -s -o /tmp/t.png -D - -H 'Origin: https://webgpu-demos.github.io' https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_At_Sensor_Radiance/default/2026-10-01/GoogleMapsCompatible_Level8/7/57/40.png
++ grep -iE '^HTTP|content-type|access-control-allow-origin|content-length'
++ tr '\r\n' '  '
+HTTP/2 200   content-type: image/png  content-length: 41819  access-control-allow-origin: *  x-content-type-options: nosniff  ++ stat -c %s /tmp/t.png
++ echo ' <- VIIRS_SNPP_DayNightBand_At_Sensor_Radiance 2026-10-01 41819'
+ <- VIIRS_SNPP_DayNightBand_At_Sensor_Radiance 2026-10-01 41819
++ for D in 2026-10-08 2026-10-01 2017-09-25 2016-01-01
++ curl -s -o /tmp/t.png -D - -H 'Origin: https://webgpu-demos.github.io' https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_At_Sensor_Radiance/default/2017-09-25/GoogleMapsCompatible_Level8/7/57/40.png
++ grep -iE '^HTTP|content-type|access-control-allow-origin|content-length'
++ tr '\r\n' '  '
+HTTP/2 404   content-type: text/html; charset=iso-8859-1  content-length: 196  access-control-allow-origin: *  x-content-type-options: nosniff  ++ stat -c %s /tmp/t.png
++ echo ' <- VIIRS_SNPP_DayNightBand_At_Sensor_Radiance 2017-09-25 196'
+ <- VIIRS_SNPP_DayNightBand_At_Sensor_Radiance 2017-09-25 196
++ for D in 2026-10-08 2026-10-01 2017-09-25 2016-01-01
++ curl -s -o /tmp/t.png -D - -H 'Origin: https://webgpu-demos.github.io' https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_At_Sensor_Radiance/default/2016-01-01/GoogleMapsCompatible_Level8/7/57/40.png
++ grep -iE '^HTTP|content-type|access-control-allow-origin|content-length'
++ tr '\r\n' '  '
+HTTP/2 404   content-type: text/html; charset=iso-8859-1  content-length: 196  access-control-allow-origin: *  x-content-type-options: nosniff  ++ stat -c %s /tmp/t.png
++ echo ' <- VIIRS_SNPP_DayNightBand_At_Sensor_Radiance 2016-01-01 196'
+ <- VIIRS_SNPP_DayNightBand_At_Sensor_Radiance 2016-01-01 196
++ for L in VIIRS_SNPP_DayNightBand_At_Sensor_Radiance VIIRS_NOAA20_DayNightBand_At_Sensor_Radiance VIIRS_SNPP_DayNightBand_ENCC VIIRS_Black_Marble
++ for D in 2026-10-08 2026-10-01 2017-09-25 2016-01-01
++ curl -s -o /tmp/t.png -D - -H 'Origin: https://webgpu-demos.github.io' https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_NOAA20_DayNightBand_At_Sensor_Radiance/default/2026-10-08/GoogleMapsCompatible_Level8/7/57/40.png
++ grep -iE '^HTTP|content-type|access-control-allow-origin|content-length'
++ tr '\r\n' '  '
+HTTP/2 200   content-type: image/png  content-length: 26018  access-control-allow-origin: *  x-content-type-options: nosniff  ++ stat -c %s /tmp/t.png
++ echo ' <- VIIRS_NOAA20_DayNightBand_At_Sensor_Radiance 2026-10-08 26018'
+ <- VIIRS_NOAA20_DayNightBand_At_Sensor_Radiance 2026-10-08 26018
++ for D in 2026-10-08 2026-10-01 2017-09-25 2016-01-01
++ curl -s -o /tmp/t.png -D - -H 'Origin: https://webgpu-demos.github.io' https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_NOAA20_DayNightBand_At_Sensor_Radiance/default/2026-10-01/GoogleMapsCompatible_Level8/7/57/40.png
++ grep -iE '^HTTP|content-type|access-control-allow-origin|content-length'
++ tr '\r\n' '  '
+HTTP/2 200   content-type: image/png  content-length: 35770  access-control-allow-origin: *  x-content-type-options: nosniff  ++ stat -c %s /tmp/t.png
++ echo ' <- VIIRS_NOAA20_DayNightBand_At_Sensor_Radiance 2026-10-01 35770'
+ <- VIIRS_NOAA20_DayNightBand_At_Sensor_Radiance 2026-10-01 35770
++ for D in 2026-10-08 2026-10-01 2017-09-25 2016-01-01
++ curl -s -o /tmp/t.png -D - -H 'Origin: https://webgpu-demos.github.io' https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_NOAA20_DayNightBand_At_Sensor_Radiance/default/2017-09-25/GoogleMapsCompatible_Level8/7/57/40.png
++ grep -iE '^HTTP|content-type|access-control-allow-origin|content-length'
++ tr '\r\n' '  '
+HTTP/2 404   content-type: text/html; charset=iso-8859-1  content-length: 196  access-control-allow-origin: *  x-content-type-options: nosniff  ++ stat -c %s /tmp/t.png
++ echo ' <- VIIRS_NOAA20_DayNightBand_At_Sensor_Radiance 2017-09-25 196'
+ <- VIIRS_NOAA20_DayNightBand_At_Sensor_Radiance 2017-09-25 196
++ for D in 2026-10-08 2026-10-01 2017-09-25 2016-01-01
++ curl -s -o /tmp/t.png -D - -H 'Origin: https://webgpu-demos.github.io' https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_NOAA20_DayNightBand_At_Sensor_Radiance/default/2016-01-01/GoogleMapsCompatible_Level8/7/57/40.png
++ grep -iE '^HTTP|content-type|access-control-allow-origin|content-length'
++ tr '\r\n' '  '
+HTTP/2 404   content-type: text/html; charset=iso-8859-1  content-length: 196  access-control-allow-origin: *  x-content-type-options: nosniff  ++ stat -c %s /tmp/t.png
++ echo ' <- VIIRS_NOAA20_DayNightBand_At_Sensor_Radiance 2016-01-01 196'
+ <- VIIRS_NOAA20_DayNightBand_At_Sensor_Radiance 2016-01-01 196
++ for L in VIIRS_SNPP_DayNightBand_At_Sensor_Radiance VIIRS_NOAA20_DayNightBand_At_Sensor_Radiance VIIRS_SNPP_DayNightBand_ENCC VIIRS_Black_Marble
++ for D in 2026-10-08 2026-10-01 2017-09-25 2016-01-01
++ curl -s -o /tmp/t.png -D - -H 'Origin: https://webgpu-demos.github.io' https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2026-10-08/GoogleMapsCompatible_Level8/7/57/40.png
++ grep -iE '^HTTP|content-type|access-control-allow-origin|content-length'
++ tr '\r\n' '  '
+HTTP/2 404   content-type: text/html; charset=iso-8859-1  content-length: 196  access-control-allow-origin: *  x-content-type-options: nosniff  ++ stat -c %s /tmp/t.png
++ echo ' <- VIIRS_SNPP_DayNightBand_ENCC 2026-10-08 196'
+ <- VIIRS_SNPP_DayNightBand_ENCC 2026-10-08 196
++ for D in 2026-10-08 2026-10-01 2017-09-25 2016-01-01
++ curl -s -o /tmp/t.png -D - -H 'Origin: https://webgpu-demos.github.io' https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2026-10-01/GoogleMapsCompatible_Level8/7/57/40.png
++ grep -iE '^HTTP|content-type|access-control-allow-origin|content-length'
++ tr '\r\n' '  '
+HTTP/2 404   content-type: text/html; charset=iso-8859-1  content-length: 196  access-control-allow-origin: *  x-content-type-options: nosniff  ++ stat -c %s /tmp/t.png
++ echo ' <- VIIRS_SNPP_DayNightBand_ENCC 2026-10-01 196'
+ <- VIIRS_SNPP_DayNightBand_ENCC 2026-10-01 196
++ for D in 2026-10-08 2026-10-01 2017-09-25 2016-01-01
++ curl -s -o /tmp/t.png -D - -H 'Origin: https://webgpu-demos.github.io' https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2017-09-25/GoogleMapsCompatible_Level8/7/57/40.png
++ grep -iE '^HTTP|content-type|access-control-allow-origin|content-length'
++ tr '\r\n' '  '
+HTTP/2 200   content-type: image/png  content-length: 45466  access-control-allow-origin: *  x-content-type-options: nosniff  ++ stat -c %s /tmp/t.png
++ echo ' <- VIIRS_SNPP_DayNightBand_ENCC 2017-09-25 45466'
+ <- VIIRS_SNPP_DayNightBand_ENCC 2017-09-25 45466
++ for D in 2026-10-08 2026-10-01 2017-09-25 2016-01-01
++ curl -s -o /tmp/t.png -D - -H 'Origin: https://webgpu-demos.github.io' https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/2016-01-01/GoogleMapsCompatible_Level8/7/57/40.png
++ grep -iE '^HTTP|content-type|access-control-allow-origin|content-length'
++ tr '\r\n' '  '
+HTTP/2 404   content-type: text/html; charset=iso-8859-1  content-length: 196  access-control-allow-origin: *  x-content-type-options: nosniff  ++ stat -c %s /tmp/t.png
++ echo ' <- VIIRS_SNPP_DayNightBand_ENCC 2016-01-01 196'
+ <- VIIRS_SNPP_DayNightBand_ENCC 2016-01-01 196
++ for L in VIIRS_SNPP_DayNightBand_At_Sensor_Radiance VIIRS_NOAA20_DayNightBand_At_Sensor_Radiance VIIRS_SNPP_DayNightBand_ENCC VIIRS_Black_Marble
++ for D in 2026-10-08 2026-10-01 2017-09-25 2016-01-01
++ curl -s -o /tmp/t.png -D - -H 'Origin: https://webgpu-demos.github.io' https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_Black_Marble/default/2026-10-08/GoogleMapsCompatible_Level8/7/57/40.png
++ grep -iE '^HTTP|content-type|access-control-allow-origin|content-length'
++ tr '\r\n' '  '
+HTTP/2 404   content-type: text/html; charset=iso-8859-1  content-length: 58  x-content-type-options: nosniff  ++ stat -c %s /tmp/t.png
++ echo ' <- VIIRS_Black_Marble 2026-10-08 58'
+ <- VIIRS_Black_Marble 2026-10-08 58
++ for D in 2026-10-08 2026-10-01 2017-09-25 2016-01-01
++ curl -s -o /tmp/t.png -D - -H 'Origin: https://webgpu-demos.github.io' https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_Black_Marble/default/2026-10-01/GoogleMapsCompatible_Level8/7/57/40.png
++ grep -iE '^HTTP|content-type|access-control-allow-origin|content-length'
++ tr '\r\n' '  '
+HTTP/2 404   content-type: text/html; charset=iso-8859-1  content-length: 58  x-content-type-options: nosniff  ++ stat -c %s /tmp/t.png
++ echo ' <- VIIRS_Black_Marble 2026-10-01 58'
+ <- VIIRS_Black_Marble 2026-10-01 58
++ for D in 2026-10-08 2026-10-01 2017-09-25 2016-01-01
++ curl -s -o /tmp/t.png -D - -H 'Origin: https://webgpu-demos.github.io' https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_Black_Marble/default/2017-09-25/GoogleMapsCompatible_Level8/7/57/40.png
++ grep -iE '^HTTP|content-type|access-control-allow-origin|content-length'
++ tr '\r\n' '  '
+HTTP/2 404   content-type: text/html; charset=iso-8859-1  content-length: 58  x-content-type-options: nosniff  ++ stat -c %s /tmp/t.png
++ echo ' <- VIIRS_Black_Marble 2017-09-25 58'
+ <- VIIRS_Black_Marble 2017-09-25 58
++ for D in 2026-10-08 2026-10-01 2017-09-25 2016-01-01
++ curl -s -o /tmp/t.png -D - -H 'Origin: https://webgpu-demos.github.io' https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_Black_Marble/default/2016-01-01/GoogleMapsCompatible_Level8/7/57/40.png
++ grep -iE '^HTTP|content-type|access-control-allow-origin|content-length'
++ tr '\r\n' '  '
+HTTP/2 200   content-type: image/png  content-length: 53713  access-control-allow-origin: *  x-content-type-options: nosniff  ++ stat -c %s /tmp/t.png
++ echo ' <- VIIRS_Black_Marble 2016-01-01 53713'
+ <- VIIRS_Black_Marble 2016-01-01 53713
