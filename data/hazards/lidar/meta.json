@@ -1,13 +1,17 @@
 {
  "complete": true,
- "partial_test_run_only_tiles_matching": "x80y20[45]|x81y204",
+ "partial_test_run_only_tiles_matching": null,
  "source": {
   "name": "USGS 3D Elevation Program (3DEP) 1 meter Digital Elevation Model, bare earth, from lidar",
   "publisher": "U.S. Geological Survey",
   "urls": [
+   "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/PR_PRVI_A_2018/TIFF/",
+   "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/PR_PRVI_C_2018/TIFF/",
    "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/PR_PRVI_D_2018/TIFF/",
    "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/PR_PRVI_E_2018/TIFF/",
+   "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/PR_PRVI_F_2018/TIFF/",
    "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/PR_PRVI_G_2018/TIFF/",
+   "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/PR_PRVI_H_2018/TIFF/",
    "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/PR_PuertoRicoUSVI_D24/TIFF/"
   ],
   "catalogue": "https://apps.nationalmap.gov/downloader/ (dataset \"Digital Elevation Model (DEM) 1 meter\")",
@@ -17,9 +21,9 @@
     "projects": [
      "PR_PuertoRicoUSVI_D24"
     ],
-    "tiles_sampled": 3,
-    "bytes": 957264309,
-    "files_last_modified": "2026-08-06T20:00:42.000Z",
+    "tiles_sampled": 189,
+    "bytes": 54429780791,
+    "files_last_modified": "2026-08-06T20:01:25.000Z",
     "flown": [
      [
       "2023/12/27",
@@ -50,17 +54,37 @@
    {
     "year": 2018,
     "projects": [
+     "PR_PRVI_A_2018",
+     "PR_PRVI_C_2018",
      "PR_PRVI_D_2018",
      "PR_PRVI_E_2018",
-     "PR_PRVI_G_2018"
+     "PR_PRVI_F_2018",
+     "PR_PRVI_G_2018",
+     "PR_PRVI_H_2018"
     ],
-    "tiles_sampled": 8,
-    "bytes": 986503192,
-    "files_last_modified": "2026-02-14T05:32:16.000Z",
+    "tiles_sampled": 286,
+    "bytes": 53683101661,
+    "files_last_modified": "2026-02-14T05:34:40.000Z",
     "flown": [
      [
       "2018/04/17",
       "2019/04/18"
+     ],
+     [
+      "2018/04/17",
+      "2019/04/19"
+     ],
+     [
+      "2018/04/22",
+      "2019/04/18"
+     ],
+     [
+      "2018/05/13",
+      "2018/06/08"
+     ],
+     [
+      "2018/05/18",
+      "2018/10/30"
      ]
     ]
    }
@@ -73,7 +97,8 @@
   "vertical": "Puerto Rico Vertical Datum of 2002 (PRVD02), EPSG:6641",
   "units": "metres",
   "horizontal": [
-   "NAD83 / UTM zone 19N (EPSG:26919)"
+   "NAD83 / UTM zone 19N (EPSG:26919)",
+   "NAD83 / UTM zone 20N (EPSG:26920)"
   ],
   "confirmed": true,
   "how_confirmed": "USGS WESM.csv (the 3DEP work-unit register) gives vert_crs for every work unit behind these tiles; the vendor DEM metadata gives altdatum/altunits. The GeoTIFFs themselves carry no vertical CRS and no unit tag, and their sidecar XML only carries the national boilerplate quoted below, which names NAVD88 (a datum that does not exist in Puerto Rico).",
@@ -104,7 +129,174 @@
    "Meters",
    "meters"
   ],
-  "caveat": "One work unit of the newest collection is registered with vert_crs 6642 (Virgin Islands Vertical Datum of 2009); the register does not say which tiles it produced. It is expected to be the U.S. Virgin Islands part of the project, where Garita has no buildings.",
+  "caveat": "These projects also cover the U.S. Virgin Islands, whose part is referenced to the Virgin Islands Vertical Datum of 2009 (WESM vert_crs 6642 and/or vendor metadata, listed in virgin_islands_parts with the number of Garita buildings inside each bounding box). Neither the register nor the tiles say which tile came from which work unit, so a building inside such a box cannot be proven to be PRVD02 from the metadata alone.",
+  "virgin_islands_parts": [
+   {
+    "workunit": "PR_PRVI_D_2018",
+    "file": "DEM_1.3v2_PR_USVI_BlkA1.xml",
+    "bbox_wsen": [
+     -65.091258,
+     17.670113,
+     -64.557106,
+     18.417612
+    ],
+    "buildings_inside_bbox": 0
+   },
+   {
+    "workunit": "PR_PRVI_D_2018",
+    "file": "DEM_1.3v2_PR_USVI_BlkA2.xml",
+    "bbox_wsen": [
+     -65.091258,
+     17.670113,
+     -64.557106,
+     18.417612
+    ],
+    "buildings_inside_bbox": 0
+   },
+   {
+    "workunit": "PR_PRVI_F_2018",
+    "file": "DEM_1.3v2_PR_USVI_BlkA1.xml",
+    "bbox_wsen": [
+     -65.091258,
+     17.670113,
+     -64.557106,
+     18.417612
+    ],
+    "buildings_inside_bbox": 0
+   },
+   {
+    "workunit": "PR_PRVI_F_2018",
+    "file": "DEM_1.3v2_PR_USVI_BlkA2.xml",
+    "bbox_wsen": [
+     -65.091258,
+     17.670113,
+     -64.557106,
+     18.417612
+    ],
+    "buildings_inside_bbox": 0
+   },
+   {
+    "workunit": "PR_PRVI_G_2018",
+    "file": "DEM_1.3v2_PR_USVI_BlkA1.xml",
+    "bbox_wsen": [
+     -65.091258,
+     17.670113,
+     -64.557106,
+     18.417612
+    ],
+    "buildings_inside_bbox": 0
+   },
+   {
+    "workunit": "PR_PRVI_G_2018",
+    "file": "DEM_1.3v2_PR_USVI_BlkA2.xml",
+    "bbox_wsen": [
+     -65.091258,
+     17.670113,
+     -64.557106,
+     18.417612
+    ],
+    "buildings_inside_bbox": 0
+   },
+   {
+    "workunit": "PR_PRVI_E_2018",
+    "file": "DEM_1.3v2_PR_USVI_BlkA1.xml",
+    "bbox_wsen": [
+     -65.091258,
+     17.670113,
+     -64.557106,
+     18.417612
+    ],
+    "buildings_inside_bbox": 0
+   },
+   {
+    "workunit": "PR_PRVI_E_2018",
+    "file": "DEM_1.3v2_PR_USVI_BlkA2.xml",
+    "bbox_wsen": [
+     -65.091258,
+     17.670113,
+     -64.557106,
+     18.417612
+    ],
+    "buildings_inside_bbox": 0
+   },
+   {
+    "workunit": "PR_PRVI_H_2018",
+    "file": "DEM_1.3v2_PR_USVI_BlkA1.xml",
+    "bbox_wsen": [
+     -65.091258,
+     17.670113,
+     -64.557106,
+     18.417612
+    ],
+    "buildings_inside_bbox": 0
+   },
+   {
+    "workunit": "PR_PRVI_H_2018",
+    "file": "DEM_1.3v2_PR_USVI_BlkA2.xml",
+    "bbox_wsen": [
+     -65.091258,
+     17.670113,
+     -64.557106,
+     18.417612
+    ],
+    "buildings_inside_bbox": 0
+   },
+   {
+    "workunit": "PR_PRVI_A_2018",
+    "file": "DEM_1.3v2_PR_USVI_BlkA1.xml",
+    "bbox_wsen": [
+     -65.091258,
+     17.670113,
+     -64.557106,
+     18.417612
+    ],
+    "buildings_inside_bbox": 0
+   },
+   {
+    "workunit": "PR_PRVI_A_2018",
+    "file": "DEM_1.3v2_PR_USVI_BlkA2.xml",
+    "bbox_wsen": [
+     -65.091258,
+     17.670113,
+     -64.557106,
+     18.417612
+    ],
+    "buildings_inside_bbox": 0
+   },
+   {
+    "workunit": "PR_PRVI_C_2018",
+    "file": "DEM_1.3v2_PR_USVI_BlkA1.xml",
+    "bbox_wsen": [
+     -65.091258,
+     17.670113,
+     -64.557106,
+     18.417612
+    ],
+    "buildings_inside_bbox": 0
+   },
+   {
+    "workunit": "PR_PRVI_C_2018",
+    "file": "DEM_1.3v2_PR_USVI_BlkA2.xml",
+    "bbox_wsen": [
+     -65.091258,
+     17.670113,
+     -64.557106,
+     18.417612
+    ],
+    "buildings_inside_bbox": 0
+   },
+   {
+    "workunit": "PR_PuertoRicoUSVI_5_D24",
+    "file": "PR_PuertoRicoUSVI_5_D24_DEM_XML_Metadata.xml",
+    "bbox_wsen": [
+     -65.090695,
+     17.67089,
+     -64.557854,
+     18.417032
+    ],
+    "buildings_inside_bbox": 0
+   }
+  ],
   "evidence": {
    "wesm_url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/WESM.csv",
    "workunits": [
@@ -121,6 +313,20 @@
      "onemeter_category": "Meets",
      "onemeter_reason": "Meets 3DEP 1-m DEM requirements",
      "metadata_link": "https://prd-tnm.s3.amazonaws.com/index.html?prefix=StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_D_2018"
+    },
+    {
+     "workunit": "PR_PRVI_F_2018",
+     "project": "PR_PuertoRico_VirginIslands_2018_D18",
+     "collect_start": "2018/04/17",
+     "collect_end": "2019/04/19",
+     "ql": "QL 1",
+     "spec": "USGS Lidar Base Specification 2.0",
+     "horiz_crs": "6566",
+     "vert_crs": "6641",
+     "geoid": "GEOID12B",
+     "onemeter_category": "Meets",
+     "onemeter_reason": "Meets 3DEP 1-m DEM requirements",
+     "metadata_link": "https://prd-tnm.s3.amazonaws.com/index.html?prefix=StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_F_2018"
     },
     {
      "workunit": "PR_PRVI_G_2018",
@@ -149,6 +355,48 @@
      "onemeter_category": "Meets",
      "onemeter_reason": "Meets 3DEP 1-m DEM requirements",
      "metadata_link": "https://prd-tnm.s3.amazonaws.com/index.html?prefix=StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_E_2018"
+    },
+    {
+     "workunit": "PR_PRVI_H_2018",
+     "project": "PR_PuertoRico_VirginIslands_2018_D18",
+     "collect_start": "2018/04/22",
+     "collect_end": "2019/04/18",
+     "ql": "QL 1",
+     "spec": "USGS Lidar Base Specification 2.0",
+     "horiz_crs": "6566",
+     "vert_crs": "6641",
+     "geoid": "GEOID12B",
+     "onemeter_category": "Meets",
+     "onemeter_reason": "Meets 3DEP 1-m DEM requirements",
+     "metadata_link": "https://prd-tnm.s3.amazonaws.com/index.html?prefix=StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_H_2018"
+    },
+    {
+     "workunit": "PR_PRVI_A_2018",
+     "project": "PR_PuertoRico_VirginIslands_2018_D18",
+     "collect_start": "2018/05/13",
+     "collect_end": "2018/06/08",
+     "ql": "QL 1",
+     "spec": "USGS Lidar Base Specification 1.2",
+     "horiz_crs": "6566",
+     "vert_crs": "6641",
+     "geoid": "GEOID12B",
+     "onemeter_category": "Meets",
+     "onemeter_reason": "Meets 3DEP 1-m DEM requirements",
+     "metadata_link": "https://prd-tnm.s3.amazonaws.com/index.html?prefix=StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_A_2018"
+    },
+    {
+     "workunit": "PR_PRVI_C_2018",
+     "project": "PR_PuertoRico_VirginIslands_2018_D18",
+     "collect_start": "2018/05/18",
+     "collect_end": "2018/10/30",
+     "ql": "QL 1",
+     "spec": "USGS Lidar Base Specification 1.2",
+     "horiz_crs": "6566",
+     "vert_crs": "6641",
+     "geoid": "GEOID12B",
+     "onemeter_category": "Meets",
+     "onemeter_reason": "Meets 3DEP 1-m DEM requirements",
+     "metadata_link": "https://prd-tnm.s3.amazonaws.com/index.html?prefix=StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_C_2018"
     },
     {
      "workunit": "PR_PuertoRicoUSVI_4_D24",
@@ -239,6 +487,9 @@
     {
      "workunit": "PR_PRVI_D_2018",
      "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_D_2018/reports/vendor_provided_xml/DEM_1.3v2_PR_USVI_BlkA1.xml",
+     "title": [
+      "PR USVI Lidar; Hydro Flattened Bare Earth DEM"
+     ],
      "altdatum": [
       "Virgin Islands Vertical Datum of 2009, Geoid 12B"
      ],
@@ -247,11 +498,20 @@
      ],
      "altres": [
       "0.01"
+     ],
+     "bbox_wsen": [
+      -65.091258,
+      17.670113,
+      -64.557106,
+      18.417612
      ]
     },
     {
      "workunit": "PR_PRVI_D_2018",
      "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_D_2018/reports/vendor_provided_xml/DEM_1.3v2_PR_USVI_BlkA2.xml",
+     "title": [
+      "PR USVI Lidar; Hydro Flattened Bare Earth DEM"
+     ],
      "altdatum": [
       "Virgin Islands Vertical Datum of 2009, Geoid 12B"
      ],
@@ -260,11 +520,20 @@
      ],
      "altres": [
       "0.01"
+     ],
+     "bbox_wsen": [
+      -65.091258,
+      17.670113,
+      -64.557106,
+      18.417612
      ]
     },
     {
      "workunit": "PR_PRVI_D_2018",
      "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_D_2018/reports/vendor_provided_xml/DEM_1.3v2_PR_USVI_Lidar_2018.xml",
+     "title": [
+      "PR USVI Lidar; Hydro Flattened Bare Earth DEM"
+     ],
      "altdatum": [
       "Puerto Rico Vertical Datum of 2002, Geoid 12B"
      ],
@@ -273,11 +542,86 @@
      ],
      "altres": [
       "0.01"
+     ],
+     "bbox_wsen": [
+      -67.955381,
+      17.874351,
+      -65.218638,
+      18.517999
+     ]
+    },
+    {
+     "workunit": "PR_PRVI_F_2018",
+     "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_F_2018/reports/vendor_provided_xml/DEM_1.3v2_PR_USVI_BlkA1.xml",
+     "title": [
+      "PR USVI Lidar; Hydro Flattened Bare Earth DEM"
+     ],
+     "altdatum": [
+      "Virgin Islands Vertical Datum of 2009, Geoid 12B"
+     ],
+     "altunits": [
+      "Meters"
+     ],
+     "altres": [
+      "0.01"
+     ],
+     "bbox_wsen": [
+      -65.091258,
+      17.670113,
+      -64.557106,
+      18.417612
+     ]
+    },
+    {
+     "workunit": "PR_PRVI_F_2018",
+     "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_F_2018/reports/vendor_provided_xml/DEM_1.3v2_PR_USVI_BlkA2.xml",
+     "title": [
+      "PR USVI Lidar; Hydro Flattened Bare Earth DEM"
+     ],
+     "altdatum": [
+      "Virgin Islands Vertical Datum of 2009, Geoid 12B"
+     ],
+     "altunits": [
+      "Meters"
+     ],
+     "altres": [
+      "0.01"
+     ],
+     "bbox_wsen": [
+      -65.091258,
+      17.670113,
+      -64.557106,
+      18.417612
+     ]
+    },
+    {
+     "workunit": "PR_PRVI_F_2018",
+     "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_F_2018/reports/vendor_provided_xml/DEM_1.3v2_PR_USVI_Lidar_2018.xml",
+     "title": [
+      "PR USVI Lidar; Hydro Flattened Bare Earth DEM"
+     ],
+     "altdatum": [
+      "Puerto Rico Vertical Datum of 2002, Geoid 12B"
+     ],
+     "altunits": [
+      "Meters"
+     ],
+     "altres": [
+      "0.01"
+     ],
+     "bbox_wsen": [
+      -67.955381,
+      17.874351,
+      -65.218638,
+      18.517999
      ]
     },
     {
      "workunit": "PR_PRVI_G_2018",
      "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_G_2018/reports/vendor_provided_xml/DEM_1.3v2_PR_USVI_BlkA1.xml",
+     "title": [
+      "PR USVI Lidar; Hydro Flattened Bare Earth DEM"
+     ],
      "altdatum": [
       "Virgin Islands Vertical Datum of 2009, Geoid 12B"
      ],
@@ -286,11 +630,20 @@
      ],
      "altres": [
       "0.01"
+     ],
+     "bbox_wsen": [
+      -65.091258,
+      17.670113,
+      -64.557106,
+      18.417612
      ]
     },
     {
      "workunit": "PR_PRVI_G_2018",
      "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_G_2018/reports/vendor_provided_xml/DEM_1.3v2_PR_USVI_BlkA2.xml",
+     "title": [
+      "PR USVI Lidar; Hydro Flattened Bare Earth DEM"
+     ],
      "altdatum": [
       "Virgin Islands Vertical Datum of 2009, Geoid 12B"
      ],
@@ -299,11 +652,20 @@
      ],
      "altres": [
       "0.01"
+     ],
+     "bbox_wsen": [
+      -65.091258,
+      17.670113,
+      -64.557106,
+      18.417612
      ]
     },
     {
      "workunit": "PR_PRVI_G_2018",
      "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_G_2018/reports/vendor_provided_xml/DEM_1.3v2_PR_USVI_Lidar_2018.xml",
+     "title": [
+      "PR USVI Lidar; Hydro Flattened Bare Earth DEM"
+     ],
      "altdatum": [
       "Puerto Rico Vertical Datum of 2002, Geoid 12B"
      ],
@@ -312,11 +674,20 @@
      ],
      "altres": [
       "0.01"
+     ],
+     "bbox_wsen": [
+      -67.955381,
+      17.874351,
+      -65.218638,
+      18.517999
      ]
     },
     {
      "workunit": "PR_PRVI_E_2018",
      "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_E_2018/reports/vendor_provided_xml/DEM_1.3v2_PR_USVI_BlkA1.xml",
+     "title": [
+      "PR USVI Lidar; Hydro Flattened Bare Earth DEM"
+     ],
      "altdatum": [
       "Virgin Islands Vertical Datum of 2009, Geoid 12B"
      ],
@@ -325,11 +696,20 @@
      ],
      "altres": [
       "0.01"
+     ],
+     "bbox_wsen": [
+      -65.091258,
+      17.670113,
+      -64.557106,
+      18.417612
      ]
     },
     {
      "workunit": "PR_PRVI_E_2018",
      "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_E_2018/reports/vendor_provided_xml/DEM_1.3v2_PR_USVI_BlkA2.xml",
+     "title": [
+      "PR USVI Lidar; Hydro Flattened Bare Earth DEM"
+     ],
      "altdatum": [
       "Virgin Islands Vertical Datum of 2009, Geoid 12B"
      ],
@@ -338,11 +718,20 @@
      ],
      "altres": [
       "0.01"
+     ],
+     "bbox_wsen": [
+      -65.091258,
+      17.670113,
+      -64.557106,
+      18.417612
      ]
     },
     {
      "workunit": "PR_PRVI_E_2018",
      "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_E_2018/reports/vendor_provided_xml/DEM_1.3v2_PR_USVI_Lidar_2018.xml",
+     "title": [
+      "PR USVI Lidar; Hydro Flattened Bare Earth DEM"
+     ],
      "altdatum": [
       "Puerto Rico Vertical Datum of 2002, Geoid 12B"
      ],
@@ -351,11 +740,218 @@
      ],
      "altres": [
       "0.01"
+     ],
+     "bbox_wsen": [
+      -67.955381,
+      17.874351,
+      -65.218638,
+      18.517999
+     ]
+    },
+    {
+     "workunit": "PR_PRVI_H_2018",
+     "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_H_2018/reports/vendor_provided_xml/DEM_1.3v2_PR_USVI_BlkA1.xml",
+     "title": [
+      "PR USVI Lidar; Hydro Flattened Bare Earth DEM"
+     ],
+     "altdatum": [
+      "Virgin Islands Vertical Datum of 2009, Geoid 12B"
+     ],
+     "altunits": [
+      "Meters"
+     ],
+     "altres": [
+      "0.01"
+     ],
+     "bbox_wsen": [
+      -65.091258,
+      17.670113,
+      -64.557106,
+      18.417612
+     ]
+    },
+    {
+     "workunit": "PR_PRVI_H_2018",
+     "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_H_2018/reports/vendor_provided_xml/DEM_1.3v2_PR_USVI_BlkA2.xml",
+     "title": [
+      "PR USVI Lidar; Hydro Flattened Bare Earth DEM"
+     ],
+     "altdatum": [
+      "Virgin Islands Vertical Datum of 2009, Geoid 12B"
+     ],
+     "altunits": [
+      "Meters"
+     ],
+     "altres": [
+      "0.01"
+     ],
+     "bbox_wsen": [
+      -65.091258,
+      17.670113,
+      -64.557106,
+      18.417612
+     ]
+    },
+    {
+     "workunit": "PR_PRVI_H_2018",
+     "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_H_2018/reports/vendor_provided_xml/DEM_1.3v2_PR_USVI_Lidar_2018.xml",
+     "title": [
+      "PR USVI Lidar; Hydro Flattened Bare Earth DEM"
+     ],
+     "altdatum": [
+      "Puerto Rico Vertical Datum of 2002, Geoid 12B"
+     ],
+     "altunits": [
+      "Meters"
+     ],
+     "altres": [
+      "0.01"
+     ],
+     "bbox_wsen": [
+      -67.955381,
+      17.874351,
+      -65.218638,
+      18.517999
+     ]
+    },
+    {
+     "workunit": "PR_PRVI_A_2018",
+     "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_A_2018/reports/vendor_provided_xml/DEM_1.3v2_PR_USVI_BlkA1.xml",
+     "title": [
+      "PR USVI Lidar; Hydro Flattened Bare Earth DEM"
+     ],
+     "altdatum": [
+      "Virgin Islands Vertical Datum of 2009, Geoid 12B"
+     ],
+     "altunits": [
+      "Meters"
+     ],
+     "altres": [
+      "0.01"
+     ],
+     "bbox_wsen": [
+      -65.091258,
+      17.670113,
+      -64.557106,
+      18.417612
+     ]
+    },
+    {
+     "workunit": "PR_PRVI_A_2018",
+     "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_A_2018/reports/vendor_provided_xml/DEM_1.3v2_PR_USVI_BlkA2.xml",
+     "title": [
+      "PR USVI Lidar; Hydro Flattened Bare Earth DEM"
+     ],
+     "altdatum": [
+      "Virgin Islands Vertical Datum of 2009, Geoid 12B"
+     ],
+     "altunits": [
+      "Meters"
+     ],
+     "altres": [
+      "0.01"
+     ],
+     "bbox_wsen": [
+      -65.091258,
+      17.670113,
+      -64.557106,
+      18.417612
+     ]
+    },
+    {
+     "workunit": "PR_PRVI_A_2018",
+     "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_A_2018/reports/vendor_provided_xml/DEM_1.3v2_PR_USVI_Lidar_2018.xml",
+     "title": [
+      "PR USVI Lidar; Hydro Flattened Bare Earth DEM"
+     ],
+     "altdatum": [
+      "Puerto Rico Vertical Datum of 2002, Geoid 12B"
+     ],
+     "altunits": [
+      "Meters"
+     ],
+     "altres": [
+      "0.01"
+     ],
+     "bbox_wsen": [
+      -67.955381,
+      17.874351,
+      -65.218638,
+      18.517999
+     ]
+    },
+    {
+     "workunit": "PR_PRVI_C_2018",
+     "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_C_2018/reports/vendor_provided_xml/DEM_1.3v2_PR_USVI_BlkA1.xml",
+     "title": [
+      "PR USVI Lidar; Hydro Flattened Bare Earth DEM"
+     ],
+     "altdatum": [
+      "Virgin Islands Vertical Datum of 2009, Geoid 12B"
+     ],
+     "altunits": [
+      "Meters"
+     ],
+     "altres": [
+      "0.01"
+     ],
+     "bbox_wsen": [
+      -65.091258,
+      17.670113,
+      -64.557106,
+      18.417612
+     ]
+    },
+    {
+     "workunit": "PR_PRVI_C_2018",
+     "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_C_2018/reports/vendor_provided_xml/DEM_1.3v2_PR_USVI_BlkA2.xml",
+     "title": [
+      "PR USVI Lidar; Hydro Flattened Bare Earth DEM"
+     ],
+     "altdatum": [
+      "Virgin Islands Vertical Datum of 2009, Geoid 12B"
+     ],
+     "altunits": [
+      "Meters"
+     ],
+     "altres": [
+      "0.01"
+     ],
+     "bbox_wsen": [
+      -65.091258,
+      17.670113,
+      -64.557106,
+      18.417612
+     ]
+    },
+    {
+     "workunit": "PR_PRVI_C_2018",
+     "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRico_VirginIslands_2018_D18/PR_PRVI_C_2018/reports/vendor_provided_xml/DEM_1.3v2_PR_USVI_Lidar_2018.xml",
+     "title": [
+      "PR USVI Lidar; Hydro Flattened Bare Earth DEM"
+     ],
+     "altdatum": [
+      "Puerto Rico Vertical Datum of 2002, Geoid 12B"
+     ],
+     "altunits": [
+      "Meters"
+     ],
+     "altres": [
+      "0.01"
+     ],
+     "bbox_wsen": [
+      -67.955381,
+      17.874351,
+      -65.218638,
+      18.517999
      ]
     },
     {
      "workunit": "PR_PuertoRicoUSVI_4_D24",
      "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_4_D24/reports/vendor_provided_xml/PR_PuertoRicoUSVI_4_D24_DEM_XML_Metadata.xml",
+     "title": [
+      "USGS_PR_PuertoRicoUSVI_4_D24; Derived Bare Earth DEM"
+     ],
      "altdatum": [
       "Puerto Rico Vertical Datum of 2002"
      ],
@@ -364,11 +960,20 @@
      ],
      "altres": [
       "0.01"
+     ],
+     "bbox_wsen": [
+      -67.272467,
+      17.878969,
+      -66.442769,
+      18.51757
      ]
     },
     {
      "workunit": "PR_PuertoRicoUSVI_3_D24",
      "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_3_D24/reports/vendor_provided_xml/PR_PuertoRicoUSVI_3_D24_DEM_XML_Metadata.xml",
+     "title": [
+      "USGS_PR_PuertoRicoUSVI_3_D24; Derived Bare Earth DEM"
+     ],
      "altdatum": [
       "Puerto Rico Vertical Datum of 2002"
      ],
@@ -377,11 +982,20 @@
      ],
      "altres": [
       "0.01"
+     ],
+     "bbox_wsen": [
+      -65.349155,
+      18.276619,
+      -65.219907,
+      18.35163
      ]
     },
     {
      "workunit": "PR_PuertoRicoUSVI_1_D24",
      "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_1_D24/reports/vendor_provided_xml/PR_PuertoRicoUSVI_1_D24_DEM_XML_Metadata.xml",
+     "title": [
+      "USGS_PR_PuertoRicoUSVI_1_D24; Derived Bare Earth DEM"
+     ],
      "altdatum": [
       "Puerto Rico Vertical Datum of 2002"
      ],
@@ -390,11 +1004,20 @@
      ],
      "altres": [
       "0.01"
+     ],
+     "bbox_wsen": [
+      -65.578313,
+      18.078078,
+      -65.266607,
+      18.163884
      ]
     },
     {
      "workunit": "PR_PuertoRicoUSVI_2_D24",
      "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_2_D24/reports/vendor_provided_xml/PR_PuertoRicoUSVI_2_D24_DEM_XML_Metadata.xml",
+     "title": [
+      "USGS_PR_PuertoRicoUSVI_2_D24; Derived Bare Earth DEM"
+     ],
      "altdatum": [
       "Puerto Rico Vertical Datum of 2002"
      ],
@@ -403,11 +1026,20 @@
      ],
      "altres": [
       "0.01"
+     ],
+     "bbox_wsen": [
+      -67.951775,
+      18.051824,
+      -67.842535,
+      18.162681
      ]
     },
     {
      "workunit": "PR_PuertoRicoUSVI_5_D24",
      "file": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/metadata/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_5_D24/reports/vendor_provided_xml/PR_PuertoRicoUSVI_5_D24_DEM_XML_Metadata.xml",
+     "title": [
+      "PR_PuertoRicoUSVI_5_D24; Hydro Flattened Bare Earth DEM"
+     ],
      "altdatum": [
       "Virgin Islands Vertical Datum of 2009"
      ],
@@ -416,14 +1048,64 @@
      ],
      "altres": [
       "0.01"
+     ],
+     "bbox_wsen": [
+      -65.090695,
+      17.67089,
+      -64.557854,
+      18.417032
      ]
     }
    ],
    "errors": []
   },
   "sidecar_xml": {
+   "PR_PRVI_A_2018": {
+    "file": "USGS_1m_x13y199_PR_PRVI_A_2018.xml",
+    "pubdate": [
+     "20200428"
+    ],
+    "begdate": [
+     "20180513"
+    ],
+    "enddate": [
+     "20180608"
+    ],
+    "altdatum": [],
+    "vertical_sentences": [
+     "All bare earth elevation values are in meters and are referenced to the North American Vertical Datum of 1988 (NAVD88)."
+    ],
+    "useconst": [
+     "There is no guarantee or warranty concerning the accuracy of the data. Users should be aware that temporal changes may have occurred since these data were collected and that some parts of these data may no longer represent actual surface conditions. Users should not use these data for critical applications without a full awareness of its limitations. Acknowledgement of the originating agencies would be appreciated in products derived from these data. Any user who modifies the data is obligated to describe the types of modifications they perform. User specifically agrees not to misrepresent the data, nor to imply that changes made were approved or endorsed by the USGS. Please refer to http://www.usgs.gov/privacy.html for the USGS disclaimer."
+    ],
+    "accconst": [
+     "None. Any downloading and use of these data signifies a user's agreement to comprehension and compliance of the USGS Standard Disclaimer. Insure all portions of metadata are read and clearly understood before using these data in order to protect both user and USGS interests."
+    ]
+   },
+   "PR_PRVI_C_2018": {
+    "file": "USGS_1m_x13y199_PR_PRVI_C_2018.xml",
+    "pubdate": [
+     "20200504"
+    ],
+    "begdate": [
+     "20180518"
+    ],
+    "enddate": [
+     "20181030"
+    ],
+    "altdatum": [],
+    "vertical_sentences": [
+     "All bare earth elevation values are in meters and are referenced to the North American Vertical Datum of 1988 (NAVD88)."
+    ],
+    "useconst": [
+     "There is no guarantee or warranty concerning the accuracy of the data. Users should be aware that temporal changes may have occurred since these data were collected and that some parts of these data may no longer represent actual surface conditions. Users should not use these data for critical applications without a full awareness of its limitations. Acknowledgement of the originating agencies would be appreciated in products derived from these data. Any user who modifies the data is obligated to describe the types of modifications they perform. User specifically agrees not to misrepresent the data, nor to imply that changes made were approved or endorsed by the USGS. Please refer to http://www.usgs.gov/privacy.html for the USGS disclaimer."
+    ],
+    "accconst": [
+     "None. Any downloading and use of these data signifies a user's agreement to comprehension and compliance of the USGS Standard Disclaimer. Insure all portions of metadata are read and clearly understood before using these data in order to protect both user and USGS interests."
+    ]
+   },
    "PR_PRVI_D_2018": {
-    "file": "USGS_1m_x80y204_PR_PRVI_D_2018.xml",
+    "file": "USGS_1m_x13y201_PR_PRVI_D_2018.xml",
     "pubdate": [
      "20200504"
     ],
@@ -445,7 +1127,7 @@
     ]
    },
    "PR_PRVI_E_2018": {
-    "file": "USGS_1m_x80y204_PR_PRVI_E_2018.xml",
+    "file": "USGS_1m_x16y204_PR_PRVI_E_2018.xml",
     "pubdate": [
      "20200505"
     ],
@@ -466,8 +1148,30 @@
      "None. Any downloading and use of these data signifies a user's agreement to comprehension and compliance of the USGS Standard Disclaimer. Insure all portions of metadata are read and clearly understood before using these data in order to protect both user and USGS interests."
     ]
    },
+   "PR_PRVI_F_2018": {
+    "file": "USGS_1m_x13y204_PR_PRVI_F_2018.xml",
+    "pubdate": [
+     "20200506"
+    ],
+    "begdate": [
+     "20180417"
+    ],
+    "enddate": [
+     "20190419"
+    ],
+    "altdatum": [],
+    "vertical_sentences": [
+     "All bare earth elevation values are in meters and are referenced to the North American Vertical Datum of 1988 (NAVD88)."
+    ],
+    "useconst": [
+     "There is no guarantee or warranty concerning the accuracy of the data. Users should be aware that temporal changes may have occurred since these data were collected and that some parts of these data may no longer represent actual surface conditions. Users should not use these data for critical applications without a full awareness of its limitations. Acknowledgement of the originating agencies would be appreciated in products derived from these data. Any user who modifies the data is obligated to describe the types of modifications they perform. User specifically agrees not to misrepresent the data, nor to imply that changes made were approved or endorsed by the USGS. Please refer to http://www.usgs.gov/privacy.html for the USGS disclaimer."
+    ],
+    "accconst": [
+     "None. Any downloading and use of these data signifies a user's agreement to comprehension and compliance of the USGS Standard Disclaimer. Insure all portions of metadata are read and clearly understood before using these data in order to protect both user and USGS interests."
+    ]
+   },
    "PR_PRVI_G_2018": {
-    "file": "USGS_1m_x80y204_PR_PRVI_G_2018.xml",
+    "file": "USGS_1m_x13y204_PR_PRVI_G_2018.xml",
     "pubdate": [
      "20200504"
     ],
@@ -488,8 +1192,30 @@
      "None. Any downloading and use of these data signifies a user's agreement to comprehension and compliance of the USGS Standard Disclaimer. Insure all portions of metadata are read and clearly understood before using these data in order to protect both user and USGS interests."
     ]
    },
+   "PR_PRVI_H_2018": {
+    "file": "USGS_1m_x14y199_PR_PRVI_H_2018.xml",
+    "pubdate": [
+     "20200505"
+    ],
+    "begdate": [
+     "20180422"
+    ],
+    "enddate": [
+     "20190418"
+    ],
+    "altdatum": [],
+    "vertical_sentences": [
+     "All bare earth elevation values are in meters and are referenced to the North American Vertical Datum of 1988 (NAVD88)."
+    ],
+    "useconst": [
+     "There is no guarantee or warranty concerning the accuracy of the data. Users should be aware that temporal changes may have occurred since these data were collected and that some parts of these data may no longer represent actual surface conditions. Users should not use these data for critical applications without a full awareness of its limitations. Acknowledgement of the originating agencies would be appreciated in products derived from these data. Any user who modifies the data is obligated to describe the types of modifications they perform. User specifically agrees not to misrepresent the data, nor to imply that changes made were approved or endorsed by the USGS. Please refer to http://www.usgs.gov/privacy.html for the USGS disclaimer."
+    ],
+    "accconst": [
+     "None. Any downloading and use of these data signifies a user's agreement to comprehension and compliance of the USGS Standard Disclaimer. Insure all portions of metadata are read and clearly understood before using these data in order to protect both user and USGS interests."
+    ]
+   },
    "PR_PuertoRicoUSVI_D24": {
-    "file": "USGS_1M_19_x80y204_PR_PuertoRicoUSVI_D24.xml",
+    "file": "USGS_1M_19_x61y200_PR_PuertoRicoUSVI_D24.xml",
     "pubdate": [
      "20260624"
     ],
@@ -520,24 +1246,27 @@
  "counts": {
   "buildings": {
    "by_project": {
-    "PR_PuertoRicoUSVI_D24": 170354,
-    "none": 1330117
+    "PR_PRVI_A_2018": 31,
+    "PR_PuertoRicoUSVI_D24": 1500430,
+    "none": 10
    },
    "by_collection_year": {
-    "none": 1330117,
-    "2024": 170354
+    "none": 10,
+    "2018": 31,
+    "2024": 1500430
    }
   },
   "assets": {
    "by_project": {
     "PR_PRVI_E_2018": 3,
-    "PR_PuertoRicoUSVI_D24": 788,
-    "none": 3197
+    "PR_PRVI_H_2018": 2,
+    "PR_PuertoRicoUSVI_D24": 3980,
+    "none": 3
    },
    "by_collection_year": {
-    "none": 3197,
-    "2018": 3,
-    "2024": 788
+    "none": 3,
+    "2018": 5,
+    "2024": 3980
    }
   }
  },
@@ -558,104 +1287,104 @@
     "PR_PuertoRicoUSVI_D24"
    ]
   },
-  "holding_points": 11,
-  "sampled": 11,
+  "holding_points": 475,
+  "sampled": 475,
   "failed": [],
   "header_failed": [],
   "missing_shards": [],
-  "bytes_downloaded": 1943767501
+  "bytes_downloaded": 108112882452
  },
  "disclaimer": "There is no guarantee or warranty concerning the accuracy of the data. Users should be aware that temporal changes may have occurred since these data were collected and that some parts of these data may no longer represent actual surface conditions. Users should not use these data for critical applications without a full awareness of its limitations. Acknowledgement of the originating agencies would be appreciated in products derived from these data. Any user who modifies the data is obligated to describe the types of modifications they perform. User specifically agrees not to misrepresent the data, nor to imply that changes made were approved or endorsed by the USGS. Please refer to http://www.usgs.gov/privacy.html for the USGS disclaimer.",
  "qa": {
   "buildings": 1500471,
-  "buildings_with_value": 170354,
-  "buildings_no_data": 1330117,
-  "share_with_value": 0.11353,
+  "buildings_with_value": 1500461,
+  "buildings_no_data": 10,
+  "share_with_value": 0.99999,
   "buildings_no_data_but_some_cells_nearby": 0,
-  "buildings_inside_no_tile": 1330117,
+  "buildings_inside_no_tile": 0,
   "assets": 3988,
-  "assets_with_value": 791,
+  "assets_with_value": 3985,
   "new_elevation_m": {
-   "min": -1.0,
-   "p01": 0.9,
-   "median": 26.5,
-   "p99": 128.5,
-   "max": 202.1,
-   "below_zero": 51
+   "min": -8.2,
+   "p01": 1.3,
+   "median": 61.8,
+   "p99": 727.8,
+   "max": 1326.2,
+   "below_zero": 226
   },
   "new_minus_old_m": {
-   "n": 170354,
-   "median": 0.7,
-   "p05": -3.7,
-   "p95": 5.9,
-   "mean": 0.778,
-   "median_abs": 1.5,
-   "share_within_0.25m": 0.0948,
-   "share_within_0.5m": 0.2059,
-   "share_within_1m": 0.3776,
-   "share_beyond_3m": 0.2214,
+   "n": 1500461,
+   "median": 0.3,
+   "p05": -5.1,
+   "p95": 6.1,
+   "mean": 0.384,
+   "median_abs": 1.6,
+   "share_within_0.25m": 0.0912,
+   "share_within_0.5m": 0.1972,
+   "share_within_1m": 0.3548,
+   "share_beyond_3m": 0.2719,
    "note": "old = the ground field of tiles/bld today (10 m elevation model, decimetres)"
   },
   "at_or_below": {
    "0.5m": {
     "old": 5213,
-    "new": 592,
-    "old_where_both": 2385,
-    "new_where_both": 592
+    "new": 1615,
+    "old_where_both": 5211,
+    "new_where_both": 1615
    },
    "1m": {
     "old": 13531,
-    "new": 2238,
-    "old_where_both": 3476,
-    "new_where_both": 2238
+    "new": 9718,
+    "old_where_both": 13526,
+    "new_where_both": 9718
    },
    "1.5m": {
     "old": 18672,
-    "new": 4772,
-    "old_where_both": 4515,
-    "new_where_both": 4772
+    "new": 23542,
+    "old_where_both": 18665,
+    "new_where_both": 23542
    },
    "2m": {
     "old": 27516,
-    "new": 7971,
-    "old_where_both": 5974,
-    "new_where_both": 7971
+    "new": 40257,
+    "old_where_both": 27508,
+    "new_where_both": 40257
    },
    "3m": {
     "old": 106288,
-    "new": 15218,
-    "old_where_both": 23950,
-    "new_where_both": 15218
+    "new": 80988,
+    "old_where_both": 106280,
+    "new_where_both": 80988
    }
   },
   "old_values_known": 1500471,
-  "compared": 170354,
+  "compared": 1500461,
   "median_minus_centre_cell_m": {
-   "n": 170354,
+   "n": 1500461,
    "median": 0.0,
-   "p05": -0.049,
-   "p95": 0.043,
-   "mean": -0.001,
-   "median_abs": 0.009,
-   "share_within_0.25m": 0.9951,
-   "share_within_0.5m": 0.9995,
-   "share_within_1m": 1.0,
+   "p05": -0.089,
+   "p95": 0.081,
+   "mean": -0.002,
+   "median_abs": 0.013,
+   "share_within_0.25m": 0.9846,
+   "share_within_0.5m": 0.9986,
+   "share_within_1m": 0.9999,
    "share_beyond_3m": 0.0
   },
   "collections_compared": {
-   "n": 170354,
-   "median": -0.043,
-   "p05": -0.288,
-   "p95": 0.173,
-   "mean": -0.046,
-   "median_abs": 0.077,
-   "share_within_0.25m": 0.9071,
-   "share_within_0.5m": 0.9719,
-   "share_within_1m": 0.9913,
-   "share_beyond_3m": 0.0008,
+   "n": 1479689,
+   "median": -0.026,
+   "p05": -0.326,
+   "p95": 0.215,
+   "mean": -0.032,
+   "median_abs": 0.083,
+   "share_within_0.25m": 0.8814,
+   "share_within_0.5m": 0.9612,
+   "share_within_1m": 0.9869,
+   "share_beyond_3m": 0.0014,
    "note": "2024 minus 2018 at buildings where both have a value",
-   "only_newest": 0,
-   "only_older": 0
+   "only_newest": 20741,
+   "only_older": 31
   },
   "spots": [
    {
@@ -663,11 +1392,11 @@
     "lon": -66.1165,
     "lat": 18.4655,
     "expect": "on the ridge of the islet, roughly 20 m",
-    "lidar_m": 21.0,
+    "lidar_m": 20.99,
     "project": "PR_PuertoRicoUSVI_D24",
     "by_collection_m": {
-     "2024": 21.0,
-     "2018": 21.03
+     "2024": 20.99,
+     "2018": 21.01
     },
     "buildings_within_150m": 151,
     "their_median_lidar_m": 20.3,
@@ -693,14 +1422,14 @@
     "lon": -65.88,
     "lat": 18.4313,
     "expect": "coastal plain, a few metres",
-    "lidar_m": null,
-    "project": "none",
+    "lidar_m": 2.79,
+    "project": "PR_PuertoRicoUSVI_D24",
     "by_collection_m": {
-     "2024": null,
-     "2018": null
+     "2024": 2.79,
+     "2018": 2.49
     },
     "buildings_within_150m": 163,
-    "their_median_lidar_m": null,
+    "their_median_lidar_m": 2.5,
     "their_median_old_m": 3.0
    },
    {
@@ -708,14 +1437,14 @@
     "lon": -66.617,
     "lat": 17.98,
     "expect": "harbour barrio, 1 to 3 m",
-    "lidar_m": null,
-    "project": "none",
+    "lidar_m": 0.93,
+    "project": "PR_PuertoRicoUSVI_D24",
     "by_collection_m": {
-     "2024": null,
-     "2018": null
+     "2024": 0.93,
+     "2018": 0.95
     },
     "buildings_within_150m": 201,
-    "their_median_lidar_m": null,
+    "their_median_lidar_m": 1.0,
     "their_median_old_m": 3.0
    },
    {
@@ -723,14 +1452,14 @@
     "lon": -66.266,
     "lat": 18.14,
     "expect": "hill town, roughly 600 to 700 m",
-    "lidar_m": null,
-    "project": "none",
+    "lidar_m": 605.22,
+    "project": "PR_PuertoRicoUSVI_D24",
     "by_collection_m": {
-     "2024": null,
-     "2018": null
+     "2024": 605.22,
+     "2018": 605.26
     },
     "buildings_within_150m": 181,
-    "their_median_lidar_m": null,
+    "their_median_lidar_m": 603.4,
     "their_median_old_m": 603.5
    },
    {
@@ -738,11 +1467,11 @@
     "lon": -66.0018,
     "lat": 18.4394,
     "expect": "published field elevation 9 ft = 2.7 m",
-    "lidar_m": null,
-    "project": "none",
+    "lidar_m": 2.51,
+    "project": "PR_PuertoRicoUSVI_D24",
     "by_collection_m": {
-     "2024": null,
-     "2018": null
+     "2024": 2.51,
+     "2018": 2.58
     },
     "buildings_within_150m": 0,
     "their_median_lidar_m": null,
@@ -753,21 +1482,21 @@
     "lon": -67.1294,
     "lat": 18.4949,
     "expect": "published field elevation 237 ft = 72 m",
-    "lidar_m": null,
-    "project": "none",
+    "lidar_m": 64.43,
+    "project": "PR_PuertoRicoUSVI_D24",
     "by_collection_m": {
-     "2024": null,
-     "2018": null
+     "2024": 64.43,
+     "2018": 64.49
     },
     "buildings_within_150m": 0,
     "their_median_lidar_m": null,
     "their_median_old_m": null
    },
    {
-    "place": "Condado, Ashford Avenue",
+    "place": "Condado, near Ashford Avenue",
     "lon": -66.072,
     "lat": 18.457,
-    "expect": "barrier strip, 2 to 4 m",
+    "expect": "barrier strip beside the lagoon, 1 to 4 m",
     "lidar_m": 1.12,
     "project": "PR_PuertoRicoUSVI_D24",
     "by_collection_m": {
@@ -780,24 +1509,24 @@
    }
   ]
  },
- "generated": "2026-10-11T02:41:03Z",
+ "generated": "2026-10-11T02:47:45Z",
  "run": {
-  "id": "38105835208",
-  "sha": "f478c5644d8fe81d6111859926b7ff1095577ae8",
-  "plan_seconds": 13.8,
+  "id": "38106042434",
+  "sha": "87e211913542384d2bdfb7178774f33fbc9b993f",
+  "plan_seconds": 29.1,
   "shard_seconds": {
-   "0": 15.2,
-   "1": 14.9,
-   "2": 13.4,
-   "3": 9.7,
-   "4": 3.9,
-   "5": 5.0,
-   "6": 4.5,
-   "7": 3.7,
-   "8": 5.0,
-   "9": 3.9,
-   "10": 3.3,
-   "11": 0.2
+   "0": 104.1,
+   "1": 101.6,
+   "2": 99.6,
+   "3": 98.3,
+   "4": 122.4,
+   "5": 137.4,
+   "6": 96.6,
+   "7": 95.1,
+   "8": 163.7,
+   "9": 94.3,
+   "10": 94.8,
+   "11": 96.8
   }
  },
  "stage": "lidar",
