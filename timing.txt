@@ -1,0 +1,11 @@
+claims.sample.json 1.031039620s 12058B
+claims.count2.json .756338010s 3410B
+policies.sample.json .253806489s 13344B
+policies.count2.json .407399981s 3722B
+pa.sample.json .819554377s 4518B
+pa.sample1.json .439873328s 660262B
+hma.sample.json .195483797s 5802B
+hma.sample3.json .438408148s 660262B
+claims.page.json 1.555343923s 2632807B
+policies.inforce.json .429850357s 8838B
+policies.latest.json .221828745s 2559B

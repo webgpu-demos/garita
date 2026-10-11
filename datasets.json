@@ -1,0 +1,2 @@
+{"error":[{"name":"OData Query Parser Error","code":"OF_OQP_003","type":"$select criteria error","message":"Criteria includes field \"deprecated\" not found in the data model.  Please check to ensure the fields are valid."}]}
+#HTTP 400 0.506268s 225B
