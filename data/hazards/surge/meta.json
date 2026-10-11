@@ -1,0 +1,801 @@
+{
+ "source": {
+  "name": "NOAA National Hurricane Center (NHC) Storm Surge Unit, National Storm Surge Risk Maps: Puerto Rico SLOSH MOM inundation, high tide scenario, categories 1 to 5",
+  "urls": [
+   "https://www.nhc.noaa.gov/gis/hazardmaps/PR_SLOSH_MOM_Inundation.zip",
+   "https://www.nhc.noaa.gov/nationalsurge/",
+   "https://experience.arcgis.com/experience/203f772571cb48b1b8b50fdcc3272e2c"
+  ],
+  "version": "PR_SLOSH_MOM_Inundation_11_2018 (the page lists Puerto Rico as \"Updated 11/30/2018\"; the national product is at version 4, which did not reprocess Puerto Rico)",
+  "date": "2018-11-12 (metadata publication date); zip last modified Fri, 30 Nov 2018 14:35:39 GMT",
+  "sha256": "6edd6660c211512b06c3e2d5846ea22937c5d056092aa14a654694433833dd74",
+  "bytes": 7271715,
+  "licence": "U.S. Government work (NOAA / National Weather Service), public domain; provided \"as is\" under the disclaimer below",
+  "citation": "Zachry, B. C., W. J. Booth, J. R. Rhome, and T. M. Sharon, 2015: A National View of Storm Surge Risk and Inundation. Weather, Climate, and Society, 7(2), 109-117. DOI: http://dx.doi.org/10.1175/WCAS-D-14-00049.1"
+ },
+ "raster": {
+  "crs": "EPSG:4269",
+  "width": 31329,
+  "height": 10580,
+  "cell_deg": [
+   8.983152799999983e-05,
+   8.983152799999988e-05
+  ],
+  "origin": [
+   -67.32562373311394,
+   18.57019789422725
+  ],
+  "bounds": [
+   -67.32562373311394,
+   17.61978032798725,
+   -64.51129179240195,
+   18.57019789422725
+  ],
+  "dtype": "uint8",
+  "nodata": 255.0,
+  "compression": "lzw",
+  "values_present": {
+   "c1": {
+    "1": 318573,
+    "2": 353174,
+    "3": 230156,
+    "4": 102986,
+    "5": 44484,
+    "6": 534,
+    "7": 2,
+    "255": 330410911
+   },
+   "c2": {
+    "1": 404989,
+    "2": 407246,
+    "3": 389435,
+    "4": 234924,
+    "5": 162849,
+    "6": 73656,
+    "7": 7203,
+    "8": 69,
+    "255": 329780449
+   },
+   "c3": {
+    "1": 379750,
+    "2": 434975,
+    "3": 424296,
+    "4": 419482,
+    "5": 306041,
+    "6": 221539,
+    "7": 109948,
+    "8": 57967,
+    "9": 4530,
+    "10": 245,
+    "11": 5,
+    "255": 329102042
+   },
+   "c4": {
+    "1": 381322,
+    "2": 430823,
+    "3": 435089,
+    "4": 426542,
+    "5": 413078,
+    "6": 366200,
+    "7": 276139,
+    "8": 183066,
+    "9": 98429,
+    "10": 33218,
+    "11": 5595,
+    "12": 1770,
+    "13": 163,
+    "14": 10,
+    "255": 328409376
+   },
+   "c5": {
+    "1": 427925,
+    "2": 457503,
+    "3": 430155,
+    "4": 425077,
+    "5": 431300,
+    "6": 424259,
+    "7": 396444,
+    "8": 366038,
+    "9": 262857,
+    "10": 150371,
+    "11": 78037,
+    "12": 23426,
+    "13": 7388,
+    "14": 3312,
+    "15": 539,
+    "16": 21,
+    "255": 327576168
+   }
+  },
+  "note": "five GeoTIFFs on one grid; NoData (255) covers dry ground, open water and everything the SLOSH grid does not reach alike; classes 0 and 99 do not occur"
+ },
+ "method": "Each of the five category rasters (EPSG:4269 NAD83 geographic, cells of 0.0000898315 degrees, about 10 m; elevation model resampled by the publisher to about 9 m) is read whole. For every building centroid and every asset the value of the one cell that contains the point is taken (nearest cell; classes are never interpolated or smoothed). Point coordinates are WGS84 and are used as NAD83 without a datum shift (about 1 m, a tenth of a cell). Values: 1..21 are the publisher's one-foot bins of inundation above ground, in feet (class n = n-1 to n ft, 21 = more than 20 ft); 0 means the cell is NoData; 255 means the point lies outside the raster. Water level is the SLOSH maximum of maximums (MOM) for the category at high tide with SLOSH+SWAN wave setup, minus ground elevation; it is a near worst-case composite, not one storm. Overlay tiles: each class cell is placed in the zoom-13 Web Mercator pixel that contains its centre and the pixel keeps the deepest class; every lower zoom is the 2 x 2 maximum of the zoom above; pixels are then coloured by the NHC viewer's four depth groups (classes 1-3, 4-6, 7-9, 10 and above). QA counts: \"inundated\" = class 1..21; \"above 3 ft\" = class 4 or more (the 3 to 4 ft bin and deeper), \"above 6 ft\" = class 7 or more, \"above 9 ft\" = class 10 or more.",
+ "classes": {
+  "0": "the point is inside the raster and its cell is NoData in the source: no inundation is mapped there for this category. The source does not distinguish dry ground from open water or from ground its SLOSH grid does not reach, so this is \"nothing mapped\", not a statement that the place is safe.",
+  "1": "Less than 1 foot above ground",
+  "2": "1 to 2 feet above ground",
+  "3": "2 to 3 feet above ground",
+  "4": "3 to 4 feet above ground",
+  "5": "4 to 5 feet above ground",
+  "6": "5 to 6 feet above ground",
+  "7": "6 to 7 feet above ground",
+  "8": "7 to 8 feet above ground",
+  "9": "8 to 9 feet above ground",
+  "10": "9 to 10 feet above ground",
+  "11": "10 to 11 feet above ground",
+  "12": "11 to 12 feet above ground",
+  "13": "12 to 13 feet above ground",
+  "14": "13 to 14 feet above ground",
+  "15": "14 to 15 feet above ground",
+  "16": "15 to 16 feet above ground",
+  "17": "16 to 17 feet above ground",
+  "18": "17 to 18 feet above ground",
+  "19": "18 to 19 feet above ground",
+  "20": "19 to 20 feet above ground",
+  "21": "Greater than 20 feet above ground",
+  "99": "Levee Areas (the publisher: consult local officials for flood risk); none in the Puerto Rico files",
+  "255": "the point is outside the raster's extent: no information"
+ },
+ "disclaimer": "The data and maps in this tool illustrate the height of possible storm surge flooding under certain scenarios, and do not account for erosion, subsidence, sea-level change or future construction. Water levels are based on storm surge scenarios in the referenced SLOSH MOM tide scenario. The data, maps, and information provided should only be used as a tool for general education/awareness of the storm surge hazard at a city/community level (not for a parcel level/grid cell assessment). The SLOSH MOM storm surge risk data used to create these maps are constrained by the extent of the SLOSH grids and users should be aware that risk due to storm surge flooding could extend beyond the areas depicted in these maps. This map should not be used to replace the maps used for hurricane evacuation zones. Hurricane evacuation zones are drawn at a local and state level and consider additional information and specific criteria for a particular region in addition to the storm surge hazard. Users are urged to consult local officials for flood risk inside the hatched areas marked as leveed areas in the map. The data and maps in this tool are provided \"as is\", without warranty to their performance, merchantable state, or fitness for any particular purpose. The entire risk associated with the results and performance of these data is assumed by the user. This tool should be used strictly as a planning reference and storm surge risk awareness tool and not for navigation, permitting, legal, or regulatory purposes. Any conclusions drawn from the analysis of this information are not the responsibility of the National Weather Service, National Hurricane Center, Office for Coastal Management, or its partners.",
+ "disclaimer_source": "https://www.nhc.noaa.gov/nationalsurge/ , section \"Data Citation and Disclaimer\", verbatim (whitespace collapsed); identical to the page on this run",
+ "disclaimer_es": "(Traducci\u00f3n no oficial hecha por Garita; rige el texto original en ingl\u00e9s de NOAA.) Los datos y mapas de esta herramienta ilustran la altura de la posible inundaci\u00f3n por marejada cicl\u00f3nica bajo ciertos escenarios, y no toman en cuenta la erosi\u00f3n, el hundimiento del terreno, el cambio en el nivel del mar ni la construcci\u00f3n futura. Los niveles de agua se basan en escenarios de marejada cicl\u00f3nica del escenario de marea SLOSH MOM referido. Los datos, mapas e informaci\u00f3n provistos deben usarse \u00fanicamente como herramienta de educaci\u00f3n y concienciaci\u00f3n general sobre el peligro de marejada cicl\u00f3nica a nivel de ciudad o comunidad (no para una evaluaci\u00f3n a nivel de parcela o de celda de la cuadr\u00edcula). Los datos de riesgo de marejada cicl\u00f3nica SLOSH MOM usados para crear estos mapas est\u00e1n limitados por la extensi\u00f3n de las cuadr\u00edculas SLOSH, y el riesgo de inundaci\u00f3n por marejada cicl\u00f3nica podr\u00eda extenderse m\u00e1s all\u00e1 de las \u00e1reas representadas en estos mapas. Este mapa no debe usarse para reemplazar los mapas de zonas de desalojo por hurac\u00e1n. Las zonas de desalojo por hurac\u00e1n se trazan a nivel local y estatal y consideran informaci\u00f3n adicional y criterios espec\u00edficos de cada regi\u00f3n adem\u00e1s del peligro de marejada cicl\u00f3nica. Se exhorta a consultar a los funcionarios locales sobre el riesgo de inundaci\u00f3n dentro de las \u00e1reas rayadas marcadas como \u00e1reas protegidas por diques en el mapa. Los datos y mapas de esta herramienta se proveen \"tal cual\", sin garant\u00eda sobre su desempe\u00f1o, comerciabilidad o idoneidad para alg\u00fan prop\u00f3sito particular. Todo el riesgo asociado con los resultados y el desempe\u00f1o de estos datos lo asume el usuario. Esta herramienta debe usarse estrictamente como referencia de planificaci\u00f3n y de concienciaci\u00f3n sobre el riesgo de marejada cicl\u00f3nica, y no para navegaci\u00f3n, permisos ni fines legales o reglamentarios. Las conclusiones que se deriven del an\u00e1lisis de esta informaci\u00f3n no son responsabilidad del Servicio Nacional de Meteorolog\u00eda, el Centro Nacional de Huracanes, la Oficina para el Manejo Costero ni sus socios.",
+ "metadata_use_constraints": "The data and maps in this tool illustrate the scale of potential flooding, not the exact location, and do not account for erosion, subsidence, or future construction. Water levels are based on storm surge and high tide scenarios. The data, maps, and information provided should only be used as a tool for general education/awareness of the storm surge hazard at a city/community level (not for a parcel level/grid cell assessment). The SLOSH MOM storm surge hazard data used to create these maps are constrained by the extent of the SLOSH grids and users should be aware that risk due to storm surge flooding could extend beyond the areas depicted in these maps. The data and maps in this tool are provided \"as is\", without warranty to their performance, merchantable state, or fitness for any particular purpose. The entire risk associated with the results and performance of these data is assumed by the user. This tool should be used strictly as a planning reference and storm surge risk awareness tool and not for navigation, permitting, legal purposes, or regulatory purposes.",
+ "metadata_use_constraints_source": "the <useconst> element of PR_Category1_MOM_Inundation_HighTide.tif.xml inside the zip, verbatim (whitespace collapsed)",
+ "legend": {
+  "groups": [
+   {
+    "color": "#005ce6",
+    "label": {
+     "en": "Less than 3 feet above ground",
+     "es": "Menos de 3 pies sobre el terreno"
+    },
+    "classes": [
+     1,
+     3
+    ]
+   },
+   {
+    "color": "#ffff00",
+    "label": {
+     "en": "Greater than 3 feet above ground",
+     "es": "M\u00e1s de 3 pies sobre el terreno"
+    },
+    "classes": [
+     4,
+     6
+    ]
+   },
+   {
+    "color": "#ffaa00",
+    "label": {
+     "en": "Greater than 6 feet above ground",
+     "es": "M\u00e1s de 6 pies sobre el terreno"
+    },
+    "classes": [
+     7,
+     9
+    ]
+   },
+   {
+    "color": "#ff0000",
+    "label": {
+     "en": "Greater than 9 feet above ground",
+     "es": "M\u00e1s de 9 pies sobre el terreno"
+    },
+    "classes": [
+     10,
+     21
+    ]
+   }
+  ],
+  "source": "NHC Storm Surge Risk Maps viewer (https://experience.arcgis.com/experience/203f772571cb48b1b8b50fdcc3272e2c), legend of its tile services (https://tiles.arcgis.com/tiles/C8EMgrsFcRFL6LrL/arcgis/rest/services/Storm_Surge_HazardMaps_Category{1..5}_v3/MapServer/legend?f=json); identical to the viewer legend on this run"
+ },
+ "tiles": {
+  "index": "tiles/surge/index.json",
+  "count": 1808,
+  "bytes": 2320747,
+  "per_set": {
+   "c1": {
+    "count": 353,
+    "bytes": 321335
+   },
+   "c2": {
+    "count": 356,
+    "bytes": 396277
+   },
+   "c3": {
+    "count": 363,
+    "bytes": 465686
+   },
+   "c4": {
+    "count": 366,
+    "bytes": 532937
+   },
+   "c5": {
+    "count": 370,
+    "bytes": 604512
+   }
+  }
+ },
+ "qa": {
+  "buildings": {
+   "c1": {
+    "inundated": 7274,
+    "above_3ft": 185,
+    "above_6ft": 0,
+    "above_9ft": 0,
+    "leveed": 0,
+    "no_inundation_mapped": 1493170,
+    "outside_raster": 27,
+    "by_class": {
+     "0": 1493170,
+     "1": 3801,
+     "2": 2547,
+     "3": 741,
+     "4": 172,
+     "5": 13,
+     "255": 27
+    }
+   },
+   "c2": {
+    "inundated": 14543,
+    "above_3ft": 1608,
+    "above_6ft": 7,
+    "above_9ft": 0,
+    "leveed": 0,
+    "no_inundation_mapped": 1485901,
+    "outside_raster": 27,
+    "by_class": {
+     "0": 1485901,
+     "1": 5174,
+     "2": 4763,
+     "3": 2998,
+     "4": 1224,
+     "5": 300,
+     "6": 77,
+     "7": 7,
+     "255": 27
+    }
+   },
+   "c3": {
+    "inundated": 23237,
+    "above_3ft": 6005,
+    "above_6ft": 198,
+    "above_9ft": 0,
+    "leveed": 0,
+    "no_inundation_mapped": 1477207,
+    "outside_raster": 27,
+    "by_class": {
+     "0": 1477207,
+     "1": 5582,
+     "2": 6294,
+     "3": 5356,
+     "4": 3440,
+     "5": 1731,
+     "6": 636,
+     "7": 180,
+     "8": 18,
+     "255": 27
+    }
+   },
+   "c4": {
+    "inundated": 35297,
+    "above_3ft": 13711,
+    "above_6ft": 1914,
+    "above_9ft": 3,
+    "leveed": 0,
+    "no_inundation_mapped": 1465147,
+    "outside_raster": 27,
+    "by_class": {
+     "0": 1465147,
+     "1": 7793,
+     "2": 7270,
+     "3": 6523,
+     "4": 4955,
+     "5": 4174,
+     "6": 2668,
+     "7": 1397,
+     "8": 392,
+     "9": 122,
+     "10": 3,
+     "255": 27
+    }
+   },
+   "c5": {
+    "inundated": 55042,
+    "above_3ft": 26722,
+    "above_6ft": 7053,
+    "above_9ft": 373,
+    "leveed": 0,
+    "no_inundation_mapped": 1445402,
+    "outside_raster": 27,
+    "by_class": {
+     "0": 1445402,
+     "1": 10427,
+     "2": 9626,
+     "3": 8267,
+     "4": 7380,
+     "5": 6698,
+     "6": 5591,
+     "7": 3737,
+     "8": 2068,
+     "9": 875,
+     "10": 340,
+     "11": 32,
+     "12": 1,
+     "255": 27
+    }
+   }
+  },
+  "assets": {
+   "c1": {
+    "inundated": 13,
+    "above_3ft": 1,
+    "above_6ft": 0,
+    "above_9ft": 0,
+    "leveed": 0,
+    "no_inundation_mapped": 3974,
+    "outside_raster": 1,
+    "by_class": {
+     "0": 3974,
+     "1": 8,
+     "2": 3,
+     "3": 1,
+     "4": 1,
+     "255": 1
+    }
+   },
+   "c2": {
+    "inundated": 31,
+    "above_3ft": 2,
+    "above_6ft": 0,
+    "above_9ft": 0,
+    "leveed": 0,
+    "no_inundation_mapped": 3956,
+    "outside_raster": 1,
+    "by_class": {
+     "0": 3956,
+     "1": 15,
+     "2": 10,
+     "3": 4,
+     "4": 1,
+     "5": 1,
+     "255": 1
+    }
+   },
+   "c3": {
+    "inundated": 60,
+    "above_3ft": 9,
+    "above_6ft": 0,
+    "above_9ft": 0,
+    "leveed": 0,
+    "no_inundation_mapped": 3927,
+    "outside_raster": 1,
+    "by_class": {
+     "0": 3927,
+     "1": 18,
+     "2": 17,
+     "3": 16,
+     "4": 6,
+     "5": 2,
+     "6": 1,
+     "255": 1
+    }
+   },
+   "c4": {
+    "inundated": 99,
+    "above_3ft": 29,
+    "above_6ft": 1,
+    "above_9ft": 0,
+    "leveed": 0,
+    "no_inundation_mapped": 3888,
+    "outside_raster": 1,
+    "by_class": {
+     "0": 3888,
+     "1": 20,
+     "2": 31,
+     "3": 19,
+     "4": 13,
+     "5": 8,
+     "6": 7,
+     "7": 1,
+     "255": 1
+    }
+   },
+   "c5": {
+    "inundated": 164,
+    "above_3ft": 64,
+    "above_6ft": 11,
+    "above_9ft": 0,
+    "leveed": 0,
+    "no_inundation_mapped": 3823,
+    "outside_raster": 1,
+    "by_class": {
+     "0": 3823,
+     "1": 32,
+     "2": 30,
+     "3": 38,
+     "4": 25,
+     "5": 17,
+     "6": 11,
+     "7": 5,
+     "8": 5,
+     "9": 1,
+     "255": 1
+    }
+   }
+  },
+  "outside_raster": {
+   "buildings": 27,
+   "assets": 1,
+   "assets_ids": [
+    "airport:way/798952677"
+   ],
+   "buildings_bbox": [
+    -67.9416478760157,
+    18.06395096341782,
+    -67.48691658477873,
+    18.383469656209897
+   ]
+  },
+  "not_monotonic_buildings": 115,
+  "spots": {
+   "Cata\u00f1o, ferry terminal waterfront": {
+    "lat": 18.4437,
+    "lon": -66.1163,
+    "at_point": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "deepest_within_100m": [
+     4,
+     5,
+     7,
+     8,
+     9
+    ]
+   },
+   "Cata\u00f1o, Juana Matos": {
+    "lat": 18.433,
+    "lon": -66.133,
+    "at_point": [
+     0,
+     0,
+     0,
+     0,
+     1
+    ],
+    "deepest_within_100m": [
+     2,
+     3,
+     4,
+     7,
+     10
+    ]
+   },
+   "Lo\u00edza, Pi\u00f1ones": {
+    "lat": 18.444,
+    "lon": -65.93,
+    "at_point": [
+     1,
+     2,
+     3,
+     5,
+     6
+    ],
+    "deepest_within_100m": [
+     3,
+     4,
+     5,
+     6,
+     8
+    ]
+   },
+   "Toa Baja, Levittown": {
+    "lat": 18.447,
+    "lon": -66.181,
+    "at_point": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "deepest_within_100m": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "Carolina, Isla Verde": {
+    "lat": 18.442,
+    "lon": -66.021,
+    "at_point": [
+     0,
+     0,
+     0,
+     0,
+     1
+    ],
+    "deepest_within_100m": [
+     0,
+     0,
+     0,
+     0,
+     3
+    ]
+   },
+   "San Juan, Ocean Park": {
+    "lat": 18.453,
+    "lon": -66.05,
+    "at_point": [
+     0,
+     0,
+     0,
+     0,
+     1
+    ],
+    "deepest_within_100m": [
+     0,
+     0,
+     4,
+     6,
+     7
+    ]
+   },
+   "Old San Juan, Plaza de Armas (on its hill)": {
+    "lat": 18.4655,
+    "lon": -66.1165,
+    "at_point": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "deepest_within_100m": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "Lajas, La Parguera": {
+    "lat": 17.9735,
+    "lon": -67.046,
+    "at_point": [
+     0,
+     1,
+     1,
+     3,
+     5
+    ],
+    "deepest_within_100m": [
+     4,
+     6,
+     7,
+     9,
+     10
+    ]
+   },
+   "Ponce, Playa": {
+    "lat": 17.981,
+    "lon": -66.619,
+    "at_point": [
+     0,
+     2,
+     3,
+     5,
+     6
+    ],
+    "deepest_within_100m": [
+     1,
+     4,
+     5,
+     7,
+     8
+    ]
+   },
+   "Salinas, Playa": {
+    "lat": 17.962,
+    "lon": -66.297,
+    "at_point": [
+     1,
+     2,
+     4,
+     6,
+     7
+    ],
+    "deepest_within_100m": [
+     2,
+     3,
+     5,
+     7,
+     8
+    ]
+   },
+   "Mayag\u00fcez, waterfront": {
+    "lat": 18.201,
+    "lon": -67.15,
+    "at_point": [
+     0,
+     0,
+     0,
+     0,
+     2
+    ],
+    "deepest_within_100m": [
+     0,
+     0,
+     0,
+     0,
+     4
+    ]
+   },
+   "Fajardo, Puerto Real": {
+    "lat": 18.335,
+    "lon": -65.63,
+    "at_point": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "deepest_within_100m": [
+     4,
+     6,
+     7,
+     8,
+     9
+    ]
+   },
+   "Vieques, Isabel Segunda": {
+    "lat": 18.149,
+    "lon": -65.443,
+    "at_point": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "deepest_within_100m": [
+     0,
+     0,
+     1,
+     3,
+     4
+    ]
+   },
+   "Vieques, Esperanza": {
+    "lat": 18.095,
+    "lon": -65.471,
+    "at_point": [
+     0,
+     0,
+     0,
+     0,
+     1
+    ],
+    "deepest_within_100m": [
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
+   },
+   "Culebra, Dewey": {
+    "lat": 18.303,
+    "lon": -65.301,
+    "at_point": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "deepest_within_100m": [
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
+   },
+   "Caguas, inland (expected: no inundation)": {
+    "lat": 18.234,
+    "lon": -66.035,
+    "at_point": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "deepest_within_100m": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "Isla de Mona (expected: outside the raster)": {
+    "lat": 18.086,
+    "lon": -67.89,
+    "at_point": [
+     255,
+     255,
+     255,
+     255,
+     255
+    ],
+    "deepest_within_100m": [
+     255,
+     255,
+     255,
+     255,
+     255
+    ]
+   }
+  },
+  "island_municipalities": {
+   "Vieques": {
+    "wet_cells": [
+     65436,
+     80519,
+     93582,
+     107493,
+     119712
+    ],
+    "buildings_inundated": [
+     7,
+     13,
+     33,
+     64,
+     95
+    ],
+    "buildings": 6449
+   },
+   "Culebra": {
+    "wet_cells": [
+     2541,
+     3245,
+     3969,
+     4632,
+     5338
+    ],
+    "buildings_inundated": [
+     18,
+     23,
+     26,
+     30,
+     39
+    ],
+    "buildings": 1836
+   }
+  },
+  "spots_note": "values per category [c1..c5]; at_point = the sample exactly as a building there would get it; deepest_within_100m = the deepest class in the 21 x 21 cells around it (0 = none), given because a named place is not a single cell"
+ },
+ "generated": "2026-10-11T02:40:46Z",
+ "stage": "surge",
+ "buildings": {
+  "file": "buildings.bin",
+  "dtype": "u1",
+  "shape": [
+   1500471,
+   5
+  ],
+  "order": "tiles/bld/index.json order, then tile order",
+  "bld_generated": "2026-10-10T05:07:03.000Z"
+ },
+ "assets": 3988
+}
