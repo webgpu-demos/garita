@@ -1,0 +1,55 @@
+name: slide
+# Hazard stage: USGS landslide susceptibility (Open-File Report 2020-1022) at every building and asset, plus overlay
+# tiles. Owns on gh-pages: data/hazards/slide/**, tiles/slide/**. See pipeline/hazards/README.md.
+on:
+  push:
+    branches: [pipe-slide]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: slide
+  cancel-in-progress: false
+jobs:
+  slide:
+    # Free on a public repository; private repositories are billed by the minute. Never run there.
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Site (sparse checkout of gh-pages)
+        run: |
+          git clone --quiet --filter=blob:none --no-checkout --single-branch --branch gh-pages --depth 1 "https://github.com/${GITHUB_REPOSITORY}.git" site
+          cd site
+          git sparse-checkout set --no-cone '/tiles/bld/' '/data/seed/' '/data/osm/' '/data/hazards/slide/'
+          git checkout --quiet gh-pages
+          du -sh tiles/bld data/seed data/osm || true   # a missing path is reported by the script, in the published log
+      - name: Install
+        run: python3 -m pip install -q rasterio numpy pillow
+      - name: Build
+        run: |
+          set +e
+          timeout 22m python3 pipeline/hazards/slide.py --site "$PWD/site" --out "$PWD/out" --work "$PWD/work"
+          rc=$?
+          mkdir -p out/data/hazards/slide
+          echo "build exit code $rc (run ${GITHUB_RUN_ID}, commit ${GITHUB_SHA::7})" | tee -a out/data/hazards/slide/log.txt
+          du -sh out/tiles/slide out/data/hazards/slide || true
+          exit $rc
+      - name: Publish to gh-pages
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          D=out/data/hazards/slide
+          mkdir -p "$D"
+          [ -f "$D/log.txt" ] || echo "no log was written (run ${GITHUB_RUN_ID})" > "$D/log.txt"
+          if [ ! -f "$D/meta.json" ] || [ ! -f out/tiles/slide/index.json ]; then
+            # failed build: keep what is already published and replace only the log
+            cp "$D/log.txt" log.keep
+            rm -rf out/tiles/slide "$D"; mkdir -p "$D"
+            if [ -d site/data/hazards/slide ]; then cp -r site/data/hazards/slide/. "$D/"; fi
+            mv log.keep "$D/log.txt"
+          fi
+          bash pipeline/hazards/publish.sh slide "slide: USGS OFR 2020-1022 landslide susceptibility (${GITHUB_SHA::7}, run ${GITHUB_RUN_ID})"
