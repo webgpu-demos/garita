@@ -1,0 +1,10 @@
+{ "shots": [
+ { "id": "nl-maria-before", "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&overlay=nightlights&t=2017-09-15T06:00:00Z&cam=-66.45,18.2,330000,0,55", "w": 1280, "h": 800, "wait": 7000 },
+ { "id": "nl-maria-after", "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&overlay=nightlights&t=2017-09-25T06:00:00Z&cam=-66.45,18.2,330000,0,55", "w": 1280, "h": 800, "wait": 7000 },
+ { "id": "nl-fiona-es", "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&overlay=nightlights&lang=es&t=2022-09-20T06:00:00Z&cam=-66.45,18.2,330000,0,55", "w": 1280, "h": 800, "wait": 7000 },
+ { "id": "nl-replay", "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&overlay=nightlights&t=2017-09-25T06:00:00Z&cam=-66.45,18.2,420000,0,58", "w": 1280, "h": 800, "wait": 9000, "eval": "(()=>{const S=__garita.state;S.replayStormId.value='AL152017';S.rightPanel.value='replay';S.playbackRate.value=0;})()" },
+ { "id": "slide-island", "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&nofeeds=1&overlay=slide&cam=-66.45,18.2,120000,0,60", "w": 1280, "h": 800, "wait": 5000 },
+ { "id": "slide-close-es", "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&nofeeds=1&overlay=slide&lang=es&cam=-66.70,18.27,14000,0,55", "w": 1280, "h": 800, "wait": 5000 },
+ { "id": "slide-narrow", "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&nofeeds=1&overlay=slide&cam=-66.70,18.27,14000,0,55", "w": 420, "h": 800, "wait": 5000 },
+ { "id": "surge-c3", "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&nofeeds=1&overlay=surge&surge=3&cam=-66.14,18.44,12000,180,60", "w": 1280, "h": 800, "wait": 5000 }
+] }
