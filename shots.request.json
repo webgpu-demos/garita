@@ -1,0 +1,8 @@
+{ "shots": [
+ { "id": "nl-live", "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&overlay=nightlights&cam=-66.45,18.2,330000,0,55", "w": 1280, "h": 800, "wait": 6000 },
+ { "id": "nl-maria-before", "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&overlay=nightlights&t=2017-09-15T06:00:00Z&cam=-66.45,18.2,330000,0,55", "w": 1280, "h": 800, "wait": 6000 },
+ { "id": "nl-maria-after", "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&overlay=nightlights&t=2017-09-25T06:00:00Z&cam=-66.45,18.2,330000,0,55", "w": 1280, "h": 800, "wait": 6000 },
+ { "id": "nl-baseline-es", "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&overlay=nightlights&nl=baseline&lang=es&t=2017-09-25T06:00:00Z&cam=-66.45,18.2,330000,0,55", "w": 1280, "h": 800, "wait": 6000 },
+ { "id": "nl-nodate", "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&overlay=nightlights&t=2011-08-22T06:00:00Z&cam=-66.45,18.2,330000,0,55", "w": 1280, "h": 800, "wait": 4000 },
+ { "id": "surge-unpublished", "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&nofeeds=1&overlay=surge&surge=4&cam=-66.14,18.44,12000,180,60", "w": 1280, "h": 800, "wait": 3000 }
+] }
