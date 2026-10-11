@@ -1,0 +1,4 @@
+{ "shots": [
+ { "id": "nl-maria-before-day", "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&overlay=nightlights&t=2017-09-15T16:00:00Z&cam=-66.45,18.2,330000,0,55", "w": 1280, "h": 800, "wait": 16000 },
+ { "id": "nl-maria-after-day", "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&overlay=nightlights&t=2017-09-25T16:00:00Z&cam=-66.45,18.2,330000,0,55", "w": 1280, "h": 800, "wait": 16000 }
+] }
