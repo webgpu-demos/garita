@@ -11,7 +11,7 @@
   ],
   "file": "landslide_susceptibility_raster/landslide_susceptibility_raster.tif",
   "version": "data release published 2021-08-17; report published 2020",
-  "retrieved": "2026-10-11T02:41:37Z",
+  "retrieved": "2026-10-11T04:46:07Z",
   "licence": "U.S. Government work in the public domain. Metadata: access constraints \"None.  Please see 'Distribution Info' for details.\"; use constraints \"none\".",
   "citation": "Hughes, K.S., and Schulz, W.H., 2020, Map depicting susceptibility to landslides triggered by intense rainfall, Puerto Rico: U.S. Geological Survey Open-File Report 2020\u20131022, 91 p., 1 plate, scale 1:150,000, https://doi.org/10.3133/ofr20201022.",
   "citation_data": "Hughes, K.S., and Schulz, W.H., 2021, Geographic Information System Layer of a Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico: U.S. Geological Survey data release, https://doi.org/10.5066/P990ZP4C.",
@@ -102,30 +102,30 @@
   ]
  },
  "qa": {
-  "buildings_total": 1500471,
+  "buildings_total": 1737084,
   "buildings_by_class": {
-   "0": 9177,
-   "1": 1166508,
-   "2": 280064,
-   "3": 39670,
-   "4": 4801,
-   "5": 251
+   "0": 11045,
+   "1": 1318543,
+   "2": 343306,
+   "3": 55188,
+   "4": 8389,
+   "5": 613
   },
   "buildings_pct_by_class": {
-   "0": 0.61,
-   "1": 77.74,
-   "2": 18.67,
-   "3": 2.64,
-   "4": 0.32,
-   "5": 0.02
+   "0": 0.64,
+   "1": 75.91,
+   "2": 19.76,
+   "3": 3.18,
+   "4": 0.48,
+   "5": 0.04
   },
-  "buildings_pct_high_or_above": 2.98,
+  "buildings_pct_high_or_above": 3.7,
   "buildings_no_data": {
-   "total": 9177,
-   "outside_raster_extent": 8327,
-   "inside_extent_cell_without_data": 850,
-   "east_of_65.58W (Vieques, Culebra and the eastern cays, which the map does not cover)": 8300,
-   "west_of_67.28W (Mona, Desecheo)": 27
+   "total": 11045,
+   "outside_raster_extent": 9923,
+   "inside_extent_cell_without_data": 1122,
+   "east_of_65.58W (Vieques, Culebra and the eastern cays, which the map does not cover)": 9883,
+   "west_of_67.28W (Mona, Desecheo)": 33
   },
   "assets_total": 3988,
   "assets_by_class": {
@@ -249,22 +249,22 @@
   },
   "highest_class_within_25_m": {
    "buildings_by_class": {
-    "0": 9177,
-    "1": 753821,
-    "2": 355527,
-    "3": 227394,
-    "4": 130243,
-    "5": 24309
+    "0": 11045,
+    "1": 838015,
+    "2": 416114,
+    "3": 277891,
+    "4": 162855,
+    "5": 31164
    },
    "buildings_pct_by_class": {
-    "0": 0.61,
-    "1": 50.24,
-    "2": 23.69,
-    "3": 15.15,
-    "4": 8.68,
-    "5": 1.62
+    "0": 0.64,
+    "1": 48.24,
+    "2": 23.95,
+    "3": 16.0,
+    "4": 9.38,
+    "5": 1.79
    },
-   "buildings_pct_high_or_above": 25.46,
+   "buildings_pct_high_or_above": 27.17,
    "assets_by_class": {
     "0": 52,
     "1": 2712,
@@ -577,11 +577,11 @@
     "5": 1.0
    }
   },
-  "seconds": 72
+  "seconds": 61
  },
- "generated": "2026-10-11T02:41:37Z",
- "commit": "263e23f",
- "run": "38105959375",
+ "generated": "2026-10-11T04:46:07Z",
+ "commit": "4267c9c",
+ "run": "38112609780",
  "extras": {
   "buildings_max25m.bin": "uint8 per building, canonical order. NOT a published value: the highest class among the 5 m cells whose centre is within 25 m (5 cells) of the building's own cell; 0 where the building itself has no data. Offered because a building's own cell is often a graded pad that reads Low while the slope cut beside it does not; the 25 m radius is our choice, not the publisher's. buildings.bin remains the class at the point.",
   "assets_max25m.json": "the same for assets: { \"<type>:<key>\": class }",
@@ -592,10 +592,10 @@
   "file": "buildings.bin",
   "dtype": "u1",
   "shape": [
-   1500471
+   1737084
   ],
   "order": "tiles/bld/index.json order, then tile order",
-  "bld_generated": "2026-10-10T05:07:03.000Z"
+  "bld_generated": "2026-10-11T04:42:03.587Z"
  },
  "assets": 3988
 }
