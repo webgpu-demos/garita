@@ -1,6 +1,6 @@
 // Scenario: who is exposed as the sea rises. A water level (S.scenario) and a bathtub screen of what sits at or
 // below it, every count read from the store. Building counts come from the municipio `elev_hist` histograms and are
-// never interpolated inside a bin: the level is snapped DOWN to a 0.25 m bin edge and the edge is stated.
+// never interpolated inside a bin: the level is snapped DOWN to a 0.1 m step (the lidar histogram's) and the step is stated.
 import { useEffect, useState } from 'preact/hooks';
 import type { TwinStore, ObjectSummary } from '../../ontology/types';
 import * as S from '../../core/state';
@@ -16,13 +16,21 @@ const DECADES = [2040, 2050, 2070, 2100];
 const ASSETS = ['public_housing', 'shelter', 'assisted_housing', 'hospital', 'school', 'power_plant', 'substation', 'water_plant'];
 const INCLUSIVE = ['0.5', '1', '1.5', '2', '3', '5'];
 
-/** Buildings for one municipio at a bin edge. Inclusive (<=) where the pipeline published it, otherwise strictly below. */
+/** Buildings for one municipio at or below a level. With the lidar histogram (bin i = buildings at i/10 m) the count
+ *  is inclusive at every step; with an older 0.25 m histogram it is inclusive only where the pipeline published it. */
 function countAt(hist: any, edge: number): { n: number; inclusive: boolean } | null {
   if (!hist || !Array.isArray(hist.bins)) return null;
+  const bin = hist.bin_m || 0.25;
+  let n = +hist.below_0 || 0;
+  if (hist.inclusive) {
+    const k = Math.min(hist.bins.length - 1, Math.round(edge / bin));
+    for (let i = 0; i <= k; i++) n += +hist.bins[i] || 0;
+    if (edge >= hist.bins.length * bin) n += +hist.above_10 || 0;
+    return { n, inclusive: true };
+  }
   const key = INCLUSIVE.find((k) => Math.abs(+k - edge) < 1e-6);
   if (key && hist.at_or_below && hist.at_or_below[key] != null) return { n: +hist.at_or_below[key], inclusive: true };
-  const bin = hist.bin_m || 0.25, k = Math.min(hist.bins.length, Math.round(edge / bin));
-  let n = +hist.below_0 || 0;
+  const k = Math.min(hist.bins.length, Math.round(edge / bin));
   for (let i = 0; i < k; i++) n += +hist.bins[i] || 0;
   return { n, inclusive: false };
 }
@@ -52,7 +60,7 @@ export function ScenarioPanel({ store }: { store: TwinStore }) {
   const sc = S.scenario.value;
   const tide = S.weather.value.source === 'live' ? S.weather.value.tideM : null;
   const level = sc.seaLevelM + (sc.followTide && tide != null ? tide : 0);
-  const edge = Math.floor(level / 0.25 + 1e-6) * 0.25;
+  const edge = Math.floor(level / 0.1 + 1e-6) * 0.1;   // the lidar histogram's step
   const [curves, setCurves] = useState<Curves | null>(null);
   const [open, setOpen] = useState<string | null>(null);
   const [method, setMethod] = useState(false);

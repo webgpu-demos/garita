@@ -1,13 +1,12 @@
 // Derived seed batches, computed from files already published on the site (no network):
 //   50  OSM facilities as objects                         (source: osm)
-//   51  elevation, flood zone, coast distance of facilities (source: garita_derived)
+//   51  lidar elevation, flood zone, surge, landslide class, coast distance of facilities (source: garita_derived)
 //   52  building exposure per municipio                    (source: garita_derived)
-//   53  flood zone + ground elevation of shelters and housing; sensor -> municipio; nearest-sensor links
+//   53  the same for shelters and housing; sensor -> municipio; nearest-sensor links
 // Run: node pipeline/derive.mjs <siteDir>
 import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { PNG } from 'pngjs';
-import { lonToTileX, latToTileY, haversineKm, terrariumToMetres } from '../src/core/geo.ts';
+import { haversineKm } from '../src/core/geo.ts';
 
 const site = process.argv[2] || '/home/claude/site';
 const J = (p) => JSON.parse(readFileSync(join(site, p), 'utf8'));
@@ -32,22 +31,22 @@ const zoneKeys = Object.keys(nfhl[0].p); console.log('nfhl props', zoneKeys, nfh
 const classOf = (p) => p.class ?? p.flood_class ?? p.cls ?? 0;
 const zoneAt = (lon, lat) => { let best = null; for (const i of grid.get(Math.floor(lon / CELL) + ',' + Math.floor(lat / CELL)) ?? []) { const z = nfhl[i]; if (lon >= z.b[0] && lon <= z.b[2] && lat >= z.b[1] && lat <= z.b[3] && geomHas(z.g, lon, lat) && (!best || classOf(z.p) > classOf(best.p))) best = z; } return best ? { zone: best.p.FLD_ZONE ?? best.p.zone ?? '', cls: classOf(best.p) } : { zone: 'X', cls: 0 }; };
 
-// ---------- ground elevation from the deepest mirrored elevation tile ----------
-const demIndex = J('tiles/index.json').dem;
-const demHas = {}; for (const z of Object.keys(demIndex)) demHas[z] = new Set(demIndex[z].map(([x, y]) => x + '/' + y));
-const tileCache = new Map();
-const tile = (z, x, y) => { const k = `${z}/${x}/${y}`; if (!tileCache.has(k)) { if (tileCache.size > 300) tileCache.clear(); tileCache.set(k, PNG.sync.read(readFileSync(join(site, 'tiles/dem', `${k}.png`)))); } return tileCache.get(k); };
-const elevAt = (lon, lat) => {
-  for (const z of [15, 14, 13, 12, 11, 10]) {
-    const fx = lonToTileX(lon, z), fy = latToTileY(lat, z), x = Math.floor(fx), y = Math.floor(fy);
-    if (!demHas[z]?.has(x + '/' + y)) continue;
-    const png = tile(z, x, y), px = Math.min(254.999, Math.max(0, (fx - x) * 256 - 0.5)), py = Math.min(254.999, Math.max(0, (fy - y) * 256 - 0.5));
-    const x0 = Math.floor(px), y0 = Math.floor(py), tx = px - x0, ty = py - y0;
-    const h = (i, j) => { const o = (j * 256 + i) * 4; return terrariumToMetres(png.data[o], png.data[o + 1], png.data[o + 2]); };
-    const v = (h(x0, y0) * (1 - tx) + h(x0 + 1, y0) * tx) * (1 - ty) + (h(x0, y0 + 1) * (1 - tx) + h(x0 + 1, y0 + 1) * tx) * ty;
-    return { elev: Math.round(v * 10) / 10, z };
+// ---------- hazards sampled on the runner (pipeline/hazards): lidar ground elevation, storm surge, landslide ----------
+const lidarAt = J('data/hazards/lidar/assets.json'), surgeAt = J('data/hazards/surge/assets.json'), slideAt = J('data/hazards/slide/assets.json'), slide25At = J('data/hazards/slide/assets_max25m.json');
+const SLIDE = [null, 'Low / Baja', 'Moderate / Moderada', 'High / Alta', 'Very high / Muy alta', 'Extremely high / Extremadamente alta'];
+const ftBin = (c) => (c >= 21 ? 'over 20 ft' : `${c - 1}-${c} ft`);
+/** Ground elevation from the 1 m lidar DEM (metres, PRVD02), or null where the lidar has no value at the point. */
+const groundAt = (id) => (typeof lidarAt[id] === 'number' ? Math.round(lidarAt[id] * 10) / 10 : null);
+/** Surge and landslide values at a point. Surge: only what the map shows; "nothing mapped" is left out, not written as safe. */
+const hazardProps = (id) => {
+  const p = {}, s = surgeAt[id];
+  if (Array.isArray(s) && !s.includes(255)) {
+    const first = s.findIndex((c) => c >= 1 && c <= 21);
+    if (first >= 0) { p.surge_category = first + 1; p.surge_by_category = s.map((c, i) => `Cat ${i + 1}: ${c >= 1 && c <= 21 ? ftBin(c) : 'none mapped'}`).join('; '); }
   }
-  return null;
+  if (SLIDE[slideAt[id]]) p.slide_class = SLIDE[slideAt[id]];
+  if (SLIDE[slide25At[id]]) p.slide_class_25m = SLIDE[slide25At[id]];
+  return p;
 };
 
 // ---------- 50 / 51: OSM facilities ----------
@@ -72,23 +71,28 @@ for (const f of fac.facilities) {
   const name = f.name || (f.type === 'substation' ? `Unnamed substation${props.voltage_kv ? ', ' + props.voltage_kv + ' kV' : ''}` : `Unnamed power plant${props.fuel ? ', ' + props.fuel : ''}`);
   facObjs.push({ type: f.type, key: f.osm, name, lon: f.lon, lat: f.lat, identities: [['osm', f.osm]], props, text: [t['name:en'], t['name:es'], addr, props.municipio_name].filter(Boolean).join(' ') });
   if (f.municipio) facLinks.push({ src: `${f.type}:${f.osm}`, type: 'located_in', dst: `municipio:${f.municipio}` });
-  const d = {};
-  if (f.elev_m != null) d.ground_elev_m = f.elev_m;
+  const d = hazardProps(`${f.type}:${f.osm}`), ge = groundAt(`${f.type}:${f.osm}`);
+  if (ge != null) d.ground_elev_m = ge;
   if (f.flood_zone) d.flood_zone = String(f.flood_zone);
   if (f.coast_dist_m != null) d.coast_dist_m = f.coast_dist_m;
   if (Object.keys(d).length) facDerived.push({ type: f.type, key: f.osm, props: d });
 }
 out('50-osm-facilities.batch.json', { source: 'osm', fetchedAt: now, objects: facObjs, links: facLinks, note: 'Facilities from the Geofabrik Puerto Rico extract of OpenStreetMap; areas are placed at their centroid. Only named ones are kept, except substations and power plants, which are kept without a name and labelled "Unnamed".' });
-out('51-facility-exposure.batch.json', { source: 'garita_derived', fetchedAt: now, objects: facDerived, note: 'Ground elevation: 10 m USGS 3DEP via Terrain Tiles zoom 14, sampled at the point. Flood zone: FEMA NFHL zone containing the point. Distance to the OSM coastline. Screening values for one point per facility.' });
+out('51-facility-exposure.batch.json', { source: 'garita_derived', fetchedAt: now, objects: facDerived, note: 'Ground elevation: USGS 3DEP 1 m lidar DEM, median of the cells within 2 m of the point, metres above PRVD02. Flood zone: FEMA NFHL zone containing the point. Storm surge: NOAA NHC storm surge risk map class at the point, by hurricane category (awareness only; the publisher says not for parcel-level assessment). Landslide: USGS OFR 2020-1022 susceptibility class at the point and the highest within 25 m. Distance to the OSM coastline. Screening values for one point per facility.' });
 
 // ---------- 52: building exposure per municipio ----------
 const exp = J('data/derived/exposure.json');
 const expObjs = Object.entries(exp.municipios).map(([geoid, m]) => ({ type: 'municipio', key: geoid, props: {
   buildings: m.buildings, buildings_sfha: m.buildings_sfha, buildings_le_1m: m.at_or_below['1'], buildings_le_2m: m.at_or_below['2'], buildings_le_3m: m.at_or_below['3'],
-  elev_hist: JSON.stringify({ bin_m: 0.25, from_m: 0, below_0: m.below_0, bins: m.elev_hist, above_10: m.above_10, at_or_below: m.at_or_below }),
+  // bin i = buildings whose lidar ground elevation rounds to i/10 m: "at or below X" = below_0 + bins 0..10X, inclusive
+  elev_hist: JSON.stringify({ bin_m: exp.bins.size_m, inclusive: true, from_m: 0, below_0: m.below_0, bins: m.elev_hist, above_10: m.above_10, unknown: m.elev_unknown, at_or_below: m.at_or_below }),
   zone_counts: JSON.stringify(m.zone_counts),
+  buildings_surge_cat1: m.surge.c1.any, buildings_surge_cat2: m.surge.c2.any, buildings_surge_cat3: m.surge.c3.any, buildings_surge_cat4: m.surge.c4.any, buildings_surge_cat5: m.surge.c5.any,
+  surge_counts: JSON.stringify({ ...m.surge, outside_map: m.surge_outside }),
+  buildings_slide_high: m.slide.high_or_above, buildings_slide_high_25m: m.slide.high_or_above_25m,
+  slide_counts: JSON.stringify(m.slide),
 } }));
-out('52-building-exposure.batch.json', { source: 'garita_derived', fetchedAt: now, objects: expObjs, note: String(exp.method).slice(0, 900) });
+out('52-building-exposure.batch.json', { source: 'garita_derived', fetchedAt: now, objects: expObjs, note: 'Buildings (OpenStreetMap footprints) per municipio. Ground elevation: USGS 3DEP 1 m lidar DEM at each building (median within 2 m of the centroid), metres above PRVD02, counted in 0.1 m steps; a bathtub screen. Flood zone: FEMA NFHL at the centroid. Storm surge: buildings in a cell with mapped inundation on the NOAA NHC storm surge risk map, by hurricane category (municipio-level screening; the publisher says not for parcel-level assessment). Landslide: buildings by USGS OFR 2020-1022 susceptibility class at the centroid, and by the highest class within 25 m. Full method in data/derived/exposure.json.' });
 
 // ---------- 53: seeded assets and sensors ----------
 const seeded = [];
@@ -96,23 +100,23 @@ for (const f of readdirSync(join(site, 'data/seed')).filter((n) => /^[0-4]\d-.*\
 const assets = seeded.filter((o) => ['shelter', 'public_housing', 'assisted_housing'].includes(o.type));
 const sensors = seeded.filter((o) => ['stream_gauge', 'reservoir', 'tide_station', 'weather_station', 'buoy'].includes(o.type));
 const dObjs = [], dLinks = [];
-let zUsed = {};
 // A HUD record whose address is only a city and ZIP code is geocoded to the ZIP code's centre, which can be in the
 // sea: its point is not the property. Nothing is derived from such a point, nor from one that is off land or below
 // sea level; the record says why.
 const pv = (v) => (v && typeof v === 'object' ? v.value : v);
 let approx = 0;
 for (const a of assets) {
-  const props = {}, e = elevAt(a.lon, a.lat), z = zoneAt(a.lon, a.lat);
+  const id = `${a.type}:${a.key}`, props = {}, e = groundAt(id), z = zoneAt(a.lon, a.lat);
   const housing = a.type !== 'shelter', zipOnly = housing && /^[^,\d]*,\s*\d{5}(-\d{4})?$/.test(String(pv(a.props?.address) ?? ''));
-  const offLand = housing && (!muniAt(a.lon, a.lat) || (e && e.elev <= 0));
+  const offLand = housing && (!muniAt(a.lon, a.lat) || (e != null && e <= 0));
   if (zipOnly || offLand) {
     approx++;
-    props.location_basis = zipOnly ? 'Approximate: the address is a city and ZIP code only, so the point is the ZIP code area, not the property. Flood zone and ground elevation are not derived.' : 'Doubtful: the point is in water, or the elevation model puts it at or below sea level. Flood zone and ground elevation are not derived.';
+    props.location_basis = zipOnly ? 'Approximate: the address is a city and ZIP code only, so the point is the ZIP code area, not the property. Flood zone, ground elevation, storm surge and landslide class are not derived.' : 'Doubtful: the point is in water, or the lidar puts the ground there at or below zero. Flood zone, ground elevation, storm surge and landslide class are not derived.';
     dObjs.push({ type: a.type, key: a.key, props });
     continue;
   }
-  if (e) { props.ground_elev_m = { value: e.elev, confidence: e.z >= 14 ? 0.8 : 0.5 }; zUsed[e.z] = (zUsed[e.z] ?? 0) + 1; }
+  if (e != null) props.ground_elev_m = e;
+  Object.assign(props, hazardProps(id));
   props.flood_zone = z.zone || 'X';
   dObjs.push({ type: a.type, key: a.key, props });
 }
@@ -124,5 +128,4 @@ for (const a of [...assets, ...facObjs.filter((f) => f.type === 'hospital')]) {
 }
 for (const s of sensors) { const m = muniAt(s.lon, s.lat); if (m) dLinks.push({ src: `${s.type}:${s.key}`, type: 'located_in', dst: `municipio:${m}` }); }
 for (const a of assets) { const m = muniAt(a.lon, a.lat); if (m) dLinks.push({ src: `${a.type}:${a.key}`, type: 'located_in', dst: `municipio:${m}` }); }
-console.log('elevation tile zooms used for assets', zUsed);
-out('53-asset-exposure.batch.json', { source: 'garita_derived', fetchedAt: now, objects: dObjs, links: dLinks, note: 'Flood zone: FEMA NFHL zone containing the point. Ground elevation: deepest mirrored Terrain Tiles zoom at the point (zoom 14-15 in the San Juan metro, about 5-10 m; zoom 12 elsewhere, about 38 m), confidence lowered for zoom 12. Nearest stream gauge within 15 km and tide station within 40 km, straight-line. Sensor and asset municipio by point-in-polygon on Census boundaries.' });
+out('53-asset-exposure.batch.json', { source: 'garita_derived', fetchedAt: now, objects: dObjs, links: dLinks, note: 'Flood zone: FEMA NFHL zone containing the point. Ground elevation: USGS 3DEP 1 m lidar DEM, median of the cells within 2 m of the point, metres above PRVD02. Storm surge: NOAA NHC storm surge risk map class at the point, by hurricane category (awareness only; the publisher says not for parcel-level assessment). Landslide: USGS OFR 2020-1022 susceptibility class at the point and the highest within 25 m. Nearest stream gauge within 15 km and tide station within 40 km, straight-line. Sensor and asset municipio by point-in-polygon on Census boundaries.' });

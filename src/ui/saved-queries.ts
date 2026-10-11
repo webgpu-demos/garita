@@ -19,7 +19,7 @@ LEFT JOIN prop_best z ON z.object_id = o.id AND z.key = 'flood_zone'
 WHERE o.type = 'public_housing' AND o.expired = 0
 GROUP BY m.value ORDER BY units DESC` },
   { id: 'shelters_3m', title: ['Shelters with ground at or below 3 m', 'Refugios con terreno en o bajo 3 m'], sql:
-`-- Listed shelters whose ground elevation (one point; the 10 m DEM is sampled at about 38 m outside the San Juan metro; shelters without a location are not included) is at or below 3 m
+`-- Listed shelters whose ground elevation (1 m lidar at the shelter's point; shelters without a location are not included) is at or below 3 m
 SELECT o.id, o.name, m.value AS municipio, e.value AS ground_elev_m, z.value AS flood_zone, c.value AS capacity
 FROM object o
 JOIN prop_best e ON e.object_id = o.id AND e.key = 'ground_elev_m'
@@ -28,6 +28,35 @@ LEFT JOIN prop_best z ON z.object_id = o.id AND z.key = 'flood_zone'
 LEFT JOIN prop_best c ON c.object_id = o.id AND c.key = 'capacity'
 WHERE o.type = 'shelter' AND o.expired = 0 AND e.value <= 3
 ORDER BY e.value, o.name` },
+  { id: 'surge_assets', title: ['Shelters, housing and hospitals inside the mapped storm surge area, by hurricane category', 'Refugios, vivienda y hospitales dentro del área de marejada cartografiada, por categoría de huracán'], sql:
+`-- NOAA storm surge risk map (2018, high tide) at each asset's point. Awareness only: NOAA says the map is not for
+-- parcel-level assessment and does not replace evacuation zones. "Lowest category" = the weakest hurricane whose map reaches the point.
+SELECT o.type, o.name, m.value AS municipio, c.value AS lowest_category, d.value AS mapped_depth_by_category, e.value AS ground_elev_m
+FROM object o
+JOIN prop_best c ON c.object_id = o.id AND c.key = 'surge_category'
+LEFT JOIN prop_best d ON d.object_id = o.id AND d.key = 'surge_by_category'
+LEFT JOIN prop_best e ON e.object_id = o.id AND e.key = 'ground_elev_m'
+LEFT JOIN prop_best m ON m.object_id = o.id AND m.key = 'municipio_name'
+WHERE o.type IN ('shelter', 'public_housing', 'assisted_housing', 'hospital') AND o.expired = 0
+ORDER BY c.value, o.type, o.name` },
+  { id: 'hazards_by_muni', title: ['Municipios: buildings exposed to surge, flood zone and landslide', 'Municipios: edificios expuestos a marejada, zona inundable y deslizamientos'], sql:
+`-- Building footprints (OpenStreetMap) per municipio against three published hazard maps; screening, not an inventory
+SELECT o.name AS municipio, b.value AS buildings,
+       s1.value AS surge_cat1, s3.value AS surge_cat3, s5.value AS surge_cat5,
+       f.value AS fema_1pct_zone, l1.value AS at_or_below_1m_lidar,
+       h.value AS landslide_high_or_above, h25.value AS within_25m_of_high_or_above,
+       ROUND(100.0 * h25.value / b.value, 1) AS pct_within_25m
+FROM object o
+JOIN prop_best b ON b.object_id = o.id AND b.key = 'buildings'
+LEFT JOIN prop_best s1 ON s1.object_id = o.id AND s1.key = 'buildings_surge_cat1'
+LEFT JOIN prop_best s3 ON s3.object_id = o.id AND s3.key = 'buildings_surge_cat3'
+LEFT JOIN prop_best s5 ON s5.object_id = o.id AND s5.key = 'buildings_surge_cat5'
+LEFT JOIN prop_best f ON f.object_id = o.id AND f.key = 'buildings_sfha'
+LEFT JOIN prop_best l1 ON l1.object_id = o.id AND l1.key = 'buildings_le_1m'
+LEFT JOIN prop_best h ON h.object_id = o.id AND h.key = 'buildings_slide_high'
+LEFT JOIN prop_best h25 ON h25.object_id = o.id AND h25.key = 'buildings_slide_high_25m'
+WHERE o.type = 'municipio' AND o.expired = 0
+ORDER BY s3.value DESC` },
   { id: 'sfha_per_1000', title: ['Municipios by buildings in the 1% flood zone per 1,000 buildings', 'Municipios por edificios en la zona 1% por cada 1,000 edificios'], sql:
 `-- Buildings whose centroid is in a FEMA special flood hazard area (A or V zones), per 1,000 buildings
 SELECT o.id, o.name AS municipio, b.value AS buildings, s.value AS buildings_in_flood_zone,

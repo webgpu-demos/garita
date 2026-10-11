@@ -371,6 +371,21 @@ export const createOverlays: LayerFactory = ({ world, store }) => {
       note: missingSet ? tr(`The published index has no tile set for category ${cat}.`, `El índice publicado no tiene teselas para la categoría ${cat}.`) : pick(idx.note),
       source: src || undefined,
     };
+    // What the store counted against this map (municipio totals from the pipeline), stated with the map.
+    try {
+      const keys = stage === 'surge' ? [`buildings_surge_cat${cat}`] : ['buildings_slide_high', 'buildings_slide_high_25m'];
+      const rows = await store.listObjects('municipio', { props: keys, limit: 100 });
+      if (my !== gen) return;
+      const sum = (k: string) => rows.reduce((a, r) => a + (typeof r.props?.[k] === 'number' ? (r.props[k] as number) : 0), 0);
+      const has = (k: string) => rows.filter((r) => typeof r.props?.[k] === 'number' && (r.props[k] as number) > 0).length;
+      const n = (v: number) => v.toLocaleString(lang === 'es' ? 'es-PR' : 'en-US');
+      if (!missingSet && rows.some((r) => typeof r.props?.[keys[0]] === 'number')) {
+        const line = stage === 'surge'
+          ? tr(`${n(sum(keys[0]))} mapped buildings stand in this category's surge area, in ${has(keys[0])} municipios (OpenStreetMap footprints; municipio-level screening). `, `${n(sum(keys[0]))} edificios cartografiados están en el área de marejada de esta categoría, en ${has(keys[0])} municipios (huellas de OpenStreetMap; cribado a nivel de municipio). `)
+          : tr(`${n(sum(keys[0]))} mapped buildings stand on High or greater susceptibility; ${n(sum(keys[1]))} are within 25 m of it (OpenStreetMap footprints; screening). `, `${n(sum(keys[0]))} edificios cartografiados están en susceptibilidad Alta o mayor; ${n(sum(keys[1]))} están a 25 m de ella (huellas de OpenStreetMap; cribado). `);
+        legend.note = line + (legend.note ?? '');
+      }
+    } catch { /* the map is shown without the count */ }
     bakedLegend = { ...legend, minZoom: idx.minZoom };
     show(have.size ? { id: `${stage}:${dir}:${idx.generated ?? ''}`, minZoom: idx.minZoom, maxZoom: idx.maxZoom, tileSize: 256, url: (z, x, y) => (have.has(`${z}/${x}/${y}`) ? `${root}${z}/${x}/${y}.png` : null) } : null, legend, pick(idx.disclaimer) || null);
     bakedNote();

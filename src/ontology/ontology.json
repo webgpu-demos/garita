@@ -350,8 +350,94 @@
     {
      "id": "elev_hist",
      "label": {
-      "en": "Buildings by ground elevation, 0.25 m bins from 0 to 10 m",
-      "es": "Edificios por elevación del terreno"
+      "en": "Buildings by ground elevation (lidar), 0.1 m steps from 0 to 10 m",
+      "es": "Edificios por elevación del terreno (lidar)"
+     },
+     "type": "json"
+    },
+    {
+     "id": "buildings_surge_cat1",
+     "label": {
+      "en": "Buildings in the mapped Category 1 surge area",
+      "es": "Edificios en el área de marejada de categoría 1"
+     },
+     "type": "number",
+     "unit": "buildings",
+     "format": "int"
+    },
+    {
+     "id": "buildings_surge_cat2",
+     "label": {
+      "en": "Buildings in the mapped Category 2 surge area",
+      "es": "Edificios en el área de marejada de categoría 2"
+     },
+     "type": "number",
+     "unit": "buildings",
+     "format": "int"
+    },
+    {
+     "id": "buildings_surge_cat3",
+     "label": {
+      "en": "Buildings in the mapped Category 3 surge area",
+      "es": "Edificios en el área de marejada de categoría 3"
+     },
+     "type": "number",
+     "unit": "buildings",
+     "format": "int"
+    },
+    {
+     "id": "buildings_surge_cat4",
+     "label": {
+      "en": "Buildings in the mapped Category 4 surge area",
+      "es": "Edificios en el área de marejada de categoría 4"
+     },
+     "type": "number",
+     "unit": "buildings",
+     "format": "int"
+    },
+    {
+     "id": "buildings_surge_cat5",
+     "label": {
+      "en": "Buildings in the mapped Category 5 surge area",
+      "es": "Edificios en el área de marejada de categoría 5"
+     },
+     "type": "number",
+     "unit": "buildings",
+     "format": "int"
+    },
+    {
+     "id": "surge_counts",
+     "label": {
+      "en": "Buildings by surge category and depth",
+      "es": "Edificios por categoría y profundidad de marejada"
+     },
+     "type": "json"
+    },
+    {
+     "id": "buildings_slide_high",
+     "label": {
+      "en": "Buildings on High or greater landslide susceptibility",
+      "es": "Edificios en susceptibilidad Alta o mayor a deslizamientos"
+     },
+     "type": "number",
+     "unit": "buildings",
+     "format": "int"
+    },
+    {
+     "id": "buildings_slide_high_25m",
+     "label": {
+      "en": "Buildings within 25 m of High or greater landslide susceptibility",
+      "es": "Edificios a 25 m de susceptibilidad Alta o mayor"
+     },
+     "type": "number",
+     "unit": "buildings",
+     "format": "int"
+    },
+    {
+     "id": "slide_counts",
+     "label": {
+      "en": "Buildings by landslide susceptibility class",
+      "es": "Edificios por clase de susceptibilidad a deslizamientos"
      },
      "type": "json"
     },
@@ -854,6 +940,39 @@
      "type": "string"
     },
     {
+     "id": "surge_category",
+     "label": {
+      "en": "Lowest hurricane category with mapped storm surge here (NOAA; awareness only)",
+      "es": "Categoría de huracán más baja con marejada cartografiada aquí (NOAA; solo orientación)"
+     },
+     "type": "number",
+     "format": "int"
+    },
+    {
+     "id": "surge_by_category",
+     "label": {
+      "en": "Mapped surge depth above ground by category (NOAA)",
+      "es": "Profundidad de marejada cartografiada por categoría (NOAA)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class",
+     "label": {
+      "en": "Landslide susceptibility at the point (USGS)",
+      "es": "Susceptibilidad a deslizamientos en el punto (USGS)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class_25m",
+     "label": {
+      "en": "Highest landslide susceptibility within 25 m (USGS)",
+      "es": "Mayor susceptibilidad a deslizamientos a 25 m (USGS)"
+     },
+     "type": "string"
+    },
+    {
      "id": "map_url",
      "label": {
       "en": "Map link in the official list",
@@ -1023,6 +1142,39 @@
       "es": "Cómo se ubicó"
      },
      "type": "string"
+    },
+    {
+     "id": "surge_category",
+     "label": {
+      "en": "Lowest hurricane category with mapped storm surge here (NOAA; awareness only)",
+      "es": "Categoría de huracán más baja con marejada cartografiada aquí (NOAA; solo orientación)"
+     },
+     "type": "number",
+     "format": "int"
+    },
+    {
+     "id": "surge_by_category",
+     "label": {
+      "en": "Mapped surge depth above ground by category (NOAA)",
+      "es": "Profundidad de marejada cartografiada por categoría (NOAA)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class",
+     "label": {
+      "en": "Landslide susceptibility at the point (USGS)",
+      "es": "Susceptibilidad a deslizamientos en el punto (USGS)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class_25m",
+     "label": {
+      "en": "Highest landslide susceptibility within 25 m (USGS)",
+      "es": "Mayor susceptibilidad a deslizamientos a 25 m (USGS)"
+     },
+     "type": "string"
     }
    ]
   },
@@ -1144,6 +1296,39 @@
       "es": "Cómo se ubicó"
      },
      "type": "string"
+    },
+    {
+     "id": "surge_category",
+     "label": {
+      "en": "Lowest hurricane category with mapped storm surge here (NOAA; awareness only)",
+      "es": "Categoría de huracán más baja con marejada cartografiada aquí (NOAA; solo orientación)"
+     },
+     "type": "number",
+     "format": "int"
+    },
+    {
+     "id": "surge_by_category",
+     "label": {
+      "en": "Mapped surge depth above ground by category (NOAA)",
+      "es": "Profundidad de marejada cartografiada por categoría (NOAA)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class",
+     "label": {
+      "en": "Landslide susceptibility at the point (USGS)",
+      "es": "Susceptibilidad a deslizamientos en el punto (USGS)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class_25m",
+     "label": {
+      "en": "Highest landslide susceptibility within 25 m (USGS)",
+      "es": "Mayor susceptibilidad a deslizamientos a 25 m (USGS)"
+     },
+     "type": "string"
     }
    ]
   },
@@ -1247,6 +1432,39 @@
      "type": "string"
     },
     {
+     "id": "surge_category",
+     "label": {
+      "en": "Lowest hurricane category with mapped storm surge here (NOAA; awareness only)",
+      "es": "Categoría de huracán más baja con marejada cartografiada aquí (NOAA; solo orientación)"
+     },
+     "type": "number",
+     "format": "int"
+    },
+    {
+     "id": "surge_by_category",
+     "label": {
+      "en": "Mapped surge depth above ground by category (NOAA)",
+      "es": "Profundidad de marejada cartografiada por categoría (NOAA)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class",
+     "label": {
+      "en": "Landslide susceptibility at the point (USGS)",
+      "es": "Susceptibilidad a deslizamientos en el punto (USGS)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class_25m",
+     "label": {
+      "en": "Highest landslide susceptibility within 25 m (USGS)",
+      "es": "Mayor susceptibilidad a deslizamientos a 25 m (USGS)"
+     },
+     "type": "string"
+    },
+    {
      "id": "osm_url",
      "label": {
       "en": "OpenStreetMap",
@@ -1332,6 +1550,39 @@
      "label": {
       "en": "How it was located",
       "es": "Cómo se ubicó"
+     },
+     "type": "string"
+    },
+    {
+     "id": "surge_category",
+     "label": {
+      "en": "Lowest hurricane category with mapped storm surge here (NOAA; awareness only)",
+      "es": "Categoría de huracán más baja con marejada cartografiada aquí (NOAA; solo orientación)"
+     },
+     "type": "number",
+     "format": "int"
+    },
+    {
+     "id": "surge_by_category",
+     "label": {
+      "en": "Mapped surge depth above ground by category (NOAA)",
+      "es": "Profundidad de marejada cartografiada por categoría (NOAA)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class",
+     "label": {
+      "en": "Landslide susceptibility at the point (USGS)",
+      "es": "Susceptibilidad a deslizamientos en el punto (USGS)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class_25m",
+     "label": {
+      "en": "Highest landslide susceptibility within 25 m (USGS)",
+      "es": "Mayor susceptibilidad a deslizamientos a 25 m (USGS)"
      },
      "type": "string"
     },
@@ -1434,6 +1685,39 @@
      "type": "string"
     },
     {
+     "id": "surge_category",
+     "label": {
+      "en": "Lowest hurricane category with mapped storm surge here (NOAA; awareness only)",
+      "es": "Categoría de huracán más baja con marejada cartografiada aquí (NOAA; solo orientación)"
+     },
+     "type": "number",
+     "format": "int"
+    },
+    {
+     "id": "surge_by_category",
+     "label": {
+      "en": "Mapped surge depth above ground by category (NOAA)",
+      "es": "Profundidad de marejada cartografiada por categoría (NOAA)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class",
+     "label": {
+      "en": "Landslide susceptibility at the point (USGS)",
+      "es": "Susceptibilidad a deslizamientos en el punto (USGS)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class_25m",
+     "label": {
+      "en": "Highest landslide susceptibility within 25 m (USGS)",
+      "es": "Mayor susceptibilidad a deslizamientos a 25 m (USGS)"
+     },
+     "type": "string"
+    },
+    {
      "id": "osm_url",
      "label": {
       "en": "OpenStreetMap",
@@ -1523,6 +1807,39 @@
      "type": "string"
     },
     {
+     "id": "surge_category",
+     "label": {
+      "en": "Lowest hurricane category with mapped storm surge here (NOAA; awareness only)",
+      "es": "Categoría de huracán más baja con marejada cartografiada aquí (NOAA; solo orientación)"
+     },
+     "type": "number",
+     "format": "int"
+    },
+    {
+     "id": "surge_by_category",
+     "label": {
+      "en": "Mapped surge depth above ground by category (NOAA)",
+      "es": "Profundidad de marejada cartografiada por categoría (NOAA)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class",
+     "label": {
+      "en": "Landslide susceptibility at the point (USGS)",
+      "es": "Susceptibilidad a deslizamientos en el punto (USGS)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class_25m",
+     "label": {
+      "en": "Highest landslide susceptibility within 25 m (USGS)",
+      "es": "Mayor susceptibilidad a deslizamientos a 25 m (USGS)"
+     },
+     "type": "string"
+    },
+    {
      "id": "osm_url",
      "label": {
       "en": "OpenStreetMap",
@@ -1608,6 +1925,39 @@
      "label": {
       "en": "How it was located",
       "es": "Cómo se ubicó"
+     },
+     "type": "string"
+    },
+    {
+     "id": "surge_category",
+     "label": {
+      "en": "Lowest hurricane category with mapped storm surge here (NOAA; awareness only)",
+      "es": "Categoría de huracán más baja con marejada cartografiada aquí (NOAA; solo orientación)"
+     },
+     "type": "number",
+     "format": "int"
+    },
+    {
+     "id": "surge_by_category",
+     "label": {
+      "en": "Mapped surge depth above ground by category (NOAA)",
+      "es": "Profundidad de marejada cartografiada por categoría (NOAA)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class",
+     "label": {
+      "en": "Landslide susceptibility at the point (USGS)",
+      "es": "Susceptibilidad a deslizamientos en el punto (USGS)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class_25m",
+     "label": {
+      "en": "Highest landslide susceptibility within 25 m (USGS)",
+      "es": "Mayor susceptibilidad a deslizamientos a 25 m (USGS)"
      },
      "type": "string"
     },
@@ -1721,6 +2071,39 @@
      "type": "string"
     },
     {
+     "id": "surge_category",
+     "label": {
+      "en": "Lowest hurricane category with mapped storm surge here (NOAA; awareness only)",
+      "es": "Categoría de huracán más baja con marejada cartografiada aquí (NOAA; solo orientación)"
+     },
+     "type": "number",
+     "format": "int"
+    },
+    {
+     "id": "surge_by_category",
+     "label": {
+      "en": "Mapped surge depth above ground by category (NOAA)",
+      "es": "Profundidad de marejada cartografiada por categoría (NOAA)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class",
+     "label": {
+      "en": "Landslide susceptibility at the point (USGS)",
+      "es": "Susceptibilidad a deslizamientos en el punto (USGS)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class_25m",
+     "label": {
+      "en": "Highest landslide susceptibility within 25 m (USGS)",
+      "es": "Mayor susceptibilidad a deslizamientos a 25 m (USGS)"
+     },
+     "type": "string"
+    },
+    {
      "id": "osm_url",
      "label": {
       "en": "OpenStreetMap",
@@ -1821,6 +2204,39 @@
      "type": "string"
     },
     {
+     "id": "surge_category",
+     "label": {
+      "en": "Lowest hurricane category with mapped storm surge here (NOAA; awareness only)",
+      "es": "Categoría de huracán más baja con marejada cartografiada aquí (NOAA; solo orientación)"
+     },
+     "type": "number",
+     "format": "int"
+    },
+    {
+     "id": "surge_by_category",
+     "label": {
+      "en": "Mapped surge depth above ground by category (NOAA)",
+      "es": "Profundidad de marejada cartografiada por categoría (NOAA)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class",
+     "label": {
+      "en": "Landslide susceptibility at the point (USGS)",
+      "es": "Susceptibilidad a deslizamientos en el punto (USGS)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class_25m",
+     "label": {
+      "en": "Highest landslide susceptibility within 25 m (USGS)",
+      "es": "Mayor susceptibilidad a deslizamientos a 25 m (USGS)"
+     },
+     "type": "string"
+    },
+    {
      "id": "osm_url",
      "label": {
       "en": "OpenStreetMap",
@@ -1915,6 +2331,39 @@
      "label": {
       "en": "How it was located",
       "es": "Cómo se ubicó"
+     },
+     "type": "string"
+    },
+    {
+     "id": "surge_category",
+     "label": {
+      "en": "Lowest hurricane category with mapped storm surge here (NOAA; awareness only)",
+      "es": "Categoría de huracán más baja con marejada cartografiada aquí (NOAA; solo orientación)"
+     },
+     "type": "number",
+     "format": "int"
+    },
+    {
+     "id": "surge_by_category",
+     "label": {
+      "en": "Mapped surge depth above ground by category (NOAA)",
+      "es": "Profundidad de marejada cartografiada por categoría (NOAA)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class",
+     "label": {
+      "en": "Landslide susceptibility at the point (USGS)",
+      "es": "Susceptibilidad a deslizamientos en el punto (USGS)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class_25m",
+     "label": {
+      "en": "Highest landslide susceptibility within 25 m (USGS)",
+      "es": "Mayor susceptibilidad a deslizamientos a 25 m (USGS)"
      },
      "type": "string"
     },
@@ -2026,6 +2475,39 @@
      "type": "string"
     },
     {
+     "id": "surge_category",
+     "label": {
+      "en": "Lowest hurricane category with mapped storm surge here (NOAA; awareness only)",
+      "es": "Categoría de huracán más baja con marejada cartografiada aquí (NOAA; solo orientación)"
+     },
+     "type": "number",
+     "format": "int"
+    },
+    {
+     "id": "surge_by_category",
+     "label": {
+      "en": "Mapped surge depth above ground by category (NOAA)",
+      "es": "Profundidad de marejada cartografiada por categoría (NOAA)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class",
+     "label": {
+      "en": "Landslide susceptibility at the point (USGS)",
+      "es": "Susceptibilidad a deslizamientos en el punto (USGS)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class_25m",
+     "label": {
+      "en": "Highest landslide susceptibility within 25 m (USGS)",
+      "es": "Mayor susceptibilidad a deslizamientos a 25 m (USGS)"
+     },
+     "type": "string"
+    },
+    {
      "id": "osm_url",
      "label": {
       "en": "OpenStreetMap",
@@ -2111,6 +2593,39 @@
      "label": {
       "en": "How it was located",
       "es": "Cómo se ubicó"
+     },
+     "type": "string"
+    },
+    {
+     "id": "surge_category",
+     "label": {
+      "en": "Lowest hurricane category with mapped storm surge here (NOAA; awareness only)",
+      "es": "Categoría de huracán más baja con marejada cartografiada aquí (NOAA; solo orientación)"
+     },
+     "type": "number",
+     "format": "int"
+    },
+    {
+     "id": "surge_by_category",
+     "label": {
+      "en": "Mapped surge depth above ground by category (NOAA)",
+      "es": "Profundidad de marejada cartografiada por categoría (NOAA)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class",
+     "label": {
+      "en": "Landslide susceptibility at the point (USGS)",
+      "es": "Susceptibilidad a deslizamientos en el punto (USGS)"
+     },
+     "type": "string"
+    },
+    {
+     "id": "slide_class_25m",
+     "label": {
+      "en": "Highest landslide susceptibility within 25 m (USGS)",
+      "es": "Mayor susceptibilidad a deslizamientos a 25 m (USGS)"
      },
      "type": "string"
     },
@@ -3794,6 +4309,42 @@
    "url": "https://www.fema.gov/flood-maps/national-flood-hazard-layer",
    "license": "Public domain",
    "kind": "baked"
+  },
+  {
+   "id": "usgs_lidar",
+   "name": "3DEP 1 m lidar elevation (2024 and 2018 collections)",
+   "org": "USGS",
+   "url": "https://www.usgs.gov/3d-elevation-program",
+   "license": "Public domain",
+   "kind": "baked",
+   "note": "Bare-earth ground elevation sampled at every building and asset. Metres above the Puerto Rico Vertical Datum of 2002."
+  },
+  {
+   "id": "nhc_surge",
+   "name": "National Storm Surge Risk Maps, Puerto Rico",
+   "org": "NOAA National Hurricane Center",
+   "url": "https://www.nhc.noaa.gov/nationalsurge/",
+   "license": "Public domain",
+   "kind": "baked",
+   "note": "SLOSH maximum of maximums at high tide, by hurricane category, 2018. For awareness at a city or community level; not for parcel-level assessment and not a replacement for evacuation zone maps."
+  },
+  {
+   "id": "usgs_landslide",
+   "name": "Susceptibility to landslides triggered by intense rainfall, Puerto Rico (OFR 2020-1022)",
+   "org": "USGS",
+   "url": "https://doi.org/10.3133/ofr20201022",
+   "license": "Public domain",
+   "kind": "baked",
+   "note": "Relative susceptibility in five classes on a 5 m grid. Shows where landslides start, not where they run out. A framework for site-specific assessment, not a substitute for one."
+  },
+  {
+   "id": "nasa_black_marble",
+   "name": "VIIRS Day/Night Band night lights",
+   "org": "NASA GIBS",
+   "url": "https://www.earthdata.nasa.gov/data/projects/black-marble",
+   "license": "Public domain",
+   "kind": "live",
+   "note": "One overpass a night, about 1:30 a.m. local time. Cloud and moonlight change what is seen: a picture, not a calibrated measure of outages."
   },
   {
    "id": "noaa_slr",

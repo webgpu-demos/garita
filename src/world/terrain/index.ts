@@ -114,7 +114,8 @@ export function createTerrain(world: World): TerrainApi {
   const white = new THREE.DataTexture(new Uint8Array([255, 255, 255, 255]), 1, 1); white.needsUpdate = true;
   const clear = new THREE.DataTexture(new Uint8Array([0, 0, 0, 0]), 1, 1); clear.needsUpdate = true;
   const flatNorm = new THREE.DataTexture(new Uint8Array([128, 128, 255, 255]), 1, 1); flatNorm.needsUpdate = true;
-  const globalU = { uOvOpacity: { value: 0 }, uRelief: { value: 0.62 }, uLod: { value: lodTint ? 1 : 0 }, uNight: { value: 0 }, uTintMode: { value: 0 }, uLightGain: { value: +(params.get('lights') ?? 2.2) }, uOvAbove: { value: 0 }, tDensity: { value: null as unknown as THREE.Texture } };
+  const LIGHT_GAIN = +(params.get('lights') ?? 2.2);
+  const globalU = { uOvOpacity: { value: 0 }, uRelief: { value: 0.62 }, uLod: { value: lodTint ? 1 : 0 }, uNight: { value: 0 }, uTintMode: { value: 0 }, uLightGain: { value: LIGHT_GAIN }, uOvAbove: { value: 0 }, tDensity: { value: null as unknown as THREE.Texture } };
   // Building density for the night lights: buildings per zoom-14 tile over the root area, from tiles/bld/index.json.
   const DZ = 14 - ROOT_Z, DW = (ROOT_X1 - ROOT_X0 + 1) << DZ, DH = (ROOT_Y1 - ROOT_Y0 + 1) << DZ;
   const density = new THREE.DataTexture(new Uint8Array(DW * DH).fill(70), DW, DH, THREE.RedFormat);
@@ -567,6 +568,8 @@ export function createTerrain(world: World): TerrainApi {
       for (let i = 0; i < drawn.length; i++) drawn[i].mesh && (drawn[i].mesh!.visible = false);
       drawn.length = 0; queue.length = 0; deepest = 0;
       globalU.uNight.value = world.night;
+      // (observed night lights on the map: our modelled town lights would be read as part of the image)
+      globalU.uLightGain.value = S.overlay.value === 'nightlights' ? 0 : LIGHT_GAIN;
       flushBuilt(frame.dt > 0.03 ? 2 : 4);
       if (indexDone && bathyDone) { for (let i = 0; i < roots.length; i++) visit(roots[i]); dispatch(); }
       if (frameNo % 20 === 0) housekeeping();

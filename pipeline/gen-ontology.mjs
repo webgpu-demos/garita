@@ -6,7 +6,11 @@ const M = (id, en, es, unit) => ({ id, label: L(en, es), unit });
 const T = (id, kind, group, en, es, pen, pes, keyScheme, icon, color, properties, extra = {}) => ({ id, kind, group, label: L(en, es), plural: L(pen, pes), keyScheme, icon, color, properties, ...extra });
 
 const addr = [P('address', 'Address', 'Dirección', 'string'), P('municipio_name', 'Municipality', 'Municipio', 'string', null, null, true)];
-const elev = [P('ground_elev_m', 'Ground elevation', 'Elevación del terreno', 'number', 'm', 'fixed1', true), P('flood_zone', 'FEMA flood zone', 'Zona de inundación FEMA', 'string', null, null, true), P('coast_dist_m', 'Distance to coast', 'Distancia a la costa', 'number', 'm', 'int'), P('location_basis', 'How it was located', 'Cómo se ubicó', 'string')];
+const elev = [P('ground_elev_m', 'Ground elevation', 'Elevación del terreno', 'number', 'm', 'fixed1', true), P('flood_zone', 'FEMA flood zone', 'Zona de inundación FEMA', 'string', null, null, true), P('coast_dist_m', 'Distance to coast', 'Distancia a la costa', 'number', 'm', 'int'), P('location_basis', 'How it was located', 'Cómo se ubicó', 'string'),
+  P('surge_category', 'Lowest hurricane category with mapped storm surge here (NOAA; awareness only)', 'Categoría de huracán más baja con marejada cartografiada aquí (NOAA; solo orientación)', 'number', null, 'int'),
+  P('surge_by_category', 'Mapped surge depth above ground by category (NOAA)', 'Profundidad de marejada cartografiada por categoría (NOAA)', 'string'),
+  P('slide_class', 'Landslide susceptibility at the point (USGS)', 'Susceptibilidad a deslizamientos en el punto (USGS)', 'string'),
+  P('slide_class_25m', 'Highest landslide susceptibility within 25 m (USGS)', 'Mayor susceptibilidad a deslizamientos a 25 m (USGS)', 'string')];
 const facility = (extra = []) => [...extra, P('operator', 'Operator', 'Operador', 'string'), ...addr, ...elev, P('osm_url', 'OpenStreetMap', 'OpenStreetMap', 'url')];
 
 const objectTypes = [
@@ -45,7 +49,16 @@ const objectTypes = [
     P('households', 'Households', 'Hogares', 'number', 'households', 'int'),
     P('poverty150_pct', 'Below 150% of poverty level', 'Bajo 150% del nivel de pobreza', 'number', '%', 'pct'),
     P('svi_basis', 'Basis of the vulnerability value', 'Base del valor de vulnerabilidad', 'string'),
-    P('elev_hist', 'Buildings by ground elevation, 0.25 m bins from 0 to 10 m', 'Edificios por elevación del terreno', 'json'),
+    P('elev_hist', 'Buildings by ground elevation (lidar), 0.1 m steps from 0 to 10 m', 'Edificios por elevación del terreno (lidar)', 'json'),
+    P('buildings_surge_cat1', 'Buildings in the mapped Category 1 surge area', 'Edificios en el área de marejada de categoría 1', 'number', 'buildings', 'int'),
+    P('buildings_surge_cat2', 'Buildings in the mapped Category 2 surge area', 'Edificios en el área de marejada de categoría 2', 'number', 'buildings', 'int'),
+    P('buildings_surge_cat3', 'Buildings in the mapped Category 3 surge area', 'Edificios en el área de marejada de categoría 3', 'number', 'buildings', 'int'),
+    P('buildings_surge_cat4', 'Buildings in the mapped Category 4 surge area', 'Edificios en el área de marejada de categoría 4', 'number', 'buildings', 'int'),
+    P('buildings_surge_cat5', 'Buildings in the mapped Category 5 surge area', 'Edificios en el área de marejada de categoría 5', 'number', 'buildings', 'int'),
+    P('surge_counts', 'Buildings by surge category and depth', 'Edificios por categoría y profundidad de marejada', 'json'),
+    P('buildings_slide_high', 'Buildings on High or greater landslide susceptibility', 'Edificios en susceptibilidad Alta o mayor a deslizamientos', 'number', 'buildings', 'int'),
+    P('buildings_slide_high_25m', 'Buildings within 25 m of High or greater landslide susceptibility', 'Edificios a 25 m de susceptibilidad Alta o mayor', 'number', 'buildings', 'int'),
+    P('slide_counts', 'Buildings by landslide susceptibility class', 'Edificios por clase de susceptibilidad a deslizamientos', 'json'),
     P('zone_counts', 'Buildings by FEMA flood zone', 'Edificios por zona FEMA', 'json'),
   ]),
   T('tract', 'place', 'boundaries', 'Census tract', 'Sector censal', 'Census tracts', 'Sectores censales', 'census:geoid', 'boundary', '#6f93b3', [
@@ -207,6 +220,10 @@ const sources = [
   S('usgs_3dep', 'USGS 3DEP elevation via AWS Terrain Tiles', 'USGS / Mapzen', 'https://registry.opendata.aws/terrain-tiles/', 'Public domain; attribution per Terrain Tiles', 'baked'),
   S('usgs_imagery', 'The National Map orthoimagery', 'USGS', 'https://www.usgs.gov/programs/national-geospatial-program/national-map', 'Public domain', 'baked'),
   S('fema_nfhl', 'National Flood Hazard Layer', 'FEMA', 'https://www.fema.gov/flood-maps/national-flood-hazard-layer', 'Public domain', 'baked'),
+  S('usgs_lidar', '3DEP 1 m lidar elevation (2024 and 2018 collections)', 'USGS', 'https://www.usgs.gov/3d-elevation-program', 'Public domain', 'baked', undefined, 'Bare-earth ground elevation sampled at every building and asset. Metres above the Puerto Rico Vertical Datum of 2002.'),
+  S('nhc_surge', 'National Storm Surge Risk Maps, Puerto Rico', 'NOAA National Hurricane Center', 'https://www.nhc.noaa.gov/nationalsurge/', 'Public domain', 'baked', undefined, 'SLOSH maximum of maximums at high tide, by hurricane category, 2018. For awareness at a city or community level; not for parcel-level assessment and not a replacement for evacuation zone maps.'),
+  S('usgs_landslide', 'Susceptibility to landslides triggered by intense rainfall, Puerto Rico (OFR 2020-1022)', 'USGS', 'https://doi.org/10.3133/ofr20201022', 'Public domain', 'baked', undefined, 'Relative susceptibility in five classes on a 5 m grid. Shows where landslides start, not where they run out. A framework for site-specific assessment, not a substitute for one.'),
+  S('nasa_black_marble', 'VIIRS Day/Night Band night lights', 'NASA GIBS', 'https://www.earthdata.nasa.gov/data/projects/black-marble', 'Public domain', 'live', undefined, 'One overpass a night, about 1:30 a.m. local time. Cloud and moonlight change what is seen: a picture, not a calibrated measure of outages.'),
   S('noaa_slr', 'Sea Level Rise Viewer inundation layers', 'NOAA Office for Coastal Management', 'https://coast.noaa.gov/slr/', 'Public domain', 'live'),
   S('hud_public_housing', 'Public Housing Developments', 'HUD', 'https://hudgis-hud.opendata.arcgis.com/', 'Public domain', 'baked'),
   S('hud_multifamily', 'Multifamily Properties - Assisted', 'HUD', 'https://hudgis-hud.opendata.arcgis.com/', 'Public domain', 'baked'),

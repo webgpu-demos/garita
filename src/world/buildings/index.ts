@@ -266,6 +266,7 @@ export const createBuildings: LayerFactory = async (ctx) => {
     const hr = (((S.sceneTime.value / 3600000 + AST_OFFSET_H) % 24) + 24) % 24;
     const late = hr >= 18 ? Math.max(0, hr - 21.5) : hr + 2.5;       // hours past 21:30
     uniforms.uBLit.value = hr > 6.5 && hr < 17 ? 0.25 : THREE.MathUtils.clamp(0.36 - late * 0.06, 0.07, 0.36) + (hr > 5 && hr <= 6.5 ? 0.1 : 0);
+    if (S.overlay.value === 'nightlights') uniforms.uBLit.value = 0;   // observed night lights on the map: no modelled window lights over them
 
     if (f.index % 8 === 0 || lastScan < 0) { lastScan = f.index; scan(range); }
     for (const t of tiles.values()) {
