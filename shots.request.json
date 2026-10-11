@@ -1,0 +1,7 @@
+{ "shots": [
+  { "id": "1-select-sanjuan", "url": "https://webgpu-demos.github.io/garita/?post=basic&select=municipio:72127&t=2026-10-10T15:30:00Z", "w": 1600, "h": 1000, "wait": 12000 },
+  { "id": "2-san-sebastian-buildings", "url": "https://webgpu-demos.github.io/garita/?post=basic&ui=0&t=2026-10-10T15:30:00Z&cam=-66.995,18.332,1500,20,40", "w": 1280, "h": 800, "wait": 8000 },
+  { "id": "3-condado", "url": "https://webgpu-demos.github.io/garita/?post=basic&ui=0&t=2026-10-10T15:30:00Z&cam=-66.075,18.452,2600,250,12", "w": 1280, "h": 800, "wait": 6000 },
+  { "id": "4-surge-c3", "url": "https://webgpu-demos.github.io/garita/?post=basic&overlay=surge&surge=3&t=2026-10-10T15:30:00Z&cam=-66.10,18.44,26000,180,62", "w": 1600, "h": 900, "wait": 9000 },
+  { "id": "5-select-pa", "url": "https://webgpu-demos.github.io/garita/?post=basic&select=disaster_declaration:DR-4339-PR&t=2026-10-10T15:30:00Z", "w": 1600, "h": 1000, "wait": 12000 }
+] }
