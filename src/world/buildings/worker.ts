@@ -61,8 +61,10 @@ function build(job: MeshJob): MeshResult {
     if (nv >= 3) {
       V += nv * 4 + (nv - 2) * 3; I += nv * 6 + (nv - 2) * 3; RV += nv; kept++;
       if (gd !== -32768) {
+        // (placement elevation: the lidar value plus the stored offset to the terrain the scene draws; see below)
+        const pd = gd + dv.getInt8(o + 7) * 5;
         const u = dv.getUint16(o + 8, true), v = dv.getUint16(o + 10, true);
-        cells[Math.min(G - 1, (u * G) >> 16) + G * Math.min(G - 1, (v * G) >> 16)].push(gd); all.push(gd);
+        cells[Math.min(G - 1, (u * G) >> 16) + G * Math.min(G - 1, (v * G) >> 16)].push(pd); all.push(pd);
       }
     }
     o += 8 + nv * 4;
@@ -114,7 +116,10 @@ function build(job: MeshJob): MeshResult {
     const estimated = hh === 0;
     const H = estimated ? estHeight(kind, area, r1, r2) : Math.max(2.4, hh * 0.5);
     const gCell = Math.min(G - 1, ((su / nv) * G) >> 16) + G * Math.min(G - 1, ((sv / nv) * G) >> 16);
-    const b = (gd !== -32768 ? gd : cellMed[gCell]) * 0.1;
+    // `gd` is the lidar ground elevation (what the flood screen and the tooltip use). The building stands on the
+    // terrain the scene draws, a coarser model that can differ by metres on a slope: the tile keeps that
+    // difference in half metres in the record's last byte (0 in tiles built before the lidar merge).
+    const b = (gd !== -32768 ? gd + dv.getInt8(o + 7) * 5 : cellMed[gCell]) * 0.1;
     const drop = curveDrop(cx + mx, cz + mz);
     const yb = b - drop, yTop = yb + H, yLow = yb - SINK;
     // what the shader paints it as: 0 house 1 apartments 2 commercial 3 industrial 4 civic / religious 5 glass tower

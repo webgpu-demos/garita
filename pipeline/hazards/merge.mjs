@@ -2,7 +2,8 @@
 //   node pipeline/hazards/merge.mjs <site>
 // Reads   tiles/bld/**, data/hazards/{lidar,surge,slide}/**, data/geo/municipios.geojson, data/derived/exposure.json
 // Writes  tiles/bld/14/**.bin      ground elevation of every building replaced by the lidar value (the format and the
-//                                  order of buildings do not change, so the stages' buildings.bin still line up)
+//                                  order of buildings do not change, so the stages' buildings.bin still line up);
+//                                  the last byte of each record keeps the offset to the terrain the scene draws
 //         tiles/bld/index.json     says where the ground elevation now comes from
 //         data/derived/exposure.json   per municipio: elevation histogram from lidar, surge and landslide counts
 // Everything in exposure.json is recomputed here from the tiles and the stage files, so its parts agree with each
@@ -42,7 +43,8 @@ const mk = (name) => ({
 });
 const island = mk('Puerto Rico'), byMuni = {};
 for (const f of munis) byMuni[f.properties.GEOID] = mk(f.properties.NAME);
-let noMuni = 0, i = 0, changed = 0, sumAbs = 0, nDiff = 0;
+let noMuni = 0, i = 0, changed = 0, sumAbs = 0, nDiff = 0, clamped = 0;
+const merged = !!idx.ground;   // these tiles already went through this script
 
 for (const [x, y, count] of idx.tiles) {
   const file = path.join(site, `tiles/bld/${Z}/${x}/${y}.bin`);
@@ -50,7 +52,11 @@ for (const [x, y, count] of idx.tiles) {
   if (b.toString('latin1', 0, 4) !== 'GBL1' || dv.getUint32(4, true) !== count) throw new Error(`bad tile ${x}/${y}`);
   let o = 8;
   for (let k = 0; k < count; k++, i++) {
-    const nv = dv.getUint16(o, true), height = dv.getUint8(o + 2), kind = dv.getUint8(o + 3), old = dv.getInt16(o + 4, true), flood = dv.getUint8(o + 6);
+    const nv = dv.getUint16(o, true), height = dv.getUint8(o + 2), kind = dv.getUint8(o + 3), stored = dv.getInt16(o + 4, true), flood = dv.getUint8(o + 6);
+    // The scene stands each building on the terrain it draws, which is the 10 m model the tiles were first built
+    // with. That elevation is kept as an offset from the lidar value (int8, half metres) in the record's last byte.
+    // (On a re-run the tile already holds lidar + offset: the terrain value is rebuilt from them.)
+    const old = stored === -32768 ? -32768 : merged ? stored + dv.getInt8(o + 7) * 5 : stored;
     // area centroid of the stored ring, as in common.py
     let a = 0, cx = 0, cy = 0, sx = 0, sy = 0;
     for (let v = 0; v < nv; v++) {
@@ -61,7 +67,9 @@ for (const [x, y, count] of idx.tiles) {
     const u = Math.abs(a) > 1e-9 ? cx / (3 * a) : sx / nv, vv = Math.abs(a) > 1e-9 ? cy / (3 * a) : sy / nv;
     const lon = tileLon(x + (u / 65535) * 1.5 - 0.25), lat = tileLat(y + (vv / 65535) * 1.5 - 0.25);
     const dm = lidar[i];                                   // decimetres, -32768 = no lidar value
-    if (dm !== old) { dv.setInt16(o + 4, dm, true); changed++; }
+    if (dm !== stored) changed++;
+    if (dm !== -32768) { dv.setInt16(o + 4, dm, true); dv.setInt8(o + 7, old === -32768 ? 0 : Math.max(-127, Math.min(127, Math.round((old - dm) / 5)))); if (old !== -32768 && Math.abs(old - dm) > 635) clamped++; }
+    else { dv.setInt16(o + 4, -32768, true); dv.setInt8(o + 7, 0); }
     if (dm !== -32768 && old !== -32768) { sumAbs += Math.abs(dm - old) / 10; nDiff++; }
     const g = muniIdx.first(lon, lat);
     if (!g) noMuni++;
@@ -110,11 +118,12 @@ const out = {
 };
 fs.writeFileSync(path.join(site, 'data/derived/exposure.json'), JSON.stringify(out));
 idx.ground = { source: L.source.name, statistic: 'median of the 1 m cells within 2 m of the centroid', datum: L.datum, no_value: -32768, merged: out.generated, stage: 'data/hazards/lidar' };
-idx.encoding.record = idx.encoding.record.map((r) => (r.startsWith('int16 ground_dm') ? 'int16 ground_dm (ground elevation at the centroid from the 1 m lidar DEM, decimetres above the datum in "ground"; -32768 = no lidar value)' : r));
+idx.encoding.record = idx.encoding.record.map((r) => (r.startsWith('int16 ground_dm') ? 'int16 ground_dm (ground elevation at the centroid from the 1 m lidar DEM, decimetres above the datum in "ground"; -32768 = no lidar value)'
+  : r.startsWith('uint8 reserved') || r.startsWith('int8 place') ? 'int8 place_half_m (half metres to add to ground_dm to get the elevation of the 10 m terrain the scene is drawn on; used only to stand the building on that terrain)' : r));
 fs.writeFileSync(path.join(site, 'tiles/bld/index.json'), JSON.stringify(idx));
 
 console.log(JSON.stringify({
-  buildings: total, ground_values_changed: changed, mean_abs_change_m: +(sumAbs / nDiff).toFixed(2), outside_municipios: noMuni, municipio_totals_that_moved: drift,
+  buildings: total, ground_values_changed: changed, placement_offsets_clamped: clamped, mean_abs_change_m: +(sumAbs / nDiff).toFixed(2), outside_municipios: noMuni, municipio_totals_that_moved: drift,
   at_or_below: { before: old.island.at_or_below, after: island.at_or_below }, below_0: island.below_0, unknown: island.elev_unknown,
   sfha: { before: old.island.buildings_sfha, after: island.buildings_sfha },
   surge: island.surge, surge_outside: island.surge_outside, slide: island.slide,

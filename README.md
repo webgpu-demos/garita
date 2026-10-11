@@ -30,6 +30,9 @@ store; [`clear-Vieques`](https://github.com/webgpu-demos/clear-Vieques) for wate
   persisted in the browser, queryable from a SQL console in the app.
 - **Live feeds** written into that same store: weather alerts, earthquakes, stream and reservoir gauges, flood
   stages, tides, weather and sea state, power outages, buoys, tropical cyclones with forecast cones, aircraft.
+- **Hazard maps with counts.** NOAA's storm surge maps for hurricane categories 1 to 5 and the USGS landslide
+  susceptibility map, each with the buildings, shelters, housing and hospitals inside it, by municipio. NASA
+  night lights for any night since 2012, to set an outage beside the utility's numbers.
 - **Questions the Department would ask.** Raise the sea and count what sits at or below it, by municipio, with
   NOAA's scenarios for San Juan as presets and NOAA's own inundation mapping as a comparison overlay. Replay
   María or any of 29 other storms since 1980. For the 19 with wind radii in the record (2004 on), see which
@@ -46,7 +49,9 @@ store; [`clear-Vieques`](https://github.com/webgpu-demos/clear-Vieques) for wate
 | Nearshore depth | NOAA NCEI CUDEM topo-bathy, 1/9″ and 1/3″ (doi:10.25921/ds9v-ky35) | Used wherever it has data below +1 m; 1,136 tiles |
 | Aerial photo | USGS The National Map orthoimagery | Public domain; mirrored to zoom 13, streamed to zoom 16 |
 | Building footprints | OpenStreetMap (Geofabrik Puerto Rico extract), ODbL | 1,500,471; 13.8 % carry a height |
-| Ground elevation per building | 3DEP at the footprint centroid | One point per building; the source terraces at whole metres in coastal plains |
+| Ground elevation per building | USGS 3DEP 1 m lidar DEM, 2024 collection (2018 where it has gaps) | Median within 2 m of the footprint's centre; metres above PRVD02 (local mean sea level); 1,500,461 of 1,500,471 buildings have a value |
+| Storm surge by hurricane category | NOAA NHC National Storm Surge Risk Maps, Puerto Rico (SLOSH maximum of maximums, high tide, 2018) | About 10 m cells, one-foot depth classes. NOAA: for awareness at community level, not parcel-level assessment, and not a replacement for evacuation zones |
+| Landslide susceptibility | USGS Open-File Report 2020-1022 (Hughes and Schulz), 5 m raster | Five classes of relative susceptibility to rainfall-triggered landslides. Shows where slides start, not where they run out; main island only |
 | Flood class per building | FEMA National Flood Hazard Layer, 4,894 zone polygons | Point in polygon at the centroid. Facilities, housing and shelters use a reduced file of 3,830 polygons |
 | Municipios, barrios, tracts | US Census TIGERweb | 78 / 901 / 981. The Census counts 939 county subdivisions; the 38 that are water only are left out. 42 of the tracts are water only |
 | Vulnerability and housing stock | CDC/ATSDR SVI 2022; ACS 5-year through Esri Living Atlas | Municipio and tract level |
@@ -60,11 +65,12 @@ store; [`clear-Vieques`](https://github.com/webgpu-demos/clear-Vieques) for wate
 
 **Live** (age shown in the Lineage panel): NWS alerts and observations, USGS earthquakes and gauges, NOAA flood
 categories and tides, Open-Meteo wind, cloud, waves and Saharan dust (model output, labelled as such), RainViewer
-radar, NASA GOES imagery, FEMA and NOAA map overlays. Four sources send no CORS headers (NHC, NDBC, LUMA outages,
+radar, NASA GOES imagery and VIIRS night lights (one overpass a night, following the scene date back to 2012),
+FEMA and NOAA map overlays. Four sources send no CORS headers (NHC, NDBC, LUMA outages,
 ADS-B); a scheduled job relays them every five minutes, so aircraft positions are minutes old and say so.
 
-**Modelled, screening level:** the sea-level panel is a bathtub: one ground elevation per structure against a
-flat water level. No waves, drainage, levees or hydraulic connection. The panel says so and offers NOAA's
+**Modelled, screening level:** the sea-level panel is a bathtub: the lidar ground elevation at each structure
+against a flat water level. No waves, drainage, levees or hydraulic connection. The panel says so and offers NOAA's
 connected-inundation mapping beside it. Storm-replay counts use each wind radius's maximum extent per quadrant,
 so the true area is smaller.
 
@@ -111,7 +117,7 @@ flies; ⌘K or `/` searches; click anything to open it.
 There is no server. The site is static files on GitHub Pages.
 
 - **Baked data** is fetched and compiled by GitHub Actions (`pipeline/`, one workflow per stage: tiles, vector,
-  bathymetry, seed) and committed to `gh-pages`. The development sandbox had no route to any data host, so the
+  bathymetry, seed, and the three hazard stages in `pipeline/hazards/`: lidar, surge, landslide) and committed to `gh-pages`. The development sandbox had no route to any data host, so the
   runner is also where the pipeline was developed: push, run, pull, look.
 - **The relay** (`.github/workflows/relay.yml`) snapshots the four sources without CORS to the `relay` branch.
   One run covers half an hour and queues the next. To stop it, disable the workflow in the Actions tab.
@@ -156,6 +162,11 @@ Each round: render, find what is visibly wrong, fix the cause. Stills are in `do
 | Outlines glowing over the town lights at night | Boundaries dim with the scene's night factor | `r5-03/04` |
 | Radar legend colours wrong above 40 dBZ | Stops re-read from RainViewer's published colour table | |
 
+After round 5, four sources were added (`r6-*`): lidar ground elevation at every building (108 GB of 1 m tiles
+sampled on runners in under five minutes, `pipeline/hazards/lidar.py`), the surge and landslide maps with their
+counts, and the night-lights overlay. Each stage's method, classes, publisher's use limits and QA numbers are in
+`data/hazards/<stage>/meta.json` on the site.
+
 An independent pass then checked 66 numbers and claims against the database and public sources
 (`docs/verification.md`): 38 held, 7 were wrong and 15 imprecise. The storm replay lost its wind field at landfall
 fixes of 2004–2011 storms; 58 census tracts of an older vintage sat in the store; two public housing points were
@@ -163,8 +174,14 @@ in the sea. Those are fixed and the text here corrected.
 
 ## Known limits
 
-- **Bathtub flooding** only, on a 10 m elevation model that terraces at whole metres in the coastal plain: low
-  elevation counts are order-of-magnitude until lidar-grade elevation replaces it.
+- **Bathtub flooding** only. The counts now use 1 m lidar (9,718 buildings at or below 1 m, against 12,344 with
+  the 10 m model; 40,257 at or below 2 m, against 25,953), but still test no connection to the sea, and the blue
+  wash on the map follows the coarser terrain the scene is drawn with.
+- **Surge and landslide counts are screening.** NOAA limits its surge maps to community-level awareness; the
+  landslide map ranks where slides start. A building's centre on Low ground can sit under a High slope: 44,722
+  buildings stand on High or greater susceptibility, 381,946 are within 25 m of it. Both numbers are given.
+- **Night lights for 2017** come from an older, noisier NASA rendering (the better one fails for those dates),
+  so María's blackout is visible but not crisp.
 - **OpenStreetMap completeness varies by municipio.** Footprints are not a structure inventory. This build puts 20.3 % of Toa Baja's buildings and 36.6 % of Cataño's in the 1 % zone.
 - **HUD points are not always the property.** 31 housing records have only a city and ZIP code for an address and
   are geocoded to the ZIP code area; two more fall in water or below sea level. No flood zone or elevation is

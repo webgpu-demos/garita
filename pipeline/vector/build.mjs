@@ -18,7 +18,9 @@
 //     uint8  kind      0 house/residential, 1 apartments, 2 commercial, 3 industrial, 4 civic, 5 religious, 6 other
 //     int16  ground    ground elevation at the centroid, decimetres above mean sea level (-32768 = unknown)
 //     uint8  flood     0 minimal/none, 1 = 0.2 % annual chance, 2 = 1 % annual chance (A zones), 3 = coastal high hazard (V zones)
-//     uint8  reserved  0
+//     int8   place     0 here. pipeline/hazards/merge.mjs later replaces `ground` with the lidar value and keeps,
+//                      in this byte, the half metres to add to it to get the elevation of the terrain the scene
+//                      is drawn on (so buildings still stand on that terrain)
 //     nv x (uint16 u, uint16 v)
 //   Vertex mapping. Let fx, fy be the vertex position in tile units: fx = lonToTileX(lon, 14) - x (0 at the west
 //   edge, 1 at the east edge, linear in longitude), fy = latToTileY(lat, 14) - y (0 at the north edge, 1 at the

@@ -40,6 +40,9 @@ export function AboutSheet() {
               <ul>
                 <li>{tr('Terrain (USGS 3DEP) and aerial photo (USGS The National Map)', 'Terreno (USGS 3DEP) y foto aérea (USGS The National Map)')}</li>
                 <li>{tr('Nearshore bathymetry (NOAA CUDEM)', 'Batimetría costera (NOAA CUDEM)')}</li>
+                <li>{tr('Lidar ground elevation at every building (USGS 3DEP, 1 m)', 'Elevación lidar del terreno en cada edificio (USGS 3DEP, 1 m)')}</li>
+                <li>{tr('Storm surge maps by hurricane category (NOAA NHC) and landslide susceptibility (USGS), with their publishers\' limits', 'Mapas de marejada por categoría de huracán (NOAA NHC) y susceptibilidad a deslizamientos (USGS), con los límites de sus publicadores')}</li>
+                <li>{tr('Night lights from satellite (NASA VIIRS), one overpass a night', 'Luces nocturnas por satélite (NASA VIIRS), un paso por noche')}</li>
                 <li>{tr('Building footprints (OpenStreetMap)', 'Huellas de edificios (OpenStreetMap)')}</li>
                 <li>{tr('Objects and properties from public sources, each with its source. Values Garita computed (ground elevation, flood zone, building counts) are marked "derived"', 'Objetos y propiedades de fuentes públicas, cada uno con su fuente. Los valores calculados por Garita (elevación del terreno, zona inundable, conteos de edificios) se marcan como "derivados"')}</li>
                 <li>{tr('Live feeds (NWS, USGS, NOAA, FEMA, LUMA), shown with their age', 'Fuentes en vivo (SNM, USGS, NOAA, FEMA, LUMA), con su antigüedad')}</li>
@@ -51,7 +54,7 @@ export function AboutSheet() {
                 <li>{tr('Clouds and waves (driven by live wind and cloud cover)', 'Nubes y oleaje (según viento y nubosidad en vivo)')}</li>
                 <li>{tr('Building heights where OpenStreetMap has none', 'Altura de edificios donde OpenStreetMap no la tiene')}</li>
                 <li>{tr('Wall colours, windows and town lights', 'Colores de paredes, ventanas y luces de pueblos')}</li>
-                <li>{tr('FEMA flood class and ground elevation per building and per facility (one point each, screening level)', 'Clase de inundación FEMA y elevación del terreno por edificio y por instalación (un punto cada uno, nivel de cribado)')}</li>
+                <li>{tr('FEMA flood class, surge and landslide class read at one point per building and per facility (screening level)', 'Clase de inundación FEMA, marejada y clase de deslizamiento leídas en un punto por edificio y por instalación (nivel de cribado)')}</li>
                 <li>{tr('The bathtub flood screen in the Scenario tab', 'El filtro de inundación tipo bañera en la pestaña Escenario')}</li>
               </ul>
             </section>
