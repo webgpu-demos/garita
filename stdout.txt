@@ -1,0 +1,518 @@
+KEYS ['link', 'relatedItems', 'id', 'identifiers', 'title', 'summary', 'body', 'citation', 'purpose', 'provenance', 'maintenanceUpdateFrequency', 'hasChildren', 'parentId', 'contacts', 'webLinks', 'browseCategories', 'browseTypes', 'systemTypes', 'tags', 'dates', 'spatial', 'facets', 'files', 'distributionLinks', 'previewImage']
+== files
+[
+ {
+  "cuid": null,
+  "key": null,
+  "bucket": null,
+  "published": false,
+  "node": null,
+  "name": "landslide_susceptibility_raster.xml",
+  "title": "summary metadata",
+  "contentType": "application/fgdc+xml",
+  "contentEncoding": null,
+  "pathOnDisk": "__disk__37/e2/55/37e2559ffea430345144dd9bd3b7f6584370376c",
+  "processed": false,
+  "processToken": null,
+  "imageWidth": null,
+  "imageHeight": null,
+  "size": 18610,
+  "dateUploaded": "2021-08-18T00:57:44Z",
+  "originalMetadata": true,
+  "useForPreview": false,
+  "movedToS3": false,
+  "s3Object": null,
+  "checksum": {
+   "value": "01b60423b6563e4d4b9d4dfa92832792",
+   "type": "MD5"
+  },
+  "url": "https://www.sciencebase.gov/catalog/file/get/61087009d34ef8d70565c154?f=__disk__37%2Fe2%2F55%2F37e2559ffea430345144dd9bd3b7f6584370376c",
+  "downloadUri": "https://www.sciencebase.gov/catalog/file/get/61087009d34ef8d70565c154?f=__disk__37%2Fe2%2F55%2F37e2559ffea430345144dd9bd3b7f6584370376c",
+  "viewUri": "https://www.sciencebase.gov/catalog/file/get/61087009d34ef8d70565c154?f=__disk__37%2Fe2%2F55%2F37e2559ffea430345144dd9bd3b7f6584370376c&allowOpen=true",
+  "metadataHtmlViewUri": "https://www.sciencebase.gov/catalog/file/get/61087009d34ef8d70565c154?f=__disk__37%2Fe2%2F55%2F37e2559ffea430345144dd9bd3b7f6584370376c&transform=1"
+ }
+]
+== facets
+[
+ {
+  "boundingBox": {
+   "minY": 17.907998399643667,
+   "minX": -67.27793049242324,
+   "maxY": 18.51784320347384,
+   "maxX": -65.58021500183389
+  },
+  "rasterType": "GeoTIFF",
+  "name": "landslide_susceptibility_raster",
+  "files": [
+   {
+    "cuid": null,
+    "key": null,
+    "bucket": null,
+    "published": false,
+    "node": null,
+    "name": "landslide_susceptibility_raster.tfw",
+    "title": "",
+    "contentType": "text/plain",
+    "contentEncoding": null,
+    "pathOnDisk": "__disk__b1/82/e2/b182e21a42cb354ef9928a0a552754837c2347cf",
+    "processed": false,
+    "processToken": null,
+    "imageWidth": null,
+    "imageHeight": null,
+    "size": 90,
+    "dateUploaded": "2021-08-18T00:52:28Z",
+    "originalMetadata": false,
+    "useForPreview": false,
+    "movedToS3": false,
+    "s3Object": null,
+    "checksum": null,
+    "url": "https://www.sciencebase.gov/catalog/file/get/61087009d34ef8d70565c154?f=__disk__b1%2F82%2Fe2%2Fb182e21a42cb354ef9928a0a552754837c2347cf",
+    "downloadUri": "https://www.sciencebase.gov/catalog/file/get/61087009d34ef8d70565c154?f=__disk__b1%2F82%2Fe2%2Fb182e21a42cb354ef9928a0a552754837c2347cf",
+    "viewUri": "https://www.sciencebase.gov/catalog/file/get/61087009d34ef8d70565c154?f=__disk__b1%2F82%2Fe2%2Fb182e21a42cb354ef9928a0a552754837c2347cf&allowOpen=true"
+   },
+   {
+    "cuid": null,
+    "key": null,
+    "bucket": null,
+    "published": false,
+    "node": null,
+    "name": "landslide_susceptibility_raster.tif",
+    "title": "",
+    "contentType": "image/geotiff",
+    "contentEncoding": null,
+    "pathOnDisk": "__disk__18/ba/51/18ba51d1483f53e10890019147a259a885e0c9db",
+    "processed": false,
+    "processToken": null,
+    "imageWidth": null,
+    "imageHeight": null,
+    "size": 43918443,
+    "dateUploaded": "2021-08-18T00:52:28Z",
+    "originalMetadata": false,
+    "useForPreview": false,
+    "movedToS3": false,
+    "s3Object": null,
+    "checksum": null,
+    "url": "https://www.sciencebase.gov/catalog/file/get/61087009d34ef8d70565c154?f=__disk__18%2Fba%2F51%2F18ba51d1483f53e10890019147a259a885e0c9db",
+    "downloadUri": "https://www.sciencebase.gov/catalog/file/get/61087009d34ef8d70565c154?f=__disk__18%2Fba%2F51%2F18ba51d1483f53e10890019147a259a885e0c9db"
+   },
+   {
+    "cuid": null,
+    "key": null,
+    "bucket": null,
+    "published": false,
+    "node": null,
+    "name": "landslide_susceptibility_raster.tif.aux.xml",
+    "title": "",
+    "contentType": "application/xml",
+    "contentEncoding": null,
+    "pathOnDisk": "__disk__15/17/be/1517beca77360c35a5590c6d2971f85d0b64be6a",
+    "processed": false,
+    "processToken": null,
+    "imageWidth": null,
+    "imageHeight": null,
+    "size": 907,
+    "dateUploaded": "2021-08-18T00:52:28Z",
+    "originalMetadata": false,
+    "useForPreview": false,
+    "movedToS3": false,
+    "s3Object": null,
+    "checksum": null,
+    "url": "https://www.sciencebase.gov/catalog/file/get/61087009d34ef8d70565c154?f=__disk__15%2F17%2Fbe%2F1517beca77360c35a5590c6d2971f85d0b64be6a",
+    "downloadUri": "https://www.sciencebase.gov/catalog/file/get/61087009d34ef8d70565c154?f=__disk__15%2F17%2Fbe%2F1517beca77360c35a5590c6d2971f85d0b64be6a",
+    "viewUri": "https://www.sciencebase.gov/catalog/file/get/61087009d34ef8d70565c154?f=__disk__15%2F17%2Fbe%2F1517beca77360c35a5590c6d2971f85d0b64be6a&allowOpen=true"
+   },
+   {
+    "cuid": null,
+    "key": null,
+    "bucket": null,
+    "published": false,
+    "node": null,
+    "name": "landslide_susceptibility_raster.tif.lyr",
+    "title": "",
+    "contentType": "application/x-tika-msoffice",
+    "contentEncoding": null,
+    "pathOnDisk": "__disk__be/38/49/be3849289df151b3938f371b1723c555947a45b9",
+    "processed": false,
+    "processToken": null,
+    "imageWidth": null,
+    "imageHeight": null,
+    "size": 7168,
+    "dateUploaded": "2021-08-18T00:52:28Z",
+    "originalMetadata": false,
+    "useForPreview": false,
+    "movedToS3": false,
+    "s3Object": null,
+    "checksum": null,
+    "url": "https://www.sciencebase.gov/catalog/file/get/61087009d34ef8d70565c154?f=__disk__be%2F38%2F49%2Fbe3849289df151b3938f371b1723c555947a45b9",
+    "downloadUri": "https://www.sciencebase.gov/catalog/file/get/61087009d34ef8d70565c154?f=__disk__be%2F38%2F49%2Fbe3849289df151b3938f371b1723c555947a45b9"
+   },
+   {
+    "cuid": null,
+    "key": null,
+    "bucket": null,
+    "published": false,
+    "node": null,
+    "name": "landslide_susceptibility_raster.tif.ovr",
+    "title": "",
+    "contentType": "image/tiff",
+    "contentEncoding": null,
+    "pathOnDisk": "__disk__8c/85/55/8c85558a23541cdebb73929167566edfedf4904e",
+    "processed": false,
+    "processToken": null,
+    "imageWidth": 17878,
+    "imageHeight": 6504,
+    "size": 18891235,
+    "dateUploaded": "2021-08-18T00:52:28Z",
+    "originalMetadata": false,
+    "useForPreview": false,
+    "movedToS3": false,
+    "s3Object": null,
+    "checksum": null,
+    "url": "https://www.sciencebase.gov/catalog/file/get/61087009d34ef8d70565c154?f=__disk__8c%2F85%2F55%2F8c85558a23541cdebb73929167566edfedf4904e",
+    "downloadUri": "https://www.sciencebase.gov/catalog/file/get/61087009d34ef8d70565c154?f=__disk__8c%2F85%2F55%2F8c85558a23541cdebb73929167566edfedf4904e",
+    "viewUri": "https://www.sciencebase.gov/catalog/file/get/61087009d34ef8d70565c154?f=__disk__8c%2F85%2F55%2F8c85558a23541cdebb73929167566edfedf4904e&width=17878&height=6504",
+    "previewImage": {
+     "thumbnail": {
+      "uri": "https://www.sciencebase.gov/catalog/file/get/61087009d34ef8d70565c154?f=__disk__8c%2F85%2F55%2F8c85558a23541cdebb73929167566edfedf4904e&width=150&height=55",
+      "width": 150,
+      "height": 55
+     },
+     "small": {
+      "uri": "https://www.sciencebase.gov/catalog/file/get/61087009d34ef8d70565c154?f=__disk__8c%2F85%2F55%2F8c85558a23541cdebb73929167566edfedf4904e&width=350&height=127",
+      "width": 350,
+      "height": 127
+     },
+     "medium": {
+      "uri": "https://www.sciencebase.gov/catalog/file/get/61087009d34ef8d70565c154?f=__disk__8c%2F85%2F55%2F8c85558a23541cdebb7392
+== distributionLinks
+[
+ {
+  "uri": "https://www.sciencebase.gov/catalogMaps/mapping/ows/61087009d34ef8d70565c154?mode=download&request=kml&service=wms&layers=landslide_susceptibility_raster",
+  "title": "KML Service",
+  "type": "kml",
+  "typeLabel": "KML Download",
+  "rel": "alternate",
+  "name": "",
+  "files": ""
+ },
+ {
+  "uri": "https://www.sciencebase.gov/catalogMaps/mapping/ows/61087009d34ef8d70565c154?service=wms&request=getcapabilities&version=1.3.0",
+  "title": "ScienceBase WMS Service",
+  "type": "serviceCapabilitiesUrl",
+  "typeLabel": "OGC Service Capabilities URL",
+  "rel": "alternate",
+  "name": "",
+  "files": ""
+ },
+ {
+  "uri": "https://www.sciencebase.gov/catalogMaps/mapping/ows/61087009d34ef8d70565c154?service=wcs&request=getcapabilities&version=1.0.0",
+  "title": "ScienceBase WCS Service",
+  "type": "serviceCapabilitiesUrl",
+  "typeLabel": "OGC Service Capabilities URL",
+  "rel": "alternate",
+  "name": "",
+  "files": ""
+ },
+ {
+  "uri": "https://www.sciencebase.gov/catalog/file/get/61087009d34ef8d70565c154",
+  "title": "Download Attached Files",
+  "type": "downloadLink",
+  "typeLabel": "Download Link",
+  "rel": "alternate",
+  "name": "GeographicInfor.zip",
+  "files": [
+   {
+    "name": "landslide_susceptibility_raster/landslide_susceptibility_raster.tfw",
+    "title": "",
+    "contentType": "text/plain",
+    "size": 90,
+    "checksum": null
+   },
+   {
+    "name": "landslide_susceptibility_raster/landslide_susceptibility_raster.tif",
+    "title": "",
+    "contentType": "image/geotiff",
+    "size": 43918443,
+    "checksum": null
+   },
+   {
+    "name": "landslide_susceptibility_raster/landslide_susceptibility_raster.tif.aux.xml",
+    "title": "",
+    "contentType": "application/xml",
+    "size": 907,
+    "checksum": null
+   },
+   {
+    "name": "landslide_susceptibility_raster/landslide_susceptibility_raster.tif.lyr",
+    "title": "",
+    "contentType": "application/x-tika-msoffice",
+    "size": 7168,
+    "checksum": null
+   },
+   {
+    "name": "landslide_susceptibility_raster/landslide_susceptibility_raster.tif.ovr",
+    "title": "",
+    "contentType": "image/tiff",
+    "size": 18891235,
+    "checksum": null
+   },
+   {
+    "name": "landslide_susceptibility_raster/landslide_susceptibility_raster.tif.vat.cpg",
+    "title": "",
+    "contentType": "text/plain",
+    "size": 5,
+    "checksum": null
+   },
+   {
+    "name": "landslide_susceptibility_raster/landslide_susceptibility_raster.tif.vat.dbf",
+    "title": "",
+    "contentType": "application/unknown",
+    "size": 530,
+    "checksum": null
+   },
+   {
+    "name": "landslide_susceptibility_raster/landslide_susceptibility_raster.tif-ColorRamp.SLD",
+    "title": null,
+    "contentType": "application/sld+xml",
+    "size": 2117,
+    "checksum": null
+   },
+   {
+    "name": "landslide_susceptibility_raster.xml",
+    "title": "summary metadata",
+    "contentType": "application/fgdc+xml",
+    "size": 18610,
+    "checksum": {
+     "value": "01b60423b6563e4d4b9d4dfa92832792",
+     "type": "MD5"
+    }
+   }
+  ]
+ }
+]
+== webLinks
+[
+ {
+  "type": "Related_Primary_Publication",
+  "typeLabel": "Related Primary Publication",
+  "uri": "https://pubs.er.usgs.gov/publication/ofr20201022",
+  "title": "Hughes, K.S., and Schulz, W.H., 2020, Map depicting susceptibility to landslides triggered by intense rainfall, Puerto Rico: U.S. Geological Survey Open-File Report 2020\u20131022, 91 p., 1 plate, scale 1:150,000, https://doi.org/10.3133/ofr20201022.",
+  "hidden": false
+ },
+ {
+  "type": "Related_Primary_Publication",
+  "typeLabel": "Related Primary Publication",
+  "uri": "https://doi.org/10.3133/ofr20201022",
+  "title": "Hughes, K.S., and Schulz, W., 2020, Map depicting susceptibility to landslides triggered by intense rainfall, Puerto Rico: U.S. Geological Survey Open-File Report, https://doi.org/10.3133/ofr20201022.",
+  "hidden": false
+ }
+]
+== extents
+null
+== hasChildren
+false
+== parentId
+"5474ec49e4b04d7459a7eab2"
+== identifiers
+[
+ {
+  "type": "DOI",
+  "scheme": "https://www.sciencebase.gov/vocab/category/item/identifier",
+  "key": "doi:10.5066/P990ZP4C"
+ }
+]
+== dates
+[
+ {
+  "type": "creation",
+  "dateString": "2020",
+  "label": "Creation"
+ },
+ {
+  "type": "Publication",
+  "dateString": "2021-08-17",
+  "label": "Publication Date"
+ }
+]
+== citation
+"Hughes, K.S., and Schulz, W.H., 2021, Geographic Information System Layer of a Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico: U.S. Geological Survey data release, https://doi.org/10.5066/P990ZP4C."
+== purpose
+"Puerto Rico regularly experiences rainfall-induced landslides, with intense rainfall often triggering widespread landsliding. To improve the ability to reduce hazards to people and the built environment posed by rainfall-induced landslides, we developed a map depicting an estimate of the relative susceptibility to such landslides."
+== rights
+null
+== provenance
+{
+ "dateCreated": "2021-08-02T22:22:01Z",
+ "lastUpdated": "2021-08-22T04:52:14Z"
+}
+{"total":0,"took":"2ms","selflink":{"rel":"self","url":"https://www.sciencebase.gov/catalog/items/get?parentId=61087009d34ef8d70565c154&format=json&max=50&fields=title%2Cfiles%2CwebLinks"},"items":[]}
+PARENT USGS Data Release Products True
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="login-pf">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="noindex, nofollow">
+
+            <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Sign in to ScienceBase</title>
+    <link rel="icon" href="/auth/resources/iurtm/login/mfa-sciencebase-keycloak-theme/usgs/img/favicon.ico" />
+            <link href="/auth/resources/iurtm/login/mfa-sciencebase-keycloak-theme/../keycloak/lib/patternfly/css/patternfly.css" rel="stylesheet" />
+            <link href="/auth/resources/iurtm/login/mfa-sciencebase-keycloak-theme/../keycloak/lib/zocial/zocial.css" rel="stylesheet" />
+            <link href="/auth/resources/iurtm/login/mfa-sciencebase-keycloak-theme/css/login.css" rel="stylesheet" />
+            <link href="/auth/resources/iurtm/login/mfa-sciencebase-keycloak-theme/usgs/css/common.css" rel="stylesheet" />
+            <link href="/auth/resources/iurtm/login/mfa-sciencebase-keycloak-theme/usgs/css/custom.css" rel="stylesheet" />
+</head>
+
+<body class="">
+<header id="navbar" class="header-nav"  role="banner">
+  <div class="tmp-container">
+    <!-- primary navigation bar -->
+    <!-- search bar-->
+    <div class="header-search">
+      <a class="logo-header" href="https://www.usgs.gov/" title="Home">
+        <img src="/auth/resources/iurtm/login/mfa-sciencebase-keycloak-theme/usgs/img/logo.png"  alt="USGS Home" />
+      </a>
+    </div>
+    <!-- end search bar-->
+  </div>
+  <!-- end header-container-->
+</header>
+
+  <div class="login-pf-page">
+    <div id="kc-header" class="login-pf-page-header">
+      <div id="kc-header-wrapper" class="">ScienceBase</div>
+    </div>
+    <div class="card-pf login-pf-accounts">
+      <header class="login-pf-header">
+        <h1 id="kc-page-title">
+        Log in ...
+
+</h1>
+      </header>
+      <div id="kc-content">
+        <div id="kc-content-wrapper">
+
+
+
+    <div id="kc-form" class="row">
+      <div style="padding-left: 0;" id="kc-form-wrapper" class="col-md-12 login-pf-social-section">
+                <h2>Department of Interior Accounts <img src="/auth/resources/iurtm/login/mfa-sciencebase-keycloak-theme/img/DOI_logo.png"  alt="U.S. Department of the Interior" style="height: 50px; margin-top: -10px; padding-left: 20px"/></h2>
+                <div style="margin-bottom: 2em;" id="kc-social-providers" class="col-md-12 login-pf-social-section">
+                  <ul class="login-pf-social list-unstyled login-pf-social-all ">
+                        <li class="login-pf-social-link"><a tabindex="1" autofocus href="/auth/realms/ScienceBase/broker/entra/login?client_id=catalog&amp;tab_id=AIcEeO_cSO8&amp;session_code=c3hc4IVzIDN0VmKDbKCjRqTIMcX4g7mhUuckKiHPXdw" id="zocial-entra" class="zocial saml"> <span>Log in</span></a></li>
+           
+18610 meta.xml
+HTTP/2 200 
+date: Sun, 11 Oct 2026 02:29:43 GMT
+content-type: application/zip
+content-length: 60249068
+access-control-allow-headers: Content-Type, Authorization, X-Requested-With, Accept, Origin
+access-control-allow-methods: POST, GET, PUT, DELETE
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS
+access-control-allow-origin: *
+access-control-max-age: 3600
+content-disposition: attachment; filename="GeographicInfor.zip"
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://*.gstatic.com https://cdnjs.cloudflare.com https://www.gstatic.com/recaptcha/ https://www.google.com/recaptcha/ https://www.googletagmanager.com https://code.jquery.com https://use.fontawesome.com https://apis.google.com https://cdn.jsdelivr.net https://*.arcgis.com https://*.arcgisonline.com https://*.usgs.gov https://ssl.google-analytics.com https://static.cloudflareinsights.com https://dap.digitalgov.gov https://www.youtube.com; style-src 'self' 'unsafe-inline' https://www.sciencebase.gov https://use.fontawesome.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com/ https://*.arcgis.com https://*.arcgisonline.com; img-src 'self' data: https://*.arcgis.com https://*.arcgisonline.com https://*.usgs.gov https://api.sciencebase.gov https://www.gstatic.com https://*.googleusercontent.com https://*.s3.amazonaws.com https://d123abc.cloudfront.net https://basemap.nationalmap.gov https://cdnjs.cloudflare.com/ https://ssl.google-analytics.com; font-src 'self' data: https://use.fontawesome.com https://fonts.gstatic.com https://*.arcgis.com https://*.arcgisonline.com; frame-src 'self' https://www.google.com https://recaptcha.google.com https://*.googleusercontent.com https://www.sciencebase.gov https://www.gstatic.com/recaptcha/ https://www.google.com/recaptcha/ https://accounts.google.com https://www.arcgis.com https://tiles.arcgis.com; connect-src 'self' https://www.google.com https://www.googletagmanager.com https://www.googleapis.com https://oauth2.googleapis.com https://cdnjs.cloudflare.com https://*.arcgis.com https://*.arcgisonline.com https://*.usgs.gov https://cloudflareinsights.com https://www.google-analytics.com https://dap.digitalgov.gov; form-action 'self' https://login.microsoftonline.com https://*.sciencebase.gov https://www.sciencebase.gov https://beta.sciencebase.gov; frame-ancestors 'self' https://*.sciencebase.gov https://www.sciencebase.gov https://beta.sciencebase.gov; base-uri 'self';
+server: cloudflare
+x-content-type-options: nosniff
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Cookie,User-Agent,Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+x-frame-options: SAMEORIGIN
+x-frame-options: DENY
+set-cookie: JSESSIONID=A1B42A4C52440F280E83AECB0799085B.tcp2; Path=/catalog; Secure; HttpOnly
+set-cookie: __cf_bm=AtCUtghxBYOw1CJxmEEJzKYx_uNwQSasGEKh2BgaZyI-1791685763.963322-1.0.1.1-C_15cLmWTPZAvXr4f9kTS6OMVqRvfVf49ikbk2UQ1mkX.FkmCIJIEy_JlDGG61E3iD64GEkphpN5ivOjMK.AzNkoATxLLQZnqVKV2BA9fUChYoP5rHpoUjOgvv7mZsSD; HttpOnly; SameSite=None; Secure; Path=/; Domain=sciencebase.gov; Expires=Sun, 11 Oct 2026 02:59:43 GMT
+cf-cache-status: DYNAMIC
+cf-ray: a48a6fd8bb80a365-SEA
+
+-rw-r--r-- 1 runner runner 60249068 Oct 11 02:29 all.zip
+all.zip: Zip archive data, at least v2.0 to extract, compression method=deflate
+Archive:  all.zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+    18610  2026-10-10 20:29   landslide_susceptibility_raster.xml
+       90  2026-10-10 20:29   landslide_susceptibility_raster/landslide_susceptibility_raster.tfw
+ 43918443  2026-10-10 20:29   landslide_susceptibility_raster/landslide_susceptibility_raster.tif
+      907  2026-10-10 20:29   landslide_susceptibility_raster/landslide_susceptibility_raster.tif.aux.xml
+     7168  2026-10-10 20:29   landslide_susceptibility_raster/landslide_susceptibility_raster.tif.lyr
+ 18891235  2026-10-10 20:29   landslide_susceptibility_raster/landslide_susceptibility_raster.tif.ovr
+        5  2026-10-10 20:29   landslide_susceptibility_raster/landslide_susceptibility_raster.tif.vat.cpg
+      530  2026-10-10 20:29   landslide_susceptibility_raster/landslide_susceptibility_raster.tif.vat.dbf
+     2117  2026-10-10 20:29   landslide_susceptibility_raster/landslide_susceptibility_raster.tif-ColorRamp.SLD
+---------                     -------
+ 62839105                     9 files
+90409 pub.html
+href="/publication/ofr20201022?mimetype=dublincore"
+href="/publication/ofr20201022?mimetype=ris"
+href="https://doi.org/10.3133/ofr20201022"
+href="https://doi.org/10.5066/P990ZP4C"
+href="https://doi.org/10.5066/P9VK2FAL"
+href="https://hazards.colorado.edu/uploads/documents/PuertoRico_GuiaDerrumbe_2020.pdf"
+href="https://hazards.colorado.edu/uploads/documents/PuertoRico_LandslideGuide_2020.pdf"
+href="https://pubs.usgs.gov/of/2020/1022/SI_raster_for_SMAP.zip"
+href="https://pubs.usgs.gov/of/2020/1022/ofr20201022_kmz.zip"
+href="https://pubs.usgs.gov/of/2020/1022/ofr20201022_pamphlet.pdf"
+href="https://pubs.usgs.gov/of/2020/1022/ofr20201022_pamphlet_esp.pdf"
+href="https://pubs.usgs.gov/of/2020/1022/ofr20201022_readme.txt"
+href="https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet.pdf"
+href="https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_esp.pdf"
+href="https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_esp_georeferenced.pdf"
+href="https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_esp_georeferenced.tif"
+href="https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_georeferenced.tif"
+href="https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_geospatial.pdf"
+href="https://www.doi.gov/"
+href="https://www.doi.gov/pmb/eeo/no-fear-act"
+href="https://www.doi.gov/privacy"
+href="https://www.doioig.gov/"
+4527 of_index.html
+href="/pubs/of/2020/"
+href="?C=D;O=A"
+href="?C=M;O=A"
+href="?C=N;O=D"
+href="?C=S;O=A"
+href="SI_raster_for_SMAP.zip"
+href="coverthb.jpg"
+href="ofr20201022_kmz.zip"
+href="ofr20201022_pamphlet.pdf"
+href="ofr20201022_pamphlet_esp.pdf"
+href="ofr20201022_readme.txt"
+href="ofr20201022_sheet.pdf"
+href="ofr20201022_sheet_esp.pdf"
+href="ofr20201022_sheet_esp_georeferenced.pdf"
+href="ofr20201022_sheet_esp_georeferenced.tif"
+href="ofr20201022_sheet_georeferenced.tif"
+href="ofr20201022_sheet_geospatial.pdf"
+HTTP/2 302 
+date: Sun, 11 Oct 2026 02:29:47 GMT
+content-type: text/html;charset=utf-8
+location: https://www.sciencebase.gov/catalog/item/61087009d34ef8d70565c154
+server: cloudflare
+vary: Origin
+vary: Accept
+expires: Sun, 11 Oct 2026 03:03:39 GMT
+permissions-policy: interest-cohort=(),browsing-topics=()
+cf-cache-status: DYNAMIC
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=EOd%2FksbEdZ1IevxOljjGc4nVQxl4YKbJWcQhzmGUcCrWVHpiRfWBBQWNqNQ1zf4IZ2Kag%2Bq%2Fwm32TYmQ772HdNEUXRT65K5aSudkSDlZuf%2BrkLmARSyyomU%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+cf-ray: a48a706a4e0572dd-SEA
+alt-svc: h3=":443"; ma=86400
+
+HTTP/2 200 
+date: Sun, 11 Oct 2026 02:29:47 GMT
+access-control-allow-headers: Content-Type, Authorization, X-Requested-With, Accept, Origin
+access-control-allow-methods: POST, GET, PUT, DELETE
+access-control-allow-methods: GET, POST, PUT, DELETE, OPTIONS
+access-control-allow-origin: *
+access-control-max-age: 3600
+cache-control: no-cache, no-store
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com https://*.gstatic.com https://cdnjs.cloudflare.com https://www.gstatic.com/recaptcha/ https://www.google.com/recaptcha/ https://www.googletagmanager.com https://code.jquery.com https://use.fontawesome.com https://apis.google.com https://cdn.jsdelivr.net https://*.arcgis.com https://*.arcgisonline.com https://*.usgs.gov https://ssl.google-analytics.com https://static.cloudflareinsights.com https://dap.digitalgov.gov https://www.youtube.com; style-src 'self' 'unsafe-inline' https://www.sciencebase.gov https://use.fontawesome.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com/ https://*.arcgis.com https://*.arcgisonline.com; img-src 'self' data: https://*.arcgis.com https://*.arcgisonline.com https://*.usgs.gov https://api.sciencebase.gov https://www.gstatic.com https://*.googleusercontent.com https://*.s3.amazonaws.com https://d123abc.cloudfront.net https://basemap.nationalmap.gov https://cdnjs.cloudflare.com/ https://ssl.google-analytics.com; font-src 'self' data: https://use.fontawesome.com https://fonts.gstatic.com https://*.arcgis.com https://*.arcgisonline.com; frame-src 'self' https://www.google.com https://recaptcha.google.com https://*.googleusercontent.com https://www.sciencebase.gov https://www.gstatic.com/recaptcha/ https://www.google.com/recaptcha/ https://accounts.google.com https://www.arcgis.com https://tiles.arcgis.com; connect-src 'self' https://www.google.com https://www.googletagmanager.com https://www.googleapis.com https://oauth2.googleapis.com https://cdnjs.cloudflare.com https://*.arcgis.com https://*.arcgisonline.com https://*.usgs.gov https://cloudflareinsights.com https://www.google-analytics.com https://dap.digitalgov.gov; form-action 'self' https://login.microsoftonline.com https://*.sciencebase.gov https://www.sciencebase.gov https://beta.sciencebase.gov; frame-ancestors 'self' https://*.sciencebase.gov https://www.sciencebase.gov https://beta.sciencebase.gov; base-uri 'self';
+expires: Thu, 01 Jan 1970 00:00:00 GMT
+last-modified: Thu, 01 Jan 1970 00:00:00 GMT
+pragma: no-cache
+server: cloudflare
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+exit code 0
+58M	out
+dropped (over 20 MB): out/all.zip

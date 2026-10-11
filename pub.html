@@ -1,0 +1,1215 @@
+
+
+<!DOCTYPE html>
+<html xmlns:mml="https://www.w3.org/1998/Math/MathML" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:ali="https://www.niso.org/schemas/ali/1.0/" xmlns:xi="https://www.w3.org/2001/XInclude" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" lang="en">
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Start SAS Google Tag Manager --> 
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-TVTCHDP');</script>
+        <!-- End SAS Google Tag Manager -->
+    
+        <!-- START USGS DAP Google Tag Manager -->
+        <!-- USE REQUIRED script for all public applications
+        IMPORTANT: REMOVE this script for any logged in pages and/or internal applications  -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TKQR8KP');</script>
+        <!-- END USGS DAP Google Tag Manager --> 
+
+        
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="title" content="USGS Publications Warehouse">
+    <meta name="keywords" content>
+    <meta name="format-detection" content="telephone=no">
+    
+    <title>Map depicting susceptibility to landslides triggered by intense rainfall, Puerto Rico</title>
+    <meta NAME="title" content="Map depicting susceptibility to landslides triggered by intense rainfall, Puerto Rico" />
+    <meta name="description" content="Landslides in Puerto Rico range from nuisances to deadly events. Centuries of agricultural and urban modification of the landscape have perturbed many already unstable hillsides on the tropical island. One of the main triggers of mass wasting on the island is the high-intensity rainfall that is associated with tropical atmospheric systems. Puerto Rico’s geographic position and rugged topography render millions of residents vulnerable to widespread landslide events. In this study, a high-resolution (5 meters), high-intensity rainfall-induced landslide susceptibility model was produced using the frequency-ratio method. Datasets utilized in the model included a complete-island landslide inventory created from imagery obtained after Hurricanes Irma and María impacted the island during September 2017, slope inclination, land-surface curvature, soil type, geologic terrane, mean annual precipitation, land use, soil moisture, and distance to roadways and streams. The final data product (plate 1) is a statistically viable representation of where landslides are likely to initiate during..." />
+    <META NAME="abstract" CONTENT="Landslides in Puerto Rico range from nuisances to deadly events. Centuries of agricultural and urban modification of the landscape have perturbed many already unstable hillsides on the tropical island. One of the main triggers of mass wasting on the island is the high-intensity rainfall that is associated with tropical atmospheric systems. Puerto Rico’s geographic position and rugged topography render millions of residents vulnerable to widespread landslide events. In this study, a high-resolution (5 meters), high-intensity rainfall-induced landslide susceptibility model was produced using the frequency-ratio method. Datasets utilized in the model included a complete-island landslide inventory created from imagery obtained after Hurricanes Irma and María impacted the island during September 2017, slope inclination, land-surface curvature, soil type, geologic terrane, mean annual precipitation, land use, soil moisture, and distance to roadways and streams. The final data product (plate 1) is a statistically viable representation of where landslides are likely to initiate during or soon after intense rainfall, with a robust receiver operating characteristic area-under-curve value of 0.87. The model output raster pixel values were binned into 100 equal-area quantiles and then classified into Low, Moderate, High, Very High, and Extremely High classes of susceptibility. The Extremely High susceptibility classification represents the most vulnerable 1 percent of the island, whereas Very High, High, Moderate, and Low classifications cover 9, 20, 30, and 40 percent of the island, respectively. The susceptibility map is intended to assist in planning future development, mitigation measures, and post-event emergency response; however, it is not a substitute for site-specific, slope-stability assessments performed by licensed geologists and engineers. Additionally, the map does not portray locations where landslide material may travel after mobilization, and which may be at extreme risk; nor does it necessarily portray where landslides may occur during earthquakes or mass wasting triggered by prolonged, relatively low-intensity rainfall." />
+    <meta NAME="author" content="K. Stephen Hughes"/><meta NAME="author" content="William H. Schulz"/>
+    <meta name = "revised" content="2025-05-16T17:02:41.74285"/>
+    <meta name = "created" content="2020-03-16T14:40:00"/>
+    <meta name = "date" content="2020"/>
+  <!-- meta tags for google scholar indexing and zotero/mendeley parsing -->
+    <meta name="citation_title" content="Map depicting susceptibility to landslides triggered by intense rainfall, Puerto Rico" />
+    <meta name="citation_publication_date" content="2020" />
+    <meta name="citation_date" content="2020" />
+    <meta name="citation_online_date" content="2020-03-16T14:40:00" />
+    <meta NAME="citation_author" content="K. Stephen Hughes"/><meta NAME="citation_author" content="William H. Schulz"/>
+    
+    
+    
+    <meta name="citation_journal_title" content="Open-File Report" />
+    
+    
+    <meta name="citation_issn" content="2331-1258" />
+    
+    
+    
+    
+        
+        <meta name="citation_technical_report_institution" content="U.S. Geological Survey" />
+        <meta name="citation_technical_report_number" content="2020-1022" />
+    
+    <meta name="citation_doi" content="10.3133/ofr20201022" />
+    
+        <meta name="citation_pdf_url" content="https://pubs.usgs.gov/of/2020/1022/ofr20201022_pamphlet.pdf" />
+    
+
+    
+        
+    
+        
+<link rel="stylesheet" href="https://pubs.usgs.gov/static/vendor/leaflet/leaflet.css">
+       
+       <link rel="stylesheet" href="https://pubs.usgs.gov/static/vendor/academicons/css/academicons.css">
+    
+    
+    
+        
+
+
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [ ['^','^'], ["\\(","\\)"] ],
+    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    processEscapes: true
+  },
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process',
+    menuOptions: {
+      settings: {
+        zoom: 'Click',
+        zscale: '200%'
+      }
+    },
+    enableAssistiveMml: true,
+    enableEnrichment: true,
+    sre: {
+      speech: 'deep',         // or 'shallow', or 'deep'
+      domain: 'mathspeak',    // speech rules domain
+      style: 'default',       // speech rules style
+      locale: 'en'            // the language to use (en, fr, es, de, it)
+    },
+    enrichError: (doc, math, err) => doc.enrichError(doc, math, err),  // function to call if enrichment fails
+    enableExplorer: true,
+    a11y: {
+      infoType: true,                   // show semantic type on mouse hovering
+      infoRole: true,                   // show semantic role on mouse hovering
+      infoPrefix: true,                 // show speech prefixes on mouse hovering
+    }
+  }
+};
+</script>
+
+
+<script id="MathJax-script" async
+src="https://pubs.usgs.gov/static/vendor/MathJax/es5/tex-mml-svg.js"></script>
+    
+
+
+
+
+        <title>USGS Publications Warehouse</title>
+
+        <!-- USWDS 3 requires uswds-init to run in <head> BEFORE any stylesheet.
+             Keep this above the page_style/head_script blocks, which is where
+             child templates link their CSS. -->
+             <script src="https://pubs.usgs.gov/static/vendor/uswds-init.min.js"></script>
+             
+        
+        
+    
+        
+<link rel="stylesheet" href="https://pubs.usgs.gov/static/vendor/leaflet/leaflet.css">
+       
+       <link rel="stylesheet" href="https://pubs.usgs.gov/static/vendor/academicons/css/academicons.css">
+    
+
+        <!--[if gt IE 8]><!-->
+        <script src="https://pubs.usgs.gov/static/vendor/polyfill.js"></script>
+        <script>
+            if (!String.prototype.startsWith) {
+                String.prototype.startsWith = function(search, pos) {
+                    return this.substr(!pos || pos < 0 ? 0 : +pos, search.length) === search;
+                };
+            }
+        </script>
+        <!--<![endif]-->
+        <script src="https://pubs.usgs.gov/static/vendor/system.js" defer></script>
+        
+    <script defer>
+        window.addEventListener('DOMContentLoaded', () => {
+            SystemJS.import("https://pubs.usgs.gov/static/scripts/common.a49e452e.js");
+        });
+    </script>
+
+        
+    <link rel="stylesheet" href="https://pubs.usgs.gov/static/pubs_base.45bf58dd.css" type="text/css" />
+    <link rel="shortcut icon" href="https://pubs.usgs.gov/static/images/pubswh/favicon.72b5542e.ico"/>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="USGS Pubs"/>
+    <link rel="unapi-server" type="application/xml" title="unAPI" href="/unapi" />
+    <link rel="alternate" type="application/rss+xml" title="USGS Publications Warehouse RSS Feed" href="https://pubs.usgs.gov/pubs-services/publication/rss"/>
+    <script>
+        var CONFIG = {
+            lookupUrl: 'https://pubs.usgs.gov/pubs-services/lookup',
+            requestArgs: JSON.parse('{}') <!-- set to True if only one value per key is desired -->
+        }
+    </script>
+
+    </head>
+    <body>
+        <!-- Start SAS Google Tag Manager (noscript) --> 
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVTCHDP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End SAS Google Tag Manager (noscript) -->
+    
+        
+        
+    <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+    <section class="usa-banner maxw-full" aria-label="Official government website">
+        <div class="usa-accordion">
+            <header class="usa-banner__header">
+                <div class="usa-banner__inner content-container">
+                    <div class="grid-col-auto">
+                        <img class="usa-banner__header-flag" src="https://pubs.usgs.gov/static/img/us_flag_small.37e6dc83.png" alt="U.S. flag">
+                    </div>
+                    <div class="grid-col-fill tablet:grid-col-auto">
+                        <p class="usa-banner__header-text">An official website of the United States government</p>
+                        <p class="usa-banner__header-action" aria-hidden="true">Here’s how you know</p>
+                    </div>
+                    <button class="usa-accordion__button usa-banner__button"
+                            aria-expanded="false" aria-controls="gov-banner">
+                        <span class="usa-banner__button-text">Here’s how you know</span>
+                    </button>
+                </div>
+            </header>
+            <div class="usa-banner__content usa-accordion__content" id="gov-banner">
+                <div class="grid-row grid-gap-lg">
+                    <div class="usa-banner__guidance tablet:grid-col-6">
+                        <img class="usa-banner__icon usa-media-block__img" src="https://pubs.usgs.gov/static/img/icon-dot-gov.42b4ac46.svg"
+                             alt="Dot gov">
+                        <div class="usa-media-block__body">
+                            <p>
+                                <strong>Official websites use .gov</strong>
+                                <br/>
+                                A <strong>.gov</strong> website belongs to an official government organization in the
+                                United States.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="usa-banner__guidance tablet:grid-col-6">
+                        <img class="usa-banner__icon usa-media-block__img" src="https://pubs.usgs.gov/static/img/icon-https.73abd866.svg"
+                             alt="Https">
+                        <div class="usa-media-block__body">
+                            <p>
+                                <strong>Secure .gov websites use HTTPS</strong>
+                                <br/>
+                                A <strong>lock</strong> (
+                                <span class="icon-lock">
+                                    <svg xmlns="https://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 64" class="usa-banner__lock-image" role="img" aria-labelledby="banner-lock-title banner-lock-description"><title id="banner-lock-title">Lock</title><desc id="banner-lock-description">A locked padlock</desc><path fill="#000000" fill-rule="evenodd" d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"/></svg>
+                                </span>
+                                ) or <strong>https://</strong> means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="usa-overlay"></div>
+
+    <header class="usa-header usa-header--extended usgs-header site-header" role="banner">
+        <div class="usgs-header-container">
+            <div class="usa-navbar">
+                <div class="usa-logo" id="extended-logo">
+                    <a href="https://www.usgs.gov" accesskey="1" title="Home" aria-label="Home">
+                        <img alt="USGS Home" src="https://pubs.usgs.gov/static/img/USGS_logo.356d51b9.svg"></img>
+                    </a>
+                    
+                </div>
+                <button class="usa-menu-btn">Menu</button>
+            </div>
+        </div>
+
+        
+            <nav role="navigation" class="usa-nav">
+                <div>
+                    <button class="usa-nav__close"><img src="https://pubs.usgs.gov/static/img/usa-icons/close.d9165ac7.svg" alt="close"></button>
+                    <ul class="usa-nav__primary usa-accordion">
+                        <li class="usa-nav__primary-item">
+                            <a class="usa-nav__link" href="/">USGS Publications Warehouse</a>
+                        </li>
+                        <li class="usa-nav__primary-item">
+                            <button class="usa-accordion__button usa-nav__link"
+                                    aria-expanded="false"
+                                    aria-controls="explore-section">
+                                <span>Explore</span>
+                            </button>
+                            <ul id="explore-section" class="usa-nav__submenu">
+                                <li class="usa-nav__submenu-item">
+                                 <a href="/newpubs">Explore recent publications by USGS authors</a>
+                                </li>
+                                <li class="usa-nav__submenu-item">
+                                    <a href="/browse/">
+                                        Browse all of Pubs Warehouse by publication type and year
+                                    </a>
+                                </li>
+                           </ul>
+                        </li>
+                        <li class="usa-nav__primary-item">
+                            <button class="usa-accordion__button usa-nav__link"
+                                    aria-expanded="false"
+                                    aria-controls="documentation-section">
+                                <span>Documentation</span>
+                            </button>
+                            <ul id="documentation-section" class="usa-nav__submenu">
+                                <li class="usa-nav__submenu-item">
+                                    <a href="/documentation/about">About</a>
+                                </li>
+                                <li class="usa-nav__submenu-item">
+                                    <a href="/documentation/faq">FAQs</a>
+                                </li>
+                                <li class="usa-nav__submenu-item">
+                                  <a href="/documentation/web_service_documentation">Web service documentation</a>
+                                </li>
+                                <li class="usa-nav__submenu-item">
+                                  <a href="/documentation/other_resources">Other resources</a>
+                                </li>
+                                <li class="usa-nav__submenu-item">
+                                    <a href="/documentation/usgs_series">
+                                        Descriptions of US Geological Survey Report Series
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="usa-nav__primary-item">
+                            <a class="usa-nav__link" href="/contact">Contact</a>
+                        </li>
+                        <li class="usa-nav__primary-item">
+                            <a class="usa-nav__link" href="https://www.usgs.gov/information-policies-and-instructions/liability#future-ips">Disclaimer</a>
+                        </li>
+                        
+                    </ul>
+                    <div class="usa-nav__secondary">
+                        <form class="usa-search usa-search--small" action="/search" method="get">
+                            <div role="search">
+                                <label class="usa-sr-only" for="extended-search-field-small">Search</label>
+                                <input class="usa-input" id="extended-search-field-small" type="search" name="q">
+                                <button class="usa-button" type="submit">
+                                    
+                                     <img class="usa-search__submit-icon"
+                                          src="https://pubs.usgs.gov/static/img/usa-icons-bg/search--white.d65004a6.svg"
+                                          alt="Search">
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        
+    </header>
+
+
+
+        <main id="main-content">
+            
+    
+
+    <div class="usa-prose">
+        
+    <main role ="main" id="publication-container" >
+        <!-- <script type="text/javascript">console.log('PUBSWH-369');</script> -->
+        <article itemscope itemtype="https://schema.org/ScholarlyArticle">
+            
+                <abbr class="unapi-id" title="https://pubs.usgs.gov/publication/ofr20201022">
+                    <!-- avoid empty --></abbr>
+            
+
+            
+
+            <div class="publication-header-container">
+                <div class="pubs-thumbnail">
+                    
+                        <a class="usa-link"
+                           title="First sheet link, right click to download or save as"
+                           href="https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet.pdf">
+                
+                
+                    <img id="thumbnail"
+                         src="https://pubs.usgs.gov/of/2020/1022/coverthb.jpg"
+                         alt="thumbnail"/>
+                
+            </a>
+                    
+                </div>
+                <div class="publication-header-info-container">
+                    
+                    <div class="publication-header-titles">
+                        <h3 class="publication-title" itemprop="name" style="margin-block-end: unset;">Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico</h3>
+
+                        
+                            <div class="series-title" style="margin-block-end: unset;">Open-File Report
+                                2020-1022</div>
+                        
+
+                        
+
+                        
+
+                        
+                            <div class="collaboration">Prepared in cooperation with the University of Puerto Rico at Mayagüez</div>
+                        
+                    </div>
+
+                    
+                    
+
+                    <section id="contributors"><div>
+                                <span class="list-title">By: </span><span class="contributor" itemprop="author"
+                              itemtype="https://schema.org/Person">K. Stephen Hughes</span>&nbsp;and&nbsp;<span class="contributor" itemprop="author"
+                              itemtype="https://schema.org/Person">William H. Schulz</span><a href="https://orcid.org/0000-0001-9980-3580" aria-label="ORC Id"><i class="ai ai-orcid"></i></a>
+                            </div>
+                        </section>
+                    <section>
+                        
+                        <div class="doi-container"><a itemprop="sameAs"
+                                                      class="usa-link"
+                                                      href="https://doi.org/10.3133/ofr20201022"
+                                                      onclick="GA.trackGAEvent('Downloads', 'DOI', 'https://dx.doi.org/10.3133/ofr20201022')">
+                            https://doi.org/10.3133/ofr20201022</a>
+                        </div>
+                        
+                        <!-- <div id="doi-twitter-container">
+
+                            <a href="https://twitter.com/share"
+                               class="twitter-share-button"
+                               data-text="USGS Pub"
+                               data-via="USGS_Pubs"
+                               data-dnt="true">Tweet</a>
+                            <script>!function(d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0],
+                                    p = /^https:/.test(d.location) ? 'http' : 'https';
+                                if (!d.getElementById(id)) {
+                                    js = d.createElement(s);
+                                    js.id = id;
+                                    js.src = p + '://platform.twitter.com/widgets.js';
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                }
+                            }(document, 'script', 'twitter-wjs');</script>
+                        </div> -->
+                        
+                        
+                        
+                            
+                                
+                            
+                        
+
+                        
+                            
+                                
+                                    
+                                
+                            
+                        
+                   
+                        
+                        
+                            <div id="metrics" class="pub-metrics">
+                                <p style="font-weight: bold;font-size: larger;margin-top: 0.25em;margin-bottom: 0.125em;">Metrics</p>
+                                
+                                    
+                                        <div id="altmetric" style="float:unset;margin-top:0.125em;">    
+                                            <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+                                            <div class='altmetric-embed' data-badge-type='1' data-doi="10.3133/ofr20201022"></div>
+                                        </div>
+                                    
+                                
+                                
+                                    
+                                        
+                                            <div id="crossref" >
+                                                <div style="display: flex">Cited by <a hidden id="modal-button" aria-controls="citations"  id="crossref-cited-by-count" style="font-weight: bold;padding-right: 0.25em;padding-left: 0.25em;">24</a> publications in Crossref</div>
+                                            </div>
+                                        
+                                    
+                                
+                                <a href="/documentation/faq#WhatMetricsAreAvailableForPublicationsInThePublicationsWarehouse" style="font-size:smaller;padding-top: 0.25em;display:flex;justify-content: center;">Metrics definitions</a>
+                            </div>
+                        
+
+
+                    </section>
+                </div>
+            </div>
+            
+            
+ 
+
+           
+
+            <section>
+                
+            </section>
+
+
+            <section id="disclaimer">
+                
+            </section>
+
+            
+            <section id="suggested">
+
+                
+                
+
+                
+                
+
+                
+                
+                <h4>Links</h4>
+                <ul class="usa-list">
+                    
+                    
+                    
+
+
+                    
+                    
+                        
+                        
+                              
+                        
+                              
+                        
+                        
+                    
+                        
+                        
+                        
+                    
+                        
+                        
+                        
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                        
+                        
+                            
+                        
+
+                        
+                        
+                            
+                                
+                            
+                            
+                        
+
+                        
+                        
+                            
+                            
+                            
+                        
+
+                        
+                        
+                            
+                            
+                        
+                    
+                        <li style="max-width: 100%;">
+                        
+                        
+                        
+                        
+                            Documents: 
+                            <ul>
+                            <li style="max-width: 100%;">
+                        
+                        
+                        
+                                    
+                                    
+                                
+
+                                
+                                
+                    <a class="usa-link Document" href="https://pubs.usgs.gov/of/2020/1022/ofr20201022_pamphlet.pdf" target="_blank"
+                       onclick="GA.trackGAEvent('Downloads', 'Document', 'https://pubs.usgs.gov/of/2020/1022/ofr20201022_pamphlet.pdf')"
+                       title=" OFR 2020-1022 pamphlet">
+                       
+                        
+                            
+                            
+                                
+                                    <strong>Report</strong> 
+                                
+
+                                
+                                    (pdf)
+                                
+                            
+                            
+                        
+
+                    </a>
+
+                     
+                                
+                                
+                                
+                                    
+                                        
+                        
+                                <small> - English language</small>
+                            </li>
+                                        
+                                            
+                                        
+                                        <li style="max-width: 100%;">
+                    <a class="usa-link Document" href="https://pubs.usgs.gov/of/2020/1022/ofr20201022_pamphlet_esp.pdf" target="_blank"
+                       onclick="GA.trackGAEvent('Downloads', 'Document', 'https://pubs.usgs.gov/of/2020/1022/ofr20201022_pamphlet_esp.pdf')"
+                       title=" OFR 2020-1022 pamphlet Spanish language">
+                       
+                        
+                            
+                            
+                                
+                                    <strong>Reporte</strong> 
+                                
+
+                                
+                                    (pdf)
+                                
+                            
+                            
+                        
+
+                    </a>
+
+                    
+                            <small> - En Español</small>
+                        </li>
+                                    </ul>
+                        
+                        </li>
+                    <li style="max-width: 100%;">Sheets:
+                            <ul class="filessublist"><li style="max-width: 100%;">
+                    <a class="usa-link Sheet" href="https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet.pdf" target="_blank"
+                       onclick="GA.trackGAEvent('Downloads', 'Sheet', 'https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet.pdf')"
+                       title=" Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico">
+                        <strong>Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico</strong>
+                            (pdf)</a>
+                    </li><li style="max-width: 100%;">
+                    <a class="usa-link Sheet" href="https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_geospatial.pdf" target="_blank"
+                       onclick="GA.trackGAEvent('Downloads', 'Sheet', 'https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_geospatial.pdf')"
+                       title=" Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico, Geo-referenced">
+                        <strong>Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico, Geo-referenced</strong>
+                            (pdf)</a>
+                    </li><li style="max-width: 100%;">
+                    <a class="usa-link Sheet" href="https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_esp.pdf" target="_blank"
+                       onclick="GA.trackGAEvent('Downloads', 'Sheet', 'https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_esp.pdf')"
+                       title=" Mapa de Susceptibilidad a Deslizamientos de Tierra Desencadenados por Precipitación Intensa en Puerto Rico">
+                        <strong>Mapa de Susceptibilidad a Deslizamientos de Tierra Desencadenados por Precipitación Intensa en Puerto Rico</strong>
+                            (pdf)</a>
+                    </li><li style="max-width: 100%;">
+                    <a class="usa-link Sheet" href="https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_esp_georeferenced.pdf" target="_blank"
+                       onclick="GA.trackGAEvent('Downloads', 'Sheet', 'https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_esp_georeferenced.pdf')"
+                       title=" Mapa de Susceptibilidad a Deslizamientos de Tierra Desencadenados por Precipitación Intensa en Puerto Rico, georreferenciado">
+                        <strong>Mapa de Susceptibilidad a Deslizamientos de Tierra Desencadenados por Precipitación Intensa en Puerto Rico, georreferenciado</strong>
+                            (pdf)</a>
+                    </li></ul>
+                        </li>
+                    <li style="max-width: 100%;">Related Works:
+                            <ul class="filessublist"><li style="max-width: 100%;">
+                    <a class="usa-link Related_Work" href="https://hazards.colorado.edu/uploads/documents/PuertoRico_LandslideGuide_2020.pdf" target="_blank"
+                       onclick="GA.trackGAEvent('Downloads', 'Related Work', 'https://hazards.colorado.edu/uploads/documents/PuertoRico_LandslideGuide_2020.pdf')"
+                       title=" Related Work">
+                        <strong>Landslide Guide for Residents of Puerto Rico</strong></a>
+                    </li><li style="max-width: 100%;">
+                    <a class="usa-link Related_Work" href="https://hazards.colorado.edu/uploads/documents/PuertoRico_GuiaDerrumbe_2020.pdf" target="_blank"
+                       onclick="GA.trackGAEvent('Downloads', 'Related Work', 'https://hazards.colorado.edu/uploads/documents/PuertoRico_GuiaDerrumbe_2020.pdf')"
+                       title=" Related Work">
+                        <strong>Guía sobre deslizamientos de tierra para residentes de Puerto Rico</strong></a>
+                    </li></ul>
+                        </li>
+                    <li style="max-width: 100%;">Application Sites:
+                            <ul class="filessublist"><li style="max-width: 100%;">
+                    <a class="usa-link Application_Site" href="https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=10506ecc7f15491daee17647f19248ee" target="_blank"
+                       onclick="GA.trackGAEvent('Downloads', 'Application Site', 'https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=10506ecc7f15491daee17647f19248ee')"
+                       title=" Application Site">
+                        <strong>Landslide susceptibility map interactive web viewer</strong></a>
+                    </li><li style="max-width: 100%;">
+                    <a class="usa-link Application_Site" href="https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=9378c6a890164d378a2e66da4b7970c0" target="_blank"
+                       onclick="GA.trackGAEvent('Downloads', 'Application Site', 'https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=9378c6a890164d378a2e66da4b7970c0')"
+                       title=" Application Site">
+                        <strong>Mapa de susceptibilidad a deslizamientos de tierra visor web interactivo</strong></a>
+                    </li></ul>
+                        </li>
+                    <li style="max-width: 100%;">Companion Files:
+                            <ul class="filessublist"><li style="max-width: 100%;">
+                    <a class="usa-link Companion_Files" href="https://pubs.usgs.gov/of/2020/1022/ofr20201022_kmz.zip" target="_blank"
+                       onclick="GA.trackGAEvent('Downloads', 'Companion Files', 'https://pubs.usgs.gov/of/2020/1022/ofr20201022_kmz.zip')"
+                       title=" OFR 2020-1022 kmz">
+                        <strong>Landslide susceptibility map as a Google Earth file</strong>
+                            (zip)</a>
+                    </li><li style="max-width: 100%;">
+                    <a class="usa-link Companion_Files" href="https://pubs.usgs.gov/of/2020/1022/SI_raster_for_SMAP.zip" target="_blank"
+                       onclick="GA.trackGAEvent('Downloads', 'Companion Files', 'https://pubs.usgs.gov/of/2020/1022/SI_raster_for_SMAP.zip')"
+                       title=" SI raster for SMAP">
+                        <strong>SI raster for SMAP</strong>
+                            (zip)</a>
+                    </li><li style="max-width: 100%;">
+                    <a class="usa-link Companion_Files" href="https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_georeferenced.tif" target="_blank"
+                       onclick="GA.trackGAEvent('Downloads', 'Companion Files', 'https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_georeferenced.tif')"
+                       title=" Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico (Geotiff)">
+                        <strong>Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico, Geo-referenced (Geotiff)</strong></a>
+                    </li><li style="max-width: 100%;">
+                    <a class="usa-link Companion_Files" href="https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_esp_georeferenced.tif" target="_blank"
+                       onclick="GA.trackGAEvent('Downloads', 'Companion Files', 'https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_esp_georeferenced.tif')"
+                       title=" Mapa de Susceptibilidad a Deslizamientos de Tierra Desencadenados por Precipitación Intensa en Puerto Rico, georreferenciado (Geotiff)">
+                        <strong>Mapa de Susceptibilidad a Deslizamientos de Tierra Desencadenados por Precipitación Intensa en Puerto Rico, georreferenciado (Geotiff)</strong></a>
+                    </li></ul>
+                        </li>
+                    <li style="max-width: 100%;">Data Releases:
+                            <ul class="filessublist"><li style="max-width: 100%;">
+                    <a class="usa-link Data_Release" href="https://doi.org/10.5066/P9VK2FAL" target="_blank"
+                       onclick="GA.trackGAEvent('Downloads', 'Data Release', 'https://doi.org/10.5066/P9VK2FAL')"
+                       title=" Data Release">
+                        <strong>USGS data release</strong></a>
+                        <small>- Results from frequency-ratio analyses of soil classification and land use related to landslide locations in Puerto Rico following Hurricane Maria</small>
+                    </li><li style="max-width: 100%;">
+                    <a class="usa-link Data_Release" href="https://doi.org/10.5066/P990ZP4C" target="_blank"
+                       onclick="GA.trackGAEvent('Downloads', 'Data Release', 'https://doi.org/10.5066/P990ZP4C')"
+                       title=" Data Release">
+                        <strong>USGS data release</strong></a>
+                        <small>- Geographic Information System Layer of a Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico</small>
+                    </li></ul>
+                        </li>
+                    
+                        <li style="max-width: 100%;">Read Me: 
+                    <a class="usa-link Read_Me" href="https://pubs.usgs.gov/of/2020/1022/ofr20201022_readme.txt" target="_blank"
+                       onclick="GA.trackGAEvent('Downloads', 'Read Me', 'https://pubs.usgs.gov/of/2020/1022/ofr20201022_readme.txt')"
+                       title=" OFR 2020-1022 readme file">
+                        <strong>Read Me</strong>
+                            (txt)</a>
+                    </li>
+                        <li style="max-width: 100%;">NGMDB Index Page: 
+                    <a class="usa-link NGMDB_Index_Page" href="https://ngmdb.usgs.gov/Prodesc/proddesc_109788.htm" target="_blank"
+                       onclick="GA.trackGAEvent('Downloads', 'NGMDB Index Page', 'https://ngmdb.usgs.gov/Prodesc/proddesc_109788.htm')"
+                       title=" NGMDB Index Page">
+                        <strong>National Geologic Map Database Index Page</strong></a>
+                    </li>
+                    
+                    
+                
+                    
+                    
+                    
+                    
+                    <li>Download citation as: <a class="usa-link RIS"
+                            href="/publication/ofr20201022?mimetype=ris">RIS</a>
+                        |
+                        <a class="usa-link DUBLIN_CORE" href="/publication/ofr20201022?mimetype=dublincore">Dublin
+                            Core</a></li>
+                </ul>
+            </section>
+            
+                
+                    <section itemprop="description" id="abstract">
+                        <h4 id="abstract_head">Abstract</h4>
+                        <div>
+                            <div class="abstract-contents">
+
+                                <p>Landslides in Puerto Rico range from nuisances to deadly events. Centuries of agricultural and urban modification of the landscape have perturbed many already unstable hillsides on the tropical island. One of the main triggers of mass wasting on the island is the high-intensity rainfall that is associated with tropical atmospheric systems. Puerto Rico’s geographic position and rugged topography render millions of residents vulnerable to widespread landslide events. In this study, a high-resolution (5 meters), high-intensity rainfall-induced landslide susceptibility model was produced using the frequency-ratio method. Datasets utilized in the model included a complete-island landslide inventory created from imagery obtained after Hurricanes Irma and María impacted the island during September 2017, slope inclination, land-surface curvature, soil type, geologic terrane, mean annual precipitation, land use, soil moisture, and distance to roadways and streams. The final data product (plate 1) is a statistically viable representation of where landslides are likely to initiate during or soon after intense rainfall, with a robust receiver operating characteristic area-under-curve value of 0.87. The model output raster pixel values were binned into 100 equal-area quantiles and then classified into Low, Moderate, High, Very High, and Extremely High classes of susceptibility. The Extremely High susceptibility classification represents the most vulnerable 1 percent of the island, whereas Very High, High, Moderate, and Low classifications cover 9, 20, 30, and 40 percent of the island, respectively. The susceptibility map is intended to assist in planning future development, mitigation measures, and post-event emergency response; however, it is not a substitute for site-specific, slope-stability assessments performed by licensed geologists and engineers. Additionally, the map does not portray locations where landslide material may travel after mobilization, and which may be at extreme risk; nor does it necessarily portray where landslides may occur during earthquakes or mass wasting triggered by prolonged, relatively low-intensity rainfall.</p>
+                            </div>
+                        </div>
+                    </section>
+                
+                
+                    <aside class="publication-aside">
+                        
+
+    <p>First posted March 16, 2020</p>
+
+
+
+
+
+
+    <div class="pub-contact-info-container">
+        <strong>For additional information, contact:</strong><br/>
+        <p>Director, <a href="https://www.usgs.gov/centers/geohazards" data-mce-href="https://www.usgs.gov/centers/geohazards">Geologic Hazards Science Center</a><br>U.S. Geological Survey<br>Box 25046, MS-966<br>Denver, CO 80225-0046</p>
+    </div>
+
+
+
+
+                    </aside>
+                
+                
+                    
+                
+            
+            
+            
+            
+                <section>
+                    <h4>Suggested Citation</h4>
+                    <p id="suggested-citation">Hughes, K.S., and Schulz, W.H., 2020, Map depicting susceptibility to landslides triggered by intense rainfall, Puerto Rico: U.S. Geological Survey Open-File Report 2020–1022, 91 p., 1 plate, scale 1:150,000, https://doi.org/10.3133/ofr20201022.</p>
+                    
+                        <p>ISSN: 2331-1258 (online)</p>
+                    
+                    
+                </section>
+            
+                <section>
+                    <h4>Study Area</h4>
+                    <div id="mymap" style="width:90%;height:450px;"></div>
+
+                </section>
+                
+                    <section>
+                        <h4>Table of Contents</h4>
+                        <ul><li>Acknowledgments</li><li>Executive Summary</li><li>Abstract</li><li>Introduction</li><li>Datasets and Methodology</li><li>Results and Discussion</li><li>Conclusion</li><li>References Cited</li><li>Appendix 1. Key for Municipality Abbreviations</li><li>Appendix 2. Results from Analyses of Land Cover</li><li>Appendix 3. Results from Analyses of Soil Class</li></ul>
+                    </section>
+                
+            
+
+            <section id="details">
+                <table class="usa-table usa-table--borderless">
+                    <tbody>
+                    
+                        <tr>
+                            <th scope="row">Publication Type</th>
+                            <td>Report</td>
+                        </tr>
+                    
+                        <tr>
+                            <th scope="row">Publication Subtype</th>
+                            <td>USGS Numbered Series</td>
+                        </tr>
+                    
+                        <tr>
+                            <th scope="row">Title</th>
+                            <td>Map depicting susceptibility to landslides triggered by intense rainfall, Puerto Rico</td>
+                        </tr>
+                    
+                        <tr>
+                            <th scope="row">Series Title</th>
+                            <td>Open-File Report</td>
+                        </tr>
+                    
+                        <tr>
+                            <th scope="row">Series Number</th>
+                            <td>2020-1022</td>
+                        </tr>
+                    
+                        <tr>
+                            <th scope="row">DOI</th>
+                            <td>10.3133/ofr20201022</td>
+                        </tr>
+                    
+                        <tr>
+                            <th scope="row">Publication Date</th>
+                            <td>March 16, 2020</td>
+                        </tr>
+                    
+                        <tr>
+                            <th scope="row">Year Published</th>
+                            <td>2020</td>
+                        </tr>
+                    
+                        <tr>
+                            <th scope="row">Language</th>
+                            <td>English, Spanish</td>
+                        </tr>
+                    
+                        <tr>
+                            <th scope="row">Publisher</th>
+                            <td>U.S. Geological Survey</td>
+                        </tr>
+                    
+                        <tr>
+                            <th scope="row">Publisher Location</th>
+                            <td>Reston VA</td>
+                        </tr>
+                    
+                        <tr>
+                            <th scope="row">Contributing Office(s)</th>
+                            <td>Geologic Hazards Science Center</td>
+                        </tr>
+                    
+                        <tr>
+                            <th scope="row">Description</th>
+                            <td>Report: viii, 91 pages; 2 Sheets: 49.11 x 33.86 inches; Application Sites; Data Release; Read Me</td>
+                        </tr>
+                    
+                        <tr>
+                            <th scope="row">Country</th>
+                            <td>United States</td>
+                        </tr>
+                    
+                        <tr>
+                            <th scope="row">State</th>
+                            <td>Puerto Rico</td>
+                        </tr>
+                    
+                        <tr>
+                            <th scope="row">Online Only (Y/N)</th>
+                            <td>Y</td>
+                        </tr>
+                    
+                    </tbody>
+                    <caption>Additional Publication Details</caption>
+                </table>
+            </section>
+            
+                <aside>
+                    <small><p class="adobeReader">Part or all of this report is presented in Portable Document Format
+                        (PDF). For best results viewing and printing PDF documents, it is recommended that you download
+                        the documents to your computer and open them with Adobe Reader. PDF documents opened from your
+                        browser may not display or print as intended. Download the latest version of <a
+                                href="https://get.adobe.com/reader/">Adobe Reader</a>, free of charge. More information
+                        about viewing, downloading, and printing report files can be found at the <a
+                                href="https://pubs.usgs.gov/potential_problems.html">common download problems FAQ</a>.</p></small>
+                </aside>
+            
+            
+            <aside>
+                <i>*Disclaimer: English is the official language and authoritative version of all federal information.</i>
+            </aside>
+        </article>
+    </main>
+
+    
+        <div class="usa-modal usa-modal--lg" id="citations">
+            <div style="display:flex;justify-content: flex-end;padding-top: 0.5em;">
+                <button type="button" class="usa-button" aria-label="Close this window" data-close-modal style="background-color: unset;color:black">
+                    X
+                </button>
+            </div>
+            <div class="usa-modal__content">
+                <div class="usa-modal__main">
+                    
+                    <div id="modal_list_loading_indicator" hidden>Loading...</div>
+                    <div id="modal_list" class="citation-modal-list"></div>
+                    <div class="usa-modal__footer"></div>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+    <script type="application/javascript" defer>
+
+        // returns true if the element or one of its parents has the class classname
+        function hasSomeParentTheClass(element, classname) {
+            if (element.className.split(' ').indexOf(classname)>=0) return true;
+            return element.parentElement && hasSomeParentTheClass(element.parentElement, classname);
+        }
+    
+        let modal_has_been_opened = false;
+    
+        const p = new Promise((resolve, reject) => {
+            window.addEventListener('load', (event) => {
+    
+                document.addEventListener("pubswh-page-loaded", (event) => {
+                    console.log('Event "pubswh-page-loaded" received: ', event.detail);
+                    let modal_button = document.getElementById("modal-button");
+                    if (modal_button){
+                        modal_button.hidden=false;
+                    }
+                });
+    
+                let postLoadActionSummary = [];
+    
+                // section-508 compliance
+                var mjx_assistive_mml = document.getElementsByTagName("mjx-assistive-mml");
+                for (var i = 0; i < mjx_assistive_mml.length; i++){
+                    mjx_assistive_mml[i].role = "math";
+                    mjx_assistive_mml[i].aria_label = "";
+                    
+                    postLoadActionSummary.push("Completed 508 operation [role=math, aria_label=''] on [mjx_assistive_mml] element ");
+                }
+    
+                // section-508 compliance
+                var mjx_container = document.getElementsByTagName("mjx-container");
+                for (var i = 0; i < mjx_container.length; i++){
+                    mjx_container[i].role = "math";
+                    mjx_container[i].aria_label = "";
+                    
+                    postLoadActionSummary.push("Completed 508 operation [role=math, aria_label=''] on [mjx_container] element: ");
+                }
+    
+                //section 508 compliance -- hide cells without 'headers' attribute. 
+                var y = Array.from(document.getElementsByTagName("td")).filter(e => e.headers == "")
+                for (var i = 0; i < y.length; i++){
+    
+                    y[i]['aria-hidden'] = "true";
+                    postLoadActionSummary.push("assigned headers attribute: " + y[i].headers);
+                }
+    
+                // sticky headers on tables
+                // For each table on the page,...
+                //      - Create Fixed Header
+                //      - Top and bottom scroll
+                var table_panels = document.getElementsByClassName("table-wrap");
+                for (var i = 0; i < table_panels.length; i++)
+                {
+                    // tables to skip 
+                    var x = hasSomeParentTheClass(table_panels[i], 'conversion-factors');
+                    if (!x){
+                        // assuming the first child element of the table is the anchor with id.
+                        var id = table_panels[i].firstChild.id;
+                        try
+                        {
+                            var table_scroll_container = table_panels[i].querySelector('.table-scroll-container');
+    
+                            // this should filter out tables used for formatting
+                            var table_pdf = table_panels[i].querySelector('.table-pdf');
+                            if (table_pdf != null)
+                            {
+                                var original_thead = table_scroll_container.getElementsByClassName('table-pdf')[0].getElementsByTagName('thead')[0];
+                                // filter out tables without thead
+                                if (original_thead != null)
+                                {
+                                    // if width of table is less than the width of the container, expand 
+                                    if (table_pdf.offsetWidth < table_scroll_container.offsetWidth){
+                                        table_pdf.width = table_scroll_container.offsetWidth;
+                                    }
+    
+                                    // container for cloned header which will stick to the top
+                                    var fixed_header_wrapper = table_panels[i].querySelector('.fixed-header-wrapper');
+                                    var fixed_header_div = fixed_header_wrapper.querySelector('.fixed-header');
+                                    
+                                    // create cloned header
+                                    var table_cloned = table_pdf.cloneNode(true);
+                                    table_cloned.removeChild(table_cloned.getElementsByTagName('tbody')[0]);
+                                    table_cloned.style['margin-bottom'] = '0rem';
+    
+                                    // attach cloned header to container
+                                    fixed_header_div.appendChild(table_cloned);
+                                    // set width of container to width of table (will match scrollbars)
+                                    fixed_header_div.style.width = table_pdf.offsetWidth + 'px';
+    
+                                    // hide original header
+                                    original_thead.style['visibility'] = 'collapse';
+    
+                                    // set original header aria-hidden
+                                    original_thead.ariaHidden = true;
+    
+                                    // go through the th's in the new fixed header, modify their ID to enforce uniqueness, and set aria-hidden to prevent further problems.
+                                    Array.from(table_cloned.getElementsByTagName('th')).forEach((el) => {
+                                        el.id = el.id + "_COLLAPSED";
+                                        el.ariaHidden = true;
+                                        //console.log("Modified ID of " + el.id.toString());
+                                    });
+    
+                                    // set width of cloned header to match width of table
+                                    table_cloned.style.width = 'inherit';
+    
+                                    // prevents vertical scrollbar from appearing when header is collapsed
+                                    table_scroll_container.style['overflow-y'] = 'hidden';
+    
+                                    original_thead.style.display = 'none;';
+    
+                                    // set event listeners to synchronize scrolling from top and bottom
+                                    if (fixed_header_wrapper != null && table_scroll_container != null){
+                                        // sync top scroll bar to bottom
+                                        fixed_header_wrapper.onscroll = function(e) {
+                                            e.target.parentElement.querySelector('.table-scroll-container').scrollLeft = e.target.scrollLeft;
+                                        };
+                                        // sync bottom scroll bar to top
+                                        table_scroll_container.onscroll = function(e) {
+                                            e.target.parentElement.querySelector('.fixed-header-wrapper').scrollLeft = e.target.scrollLeft;
+                                        };
+                                    }
+                                    
+                                    postLoadActionSummary.push("Completed Fixed Header operation");
+    
+                                }
+                            }
+                        }catch(error){
+                            console.log("problem with table id: " + id);
+                            console.log(error);
+                            reject(error);
+                        }
+                    }
+                }
+    
+               
+                
+                
+                
+                let modal_button = document.getElementById("modal-button");
+                modal_button.addEventListener("click", (event) => {
+                    // console.log(modal_has_been_opened);
+    
+                    if (modal_has_been_opened === false) {
+                        const p = new Promise((resolve, reject) => {
+                        
+                            let loading_indicator = document.getElementById("modal_list_loading_indicator");
+                            loading_indicator.hidden = false;
+    
+    
+                            let data = [{"citing_doi": "10.1051/e3sconf/202341505021", "type": "journal_article"}, {"citing_doi": "10.1061/9780784485316.060", "type": "conference_paper"}, {"citing_doi": "10.1007/s10980-022-01540-7", "type": "journal_article"}, {"citing_doi": "10.1785/0220250116", "type": "journal_article"}, {"citing_doi": "10.3390/su15043323", "type": "journal_article"}, {"citing_doi": "10.1029/2022JF006810", "type": "journal_article"}, {"citing_doi": "10.1007/s10346-025-02690-w", "type": "journal_article"}, {"citing_doi": "10.5194/nhess-24-1579-2024", "type": "journal_article"}, {"citing_doi": "10.1061/9780784486733.045", "type": "conference_paper"}, {"citing_doi": "10.1785/0220210235", "type": "journal_article"}, {"citing_doi": "10.1002/esp.70062", "type": "journal_article"}, {"citing_doi": "10.1007/s11069-025-07396-9", "type": "journal_article"}, {"citing_doi": "10.5194/nhess-24-375-2024", "type": "journal_article"}, {"citing_doi": "10.1029/2023AV001066", "type": "journal_article"}, {"citing_doi": "10.1080/02723646.2020.1801121", "type": "journal_article"}, {"citing_doi": "10.3389/feart.2022.821188", "type": "journal_article"}, {"citing_doi": "10.1061/9780784486528.008", "type": "conference_paper"}, {"citing_doi": "10.1016/j.envsci.2022.02.023", "type": "journal_article"}, {"citing_doi": "10.1029/2024AV001214", "type": "journal_article"}, {"citing_doi": "10.1029/2020JF006054", "type": "journal_article"}, {"citing_doi": "10.5194/nhess-25-1229-2025", "type": "journal_article"}, {"citing_doi": "10.3389/fenvs.2023.1214037", "type": "journal_article"}, {"citing_doi": "10.1007/s10346-026-02751-8", "type": "journal_article"}, {"citing_doi": "10.21663/EEG-D-24-00038", "type": "journal_article"}];
+                            // console.log(data);
+                            fetch('/get_citation_data', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json', 
+                                },
+                                body: JSON.stringify(data), 
+                            })
+                            .then(response => {
+                                
+                                if (!response.ok) throw new Error('Network response was not ok');
+                                return response.json(); 
+                            })
+                            .then(data => {  
+                                let data_response = data.response;
+                                let modal_list = document.getElementById('modal_list');
+                                
+                                for (let i = 0; i < data_response.length; i++){
+                                    
+                                    let newDiv = document.createElement("div");
+    
+                                    newDiv.textContent = data_response[i].formatted_citation;
+                                    newDiv.className = "citation-modal-list-element";
+                                    
+                                    modal_list.appendChild(newDiv);
+                                }
+                                
+                                modal_has_been_opened = true;
+                                loading_indicator.hidden = true;
+                                
+                            })
+                            .catch(error => console.error('Fetch error:', error))
+                            .finally(() => {});
+    
+                        }).then((event) => {
+                            
+                            resolve();
+                        }).catch((error) => {
+                            console.error(error.message); 
+                        }).finally(() => {});
+                    }
+                });
+                
+                
+                var event = new CustomEvent("pubswh-page-loaded", 
+                { 
+                    
+                    "detail": {
+                        "message": "post-load actions completed.",
+                        "summary": postLoadActionSummary
+                         }
+                });
+                resolve(event);
+                
+                
+            });
+        }).then((event) => {
+            document.dispatchEvent(event);
+        })
+        .catch((error) => {
+            console.error(error.message); 
+        })
+        .finally(() => {
+            
+        });
+    
+    </script>
+
+
+    </div>
+
+
+        </main>
+        <footer class="usa-footer" role="contentinfo">
+    <nav class="usa-footer__primary-section" aria-label="Footer Navigation">
+        <div class="usgs-footer-nav">
+            <a class="usgs-footer-link" href="https://www.doi.gov/privacy">DOI Privacy Policy</a> |
+            <a class="usgs-footer-link" href="https://www.usgs.gov/policies-and-notices">Legal</a> |
+            <a class="usgs-footer-link" href="https://www.usgs.gov/accessibility-and-us-geological-survey">Accessibility</a> |
+            <a class="usgs-footer-link" href="https://www.usgs.gov/sitemap.html">Site Map</a> |
+            <a class="usgs-footer-link" href="https://answers.usgs.gov/">Contact USGS</a>
+        </div>
+        <div class="usgs-footer-nav">
+            <a class="usgs-footer-link" href="https://www.doi.gov/">U.S. Department of the Interior</a> |
+            <a class="usgs-footer-link" href="https://www.doioig.gov/">DOI Inspector General</a> |
+            <a class="usgs-footer-link" href="https://www.whitehouse.gov/">White House</a> |
+            <a class="usgs-footer-link" href="https://www.whitehouse.gov/omb/management/egov/">E-gov</a> |
+            <a class="usgs-footer-link" href="https://www.doi.gov/pmb/eeo/no-fear-act">No Fear Act</a> |
+            <a class="usgs-footer-link" href="https://www.usgs.gov/about/organization/science-support/foia">FOIA</a>
+        </div>
+    </nav>
+</footer>
+        
+    
+    <script defer>
+        window.addEventListener('DOMContentLoaded', () => {
+            SystemJS.import("https://pubs.usgs.gov/static/scripts/pubswh_plugins.8fc0c943.js");
+        });
+    </script>
+    <!-- <script async type="application/javascript"
+            src="https://www2.usgs.gov/scripts/analytics/usgs-analytics.js"></script> -->
+
+   <script defer ype="text/javascript" src="https://pubs.usgs.gov/static/vendor/leaflet/leaflet.js"></script>
+        <script defer type="text/javascript" src="https://pubs.usgs.gov/static/vendor/esri-leaflet/esri-leaflet.js"></script>
+        <script defer type="application/javascript">
+            window.addEventListener('load', (event) => {
+                SystemJS.import("https://pubs.usgs.gov/static/scripts/resultsMap.324d277e.js").then(function (resultsMap) {
+                    resultsMap.createResultsMap({
+                        mapDivId: 'mymap',
+                        publications: [{"abstractHeader": "Abstract", "altmetric": {"details": "https://www.altmetric.com/details.php?citation_id=77872061", "image": "https://badges.altmetric.com/?size=64\u0026score=59\u0026types=mttttttt"}, "authorsList": ["K. Stephen Hughes", "William H. Schulz"], "authorsListTyped": [{"text": "K. Stephen Hughes", "type": "person"}, {"email": "wschulz@usgs.gov", "orcid": "https://orcid.org/0000-0001-9980-3580", "text": "William H. Schulz", "type": "person"}], "collaboration": "Prepared in cooperation with the University of Puerto Rico at Mayag\u00fcez", "contact": "\u003cp\u003eDirector, \u003ca href=\"https://www.usgs.gov/centers/geohazards\" data-mce-href=\"https://www.usgs.gov/centers/geohazards\"\u003eGeologic Hazards Science Center\u003c/a\u003e\u003cbr\u003eU.S. Geological Survey\u003cbr\u003eBox 25046, MS-966\u003cbr\u003eDenver, CO 80225-0046\u003c/p\u003e", "context_item": "ofr20201022", "contributors": {"authors": [{"affiliations": [{"active": true, "id": 38462, "text": "University of Puerto Rico", "usgs": false}], "contributorId": 221160, "contributorType": {"id": 1, "text": "Authors"}, "corporation": false, "email": "", "family": "Hughes", "given": "K.", "id": 784666, "middleInitial": "Stephen", "preferred": false, "rank": 1, "text": "Hughes, K. Stephen", "usgs": false}, {"affiliations": [{"active": true, "id": 300, "text": "Geologic Hazards Science Center", "usgs": true}], "contributorId": 942, "contributorType": {"id": 1, "text": "Authors"}, "corporation": false, "email": "wschulz@usgs.gov", "family": "Schulz", "given": "William", "id": 784627, "middleInitial": "H.", "orcid": "https://orcid.org/0000-0001-9980-3580", "preferred": true, "rank": 2, "text": "Schulz, William H. 0000-0001-9980-3580 wschulz@usgs.gov", "usgs": true}]}, "costCenters": [{"active": true, "id": 300, "text": "Geologic Hazards Science Center", "usgs": true}], "country": "United States", "crossref": {"forward_links_dict": [{"citing_doi": "10.1051/e3sconf/202341505021", "type": "journal_article"}, {"citing_doi": "10.1061/9780784485316.060", "type": "conference_paper"}, {"citing_doi": "10.1007/s10980-022-01540-7", "type": "journal_article"}, {"citing_doi": "10.1785/0220250116", "type": "journal_article"}, {"citing_doi": "10.3390/su15043323", "type": "journal_article"}, {"citing_doi": "10.1029/2022JF006810", "type": "journal_article"}, {"citing_doi": "10.1007/s10346-025-02690-w", "type": "journal_article"}, {"citing_doi": "10.5194/nhess-24-1579-2024", "type": "journal_article"}, {"citing_doi": "10.1061/9780784486733.045", "type": "conference_paper"}, {"citing_doi": "10.1785/0220210235", "type": "journal_article"}, {"citing_doi": "10.1002/esp.70062", "type": "journal_article"}, {"citing_doi": "10.1007/s11069-025-07396-9", "type": "journal_article"}, {"citing_doi": "10.5194/nhess-24-375-2024", "type": "journal_article"}, {"citing_doi": "10.1029/2023AV001066", "type": "journal_article"}, {"citing_doi": "10.1080/02723646.2020.1801121", "type": "journal_article"}, {"citing_doi": "10.3389/feart.2022.821188", "type": "journal_article"}, {"citing_doi": "10.1061/9780784486528.008", "type": "conference_paper"}, {"citing_doi": "10.1016/j.envsci.2022.02.023", "type": "journal_article"}, {"citing_doi": "10.1029/2024AV001214", "type": "journal_article"}, {"citing_doi": "10.1029/2020JF006054", "type": "journal_article"}, {"citing_doi": "10.5194/nhess-25-1229-2025", "type": "journal_article"}, {"citing_doi": "10.3389/fenvs.2023.1214037", "type": "journal_article"}, {"citing_doi": "10.1007/s10346-026-02751-8", "type": "journal_article"}, {"citing_doi": "10.21663/EEG-D-24-00038", "type": "journal_article"}], "number_of_citing_DOIs": 24}, "details": [{"Publication Type": "Report"}, {"Publication Subtype": "USGS Numbered Series"}, {"Title": "Map depicting susceptibility to landslides triggered by intense rainfall, Puerto Rico"}, {"Series Title": "Open-File Report"}, {"Series Number": "2020-1022"}, {"DOI": "10.3133/ofr20201022"}, {"Publication Date": "March 16, 2020"}, {"Year Published": "2020"}, {"Language": "English, Spanish"}, {"Publisher": "U.S. Geological Survey"}, {"Publisher Location": "Reston VA"}, {"Contributing Office(s)": "Geologic Hazards Science Center"}, {"Description": "Report: viii, 91 pages; 2 Sheets: 49.11 x 33.86 inches; Application Sites; Data Release; Read Me"}, {"Country": "United States"}, {"State": "Puerto Rico"}, {"Online Only (Y/N)": "Y"}], "displayLinks": {"Abstract": [], "Additional Report Piece": [], "Appendix": [], "Application Site": [{"id": 373261, "rank": 14, "text": "Landslide susceptibility map interactive web viewer", "type": {"id": 4, "text": "Application Site"}, "url": "https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=10506ecc7f15491daee17647f19248ee"}, {"id": 373262, "rank": 15, "text": "Mapa de susceptibilidad a deslizamientos de tierra visor web interactivo", "type": {"id": 4, "text": "Application Site"}, "url": "https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=9378c6a890164d378a2e66da4b7970c0"}], "Authors Website": [], "Chapter": [], "Companion Files": [{"description": "OFR 2020-1022 kmz", "id": 373256, "linkFileType": {"id": 6, "text": "zip"}, "rank": 8, "text": "Landslide susceptibility map as a Google Earth file", "type": {"id": 7, "text": "Companion Files"}, "url": "https://pubs.usgs.gov/of/2020/1022/ofr20201022_kmz.zip"}, {"description": "SI raster for SMAP", "id": 373246, "linkFileType": {"id": 6, "text": "zip"}, "rank": 9, "text": "SI raster for SMAP", "type": {"id": 7, "text": "Companion Files"}, "url": "https://pubs.usgs.gov/of/2020/1022/SI_raster_for_SMAP.zip"}, {"description": "Mapa de Susceptibilidad a Deslizamientos de Tierra Desencadenados por Precipitaci\u00f3n Intensa en Puerto Rico, georreferenciado (Geotiff)", "id": 376485, "rank": 18, "text": "Mapa de Susceptibilidad a Deslizamientos de Tierra Desencadenados por Precipitaci\u00f3n Intensa en Puerto Rico, georreferenciado (Geotiff)", "type": {"id": 7, "text": "Companion Files"}, "url": "https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_esp_georeferenced.tif"}, {"description": "Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico (Geotiff)", "id": 373249, "rank": 12, "text": "Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico, Geo-referenced (Geotiff)", "type": {"id": 7, "text": "Companion Files"}, "url": "https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_georeferenced.tif"}], "Cover": [], "Data Release": [{"id": 373196, "linkHelpText": "- Results from frequency-ratio analyses of soil classification and land use related to landslide locations in Puerto Rico following Hurricane Maria", "rank": 4, "text": "USGS data release", "type": {"id": 30, "text": "Data Release"}, "url": "https://doi.org/10.5066/P9VK2FAL"}, {"id": 388108, "linkHelpText": "- Geographic Information System Layer of a Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico", "rank": 5, "text": "USGS data release", "type": {"id": 30, "text": "Data Release"}, "url": "https://doi.org/10.5066/P990ZP4C"}], "Database": [], "Dataset": [], "Digital Object Identifier": [], "Document": [{"description": "OFR 2020-1022 pamphlet", "id": 373245, "linkFileType": {"id": 1, "text": "pdf"}, "linkHelpText": "English language", "rank": 2, "text": "Report", "type": {"id": 11, "text": "Document"}, "url": "https://pubs.usgs.gov/of/2020/1022/ofr20201022_pamphlet.pdf"}, {"description": "OFR 2020-1022 pamphlet Spanish language", "id": 383760, "linkFileType": {"id": 1, "text": "pdf"}, "linkHelpText": "En Espa\u00f1ol", "rank": 3, "text": "Reporte", "type": {"id": 11, "text": "Document"}, "url": "https://pubs.usgs.gov/of/2020/1022/ofr20201022_pamphlet_esp.pdf"}], "Errata": [], "Figure": [], "HTML Document": [], "Illustration": [], "Image": [], "Image Folder": [], "Index Page": [], "Metadata": [], "NGMDB Index Page": [{"id": 399457, "rank": 19, "text": "National Geologic Map Database Index Page", "type": {"id": 36, "text": "NGMDB Index Page"}, "url": "https://ngmdb.usgs.gov/Prodesc/proddesc_109788.htm"}], "Open Access External Repository Page": [], "Open Access Publisher Index Page": [], "Open Access USGS Document": [], "Plate": [], "Project Site": [], "Publication XML": [], "Raw Data": [], "Read Me": [{"description": "OFR 2020-1022 readme file", "id": 373260, "linkFileType": {"id": 2, "text": "txt"}, "rank": 13, "text": "Read Me", "type": {"id": 20, "text": "Read Me"}, "url": "https://pubs.usgs.gov/of/2020/1022/ofr20201022_readme.txt"}], "Referenced Work": [], "Related Work": [{"id": 373241, "rank": 6, "text": "Landslide Guide for Residents of Puerto Rico", "type": {"id": 22, "text": "Related Work"}, "url": "https://hazards.colorado.edu/uploads/documents/PuertoRico_LandslideGuide_2020.pdf"}, {"id": 373242, "rank": 7, "text": "Gu\u00eda sobre deslizamientos de tierra para residentes de Puerto Rico", "type": {"id": 22, "text": "Related Work"}, "url": "https://hazards.colorado.edu/uploads/documents/PuertoRico_GuiaDerrumbe_2020.pdf"}], "Sheet": [{"description": "Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico", "id": 373247, "linkFileType": {"id": 1, "text": "pdf"}, "rank": 10, "text": "Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico", "type": {"id": 26, "text": "Sheet"}, "url": "https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet.pdf"}, {"description": "Mapa de Susceptibilidad a Deslizamientos de Tierra Desencadenados por Precipitaci\u00f3n Intensa en Puerto Rico", "id": 376481, "linkFileType": {"id": 1, "text": "pdf"}, "rank": 16, "text": "Mapa de Susceptibilidad a Deslizamientos de Tierra Desencadenados por Precipitaci\u00f3n Intensa en Puerto Rico", "type": {"id": 26, "text": "Sheet"}, "url": "https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_esp.pdf"}, {"description": "Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico, Geo-referenced", "id": 373248, "linkFileType": {"id": 1, "text": "pdf"}, "rank": 11, "text": "Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico, Geo-referenced", "type": {"id": 26, "text": "Sheet"}, "url": "https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_geospatial.pdf"}, {"description": "Mapa de Susceptibilidad a Deslizamientos de Tierra Desencadenados por Precipitaci\u00f3n Intensa en Puerto Rico, georreferenciado", "id": 376484, "linkFileType": {"id": 1, "text": "pdf"}, "rank": 17, "text": "Mapa de Susceptibilidad a Deslizamientos de Tierra Desencadenados por Precipitaci\u00f3n Intensa en Puerto Rico, georreferenciado", "type": {"id": 26, "text": "Sheet"}, "url": "https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_esp_georeferenced.pdf"}], "Software Release": [], "Spatial Data": [], "Table": [], "Thumbnail": [{"id": 373195, "rank": 1, "type": {"id": 24, "text": "Thumbnail"}, "url": "https://pubs.usgs.gov/of/2020/1022/coverthb.jpg"}], "USGS Store Link": [], "Version History": []}, "displayTitle": "Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico", "displayToPublicDate": "2020-03-16T14:40:00", "docAbstract": "\u003cp\u003eLandslides in Puerto Rico range from nuisances to deadly events. Centuries of agricultural and urban modification of the landscape have perturbed many already unstable hillsides on the tropical island. One of the main triggers of mass wasting on the island is the high-intensity rainfall that is associated with tropical atmospheric systems. Puerto Rico\u2019s geographic position and rugged topography render millions of residents vulnerable to widespread landslide events. In this study, a high-resolution (5 meters), high-intensity rainfall-induced landslide susceptibility model was produced using the frequency-ratio method. Datasets utilized in the model included a complete-island landslide inventory created from imagery obtained after Hurricanes Irma and Mar\u00eda impacted the island during September 2017, slope inclination, land-surface curvature, soil type, geologic terrane, mean annual precipitation, land use, soil moisture, and distance to roadways and streams. The final data product (plate 1) is a statistically viable representation of where landslides are likely to initiate during or soon after intense rainfall, with a robust receiver operating characteristic area-under-curve value of 0.87. The model output raster pixel values were binned into 100 equal-area quantiles and then classified into Low, Moderate, High, Very High, and Extremely High classes of susceptibility. The Extremely High susceptibility classification represents the most vulnerable 1 percent of the island, whereas Very High, High, Moderate, and Low classifications cover 9, 20, 30, and 40 percent of the island, respectively. The susceptibility map is intended to assist in planning future development, mitigation measures, and post-event emergency response; however, it is not a substitute for site-specific, slope-stability assessments performed by licensed geologists and engineers. Additionally, the map does not portray locations where landslide material may travel after mobilization, and which may be at extreme risk; nor does it necessarily portray where landslides may occur during earthquakes or mass wasting triggered by prolonged, relatively low-intensity rainfall.\u003c/p\u003e", "doi": "10.3133/ofr20201022", "formattedModifiedDateTime": "May 16, 2025 17:02:41", "geographicExtents": {"features": [{"geometry": {"coordinates": [[[-67.3736572265625, 17.832374329567518], [-65.577392578125, 17.832374329567518], [-65.577392578125, 18.58377568837094], [-67.3736572265625, 18.58377568837094], [-67.3736572265625, 17.832374329567518]]], "type": "Polygon"}, "id": "ofr20201022.base_id", "properties": {"id": "ofr20201022", "info": "2020, Open-File Report 2020-1022", "title": "Map depicting susceptibility to landslides triggered by intense rainfall, Puerto Rico", "url": "https://pubs.usgs.gov/publication/ofr20201022", "year": "2020"}, "type": "Feature"}], "properties": {"title": "Map depicting susceptibility to landslides triggered by intense rainfall, Puerto Rico"}, "type": "FeatureCollection"}, "hasExcel": false, "id": 70209039, "indexId": "ofr20201022", "interactions": [], "ipdsId": "IP-116377", "language": "English, Spanish", "lastModifiedDate": "2025-05-16T17:02:41.74285", "links": [{"description": "OFR 2020-1022 pamphlet", "id": 373245, "linkFileType": {"id": 1, "text": "pdf"}, "linkHelpText": "English language", "rank": 2, "text": "Report", "type": {"id": 11, "text": "Document"}, "url": "https://pubs.usgs.gov/of/2020/1022/ofr20201022_pamphlet.pdf"}, {"id": 373195, "rank": 1, "type": {"id": 24, "text": "Thumbnail"}, "url": "https://pubs.usgs.gov/of/2020/1022/coverthb.jpg"}, {"description": "OFR 2020-1022 pamphlet Spanish language", "id": 383760, "linkFileType": {"id": 1, "text": "pdf"}, "linkHelpText": "En Espa\u00f1ol", "rank": 3, "text": "Reporte", "type": {"id": 11, "text": "Document"}, "url": "https://pubs.usgs.gov/of/2020/1022/ofr20201022_pamphlet_esp.pdf"}, {"id": 373196, "linkHelpText": "Results from frequency-ratio analyses of soil classification and land use related to landslide locations in Puerto Rico following Hurricane Maria", "rank": 4, "text": "USGS data release", "type": {"id": 30, "text": "Data Release"}, "url": "https://doi.org/10.5066/P9VK2FAL"}, {"id": 388108, "linkHelpText": "Geographic Information System Layer of a Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico", "rank": 5, "text": "USGS data release", "type": {"id": 30, "text": "Data Release"}, "url": "https://doi.org/10.5066/P990ZP4C"}, {"id": 373241, "rank": 6, "text": "Landslide Guide for Residents of Puerto Rico", "type": {"id": 22, "text": "Related Work"}, "url": "https://hazards.colorado.edu/uploads/documents/PuertoRico_LandslideGuide_2020.pdf"}, {"id": 373242, "rank": 7, "text": "Gu\u00eda sobre deslizamientos de tierra para residentes de Puerto Rico", "type": {"id": 22, "text": "Related Work"}, "url": "https://hazards.colorado.edu/uploads/documents/PuertoRico_GuiaDerrumbe_2020.pdf"}, {"description": "OFR 2020-1022 kmz", "id": 373256, "linkFileType": {"id": 6, "text": "zip"}, "rank": 8, "text": "Landslide susceptibility map as a Google Earth file", "type": {"id": 7, "text": "Companion Files"}, "url": "https://pubs.usgs.gov/of/2020/1022/ofr20201022_kmz.zip"}, {"description": "SI raster for SMAP", "id": 373246, "linkFileType": {"id": 6, "text": "zip"}, "rank": 9, "text": "SI raster for SMAP", "type": {"id": 7, "text": "Companion Files"}, "url": "https://pubs.usgs.gov/of/2020/1022/SI_raster_for_SMAP.zip"}, {"description": "Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico", "id": 373247, "linkFileType": {"id": 1, "text": "pdf"}, "rank": 10, "text": "Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico", "type": {"id": 26, "text": "Sheet"}, "url": "https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet.pdf"}, {"description": "Mapa de Susceptibilidad a Deslizamientos de Tierra Desencadenados por Precipitaci\u00f3n Intensa en Puerto Rico", "id": 376481, "linkFileType": {"id": 1, "text": "pdf"}, "rank": 16, "text": "Mapa de Susceptibilidad a Deslizamientos de Tierra Desencadenados por Precipitaci\u00f3n Intensa en Puerto Rico", "type": {"id": 26, "text": "Sheet"}, "url": "https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_esp.pdf"}, {"description": "Mapa de Susceptibilidad a Deslizamientos de Tierra Desencadenados por Precipitaci\u00f3n Intensa en Puerto Rico, georreferenciado (Geotiff)", "id": 376485, "rank": 18, "text": "Mapa de Susceptibilidad a Deslizamientos de Tierra Desencadenados por Precipitaci\u00f3n Intensa en Puerto Rico, georreferenciado (Geotiff)", "type": {"id": 7, "text": "Companion Files"}, "url": "https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_esp_georeferenced.tif"}, {"id": 399457, "rank": 19, "type": {"id": 36, "text": "NGMDB Index Page"}, "url": "https://ngmdb.usgs.gov/Prodesc/proddesc_109788.htm"}, {"id": 373261, "rank": 14, "text": "Landslide susceptibility map interactive web viewer", "type": {"id": 4, "text": "Application Site"}, "url": "https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=10506ecc7f15491daee17647f19248ee"}, {"id": 373262, "rank": 15, "text": "Mapa de susceptibilidad a deslizamientos de tierra visor web interactivo", "type": {"id": 4, "text": "Application Site"}, "url": "https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=9378c6a890164d378a2e66da4b7970c0"}, {"description": "Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico, Geo-referenced", "id": 373248, "linkFileType": {"id": 1, "text": "pdf"}, "rank": 11, "text": "Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico, Geo-referenced", "type": {"id": 26, "text": "Sheet"}, "url": "https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_geospatial.pdf"}, {"description": "Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico (Geotiff)", "id": 373249, "rank": 12, "text": "Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico, Geo-referenced (Geotiff)", "type": {"id": 7, "text": "Companion Files"}, "url": "https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_georeferenced.tif"}, {"description": "OFR 2020-1022 readme file", "id": 373260, "linkFileType": {"id": 2, "text": "txt"}, "rank": 13, "text": "Read Me", "type": {"id": 20, "text": "Read Me"}, "url": "https://pubs.usgs.gov/of/2020/1022/ofr20201022_readme.txt"}, {"description": "Mapa de Susceptibilidad a Deslizamientos de Tierra Desencadenados por Precipitaci\u00f3n Intensa en Puerto Rico, georreferenciado", "id": 376484, "linkFileType": {"id": 1, "text": "pdf"}, "rank": 17, "text": "Mapa de Susceptibilidad a Deslizamientos de Tierra Desencadenados por Precipitaci\u00f3n Intensa en Puerto Rico, georreferenciado", "type": {"id": 26, "text": "Sheet"}, "url": "https://pubs.usgs.gov/of/2020/1022/ofr20201022_sheet_esp_georeferenced.pdf"}], "noUsgsAuthors": false, "noYear": false, "offers": null, "onlineOnly": "Y", "productDescription": "Report: viii, 91 pages; 2 Sheets: 49.11 x 33.86 inches; Application Sites; Data Release; Read Me", "pubHasNoLinks": false, "publicationDate": "March 16, 2020", "publicationStatus": "PW", "publicationSubtype": {"id": 5, "text": "USGS Numbered Series"}, "publicationType": {"id": 18, "text": "Report"}, "publicationYear": "2020", "publishedDate": "2020-03-16", "publisher": "U.S. Geological Survey", "publisherLocation": "Reston VA", "publishingServiceCenter": {"id": 2, "text": "Denver PSC"}, "relationships": {"@context": {"dc": "https://purl.org/dc/elements/1.1/", "rdac": "https://rdaregistry.info/Elements/c/", "rdaw": "https://rdaregistry.info/Elements/w/", "rdaw:replacedByWork": {"@type": "@id"}, "rdaw:replacementOfWork": {"@type": "@id"}, "xsd": "https://www.w3.org/2001/XMLSchema#"}, "@graph": [{"@id": "https://pubs.usgs.gov/publication/ofr20201022", "@type": "rdac:Work", "dc:date": "2020", "dc:title": "Map depicting susceptibility to landslides triggered by intense rainfall, Puerto Rico"}]}, "seriesNumber": "2020-1022", "seriesTitle": {"active": true, "code": "OFR", "id": 330, "onlineIssn": "2331-1258", "printIssn": "0196-1497", "publicationSubtype": {"id": 5}, "text": "Open-File Report"}, "state": "Puerto Rico", "tableOfContents": "\u003cul\u003e\u003cli\u003eAcknowledgments\u003c/li\u003e\u003cli\u003eExecutive Summary\u003c/li\u003e\u003cli\u003eAbstract\u003c/li\u003e\u003cli\u003eIntroduction\u003c/li\u003e\u003cli\u003eDatasets and Methodology\u003c/li\u003e\u003cli\u003eResults and Discussion\u003c/li\u003e\u003cli\u003eConclusion\u003c/li\u003e\u003cli\u003eReferences Cited\u003c/li\u003e\u003cli\u003eAppendix 1. Key for Municipality Abbreviations\u003c/li\u003e\u003cli\u003eAppendix 2. Results from Analyses of Land Cover\u003c/li\u003e\u003cli\u003eAppendix 3. Results from Analyses of Soil Class\u003c/li\u003e\u003c/ul\u003e", "text": "ofr20201022 - 2020 - Map depicting susceptibility to landslides triggered by intense rainfall, Puerto Rico", "title": "Map depicting susceptibility to landslides triggered by intense rainfall, Puerto Rico", "usgsCitation": "Hughes, K.S., and Schulz, W.H., 2020, Map depicting susceptibility to landslides triggered by intense rainfall, Puerto Rico: U.S. Geological Survey Open-File Report 2020\u20131022, 91 p., 1 plate, scale 1:150,000, https://doi.org/10.3133/ofr20201022."}],
+                        enablePopup: false
+                    });
+                });
+            });
+        </script>
+    
+
+
+   <script>
+       var GA = {};
+       (function (i, s, o, g, r, a, m) {
+           i['GoogleAnalyticsObject'] = r;
+           i[r] = i[r] || function () {
+                   (i[r].q = i[r].q || []).push(arguments)
+               }, i[r].l = 1 * new Date();
+           a = s.createElement(o),
+               m = s.getElementsByTagName(o)[0];
+           a.async = 1;
+           a.src = g;
+           m.parentNode.insertBefore(a, m)
+       })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+       ga('create', 'UA-10113280-1', 'auto');
+       ga('send', 'pageview');
+
+       GA.trackGAEvent = function (category, actions, labels, values) {
+           ga('send', 'event', category, actions, labels, values);
+       };
+   </script>
+
+    <script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a48a7061fd8596e2',t:'MTc5MTY4NTc4NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

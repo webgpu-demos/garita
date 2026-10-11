@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="login-pf">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="noindex, nofollow">
+
+            <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Sign in to ScienceBase</title>
+    <link rel="icon" href="/auth/resources/iurtm/login/mfa-sciencebase-keycloak-theme/usgs/img/favicon.ico" />
+            <link href="/auth/resources/iurtm/login/mfa-sciencebase-keycloak-theme/../keycloak/lib/patternfly/css/patternfly.css" rel="stylesheet" />
+            <link href="/auth/resources/iurtm/login/mfa-sciencebase-keycloak-theme/../keycloak/lib/zocial/zocial.css" rel="stylesheet" />
+            <link href="/auth/resources/iurtm/login/mfa-sciencebase-keycloak-theme/css/login.css" rel="stylesheet" />
+            <link href="/auth/resources/iurtm/login/mfa-sciencebase-keycloak-theme/usgs/css/common.css" rel="stylesheet" />
+            <link href="/auth/resources/iurtm/login/mfa-sciencebase-keycloak-theme/usgs/css/custom.css" rel="stylesheet" />
+</head>
+
+<body class="">
+<header id="navbar" class="header-nav"  role="banner">
+  <div class="tmp-container">
+    <!-- primary navigation bar -->
+    <!-- search bar-->
+    <div class="header-search">
+      <a class="logo-header" href="https://www.usgs.gov/" title="Home">
+        <img src="/auth/resources/iurtm/login/mfa-sciencebase-keycloak-theme/usgs/img/logo.png"  alt="USGS Home" />
+      </a>
+    </div>
+    <!-- end search bar-->
+  </div>
+  <!-- end header-container-->
+</header>
+
+  <div class="login-pf-page">
+    <div id="kc-header" class="login-pf-page-header">
+      <div id="kc-header-wrapper" class="">ScienceBase</div>
+    </div>
+    <div class="card-pf login-pf-accounts">
+      <header class="login-pf-header">
+        <h1 id="kc-page-title">
+        Log in ...
+
+</h1>
+      </header>
+      <div id="kc-content">
+        <div id="kc-content-wrapper">
+
+
+
+    <div id="kc-form" class="row">
+      <div style="padding-left: 0;" id="kc-form-wrapper" class="col-md-12 login-pf-social-section">
+                <h2>Department of Interior Accounts <img src="/auth/resources/iurtm/login/mfa-sciencebase-keycloak-theme/img/DOI_logo.png"  alt="U.S. Department of the Interior" style="height: 50px; margin-top: -10px; padding-left: 20px"/></h2>
+                <div style="margin-bottom: 2em;" id="kc-social-providers" class="col-md-12 login-pf-social-section">
+                  <ul class="login-pf-social list-unstyled login-pf-social-all ">
+                        <li class="login-pf-social-link"><a tabindex="1" autofocus href="/auth/realms/ScienceBase/broker/entra/login?client_id=catalog&amp;tab_id=AIcEeO_cSO8&amp;session_code=c3hc4IVzIDN0VmKDbKCjRqTIMcX4g7mhUuckKiHPXdw" id="zocial-entra" class="zocial saml"> <span>Log in</span></a></li>
+                    <script>
+                      document.getElementById("zocial-entra").focus();
+                    </script>
+                  </ul>
+                </div>
+
+                <h2>External Accounts</h2>
+                <div style="margin-bottom: 2em;" id="kc-social-providers" class="col-md-12 login-pf-social-section">
+                  <ul class="login-pf-social list-unstyled login-pf-social-all ">
+                                <li class="login-pf-social-link">
+                                    <a href="/auth/realms/ScienceBase/broker/login-gov/login?client_id=catalog&amp;tab_id=AIcEeO_cSO8&amp;session_code=c3hc4IVzIDN0VmKDbKCjRqTIMcX4g7mhUuckKiHPXdw" id="zocial-login-gov" class="zocial oidc-private_key_jwt"> <span>Log in with login.gov</span></a>
+                                </li>
+                  </ul>
+                </div>
+
+
+
+              <div id="kc-info" class="login-pf-signup">
+                  <div id="kc-info-wrapper" class="">
+
+  
+ <div id="wrapper2">
+          <br/>
+          <p><b>DOI Users:</b> Click the "Log in" button to log in.</p>
+          <p><b>Non-DOI Sciencebase users:</b> To request an account, users outside the
+            Department of Interior must be sponsored by a USGS employee. To sign up go to
+            <a href="https://sciencebase.gov/directory/signUp">https://sciencebase.gov/directory/signUp</a>.
+            <br/>
+          </p>
+          <p>
+            <h4>For assistance with credentials or Smart Card access.</h4>
+            <ul>
+               <li>For help with Active Directory credentials, DOI users can contact the USGS Service Desk at 703-648-HELP (4357) or
+                  <a href="http://servicedesk.usgs.gov">USGS Service Desk Web Page</a> (requires USGS intranet access)
+               </li>
+            </ul>
+          </p>
+      
+
+          <div style="color:#cc0000;font-size:8pt;margin:0 0 1em 0;">
+            <h3 style="text-align:center;">WARNING TO USERS OF THIS SYSTEM</h3>
+
+            This computer system, including all related equipment, networks, and network
+            devices (including Internet access), is provided by the Department of the
+            Interior (DOI) in accordance with the agency policy for official use and
+            limited personal use.
+            All agency computer systems may be monitored for all lawful purposes,
+            including but not limited to, ensuring that use is authorized, for management
+            of the system, to facilitate protection against unauthorized access, and to
+            verify security procedures, survivability and operational security. Any
+            information on this computer system may be examined, recorded, copied and used
+            for authorized purposes at any time.
+            All information, including personal information, placed or sent over this
+            system may be monitored, and users of this system are reminded that such
+            monitoring does occur. Therefore, there should be no expectation of privacy
+            with respect to use of this system.
+            By logging into this agency computer system, you acknowledge and consent to
+            the monitoring of this system. Evidence of your use, authorized or
+            unauthorized, collected during monitoring may be used for civil, criminal,
+            administrative, or other adverse action. Unauthorized or illegal use may
+            subject you to prosecution.
+            <br>
+          </div>
+
+
+
+          <br>
+
+
+
+        </div>
+
+
+
+                  </div>
+              </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<!-- BEGIN USGS Footer Template -->
+<footer class="footer">
+  <div class="tmp-container">
+    <!-- .footer-wrap -->
+    <!-- .footer-doi -->
+    <div class="footer-doi">
+      <!-- footer nav links -->
+      <ul class="menu nav">
+        <li class="first leaf menu-links menu-level-1"><a href="https://www.doi.gov/privacy">DOI Privacy Policy</a></li>
+        <li class="leaf menu-links menu-level-1"><a href="https://www.usgs.gov/laws/policies_notices.html">Legal</a></li>
+        <li class="leaf menu-links menu-level-1"><a href="https://www2.usgs.gov/laws/accessibility.html">Accessibility</a></li>
+        <li class="leaf menu-links menu-level-1"><a href="https://www.usgs.gov/sitemap.html">Site Map</a></li>
+        <li class="last leaf menu-links menu-level-1"><a href="https://answers.usgs.gov/">Contact USGS</a></li>
+      </ul>
+      <!--/ footer nav links -->
+    </div>
+    <!-- /.footer-doi -->
+
+    <hr>
+
+    <!-- .footer-utl-links -->
+    <div class="footer-doi">
+      <ul class="menu nav">
+        <li class="first leaf menu-links menu-level-1"><a href="https://www.doi.gov/">U.S. Department of the Interior</a></li>
+        <li class="leaf menu-links menu-level-1"><a href="https://www.doioig.gov/">DOI Inspector General</a></li>
+        <li class="leaf menu-links menu-level-1"><a href="https://www.whitehouse.gov/">White House</a></li>
+        <li class="leaf menu-links menu-level-1"><a href="https://www.whitehouse.gov/omb/management/egov/">E-gov</a></li>
+        <li class="leaf menu-links menu-level-1"><a href="https://www.doi.gov/pmb/eeo/no-fear-act">No Fear Act</a></li>
+        <li class="last leaf menu-links menu-level-1"><a href="https://www2.usgs.gov/foia">FOIA</a></li>
+      </ul>
+    </div>
+    <!-- /.footer-utl-links -->
+    <!-- .footer-social-links -->
+        <!-- /.footer-social-links -->
+  </div>
+  <!-- /.footer-wrap -->
+</footer>
+<!-- END USGS Footer Template- -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKQR8KP"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a48a6fd64f529b75',t:'MTc5MTY4NTc2Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

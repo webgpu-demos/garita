@@ -1,0 +1,351 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Hughes, K. Stephen, and Schulz, William H.</origin>
+        <pubdate>20210817</pubdate>
+        <title>Geographic Information System Layer of a Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico</title>
+        <geoform>GIS raster</geoform>
+        <serinfo>
+          <sername>Open-File Report</sername>
+          <issue>Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico</issue>
+        </serinfo>
+        <pubinfo>
+          <pubplace>Denver, CO</pubplace>
+          <publish>U.S. Geological Survey</publish>
+        </pubinfo>
+        <onlink>U.S. Geological Survey Open-File Report 2020-1022, which describes the data presented herewith, is available at https://doi.org/10.3133/ofr20201022</onlink>
+        <onlink>https://doi:10.5066/P990ZP4C</onlink>
+        <lworkcit>
+          <citeinfo>
+            <origin>Schulz, William H., and Hughes, K. Stephen</origin>
+            <pubdate>2020</pubdate>
+            <title>Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico</title>
+            <geoform>Open-File Report</geoform>
+            <pubinfo>
+              <pubplace>Reston, VA</pubplace>
+              <publish>U.S. Geological Survey</publish>
+            </pubinfo>
+            <onlink>https://pubs.er.usgs.gov/publication/ofr20201022</onlink>
+          </citeinfo>
+        </lworkcit>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This data release comprises a georeferenced raster layer depicting the estimated susceptibility to intense rainfall-induced landslides in Puerto Rico, which is a supplement to: 
+
+Hughes, K.S., and Schulz, W.H., 2020, Map depicting susceptibility to landslides triggered by intense rainfall, Puerto Rico: 
+U.S. Geological Survey Open-File Report 2020–1022, 91 p., 1 plate, scale 1:150,000, https://doi.org/10.3133/ofr20201022. 
+
+Users of this layer are strongly encouraged to read the text herein and available with Open-File Report 2020-1022. 
+
+DEVELOPMENT OF THE LANDSLIDE SUSCEPTIBILITY MAP 
+Landslides commonly occur in Puerto Rico during or soon after intense rainfall and present significant hazards to the built environment and human safety (for example, Jibson, 1986; Larsen and Torres Sanchez, 1992; Bessette-Kirton and others, 2019). This was illustrated during September 2017, when Hurricane María triggered more than 70,000 landslides (Hughes and others, 2019) across the main island of Puerto Rico that caused loss of life and widespread destruction. We used a statistical approach (see accompanying pamphlet for detailed methodology) along with an inventory of the Hurricane María-triggered landslides and geospatial datasets of ground- surface slope and curvature, proximity to roads and streams, geologic terrane, soil classification, mean annual precipitation, land cover, and soil moisture estimated to result from Hurricane María to develop this 5-meter-resolution map depicting relative susceptibility to landslide occurrence during and soon after intense rainfall. Estimated soil moisture resulting from Hurricane María was used to temper effects on the final susceptibility map from using an inventory of landslides triggered by a single event. The Extremely High classification occurs over 1 percent of the island, whereas the Very High, High, and Moderate classifications occur over 9, 20, and 30 percent of the island, respectively.  
+
+USE AND LIMITATIONS OF THE LANDSLIDE SUSCEPTIBILITY MAP 
+This map depicts estimated relative susceptibility to landslide occurrence during or soon after intense rainfall, such as that produced during tropical cyclones. It is intended to illustrate relative potential landslide hazard to help provide a framework for site-specific landslide susceptibility assessments, plan for future development, and plan for future widespread landslide events. For example, locations with higher landslide susceptibility could (1) be excluded from future development; (2) require slope-stability studies prior to development, and grading, foundation, and drainage design and construction that considers potential slope instability; (3) be targeted for evaluation and mitigation of potentially adverse conditions; (4) be monitored for signs of incipient landsliding, such as cracks in roadways and structures, leaning utility poles and trees, and broken water or sewer lines; and (or) (5) be considered for evacuation prior to forecasted landslide-inducing rainfall and for targeted emergency response activities after such rainfall. When used in consideration of specific atmospheric events, the map should be evaluated alongside event-specific rainfall conditions, with landslides being more likely where larger amounts of rainfall occur in locations with higher landslide susceptibility. The map is not a substitute for site-specific, slope-stability investigation by licensed geologists and engineers. Additionally, many landslides in Puerto Rico move far from the locations where they originate and can result in the loss of life and property as they move downslope; the map does not depict this significant hazard resulting from mobile landslides. Finally, locations of landslides triggered by earthquakes or prolonged, relatively low-intensity rainfall may significantly differ from High, Very High, and Extremely High susceptibility locations shown on the map. 
+
+Most landslides in Puerto Rico triggered by intense rainfall are shallow (to several meters deep) and occur in unconsolidated material (soil and saprolite) overlying rock (for example, Jibson, 1989; Larsen and Torres Sanchez, 1992; Bessette-Kirton and others, 2019). These are the types of landslides most well represented by the landslide susceptibility map because the map was produced using an inventory of landslides triggered by Hurricane María (Hughes and others, 2019) and most of those landslides were shallow. Hurricane María also triggered landslides in rock and some reached depths of approximately 30 meters (Bessette-Kirton and others, 2019), so the map also depicts susceptibility to deeper landslides and those in rock. However, landslides such as this are relatively poorly represented by the susceptibility map because relatively few were triggered by Hurricane María so did not provide statistically robust measures with which similar landslides could be forecast. The tragic landslide that occurred at Mameyes in Ponce municipality during 1985 and which killed more than 129 people (Silva-Tulla, 1986) is an example of a type of landslide that is likely poorly represented by the susceptibility map. Additionally, many landslides worldwide are triggered by human activities, such as hillslope grading and redirection of drainage. Local activities such as these cannot be accounted for on the map. 
+
+Common to nearly all modeling efforts, accuracy of the landslide susceptibility map relies upon accuracy and completeness of input data utilized for its development. Among others, we expect that the following omissions and conditions detract from the accuracy of the map: (1) variability within given geological terranes of bedrock strength and hydrologic properties, discontinuity orientation and condition; (2) variability within given soil types of soil strength and hydrologic properties; (3) consideration of only part of the road network, including omission of most undocumented farm roads, paths, and trails; and (4) use of a 2015–2016 topographic model that predates landslides triggered by Hurricane María and other topographic changes. 
+
+REFERENCES CITED 
+Bessette-Kirton, E.K., Cerovski-Darriau, C., Schulz, W.H., Coe, J.A., Kean, J.W., Godt, J.W., Thomas, M.A., and Hughes, K.S., 2019, Landslides triggered by Hurricane María—Assessment of an extreme event in Puerto Rico: GSA Today, v. 29, no. 6, p. 4–10. [Also available at https://www.geosociety.org/gsatoday/science/G383A/article.htm.] 
+
+Hughes, K.S., Bayouth García, D., Martínez Milian, G.O., Schulz, W.H., and Baum, R.L., 2019, Map of slope-failure locations in Puerto Rico after Hurricane María: U.S. Geological Survey data release, accessed September 12, 2019, at https://doi.org/10.5066/P9BVMD74. 
+
+Jibson, R.W., 1986, Evaluation of landslide hazards resulting from the 5–8 October 1985, storm in Puerto Rico: U.S. Geological Survey Open-File Report 86–26, 40 p. [Also available at https://doi.org/10.3133/ofr8626.] 
+
+Jibson, R.W., 1989, Debris flows in southern Puerto Rico, in Schultz, A.P., and Jibson, R.W., eds., Landslide processes of the eastern United States and Puerto Rico: Geological Society of America Special Paper 236, p. 29–55. [Also available at https://doi.org/10.1130/SPE236-p29.] 
+
+Larsen, M.C., and Torres Sanchez, A.J., 1992, Landslides triggered by Hurricane Hugo in eastern Puerto Rico, September 1989: Caribbean Journal of Science, v. 28, no. 3–4, p. 113–125. 
+
+Silva-Tulla, F., 1986, The October 1985 landslide at Barrio Mameyes, Ponce, Puerto Rico: Washington, D.C., National Academies Press, 14 p.</abstract>
+      <purpose>Puerto Rico regularly experiences rainfall-induced landslides, with intense rainfall often triggering widespread landsliding. To improve the ability to reduce hazards to people and the built environment posed by rainfall-induced landslides, we developed a map depicting an estimate of the relative susceptibility to such landslides.</purpose>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <sngdate>
+          <caldate>2021</caldate>
+        </sngdate>
+      </timeinfo>
+      <current>publication date</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-67.2779</westbc>
+        <eastbc>-65.5802</eastbc>
+        <northbc>18.5178</northbc>
+        <southbc>17.908</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>USGS Thesaurus</themekt>
+        <themekey>landslides</themekey>
+        <themekey>landslide susceptibility assessment</themekey>
+        <themekey>maps and atlases</themekey>
+      </theme>
+      <theme>
+        <themekt>Geologic Hazards Science Center</themekt>
+        <themekey>GHSC</themekey>
+        <themekey>Golden</themekey>
+        <themekey>landslide hazards</themekey>
+        <themekey>ground-failure</themekey>
+        <themekey>debris-flow</themekey>
+        <themekey>USGS</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Metadata Identifier</themekt>
+        <themekey>USGS:61087009d34ef8d70565c154</themekey>
+      </theme>
+      <place>
+        <placekt>Common geographic areas</placekt>
+        <placekey>United States</placekey>
+        <placekey>Puerto Rico</placekey>
+      </place>
+    </keywords>
+    <accconst>None.  Please see 'Distribution Info' for details.</accconst>
+    <useconst>none</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>William Schulz</cntper>
+          <cntorg>ROCKY MOUNTAIN REGION: GEOLOGIC HAZARDS SC</cntorg>
+        </cntperp>
+        <cntpos>Research Geologist</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Mail Stop MS 966, 1711 Illinois St</address>
+          <city>Golden</city>
+          <state>CO</state>
+          <postal>80401</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>303-273-8404</cntvoice>
+        <cntemail>wschulz@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>No formal attribute accuracy tests were conducted</attraccr>
+    </attracc>
+    <logic>Values fall within expected ranges</logic>
+    <complete>Data set is considered complete for the information presented, as described in the abstract. Users are advised to read the rest of the metadata record carefully for additional details.</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>No formal positional accuracy tests were conducted</horizpar>
+      </horizpa>
+      <vertacc>
+        <vertaccr>No formal positional accuracy tests were conducted</vertaccr>
+      </vertacc>
+    </posacc>
+    <lineage>
+      <procstep>
+        <procdesc>See accompanying pamphlet text</procdesc>
+        <procdate>2020</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <indspref>Puerto Rico</indspref>
+    <direct>Raster</direct>
+    <rastinfo>
+      <rasttype>Grid Cell</rasttype>
+      <rowcount>13008</rowcount>
+      <colcount>35756</colcount>
+      <vrtcount>1</vrtcount>
+    </rastinfo>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <gridsys>
+          <gridsysn>Universal Transverse Mercator</gridsysn>
+          <utm>
+            <utmzone>19</utmzone>
+            <transmer>
+              <sfctrmer>0.9996</sfctrmer>
+              <longcm>-69.0</longcm>
+              <latprjo>0.0</latprjo>
+              <feast>500000.0</feast>
+              <fnorth>0.0</fnorth>
+            </transmer>
+          </utm>
+        </gridsys>
+        <planci>
+          <plance>row and column</plance>
+          <coordrep>
+            <absres>5.0</absres>
+            <ordres>5.0</ordres>
+          </coordrep>
+          <plandu>METERS</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>WGS_1984</horizdn>
+        <ellips>WGS 84</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>landslide_susceptibility_raster</enttypl>
+        <enttypd>Raster that provides rainfall-induced landslide susceptibility estimates</enttypd>
+        <enttypds>author defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Value</attrlabl>
+        <attrdef>A numeric identifier for landslide susceptibility</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>Low</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>Moderate</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>High</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>4</edomv>
+            <edomvd>Very High</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>5</edomv>
+            <edomvd>Extremely High</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>rainLSsuc</attrlabl>
+        <attrdef>Description of relative susceptibility to rainfall-induced landslides</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Low</edomv>
+            <edomvd>Low</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Moderate</edomv>
+            <edomvd>Moderate</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>High</edomv>
+            <edomvd>High</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Very High</edomv>
+            <edomvd>Very High</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Extremely High</edomv>
+            <edomvd>Extremely High</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntperp>
+          <cntper>GS ScienceBase</cntper>
+          <cntorg>U.S. Geological Survey</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Denver Federal Center, Building 810, Mail Stop 302</address>
+          <city>Denver</city>
+          <state>CO</state>
+          <postal>80225</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>1-888-275-8747</cntvoice>
+        <cntemail>sciencebase@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data on any other system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>TIFF</formname>
+          <formvern>none</formvern>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>https://doi:10.5066/P990ZP4C</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <fees>None</fees>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20210817</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>GHSC Data Steward</cntper>
+          <cntorg>U.S. Geological Survey, Geologic Hazards Science Center</cntorg>
+        </cntperp>
+        <cntpos>Open Data Policy coordinator</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>1711 Illinois Street</address>
+          <city>Golden</city>
+          <state>CO</state>
+          <postal>80401</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>303-273-8500</cntvoice>
+        <cntemail>ghsc_metadata@usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>
