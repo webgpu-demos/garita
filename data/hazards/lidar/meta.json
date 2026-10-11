@@ -129,7 +129,7 @@
    "Meters",
    "meters"
   ],
-  "caveat": "These projects also cover the U.S. Virgin Islands, whose part is referenced to the Virgin Islands Vertical Datum of 2009 (WESM vert_crs 6642 and/or vendor metadata, listed in virgin_islands_parts with the number of Garita buildings inside each bounding box). Neither the register nor the tiles say which tile came from which work unit, so a building inside such a box cannot be proven to be PRVD02 from the metadata alone.",
+  "caveat": "These projects also cover the U.S. Virgin Islands, whose part is referenced to the Virgin Islands Vertical Datum of 2009 (WESM vert_crs 6642 and/or vendor metadata; see virgin_islands_parts, which lists each such part with its bounding box and the number of Garita buildings inside it). No building lies inside any of those boxes, so every value here comes from a PRVD02 work unit.",
   "virgin_islands_parts": [
    {
     "workunit": "PR_PRVI_D_2018",
@@ -1359,6 +1359,120 @@
   },
   "old_values_known": 1500471,
   "compared": 1500461,
+  "no_data_buildings": [
+   {
+    "index": 38743,
+    "lon": -67.16073,
+    "lat": 18.445
+   },
+   {
+    "index": 379349,
+    "lon": -66.76474,
+    "lat": 17.99944
+   },
+   {
+    "index": 379350,
+    "lon": -66.76527,
+    "lat": 17.99923
+   },
+   {
+    "index": 396001,
+    "lon": -66.7425,
+    "lat": 17.98136
+   },
+   {
+    "index": 396002,
+    "lon": -66.74212,
+    "lat": 17.98087
+   },
+   {
+    "index": 396003,
+    "lon": -66.74171,
+    "lat": 17.98071
+   },
+   {
+    "index": 396004,
+    "lon": -66.74137,
+    "lat": 17.98044
+   },
+   {
+    "index": 396005,
+    "lon": -66.74233,
+    "lat": 17.98134
+   },
+   {
+    "index": 396006,
+    "lon": -66.74195,
+    "lat": 17.98076
+   },
+   {
+    "index": 396007,
+    "lon": -66.74157,
+    "lat": 17.98053
+   }
+  ],
+  "lowest_buildings": [
+   {
+    "index": 166582,
+    "lon": -67.06116,
+    "lat": 17.97666,
+    "lidar_m": -8.2
+   },
+   {
+    "index": 54573,
+    "lon": -67.15986,
+    "lat": 18.18872,
+    "lidar_m": -3.5
+   },
+   {
+    "index": 52227,
+    "lon": -67.1571,
+    "lat": 18.2148,
+    "lidar_m": -2.3
+   },
+   {
+    "index": 33069,
+    "lon": -67.17475,
+    "lat": 18.02875,
+    "lidar_m": -1.4
+   },
+   {
+    "index": 272165,
+    "lon": -66.91057,
+    "lat": 17.96778,
+    "lidar_m": -1.1
+   },
+   {
+    "index": 379335,
+    "lon": -66.7624,
+    "lat": 17.97967,
+    "lidar_m": -1.0
+   },
+   {
+    "index": 379351,
+    "lon": -66.76296,
+    "lat": 17.99949,
+    "lidar_m": -1.0
+   },
+   {
+    "index": 991506,
+    "lon": -66.11491,
+    "lat": 18.44325,
+    "lidar_m": -1.0
+   },
+   {
+    "index": 1500047,
+    "lon": -65.29308,
+    "lat": 18.30141,
+    "lidar_m": -0.9
+   },
+   {
+    "index": 1499881,
+    "lon": -65.2954,
+    "lat": 18.30211,
+    "lidar_m": -0.9
+   }
+  ],
   "median_minus_centre_cell_m": {
    "n": 1500461,
    "median": 0.0,
@@ -1403,19 +1517,19 @@
     "their_median_old_m": 20.0
    },
    {
-    "place": "Cata\u00f1o waterfront (malec\u00f3n)",
-    "lon": -66.118,
-    "lat": 18.4445,
-    "expect": "bay shore, 1 to 2 m",
-    "lidar_m": null,
-    "project": "none",
+    "place": "Cata\u00f1o, blocks nearest the bay",
+    "lon": -66.1132,
+    "lat": 18.4433,
+    "expect": "bay shore, about 1 m",
+    "lidar_m": 0.83,
+    "project": "PR_PuertoRicoUSVI_D24",
     "by_collection_m": {
-     "2024": null,
-     "2018": null
+     "2024": 0.83,
+     "2018": 1.04
     },
-    "buildings_within_150m": 0,
-    "their_median_lidar_m": null,
-    "their_median_old_m": null
+    "buildings_within_150m": 135,
+    "their_median_lidar_m": 0.8,
+    "their_median_old_m": 1.1
    },
    {
     "place": "Lo\u00edza, town plaza",
@@ -1481,7 +1595,7 @@
     "place": "Aguadilla airport (BQN), runway",
     "lon": -67.1294,
     "lat": 18.4949,
-    "expect": "published field elevation 237 ft = 72 m",
+    "expect": "published field elevation 237 ft = 72 m is the highest point of the runway; this is the airport reference point, so somewhat lower",
     "lidar_m": 64.43,
     "project": "PR_PuertoRicoUSVI_D24",
     "by_collection_m": {
@@ -1509,24 +1623,24 @@
    }
   ]
  },
- "generated": "2026-10-11T02:47:45Z",
+ "generated": "2026-10-11T02:53:53Z",
  "run": {
-  "id": "38106042434",
-  "sha": "87e211913542384d2bdfb7178774f33fbc9b993f",
-  "plan_seconds": 29.1,
+  "id": "38106400616",
+  "sha": "09e942a8fc042d3ab746003f1f5435b8496fa438",
+  "plan_seconds": 23.1,
   "shard_seconds": {
-   "0": 104.1,
-   "1": 101.6,
-   "2": 99.6,
-   "3": 98.3,
-   "4": 122.4,
-   "5": 137.4,
-   "6": 96.6,
-   "7": 95.1,
-   "8": 163.7,
-   "9": 94.3,
-   "10": 94.8,
-   "11": 96.8
+   "0": 125.0,
+   "1": 91.8,
+   "2": 103.6,
+   "3": 90.3,
+   "4": 93.6,
+   "5": 95.5,
+   "6": 89.0,
+   "7": 142.1,
+   "8": 106.1,
+   "9": 94.7,
+   "10": 144.0,
+   "11": 97.8
   }
  },
  "stage": "lidar",
