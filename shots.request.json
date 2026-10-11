@@ -1,0 +1,7 @@
+{ "shots": [
+  { "id": "1-nightlights-live", "url": "https://webgpu-demos.github.io/garita/?post=basic&overlay=nightlights&cam=-66.45,18.2,330000,0,58", "w": 1600, "h": 900, "wait": 12000 },
+  { "id": "2-nightlights-sanjuan", "url": "https://webgpu-demos.github.io/garita/?post=basic&ui=0&overlay=nightlights&cam=-66.1,18.4,60000,0,65", "w": 1280, "h": 800, "wait": 12000 },
+  { "id": "3-nightlights-baseline", "url": "https://webgpu-demos.github.io/garita/?post=basic&ui=0&overlay=nightlights&nl=baseline&cam=-66.45,18.2,330000,0,58", "w": 1280, "h": 800, "wait": 12000 },
+  { "id": "4-condado-day", "url": "https://webgpu-demos.github.io/garita/?ui=0&post=basic&t=2026-10-10T15:30:00Z&cam=-66.075,18.452,2600,250,12", "w": 1280, "h": 800, "wait": 6000 },
+  { "id": "5-default-night-live", "url": "https://webgpu-demos.github.io/garita/?post=basic", "w": 1600, "h": 900, "wait": 9000 }
+] }
