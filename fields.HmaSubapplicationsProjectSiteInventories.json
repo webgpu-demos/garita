@@ -1,0 +1,289 @@
+[
+ {
+  "v": 1,
+  "name": "subapplicationId",
+  "type": "text",
+  "searchable": true,
+  "desc": "Single-value that uniquely identifies the subapplication/subgrant. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 1,
+  "name": "projectSiteInventoryId",
+  "type": "integer",
+  "searchable": true,
+  "desc": "Single value that uniquely identifies the project site inventory location. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 1,
+  "name": "projectSiteInventoryType",
+  "type": "text",
+  "searchable": true,
+  "desc": "Type of project site inventory (i.e., Building, Vacant land, Utility/Infrastructure/Other). [Source: FEMA GO]"
+ },
+ {
+  "v": 1,
+  "name": "primaryActivity",
+  "type": "text",
+  "searchable": true,
+  "desc": "Primary mitigation activity associated with the project site inventory (e.g., Acquisition, Elevation, Flood Mitigation, etc.). [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 1,
+  "name": "secondaryActivity",
+  "type": "text",
+  "searchable": true,
+  "desc": "Secondary mitigation activity associated with the project site inventory (e.g., Acquisition, Elevation, Flood Mitigation, etc.). [Source: FEMA GO]"
+ },
+ {
+  "v": 1,
+  "name": "primaryHazard",
+  "type": "text",
+  "searchable": true,
+  "desc": "Primary hazard associated with the project site inventory (e.g., Flooding, Fire, Tornado, etc.). [Source: FEMA GO, NEMIS]"
+ },
+ {
+  "v": 1,
+  "name": "secondaryHazard",
+  "type": "text",
+  "searchable": true,
+  "desc": "Secondary hazard associated with the project site inventory (e.g., Flooding, Fire, Tornado, etc.). [Source: FEMA GO, NEMIS]"
+ },
+ {
+  "v": 1,
+  "name": "city",
+  "type": "text",
+  "searchable": true,
+  "desc": "Name of the City associated with the project site inventory (e.g., Chicago). [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 1,
+  "name": "countyCode",
+  "type": "text",
+  "searchable": true,
+  "desc": "Identifier assigned to the County or County equivalent associated with the project site inventory (e.g., 031 represents Cook County). [Source: FEMA GO]"
+ },
+ {
+  "v": 1,
+  "name": "county",
+  "type": "text",
+  "searchable": true,
+  "desc": "Name of the County or County equivalent associated with the project site inventory (e.g., Cook County). [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 1,
+  "name": "stateCode",
+  "type": "text",
+  "searchable": true,
+  "desc": "Identifier assigned to the State associated with the project site inventory (e.g., 17 represents Illinois). [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 1,
+  "name": "stateAbbreviation",
+  "type": "text",
+  "searchable": true,
+  "desc": "Two letter abbreviation of the State (e.g., IL represents Illinois) associated with the project site inventory. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 1,
+  "name": "zipcode",
+  "type": "text",
+  "searchable": true,
+  "desc": "Five digit ZIP Code associated with the project site inventory (e.g., 60614). [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 1,
+  "name": "structureType",
+  "type": "text",
+  "searchable": true,
+  "desc": "Type of structure (e.g., Government, etc.). [Source: FEMA GO]"
+ },
+ {
+  "v": 1,
+  "name": "structurePrimarySubtype",
+  "type": "text",
+  "searchable": true,
+  "desc": "Primary subtype of structure (e.g., Emergency Response, etc.). [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 1,
+  "name": "structureSecondarySubtype",
+  "type": "text",
+  "searchable": true,
+  "desc": "Secondary subtype of structure (e.g., Fire Station, etc.). [Source: FEMA GO]"
+ },
+ {
+  "v": 1,
+  "name": "foundationType",
+  "type": "text",
+  "searchable": true,
+  "desc": "Type of foundation (e.g., Crawl Space not below ground on all sides, Basement below ground on all sides (split-level), Slab on Grade (split level), etc.). [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 1,
+  "name": "buildingSize",
+  "type": "decimal(12,1)",
+  "searchable": true,
+  "desc": "Size of building in square feet. [Source: FEMA GO]"
+ },
+ {
+  "v": 1,
+  "name": "lotSize",
+  "type": "decimal(9,2)",
+  "searchable": true,
+  "desc": "Size of lot in acres. [Source: FEMA GO]"
+ },
+ {
+  "v": 1,
+  "name": "yearBuilt",
+  "type": "smallint",
+  "searchable": true,
+  "desc": "Year the project site inventory was built. [Source: FEMA GO]"
+ },
+ {
+  "v": 1,
+  "name": "firstFloorElevation",
+  "type": "decimal(9,4)",
+  "searchable": true,
+  "desc": "First Floor Elevation in feet for the project site inventory. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 1,
+  "name": "feetAboveBaseFloodElevation",
+  "type": "decimal(9,4)",
+  "searchable": true,
+  "desc": "Number of feet the lowest floor is proposed to be raised above Base Flood Elevation (BFE). [Source: FEMA GO]"
+ },
+ {
+  "v": 1,
+  "name": "baseFloodElevation",
+  "type": "decimal(9,2)",
+  "searchable": true,
+  "desc": "Based Flood Elevation (BFE) in feet at the project site inventory location. For more information on BFE, seehttps://www.fema.gov/node/404233. Values of -9999 are equivalent to null. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 1,
+  "name": "floodZone",
+  "type": "text",
+  "searchable": true,
+  "desc": "Flood Zone at the project site inventory location. For more information on Flood Zones, seehttps://www.fema.gov/glossary/flood-zones. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 1,
+  "name": "estimatedPurchasePrice",
+  "type": "decimal(12,2)",
+  "searchable": true,
+  "desc": "Estimated amount in U.S. dollars to mitigate the project site inventory. As a user entered field, the value can be $0. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 1,
+  "name": "proposedLandUse",
+  "type": "text",
+  "searchable": true,
+  "desc": "Proposed land use post mitigation (e.g., Park, Wetland, Vacant Land, Other, etc.). [Source: FEMA GO]"
+ },
+ {
+  "v": 1,
+  "name": "currentlyRented",
+  "type": "boolean",
+  "searchable": true,
+  "desc": "Indicates if the project site inventory is currently rented. Yes is indicated with either a 'true' or '1'. No is indicated with either a 'false' or '0'. [Source FEMA GO]"
+ },
+ {
+  "v": 1,
+  "name": "criticalFacility",
+  "type": "boolean",
+  "searchable": true,
+  "desc": "Indicates if the project site inventory is a critical facility identified by subapplicant/subrecipient's hazard mitigation plan. Yes is indicated with either a 'true' or '1'. No is indicated with either a 'false' or '0'. [Source FEMA GO]"
+ },
+ {
+  "v": 1,
+  "name": "alternateStructure",
+  "type": "boolean",
+  "searchable": true,
+  "desc": "Indicates if the project site inventory is an alternate structure. All properties to be mitigated must be identified, including alternate properties that may be substituted should a property be withdrawn. Yes is indicated with either a 'true' or '1'. No is indicated with either a 'false' or '0'. [Source: FEMA GO]"
+ },
+ {
+  "v": 1,
+  "name": "substantiallyDamaged",
+  "type": "boolean",
+  "searchable": true,
+  "desc": "Indicates if the project site inventory is substantially damaged. The term 'substantial damage' applies to a structure in a Special Flood Hazard Area or floodplain for which the total cost of repairs is 50 percent or more of the structures market value before the disaster occurred, regardless of the cause of damage. This percentage rule can vary among jurisdictions. Yes is indicated with either a 'true' or '1'. No is indicated with either a 'false' or '0'. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 1,
+  "name": "publiclyOwned",
+  "type": "boolean",
+  "searchable": true,
+  "desc": "Indicates if the project site inventory is publicly owned. Yes is indicated with either a 'true' or '1'. No is indicated with either a 'false' or '0'. [Source FEMA GO]"
+ },
+ {
+  "v": 1,
+  "name": "insured",
+  "type": "boolean",
+  "searchable": true,
+  "desc": "Indicates if the project site inventory is insured. [Source: FEMA GO]"
+ },
+ {
+  "v": 1,
+  "name": "insuranceType",
+  "type": "text",
+  "searchable": true,
+  "desc": "Type of insurance covering the Project Site Inventory (i.e., NFIP Insurance, Private Insurance, Self-Insured). Multiple insurance types are possible and delimited by a semicolon. [Source: FEMA GO]"
+ },
+ {
+  "v": 1,
+  "name": "repetitiveLossStructure",
+  "type": "boolean",
+  "searchable": true,
+  "desc": "Indicates if the project site inventory is a Repetitive Loss Structure. For more information on Repetitive Loss Structures as defined by Hazard Mitigation Assistance, seehttps://www.fema.gov/grants/mitigation/hazard-mitigation-assistance-guidance. Yes is indicated with either a 'true' or '1'. No is indicated with either a 'false' or '0'. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 1,
+  "name": "severeRepetitiveLossStructure",
+  "type": "boolean",
+  "searchable": true,
+  "desc": "Indicates if the project site inventory is a Severe Repetitive Loss Structure. For more information on Repetitive Loss Structures as defined by Hazard Mitigation Assistance, seehttps://www.fema.gov/grants/mitigation/hazard-mitigation-assistance-guidance. Yes is indicated with either a 'true' or '1'. No is indicated with either a 'false' or '0'. [Source: FEMA GO]"
+ },
+ {
+  "v": 1,
+  "name": "costEffectivenessMethod",
+  "type": "text",
+  "searchable": true,
+  "desc": "Method used to evaluate the project site inventory's cost-effectiveness (e.g., FEMA BCA Toolkit, pre-calculated benefits, other BCA methodology approved by FEMA). [Source: FEMA GO]"
+ },
+ {
+  "v": 1,
+  "name": "preCalculatedBenefit",
+  "type": "text",
+  "searchable": true,
+  "desc": "Type of pre-calculated benefit used to determine the project site inventory's cost-effectiveness (e.g., Acquisitions in the special flood hazard area, Residential hurricane wind retrofits, etc.). For more information on pre-calculated benefits, seehttps://www.fema.gov/grants/guidance-tools/benefit-cost-analysis/streamlined-bca#pre-calculated-benefits. [Source: FEMA GO]"
+ },
+ {
+  "v": 1,
+  "name": "benefitCostRatio",
+  "type": "decimal(9,2)",
+  "searchable": true,
+  "desc": "Numerical expression of the cost-effectiveness of the project site inventory. The Benefit-Cost Ratio (BCR) is derived from a project site inventory's total net benefits divided by its total cost. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 1,
+  "name": "ownerType",
+  "type": "text",
+  "searchable": true,
+  "desc": "Type of owner (e.g., Business, Corporation, Estate/Trust, Government, Individual, Nonprofit, Religious Institution, Tribal). [Source: FEMA GO]"
+ },
+ {
+  "v": 1,
+  "name": "coownerType",
+  "type": "text",
+  "searchable": true,
+  "desc": "Type of co-owner (e.g., Business, Corporation, Estate/Trust, Government, Individual, Nonprofit, Religious Institution, Tribal). [Source: FEMA GO]"
+ },
+ {
+  "v": 1,
+  "name": "id",
+  "type": "uuid",
+  "searchable": true,
+  "desc": "Unique ID assigned to the record."
+ }
+]

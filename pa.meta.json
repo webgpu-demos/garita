@@ -1,0 +1,1 @@
+{"skip":0,"select":null,"rundate":"2026-10-11T04:10:37.578Z","top":10000,"filter":"stateAbbreviation eq 'PR'","format":"json","metadata":true,"orderby":"","entityname":"PublicAssistanceFundedProjectsDetails","version":"v2","url":"/api/open/v2/PublicAssistanceFundedProjectsDetails?$filter=stateAbbreviation%20eq%20%27PR%27&$top=10000&$skip=0","count":0}

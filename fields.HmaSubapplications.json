@@ -1,0 +1,625 @@
+[
+ {
+  "v": 2,
+  "name": "id",
+  "type": "uuid",
+  "searchable": true,
+  "desc": "Unique ID assigned to the record"
+ },
+ {
+  "v": 2,
+  "name": "subapplicationIdentifier",
+  "type": "text",
+  "searchable": true,
+  "desc": "Single-value that uniquely identifies the subapplication/subgrant. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "program",
+  "type": "text",
+  "searchable": true,
+  "desc": "Name of the Hazard Mitigation Assistance grant program (e.g., Building Resilient Infrastructure and Communities grant program) associated with the subapplication/subgrant. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "fiscalYear",
+  "type": "smallint",
+  "searchable": true,
+  "desc": "The Federal Government Fiscal Year of the grant program funding opportunity. The Fiscal Year runs from October 1 to September 30. For Disaster Grant Programs, this field represents the Federal Government Fiscal Year in which the disaster was declared. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "region",
+  "type": "smallint",
+  "searchable": true,
+  "desc": "Number (1-10) used to represent the Region associated with the subapplication/subgrant. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "applicantUei",
+  "type": "text",
+  "searchable": true,
+  "desc": "Single-value that uniquely identifies the applicant/grantee. The Unique Entity Identifier (UEI) is a 12-character alphanumeric ID assigned to an entity in SAM.gov to identify businesses and other entities that do business with the federal government. [Source: FEMA GO, eGrants]"
+ },
+ {
+  "v": 2,
+  "name": "applicantName",
+  "type": "text",
+  "searchable": true,
+  "desc": "Name of the applicant requesting Hazard Mitigation Grant funding (e.g., Illinois Emergency Management Agency). An applicant becomes a recipient when it receives a Federal award directly from a Federal awarding agency to carry out an activity under a Federal program. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "subapplicantUei",
+  "type": "text",
+  "searchable": true,
+  "desc": "Single-value that uniquely identifies the subapplicant/subgrantee. The Unique Entity Identifier (UEI) is a 12-character alphanumeric ID assigned to an entity in SAM.gov to identify businesses and other entities that do business with the federal government. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "subapplicantName",
+  "type": "text",
+  "searchable": true,
+  "desc": "Name of the Subapplicant requesting Hazard Mitigation Grant funding (e.g., City of Chicago). A Subapplicant becomes a Subrecipient (previously termed Subgrantee) when it receives a subaward from a pass-through entity (i.e., Recipient) to carry out part of a Federal award. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "subapplicantCity",
+  "type": "text",
+  "searchable": true,
+  "desc": "Name of the City (e.g., Chicago) associated with the subapplicant/subrecipient. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "subapplicantState",
+  "type": "text",
+  "searchable": true,
+  "desc": "Full name of the State (e.g., Illinois) associated with the subapplicant/subrecipient. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "subapplicantStateAbbreviation",
+  "type": "text",
+  "searchable": true,
+  "desc": "Two letter abbreviation of the State (e.g., IL represents Illinois) associated with the subapplicant/subrecipient. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "subapplicantZipCode",
+  "type": "text",
+  "searchable": true,
+  "desc": "Five digit ZIP Code associated with the subapplicant/subrecipient (e.g., 60614). [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "subapplicantZip4",
+  "type": "text",
+  "searchable": true,
+  "desc": "Four digits that designate a specific location within the ZIP Code associated with the subapplicant/subrecipient (e.g., 0001). [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "subjectEO12372",
+  "type": "text",
+  "searchable": true,
+  "desc": "Indicates if the Subapplicant/Subrecipient is subject to review by Executive Order 12372, Intergovernmental Review of Federal Programs. For more information on Executive Order 12372, seehttps://www.archives.gov/federal-register/codification/executive-order/12372.html. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "eo12372ReviewDate",
+  "type": "date",
+  "searchable": true,
+  "desc": "Date the subapplication/subgrant was made available to the Executive Order 12372 for review. This is a conditional field in the Subapplicant Information section that is dependent on Subject EO12372 being Yes. While this value may contain time information (00:00:00.000), these are system generated and do not reflect the actual time associated with the subapplication/subgrant. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "subapplicantFederalDebt",
+  "type": "boolean",
+  "searchable": true,
+  "desc": "Indicates if the Subapplicant/Subrecipient is delinquent on any federal debt. Delinquent debt applies to the applicant organization and not to individual people who work on or sign the application. Yes is indicated with either a 'true' or '1'. No is indicated with either a 'false' or '0'. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "dateInitiatedInSystem",
+  "type": "datetime",
+  "searchable": true,
+  "desc": "Date and time the project was initiated in the system. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "dateSubmittedToApplicant",
+  "type": "datetime",
+  "searchable": true,
+  "desc": "Date and time the subapplication was submitted to the applicant/recipient. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "dateSubmittedToFema",
+  "type": "datetime",
+  "searchable": true,
+  "desc": "Date and time the project was submitted to FEMA by the applicant/recipient. [Source: FEMA GO, eGrants]"
+ },
+ {
+  "v": 2,
+  "name": "subapplicationTitle",
+  "type": "text",
+  "searchable": true,
+  "desc": "Title of the subapplication submitted to FEMA by the subapplicant. This field may be altered by FEMA to remove Personal Identifiable Information (PII). If PII is removed, it will be replaced by \"[REDACTED]\". This is a required field for subapplicants in FEMA GO. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "proposedProjectStartDate",
+  "type": "date",
+  "searchable": true,
+  "desc": "Proposed start date of the subapplication/subgrant or application/grant schedule, which may differ from the official Period of Performance. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "proposedProjectEndDate",
+  "type": "date",
+  "searchable": true,
+  "desc": "Proposed end date of the subapplication/subgrant schedule which may differ from the official Period of Performance. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "estimatedTotalDuration",
+  "type": "smallint",
+  "searchable": true,
+  "desc": "Estimated total duration of the subapplication/subgrant in number of months which may differ from the official Period of Performance. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "fundingCategory",
+  "type": "text",
+  "searchable": true,
+  "desc": "Grant program funding category selected by the Applicant/Recipient for the subapplication/subgrant. The funding categories differ for each grant program and are outlined in the Fiscal Year Notice of Funding Opportunity. For more information on funding categories for each grant program, visithttps://www.grants.gov/. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "subapplicantType",
+  "type": "text",
+  "searchable": true,
+  "desc": "Type of subapplicant/subrecipient, self-designated by the subapplicant/subrecipient. A subapplicant/subrecipient can be Federally Recognized Tribes, State Agencies, Private Non-Profits, Tribal Agencies, Local Governments/Communities. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "status",
+  "type": "text",
+  "searchable": true,
+  "desc": "Current status of the subapplication/subgrant or application/grant in the system (e.g., Ineligible, Not Selected, Subaward Offered, Subaward Selected, Submitted to FEMA, etc.). [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "subapplicationType",
+  "type": "text",
+  "searchable": true,
+  "desc": "Type of subapplication/subgrant (e.g., Management cost, Plan, Project, Project Scoping, Technical Assistance, etc.). [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "benefitingCounties",
+  "type": "text",
+  "searchable": true,
+  "desc": "County or County equivalent entity associated with the subapplication/subgrant. Multiple counties are possible and are delimited by a semicolon. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "primaryActivity",
+  "type": "text",
+  "searchable": true,
+  "desc": "Primary mitigation activity associated with the subapplication/subgrant. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "primarySubactivity",
+  "type": "text",
+  "searchable": true,
+  "desc": "Primary mitigation subactivity associated with the subapplication/subgrant. Not all Primary Activities have a Primary Subactivity. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "secondaryActivity",
+  "type": "text",
+  "searchable": true,
+  "desc": "Secondary mitigation activity associated with the subapplication/subgrant. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "secondarySubactivity",
+  "type": "text",
+  "searchable": true,
+  "desc": "Secondary mitigation subactivity associated with the subapplication/subgrant. Not all Secondary Activities have a Secondary Subactivity. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "tertiaryActivity",
+  "type": "text",
+  "searchable": true,
+  "desc": "Tertiary mitigation activity associated with the subapplication/subgrant. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "tertiarySubactivity",
+  "type": "text",
+  "searchable": true,
+  "desc": "Tertiary mitigation subactivity associated with the subapplication/subgrant. Not all Tertiary Activities have a Tertiary Subactivity. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "primaryCommunityLifeline",
+  "type": "text",
+  "searchable": true,
+  "desc": "Primary Community Lifeline associated with the subapplication/subgrant. For more information regarding community lifelines, seehttps://www.fema.gov/sw/emergency-managers/practitioners/lifelines. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "primaryCommunityLifelineComponent",
+  "type": "text",
+  "searchable": true,
+  "desc": "Primary Community Lifeline Component associated with the subapplication/subgrant. Not all Community Lifelines have a Component. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "secondaryCommunityLifeline",
+  "type": "text",
+  "searchable": true,
+  "desc": "Secondary Community Lifeline associated with the subapplication/subgrant. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "secondaryCommunityLifelineComponent",
+  "type": "text",
+  "searchable": true,
+  "desc": "Secondary Community Lifeline Component associated with the subapplication/subgrant. Not all Community Lifelines have a Component. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "tertiaryCommunityLifeline",
+  "type": "text",
+  "searchable": true,
+  "desc": "Tertiary Community Lifeline associated with the subapplication/subgrant. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "tertiaryCommunityLifelineComponent",
+  "type": "text",
+  "searchable": true,
+  "desc": "Tertiary Community Lifeline Component associated with the subapplication/subgrant. Not all Community Lifelines have a Component. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "primaryHazard",
+  "type": "text",
+  "searchable": true,
+  "desc": "Primary hazard associated with the subapplication/subgrant (e.g., Flooding, Fire, Tornado, etc.). [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "secondaryHazard",
+  "type": "text",
+  "searchable": true,
+  "desc": "Secondary hazard associated with the subapplication/subgrant (e.g., Flooding, Fire, Tornado, etc.). [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "tertiaryHazard",
+  "type": "text",
+  "searchable": true,
+  "desc": "Tertiary hazard associated with the subapplication/subgrant (e.g., Flooding, Fire, Tornado, etc.). [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "natureBasedSolution",
+  "type": "text",
+  "searchable": true,
+  "desc": "The type of nature-based solution associated with the subapplication/subgrant.  Yes is indicated with either a 'true' or '1' and No is indicated with either a 'false' or '0'. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "smallImpoverished",
+  "type": "boolean",
+  "searchable": true,
+  "desc": "Indicates if the Subapplicant/Subrecipient self-identified as a Small Impoverished Community as defined by 42 U.S.C. 5133(a), and in FY2023 the question was expanded to include an OR statement for Community Disaster Resilience Zones (CDRZs) as defined by 42 U.S. Code 5136(a). Under the HMA Grant Programs \"Small Impoverished Community\" is synonymous with \"Economically Disadvantaged Rural Community\". Yes is indicated with either a 'true' or '1'. No is indicated with either a 'false' or '0'. [Source: FEMA GO, eGrants]"
+ },
+ {
+  "v": 2,
+  "name": "populationAffected",
+  "type": "decimal(12,7)",
+  "searchable": true,
+  "desc": "Percentage of population affected by the subapplication/subgrant. This value is self-reported by the subapplicant/subrecipient. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "phasedProject",
+  "type": "boolean",
+  "searchable": true,
+  "desc": "Indicates if the subapplication/subgrant is phased. Complex mitigation projects can be phased which enables the Subapplicant/Subrecipient to develop technical and environmental information, including design, engineering studies, and permitting, before FEMA approves funding for full construction. Yes is indicated with either a 'true' or '1'. No is indicated with either a 'false' or '0'. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "construction",
+  "type": "boolean",
+  "searchable": true,
+  "desc": "Indicates if the Subapplicant/Subrecipient proposes to perform construction activities under this subapplication/subgrant. Yes is indicated with either a 'true' or '1'. No is indicated with either a 'false' or '0'. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "priorSubapplication",
+  "type": "boolean",
+  "searchable": true,
+  "desc": "Indicates if the subapplication/subgrant was created from a prior FEMA HMA Advance Assistance or Project Scoping award or any other federal grant award, or the Subapplicant is a past recipient of Building Resilient Infrastructure and Communities non-financial Direct Technical Assistance. Yes is indicated with either a 'true' or '1'. No is indicated with either a 'false' or '0'. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "communityRatingSystem",
+  "type": "boolean",
+  "searchable": true,
+  "desc": "Indicates if the Subapplicant/Subrecipient participates in FEMA's Community Rating System (CRS). For more information regarding CRS, seehttps://www.fema.gov/floodplain-management/community-rating-system. Yes is indicated with either a 'true' or '1'. No is indicated with either a 'false' or '0'. [Source: FEMA GO, eGrants]"
+ },
+ {
+  "v": 2,
+  "name": "cooperatingTechnicalPartner",
+  "type": "boolean",
+  "searchable": true,
+  "desc": "Indicates if the Subapplicant/Subrecipient participates in the Cooperating Technical Partner (CTP) program. For more information regarding CTP, visithttps://www.fema.gov/flood-maps/cooperating-technical-partners. Yes is indicated with either a 'true' or '1'. No is indicated with either a 'false' or '0'. [Source: FEMA GO, eGrants]"
+ },
+ {
+  "v": 2,
+  "name": "adoptedIcc",
+  "type": "boolean",
+  "searchable": true,
+  "desc": "Indicates if the Subapplicant/Subrecipient adopted building codes are consistent with International Code Council's (ICC) building codes. Yes is indicated with either a 'true' or '1'. No is indicated with either a 'false' or '0'. [Source: FEMA GO, eGrants]"
+ },
+ {
+  "v": 2,
+  "name": "yearBuildingCode",
+  "type": "smallint",
+  "searchable": true,
+  "desc": "Year of the Subapplicant/Subrecipient's building code. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "buildingCodesOnBcegs",
+  "type": "boolean",
+  "searchable": true,
+  "desc": "Indicates if the Subapplicant/Subrecipient's building codes are assessed on the Building Codes Effectiveness Grading Schedule (BCEGS). For more information regarding BCEGS, seehttps://www.fema.gov/glossary/bcegs. Yes is indicated with either a 'true' or '1'. No is indicated with either a 'false' or '0'. [Source FEMA GO, eGrants]"
+ },
+ {
+  "v": 2,
+  "name": "bcegsRating",
+  "type": "smallint",
+  "searchable": true,
+  "desc": "Number (1-10) used to represent the subapplicant/subrecipient's Building Codes Effectiveness Grading Schedule (BCEGS) rating. [Source: FEMA GO, eGrants]"
+ },
+ {
+  "v": 2,
+  "name": "mitigationPlanCovered",
+  "type": "boolean",
+  "searchable": true,
+  "desc": "Indicates if the subapplication/subgrant activity is covered by a current FEMA approved multi-hazard mitigation plan in compliance with 44 CFR Part 201. For more information regarding Mitigation Planning, seehttps://www.fema.gov/emergency-managers/risk-management/hazard-mitigation-planning. Yes is indicated with either a 'true' or '1'. No is indicated with either a 'false' or '0'. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "mitigationPlanType",
+  "type": "text",
+  "searchable": true,
+  "desc": "Type of mitigation plan that covers the subapplication/subgrant activity. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "mitigationPlanSubtype",
+  "type": "text",
+  "searchable": true,
+  "desc": "Indicates if the mitigation plan, that covers the subapplicant/subgrant activity, for the State/Territory/Tribal Mitigation Plan Types is enhanced or standard. Local Mitigation Plan Types do not have a subtype. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "dateMitigationPlanApproved",
+  "type": "date",
+  "searchable": true,
+  "desc": "Date the mitigation plan covering the subapplication/subgrant activity was approved. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "costEffectivenessMethod",
+  "type": "text",
+  "searchable": true,
+  "desc": "Method used to evaluate the subapplication/subgrant's cost-effectiveness. Mitigation activities are required by statute and regulation to be cost-effective, and the determination is performed in a variety of ways (e.g., FEMA BCA Toolkit, pre-calculated benefits, other BCA methodology approved by FEMA). [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "preCalculatedBenefit",
+  "type": "text",
+  "searchable": true,
+  "desc": "Type of pre-calculated benefit used to determine the subapplication/subgrant's cost-effectiveness (e.g., Acquisitions in the special flood hazard area, Residential hurricane wind retrofits, etc.). For more information on pre-calculated benefits, seehttps://www.fema.gov/grants/guidance-tools/benefit-cost-analysis/streamlined-bca#pre-calculated-benefits. [Source FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "environmentalBenefit",
+  "type": "boolean",
+  "searchable": true,
+  "desc": "Indicates if environmental benefits were added to the benefits in the Benefit-Cost Analysis. Environmental benefits capture the benefits resulting from mitigation activities that improve or preserve the natural environment, such as acquisitions, relocations, and floodplain and stream restoration. Yes is indicated with either a 'true' or '1'. No is indicated with either a 'false' or '0'. [Source FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "seaLevelRise",
+  "type": "boolean",
+  "searchable": true,
+  "desc": "Indicates if sea level rise was incorporated into the flood elevations in the Benefit-Cost Analysis. Sea level rise benefits capture the cost associated with elevation/acquisition projects against anticipated flooding due to rising sea levels. Yes is indicated with either a 'true' or '1'. No is indicated with either a 'false' or '0'. [Source FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "socialBenefit",
+  "type": "boolean",
+  "searchable": true,
+  "desc": "Indicates if social benefits were added to the benefits in the Benefit-Cost Analysis. Social benefits capture the avoided costs associated with mental stress, anxiety, and lost wages that disaster survivors would otherwise experience. Yes is indicated with either a 'true' or '1'. No is indicated with either a 'false' or '0'. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "mitigatingProjectSiteInventory",
+  "type": "boolean",
+  "searchable": true,
+  "desc": "Indicates if the subapplication/subgrant proposes to mitigate project site inventory (e.g., buildings, vacant land, infrastructure/utility/other locations). Yes is indicated with either a 'true' or '1'. No is indicated with either a 'false' or '0'. [Source FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "projectSiteInventoryLocationKnown",
+  "type": "boolean",
+  "searchable": true,
+  "desc": "Indicates if the location of the project site inventory is known at the time of submission. Examples of unknown locations at time of submission include, but are not limited to, saferoom/shelter lottery subapplication/subgrants. Yes is indicated with either a 'true' or '1'. No is indicated with either a 'false' or '0'. [Source FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "numberBuildingLocations",
+  "type": "smallint",
+  "searchable": true,
+  "desc": "For FEMA GO, this value represents the number of building locations proposed to be mitigated. For eGrants and NEMIS, this value may include vacant land and/or infrastructure.  [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "numberInfrastructureLocations",
+  "type": "smallint",
+  "searchable": true,
+  "desc": "Number of infrastructure/utility/other locations proposed to be mitigated. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "numberVacantLandLocations",
+  "type": "smallint",
+  "searchable": true,
+  "desc": "Number of vacant land locations proposed to be mitigated. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "federalShareAmount",
+  "type": "decimal(12,2)",
+  "searchable": true,
+  "desc": "Cost share amount in dollars requested/approved for the subapplication/subgrant to be covered by FEMA. In general, HMA funds may be used to pay up to 75 percent of the eligible activity costs. For more information regarding cost sharing, seehttps://www.fema.gov/grants/mitigation/hazard-mitigation-assistance-guidance. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "nonFederalShareAmount",
+  "type": "decimal(12,2)",
+  "searchable": true,
+  "desc": "Cost share amount in dollars requested/approved for the subapplication/subgrant or application/grant to be covered by Non-Federal sources. Contributions of cash, third-party in-kind services, materials, or any combination thereof, may be accepted as part of the Non-Federal cost share. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "mgmtFederalShareAmount",
+  "type": "decimal(12,2)",
+  "searchable": true,
+  "desc": "Cost share amount in dollars requested/approved for the management costs to be covered by FEMA. For more information regarding cost sharing, seehttps://www.fema.gov/grants/mitigation/hazard-mitigation-assistance-guidance. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "mgmtNonFederalShareAmount",
+  "type": "decimal(12,2)",
+  "searchable": true,
+  "desc": "Cost share amount in dollars requested/approved for the management costs to be covered by Non-Federal sources. For more information regarding cost sharing, seehttps://www.fema.gov/grants/mitigation/hazard-mitigation-assistance-guidance. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "totalSubapplicationAmount",
+  "type": "decimal(12,2)",
+  "searchable": true,
+  "desc": "Total amount in dollars requested/approved for the subapplication/subgrant or application/grant. The total cost to implement approved mitigation activities is generally funded by a combination of Federal and Non-Federal sources. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "totalObligatedAmount",
+  "type": "decimal(12,2)",
+  "searchable": true,
+  "desc": "Total federal amount obligated for the subapplication/subgrant or application/grant. Obligations are executed in increments, based on the subgrant meeting an established project milestone schedule, until the subgrant or grant is completed. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "totalPaymentAmount",
+  "type": "decimal(12,2)",
+  "searchable": true,
+  "desc": "Total amount in dollars for payments for the subgrant or grant. A payment is requested by the applicant/recipient for reimbursement of eligible activity costs. [Source: FEMA GO]"
+ },
+ {
+  "v": 2,
+  "name": "federalSharePercentage",
+  "type": "decimal(12,2)",
+  "searchable": true,
+  "desc": "Percentage of the project cost to be covered by FEMA. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "nonFederalSharePercentage",
+  "type": "decimal(12,2)",
+  "searchable": true,
+  "desc": "Percentage of the project cost to be covered by Non-Federal sources. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "benefitCostRatio",
+  "type": "decimal(9,2)",
+  "searchable": true,
+  "desc": "Numerical expression of the cost-effectiveness of the subapplication/subgrant as submitted by the subapplicant (i.e., not FEMA validated). The Benefit-Cost Ratio (BCR) is derived from a subapplication's total net benefits divided by its total cost. Composite BCRs of 1.0 or greater have more benefits than costs and are therefore cost-effective. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "bcaTotalBenefits",
+  "type": "decimal(14,2)",
+  "searchable": true,
+  "desc": "Anticipated benefits that occur for the life of the project used to derive the Benefit-Cost Ratio to demonstrate cost-effectiveness. Benefits may include avoided damage, loss of function, and displacement. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "bcaTotalCosts",
+  "type": "decimal(13,2)",
+  "searchable": true,
+  "desc": "Total costs of the subapplication/subgrant used to derive the Benefit-Cost Ratio to demonstrate cost-effectiveness. The BCA Total Costs may differ from the Total Subapplication Amount due to costs not required to be included in the Benefit-Cost Analysis. [Source: FEMA GO, eGrants, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "disasterNumber",
+  "type": "text",
+  "searchable": true,
+  "desc": "Sequentially assigned number used to designate an event or incident declared as a disaster. For more information on the disaster process,https://www.fema.gov/disasters/how-declared. [Source: FEMA GO, NEMIS]"
+ },
+ {
+  "v": 2,
+  "name": "selectionStatus",
+  "type": "text",
+  "searchable": true,
+  "desc": "The status of the subapplication/subgrant assigned by the Program during the Selection Phase (e.g., Identified for Further Review, Not Selected, Did Not Meet HMA Requirements, etc.). The selection statuses are outlined in the Fiscal Year Notice of Funding Opportunity. For more information, visithttps://www.grants.gov/. This information may differ from the formal selection announcement made by FEMA following the close of the application period. [Source: Program Derived]"
+ },
+ {
+  "v": 2,
+  "name": "selectionFundingCategory",
+  "type": "text",
+  "searchable": true,
+  "desc": "Grant program funding category assigned by the Program for the subapplication/subgrant. The funding categories differ for each grant program and are outlined in the Fiscal Year Notice of Funding Opportunity. For more information on funding categories for each grant program, visithttps://www.grants.gov/. This value may differ from the Funding Category field. This information may differ from the formal selection announcement made by FEMA following the close of the application period. [Source: Program Derived]"
+ },
+ {
+  "v": 2,
+  "name": "selectionProgramActivity",
+  "type": "text",
+  "searchable": true,
+  "desc": "Grant program funding category activity assigned by the Program for the subapplication/subgrant. The funding categories differ for each grant program and are outlined in the Fiscal Year Notice of Funding Opportunity. For more information on funding categories for each grant program, visithttps://www.grants.gov/. This value may differ from the Funding Category field. This information may differ from the formal selection announcement made by FEMA following the close of the application period. [Source: Program Derived]"
+ },
+ {
+  "v": 2,
+  "name": "selectionFederalShareAmount",
+  "type": "decimal(12,2)",
+  "searchable": true,
+  "desc": "Cost share amount in dollars approved during the Selection Phase for the subapplication/subgrant or application/grant to be covered by FEMA. This value may differ from the Federal Share Amount field. This is a conditional field that is dependent when Selection Status is 'Identified for Further Review'. This information may differ from the formal selection announcement made by FEMA following the close of the application period. [Source: Program Derived]"
+ },
+ {
+  "v": 2,
+  "name": "selectionFundCode",
+  "type": "text",
+  "searchable": true,
+  "desc": "Fund code assigned by the Program for the subapplication/subgrant. The possible codes include 5 (National Flood Insurance Fund, National Flood Insurance Act of 1968), IN (National Flood Insurance Fund, Infrastructure Investment and Jobs Act), 6M (Disaster Relief Fund, Disaster Recovery Reform Act of 2018), and 6N (Disaster Relief Fund, Infrastructure Investment and Jobs Act). [Source: Program Derived]"
+ },
+ {
+  "v": 2,
+  "name": "crsRating",
+  "type": "smallint",
+  "searchable": true,
+  "desc": "Number (1-9) used to represent the Subapplicant/Subrecipient's Community Rating System Class. See https://www.fema.gov/floodplain-management/community-rating-system for more details. [Source: FEMA GO, eGrants]"
+ }
+]

@@ -1,0 +1,1 @@
+{"skip":0,"select":null,"rundate":"2026-10-11T04:10:09.888Z","top":1,"filter":"propertyState eq 'PR'","format":"json","metadata":true,"orderby":"","entityname":"NfipPolicies","version":"v3","url":"/api/open/v3/NfipPolicies?$filter=propertyState%20eq%20%27PR%27&$top=1&$count=true","count":315431}

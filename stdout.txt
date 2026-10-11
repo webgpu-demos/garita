@@ -1,0 +1,37 @@
+200 603ms 225747B https://www.fema.gov/api/open/v1/OpenFemaDataSets?$top=1000
+datasets: DisasterDeclarationsSummaries v2 n=70490 refreshed 2026-10-11T04:08:54.128Z | PublicAssistanceProjectsStatus v1 n=425952 refreshed 2026-09-17T15:10:20.228Z | NfipResidentialPenetrationRates v1 n=3159 refreshed 2026-08-04T16:40:37.737Z | HazardMitigationAssistanceProjects v4 DEP 2026-10-15T00:00:00.000Z n=56410 refreshed 2026-08-31T18:56:48.258Z | NfipPolicies v3 n=74739461 refreshed 2026-09-09T18:03:47.071Z | HazardMitigationAssistanceProjectsFinancialTransactions v1 DEP 2026-10-15T00:00:00.000Z n=78621 refreshed 2026-08-31T18:57:03.460Z | FemaWebDisasterDeclarations v1 n=5285 refreshed 2026-10-11T04:08:59.941Z | FimaNfipClaims v2 DEP 2026-10-15T00:00:00.000Z n=2721780 refreshed 2026-06-01T19:41:55.078Z | PublicAssistanceApplicantsProgramDeliveries v1 n=258370 refreshed 2026-10-10T15:07:01.981Z | NfipCommunityStatusBook v1 n=25130 refreshed 2026-10-11T04:07:26.746Z | PublicAssistanceSecondAppealsTracker v1 n=1792 refreshed 2026-10-06T14:20:24.125Z | NfipCommunityLayerComprehensive v1 DEP 2026-11-09T00:00:00.000Z n=51943 refreshed 2024-12-05T18:09:51.898Z | FimaNfipPolicies v2 DEP 2026-10-15T00:00:00.000Z n=73601802 refreshed 2026-06-01T23:31:01.731Z | NfipCommunityLayerNoOverlapsSplit v1 DEP 2026-11-09T00:00:00.000Z n=37918 refreshed 2024-12-05T18:09:57.312Z | NfipCommunityLayerNoOverlapsWhole v1 DEP 2026-11-09T00:00:00.000Z n=29898 refreshed 2024-12-05T18:10:50.474Z | NfipClaims v3 n=2725989 refreshed 2026-09-09T16:23:10.614Z | NfipMultipleLossProperties v1 n=240651 refreshed 2026-08-04T16:40:45.880Z | HazardMitigationAssistanceMitigatedProperties v4 DEP 2026-10-15T00:00:00.000Z n=99927 refreshed 2026-08-31T18:56:55.418Z | HazardMitigationAssistanceProjectsByNfipCrsCommunities v2 DEP 2026-10-15T00:00:00.000Z n=76840 refreshed 2026-08-31T18:57:02.396Z | HazardMitigationGrantProgramDisasterSummaries v2 DEP 2026-10-15T00:00:00.000Z n=2597 refreshed 2026-08-31T18:56:56.203Z | HazardMitigationGrantProgramDisasterSummaries v3 n=2173 refreshed 2026-10-10T12:09:40.437Z | HmaSubapplicationsFinancialTransactions v1 n=143137 refreshed 2026-10-10T12:04:22.383Z | HazardMitigationPlanStatuses v1 n=36757 refreshed 2026-10-10T12:09:42.992Z | HmaSubapplicationsByNfipCrsCommunities v1 n=368946 refreshed 2026-10-10T12:09:53.325Z | HmaSubapplicationsProjectSiteInventories v1 n=235425 refreshed 2026-10-10T12:15:00.007Z | HmaSubapplicationsCongressionalDistricts v1 n=11381 refreshed 2026-10-10T12:09:51.914Z | HmaSubapplications v2 n=63607 refreshed 2026-10-10T12:10:11.720Z | PublicAssistanceApplicants v1 n=199472 refreshed 2026-10-10T15:06:44.977Z | PublicAssistanceFundedProjectsDetails v2 n=850008 refreshed 2026-10-10T15:07:32.250Z | PublicAssistanceGrantAwardActivities v2 n=1225092 refreshed 2026-10-10T15:07:43.525Z | PublicAssistanceFundedProjectsSummaries v1 n=196754 refreshed 2026-10-10T15:06:50.717Z | HousingAssistanceOwners v2 n=160550 refreshed 2026-10-10T06:44:49.152Z | HousingAssistanceRenters v2 n=148072 refreshed 2026-10-10T06:44:49.170Z
+200 100ms 67497B https://www.fema.gov/api/open/v1/OpenFemaDataSetFields?$filter=openFemaDataSet%20eq%20'NfipClaims'&$top=1000
+200 141ms 69796B https://www.fema.gov/api/open/v1/OpenFemaDataSetFields?$filter=openFemaDataSet%20eq%20'NfipPolicies'&$top=1000
+200 105ms 58505B https://www.fema.gov/api/open/v1/OpenFemaDataSetFields?$filter=openFemaDataSet%20eq%20'HmaSubapplications'&$top=1000
+200 90ms 24878B https://www.fema.gov/api/open/v1/OpenFemaDataSetFields?$filter=openFemaDataSet%20eq%20'HmaSubapplicationsProjectSiteInventories'&$top=1000
+200 154ms 14207B https://www.fema.gov/api/open/v1/OpenFemaDataSetFields?$filter=openFemaDataSet%20eq%20'PublicAssistanceFundedProjectsDetails'&$top=1000
+200 7371ms 146333B https://www.fema.gov/about/openfema/terms-conditions
+200 6838ms 24773228B https://www.fema.gov/api/open/v3/NfipClaims?$filter=state%20eq%20'PR'&$top=10000&$skip=0
+200 6900ms 24775711B https://www.fema.gov/api/open/v3/NfipClaims?$filter=state%20eq%20'PR'&$top=10000&$skip=10000
+200 4713ms 13347597B https://www.fema.gov/api/open/v3/NfipClaims?$filter=state%20eq%20'PR'&$top=10000&$skip=20000
+NfipClaims v3: 25387 rows 
+saved claims.v3 2795203B gz
+200 1177ms 2879B https://www.fema.gov/api/open/v3/NfipPolicies?$filter=propertyState%20eq%20'PR'&$top=1&$count=true
+v3/NfipPolicies PR count 315431 
+200 9130ms 25609587B https://www.fema.gov/api/open/v3/NfipPolicies?$filter=propertyState%20eq%20'PR'%20and%20policyTerminationDate%20ge%20'2025-06-01T00%3A00%3A00.000Z'&$top=10000&$skip=0
+200 4453ms 13927343B https://www.fema.gov/api/open/v3/NfipPolicies?$filter=propertyState%20eq%20'PR'%20and%20policyTerminationDate%20ge%20'2025-06-01T00%3A00%3A00.000Z'&$top=10000&$skip=10000
+v3/NfipPolicies PR terminating on/after 2025-06-01: 15442 
+saved policies.v3 1187858B gz
+200 218ms 3699B https://www.fema.gov/api/open/v2/FimaNfipPolicies?$filter=propertyState%20eq%20'PR'&$top=1&$count=true
+v2/FimaNfipPolicies PR count 313346 
+200 7450ms 24510682B https://www.fema.gov/api/open/v2/FimaNfipPolicies?$filter=propertyState%20eq%20'PR'%20and%20policyTerminationDate%20ge%20'2025-06-01T00%3A00%3A00.000Z'&$top=10000&$skip=0
+200 5544ms 8278625B https://www.fema.gov/api/open/v2/FimaNfipPolicies?$filter=propertyState%20eq%20'PR'%20and%20policyTerminationDate%20ge%20'2025-06-01T00%3A00%3A00.000Z'&$top=10000&$skip=10000
+v2/FimaNfipPolicies PR terminating on/after 2025-06-01: 13378 
+saved policies.v2 1283885B gz
+200 4500ms 7920456B https://www.fema.gov/api/open/v2/PublicAssistanceFundedProjectsDetails?$filter=stateAbbreviation%20eq%20'PR'&$top=10000&$skip=0
+200 2543ms 7929298B https://www.fema.gov/api/open/v2/PublicAssistanceFundedProjectsDetails?$filter=stateAbbreviation%20eq%20'PR'&$top=10000&$skip=10000
+200 1755ms 2406025B https://www.fema.gov/api/open/v2/PublicAssistanceFundedProjectsDetails?$filter=stateAbbreviation%20eq%20'PR'&$top=10000&$skip=20000
+PA 23021
+saved pa 2456872B gz
+400 236ms 216B https://www.fema.gov/api/open/v2/HmaSubapplications?$filter=state%20eq%20'Puerto%20Rico'&$top=10000&$skip=0
+v2/HmaSubapplications: 0 {"error":400,"text":"{\"error\":[{\"name\":\"OData Query Parser Error\",\"code\":\"OF_OQP_002\",\"type\":\"$filter criteria error\",\"message\":\"Field \\\"state\\\" not found in the model path HmaSubapplications.  Please check that the fields are valid.\"}]}"}
+200 1483ms 1176236B https://www.fema.gov/api/open/v4/HazardMitigationAssistanceProjects?$filter=state%20eq%20'Puerto%20Rico'&$top=10000&$skip=0
+v4/HazardMitigationAssistanceProjects: 1232 
+saved v4.HazardMitigationAssistanceProjects 115164B gz
+exit code 0
+7.9M	out

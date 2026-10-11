@@ -1,0 +1,1 @@
+{"skip":0,"select":null,"rundate":"2026-10-11T04:09:49.655Z","top":10000,"filter":"state eq 'PR'","format":"json","metadata":true,"orderby":"","entityname":"NfipClaims","version":"v3","url":"/api/open/v3/NfipClaims?$filter=state%20eq%20%27PR%27&$top=10000&$skip=0","count":0}

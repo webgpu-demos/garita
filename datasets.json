@@ -1,0 +1,2589 @@
+[
+ {
+  "identifier": "openfema-47",
+  "name": "DisasterDeclarationsSummaries",
+  "title": "Disaster Declarations Summaries",
+  "description": "Disaster Declarations Summaries is a summarized dataset describing all federally declared disasters. This dataset lists all official FEMA Disaster Declarations, beginning with the first disaster declaration in 1953 and features all three disaster declaration types: major disaster, emergency, and fire management assistance. The dataset includes declared recovery programs and geographic areas (county not available before 1964; Fire Management records are considered partial due to historical nature of the dataset).\n\nPlease note the unique structure of the disaster sequencing (due to a numbering system that originated in the 1950's-1970's):\n0001-1999     Major Disaster Declaration\n2000-2999     Fire Management\n3000-3999     Emergency Declaration (Special Emergency)\n4000-4999     Major Disaster Declaration\n5000-5999     Fire Management\n\nFor more information on the disaster declaration process, see https://www.fema.gov/disasters and https://www.fema.gov/disasters/how-declared\n\nThis is raw, unedited data from FEMA's National Emergency Management Information System (NEMIS) and as such is subject to a small percentage of human error. The dataset is primarily composed of historical data that was manually entered into NEMIS after it launched in 1998. \nAdditionally, NEMIS utilizes census data from the United States Census Bureau in which Tribal Nations are listed as localities within a State. As such, disaster declarations for Tribal Nations are currently included in State data.\nCitation: FEMA's citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page, Citing Data section: https://www.fema.gov/about/openfema/terms-conditions.\n\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq.\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/Disaster-Declarations-Summaries-v2",
+  "keyword": [
+   "disaster",
+   "declaration",
+   "fema",
+   "nemis",
+   "emergency"
+  ],
+  "modified": "2024-08-27T00:00:00.000Z",
+  "publisher": "FEMA/Office of External Affairs/Disaster Operations Division",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/disasters/how-declared",
+  "temporal": "1953-05-01/",
+  "api": true,
+  "version": 2,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "Disaster Information",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/PT20M",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2013-05-01T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 70490,
+  "depDate": null,
+  "depApiMessage": null,
+  "depWebMessage": null,
+  "depNewURL": null,
+  "hash": "9f788147783014a1d4f6c8f826dbc5db2612472a",
+  "lastRefresh": "2025-09-25T13:40:12.615Z",
+  "id": "b9944f5f-dc27-4e77-bcca-8656552c0d60",
+  "lastDataSetRefresh": "2026-10-11T04:08:54.128Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries.csv",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries.json",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries.jsona",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries.jsonl",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries.parquet",
+    "datasetSize": "tiny (< 10MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-105",
+  "name": "PublicAssistanceProjectsStatus",
+  "title": "Public Assistance Projects Status",
+  "description": "This dataset contains data on all Public Assistance (PA) project grant applications associated with ongoing PA operations in open declarations. The purpose of this dataset is to provide information on the statuses of PA reimbursement grant requests, and deliver further transparency on program activity, as outlined in H.R.7147 - Homeland Security and Further Additional Continuing Appropriations Act, 2026.\n\nAs part of disaster declarations, the President can make federal funding (Public Assistance) available through FEMA to eligible state, local and tribal governments and certain private nonprofit organizations. This is done on a cost-sharing basis for emergency work and the repair, replacement, or mitigation work for facilities damaged by the disaster event. FEMA obligates funding for a project directly to the Recipient (State or Tribe). It is the Recipient's responsibility to ensure that the eligible subrecipient (listed in the dataset as Applicant Name) receives the award funding. For more information on the Public Assistance process see: https://www.fema.gov/assistance/public/process \n\nThis dataset includes all project applications (projects) entered into the PA source system: Grants Manager/Grants Portal. This includes projects that have been operationally closed, awarded, pending award or amendment, as well as those that have been discontinued through project withdrawal or project ineligibility. The data includes attributes of the declaration, incident, primary recipient, and applicant organizations. Further details are included regarding each project, including: the project's category of work, and a brief description of the emergency or permanent work for which reimbursement is requested. There is also information on various project statuses through the phases of the PA process, as well as milestone dates and timeframes to allow monitoring of the ongoing and completed grant applications. Additional facts are included regarding project costs, including: the overall requested reimbursement costs, the federal and non-federal share of these costs, federally awarded funds, and funds still pending processing and award.\n\nThis dataset includes a combination of both raw, and calculated data from the FEMA Applicant Case Tracker (FAC-Trax) database, which is sourced from the PA Grants Portal and Grants Manager platforms. The database contains information entered by both FEMA and external recipient and applicant personnel. As such the data contained in these systems is subject to a small percentage of human error.\nFEMA Public Assistance transitioned from the previous source of record (the Emergency Management Mission Integrated Environment (EMMIE)) between 2022 and 2024, migrating data from one system into the other. For a number of years, the program was using a combination of the two systems for some portions of the process. Due to the integration of data from two separate databases, there is potential for some minor inconsistencies in certain data fields.\nThe financial information is derived from FAC-Trax and not FEMA's official financial systems. Due to differences in reporting periods, status of obligations and how business rules are applied, this financial information may differ slightly from official publication on public websites such as usaspending.gov. This dataset is not intended to be used for any official federal financial reporting.\nFEMA's terms and conditions and citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page: https://www.fema.gov/about/openfema/terms-conditions\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq\n\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v1/PublicAssistanceProjectsStatus",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/public-assistance-projects-status-v1",
+  "keyword": [
+   "public assistance",
+   "projects",
+   "PA process"
+  ],
+  "modified": "2026-09-15T00:00:00.000Z",
+  "publisher": "FEMA/Recovery Reporting and Analytics Division, Recovery Directorate, Office of Response and Recovery",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/assistance/public",
+  "temporal": "2005-08-31/",
+  "api": true,
+  "version": 1,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "Public Assistance",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1D",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2026-09-18T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 425952,
+  "depDate": null,
+  "depApiMessage": null,
+  "depWebMessage": null,
+  "depNewURL": null,
+  "hash": "f085a29c34f59909d9661946c0cdcef56df81eae",
+  "lastRefresh": "2026-09-16T21:00:22.310Z",
+  "id": "5f1ed451-aa55-4c79-8983-5b4e90d958b8",
+  "lastDataSetRefresh": "2026-09-17T15:10:20.228Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceProjectsStatus.csv",
+    "datasetSize": "medium (50MB - 500MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceProjectsStatus.json",
+    "datasetSize": "medium (50MB - 500MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceProjectsStatus.jsona",
+    "datasetSize": "medium (50MB - 500MB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceProjectsStatus.jsonl",
+    "datasetSize": "medium (50MB - 500MB)https://www.fema.gov/api/open/v1/PublicAssistanceProjectsStatus.parquet"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-86",
+  "name": "NfipResidentialPenetrationRates",
+  "title": "NFIP Residential Penetration Rates",
+  "description": "NFIP \"take-up rates\" or residential penetration rates are an estimate of the percentage of total residential structures covered by an NFIP policy. The NFIP residential penetration rate within an area, such as a county, is the ratio of insured residential structures to total residential structures in that area. Private flood insurance take-up rates are not available to FEMA and therefore, are not included in these estimates. This data can be used for various planning purposes to evaluate community resilience and residual flood risk, help states better understand areas vulnerable to flooding and provide guidance for flood insurance marketing. FEMA derives the number of total residential structures from the 2019 National Structure Inventory (NSI) 2022. \n\nData in this report pertains to RESIDENTIAL properties only.\nIncompleteness of NSI 2022 in some counties and communities can lead to the tables showing lower than actual numbers of total residential building stock and inflate the penetration rate, sometimes over 100%.  \nFEMA's terms and conditions and citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page: https://www.fema.gov/about/openfema/terms-conditions.\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq.\n\n\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov .",
+  "webService": "https://www.fema.gov/api/open/v1/NfipResidentialPenetrationRates",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/nfip-residential-penetration-rates-v1",
+  "keyword": [
+   "nfip",
+   "rates",
+   "nsi",
+   "residential structures",
+   "policies"
+  ],
+  "modified": "2026-08-19T00:00:00.000Z",
+  "publisher": "FEMA/Resilience/Federal Insurance Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/flood-insurance",
+  "temporal": null,
+  "api": true,
+  "version": 1,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "National Flood Insurance Program",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P3M",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2024-11-08T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 3159,
+  "depDate": null,
+  "depApiMessage": null,
+  "depWebMessage": null,
+  "depNewURL": null,
+  "hash": "5799f1033a50505f9b4a214e6f14c2f5a911b7fb",
+  "lastRefresh": "2026-08-19T19:00:33.777Z",
+  "id": "382ac81d-412d-4f0f-860f-ec09d99eae39",
+  "lastDataSetRefresh": "2026-08-04T16:40:37.737Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipResidentialPenetrationRates.csv",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipResidentialPenetrationRates.json",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipResidentialPenetrationRates.jsona",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipResidentialPenetrationRates.jsonl",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipResidentialPenetrationRates.parquet",
+    "datasetSize": "tiny (< 10MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-83",
+  "name": "HazardMitigationAssistanceProjects",
+  "title": "Hazard Mitigation Assistance Projects",
+  "description": "This dataset contains Hazard Mitigation Assistance (HMA) subapplications/subgrants from the NEMIS Mitigation and eGrants grants management systems. For details on HMA subapplications/subgrants not captured in these systems, visit https://www.fema.gov/openfema-data-page/hma-subapplications-v2. \n\nThis dataset contains information on the HMA subapplications/subgrants that have been submitted to or awarded in source systems mentioned above, as well as amendments made to the awarded subgrants. Sensitive information, such as Personally Identifiable Information (PII), has been removed to protect privacy. The information in this dataset has been deemed appropriate for publication to empower public knowledge of mitigation activities and the nature of HMA grant programs. For more information on the HMA grant programs, visit: https://www.fema.gov/grants/mitigation. \n\nThis dataset comes from the source systems mentioned above and is subject to a small percentage of human error. In some cases, data was not provided by the subapplicant, applicant, and/or entered into the grant management system. The financial information in this dataset is not derived from FEMA's official financial systems. Due to differences in reporting periods, status of obligations, and how business rules are applied, this financial information may differ slightly from official publication on public websites such as https://www.usaspending.gov. This dataset is not intended to be used for any official federal financial reporting. \n\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov .",
+  "webService": "https://www.fema.gov/api/open/v4/HazardMitigationAssistanceProjects",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/hazard-mitigation-assistance-projects-v4",
+  "keyword": [
+   "mitigation",
+   "hazard",
+   "disaster",
+   "non-disaster",
+   "grant",
+   "subapplication",
+   "project",
+   "property",
+   "assistance",
+   "HMA",
+   "HMGP",
+   "BRIC",
+   "PDM",
+   "LPDM",
+   "FMA",
+   "SRL",
+   "RFC"
+  ],
+  "modified": "2026-07-11T00:00:00.000Z",
+  "publisher": "FEMA/Resilience/Hazard Mitigation Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/grants/mitigation",
+  "temporal": "1989-01-01/",
+  "api": true,
+  "version": 4,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "Hazard Mitigation",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1D",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2018-03-09T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 56410,
+  "depDate": "2026-10-15T00:00:00.000Z",
+  "depApiMessage": "This dataset has been combined with the HMA Subapplications dataset. The Hazard Mitigation Assistance Projects prior version, V4, has been deprecated and is frozen as of August 31, 2026. It will remain until October 15, 2026, at which time it will no longer be available.  ",
+  "depWebMessage": "This dataset has been combined with the HMA Subapplications dataset. The Hazard Mitigation Assistance Projects prior version, V4, has been deprecated and is frozen as of August 31, 2026. It will remain until October 15, 2026, at which time it will no longer be available.  ",
+  "depNewURL": "https://www.fema.gov/openfema-data-page/hma-subapplications-v2",
+  "hash": "9908c64f78b7f7f1bba6cc785b3f9c3f44e27139",
+  "lastRefresh": "2026-09-08T18:40:24.140Z",
+  "id": "0222afca-4425-4019-87c1-188e66efd927",
+  "lastDataSetRefresh": "2026-08-31T18:56:48.258Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v4/HazardMitigationAssistanceProjects.csv",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v4/HazardMitigationAssistanceProjects.json",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v4/HazardMitigationAssistanceProjects.jsona",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v4/HazardMitigationAssistanceProjects.jsonl",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v4/HazardMitigationAssistanceProjects.parquet",
+    "datasetSize": "small (10MB - 50MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-96",
+  "name": "NfipPolicies",
+  "title": "NFIP Redacted Policies",
+  "description": "Congress passed the National Flood Insurance Act (NFIA), Title 42 United States Code 4001 in 1968, creating the National Flood Insurance Program (NFIP) in order to reduce future flood losses through flood hazard identification, floodplain management, and providing insurance protection. The Department of Housing and Urban Development (HUD) originally administered the program, and Congress subsequently transferred the National Flood Insurance Program  to FEMA upon its creation in 1979. FEMA and insurance companies participating in FEMA's Write Your Own (WYO) program offer flood insurance coverage for building structures as well as for contents and personal property within the building structures to eligible and insurable properties. The Write Your Own program began in 1983 with the National Flood Insurance Program operating under Part B of the National Flood Insurance Act and allows FEMA to authorize private insurance companies to issue the Standard Flood Insurance Policy (SFIP) as FEMA's fiduciary and fiscal agent. FEMA administers the flood insurance program by ensuring insurance applications are processed properly; determining correct premiums; renewing, reforming, and cancelling insurance policies; transferring policies from the seller of the property to the purchaser of the property in certain circumstances; and processing insurance claims. \n\nThe paid flood insurance premiums and claims payments for damaged property are processed through the National Flood Insurance Fund (NFIF). This fund was established by the National Flood Insurance Act of 1968 (Title 42 United States Code 4001, et seq.), and is a centralized premium revenue and fee-generated fund that supports the National Flood Insurance Program, which holds these U.S. Treasury funds. \n\nThis dataset provides details on flood insurance policy transactions. It is derived from the National Flood Insurance Program system of record, staged in the program's reporting platform and redacted to protect policy holder personally identifiable information.\n\nThe Flood Insurance Manual (https://nfipservices.floodsmart.gov/insurance-manuals) provides underwriting policies and processes to enable effective and consistent program implementation. FEMA has provided answers to Frequently Asked Questions (FAQs) to assist the public in understanding and navigating the data the National Flood Insurance Program makes available:  https://www.fema.gov/sites/default/files/documents/fema_nfip-data-faqs.pdf\n\n\n\nThis dataset represents more than 80 million policy transactions. Due to the file size we recommend using a database or another programming/data management tool to visualize and manipulate the data, as Excel will not be able to process files this large without data loss. The dataset will be updated approximately monthly and will have a lag with the system of record. \n \nThis dataset is not intended to be an official federal report, and should not be considered an official federal report. \n \nFEMA's terms and conditions and citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page: https://www.fema.gov/about/openfema/terms-conditions.\n\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq.\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v3/NfipPolicies",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/nfip-redacted-policies-v3",
+  "keyword": [
+   "NFIP",
+   "Flood",
+   "Insurance",
+   "Policy",
+   "Water"
+  ],
+  "modified": "2026-07-20T00:00:00.000Z",
+  "publisher": "FEMA/Resilience/Federal Insurance Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/flood-insurance",
+  "temporal": "2009-01-01/",
+  "api": true,
+  "version": 3,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "National Flood Insurance Program",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1M",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": [
+   "https://nfipservices.floodsmart.gov/manuals/jan_2015_consolidated_trrp.pdf"
+  ],
+  "issued": "2019-06-01T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 74739461,
+  "depDate": null,
+  "depApiMessage": null,
+  "depWebMessage": null,
+  "depNewURL": null,
+  "hash": "d5586f6be1df2ffbe381ff24b68fa8339ead634c",
+  "lastRefresh": "2026-07-27T22:39:30.327Z",
+  "id": "e7a9ed49-cc53-4732-b7c6-34e6c344f0af",
+  "lastDataSetRefresh": "2026-09-09T18:03:47.071Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/about/reports-and-data/openfema/v3/NfipPoliciesV3.csv",
+    "datasetSize": "x-large (> 10GB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/about/reports-and-data/openfema/v3/NfipPoliciesV3.parquet",
+    "datasetSize": "large (500MB - 10GB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-87",
+  "name": "HazardMitigationAssistanceProjectsFinancialTransactions",
+  "title": "Hazard Mitigation Assistance Projects Financial Transactions",
+  "description": "This dataset contains information on the HMA subgrants that have received financial transactions in NEMIS Mitigation and eGrants. Sensitive information, such as Personally Identifiable Information (PII), has been removed to protect privacy. The information in this dataset has been deemed appropriate for publication to empower public knowledge of mitigation activities and the nature of HMA grant programs. For more information on the HMA grant programs, visit: https://www.fema.gov/grants/mitigation.\n  \nThis dataset comes from the source system mentioned above and is subject to a small percentage of human error. In some cases, data was not provided by the subapplicant, applicant, and/or entered into NEMIS Mitigation and eGrants. The financial information in this dataset is not derived from FEMA's official financial systems. Due to differences in reporting periods, status of obligations, and how business rules are applied, this financial information may differ slightly from official publication on public websites such as https://www.usaspending.gov. This dataset is not intended to be used for any official federal financial reporting.\n\nFEMA's terms and conditions and citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page: https://www.fema.gov/about/openfema/terms-conditions.\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq.\n\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v1/HazardMitigationAssistanceProjectsFinancialTransactions",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/hazard-mitigation-assistance-projects-financial-transactions-v1",
+  "keyword": [
+   "mitigation",
+   "hazard",
+   "disaster",
+   "non-disaster",
+   "grant",
+   "subapplication",
+   "project",
+   "property",
+   "assistance",
+   "financial",
+   "transaction",
+   "HMA",
+   "HMGP",
+   "BRIC",
+   "PDM",
+   "LPDM",
+   "FMA",
+   "SRL",
+   "RFC"
+  ],
+  "modified": "2026-07-11T00:00:00.000Z",
+  "publisher": "FEMA/Resilience/Hazard Mitigation Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/grants/mitigation",
+  "temporal": "1990-03-17/",
+  "api": true,
+  "version": 1,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "Hazard Mitigation",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1D",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2024-11-08T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 78621,
+  "depDate": "2026-10-15T00:00:00.000Z",
+  "depApiMessage": "This dataset has been combined with the HMA Subapplications Financial Transactions dataset. The Hazard Mitigation Assistance Projects Financial Transactions prior version, V1, has been deprecated and is frozen as of August 31, 2026. It will remain until October 15, 2026, at which time it will no longer be available.  ",
+  "depWebMessage": "This dataset has been combined with the HMA Subapplications Financial Transactions dataset. The Hazard Mitigation Assistance Projects Financial Transactions prior version, V1, has been deprecated and is frozen as of August 31, 2026. It will remain until October 15, 2026, at which time it will no longer be available.  ",
+  "depNewURL": "https://www.fema.gov/openfema-data-page/hma-subapplications-financial-transactions-v1",
+  "hash": "1256ea59e92f6b2303a4f9305a237b1906e104f6",
+  "lastRefresh": "2026-09-08T18:40:24.140Z",
+  "id": "685c519e-37f5-4c88-86e6-4473f7c63bf6",
+  "lastDataSetRefresh": "2026-08-31T18:57:03.460Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v1/HazardMitigationAssistanceProjectsFinancialTransactions.csv",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v1/HazardMitigationAssistanceProjectsFinancialTransactions.json",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v1/HazardMitigationAssistanceProjectsFinancialTransactions.jsona",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v1/HazardMitigationAssistanceProjectsFinancialTransactions.parquet",
+    "datasetSize": "tiny (< 10MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-25",
+  "name": "FemaWebDisasterDeclarations",
+  "title": "FEMA Web Disaster Declarations",
+  "description": "This dataset contains a list of FEMA declaration types, and the types of assistance authorized. It also provides references to the FEMA disaster web page as well as geospatial information. One record per disaster. For more information on the disaster declaration process, please visit https://www.fema.gov/disasters/how-declared.\n\nThis is raw, unedited data from FEMA's National Emergency Management Information System (NEMIS) and as such is subject to a small percentage of human error. The dataset is primarily composed of historical data that was manually entered into NEMIS after it launched in 1998.\nGeospatial references (shapefileUrl, kmzfileUrl, geoRssFeed) are offered starting with calendar year 2010. Shapefiles prior to this year are not available. Geospatial file references are not available for fire incidents.\n\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v1/FemaWebDisasterDeclarations",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/fema-web-disaster-declarations-v1",
+  "keyword": [
+   "disaster",
+   "declaration",
+   "fema website"
+  ],
+  "modified": "2025-03-19T00:00:00.000Z",
+  "publisher": "FEMA/Office of External Affairs/Disaster Operations Division",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/disasters",
+  "temporal": "1953-05-01/",
+  "api": true,
+  "version": 1,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "Disaster Information",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/PT20M",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2020-01-01T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 5285,
+  "depDate": null,
+  "depApiMessage": null,
+  "depWebMessage": null,
+  "depNewURL": null,
+  "hash": "667937283a433f2209aa59464417643618bb327f",
+  "lastRefresh": "2025-09-25T13:40:12.615Z",
+  "id": "d02b3e68-9b24-4aa8-b66e-bcaeb9b963f7",
+  "lastDataSetRefresh": "2026-10-11T04:08:59.941Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v1/FemaWebDisasterDeclarations.csv",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v1/FemaWebDisasterDeclarations.json",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v1/FemaWebDisasterDeclarations.jsona",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v1/FemaWebDisasterDeclarations.jsonl",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v1/FemaWebDisasterDeclarations.parquet",
+    "datasetSize": "tiny (< 10MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-73",
+  "name": "FimaNfipClaims",
+  "title": "FIMA NFIP Redacted Claims",
+  "description": "Congress passed the National Flood Insurance Act (NFIA), 42 U.S.C. 4001 in 1968, creating the National Flood Insurance Program (NFIP) in order to reduce future flood losses through flood hazard identification, floodplain management, and providing insurance protection. The Department of Housing and Urban Development (HUD) originally administered the NFIP, and Congress subsequently transferred the NFIP to FEMA upon its creation in 1979. FEMA and insurance companies participating in FEMA's Write Your Own (WYO) program offer NFIP insurance coverage for building structures as well as for contents and personal property within the building structures to eligible and insurable properties. The WYO program began in 1983 with NFIP operating under Part B of the NFIA and allows FEMA to authorize private insurance companies to issue the Standard Flood Insurance Policy (SFIP) as FEMA's fiduciary and fiscal agent. FEMA administers NFIP by ensuring insurance applications are processed properly; determining correct premiums; renewing, reforming, and cancelling insurance policies; transferring policies from the seller of the property to the purchaser of the property in certain circumstances; and processing insurance claims. \n\nThe paid premiums of SFIPs and claims payments for damaged property are processed through the National Flood Insurance Fund (NFIF). NFIF was established by the National Flood Insurance Act of 1968 (42 U.S.C. 4001, et seq.), and is a centralized premium revenue and fee-generated fund that supports NFIP, which holds these U.S. Treasury funds. \n\nThis dataset provides details on NFIP claims transactions. It is derived from the NFIP system of record, staged in the NFIP reporting platform and redacted to protect policy holder personally identifiable information.\n\nThe Flood Insurance Claims Manual located at https://agents.floodsmart.gov/manuals, provides claims guidance to WYOs, vendors, adjusters, and examiners so that policyholders experience consistent and reliable service. The Manual provides processes for handling claims from the notice of loss to final payment. A direct link to the manual is:  https://agents.floodsmart.gov/sites/default/files/media/document/2025-09/fema_nfip-FloodInsuranceManual-October2025-508c.pdf. All revisions in PDF format are located under the \"Transaction Record Reporting and Processing (TRPP) Plan\" expandable heading.\n\nThis dataset represents more than 2,000,000 claims transactions. In order to improve accessibility, we have one compressed file. Due to the file size we recommend using Access, SQL, or another programming/data management tool to visualize and manipulate the data, as Excel will not be able to process files this large without data loss. The dataset will be updated approximately monthly and will have a lag with the system of record. \n \nThis dataset is not intended to be an official federal report, and should not be considered an official federal report. \n \nFEMA's terms and conditions and citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page: https://www.fema.gov/about/openfema/terms-conditions.\n\n\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq.\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v2/FimaNfipClaims",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/fima-nfip-redacted-claims-v2",
+  "keyword": [
+   "NFIP",
+   "FIMA",
+   "claims",
+   "flood insurance"
+  ],
+  "modified": "2025-12-05T00:00:00.000Z",
+  "publisher": "FEMA/Resilience/Federal Insurance Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/flood-insurance",
+  "temporal": "1970-08-31/",
+  "api": true,
+  "version": 2,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "National Flood Insurance Program",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1M",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": [
+   "https://agents.floodsmart.gov/manuals"
+  ],
+  "issued": "2019-06-01T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 2721780,
+  "depDate": "2026-10-15T00:00:00.000Z",
+  "depApiMessage": "This dataset has been deprecated and will no longer be available by the date specified. It is recommended that the new endpoint be used. See the OpenFEMA documentation for additional information. NOTE: This dataset will not continue to be updated during the deprecation period. Data is frozen as of 06/01/2026.",
+  "depWebMessage": "A newer version of this OpenFEMA dataset has been released. This older dataset version will be removed by October 15, 2026. NOTE: This dataset will not continue to be updated during the deprecation period. Data is frozen as of 06/01/2026. Also note that the new version has a different name - the FIMA prefix was removed. The following page details the latest version of this dataset: https://www.fema.gov/openfema-data-page/nfip-redacted-claims-v3",
+  "depNewURL": "https://www.fema.gov/openfema-data-page/nfip-redacted-claims-v3",
+  "hash": "79fc70f5b522333209682b510f86fee6d1d6b5d4",
+  "lastRefresh": "2026-07-21T21:40:34.077Z",
+  "id": "2632fa02-5f84-4401-b573-8739216a566f",
+  "lastDataSetRefresh": "2026-06-01T19:41:55.078Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/about/reports-and-data/openfema/v2/FimaNfipClaimsV2.csv",
+    "datasetSize": "large (500MB - 10GB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/about/reports-and-data/openfema/v2/FimaNfipClaimsV2.parquet",
+    "datasetSize": "medium (50MB - 500MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-60",
+  "name": "PublicAssistanceApplicantsProgramDeliveries",
+  "title": "Public Assistance Applicants Program Deliveries",
+  "description": "FEMA's Public Assistance (PA) Grants Manager database, including the Grant Portal tool (collectively Grants Manager) was developed in 2016 and became the processing system for all new PA grants starting on August  25, 2017. Grants Manager documents PA projects from formulation to grant obligation and finally close-out. Grant formulation is a new process that was not previously captured.\n\nThis data set now also includes data migrated from the previous databases, the Emergency Management Mission Integration Environment (EMMIE) and the National Emergency Management Information System (NEMIS). \n\nThe 'Public Assistance Applicants Program Deliveries' dataset was generated from Grants Manager by the PA reporting team to share data on assistance made available to eligible state, local and tribal governments, and certain private nonprofit organizations as part of presidentially declared disasters. This dataset reports on the PA National Delivery Model process with summaries of projects and project statuses for all active applicants (subrecipients). The data reflects time sensitive, current phase information including pre-obligation (project formulation) phases starting in phase 2 through obligation in phase 5.\n\nShort description of the PA Phases: \nPhase 1. Applicant Coordination and Evaluation - Identify applicants' disaster impacts and recovery priorities.\nPhase 2. Impacts and Eligibility - Capture and document all incident-related damages.\nPhase 3. Scoping and Costing - Further develop PA grant projects for final processing.\nPhase 4. Final Reviews - FEMA reviews the project application, applicants review and sign agreement.\nPhase 5. Obligation and Recovery Transition - FEMA obligates funds to recipients and schedules Recovery Transition Meeting (RTM).\nPhase 6. Post-Award Monitoring and Amendments - Applicant provide updates to FEMA via Recipient, amendments can be submitted for changes to the scope, costs, or time to complete the project.\nPhase 7. Final Reconciliation and Closeout - Applicant coordinates with recipient for closeout completed with FEMA.\n\nFor more information, please review:\nPublic Assistance Delivery Model: https://www.fema.gov/sites/default/files/2020-07/fema_pa_delivery-model_factsheet.pdf\nGrants Manager/Grants Portal Fact Sheet: https://www.fema.gov/sites/default/files/2020-07/fema_pa_grants-manager-grants-protal-tool_factsheet.pdf\n\nA descriptive list of two of the code fields in the data dictionary are presented here as they are difficult to read if embedded in the field description:\n<b>Applicant Status</b>\nEligible - Applicant is eligible to apply for and receive FEMA Public Assistance grants\nIneligible - Applicant has been determined ineligible to apply for and receive FEMA Public Assistance grants\nWithdrawn - Applicant has withdrawn eligibility to apply for and receive FEMA Public Assistance grants\nPending Recipient RPA Review - Pending reviews by the Recipient of the Applicant's request for Public Assistance\nPending FEMA RPA Review - Pending reviews by FEMA of the Applicant's request for Public Assistance\nPending Ineligibility Review - Pending final review to determine eligibility of the Applicant\nPending RPA Ineligibility Review - Pending final review to determine eligibility of the Applicant's request for Public Assistance\nPending Applicant Resubmission - Pending resubmittal of a request for Public Assistance\nClosed - Eligible - Eligible Applicant has been closed out\n\n<b>Applicant Process Status</b> specifies the process currently pending for the Applicant or their request for Public Assistance. These may include:\nProcess Discontinued - FEMA processes applicant removal\nPending Applicant Resubmission - Request for Public Assistance (RPA) is pending re-submittal by the applicant\nPending Recipient Review - The RPA is pending review by the Recipient\nPending DIU RPA EMMIE Entry - The RPA is pending entry into the EMMIE system by the Document Integrity Unit\nPending DIU RPA Validation - The RPA is pending validation by the Document Integrity Unit\nPending Field Leadership Review - The RPA is pending review by FEMA leadership in the field or regional office\nPending OCC Review - The RPA is pending review by Office of Chief Counsel\nPending PAGS Review - The RPA is pending review by the PA Group Supervisor\nPending PDMG Assignment - The Applicant is pending assignment of a Program Delivery Manager (PDMG)\nPending Impact Review Completion - The Applicant is pending completion of an Impact Review or Exploratory Call\nPending RSM Completion - The Applicant is pending completion of a Recovery Scoping Meeting\nPending Grant Completion - The Applicant is pending completion of completing PA projects to receive grant obligations\nPending Request to Conduct RTM Approval - The Applicant is requesting a Recovery Transition Meeting (RTM)\nPending FEMA RTM Completion - The Applicant is pending completion of an RTM by FEMA staff\nPending Applicant RTM Approval - The Applicant is pending approval of the transition to the region\nRTM Completed - The Applicant has completed transition to the region to be closed out\nPending Close-out Review - The Applicant is pending the performance of close out procedures\nApplicant Closed Out - Applicant is closed out of the PA Process\n\n\n<b>This dataset has been updated as part of a system migration that combines data from multiple systems resulting in an increased record count. The original dataset was developed to show project processing by disaster from FEMA's Public Assistance Grants Manager database. This dataset now includes data migrated from the EMMIE and NEMIS systems. </b>\nFEMA's terms and conditions and citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page: https://www.fema.gov/about/openfema/terms-conditions\n\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq\n\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v1/PublicAssistanceApplicantsProgramDeliveries",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/public-assistance-applicants-program-deliveries-v1",
+  "keyword": [
+   "public assistance",
+   "applicants",
+   "grants manager",
+   "grants portal",
+   "factrax"
+  ],
+  "modified": "2026-07-12T00:00:00.000Z",
+  "publisher": "FEMA/Response and Recovery/Recovery Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/assistance/public",
+  "temporal": "2016-10-09/",
+  "api": true,
+  "version": 1,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "Public Assistance",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1D",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": [
+   "https://www.fema.gov/sites/default/files/2020-07/fema_pa_grants-manager-grants-protal-tool_factsheet.pdf",
+   "https://www.fema.gov/sites/default/files/2020-07/fema_pa_delivery-model_factsheet.pdf"
+  ],
+  "issued": "2021-10-25T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 258370,
+  "depDate": null,
+  "depApiMessage": null,
+  "depWebMessage": null,
+  "depNewURL": null,
+  "hash": "0f8398d8a211f50f35bc466f803ffefd64c12d43",
+  "lastRefresh": "2026-10-08T21:31:59.514Z",
+  "id": "ab1054e1-96e7-4eaf-830d-c729023dd418",
+  "lastDataSetRefresh": "2026-10-10T15:07:01.981Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceApplicantsProgramDeliveries.csv",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceApplicantsProgramDeliveries.json",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceApplicantsProgramDeliveries.jsona",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceApplicantsProgramDeliveries.jsonl",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceApplicantsProgramDeliveries.parquet",
+    "datasetSize": "small (10MB - 50MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-39",
+  "name": "NfipCommunityStatusBook",
+  "title": "NFIP Community Status Book",
+  "description": "The National Flood Insurance Program (NFIP) enables property owners to purchase flood insurance; in return, communities agree to adopt and implement local floodplain management regulations that contribute to protecting lives and reducing the risk of new construction and substantial improvements from future flooding. The NFIP Community Status Book dataset contains the current NFIP status of a community which determines whether citizens have the opportunity to purchase flood insurance as well as qualify for disaster assistance. In addition, this dataset provides the available insurance discount rates for communities that participate in the Community Rating System (CRS).\nThis data resides within the NFIP Community Information System (CIS), FEMA's system of record for the FEMA National Flood Insurance Program (NFIP) Floodplain Management Program. CIS is used to manage all information related to NFIP floodplain management, including activities, documentation, correspondence, and other pertinent information.\nFor static Community Status Reports, see https://www.fema.gov/flood-insurance/work-with-nfip/community-status-book.\n\nCitation: FEMA's citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page, Citing Data section: https://www.fema.gov/about/openfema/terms-conditions.\n\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq.\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v1/NfipCommunityStatusBook",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/nfip-community-status-book-v1",
+  "keyword": [
+   "NFIP",
+   "Status Book",
+   "Community Status Book",
+   "Floodplain Management",
+   "FPM",
+   "National Flood Insurance Program",
+   "Floodplain",
+   "flood"
+  ],
+  "modified": "2026-07-28T00:00:00.000Z",
+  "publisher": "FEMA/Resilience/FIMA",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/floodplain-management",
+  "temporal": "1968-01-01/",
+  "api": true,
+  "version": 1,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "National Flood Insurance Program",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1D",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "1968-01-01T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 25130,
+  "depDate": null,
+  "depApiMessage": null,
+  "depWebMessage": null,
+  "depNewURL": null,
+  "hash": "483e39dd716699d20f56ba4439c2283e2e4a23f7",
+  "lastRefresh": "2026-08-20T14:00:21.348Z",
+  "id": "44264e87-9ec1-422d-a590-fb6b2208fb6c",
+  "lastDataSetRefresh": "2026-10-11T04:07:26.746Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipCommunityStatusBook.csv",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipCommunityStatusBook.json",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipCommunityStatusBook.jsona",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipCommunityStatusBook.jsonl",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipCommunityStatusBook.parquet",
+    "datasetSize": "tiny (< 10MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-91",
+  "name": "PublicAssistanceSecondAppealsTracker",
+  "title": "Public Assistance Second Appeals Tracker",
+  "description": "This dataset records the status of Public Assistance Second Appeals administered by the Public Assistance Appeals, Audits, and Arbitration Branch (PAAAB) at the Federal Emergency Management Agency (FEMA). PAAAB’s mission is to administer FEMA’s Public Assistance appeals system in a timely, efficient, consistent, and organized manner.  \nPAAAB accomplishes this mission by:\n- Adjudicating second appeals and issuing timely final determinations\n- Training and supporting FEMA personnel working on appeals throughout the agency\n- Communicating agency policy and practice to FEMA regions and field staff\n- Analyzing trends in appeal filings and identifying issues that may require policy changes\n\nThe Public Assistance appeals process provides the opportunity for the applicant (see Note 1) (e.g., State, Tribal, Territorial, or local governmental and certain Private Nonprofit organizations applying for Public Assistance grant funds) to appeal FEMA’s determinations regarding their application for assistance.\n\nFirst Level Appeal\nApplicants may appeal FEMA’s determinations denying Public Assistance funding. The applicant must provide documentation to support the appeal. Supporting documentation should explain why the applicant believes the original determination is wrong and the dollar amount in dispute. The recipient (e.g., State, Tribe, or Territory) (see Note 2) will then prepare a written recommendation. The recipient has full discretion to support or oppose all or part of the applicant’s position in the appeal. Per 44 C.F.R. § 206.206, first level appeals are evaluated and decided by the FEMA Regional Administrator responsible for the State, Tribal Nation, or Territory where the disaster occurred. The FEMA Regional Office has 90 days to render a first appeal decision or request more information from the applicant. Once a decision on the appeal is made, FEMA will notify the recipient and applicant. Upon receipt of a denial or partial denial from the Regional Administrator, the applicant has the option to file a second level appeal, though certain applicants may opt to pursue arbitration in lieu of a second level appeal.\n\nSecond Level Appeal\nThe applicant may file a second level appeal of the Regional Administrator’s first appeal decision. The applicant may provide new documentation with the second appeal if necessary. The second appeal should explain why the applicant believes the original determination is wrong and the dollar amount in dispute. The recipient will then prepare a written recommendation. As with the first level appeal, the recipient has full discretion to support or oppose all or part of the applicant’s position. FEMA has 90 days from receipt of the second level appeal to render a decision or request more information from the applicant. Second level appeals are the Agency's final determination, as outlined in regulation (44 C.F.R. § 206.206). All second level appeal determinations are posted on the FEMA website (www.fema.gov), so applicants can review previous decisions FEMA has made on similar issues.\n\nAppeal Submission Deadlines\nFor disasters declared after January 1, 2022, an applicant must electronically submit its appeal to the recipient within 60 days from the date FEMA electronically transmits the eligibility determination or first appeal decision. The recipient has 120 days from the determination or first appeal decision transmission date to submit the applicant’s appeal through Grants Portal/Grants Manager to FEMA.\n\nFor disasters declared prior to January 1, 2022, an applicant must submit its appeal to the recipient within 60 days of receiving notice of FEMA’s eligibility determination or first appeal decision. The recipient has 60 days from the date it receives the appeal to review and forward it with a written recommendation to the appropriate FEMA Regional Administrator.\n\nAdditional Resources\nFor more information about PAAAB, please visit https://www.fema.gov/assistance/public/audits-arbitration-appeals. For more information on the Public Assistance appeals process, download the Appeals Fact Sheet at https://www.fema.gov/sites/default/files/documents/fema-pa-arbitration-fact-sheet.pdf. For an online archive of previous second appeal decisions, visit the Second Appeals Database at https://www.fema.gov/assistance/public/audits-arbitration-appeals#database. To learn more about the arbitration process available to certain applicants visit www.fema.gov/assistance/public/audits-arbitration-appeals#arbitration.\n\nNote 1: Once the applicant receives funding, it is a subrecipient. For simplicity, FEMA uses the term applicant throughout this document when referring to the responsible entity for the project rather than making distinctions between applicant and subrecipient.\nNote 2:  On December 26, 2013, the Office of Management and Budget issued the Uniform Administrative Requirements, Cost Principles, and Audit Requirements for Federal Awards, codified at 2 C.F.R. pt. 200, which adopts the term recipient instead of grantee.\n\nThis dataset is not intended to be an official federal report, and should not be considered an official federal report.\nThis is raw, unedited data and as such is subject to a small percentage of human error.FEMA's terms and conditions and citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page: https://www.fema.gov/about/openfema/terms-conditions.\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq.\n\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v1/PublicAssistanceSecondAppealsTracker",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/public-assistance-second-appeals-tracker-v1",
+  "keyword": [
+   "public assistance",
+   "appeals"
+  ],
+  "modified": "2025-06-03T00:00:00.000Z",
+  "publisher": "FEMA/Response and Recovery/Recovery Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/assistance/public/audits-arbitration-appeals",
+  "temporal": "2013-09-12/",
+  "api": true,
+  "version": 1,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "Public Assistance",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1W",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2015-08-08T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 1792,
+  "depDate": null,
+  "depApiMessage": null,
+  "depWebMessage": null,
+  "depNewURL": null,
+  "hash": "cd8ebdba0422efee3154c89d6443efd020ebacf4",
+  "lastRefresh": "2025-09-25T13:40:12.615Z",
+  "id": "d2baeca8-7875-4278-9f0d-4a6e49c2b811",
+  "lastDataSetRefresh": "2026-10-06T14:20:24.125Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceSecondAppealsTracker.csv",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceSecondAppealsTracker.json",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceSecondAppealsTracker.jsona",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceSecondAppealsTracker.jsonl",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceSecondAppealsTracker.parquet",
+    "datasetSize": "tiny (< 10MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-77",
+  "name": "NfipCommunityLayerComprehensive",
+  "title": "NFIP Community Layer Comprehensive",
+  "description": "This dataset is also known as the 3d layer and contains a fairly comprehensive set of unaltered source geometry polygons that overlap.  It is derived from Census, State of Maine, and National Flood Hazard Layer political boundaries.\n\nThe Community Layer datasets contain geospatial community boundaries associated with Census and NFIP data. The dataset does not contain personally identifiable information (PII). The Community Layer can be used as a reference to tie Community ID numbers (CID) to jurisdiction, tribal, and special land use area boundaries. <b>However, as jurisdictions may change over time, this dataset should not be considered authoritative.</b>\n\nA geodatabase (GDB) link is included in the Full Data section below. The compressed file contains a collection of files that can store, query, and manage both spatial and nonspatial data using software that can read such a file. It <b>contains all three versions of the community layer</b>, not just the layer for which this dataset page describes. \n\nData as of December 2024. No updates are planned at this time.\n\nThis layer can also be accessed from the FEMA ArcGIS viewer online: https://fema.maps.arcgis.com/home/item.html?id=4b712b99d43d41cb9328e94891520a63\n\nCitation: FEMA's citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page, Citing Data section: https://www.fema.gov/about/openfema/terms-conditions.\n\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq.\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v1/NfipCommunityLayerComprehensive",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/nfip-community-layer-comprehensive-v1",
+  "keyword": [
+   "nfip community",
+   "geospatial",
+   "census",
+   "boundaries"
+  ],
+  "modified": "2025-09-30T00:00:00.000Z",
+  "publisher": "FEMA/Resilience/Federal Insurance Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/flood-insurance",
+  "temporal": null,
+  "api": true,
+  "version": 1,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "National Flood Insurance Program",
+  "dataQuality": "true",
+  "accrualPeriodicity": "irregular",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2024-02-09T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 51943,
+  "depDate": "2026-11-09T00:00:00.000Z",
+  "depApiMessage": "This dataset is deprecated. The data is frozen as of December 2004. It will remain until November 09, 2026, at which time it will no longer be available.",
+  "depWebMessage": "This dataset is deprecated. The data is frozen as of December 2004. It will remain until November 09, 2026, at which time it will no longer be available.",
+  "depNewURL": null,
+  "hash": "f22789d52c5eeb7b9da0192441b650e229ed6d98",
+  "lastRefresh": "2026-10-08T21:31:59.514Z",
+  "id": "dc389885-0dfc-4d7c-985d-40b4e6019373",
+  "lastDataSetRefresh": "2024-12-05T18:09:51.898Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipCommunityLayerComprehensive.csv",
+    "datasetSize": "large (500MB - 10GB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipCommunityLayerComprehensive.json",
+    "datasetSize": "large (500MB - 10GB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipCommunityLayerComprehensive.jsona",
+    "datasetSize": "large (500MB - 10GB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipCommunityLayerComprehensive.jsonl",
+    "datasetSize": "large (500MB - 10GB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipCommunityLayerComprehensive.parquet",
+    "datasetSize": "large (500MB - 10GB)"
+   },
+   {
+    "format": "gdb",
+    "accessURL": "https://www.fema.gov/about/reports-and-data/openfema/cl2024_v1.gdb.zip",
+    "datasetSize": "medium (50MB - 500MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-74",
+  "name": "FimaNfipPolicies",
+  "title": "FIMA NFIP Redacted Policies",
+  "description": "Congress passed the National Flood Insurance Act (NFIA), 42 U.S.C. 4001 in 1968, creating the National Flood Insurance Program (NFIP) in order to reduce future flood losses through flood hazard identification, floodplain management, and providing insurance protection. The Department of Housing and Urban Development (HUD) originally administered the NFIP, and Congress subsequently transferred the NFIP to FEMA upon its creation in 1979. FEMA and insurance companies participating in FEMA's Write Your Own (WYO) program offer NFIP insurance coverage for building structures as well as for contents and personal property within the building structures to eligible and insurable properties. The WYO program began in 1983 with NFIP operating under Part B of the NFIA and allows FEMA to authorize private insurance companies to issue the Standard Flood Insurance Policy (SFIP) as FEMA's fiduciary and fiscal agent. FEMA administers NFIP by ensuring insurance applications are processed properly; determining correct premiums; renewing, reforming, and cancelling insurance policies; transferring policies from the seller of the property to the purchaser of the property in certain circumstances; and processing insurance claims. \n\nThe paid premiums of SFIPs and claims payments for damaged property are processed through the National Flood Insurance Fund (NFIF). NFIF was established by the National Flood Insurance Act of 1968 (42 U.S.C. 4001, et seq.), and is a centralized premium revenue and fee-generated fund that supports NFIP, which holds these U.S. Treasury funds. \n\nThis dataset provides details on NFIP policy transactions. It is derived from the NFIP system of record, staged in the NFIP reporting platform and redacted to protect policy holder personally identifiable information.\n\nThe Flood Insurance Claims Manual located at https://agents.floodsmart.gov/manuals, provides NFIP underwriting policies and processes to enable effective and consistent program implementation. A direct link to the manual is: https://agents.floodsmart.gov/sites/default/files/media/document/2025-09/fema_nfip-FloodInsuranceManual-October2025-508c.pdf. All revisions in PDF format are located under the \"Transaction Record Reporting and Processing (TRPP) Plan\" expandable heading. \n\n\nThis dataset represents more than 80,000,000 policy transactions. In order to improve accessibility, we have one compressed file. Due to the file size we recommend using Access, SQL, or another programming/data management tool to visualize and manipulate the data, as Excel will not be able to process files this large without data loss. The dataset will be updated approximately monthly and will have a lag with the system of record. \n \nThis dataset is not intended to be an official federal report, and should not be considered an official federal report. \n \nFEMA's terms and conditions and citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page: https://www.fema.gov/about/openfema/terms-conditions.\n\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq.\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v2/FimaNfipPolicies",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/fima-nfip-redacted-policies-v2",
+  "keyword": [
+   "NFIP",
+   "Flood",
+   "Insurance",
+   "Policy",
+   "Water"
+  ],
+  "modified": "2025-12-05T00:00:00.000Z",
+  "publisher": "FEMA/Resilience/Federal Insurance Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/flood-insurance",
+  "temporal": "2009-01-01/",
+  "api": true,
+  "version": 2,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "National Flood Insurance Program",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1M",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": [
+   "https://www.fema.gov/flood-insurance"
+  ],
+  "issued": "2019-06-01T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 73601802,
+  "depDate": "2026-10-15T00:00:00.000Z",
+  "depApiMessage": "This dataset has been deprecated and will no longer be available by the date specified. It is recommended that the new endpoint be used. See the OpenFEMA documentation for additional information. NOTE: This dataset will not continue to be updated during the deprecation period. Data is frozen as of 06/01/2026.",
+  "depWebMessage": "A newer version of this OpenFEMA dataset has been released. This older dataset version will be removed by October 15, 2026. NOTE: This dataset will not continue to be updated during the deprecation period. Data is frozen as of 06/01/2026. Also note that the new version has a different name - the FIMA prefix was removed. The following page details the latest version of this dataset: https://www.fema.gov/openfema-data-page/nfip-redacted-policies-v3",
+  "depNewURL": "https://www.fema.gov/openfema-data-page/nfip-redacted-policies-v3",
+  "hash": "9f57e4c70b68b31e84c4a1e9ad91fc6fff3527a4",
+  "lastRefresh": "2026-07-27T22:39:30.327Z",
+  "id": "5587e285-ef5e-4328-8217-aaf1ab1cb685",
+  "lastDataSetRefresh": "2026-06-01T23:31:01.731Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/about/reports-and-data/openfema/v2/FimaNfipPoliciesV2.csv",
+    "datasetSize": "x-large (> 10GB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/about/reports-and-data/openfema/v2/FimaNfipPoliciesV2.parquet",
+    "datasetSize": "large (500MB - 10GB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-76",
+  "name": "NfipCommunityLayerNoOverlapsSplit",
+  "title": "NFIP Community Layer No Overlaps Split",
+  "description": "This dataset is flattened, and multicounty communities are split by county lines. \"Flattened\" means that there are no overlaps; larger shapes like counties are \"punched out\" or \"clipped\" where smaller communities are contained within them. This allows for choropleth shading and other mapping techniques such as calculating unincorporated county land area. Multicounty cities like Houston, Texas are split by county lines, allowing easier county summarization and alignment with certain NFIP statistics.  This layer is derived from Census, State of Maine, and National Flood Hazard Layer political boundaries.\n\nThe Community Layer datasets contain geospatial community boundaries associated with Census and NFIP data. The dataset does not contain personally identifiable information (PII). The Community Layer can be used to tie Community ID numbers (CID) to jurisdiction, tribal, and special land use area boundaries.\n\nThe Community Layer can be used as a reference to tie Community ID numbers (CID) to jurisdiction, tribal, and special land use area boundaries. <b>However, as jurisdictions may change over time, this dataset should not be considered authoritative.</b>\n\nA geodatabase (GDB) link is included in the Full Data section below. The compressed file contains a collection of files that can store, query, and manage both spatial and nonspatial data using software that can read such a file. It <b>contains all three versions of the community layer</b>, not just the layer for which this dataset page describes. \n\nData as of December 2024. No updates are planned at this time.\n\nThis layer can also be accessed from the FEMA ArcGIS viewer online: https://fema.maps.arcgis.com/home/item.html?id=4b712b99d43d41cb9328e94891520a63\n\nCitation: FEMA's citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page, Citing Data section: https://www.fema.gov/about/openfema/terms-conditions.\n\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq.\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v1/NfipCommunityLayerNoOverlapsSplit",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/nfip-community-layer-no-overlaps-split-v1",
+  "keyword": [
+   "nfip community",
+   "geospatial",
+   "census",
+   "boundaries"
+  ],
+  "modified": "2025-09-30T00:00:00.000Z",
+  "publisher": "FEMA/Resilience/Federal Insurance Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/flood-insurance",
+  "temporal": null,
+  "api": true,
+  "version": 1,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "National Flood Insurance Program",
+  "dataQuality": "true",
+  "accrualPeriodicity": "irregular",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2024-02-09T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 37918,
+  "depDate": "2026-11-09T00:00:00.000Z",
+  "depApiMessage": "This dataset is deprecated. The data is frozen as of December 2004. It will remain until November 09, 2026, at which time it will no longer be available.",
+  "depWebMessage": "This dataset is deprecated. The data is frozen as of December 2004. It will remain until November 09, 2026, at which time it will no longer be available.",
+  "depNewURL": null,
+  "hash": "009d5a8db4a559ff3ed4a570098d7647a2252af9",
+  "lastRefresh": "2026-10-08T21:31:59.514Z",
+  "id": "cac9b90a-5033-4a4b-95ab-68da7ec05781",
+  "lastDataSetRefresh": "2024-12-05T18:09:57.312Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipCommunityLayerNoOverlapsSplit.csv",
+    "datasetSize": "large (500MB - 10GB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipCommunityLayerNoOverlapsSplit.json",
+    "datasetSize": "large (500MB - 10GB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipCommunityLayerNoOverlapsSplit.jsona",
+    "datasetSize": "large (500MB - 10GB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipCommunityLayerNoOverlapsSplit.jsonl",
+    "datasetSize": "large (500MB - 10GB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipCommunityLayerNoOverlapsSplit.parquet",
+    "datasetSize": "large (500MB - 10GB)"
+   },
+   {
+    "format": "gdb",
+    "accessURL": "https://www.fema.gov/about/reports-and-data/openfema/cl2024_v1.gdb.zip",
+    "datasetSize": "medium (50MB - 500MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-75",
+  "name": "NfipCommunityLayerNoOverlapsWhole",
+  "title": "NFIP Community Layer No Overlaps Whole",
+  "description": "This dataset is flattened, and multicounty communities are unsplit by county lines. \"Flattened\" means that there are no overlaps; larger shapes like counties are \"punched out\" or \"clipped\" where smaller communities are contained within them. This allows for choropleth shading and other mapping techniques such as calculating unincorporated county land area.  Multicounty cities like Houston, Texas are a single feature, undivided by counties.  This layer is derived from Census, State of Maine, and National Flood Hazard Layer political boundaries.\n\nThe Community Layer datasets contain geospatial community boundaries associated with Census and NFIP data. The dataset does not contain personally identifiable information (PII). The Community Layer can be used to tie Community ID numbers (CID) to jurisdiction, tribal, and special land use area boundaries.\n\nThe Community Layer can be used as a reference to tie Community ID numbers (CID) to jurisdiction, tribal, and special land use area boundaries. <b>However, as jurisdictions may change over time, this dataset should not be considered authoritative.</b>\n\nA geodatabase (GDB) link is included in the Full Data section below. The compressed file contains a collection of files that can store, query, and manage both spatial and nonspatial data using software that can read such a file. It <b>contains all three versions of the community layer</b>, not just the layer for which this dataset page describes. \n\nData as of December 2024. No updates are planned at this time.\n\nThis layer can also be accessed from the FEMA ArcGIS viewer online: https://fema.maps.arcgis.com/home/item.html?id=4b712b99d43d41cb9328e94891520a63\n\n\nCitation: FEMA's citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page, Citing Data section: https://www.fema.gov/about/openfema/terms-conditions.\n\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq.\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v1/NfipCommunityLayerNoOverlapsWhole",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/nfip-community-layer-no-overlaps-whole-v1",
+  "keyword": [
+   "nfip community",
+   "geospatial",
+   "census",
+   "boundaries"
+  ],
+  "modified": "2025-09-30T00:00:00.000Z",
+  "publisher": "FEMA/Resilience/Federal Insurance Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/flood-insurance",
+  "temporal": null,
+  "api": true,
+  "version": 1,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "National Flood Insurance Program",
+  "dataQuality": "true",
+  "accrualPeriodicity": "irregular",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2024-02-09T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 29898,
+  "depDate": "2026-11-09T00:00:00.000Z",
+  "depApiMessage": "This dataset is deprecated. The data is frozen as of December 2004. It will remain until November 09, 2026, at which time it will no longer be available.",
+  "depWebMessage": "This dataset is deprecated. The data is frozen as of December 2004. It will remain until November 09, 2026, at which time it will no longer be available.",
+  "depNewURL": null,
+  "hash": "e6cc239f7bc98ace73dd0057d479a7820c92a28d",
+  "lastRefresh": "2026-10-08T21:31:59.514Z",
+  "id": "ee838fce-af40-4c15-808c-3754372735b3",
+  "lastDataSetRefresh": "2024-12-05T18:10:50.474Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipCommunityLayerNoOverlapsWhole.csv",
+    "datasetSize": "large (500MB - 10GB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipCommunityLayerNoOverlapsWhole.json",
+    "datasetSize": "large (500MB - 10GB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipCommunityLayerNoOverlapsWhole.jsona",
+    "datasetSize": "large (500MB - 10GB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipCommunityLayerNoOverlapsWhole.jsonl",
+    "datasetSize": "large (500MB - 10GB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipCommunityLayerNoOverlapsWhole.parquet",
+    "datasetSize": "large (500MB - 10GB)"
+   },
+   {
+    "format": "gdb",
+    "accessURL": "https://www.fema.gov/about/reports-and-data/openfema/cl2024_v1.gdb.zip",
+    "datasetSize": "medium (50MB - 500MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-95",
+  "name": "NfipClaims",
+  "title": "NFIP Redacted Claims",
+  "description": "Congress passed the National Flood Insurance Act (NFIA), Title 42 United States Code 4001 in 1968, creating the National Flood Insurance Program (NFIP) in order to reduce future flood losses through flood hazard identification, floodplain management, and providing insurance protection. The Department of Housing and Urban Development (HUD) originally administered the program, and Congress subsequently transferred the National Flood Insurance Program  to FEMA upon its creation in 1979. FEMA and insurance companies participating in FEMA's Write Your Own (WYO) program offer flood insurance coverage for building structures as well as for contents and personal property within the building structures to eligible and insurable properties. The Write Your Own program began in 1983 with the National Flood Insurance Program operating under Part B of the National Flood Insurance Act and allows FEMA to authorize private insurance companies to issue the Standard Flood Insurance Policy (SFIP) as FEMA's fiduciary and fiscal agent. FEMA administers the flood insurance program by ensuring insurance applications are processed properly; determining correct premiums; renewing, reforming, and cancelling insurance policies; transferring policies from the seller of the property to the purchaser of the property in certain circumstances; and processing insurance claims. \n\nThe paid flood insurance premiums and claims payments for damaged property are processed through the National Flood Insurance Fund (NFIF). This fund was established by the National Flood Insurance Act of 1968 (Title 42 United States Code 4001, et seq.), and is a centralized premium revenue and fee-generated fund that supports the National Flood Insurance Program, which holds these U.S. Treasury funds. \n\nThis dataset provides details on flood insurance claims transactions. It is derived from the National Flood Insurance Program system of record, staged in the program's reporting platform and redacted to protect policy holder personally identifiable information.\n\nThe Flood Insurance Claims Manual (https://nfipservices.floodsmart.gov/insurance-manuals) provides claims guidance to Write Your Owns, vendors, adjusters, and examiners so that policyholders experience consistent and reliable service. The manual provides processes for handling claims from the notice of loss to final payment. FEMA has provided answers to Frequently Asked Questions (FAQs) to assist the public in understanding and navigating the data the National Flood Insurance Program makes available: https://www.fema.gov/sites/default/files/documents/fema_nfip-data-faqs.pdf\n\n\nThis dataset represents more than 2.7 million claims transactions. Due to the large file size we recommend using a database or programming/data management tools to visualize and manipulate the data, as Excel will not be able to process files this large without data loss. The dataset will be updated approximately monthly and will have a lag with the system of record. \n \nThis dataset is not intended to be an official federal report, and should not be considered an official federal report. \n \nFEMA's terms and conditions and citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page: https://www.fema.gov/about/openfema/terms-conditions.\n\n\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq.\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v3/NfipClaims",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/nfip-redacted-claims-v3",
+  "keyword": [
+   "NFIP",
+   "claims",
+   "flood insurance"
+  ],
+  "modified": "2026-07-20T00:00:00.000Z",
+  "publisher": "FEMA/Resilience/Federal Insurance Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/flood-insurance",
+  "temporal": "1970-08-31/",
+  "api": true,
+  "version": 3,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "National Flood Insurance Program",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1M",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": [
+   "https://nfipservices.floodsmart.gov/manuals/jan_2015_consolidated_trrp.pdf"
+  ],
+  "issued": "2019-06-01T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 2725989,
+  "depDate": null,
+  "depApiMessage": null,
+  "depWebMessage": null,
+  "depNewURL": null,
+  "hash": "9eaf194937eba43e6df9f1809f311d2c63058c81",
+  "lastRefresh": "2026-08-04T22:40:36.263Z",
+  "id": "38707079-3400-4c56-bb50-3282881e21be",
+  "lastDataSetRefresh": "2026-09-09T16:23:10.614Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/about/reports-and-data/openfema/v3/NfipClaimsV3.csv",
+    "datasetSize": "large (500MB - 10GB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/about/reports-and-data/openfema/v3/NfipClaimsV3.parquet",
+    "datasetSize": "medium (50MB - 500GB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-78",
+  "name": "NfipMultipleLossProperties",
+  "title": "NFIP Multiple Loss Properties",
+  "description": "This dataset provides information on structures that have had multiple National Flood Insurance (NFIP) claims across the history of the program. The data contains NFIP-insured structures that fall within the four categories of Repetitive Loss and Severe Repetitive Loss that FEMA tracks. Definitions of these categories are provided in the field descriptions. There are also fields to show whether a structure is currently NFIP-insured, has been mitigated, and other characteristics. The data includes properties that have since been mitigated or demolished and may no longer considered to be in any of the listed categories.\nAn online map of this data can be found on FEMA's ArcGIS Online platform: https://fema.maps.arcgis.com/apps/mapviewer/index.html?webmap=38568a4cd92b4f4ba469b1d56d772829\nLocation information has been redacted to protect personal privacy. Location information is derived from reported address, geocoding of that address, and reported NFIP community. Because NFIP insurance claims data spans the history of the NFIP, many of the structures have poor address information resulting in poor or missing coordinates and additional location fields that rely on those coordinates. An effort has been made to fill in missing data and resolve conflicts between state, county, community, and census block group. Because of this effort, <em>statistics derived from this data may differ from those reported elsewhere by FEMA or others</em>.\nThere is a lot of interest in this data as it touches many program areas of the NFIP and serves as an indicator of flood risk and mitigation need.\nA Policyholders Guide to Severe Repetitive Loss can be found on the https://agents.floodsmart.gov/resource-library/en/policyholders-guide-severe-repetitive-loss page. A direct link to the guide is here: https://agents.floodsmart.gov/sites/default/files/media/document/2025-07/fema-nfip-policyholders-guide-severe-repetitive-loss_brochure-07-2023.pdf\n\nFEMA's terms and conditions and citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page: https://www.fema.gov/about/openfema/terms-conditions.\n\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq.\n\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v1/NfipMultipleLossProperties",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/NFIP-Multiple-Loss-Properties-v1",
+  "keyword": [
+   "NFIP",
+   "Insurance",
+   "Flood",
+   "Repetitive Loss",
+   "Damage",
+   "Disaster",
+   "Severe Repetitive Loss"
+  ],
+  "modified": "2025-12-05T00:00:00.000Z",
+  "publisher": "FEMA/Resilience/Federal Insurance Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/flood-insurance",
+  "temporal": "1978-01-01/",
+  "api": true,
+  "version": 1,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "National Flood Insurance Program",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1Y",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": [
+   "https://agents.floodsmart.gov/sites/default/files/media/document/2025-07/fema-nfip-policyholders-guide-severe-repetitive-loss_brochure-07-2023.pdf"
+  ],
+  "issued": "2024-02-12T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 240651,
+  "depDate": null,
+  "depApiMessage": null,
+  "depWebMessage": null,
+  "depNewURL": null,
+  "hash": "81083e4ef8d83dfe7104b5a707a1e14790fbd9ce",
+  "lastRefresh": "2026-08-04T22:40:36.263Z",
+  "id": "4ea73a08-b909-46ab-9dd6-a13d30f2cee8",
+  "lastDataSetRefresh": "2026-08-04T16:40:45.880Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipMultipleLossProperties.csv",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipMultipleLossProperties.json",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipMultipleLossProperties.jsona",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v1/NfipMultipleLossProperties.parquet",
+    "datasetSize": "tiny (< 10MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-82",
+  "name": "HazardMitigationAssistanceMitigatedProperties",
+  "title": "Hazard Mitigation Assistance Mitigated Properties",
+  "description": "This dataset contains the properties identified in the Hazard Mitigation Assistance (HMA) subapplications/subgrants from the NEMIS Mitigation and eGrants grants management systems. For details on the properties identified in the Hazard Mitigation Assistance (HMA) subapplications/subgrants not captured in these systems, visit https://www.fema.gov/openfema-data-page/hma-subapplications-project-site-inventories-v1. \n\nThis dataset contains information on the properties identified in the HMA subapplications/subgrants that have been submitted to or awarded in source systems mentioned above, as well as amendments made to the awarded subgrants. Sensitive information, such as Personally Identifiable Information (PII), has been removed to protect privacy. The information in this dataset has been deemed appropriate for publication to empower public knowledge of mitigation activities and the nature of HMA grant programs. For more information on the HMA grant programs, visit: https://www.fema.gov/grants/mitigation. \n\nThis dataset comes from the source systems mentioned above and is subject to a small percentage of human error. In some cases, data was not provided by the subapplicant, applicant, and/or entered into the grant management system. Due to the voluntary nature of the Hazard Mitigation Assistance Programs, not all properties in this dataset will be mitigated. This dataset is not intended to be used for any official federal financial reporting. \n\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v4/HazardMitigationAssistanceMitigatedProperties",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/hazard-mitigation-assistance-mitigated-properties-v4",
+  "keyword": [
+   "mitigation",
+   "hazard",
+   "disaster",
+   "non-disaster",
+   "grant",
+   "subapplication",
+   "project",
+   "property",
+   "assistance",
+   "HMA",
+   "HMGP",
+   "BRIC",
+   "PDM",
+   "LPDM",
+   "FMA",
+   "SRL",
+   "RFC"
+  ],
+  "modified": "2026-07-11T00:00:00.000Z",
+  "publisher": "FEMA/Resilience/Hazard Mitigation Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/grants/mitigation",
+  "temporal": "1989-01-01/",
+  "api": true,
+  "version": 4,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "Hazard Mitigation",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1D",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2018-03-09T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 99927,
+  "depDate": "2026-10-15T00:00:00.000Z",
+  "depApiMessage": "This dataset has been combined with the HMA Subapplications Project Site Inventories dataset. The Hazard Mitigation Assistance Mitigated Properties prior version, V4, has been deprecated and is frozen as of August 31, 2026. It will remain until October 15, 2026, at which time it will no longer be available.  ",
+  "depWebMessage": "This dataset has been combined with the HMA Subapplications Project Site Inventories dataset. The Hazard Mitigation Assistance Mitigated Properties prior version, V4, has been deprecated and is frozen as of August 31, 2026. It will remain until October 15, 2026, at which time it will no longer be available.  ",
+  "depNewURL": "https://www.fema.gov/openfema-data-page/hma-subapplications-project-site-inventories-v1",
+  "hash": "b3a152b04a6b301e3e0529bf7715f2a488371fff",
+  "lastRefresh": "2026-09-08T18:40:24.140Z",
+  "id": "02e0e1f9-e192-48cf-bd33-fd577b2786b0",
+  "lastDataSetRefresh": "2026-08-31T18:56:55.418Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v4/HazardMitigationAssistanceMitigatedProperties.csv",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v4/HazardMitigationAssistanceMitigatedProperties.json",
+    "datasetSize": "medium (50MB - 500MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v4/HazardMitigationAssistanceMitigatedProperties.jsona",
+    "datasetSize": "medium (50MB - 500MB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v4/HazardMitigationAssistanceMitigatedProperties.jsonl",
+    "datasetSize": "medium (50MB - 500MB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v4/HazardMitigationAssistanceMitigatedProperties.parquet",
+    "datasetSize": "small (10MB - 50MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-84",
+  "name": "HazardMitigationAssistanceProjectsByNfipCrsCommunities",
+  "title": "Hazard Mitigation Assistance Projects by NFIP CRS Communities",
+  "description": "This dataset contains the communities identified in the Hazard Mitigation Assistance (HMA) subapplications/subgrants from the NEMIS Mitigation and eGrants grants management systems. For details on the  communities identified in the Hazard Mitigation Assistance (HMA) subapplications/subgrants not captured in these systems, visit https://www.fema.gov/openfema-data-page/hma-subapplications-nfip-crs-communities-v1.\n\nThis dataset contains information on the communities participating in the National Flood Insurance Program (NFIP) Community Rating System (CRS) identified in the HMA subapplications/subgrants that have been submitted to or awarded in source systems mentioned above, as well as amendments made to the awarded subgrants. Sensitive information, such as Personally Identifiable Information (PII), has been removed to protect privacy. The information in this dataset has been deemed appropriate for publication to empower public knowledge of mitigation activities and the nature of HMA grant programs. For more information on the HMA grant programs, visit: https://www.fema.gov/grants/mitigation. \n\nThis dataset comes from the source systems mentioned above and is subject to a small percentage of human error. In some cases, data was not provided by the subapplicant, applicant, and/or entered into the grant management system. Due to the voluntary nature of the Hazard Mitigation Assistance Programs, not all communities in this dataset will be mitigated. This dataset is not intended to be used for any official federal financial reporting. \n\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v2/HazardMitigationAssistanceProjectsByNfipCrsCommunities",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/hazard-mitigation-assistance-projects-nfip-crs-communities-v2",
+  "keyword": [
+   "assistance",
+   "HMA",
+   "HMGP",
+   "BRIC",
+   "PDM",
+   "FMA",
+   "SRL",
+   "RFC",
+   "NFIP",
+   "CRS"
+  ],
+  "modified": "2026-07-11T00:00:00.000Z",
+  "publisher": "FEMA/Resilience/Hazard Mitigation Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/grants/mitigation",
+  "temporal": "1989-01-01/",
+  "api": true,
+  "version": 2,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "Hazard Mitigation",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1D",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2020-06-17T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 76840,
+  "depDate": "2026-10-15T00:00:00.000Z",
+  "depApiMessage": "This dataset has been combined with the HMA Subapplications by NFIP CRS Communities dataset. The Hazard Mitigation Assistance Projects by NFIP CRS Communities prior version, V2, has been deprecated and is frozen as of August 31, 2026. It will remain until October 15, 2026, at which time it will no longer be available.",
+  "depWebMessage": "This dataset has been combined with the HMA Subapplications by NFIP CRS Communities dataset. The Hazard Mitigation Assistance Projects by NFIP CRS Communities prior version, V2, has been deprecated and is frozen as of August 31, 2026. It will remain until October 15, 2026, at which time it will no longer be available.",
+  "depNewURL": "https://www.fema.gov/openfema-data-page/hma-subapplications-nfip-crs-communities-v1",
+  "hash": "f62b3218810283ad6857a7e301ebf0a18c821707",
+  "lastRefresh": "2026-09-08T18:40:24.140Z",
+  "id": "e561dcfb-57ce-489f-9eb2-3da4699cd92b",
+  "lastDataSetRefresh": "2026-08-31T18:57:02.396Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v2/HazardMitigationAssistanceProjectsByNfipCrsCommunities.csv",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v2/HazardMitigationAssistanceProjectsByNfipCrsCommunities.json",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v2/HazardMitigationAssistanceProjectsByNfipCrsCommunities.jsona",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v2/HazardMitigationAssistanceProjectsByNfipCrsCommunities.jsonl",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v2/HazardMitigationAssistanceProjectsByNfipCrsCommunities.parquet",
+    "datasetSize": "tiny (< 10MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-46",
+  "name": "HazardMitigationGrantProgramDisasterSummaries",
+  "title": "Hazard Mitigation Grant Program - Disaster Summaries",
+  "description": "The dataset contains disaster level financial information for FEMA’s Hazard Mitigation Grant Program (HMGP). The purpose of HMGP is to help communities implement hazard mitigation measures following a Presidential Major Disaster Declaration in the areas of the State, Tribe, or Territory requested by the Governor or Tribal Executive. For more information on the Hazard Mitigation Grant Program, please visit: https://www.fema.gov/grants/mitigation\n\nHMGP (Disaster Numbers 820-1999, 4000-4999)\nSection 404 of the Stafford Act authorized the Hazard Mitigation Grant Program (HMGP). The key purpose of HMGP is to ensure that the opportunity to take critical mitigation measures to reduce the risk of loss of life and property from future disasters is not lost during the reconstruction process following a disaster. The amount of HMGP funding available to the Applicant is based upon the total Federal assistance to be provided by FEMA for disaster recovery under the Presidential major disaster declaration.\n\nFire Management Assistance Grant (FMAG) HMGP (Disaster Numbers 5084-5117)\nSection 570 of the Fiscal Year 2015 DHS Appropriations Act authorized FEMA to provide HMGP assistance as a result of an FMAG declaration. FMAG HMGP was run as a pilot program and funding was provided as a national aggregate calculation based on an average of historical FMAG designations from the last five years.\n\nHMGP Post Fire (Disaster Numbers 5154-5999)\nSection 1204 of the Disaster Recovery Reform Act of 2018 amended Section 404 of the Stafford Act to authorize FEMA to provide HMGP assistance in any area affected by a major disaster, or any area affected by a fire for which assistance was provided under Section 420 Fire Management Assistance Grant (FMAG). Funding from multiple events is aggregated into one grant under the first declaration. The Aggregation is reset at the beginning of each fiscal year and remains in effect for that year.\n\nThis dataset contains hazard mitigation grant program disasters assistance information from FEMA’s mitigation grant systems and as such is subject to a small percentage of human error. The financial information is derived from FEMA’s mitigation grant systems, not FEMA's official financial systems. Due to differences in reporting periods, status of obligations and how business rules are applied, this financial information may differ slightly from official publication on public websites such as usaspending.gov; this dataset is not intended to be used for any official federal financial reporting.\n\nIn some cases, data was not provided by the subrecipient, recipient, and/or entered into FEMA’s mitigation grant systems. The information is likely available as part of the paper file which is considered the file of record.\n\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v2/HazardMitigationGrantProgramDisasterSummaries",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/hazard-mitigation-grant-program-disaster-summaries-v2",
+  "keyword": [
+   "mitigation",
+   "hazard",
+   "disaster",
+   "grant",
+   "subapplication",
+   "assistance",
+   "HMGP"
+  ],
+  "modified": "2025-02-13T00:00:00.000Z",
+  "publisher": "FEMA/Resilience/Hazard Mitigation Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/grants/mitigation",
+  "temporal": "1992-11-01/",
+  "api": true,
+  "version": 2,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "Hazard Mitigation",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1D",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2019-06-10T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 2597,
+  "depDate": "2026-10-15T00:00:00.000Z",
+  "depApiMessage": "The Hazard Mitigation Grant Program Disaster Summaries V3 has replaced this dataset. As such, V2 has been deprecated. The data is frozen as of August 31, 2026. It will remain until October 15, 2026, at which time it will no longer be available.  ",
+  "depWebMessage": "The Hazard Mitigation Grant Program Disaster Summaries V3 has replaced this dataset. As such, V2 has been deprecated. The data is frozen as of August 31, 2026. It will remain until October 15, 2026, at which time it will no longer be available.  ",
+  "depNewURL": "https://www.fema.gov/openfema-data-page/hazard-mitigation-grant-program-disaster-summaries-v3",
+  "hash": "c371c349943419eff7d7552d4c6dc20f340abf6e",
+  "lastRefresh": "2026-09-16T20:25:32.062Z",
+  "id": "64028204-8880-4064-b487-f689dc1bf1ae",
+  "lastDataSetRefresh": "2026-08-31T18:56:56.203Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v2/HazardMitigationGrantProgramDisasterSummaries.csv",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v2/HazardMitigationGrantProgramDisasterSummaries.json",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v2/HazardMitigationGrantProgramDisasterSummaries.jsona",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v2/HazardMitigationGrantProgramDisasterSummaries.jsonl",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v2/HazardMitigationGrantProgramDisasterSummaries.parquet",
+    "datasetSize": "tiny (< 10MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-106",
+  "name": "HazardMitigationGrantProgramDisasterSummaries",
+  "title": "Hazard Mitigation Grant Program - Disaster Summaries",
+  "description": "The dataset contains disaster level financial information for FEMA's Hazard Mitigation Grant Program (HMGP). The purpose of HMGP is to help communities implement hazard mitigation measures following a Presidential Major Disaster Declaration in the areas of the State, Tribe, or Territory requested by the Governor or Tribal Executive. For more information on the Hazard Mitigation Grant Program, please visit: https://www.fema.gov/grants/mitigation\n\nHazard Mitigation Grant Program (HMGP) (Disaster Numbers 820-1999, 4000-4999)\nSection 404 of the Stafford Act authorized the Hazard Mitigation Grant Program (HMGP). The key purpose of HMGP is to ensure that the opportunity to take critical mitigation measures to reduce the risk of loss of life and property from future disasters is not lost during the reconstruction process following a disaster. The amount of HMGP funding available to the Applicant is based upon the total Federal assistance to be provided by FEMA for disaster recovery under the Presidential major disaster declaration.\n\nFire Management Assistance Grant - Hazard Mitigation Grant Program (FMAG-HMGP) (Disaster Numbers 5084-5117)\nSection 570 of the Fiscal Year 2015 DHS Appropriations Act authorized FEMA to provide HMGP assistance as a result of an FMAG declaration. FMAG-HMGP was run as a pilot program and funding was provided as a national aggregate calculation based on an average of historical FMAG designations from the last five years.\n\nHazard Mitigation Grant Program Post Fire (HMGP-PF) (Disaster Numbers 5154-5999)\nSection 1204 of the Disaster Recovery Reform Act of 2018 amended Section 404 of the Stafford Act to authorize FEMA to provide HMGP assistance in any area affected by a major disaster, or any area affected by a fire for which assistance was provided under Section 420 Fire Management Assistance Grant (FMAG). Funding from multiple events is aggregated into one grant under the first declaration. The Aggregation is reset at the beginning of each fiscal year and remains in effect for that year.\n\nThis dataset contains hazard mitigation grant program disasters assistance information from FEMA's mitigation grant systems and as such is subject to a small percentage of human error. The financial information is derived from FEMA's mitigation grant systems, not FEMA's official financial systems. Due to differences in reporting periods, status of obligations and how business rules are applied, this financial information may differ slightly from official publication on public websites such as usaspending.gov; this dataset is not intended to be used for any official federal financial reporting.\n\nIn some cases, data was not provided by the subrecipient, recipient, and/or entered into FEMA's mitigation grant systems. The information is likely available as part of the paper file which is considered the file of record.\n\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v3/HazardMitigationGrantProgramDisasterSummaries",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/hazard-mitigation-grant-program-disaster-summaries-v3",
+  "keyword": [
+   "mitigation",
+   "hazard",
+   "disaster",
+   "grant",
+   "subapplication",
+   "assistance",
+   "HMGP"
+  ],
+  "modified": "2026-07-14T00:00:00.000Z",
+  "publisher": "FEMA/Resilience/Hazard Mitigation Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/grants/mitigation",
+  "temporal": "1992-11-01/",
+  "api": true,
+  "version": 3,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "Hazard Mitigation",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1D",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2026-08-21T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 2173,
+  "depDate": null,
+  "depApiMessage": null,
+  "depWebMessage": null,
+  "depNewURL": null,
+  "hash": "999a5f81a816c995927888c3f8b1c4ddb1ebd4d3",
+  "lastRefresh": "2026-08-20T21:00:15.408Z",
+  "id": "01152d7e-9a42-4197-a753-92dd93a93508",
+  "lastDataSetRefresh": "2026-10-10T12:09:40.437Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v3/HazardMitigationGrantProgramDisasterSummaries.csv",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v3/HazardMitigationGrantProgramDisasterSummaries.json",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v3/HazardMitigationGrantProgramDisasterSummaries.jsona",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v3/HazardMitigationGrantProgramDisasterSummaries.jsonl",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v3/HazardMitigationGrantProgramDisasterSummaries.parquet",
+    "datasetSize": "tiny (< 10MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-80",
+  "name": "HmaSubapplicationsFinancialTransactions",
+  "title": "HMA Subapplications Financial Transactions",
+  "description": "This dataset contains the financial transactions for Hazard Mitigation Assistance (HMA) subgrants from the FEMA Grants Outcomes (FEMA GO), the NEMIS Mitigation, and the eGrants grant management systems. Financial Transactions can be obligations (i.e., award or amendments), deobligations or payments. \n\nSensitive information, such as Personally Identifiable Information (PII), has been removed to protect privacy. The information in this dataset has been deemed appropriate for publication to empower public knowledge of mitigation activities and the nature of HMA grant programs. For more information on the HMA grant programs, visit: https://www.fema.gov/grants/mitigation.\n\nThis dataset comes from the source system mentioned above and is subject to a small percentage of human error. In some cases, data was not provided by the subapplicant, applicant, and/or entered into FEMA GO. The financial information in this dataset is not derived from FEMA's official financial systems. Due to differences in reporting periods, status of obligations, and how business rules are applied, this financial information may differ slightly from official publication on public websites such as https://www.usaspending.gov. This dataset is not intended to be used for any official federal financial reporting.\nFEMA's terms and conditions and citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page: https://www.fema.gov/about/openfema/terms-conditions.\n\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq.\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v1/HmaSubapplicationsFinancialTransactions",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/HMA-Subapplications-Financial-Transactions-v1",
+  "keyword": [
+   "mitigation",
+   "hazard",
+   "disaster",
+   "non-disaster",
+   "subgrant",
+   "subapplication",
+   "project",
+   "assistance",
+   "HMA",
+   "HMGP",
+   "BRIC",
+   "FMA",
+   "FEMA GO",
+   "eGrants",
+   "NEMIS"
+  ],
+  "modified": "2026-07-11T00:00:00.000Z",
+  "publisher": "FEMA/Resilience/Hazard Mitigation Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/grants/mitigation",
+  "temporal": "1989-01-01/",
+  "api": true,
+  "version": 1,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "Hazard Mitigation",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1D",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2024-02-09T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 143137,
+  "depDate": null,
+  "depApiMessage": null,
+  "depWebMessage": null,
+  "depNewURL": null,
+  "hash": "a69147f77577b947168fddfafeee1260df47114b",
+  "lastRefresh": "2026-07-27T22:39:30.327Z",
+  "id": "601a2871-d47a-4574-932b-f2f8a5b90109",
+  "lastDataSetRefresh": "2026-10-10T12:04:22.383Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v1/HmaSubapplicationsFinancialTransactions.csv",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v1/HmaSubapplicationsFinancialTransactions.json",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v1/HmaSubapplicationsFinancialTransactions.jsona",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v1/HmaSubapplicationsFinancialTransactions.jsonl",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v1/HmaSubapplicationsFinancialTransactions.parquet",
+    "datasetSize": "tiny (< 10MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-50",
+  "name": "HazardMitigationPlanStatuses",
+  "title": "Hazard Mitigation Plan Statuses",
+  "description": "The data found on this page comes from the Hazard Mitigation Planning Program’s Mitigation Planning Portal (MPP). The MPP is an online platform for tracking and reporting on mitigation plans and related data elements across all ten Federal Emergency Management Agency (FEMA) Regions. MPP data provides insight into which jurisdictions are participating in mitigation plans across the country and what the status of those plans are. Additionally, MPP data provides dates to support tracking of when plans are approved and when they are set to expire which FEMA uses to monitor and support disaster preparedness and resilience.\nHazard mitigation planning reduces loss of life and property by minimizing the impact of disasters. It begins with state, tribal, territorial and local governments identifying natural disaster risks and vulnerabilities that are common in their area. After identifying these risks, they develop long-term strategies for protecting people and property from similar events. Mitigation plans are key to breaking the cycle of disaster damage and reconstruction. When applying for certain types of non-emergency disaster assistance, FEMA requires a hazard mitigation plan. These requirements are part of the laws, regulations and policy surrounding hazard mitigation planning. For more information, visit Hazard Mitigation Planning (https://www.fema.gov/emergency-managers/risk-management/hazard-mitigation-planning )\n\nHazard mitigation plans enable state, tribal, territorial, and local governments to: \n<ul><li> Increase education and awareness around threats, hazards, risk, and vulnerabilities</li><li>Build partnerships for risk reduction with governments, organizations, businesses, and the public</li><li>Identify long-term strategies that seek to reduce risk</li><li>Align risk reduction with other state, tribal, territorial or local objectives</li><li>Identify implementation actions to focus resources on the greatest risks and vulnerabilities</li><li>Connect priorities to potential funding sources</li><li>Increase investment in mitigation actions</li></ul>\n\nA FEMA-approved hazard mitigation plan is needed to receive certain types of non-emergency disaster assistance.\n\n\nPlease note that jurisdictions may participate in multiple plans. This is raw, unedited data that is dependent on Regional entry, as such it is subject to human error and delayed entry of plan information. The data is updated from authoritative sources and has a minimum 24 hour delay.\nCitation: The Agency’s preferred citation for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page, Citing Data section: https://www.fema.gov/about/openfema/terms-conditions. \nPlace name may differ from official naming standard referenced in update organization documents (i.e. Tribal name under BIA list or other authoritative source Village of, City of, etc.).\n\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v1/HazardMitigationPlanStatuses",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/hazard-mitigation-plan-statuses-v1",
+  "keyword": [
+   "mitigation",
+   "plan",
+   "planning",
+   "status"
+  ],
+  "modified": "2024-10-10T00:00:00.000Z",
+  "publisher": "FEMA/Resilience/Risk Management Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/emergency-managers/risk-management/hazard-mitigation-planning",
+  "temporal": "2004-02-09/",
+  "api": true,
+  "version": 1,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "Hazard Mitigation",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1D",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2020-07-17T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 36757,
+  "depDate": null,
+  "depApiMessage": null,
+  "depWebMessage": null,
+  "depNewURL": null,
+  "hash": "c4aed3668c4b4a633e340683e585b13fd5c96cd2",
+  "lastRefresh": "2026-09-08T18:40:24.140Z",
+  "id": "7647dc69-7b1c-4e8f-b67d-6c04460be70e",
+  "lastDataSetRefresh": "2026-10-10T12:09:42.992Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v1/HazardMitigationPlanStatuses.csv",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v1/HazardMitigationPlanStatuses.json",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v1/HazardMitigationPlanStatuses.jsona",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v1/HazardMitigationPlanStatuses.jsonl",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v1/HazardMitigationPlanStatuses.parquet",
+    "datasetSize": "tiny (< 10MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-72",
+  "name": "HmaSubapplicationsByNfipCrsCommunities",
+  "title": "HMA Subapplications By NFIP CRS Communities",
+  "description": "This dataset contains the communities identified in the Hazard Mitigation Assistance (HMA) subapplications/subgrants from the FEMA Grants Outcomes (FEMA GO), the NEMIS Mitigation, and the eGrants grant management systems, as well as amendments made to the awarded in their respective systems. The communities in this dataset are derived from the National Flood Insurance Program (NFIP) Community Information System (CIS).\n\nSensitive information, such as Personally Identifiable Information (PII), has been removed to protect privacy. The information in this dataset has been deemed appropriate for publication to empower public knowledge of mitigation activities and the nature of HMA grant programs. For more information on the HMA grant programs, visit: https://www.fema.gov/grants/mitigation.\n\nThis dataset comes from the source system mentioned above and is subject to a small percentage of human error. In some cases, data was not provided by the subapplicant, applicant, and/or entered into FEMA GO. Due to the voluntary nature of the Hazard Mitigation Assistance Programs, not all communities in this dataset will be mitigated. This dataset is not intended to be used for any official federal financial reporting.\nFEMA's terms and conditions and citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page: https://www.fema.gov/about/openfema/terms-conditions.\n\n\n\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq.\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v1/HmaSubapplicationsByNfipCrsCommunities",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/hma-subapplications-nfip-crs-communities-v1",
+  "keyword": [
+   "mitigation",
+   "hazard",
+   "disaster",
+   "non-disaster",
+   "subgrant",
+   "subapplication",
+   "project",
+   "assistance",
+   "HMA",
+   "HMGP",
+   "BRIC",
+   "FMA",
+   "FEMA GO",
+   "NFIP",
+   "CRS",
+   "community",
+   "eGrants",
+   "NEMIS"
+  ],
+  "modified": "2026-07-11T00:00:00.000Z",
+  "publisher": "FEMA/Resilience/Hazard Mitigation Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/grants/mitigation",
+  "temporal": "1989-01-01/",
+  "api": true,
+  "version": 1,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "Hazard Mitigation",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1D",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2023-09-28T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 368946,
+  "depDate": null,
+  "depApiMessage": null,
+  "depWebMessage": null,
+  "depNewURL": null,
+  "hash": "83616cb2e4a58da45e07876f287abd13e8c7e1f1",
+  "lastRefresh": "2026-07-27T22:39:30.327Z",
+  "id": "21e890b8-54f5-4e71-b447-78b187b086f9",
+  "lastDataSetRefresh": "2026-10-10T12:09:53.325Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v1/HmaSubapplicationsByNfipCrsCommunities.csv",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v1/HmaSubapplicationsByNfipCrsCommunities.json",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v1/HmaSubapplicationsByNfipCrsCommunities.jsona",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v1/HmaSubapplicationsByNfipCrsCommunities.jsonl",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v1/HmaSubapplicationsByNfipCrsCommunities.parquet",
+    "datasetSize": "tiny (< 10MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-70",
+  "name": "HmaSubapplicationsProjectSiteInventories",
+  "title": "HMA Subapplications Project Site Inventories",
+  "description": "This dataset contains the project site inventories from the Hazard Mitigation Assistance (HMA) subapplications/subgrants from the FEMA Grants Outcomes (FEMA GO), the NEMIS Mitigation, and the eGrants grant management systems, as well as amendments made to the awarded subgrants in their respective system. Project Site Inventory can be buildings, infrastructure/utility/other, and/or vacant land that are proposed to be mitigated by the subapplication/subgrant. \n\nSensitive information, such as Personally Identifiable Information (PII), has been removed to protect privacy. The information in this dataset has been deemed appropriate for publication to empower public knowledge of mitigation activities and the nature of HMA grant programs. For more information on the HMA grant programs, visit: https://www.fema.gov/grants/mitigation.\n\nThis dataset comes from the source system mentioned above and is subject to a small percentage of human error. In some cases, data was not provided by the subapplicant, applicant, and/or entered into FEMA GO. Due to the voluntary nature of the Hazard Mitigation Assistance Programs, not all Project Site Inventory in this dataset will be mitigated. As FEMA GO continues development, additional fields may be added to this dataset to indicate the final status of individual inventory. This dataset is not intended to be used for any official federal financial reporting.\nFEMA's terms and conditions and citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page: https://www.fema.gov/about/openfema/terms-conditions.\n\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq.\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v1/HmaSubapplicationsProjectSiteInventories",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/HMA-Subapplications-Project-Site-Inventories-v1",
+  "keyword": [
+   "mitigation",
+   "hazard",
+   "disaster",
+   "non-disaster",
+   "subgrant",
+   "subapplication",
+   "project",
+   "assistance",
+   "HMA",
+   "HMGP",
+   "BRIC",
+   "FMA",
+   "FEMA GO",
+   "location",
+   "project site inventory",
+   "eGrants",
+   "NEMIS"
+  ],
+  "modified": "2026-07-11T00:00:00.000Z",
+  "publisher": "FEMA/Resilience/Hazard Mitigation Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/grants/mitigation",
+  "temporal": "1989-01-01/",
+  "api": true,
+  "version": 1,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "Hazard Mitigation",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1D",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": null,
+  "systemOfRecords": null,
+  "recordCount": 235425,
+  "depDate": null,
+  "depApiMessage": null,
+  "depWebMessage": null,
+  "depNewURL": null,
+  "hash": "0875de7bb4806a79fdbe1914ea10a601d5486679",
+  "lastRefresh": "2026-07-27T22:39:30.327Z",
+  "id": "39be902f-f332-489e-bf23-662edc846681",
+  "lastDataSetRefresh": "2026-10-10T12:15:00.007Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v1/HmaSubapplicationsProjectSiteInventories.csv",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v1/HmaSubapplicationsProjectSiteInventories.json",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v1/HmaSubapplicationsProjectSiteInventories.jsona",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v1/HmaSubapplicationsProjectSiteInventories.jsonl",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v1/HmaSubapplicationsProjectSiteInventories.parquet",
+    "datasetSize": "tiny (< 10MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-94",
+  "name": "HmaSubapplicationsCongressionalDistricts",
+  "title": "HMA Subapplications Congressional Districts",
+  "description": "This dataset contains the Congressional Districts associated with the Hazard Mitigation Assistance (HMA) subapplications/subgrants from the FEMA Grants Outcomes (FEMA GO) system. FEMA GO started accepting Flood Mitigation Assistance (FMA) and Building Resilient Infrastructure and Communities (BRIC) subapplications in Fiscal Year 2020. The Congressional Districts were validated by HMA Program Staff and may differ from those listed in the subapplications/subgrants. For details on Congressional Districts provided by subapplicants/subgrantees, visit https://www.fema.gov/openfema-data-page/hma-subapplications-nfip-crs-communities-v1.\n\nThe information in this dataset has been deemed appropriate for publication to empower public knowledge of mitigation activities and the nature of HMA grant programs. For more information on the HMA grant programs, visit: https://www.fema.gov/grants/mitigation. For more information on FEMA GO, visit: https://www.fema.gov/grants/guidance-tools/fema-go.\n\nThis dataset comes from the source mentioned above and is subject to a small percentage of human error. In some cases, data was not provided by the subapplicant, applicant, and/or entered into FEMA GO. Due to the voluntary nature of the Hazard Mitigation Assistance Programs, not all Congressional Districts in this dataset will be mitigated. This dataset is not intended to be used for any official federal financial reporting.\nFEMA's terms and conditions and citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page: https://www.fema.gov/about/openfema/terms-conditions.\n\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq.\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v1/HmaSubapplicationsCongressionalDistricts",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/hma-subapplications-congressional-districts-v1",
+  "keyword": [
+   "mitigation",
+   "hazard",
+   "disaster",
+   "non-disaster",
+   "subgrant",
+   "subapplication",
+   "project",
+   "assistance",
+   "HMA",
+   "HMGP",
+   "BRIC",
+   "FMA",
+   "FEMA GO",
+   "congressional district"
+  ],
+  "modified": "2026-07-11T00:00:00.000Z",
+  "publisher": "FEMA/Resilience/Hazard Mitigation Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/grants/mitigation",
+  "temporal": "2020-01-01/",
+  "api": true,
+  "version": 1,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "Hazard Mitigation",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1D",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2025-07-16T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 11381,
+  "depDate": null,
+  "depApiMessage": null,
+  "depWebMessage": null,
+  "depNewURL": null,
+  "hash": "23e593db6df67cf3110e8af880793f95649b5823",
+  "lastRefresh": "2026-07-21T03:00:12.078Z",
+  "id": "617a2d14-3c2a-4a00-942e-11be581b2dba",
+  "lastDataSetRefresh": "2026-10-10T12:09:51.914Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v1/HmaSubapplicationsCongressionalDistricts.csv",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v1/HmaSubapplicationsCongressionalDistricts.json",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v1/HmaSubapplicationsCongressionalDistricts.jsona",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v1/HmaSubapplicationsCongressionalDistricts.jsonl",
+    "datasetSize": "tiny (< 10MB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v1/HmaSubapplicationsCongressionalDistricts.parquet",
+    "datasetSize": "tiny (< 10MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-81",
+  "name": "HmaSubapplications",
+  "title": "HMA Subapplications",
+  "description": "This dataset contains Hazard Mitigation Assistance (HMA) subapplications/subgrants from the FEMA Grants Outcomes (FEMA GO), the NEMIS Mitigation, and the eGrants grant management systems, as well as amendments made to the awarded subgrants in their respective systems. \n\nSensitive information, such as Personally Identifiable Information (PII), has been removed to protect privacy. The information in this dataset has been deemed appropriate for publication to empower public knowledge of mitigation activities and the nature of HMA grant programs. For more information on the HMA grant programs, visit: https://www.fema.gov/grants/mitigation.\n\nThis dataset comes from the source system mentioned above and is subject to a small percentage of human error. In some cases, data was not provided by the subapplicant, applicant, and/or entered into FEMA GO. The financial information in this dataset is not derived from FEMA's official financial systems. Due to differences in reporting periods, status of obligations, and how business rules are applied, this financial information may differ slightly from official publication on public websites such as https://www.usaspending.gov. This dataset is not intended to be used for any official federal financial reporting.\nFEMA's terms and conditions and citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page: https://www.fema.gov/about/openfema/terms-conditions.\n\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq.\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v2/HmaSubapplications",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/HMA-Subapplications-v2",
+  "keyword": [
+   "mitigation",
+   "hazard",
+   "disaster",
+   "non-disaster",
+   "subgrant",
+   "subapplication",
+   "project",
+   "assistance",
+   "HMA",
+   "HMGP",
+   "BRIC",
+   "FMA",
+   "FEMA GO",
+   "eGrants",
+   "NEMIS"
+  ],
+  "modified": "2026-07-11T00:00:00.000Z",
+  "publisher": "FEMA/Resilience/Hazard Mitigation Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/grants/mitigation",
+  "temporal": "1989-01-01/",
+  "api": true,
+  "version": 2,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "Hazard Mitigation",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1D",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2023-09-28T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 63607,
+  "depDate": null,
+  "depApiMessage": null,
+  "depWebMessage": null,
+  "depNewURL": null,
+  "hash": "9f4b7549eca1526aa13028775d7cb75e62514a81",
+  "lastRefresh": "2026-07-27T22:39:30.327Z",
+  "id": "52f2cbff-07df-4ce9-b10d-08882b24b3c3",
+  "lastDataSetRefresh": "2026-10-10T12:10:11.720Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v2/HmaSubapplications.csv",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v2/HmaSubapplications.json",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v2/HmaSubapplications.jsona",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v2/HmaSubapplications.jsonl",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v2/HmaSubapplications.parquet",
+    "datasetSize": "tiny (< 10MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-9",
+  "name": "PublicAssistanceApplicants",
+  "title": "Public Assistance Applicants",
+  "description": "This dataset was generated by FEMA's Public Assistance (PA) reporting team to share data on assistance made available to eligible state, local and tribal governments, and certain private nonprofit organizations as part of presidentially declared disasters. This data, starting with disaster declaration DR1239 (declared in 1998), lists applicant (subrecipient) information that supplements the Public Assistance Funded Projects Details dataset. \nThis raw, unedited data comes from FEMA's Applicant Case Tracker (FAC-Trax), which includes the Grants Manager (GM) and Grants Portal (GP) database.\n\nAny financial information is derived from Grants Manager and not FEMA's official financial systems. Due to differences in reporting periods, status of obligations and application of business rules, this financial information may differ slightly from official publication on public websites such as usaspending.gov. This dataset is not intended to be used for any official federal reporting. \n\nThe Agency's preferred citation for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page: https://www.fema.gov/about/openfema/terms-conditions\n\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq\n\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v1/PublicAssistanceApplicants",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/public-assistance-applicants-v1",
+  "keyword": [
+   "public",
+   "assistance",
+   "grant",
+   "applicant",
+   "grantee",
+   "fund",
+   "projects",
+   "fema",
+   "nemis",
+   "mitigation",
+   "fema"
+  ],
+  "modified": "2026-07-12T00:00:00.000Z",
+  "publisher": "FEMA/Response and Recovery/Recovery Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/assistance/public",
+  "temporal": "1998-08-26/",
+  "api": true,
+  "version": 1,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "Public Assistance",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1D",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2010-07-15T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 199472,
+  "depDate": null,
+  "depApiMessage": null,
+  "depWebMessage": null,
+  "depNewURL": null,
+  "hash": "6690d3a7461da5bb7acbf1cb70a7f7fcd5241b5c",
+  "lastRefresh": "2026-07-21T21:40:34.077Z",
+  "id": "db24e3da-33eb-4195-a82f-fcc02c28d9e3",
+  "lastDataSetRefresh": "2026-10-10T15:06:44.977Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceApplicants.csv",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceApplicants.json",
+    "datasetSize": "medium (50MB - 500MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceApplicants.jsona",
+    "datasetSize": "medium (50MB - 500MB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceApplicants.jsonl",
+    "datasetSize": "medium (50MB - 500MB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceApplicants.parquet",
+    "datasetSize": "small (10MB - 50MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-89",
+  "name": "PublicAssistanceFundedProjectsDetails",
+  "title": "Public Assistance Funded Projects Details",
+  "description": "The Public Assistance Funded Projects Details dataset contains obligated (financial obligation to grantee) Public Assistance projects, lists public assistance recipients designated as applicants in the data, and a list of every funded, individual project, called project worksheets. Open projects still under pre-obligation processing are not represented. Applicant details can be obtained by relating this dataset with the OpenFEMA Public Assistance Applicants dataset using the Applicant ID field.\n\nFEMA provides supplemental Federal disaster grant assistance for debris removal, emergency protective measures, and the repair, replacement, or restoration of disaster-damaged, publicly owned facilities and the facilities of certain Private Non-Profit (PNP) organizations through the PA Program (CDFA Number 97.036). The PA Program also provides 406 hazard mitigation funding for damaged facilities during the recovery process to encourage protection from future events. See FEMA PA Hazard Mitigation: https://www.fema.gov/assistance/public/hazard-mitigation\n\nData comes from FEMA's Applicant Case Tracker (FAC-Trax), which includes the Grants Manager (GM) database.  This raw unedited data is subject to a small percentage of human error. The financial information is derived from GM and not FEMA's official financial systems. Due to differences in reporting periods, status of obligations, and application of business rules, this financial information may differ slightly from official publication on public websites such as www.usaspending.gov. This dataset is not intended to be used for any official federal reporting.                 \n\n<b>This dataset has been updated as part of a system migration that combines data from multiple systems. Due to a migration timing issue, some records were previously excluded from this dataset. As such, the record count of this dataset has increased.</b>\n\nThe data has been incorporated into a graphic visualization at Public Assistance Program Summary of Obligations: https://www.fema.gov/data-visualization/public-assistance-program-summary-obligations. Questions pertaining to the data visualizations should be addressed to EnterpriseAnalytics@fema.dhs.gov.\n\nFEMA's terms and conditions and citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page: https://www.fema.gov/about/openfema/terms-conditions\n\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq\n\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v2/PublicAssistanceFundedProjectsDetails",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/public-assistance-funded-projects-details-v2",
+  "keyword": [
+   "public",
+   "assistance",
+   "mitigation",
+   "grants",
+   "sub-grantee",
+   "applicant",
+   "disaster",
+   "hazard"
+  ],
+  "modified": "2026-07-12T00:00:00.000Z",
+  "publisher": "FEMA/Response and Recovery/Recovery Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/assistance/public",
+  "temporal": "1998-08-26/",
+  "api": true,
+  "version": 2,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "Public Assistance",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1D",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2010-07-15T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 850008,
+  "depDate": null,
+  "depApiMessage": null,
+  "depWebMessage": null,
+  "depNewURL": null,
+  "hash": "fc79b7e1c927f32defee511f9163e9b313413f50",
+  "lastRefresh": "2026-07-21T21:40:34.077Z",
+  "id": "c928e5f4-3377-4714-806e-d0b395bf771d",
+  "lastDataSetRefresh": "2026-10-10T15:07:32.250Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v2/PublicAssistanceFundedProjectsDetails.csv",
+    "datasetSize": "medium (50MB - 500MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v2/PublicAssistanceFundedProjectsDetails.json",
+    "datasetSize": "large (500MB - 10GB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v2/PublicAssistanceFundedProjectsDetails.jsona",
+    "datasetSize": "large (500MB - 10GB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v2/PublicAssistanceFundedProjectsDetails.jsonl",
+    "datasetSize": "large (500MB - 10GB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v2/PublicAssistanceFundedProjectsDetails.parquet",
+    "datasetSize": "medium (50MB - 500MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-85",
+  "name": "PublicAssistanceGrantAwardActivities",
+  "title": "Public Assistance Grant Award Activities",
+  "description": "This dataset contains data on Public Assistance project awards (obligations), including the project obligation date(s); dollar amount of Federal Share Obligated for each project and its obligation date(s); FEMA Region; State; Disaster Declaration Number; descriptive cause of the declaration (Incident Type); Entity requesting public assistance (Applicant Name); and distinct name for the repair, replacement or mitigation work listed for assistance (Project Title).  \n\nAs part of disaster declarations, the President can make federal funding (Public Assistance) available through FEMA to eligible state, local and tribal governments and certain private nonprofit organizations. This is done on a cost-sharing basis for emergency work and the repair, replacement, or mitigation work for facilities damaged by the disaster event. \n\nAs part of Congressional bill HR 152 - the Sandy Recovery Improvement Act of 2013, FEMA is providing the following information for our stakeholders: Region, Disaster Declaration Number, Disaster Type, State, Applicant, County, Damage Category Code, Federal Share Obligated, and Date Obligated.\n\nNote: FEMA obligates funding for a project directly to the Recipient (State or Tribe). It is the Recipient's responsibility to ensure that the eligible subrecipient (listed in the dataset as Applicant Name) receives the award funding.\n\nThis dataset lists details about project versions (occurring when the scope/cost changes for a project). Versions adjust the cost of the project  with positive additions called obligations and subtractions called deobligations. Combined, they reconcile to reflect the Total Federal Share Obligation, but reconciliation occurs over the life of the project - sometimes years after the declaration date. The prior version of this dataset included project obligations within a seven-day period prior to the listed date. This version includes obligations from 1998 to present, excluding obligations uploaded on the same day as the publication. Open projects still under pre-obligation processing are not represented. For more information on the Public Assistance process see: https://www.fema.gov/assistance/public/process\n\nThis is raw, unedited data from FEMA's Applicant Case Tracker (FAC-Trax), which includes the Grants Manager (GM) and Grants Portal (GP) database and as such is subject to a small percentage of human error. The financial information is derived from GM and not FEMA's official financial systems. Due to differences in reporting periods, status of obligations and how business rules are applied, this financial information may differ slightly from official publication on public websites such as usaspending.gov. This dataset is not intended to be used for any official federal financial reporting.\n\n<b>This dataset has been updated as part of a system migration that combines data from multiple systems. Due to a migration timing issue, some records were previously excluded from this dataset. As such, the record count of this dataset has increased.</b>\n\nFEMA's terms and conditions and citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page: https://www.fema.gov/about/openfema/terms-conditions\n\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq\n\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v2/PublicAssistanceGrantAwardActivities",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/public-assistance-grant-award-activities-v2",
+  "keyword": [
+   "public assistance",
+   "grants"
+  ],
+  "modified": "2026-07-12T00:00:00.000Z",
+  "publisher": "FEMA/Response and Recovery/Recovery Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/assistance/public",
+  "temporal": "1998-08-26/",
+  "api": true,
+  "version": 2,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "Public Assistance",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1D",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2013-11-04T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 1225092,
+  "depDate": null,
+  "depApiMessage": null,
+  "depWebMessage": null,
+  "depNewURL": null,
+  "hash": "0f03680714e569d65ac822b3dbe4a2b412d506a2",
+  "lastRefresh": "2026-07-21T21:40:34.077Z",
+  "id": "20b0ccfd-f5df-4a8f-b5ad-8a023dc5b057",
+  "lastDataSetRefresh": "2026-10-10T15:07:43.525Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v2/PublicAssistanceGrantAwardActivities.csv",
+    "datasetSize": "medium (50MB - 500MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v2/PublicAssistanceGrantAwardActivities.json",
+    "datasetSize": "medium (50MB - 500MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v2/PublicAssistanceGrantAwardActivities.jsona",
+    "datasetSize": "medium (50MB - 500MB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v2/PublicAssistanceGrantAwardActivities.jsonl",
+    "datasetSize": "medium (50MB - 500MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-1",
+  "name": "PublicAssistanceFundedProjectsSummaries",
+  "title": "Public Assistance Funded Project Summaries",
+  "description": "FEMA provides supplemental Federal disaster grant assistance for debris removal, emergency protective measures, and the repair, replacement, or restoration of disaster-damaged, publicly owned facilities and the facilities of certain Private Non-Profit (PNP) organizations through the Public Assistance (PA) Program (CDFA Number 97.036). The PA Program also encourages protection of these damaged facilities from future events by providing assistance for hazard mitigation measures during the recovery process (see FEMA Hazard Mitigation Grants Sections 404 and 406: https://www.fema.gov/press-release/20230426/fema-hazard-mitigation-grants-404-and-406).\n\nThis dataset lists all public assistance applicants (subrecipients) and a summary of the funded program support. This is raw, unedited data from FEMA's Applicant Case Tracker (FAC-Trax), which includes the Grants Manager (GM) and Grants Portal (GP) database and as such is subject to a small percentage of human error. The financial information is derived from GM and not FEMA's official financial systems.\n\nDue to differences in reporting periods, status of obligations, and how business rules are applied, this financial information may differ slightly from official publication on public websites such as usaspending.gov; this dataset is not intended to be used for any official federal financial reporting.\n\nFEMA's terms and conditions and citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page: https://www.fema.gov/about/openfema/terms-conditions\n\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq\n\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v1/PublicAssistanceFundedProjectsSummaries",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/public-assistance-funded-projects-summaries-v1",
+  "keyword": [
+   "public",
+   "assistance",
+   "disaster",
+   "grant",
+   "funding",
+   "sub-grantees"
+  ],
+  "modified": "2026-07-12T00:00:00.000Z",
+  "publisher": "FEMA/Response and Recovery/Recovery Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/assistance/public",
+  "temporal": "1998-08-26/",
+  "api": true,
+  "version": 1,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "Public Assistance",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1D",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2010-01-21T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 196754,
+  "depDate": null,
+  "depApiMessage": null,
+  "depWebMessage": null,
+  "depNewURL": null,
+  "hash": "95b045d6682700ccbdba6b347840ca8ce8c8e0d3",
+  "lastRefresh": "2026-07-21T21:40:34.077Z",
+  "id": "93eab278-2ca7-4806-9daf-bf1e0f3c388c",
+  "lastDataSetRefresh": "2026-10-10T15:06:50.717Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceFundedProjectsSummaries.csv",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceFundedProjectsSummaries.json",
+    "datasetSize": "medium (50MB - 500MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceFundedProjectsSummaries.jsona",
+    "datasetSize": "medium (50MB - 500MB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceFundedProjectsSummaries.jsonl",
+    "datasetSize": "medium (50MB - 500MB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v1/PublicAssistanceFundedProjectsSummaries.parquet",
+    "datasetSize": "small (10MB - 50MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-54",
+  "name": "HousingAssistanceOwners",
+  "title": "Housing Assistance Program Data - Owners",
+  "description": "This dataset is generated by FEMA's Individual Assistance (IA) reporting team to share data on FEMA's Housing Assistance program for house owners within the state, county, and zip code where the registration is valid for the declarations, starting with disaster declaration DR1439 (declared in November 2002). It contains aggregated, non-PII data. Core data elements include number of applicants, county, zip code, inspections, severity of damage, and assistance provided. \n\nData is self-reported and subject to human error. For example, when an applicant registers online, they enter their street and city address. While the county is inferred by the system, it may be overridden by the applicant. Similarly, with a call center registration, the Human Services Specialist (HSS) representatives are instructed to ask in what county the applicant resides, but the applicant has the right to choose the county. To learn more about disaster assistance please visit https://www.fema.gov/individual-disaster-assistance.\n\nThe financial information is derived from NEMIS and not FEMA's official financial systems. Due to differences in reporting periods, status of obligations and how business rules are applied, this financial information may differ slightly from official publication on public websites such as usaspending.gov; this dataset is not intended to be used for any official federal financial reporting.\n\nFEMA's terms and conditions and citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page: https://www.fema.gov/about/openfema/terms-conditions\n\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq\n\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v2/HousingAssistanceOwners",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/housing-assistance-program-data-owners-v2",
+  "keyword": [
+   "housing assistance",
+   "owners",
+   "disaster"
+  ],
+  "modified": "2024-01-25T00:00:00.000Z",
+  "publisher": "FEMA/Response and Recovery/Recovery Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/individual-disaster-assistance",
+  "temporal": "2004-08-01/",
+  "api": true,
+  "version": 2,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "Individual Assistance",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1D",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2013-06-26T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 160550,
+  "depDate": null,
+  "depApiMessage": null,
+  "depWebMessage": null,
+  "depNewURL": null,
+  "hash": "2acd9c72c971e0956b4c895af2bdd02fb00601cc",
+  "lastRefresh": "2026-10-10T06:44:49.152Z",
+  "id": "e080b7a7-418d-4db0-98ad-2ebb79b524db",
+  "lastDataSetRefresh": "2026-10-10T06:44:49.152Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v2/HousingAssistanceOwners.csv",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v2/HousingAssistanceOwners.json",
+    "datasetSize": "medium (50MB - 500MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v2/HousingAssistanceOwners.jsona",
+    "datasetSize": "medium (50MB - 500MB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v2/HousingAssistanceOwners.jsonl",
+    "datasetSize": "medium (50MB - 500MB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v2/HousingAssistanceOwners.parquet",
+    "datasetSize": "small (10MB - 50MB)"
+   }
+  ]
+ },
+ {
+  "identifier": "openfema-55",
+  "name": "HousingAssistanceRenters",
+  "title": "Housing Assistance Program Data - Renters",
+  "description": "This dataset was generated by FEMA's Individual Assistance (IA) reporting team to share data on FEMA's Housing Assistance program for house renters within the state, county, and zip code where the registration is valid for the declarations, starting with disaster declaration DR1439 (declared in 2002). It contains aggregated, non-PII data. Core data elements include number of applicants, county, zip code, inspections, severity of damage, and assistance provided. \n\nData is self-reported and subject to human error. For example, when an applicant registers online, they enter their street and city address. While the county is inferred by the system, it may be overridden by the applicant. Similarly, with a call center registration, the Human Services Specialist (HSS) representatives are instructed to ask in what county the applicant resides, but the applicant has the right to choose the county. To learn more about disaster assistance please visit https://www.fema.gov/individual-disaster-assistance.\n\nThe financial information is derived from NEMIS and not FEMA's official financial systems. Due to differences in reporting periods, status of obligations and how business rules are applied, this financial information may differ slightly from official publication on public websites such as usaspending.gov; this dataset is not intended to be used for any official federal financial reporting.\n\nFEMA's terms and conditions and citation requirements for datasets (API usage or file downloads) can be found on the OpenFEMA Terms and Conditions page: https://www.fema.gov/about/openfema/terms-conditions\n\nFor answers to Frequently Asked Questions (FAQs) about the OpenFEMA program, API, and publicly available datasets, please visit: https://www.fema.gov/about/openfema/faq\n\nIf you have media inquiries about this dataset, please email the FEMA Press Office at FEMA-Press-Office@fema.dhs.gov. For inquiries about FEMA's data and Open Government program, please email the OpenFEMA team at OpenFEMA@fema.dhs.gov.",
+  "webService": "https://www.fema.gov/api/open/v2/HousingAssistanceRenters",
+  "dataDictionary": "https://www.fema.gov/openfema-data-page/housing-assistance-program-data-renters-v2",
+  "keyword": [
+   "Housing Assistance",
+   "Renters",
+   "Registrations",
+   "Inspections",
+   "Damage",
+   "IHP"
+  ],
+  "modified": "2024-01-25T00:00:00.000Z",
+  "publisher": "FEMA/Response and Recovery/Recovery Directorate",
+  "contactPoint": "OpenFEMA",
+  "mbox": "openfema@fema.gov",
+  "accessLevel": "public",
+  "landingPage": "https://www.fema.gov/individual-disaster-assistance",
+  "temporal": "2004-08-01/",
+  "api": true,
+  "version": 2,
+  "bureauCode": [
+   "024:70"
+  ],
+  "programCode": [
+   "024:039"
+  ],
+  "accessLevelComment": null,
+  "license": null,
+  "spatial": null,
+  "theme": "Individual Assistance",
+  "dataQuality": "true",
+  "accrualPeriodicity": "R/P1D",
+  "language": "en-US",
+  "primaryITInvestmentUII": null,
+  "references": null,
+  "issued": "2014-08-14T00:00:00.000Z",
+  "systemOfRecords": null,
+  "recordCount": 148072,
+  "depDate": null,
+  "depApiMessage": null,
+  "depWebMessage": null,
+  "depNewURL": null,
+  "hash": "5be25e6bddc1dee3ab5a41b30cb3cff04a5437cb",
+  "lastRefresh": "2026-10-10T06:44:49.170Z",
+  "id": "52bd4bb1-e696-4d8e-bdee-3fa6232a7487",
+  "lastDataSetRefresh": "2026-10-10T06:44:49.170Z",
+  "distribution": [
+   {
+    "format": "csv",
+    "accessURL": "https://www.fema.gov/api/open/v2/HousingAssistanceRenters.csv",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "json",
+    "accessURL": "https://www.fema.gov/api/open/v2/HousingAssistanceRenters.json",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "jsona",
+    "accessURL": "https://www.fema.gov/api/open/v2/HousingAssistanceRenters.jsona",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "jsonl",
+    "accessURL": "https://www.fema.gov/api/open/v2/HousingAssistanceRenters.jsonl",
+    "datasetSize": "small (10MB - 50MB)"
+   },
+   {
+    "format": "parquet",
+    "accessURL": "https://www.fema.gov/api/open/v2/HousingAssistanceRenters.parquet",
+    "datasetSize": "tiny (< 10MB)"
+   }
+  ]
+ }
+]
