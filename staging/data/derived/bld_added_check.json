@@ -1,0 +1,58 @@
+{
+ "method": "QA of the added (machine-detected) footprints, read back from the tiles build.mjs wrote, not from its memory.\n\n1. Sample check: 2,000 added records drawn at random (fixed seed) and, for comparison, all of them. A failure is\n   an added footprint that (a) intersects an OpenStreetMap footprint of the tiles with a shared area above\n   0.5 m2, (b) has its centroid inside an OSM footprint or contains an OSM centroid, (c) has its centroid outside\n   the land-clipped municipios (in the sea), or (d) intersects another added footprint. Geometry by shapely/GEOS,\n   so it does not share code with the test in build.mjs. Ground elevation at or below 0 m is counted as a hint.",
+ "seed": 20261011,
+ "osm_first_in_every_tile": true,
+ "sample_2000": {
+  "checked": 2000,
+  "intersects_osm_over_0p5_m2": 0,
+  "touches_osm_at_all": 4,
+  "largest_shared_area_m2": 0.02,
+  "centroid_inside_osm": 0,
+  "contains_osm_centroid": 0,
+  "centroid_not_on_land": 0,
+  "intersects_other_added_over_0p5_m2": 0,
+  "failures_any": 0,
+  "hint_ground_at_or_below_0m": 6,
+  "hint_ground_unknown": 0
+ },
+ "all_added": {
+  "checked": 439076,
+  "intersects_osm_over_0p5_m2": 0,
+  "touches_osm_at_all": 685,
+  "largest_shared_area_m2": 0.19,
+  "centroid_inside_osm": 0,
+  "contains_osm_centroid": 0,
+  "centroid_not_on_land": 0,
+  "intersects_other_added_over_0p5_m2": 11,
+  "failures_any": 11,
+  "hint_ground_at_or_below_0m": 643,
+  "hint_ground_unknown": 0
+ },
+ "picture": {
+  "file": "data/derived/bld_added_qa.jpg",
+  "panels": [
+   {
+    "geoid": "72131",
+    "name": "San Sebasti\u00e1n",
+    "buildings_osm": 21148,
+    "buildings_added": 11088,
+    "added_share": 0.344,
+    "closeup_centre": [
+     -66.99514,
+     18.33115
+    ]
+   },
+   {
+    "geoid": "72127",
+    "name": "San Juan",
+    "buildings_osm": 103767,
+    "buildings_added": 14510,
+    "added_share": 0.1227,
+    "closeup_centre": [
+     -66.01826,
+     18.40666
+    ]
+   }
+  ]
+ }
+}
