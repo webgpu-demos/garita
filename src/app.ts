@@ -29,6 +29,9 @@ export function bootApp(opts: BootOptions = {}) {
 
   // URL flags: ?fixtures=1 ?q=low|medium|high ?t=<ISO> ?sea=<m> ?lang=es ?ui=0 ?nofeeds=1 ?cam=lon,lat,range,heading,pitch
   S.fixturesMode.value = flag('fixtures');
+  // ?select=<type>:<key> opens an object (a deep link); it flies there unless ?cam= fixes the view
+  const sel = params.get('select');
+  if (sel) S.select(sel, { fly: !params.get('cam') });
   const q = params.get('q');
   if (q === 'low' || q === 'medium' || q === 'high') S.quality.value = q;
   const t = params.get('t');

@@ -1,7 +1,7 @@
 # Garita
 
 *A live digital twin of Puerto Rico for housing recovery and disaster response.* Real terrain, aerial photo and
-bathymetry; 1.5 million buildings; live public feeds; and an ontology-backed database that runs in the browser.
+bathymetry; 1.7 million buildings; live public feeds; and an ontology-backed database that runs in the browser.
 Named for the sentry boxes on the walls of Old San Juan.
 
 **[Open the twin → webgpu-demos.github.io/garita](https://webgpu-demos.github.io/garita/)**
@@ -20,7 +20,8 @@ store; [`clear-Vieques`](https://github.com/webgpu-demos/clear-Vieques) for wate
   bathymetry merged in near shore, a physical sky with aerial perspective and volumetric clouds, an ocean shaded
   from the actual water depth, sun shadows near the ground, town lights at night, and the scene clock on San
   Juan time.
-- **Buildings.** 1,500,471 OpenStreetMap footprints, each with its ground elevation and FEMA flood class, roofed
+- **Buildings.** 1,500,471 OpenStreetMap footprints, plus 236,613 footprints detected from imagery where
+  OpenStreetMap has none (flagged as detections), each with its ground elevation and FEMA flood class, roofed
   with the aerial photo itself.
 - **A database, not a pile of layers.** About 7,000 seeded objects of 25 types (municipios, barrios, tracts,
   public housing, shelters, hospitals, gauges, tide stations, disaster declarations…; four more types are filled
@@ -49,7 +50,10 @@ store; [`clear-Vieques`](https://github.com/webgpu-demos/clear-Vieques) for wate
 | Nearshore depth | NOAA NCEI CUDEM topo-bathy, 1/9″ and 1/3″ (doi:10.25921/ds9v-ky35) | Used wherever it has data below +1 m; 1,136 tiles |
 | Aerial photo | USGS The National Map orthoimagery | Public domain; mirrored to zoom 13, streamed to zoom 16 |
 | Building footprints | OpenStreetMap (Geofabrik Puerto Rico extract), ODbL | 1,500,471; 13.8 % carry a height |
-| Ground elevation per building | USGS 3DEP 1 m lidar DEM, 2024 collection (2018 where it has gaps) | Median within 2 m of the footprint's centre; metres above PRVD02 (local mean sea level); 1,500,461 of 1,500,471 buildings have a value |
+| Footprints where OpenStreetMap has none | Google Open Buildings (CC BY 4.0) and Microsoft ML Buildings (ODbL), through Overture Maps release 2026-09-23.1 | 236,613 added (13.6 % of the total): machine detections, not surveyed. Kept only if they overlap no OSM building, are at least 25 m² and 4 m wide, and (Google) have confidence of 0.70 or more. Flagged in the tiles, the tooltip and every count |
+| Flood insurance | OpenFEMA NFIP claims and policies (v3) | 25,387 claims since 1978 ($161 M paid); 6,625 contracts in force on 2026-09-08. Redacted by FEMA: 3,966 claims carry no location, so municipio figures are a floor |
+| Recovery spending | OpenFEMA Public Assistance funded projects and Hazard Mitigation subapplications | Per disaster and municipio (by applicant). Island-wide projects are kept as one island-level record, never spread over municipios |
+| Ground elevation per building | USGS 3DEP 1 m lidar DEM, 2024 collection (2018 where it has gaps) | Median within 2 m of the footprint's centre; metres above PRVD02 (local mean sea level); all but 12 of 1,737,084 footprints have a value |
 | Storm surge by hurricane category | NOAA NHC National Storm Surge Risk Maps, Puerto Rico (SLOSH maximum of maximums, high tide, 2018) | About 10 m cells, one-foot depth classes. NOAA: for awareness at community level, not parcel-level assessment, and not a replacement for evacuation zones |
 | Landslide susceptibility | USGS Open-File Report 2020-1022 (Hughes and Schulz), 5 m raster | Five classes of relative susceptibility to rainfall-triggered landslides. Shows where slides start, not where they run out; main island only |
 | Flood class per building | FEMA National Flood Hazard Layer, 4,894 zone polygons | Point in polygon at the centroid. Facilities, housing and shelters use a reduced file of 3,830 polygons |
@@ -167,6 +171,12 @@ sampled on runners in under five minutes, `pipeline/hazards/lidar.py`), the surg
 counts, and the night-lights overlay. Each stage's method, classes, publisher's use limits and QA numbers are in
 `data/hazards/<stage>/meta.json` on the site.
 
+Then two more: FEMA flood insurance and recovery spending in the store (`pipeline/seed/sources/nfip.mjs`,
+`fema_recovery.mjs`), and footprints from a second source where OpenStreetMap has none
+(`pipeline/vector/stage2b_overture.sh`). After a building rebuild the three hazard stages are run again and
+`pipeline/hazards/merge.mjs`, `pipeline/derive.mjs` and the seed build follow; the vector workflow publishes to
+`staging/` so the live tiles change only when that chain is ready.
+
 An independent pass then checked 66 numbers and claims against the database and public sources
 (`docs/verification.md`): 38 held, 7 were wrong and 15 imprecise. The storm replay lost its wind field at landfall
 fixes of 2004–2011 storms; 58 census tracts of an older vintage sat in the store; two public housing points were
@@ -174,12 +184,18 @@ in the sea. Those are fixed and the text here corrected.
 
 ## Known limits
 
-- **Bathtub flooding** only. The counts now use 1 m lidar (9,718 buildings at or below 1 m, against 12,344 with
-  the 10 m model; 40,257 at or below 2 m, against 25,953), but still test no connection to the sea, and the blue
+- **Bathtub flooding** only. The counts use 1 m lidar (10,907 footprints at or below 1 m; 9,718 of them in
+  OpenStreetMap, against 12,344 with the old 10 m model), but still test no connection to the sea, and the blue
   wash on the map follows the coarser terrain the scene is drawn with.
+- **Counts include machine-detected footprints.** They fill real gaps (San Sebastián gains 24 %, San Juan 7 %)
+  but are detections: many are outbuildings and some are not buildings. Each municipio gives the split, and
+  `data/derived/exposure.json` repeats every island total over OpenStreetMap footprints alone.
+- **Flood insurance is not a count of flooded homes.** Claims are what was filed and located; policies are
+  contracts. The gap query sets contracts in force beside footprints in the 1 % zone: a screen, not a
+  penetration rate.
 - **Surge and landslide counts are screening.** NOAA limits its surge maps to community-level awareness; the
-  landslide map ranks where slides start. A building's centre on Low ground can sit under a High slope: 44,722
-  buildings stand on High or greater susceptibility, 381,946 are within 25 m of it. Both numbers are given.
+  landslide map ranks where slides start. A building's centre on Low ground can sit under a High slope: 64,190
+  footprints stand on High or greater susceptibility, 471,910 are within 25 m of it. Both numbers are given.
 - **Night lights for 2017** come from an older, noisier NASA rendering (the better one fails for those dates),
   so María's blackout is visible but not crisp.
 - **OpenStreetMap completeness varies by municipio.** Footprints are not a structure inventory. This build puts 20.3 % of Toa Baja's buildings and 36.6 % of Cataño's in the 1 % zone.
@@ -199,8 +215,10 @@ in the sea. Those are fixed and the text here corrected.
 ## Credits and licences
 
 Elevation: USGS 3DEP via AWS Terrain Tiles (Mapzen/Tilezen). Bathymetry: NOAA NCEI CUDEM. Imagery: USGS The
-National Map. Buildings, facilities and coastline: © OpenStreetMap contributors, ODbL; the compiled building
-tiles are a derived database under the ODbL. Flood zones: FEMA NFHL. Housing: HUD. Vulnerability: CDC/ATSDR SVI.
+National Map. Buildings, facilities and coastline: © OpenStreetMap contributors, ODbL; added footprints:
+© OpenStreetMap contributors, Overture Maps Foundation; Google Open Buildings, available under CC BY 4.0; Global
+ML Building Footprints, licensed by Microsoft under the Open Database License. The compiled building tiles are a
+derived database under the ODbL. Flood zones: FEMA NFHL. Housing: HUD. Vulnerability: CDC/ATSDR SVI.
 Shelters: Departamento de la Vivienda de Puerto Rico. Storm tracks: NOAA NHC HURDAT2. Weather model output:
 Open-Meteo (CC BY 4.0). Radar: RainViewer. Sky and clouds: Takram three-geospatial (MIT). three.js,
 postprocessing, SQLite WASM, Preact, d3-force.

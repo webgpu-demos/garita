@@ -106,7 +106,7 @@ export function BottomBar() {
       <Readout />
       <SceneClock />
       <button class="bb-attrib" title={t('bb.attrib.title')} onClick={() => { S.rightPanel.value = 'lineage'; }}>
-        © OpenStreetMap contributors · USGS · NOAA · FEMA · HUD
+        © OpenStreetMap contributors · Overture Maps Foundation · Google · Microsoft · USGS · NOAA · NASA · FEMA · HUD
       </button>
     </footer>
   );
