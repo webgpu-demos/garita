@@ -1,61 +1,61 @@
-surge stage, 2026-10-11T02:39:18.242769Z, commit 0b7710c, run 38105835340
-[   1.0s] rasterio 1.5.2 gdal 3.12.2 numpy 2.5.4
-[   1.5s] downloaded https://www.nhc.noaa.gov/gis/hazardmaps/PR_SLOSH_MOM_Inundation.zip 7271715 bytes, sha256 6edd6660c211512b06c3e2d5846ea22937c5d056092aa14a654694433833dd74 last-modified Fri, 30 Nov 2018 14:35:39 GMT
-[   1.6s] zip members: 30
-[   1.6s] metadata use constraints: The data and maps in this tool illustrate the scale of potential flooding, not the exact location, and do not account for erosion, subsidence, or future constru ...
-[   1.8s] disclaimer vs https://www.nhc.noaa.gov/nationalsurge/ : identical to the page on this run
-[   2.0s] viewer legend now: [('Less than 3 feet above ground', '#005ce6'), ('Greater than 3 feet above ground', '#ffff00'), ('Greater than 6 feet above ground', '#ffaa00'), ('Greater than 9 feet above ground', '#ff0000'), ('Levee Areas - Consult Local Officials for flood risk', '#ffffff')]
-[   2.0s] legend: identical to the viewer legend on this run
-[   7.5s] 1500471 buildings ( 2026-10-10T05:07:03.000Z ) 3988 assets
-[   7.8s] raster: {"crs": "EPSG:4269", "width": 31329, "height": 10580, "cell_deg": [8.983152799999983e-05, 8.983152799999988e-05], "origin": [-67.32562373311394, 18.57019789422725], "bounds": [-67.32562373311394, 17.61978032798725, -64.51129179240195, 18.57019789422725], "dtype": "uint8", "nodata": 255.0, "compression": "lzw"}
-[  14.6s] c1 values present: {'1': 318573, '2': 353174, '3': 230156, '4': 102986, '5': 44484, '6': 534, '7': 2, '255': 330410911}
-[  15.6s] c1: zoom 13 grid 24576 x 16384, 362052 pixels with a class
-[  23.3s] c1: 353 tiles, 0.32 MB
-[  30.3s] c2 values present: {'1': 404989, '2': 407246, '3': 389435, '4': 234924, '5': 162849, '6': 73656, '7': 7203, '8': 69, '255': 329780449}
-[  31.4s] c2: zoom 13 grid 24576 x 16384, 556670 pixels with a class
-[  39.3s] c2: 356 tiles, 0.40 MB
-[  46.2s] c3 values present: {'1': 379750, '2': 434975, '3': 424296, '4': 419482, '5': 306041, '6': 221539, '7': 109948, '8': 57967, '9': 4530, '10': 245, '11': 5, '255': 329102042}
-[  47.3s] c3: zoom 13 grid 24576 x 16384, 756692 pixels with a class
-[  55.4s] c3: 363 tiles, 0.47 MB
-[  62.3s] c4 values present: {'1': 381322, '2': 430823, '3': 435089, '4': 426542, '5': 413078, '6': 366200, '7': 276139, '8': 183066, '9': 98429, '10': 33218, '11': 5595, '12': 1770, '13': 163, '14': 10, '255': 328409376}
-[  63.4s] c4: zoom 13 grid 24576 x 16384, 959321 pixels with a class
-[  71.6s] c4: 366 tiles, 0.53 MB
-[  78.7s] c5 values present: {'1': 427925, '2': 457503, '3': 430155, '4': 425077, '5': 431300, '6': 424259, '7': 396444, '8': 366038, '9': 262857, '10': 150371, '11': 78037, '12': 23426, '13': 7388, '14': 3312, '15': 539, '16': 21, '255': 327576168}
-[  79.7s] c5: zoom 13 grid 24576 x 16384, 1203876 pixels with a class
-[  88.2s] c5: 370 tiles, 0.60 MB
-[  88.2s] c1 buildings {'inundated': 7274, 'above_3ft': 185, 'above_6ft': 0, 'above_9ft': 0, 'leveed': 0, 'no_inundation_mapped': 1493170, 'outside_raster': 27}
-[  88.2s] c1 assets    {'inundated': 13, 'above_3ft': 1, 'above_6ft': 0, 'above_9ft': 0, 'leveed': 0, 'no_inundation_mapped': 3974, 'outside_raster': 1}
-[  88.2s] c2 buildings {'inundated': 14543, 'above_3ft': 1608, 'above_6ft': 7, 'above_9ft': 0, 'leveed': 0, 'no_inundation_mapped': 1485901, 'outside_raster': 27}
-[  88.2s] c2 assets    {'inundated': 31, 'above_3ft': 2, 'above_6ft': 0, 'above_9ft': 0, 'leveed': 0, 'no_inundation_mapped': 3956, 'outside_raster': 1}
-[  88.3s] c3 buildings {'inundated': 23237, 'above_3ft': 6005, 'above_6ft': 198, 'above_9ft': 0, 'leveed': 0, 'no_inundation_mapped': 1477207, 'outside_raster': 27}
-[  88.3s] c3 assets    {'inundated': 60, 'above_3ft': 9, 'above_6ft': 0, 'above_9ft': 0, 'leveed': 0, 'no_inundation_mapped': 3927, 'outside_raster': 1}
-[  88.3s] c4 buildings {'inundated': 35297, 'above_3ft': 13711, 'above_6ft': 1914, 'above_9ft': 3, 'leveed': 0, 'no_inundation_mapped': 1465147, 'outside_raster': 27}
-[  88.3s] c4 assets    {'inundated': 99, 'above_3ft': 29, 'above_6ft': 1, 'above_9ft': 0, 'leveed': 0, 'no_inundation_mapped': 3888, 'outside_raster': 1}
-[  88.3s] c5 buildings {'inundated': 55042, 'above_3ft': 26722, 'above_6ft': 7053, 'above_9ft': 373, 'leveed': 0, 'no_inundation_mapped': 1445402, 'outside_raster': 27}
-[  88.3s] c5 assets    {'inundated': 164, 'above_3ft': 64, 'above_6ft': 11, 'above_9ft': 0, 'leveed': 0, 'no_inundation_mapped': 3823, 'outside_raster': 1}
-[  88.4s] outside raster: {'buildings': 27, 'assets': 1, 'assets_ids': ['airport:way/798952677'], 'buildings_bbox': [-67.9416478760157, 18.06395096341782, -67.48691658477873, 18.383469656209897]}
-[  88.4s] buildings whose class goes DOWN with a higher category: 115
-[  88.4s] spot Cataño, ferry terminal waterfront at point [0, 0, 0, 0, 0] deepest within 100 m [4, 5, 7, 8, 9]
-[  88.4s] spot Cataño, Juana Matos at point [0, 0, 0, 0, 1] deepest within 100 m [2, 3, 4, 7, 10]
-[  88.4s] spot Loíza, Piñones at point [1, 2, 3, 5, 6] deepest within 100 m [3, 4, 5, 6, 8]
-[  88.4s] spot Toa Baja, Levittown at point [0, 0, 0, 0, 0] deepest within 100 m [0, 0, 0, 0, 0]
-[  88.4s] spot Carolina, Isla Verde at point [0, 0, 0, 0, 1] deepest within 100 m [0, 0, 0, 0, 3]
-[  88.4s] spot San Juan, Ocean Park at point [0, 0, 0, 0, 1] deepest within 100 m [0, 0, 4, 6, 7]
-[  88.4s] spot Old San Juan, Plaza de Armas (on its hill) at point [0, 0, 0, 0, 0] deepest within 100 m [0, 0, 0, 0, 0]
-[  88.4s] spot Lajas, La Parguera at point [0, 1, 1, 3, 5] deepest within 100 m [4, 6, 7, 9, 10]
-[  88.4s] spot Ponce, Playa at point [0, 2, 3, 5, 6] deepest within 100 m [1, 4, 5, 7, 8]
-[  88.4s] spot Salinas, Playa at point [1, 2, 4, 6, 7] deepest within 100 m [2, 3, 5, 7, 8]
-[  88.4s] spot Mayagüez, waterfront at point [0, 0, 0, 0, 2] deepest within 100 m [0, 0, 0, 0, 4]
-[  88.4s] spot Fajardo, Puerto Real at point [0, 0, 0, 0, 0] deepest within 100 m [4, 6, 7, 8, 9]
-[  88.4s] spot Vieques, Isabel Segunda at point [0, 0, 0, 0, 0] deepest within 100 m [0, 0, 1, 3, 4]
-[  88.4s] spot Vieques, Esperanza at point [0, 0, 0, 0, 1] deepest within 100 m [3, 4, 5, 6, 7]
-[  88.4s] spot Culebra, Dewey at point [0, 0, 0, 0, 0] deepest within 100 m [3, 4, 5, 6, 7]
-[  88.4s] spot Caguas, inland (expected: no inundation) at point [0, 0, 0, 0, 0] deepest within 100 m [0, 0, 0, 0, 0]
-[  88.4s] spot Isla de Mona (expected: outside the raster) at point [255, 255, 255, 255, 255] deepest within 100 m [255, 255, 255, 255, 255]
-[  88.4s] coverage Vieques {'wet_cells': [65436, 80519, 93582, 107493, 119712], 'buildings_inundated': [7, 13, 33, 64, 95], 'buildings': 6449}
-[  88.4s] coverage Culebra {'wet_cells': [2541, 3245, 3969, 4632, 5338], 'buildings_inundated': [18, 23, 26, 30, 39], 'buildings': 1836}
-[  88.4s] tiles total: 1808 2.32 MB
-[  88.7s] qa.jpg (3058, 1756) 1381487 bytes
-[  88.7s] written /home/runner/work/garita/garita/out/data/hazards/surge ['buildings.bin', 'assets.json', 'meta.json', 'qa.jpg', 'log.txt']
-[  88.7s] done
-build exit code 0 (run 38105835340, 0b7710c)
+surge stage, 2026-10-11T04:46:01.046913Z, commit 4267c9c, run 38112608653
+[   1.2s] rasterio 1.5.2 gdal 3.12.2 numpy 2.5.4
+[   2.3s] downloaded https://www.nhc.noaa.gov/gis/hazardmaps/PR_SLOSH_MOM_Inundation.zip 7271715 bytes, sha256 6edd6660c211512b06c3e2d5846ea22937c5d056092aa14a654694433833dd74 last-modified Fri, 30 Nov 2018 14:35:39 GMT
+[   2.4s] zip members: 30
+[   2.4s] metadata use constraints: The data and maps in this tool illustrate the scale of potential flooding, not the exact location, and do not account for erosion, subsidence, or future constru ...
+[   2.6s] disclaimer vs https://www.nhc.noaa.gov/nationalsurge/ : identical to the page on this run
+[   2.8s] viewer legend now: [('Less than 3 feet above ground', '#005ce6'), ('Greater than 3 feet above ground', '#ffff00'), ('Greater than 6 feet above ground', '#ffaa00'), ('Greater than 9 feet above ground', '#ff0000'), ('Levee Areas - Consult Local Officials for flood risk', '#ffffff')]
+[   2.8s] legend: identical to the viewer legend on this run
+[   8.8s] 1737084 buildings ( 2026-10-11T04:42:03.587Z ) 3988 assets
+[   9.1s] raster: {"crs": "EPSG:4269", "width": 31329, "height": 10580, "cell_deg": [8.983152799999983e-05, 8.983152799999988e-05], "origin": [-67.32562373311394, 18.57019789422725], "bounds": [-67.32562373311394, 17.61978032798725, -64.51129179240195, 18.57019789422725], "dtype": "uint8", "nodata": 255.0, "compression": "lzw"}
+[  15.9s] c1 values present: {'1': 318573, '2': 353174, '3': 230156, '4': 102986, '5': 44484, '6': 534, '7': 2, '255': 330410911}
+[  16.9s] c1: zoom 13 grid 24576 x 16384, 362052 pixels with a class
+[  24.7s] c1: 353 tiles, 0.32 MB
+[  31.7s] c2 values present: {'1': 404989, '2': 407246, '3': 389435, '4': 234924, '5': 162849, '6': 73656, '7': 7203, '8': 69, '255': 329780449}
+[  32.7s] c2: zoom 13 grid 24576 x 16384, 556670 pixels with a class
+[  40.6s] c2: 356 tiles, 0.40 MB
+[  47.6s] c3 values present: {'1': 379750, '2': 434975, '3': 424296, '4': 419482, '5': 306041, '6': 221539, '7': 109948, '8': 57967, '9': 4530, '10': 245, '11': 5, '255': 329102042}
+[  48.6s] c3: zoom 13 grid 24576 x 16384, 756692 pixels with a class
+[  56.7s] c3: 363 tiles, 0.47 MB
+[  63.6s] c4 values present: {'1': 381322, '2': 430823, '3': 435089, '4': 426542, '5': 413078, '6': 366200, '7': 276139, '8': 183066, '9': 98429, '10': 33218, '11': 5595, '12': 1770, '13': 163, '14': 10, '255': 328409376}
+[  64.7s] c4: zoom 13 grid 24576 x 16384, 959321 pixels with a class
+[  72.9s] c4: 366 tiles, 0.53 MB
+[  79.9s] c5 values present: {'1': 427925, '2': 457503, '3': 430155, '4': 425077, '5': 431300, '6': 424259, '7': 396444, '8': 366038, '9': 262857, '10': 150371, '11': 78037, '12': 23426, '13': 7388, '14': 3312, '15': 539, '16': 21, '255': 327576168}
+[  80.9s] c5: zoom 13 grid 24576 x 16384, 1203876 pixels with a class
+[  89.4s] c5: 370 tiles, 0.60 MB
+[  89.4s] c1 buildings {'inundated': 8227, 'above_3ft': 234, 'above_6ft': 0, 'above_9ft': 0, 'leveed': 0, 'no_inundation_mapped': 1728824, 'outside_raster': 33}
+[  89.4s] c1 assets    {'inundated': 13, 'above_3ft': 1, 'above_6ft': 0, 'above_9ft': 0, 'leveed': 0, 'no_inundation_mapped': 3974, 'outside_raster': 1}
+[  89.4s] c2 buildings {'inundated': 16421, 'above_3ft': 1904, 'above_6ft': 8, 'above_9ft': 0, 'leveed': 0, 'no_inundation_mapped': 1720630, 'outside_raster': 33}
+[  89.4s] c2 assets    {'inundated': 31, 'above_3ft': 2, 'above_6ft': 0, 'above_9ft': 0, 'leveed': 0, 'no_inundation_mapped': 3956, 'outside_raster': 1}
+[  89.5s] c3 buildings {'inundated': 26315, 'above_3ft': 6955, 'above_6ft': 245, 'above_9ft': 0, 'leveed': 0, 'no_inundation_mapped': 1710736, 'outside_raster': 33}
+[  89.5s] c3 assets    {'inundated': 60, 'above_3ft': 9, 'above_6ft': 0, 'above_9ft': 0, 'leveed': 0, 'no_inundation_mapped': 3927, 'outside_raster': 1}
+[  89.5s] c4 buildings {'inundated': 39854, 'above_3ft': 15750, 'above_6ft': 2246, 'above_9ft': 5, 'leveed': 0, 'no_inundation_mapped': 1697197, 'outside_raster': 33}
+[  89.5s] c4 assets    {'inundated': 99, 'above_3ft': 29, 'above_6ft': 1, 'above_9ft': 0, 'leveed': 0, 'no_inundation_mapped': 3888, 'outside_raster': 1}
+[  89.6s] c5 buildings {'inundated': 61593, 'above_3ft': 30084, 'above_6ft': 8132, 'above_9ft': 437, 'leveed': 0, 'no_inundation_mapped': 1675458, 'outside_raster': 33}
+[  89.6s] c5 assets    {'inundated': 164, 'above_3ft': 64, 'above_6ft': 11, 'above_9ft': 0, 'leveed': 0, 'no_inundation_mapped': 3823, 'outside_raster': 1}
+[  89.6s] outside raster: {'buildings': 33, 'assets': 1, 'assets_ids': ['airport:way/798952677'], 'buildings_bbox': [-67.9416478760157, 18.06036408816621, -67.48691658477873, 18.383469656209897]}
+[  89.6s] buildings whose class goes DOWN with a higher category: 129
+[  89.6s] spot Cataño, ferry terminal waterfront at point [0, 0, 0, 0, 0] deepest within 100 m [4, 5, 7, 8, 9]
+[  89.6s] spot Cataño, Juana Matos at point [0, 0, 0, 0, 1] deepest within 100 m [2, 3, 4, 7, 10]
+[  89.6s] spot Loíza, Piñones at point [1, 2, 3, 5, 6] deepest within 100 m [3, 4, 5, 6, 8]
+[  89.6s] spot Toa Baja, Levittown at point [0, 0, 0, 0, 0] deepest within 100 m [0, 0, 0, 0, 0]
+[  89.6s] spot Carolina, Isla Verde at point [0, 0, 0, 0, 1] deepest within 100 m [0, 0, 0, 0, 3]
+[  89.6s] spot San Juan, Ocean Park at point [0, 0, 0, 0, 1] deepest within 100 m [0, 0, 4, 6, 7]
+[  89.6s] spot Old San Juan, Plaza de Armas (on its hill) at point [0, 0, 0, 0, 0] deepest within 100 m [0, 0, 0, 0, 0]
+[  89.6s] spot Lajas, La Parguera at point [0, 1, 1, 3, 5] deepest within 100 m [4, 6, 7, 9, 10]
+[  89.6s] spot Ponce, Playa at point [0, 2, 3, 5, 6] deepest within 100 m [1, 4, 5, 7, 8]
+[  89.6s] spot Salinas, Playa at point [1, 2, 4, 6, 7] deepest within 100 m [2, 3, 5, 7, 8]
+[  89.6s] spot Mayagüez, waterfront at point [0, 0, 0, 0, 2] deepest within 100 m [0, 0, 0, 0, 4]
+[  89.6s] spot Fajardo, Puerto Real at point [0, 0, 0, 0, 0] deepest within 100 m [4, 6, 7, 8, 9]
+[  89.6s] spot Vieques, Isabel Segunda at point [0, 0, 0, 0, 0] deepest within 100 m [0, 0, 1, 3, 4]
+[  89.6s] spot Vieques, Esperanza at point [0, 0, 0, 0, 1] deepest within 100 m [3, 4, 5, 6, 7]
+[  89.6s] spot Culebra, Dewey at point [0, 0, 0, 0, 0] deepest within 100 m [3, 4, 5, 6, 7]
+[  89.6s] spot Caguas, inland (expected: no inundation) at point [0, 0, 0, 0, 0] deepest within 100 m [0, 0, 0, 0, 0]
+[  89.6s] spot Isla de Mona (expected: outside the raster) at point [255, 255, 255, 255, 255] deepest within 100 m [255, 255, 255, 255, 255]
+[  89.6s] coverage Vieques {'wet_cells': [65436, 80519, 93582, 107493, 119712], 'buildings_inundated': [9, 19, 50, 87, 127], 'buildings': 7704}
+[  89.6s] coverage Culebra {'wet_cells': [2541, 3245, 3969, 4632, 5338], 'buildings_inundated': [19, 25, 28, 34, 44], 'buildings': 2156}
+[  89.6s] tiles total: 1808 2.32 MB
+[  90.0s] qa.jpg (3058, 1756) 1425527 bytes
+[  90.0s] written /home/runner/work/garita/garita/out/data/hazards/surge ['buildings.bin', 'assets.json', 'meta.json', 'qa.jpg', 'log.txt']
+[  90.0s] done
+build exit code 0 (run 38112608653, 4267c9c)
