@@ -24,7 +24,7 @@ jobs:
           cd site
           git sparse-checkout set --no-cone '/tiles/bld/' '/data/seed/' '/data/osm/' '/data/hazards/slide/'
           git checkout --quiet gh-pages
-          du -sh tiles/bld data/seed data/osm
+          du -sh tiles/bld data/seed data/osm || true   # a missing path is reported by the script, in the published log
       - name: Install
         run: python3 -m pip install -q rasterio numpy pillow
       - name: Build
