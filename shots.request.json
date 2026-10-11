@@ -1,0 +1,4 @@
+{ "shots": [
+ { "id": "surge-c5-es", "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&nofeeds=1&overlay=surge&surge=5&lang=es&cam=-66.14,18.44,12000,180,60", "w": 1280, "h": 800, "wait": 4000 },
+ { "id": "surge-c1-rail", "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&nofeeds=1&overlay=surge&surge=1&cam=-66.14,18.44,12000,180,60", "w": 1280, "h": 800, "wait": 4000, "eval": "(()=>{const b=[...document.querySelectorAll('.rail-btn')].pop(); b&&b.click();})()" }
+] }
