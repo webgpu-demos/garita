@@ -1,5 +1,5 @@
 {
- "startedAt": "2026-10-11T04:18:58.976Z",
+ "startedAt": "2026-10-11T04:21:24.319Z",
  "ontologyVersion": "2026.10.1",
  "sources": {
   "nfip": {
@@ -29,7 +29,7 @@
      "validationErrors": 0,
      "validationWarnings": 0,
      "published": true,
-     "note": "OpenFEMA NfipPolicies v3. Pulled with propertyState eq 'PR' and policyTerminationDate gt '2026-09-08T00:00:00.000Z': 7042 policy terms of the 315431 Puerto Rico terms the dataset holds since 2009; the filter leaves out every term that ended on or before the snapshot date, so no history of past years is kept. In force on 2026-09-08 (the asOfDate FEMA stamps on the records, the latest date the data can speak for) = policyEffectiveDate on or before that date, policyTerminationDate after it, and no cancellationDateOfFloodPolicy on or before it. Pulled but not counted: 325 terms not yet effective on that date, 92 cancelled by it, 0 ended by it. Island total: 6625 policy contracts covering 10743 insured units (FEMA's policyCount: a condominium association contract insures many units), building coverage $1,886,036,000, contents coverage $162,531,000, premium $3,305,802 (totalInsurancePremiumOfThePolicy for the term; fees and surcharges not included). Municipio = first five digits of censusGeoid; this version has no county field. 7 contracts (7 units) have no usable code and are in no municipio, so municipio values are a floor. FEMA says the dataset lags the system of record, so terms that began shortly before the date may still be missing. Tracts: first eleven digits of censusGeoid, current TIGER tracts only (703 tracts; 0 contracts in tract codes that are not current). Derived from redacted records; not FEMA's official policies-in-force count, and private flood insurance is not included."
+     "note": "OpenFEMA NfipPolicies v3. Pulled with propertyState eq 'PR' and policyTerminationDate gt '2026-09-08T00:00:00.000Z': 7042 policy terms of the 315431 Puerto Rico terms the dataset holds since 2009; the filter leaves out every term that ended on or before the snapshot date, so no history of past years is kept. In force on 2026-09-08 (the asOfDate FEMA stamps on the records, the latest date the data can speak for) = policyEffectiveDate on or before that date, policyTerminationDate after it, and no cancellationDateOfFloodPolicy on or before it. Each row is one policy term and is counted once; rows are not merged or de-duplicated. Pulled but not counted: 325 terms not yet effective on that date, 92 cancelled by it, 0 ended by it. Island total: 6625 policy contracts covering 10743 insured units (FEMA's policyCount: a condominium association contract insures many units), building coverage $1,886,036,000, contents coverage $162,531,000, premium $3,305,802 (totalInsurancePremiumOfThePolicy for the term; fees and surcharges not included). Municipio = first five digits of censusGeoid; this version has no county field. 7 contracts (7 units) have no usable code and are in no municipio, so municipio values are a floor. FEMA says the dataset lags the system of record, so terms that began shortly before the date may still be missing. Tracts: first eleven digits of censusGeoid, current TIGER tracts only (703 tracts; 0 contracts in tract codes that are not current). Derived from redacted records; not FEMA's official policies-in-force count, and private flood insurance is not included."
     }
    ],
    "objects": {
@@ -38,7 +38,7 @@
    },
    "links": 0,
    "problems": [],
-   "ms": 11544
+   "ms": 8319
   },
   "fema_recovery": {
    "status": "ok",
@@ -80,11 +80,11 @@
     "benefitingCounties value \"aguadillas\" is not a municipio (1 subapplication(s) kept island-level)",
     "benefitingCounties value \"ponce pr\" is not a municipio (1 subapplication(s) kept island-level)"
    ],
-   "ms": 6886
+   "ms": 5325
   }
  },
  "replay": [],
- "finishedAt": "2026-10-11T04:19:17.406Z",
+ "finishedAt": "2026-10-11T04:21:37.963Z",
  "requests": 14,
  "bytes": 20182426
 }
