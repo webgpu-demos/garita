@@ -1,0 +1,319 @@
+ Attribution and Licensing | Overture Documentation 
+ 
+ 
+ !function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme-d03")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}() Skip to main content Overture Maps Docs Blog Community v2.0.0 v2.0.0 v1.18.0 Search Getting Started Schema Reference Examples Guides Global Entity Reference System Attribution and Licensing Releases Support On this page Attribution and Licensing If you are the author of a publication or research report that uses Overture data, you may choose to add the following citation, including the date the data were accessed: Overture Maps Foundation, overturemaps.org . 
+ Some of the data sources we use in Overture datasets require their own attribution, according to their licenses. For example, our Explore tool displays several datasets that are made wholly or in part from OpenStreetMap data, so we added the following line of attribution to adhere to the requirements of the Open Database License :
+ © OpenStreetMap contributors, Overture Maps Foundation . 
+ 
+ Addresses ​ License for theme: The addresses data comes from a variety of sources. All carry permissive open licenses. Some have special terms or require attribution. These terms are outlined below. Australia ​ 
+ G-NAF © Geoscape Australia licensed by the Commonwealth of Australia. Available under the Open Geo-coded National Address File End User Licence Agreement . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Austria ​ 
+ © Austrian Address Register . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Belgium ​ 
+ Wallonia data from ICAR . Available under CC BY 4.0 . Accessed: 2026-09-20. 
+ Flanders data from AR (Adressenregister) . Available under CC BY 4.0 . Accessed: 2026-09-20. 
+ Brussels data from UrbiS . Available under CC BY 4.0 . Accessed: 2026-09-20. 
+ Brazil ​ 
+ IBGE (Instituto Brasileiro de Geografia e Estatística) . Available under CC0 . Distributed by AddressForAll. Accessed: 2024-10-13 
+ Canada ​ 
+ Statistics Canada, National Address Register , 2024. Reproduced and distributed on an "as is" basis with the permission of Statistics Canada. Available under OGL - Statistics Canada Open Licence . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Yukon data from Government of Yukon . Available under Open Government Licence - Yukon . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Quebec data from Government of Le ministère des Ressources naturelles et des Forêts . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Chile ​ 
+ © Instituto Nacional de Estadísticas . Available under CC BY 4.0. Distributed by AddressForAll. Accessed: 2026-09-20. 
+ Colombia ​ 
+ Departamento Administrativo Nacional de Estadística (DANE) . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Croatia ​ 
+ Državna geodetska uprava . Available under an Open License . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Czechia ​ 
+ Contains data from Český úřad zeměměřický a katastrální (ČÚZK) . Available under CC BY 4.0 . Accessed: 2026-09-20. 
+ Denmark ​ 
+ Contains data from the Danish Agency for Data Supply and Infrastructure . Terms of use for free geographic data . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Estonia ​ 
+ Data courtesy of Estonian Land Board (MAA-AMET) . Available under CC0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Faroe Islands ​ 
+ The Faroese Environment Agency, Umhvørvisstovan . Available under Terms and conditions . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Finland ​ 
+ Syke . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ France ​ 
+ Data from The national address site of the French Republic . Available under LICENCE OUVERTE / OPEN LICENCE V2 - Etalab 2.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ French Polynesia ​ 
+ Gouvernement de la Polynésie Française . Available under Licence Ouverte / Open Licence Etalab 2.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Germany ​ 
+ Baden-Württemberg data from LGL . Available under DL-DE->BY-2.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Berlin data from Geoportal Berlin . DL-DE->Zero-2.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Brandenburg data from GeoBasis-DE/LGB . Available under DL-DE->BY-2.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Bremen data from Landesamt GeoInformation Bremen . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Hamburg data from Freie und Hansestadt Hamburg, Landesbetrieb Geoinformation und Vermessung . Available under DL-DE->BY-2.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Hesse data from Hessischen Verwaltung für Bodenmanagement und Geoinformation . Available under DL-DE->Zero-2.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Mecklenburg data from Landesamt für innere Verwaltung Mecklenburg-Vorpommern . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Niedersachsen data from Landesamt für Geoinformation und Landesvermessung Niedersachsen . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ North Rhine-Westphalia data from Geobasis NRW . Available under DL-DE->Zero-2.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Rhineland-Palatinate data from GeoBasis-DE/LVermGeo RP . Available under DL-DE->BY-2.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Saarland data from GeoBasis-DE/LVermGeo SL . Available under DL-DE->BY-2.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Saxony data from Staatsbetrieb Geobasisinformation und Vermessung Sachsen . Available under DL-DE->BY-2.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Saxony-Anhalt data from GeoBasis-DE/LVermGeo ST . Available under DL-DE->BY-2.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Schleswig-Holstein data from ©GeoBasis-DE/LVermGeo SH . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Thuringia data from Freistaat Thüringen . Available under DL-DE->BY-2.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Greenland ​ 
+ Contains data from Asiaq, Greenland Survey . Available under TERMS OF USE FOR ASIAQ GEODATA . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Hong Kong ​ 
+ Hong Kong Digital Policy Office . Available under Terms and Conditions of Use . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Iceland ​ 
+ Stadfangaskra/Byggðastofnun . Available under Guidelines regarding the reuse of public information . Accessed: 2026-09-20. 
+ Italy ​ 
+ Archivio Nazionale dei Numeri Civici delle Strade Urbane (ANNCSU) . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Japan ​ 
+ Japanese Ministry of Land, Infrastructure and Transport . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Latvia ​ 
+ Valsts digitālās attīstības aģentūra . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Liechtenstein ​ 
+ Contains data from Liechtensteinische Landesverwaltung . Available under OGD v2 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Lithuania ​ 
+ State Enterprise Centre of Registers . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Luxembourg ​ 
+ The Luxembourg open data platform . Available under CC0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Mexico ​ 
+ INEGI, Censos Económicos . TÉRMINOS DE LIBRE USO DE LA INFORMACIÓN DEL INEGI . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Netherlands ​ 
+ BAG (Basisregistratie Adressen en Gebouwen) from PDOK (Publieke Dienstverlening Op de Kaart) , sourced from Kadaster. Available under CC0 1.0 . Accessed: 2026-09-20. 
+ New Caledonia ​ 
+ Gouvernement de la Nouvelle-Calédonie . Available under Licence Ouverte / Open Licence Etalab 2.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ New Zealand ​ 
+ Land Information New Zealand (LINZ) . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Norway ​ 
+ Kartverket . Available under CC BY 4.0 . Accessed: 2026-09-20. 
+ Poland ​ 
+ Poland data from Polish Law on Geodesy and Cartography . Available under No conditions to access and use . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Portugal ​ 
+ Instituto Nacional de Estatística . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Serbia ​ 
+ Republički geodetski zavod . Available under Terms of use . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Singapore ​ 
+ Singapore data from Singapore Land Authority . Available under Singapore Open Data Licence . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Slovenia ​ 
+ GURS . Available under CC BY 4.0 . Accessed: 2026-09-20. 
+ Slovakia ​ 
+ Ministerstvo vnútra Slovenskej republiky / Ministry of Interior of the Slovak Republic . Available under CC0 1.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Spain ​ 
+ scne.es . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Switzerland ​ 
+ SwissTopo . Terms of use for free geodata . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Taiwan ​ 
+ Changhua County Government Civil Affairs Office . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Chiayi County Government . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-23. 
+ Hsinchu City Civil Affairs Office . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Hsinchu County Civil Affairs Office . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Hualien County Government . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-23. 
+ Kaohsiung City Government Civil Affairs Bureau . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-23. 
+ Keelung City Government Civil Affairs Bureau . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Kinmen County Civil Affairs Office . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Miaoli Civil Affairs Office . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-23. 
+ New Taipei City Government Civil Affairs Bureau . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Penghu County Government . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Pingtung County Government . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Taichung City Government Civil Affairs Bureau . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-23. 
+ Tainan City Government Civil Affairs Bureau . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Taipei City Government Civil Affairs Bureau . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Taitung County Government . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-23. 
+ Taoyuan City Government Civil Affairs Bureau . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Yunlin County Government . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ United States ​ 
+ National Address Database (NAD) from the U.S. Department of Transportation and the individual states that contribute to the database. National Address Database (NAD) Disclaimer . The National Address Database is licensed under the National Address Database Access and Usage License. Accessed: 2026-09-20. 
+ California ​ 
+ Alameda County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Amador County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Butte County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Calaveras County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ City and County of San Francisco . Available under Public Domain Dedication and License (PDDL) v1.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Colusa County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Contra Costa County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Del Norte County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ El Dorado County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Fresno County . Available under CC0 1.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Glenn County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Humboldt County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Imperial County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Inyo County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Kern County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Kings County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Lake County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Lassen County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Los Angeles County . Available under CC0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Madera County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Marin County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Mariposa County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Mendocino County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Merced County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Modoc County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Mono County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Monterey County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OikpenAddresses. Accessed: 2026-09-20. 
+ Napa County . Available under Public Domain Dedication and License (PDDL) v1.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Nevada County . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Orange County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Placer County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Plumas County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Riverside County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Sacramento County . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ San Benito County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ San Bernardino County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ San Diego County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ San Joaquin County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ San Luis Obispo County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ San Mateo County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Santa Barbara County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Santa Clara County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Santa Cruz County . Available under CC0 (assumed) . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Shasta County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Sierra County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Siskiyou County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Solano County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Sonoma County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Stanislaus County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Sutter County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Tehama County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Trinity County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Tulare County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Tuolumne County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Ventura County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Yolo County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Yuba County . Available under Public domain by judicial interpretation of the Public Records Act . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Colorado ​ 
+ Governor's Office of Information Technology . Available under public data. Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Florida ​ 
+ Alachua County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Baker County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Bay County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Bradford County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Brevard County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Broward County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Calhoun County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Charlotte County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Citrus County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Clay County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Collier County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Columbia County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Desoto County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Dixie County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Duval County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Escambia County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Flagler County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Franklin County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Gadsden County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Gilchrist County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Glades County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Gulf County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Hamilton County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Hardee County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Hendry County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Hernando County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Highlands County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Hillsborough County . Available under CC-BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Holmes County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Indian River County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Jackson County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Jefferson County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Lafayette County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Lake County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Lee County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Leon County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Levy County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Liberty County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Madison County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Manatee County . Available under CC-BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Marion County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Martin County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Miami-Dade County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Monroe County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Nassau County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Okaloosa County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Okeechobee County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Orange County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Osceola County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Palm Beach County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Pasco County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Pinellas County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Polk County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Putnam County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Santa Rosa County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Sarasota County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Seminole County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ St. Johns County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ St. Lucie County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Sumter County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Suwannee County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Taylor County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Union County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Volusia County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Wakulla County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Walton County . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Washington County data from Florida Department of Revenue . Available under Public domain by judicial decision . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Georgia ​ 
+ Clarke County data from Athens-Clarke County GIS . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ DeKalb County . Available under CC-BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Idaho ​ 
+ City of Boise . Available under CC BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Louisiana ​ 
+ City of New Orleans . Available under CC0 1.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Massachusetts ​ 
+ MassGIS . Available under Public Domain . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Michigan ​ 
+ Reproduced with permission granted by the County of Allegan, Michigan. Some information has been provided subject to a non-exclusive, limited, and revocable license granted by the County of Allegan, Michigan . Available under ALLEGAN COUNTY GEOSPATIAL DATA LICENSE AGREEMENT . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Reproduced with permission granted by the County of Kent, Michigan. Some information has been provided subject to a non-exclusive, limited, and revocable license granted by the County of Kent, Michigan. . Available under KENT COUNTY GEOSPATIAL DATA LICENSE AGREEMENT . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Reproduced with permission granted Muskegon County, Michigan. Some information has been provided subject to a non-exclusive, limited, and revocable license granted by Muskegon County, Michigan. . Available under DATA DOWNLOAD / USE AGREEMENT . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Oakland County . Available under Open Data . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Minnesota ​ 
+ Department of Public Safety . Available under public data. Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Mississippi ​ 
+ MARIS . Available under Open Data . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Desoto County . Available with no commercial usage restrictions or attribution requirements. Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Nevada ​ 
+ Carson City, NV . Available under License . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ New York ​ 
+ Open Data Terms of Use for NYC Open Data. Address data from the NYC Department of City Planning. Accessed: 2026-09-20. 
+ Oregon ​ 
+ Statewide data from Oregon GeoHub . No usage restrictions; credits and caveats are included in the metadata. Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Pennsylvania ​ 
+ Lackawanna County data from City of Scranton GIS . Available under PDDL 1.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Wisconsin ​ 
+ Waupaca County . Available under CC-BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ Uruguay ​ 
+ Contains data from Infraestructura de Datos Espaciales . Available under CC-BY 4.0 . Distributed by OpenAddresses. Accessed: 2026-09-20. 
+ 
+ Base ​ License for theme: ODbL 
+ © OpenStreetMap contributors. Available under the Open Database License . 
+ Data from the Daylight Map Distribution 
+ ESA WorldCover . © ESA WorldCover project 2020 / Contains modified Copernicus Sentinel data (2020) processed by ESA WorldCover consortium. Available under CC BY 4.0 DEED . 
+ Data products from ETOPO1 . Available under Open Data Commons Public Domain Dedication and License . 
+ Data from GLOBathy . Available under CC0 1.0 (assumed) . 
+ 
+ Buildings ​ License for theme: ODbL 
+ © OpenStreetMap contributors. Available under the Open Database License . 
+ Esri Community Maps contributors . Available under CC BY 4.0 . 
+ Global ML Building Footprints . Licensed by Microsoft under the Open Database License . 
+ Google Open Buildings . Available under CC BY 4.0 . 
+ USGS 3D Elevation Program Digital Elevation Program . 
+ Qian Shi, et al. A First High-quality Vector Data of Buildings in East Asian Countries Based on a Comprehensive Large-scale Mapping Framework. Zenodo, 22 July 2023, doi:10.5281/zenodo.8174931 . Available under CC BY 4.0 . 
+ Work derived from BTN 2024 ign.es . Available under CC BY 4.0 
+ 
+ Divisions ​ License for theme: ODbL 
+ © OpenStreetMap contributors. Available under the Open Database License . 
+ geoBoundaries . Available under CC BY 4.0 . 
+ Esri Community Maps contributors . Available under CC BY 4.0 . 
+ Land Information New Zealand (LINZ) . Available under CC BY 4.0 . 
+ 
+ Places ​ 
+ Data from Meta . Available under CDLA Permissive 2.0 . 
+ Data from Microsoft . Available under CDLA Permissive 2.0 . 
+ Data from PinMeTo . Available under CDLA Permissive 2.0 . 
+ Data from Krick . Available under CDLA Permissive 2.0 . 
+ Data from RenderSEO . Available under CDLA Permissive 2.0 . 
+ Data from DAC . Available under CDLA Permissive 2.0 . 
+ Data from BrightQuery . Available under CDLA Permissive 2.0 . 
+ Data from Foursquare . Copyright 2024 Foursquare Labs, Inc. All rights reserved. Available under Apache 2.0 . Foursquare data was transformed to the Overture schema. Changed: 2026-03-18. NOTICE.txt . 
+ Data from AllThePlaces . Available under CC0 1.0 . 
+ 
+ Transportation ​ License for theme: ODbL 
+ © OpenStreetMap contributors. Available under the Open Database License . 
+ Data from TomTom . 
+ Last updated on May 15, 2026 Previous GERS Tutorial Next Releases Addresses Base Buildings Divisions Places Transportation Copyright © 2026 Overture Maps Foundation. 
