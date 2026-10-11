@@ -1,11 +1,23 @@
 name: vector
 # Boundaries (Census TIGERweb), OpenStreetMap buildings and facilities, FEMA flood zones, exposure numbers.
-# Runs on the Actions runner (the dev sandbox has no network) and commits into gh-pages:
+# Buildings are OpenStreetMap plus the machine-detected footprints Overture Maps carries where OSM has none.
+# Runs on the Actions runner (the dev sandbox has no network) and commits into gh-pages, under PUBLISH_PREFIX:
 #   data/geo/**, data/osm/**, data/derived/**, tiles/bld/**
+# PUBLISH_PREFIX is "staging/" here: the hazard stages sample rasters at every building in tile order, so new
+# tiles must not replace the live ones until those stages have been rerun against them. Empty = live paths.
+# Tiles are published once per run, complete (flood zones attached), and only when asked for, because every tile
+# publication adds about 50 MB to the history of gh-pages: put [publish-tiles] in the commit message, or start
+# the workflow by hand with tiles = true. Any other run publishes the log, qa.json, exposure.json, the tile
+# index (as data/derived/bld_index.json) and the QA picture.
 on:
   push:
     branches: [pipe-vector]
   workflow_dispatch:
+    inputs:
+      tiles:
+        description: Publish the building tiles (about 50 MB of gh-pages history each time)
+        type: boolean
+        default: false
 permissions:
   contents: write
 concurrency:
@@ -24,6 +36,9 @@ jobs:
       OUT_DIR: ${{ github.workspace }}/out
       WORK_DIR: ${{ github.workspace }}/work
       SITE_DIR: ${{ github.workspace }}/site
+      PUBLISH_PREFIX: staging/
+      PUBLISH_TILES: ${{ ((github.event_name == 'workflow_dispatch' && inputs.tiles) || contains(github.event.head_commit.message, '[publish-tiles]')) && '1' || '0' }}
+      NFHL_BUDGET_MIN: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -35,7 +50,8 @@ jobs:
         run: |
           git clone -q --filter=blob:none --sparse --single-branch --branch gh-pages \
             "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" "$SITE_DIR"
-          git -C "$SITE_DIR" sparse-checkout set data/geo data/osm data/derived tiles/bld
+          P="$PUBLISH_PREFIX"
+          git -C "$SITE_DIR" sparse-checkout set "${P}data/geo" "${P}data/osm" "${P}data/derived" "${P}tiles/bld"
       - name: Restore download cache
         uses: actions/cache/restore@v4
         with:
@@ -44,38 +60,36 @@ jobs:
           restore-keys: vector-cache-v1-
       - name: Stage 1 - boundaries
         run: mkdir -p "$WORK_DIR/cache" "$OUT_DIR" && node pipeline/vector/stage1_boundaries.mjs 2>&1 | tee -a "$OUT_DIR/vector_log.txt"
-      - name: Publish stage 1
-        if: ${{ !cancelled() }}
-        run: bash pipeline/vector/publish.sh "vector - boundaries (TIGERweb) $(date -u +%FT%TZ)"
       - name: Stage 2 - OSM extract
-        if: ${{ !cancelled() && hashFiles('pipeline/vector/stage2_osm.sh') != '' }}
         run: bash pipeline/vector/stage2_osm.sh 2>&1 | tee -a "$OUT_DIR/vector_log.txt"
-      - name: Stage 2-3 - buildings, facilities, elevation
-        if: ${{ !cancelled() && hashFiles('pipeline/vector/build.mjs') != '' }}
-        run: |
-          # First publication without flood zones only when the FEMA download is not cached yet; otherwise the
-          # single full build below is published (so live tiles never lose their flood classes during a re-run).
-          if [ -f "$WORK_DIR/cache/nfhl/complete.json" ]; then echo "NFHL cached - skipping the interim build" | tee -a "$OUT_DIR/vector_log.txt"
-          else NO_FLOOD=1 node --max-old-space-size=10000 pipeline/vector/build.mjs 2>&1 | tee -a "$OUT_DIR/vector_log.txt"; fi
-      - name: Publish stage 2-3
-        if: ${{ !cancelled() && hashFiles('pipeline/vector/build.mjs') != '' }}
-        run: |
-          if [ -d "$OUT_DIR/tiles/bld" ]; then bash pipeline/vector/publish.sh "vector - OSM buildings + facilities with elevation $(date -u +%FT%TZ)" --replace-tiles; fi
+      - name: Stage 2b - Overture Maps buildings (machine-detected footprints)
+        if: ${{ hashFiles('pipeline/vector/stage2b_overture.sh') != '' }}
+        run: bash pipeline/vector/stage2b_overture.sh 2>&1 | tee -a "$OUT_DIR/vector_log.txt"
       - name: Land-clipped municipios
-        if: ${{ !cancelled() && hashFiles('pipeline/vector/land.mjs') != '' }}
         run: node --max-old-space-size=8000 pipeline/vector/land.mjs 2>&1 | tee -a "$OUT_DIR/vector_log.txt"
       - name: Stage 4 - FEMA NFHL download
-        if: ${{ !cancelled() && hashFiles('pipeline/vector/nfhl.mjs') != '' }}
+        if: ${{ !cancelled() }}
         run: node --max-old-space-size=10000 pipeline/vector/nfhl.mjs 2>&1 | tee -a "$OUT_DIR/vector_log.txt"
+      - name: Buildings, facilities, elevation, flood zones, exposure
+        if: ${{ !cancelled() }}
+        run: node --max-old-space-size=12000 pipeline/vector/build.mjs 2>&1 | tee -a "$OUT_DIR/vector_log.txt"
       - name: Save download cache
         if: always()
         uses: actions/cache/save@v4
         with:
           path: work/cache
           key: vector-cache-v1-${{ github.run_id }}
-      - name: Stage 4 - flood zones attached, exposure
-        if: ${{ !cancelled() && hashFiles('pipeline/vector/build.mjs') != '' }}
-        run: node --max-old-space-size=10000 pipeline/vector/build.mjs 2>&1 | tee -a "$OUT_DIR/vector_log.txt"
-      - name: Publish stage 4
+      - name: QA of the added footprints (picture, sample check)
+        if: ${{ !cancelled() && hashFiles('pipeline/vector/qa_added.py') != '' }}
+        run: |
+          pip install -q numpy matplotlib shapely 2>&1 | tail -1
+          python3 pipeline/vector/qa_added.py 2>&1 | tee -a "$OUT_DIR/vector_log.txt"
+      - name: Publish
         if: ${{ !cancelled() }}
-        run: bash pipeline/vector/publish.sh "vector - flood zones, exposure, land-clipped municipios $(date -u +%FT%TZ)" --replace-tiles
+        run: |
+          # Tiles go out once, complete: never without their flood classes.
+          if [ "$PUBLISH_TILES" = "1" ] && ! grep -q '"flood_attached":true' "$OUT_DIR/tiles/bld/index.json" 2>/dev/null; then
+            echo "flood zones not attached (FEMA download incomplete): tiles NOT published this run" | tee -a "$OUT_DIR/vector_log.txt"
+            export PUBLISH_TILES=0
+          fi
+          bash pipeline/vector/publish.sh "vector - buildings (OSM + Overture additions), flood zones, exposure -> ${PUBLISH_PREFIX:-live} $(date -u +%FT%TZ)" --replace-tiles

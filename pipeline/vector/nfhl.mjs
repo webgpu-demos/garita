@@ -9,7 +9,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import readline from 'node:readline';
-import { CACHE, log, writeOut, fetchRetry, pool, simplifyGeom, sleep } from './lib.mjs';
+import { execFile } from 'node:child_process';
+import { CACHE, UA, log, writeOut, fetchRetry, pool, simplifyGeom, sleep } from './lib.mjs';
 
 const LAYER = 'https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/28';
 const WHERE = "DFIRM_ID LIKE '72%'";
@@ -27,9 +28,23 @@ function floodClass(zone, sub) {
   if (z === 'X' && /0\.2 ?PCT/i.test(String(sub || ''))) return 1;
   return 0;
 }
+// Queries go out as GET through curl. Since October 2026 the FEMA front end resets every connection from Node's
+// own fetch on the runner (ECONNRESET, POST and GET alike) while curl gets its answer; pages of ids keep the URL
+// short. Network failures and non-JSON answers are retried; an ArcGIS error is thrown at once (the caller splits).
+function curlGet(params, timeout) {
+  const args = ['-sS', '--compressed', '-m', String(Math.ceil(timeout / 1000)), '-A', UA, '--get'];
+  for (const [k, v] of Object.entries(params)) args.push('--data-urlencode', `${k}=${v}`);
+  args.push(`${LAYER}/query`);
+  return new Promise((res, rej) => execFile('curl', args, { maxBuffer: 2 ** 30, encoding: 'utf8' }, (err, stdout, stderr) => (err ? rej(new Error('curl: ' + String(stderr || err.message).trim().slice(0, 160))) : res(stdout))));
+}
 async function post(params, timeout = 240000, tries = 3) {
-  const res = await fetchRetry(`${LAYER}/query`, { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(params).toString() }, { timeout, tries });
-  const text = await res.text();
+  let text, last;
+  for (let i = 0; i < tries; i++) {
+    try { text = await curlGet(params, timeout); if (text && text.trimStart()[0] === '{') break; last = new Error('not JSON: ' + String(text).slice(0, 120)); text = undefined; }
+    catch (e) { last = e; }
+    await sleep(1000 * 2 ** i + Math.random() * 500);
+  }
+  if (text === undefined) throw last;
   let j; try { j = JSON.parse(text); } catch { throw new Error('not JSON: ' + text.slice(0, 120)); }
   if (j.error) throw new Error('ArcGIS error ' + JSON.stringify(j.error).slice(0, 200));
   return j;

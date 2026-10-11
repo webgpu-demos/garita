@@ -2,6 +2,9 @@
 // footprint into walls and a flat roof (its parapet rim is drawn by the shader), and returns typed arrays (transferred).
 //
 // REAL: footprints, the 13.8 % of heights that OpenStreetMap carries, ground elevation, FEMA flood class.
+// DETECTED, NOT SURVEYED: footprints with bit 7 of `kind` set come from machine detection on imagery (Overture
+// Maps: Google Open Buildings, Microsoft ML Buildings) where OpenStreetMap has no building. They are drawn like
+// any other footprint; the flag travels in `meta` so the tooltip can say so.
 // PROCEDURAL: every other height (estHeight below, flagged per building), and everything the shader paints.
 import earcut from 'earcut';
 import { tileLon, tileLat, lonLatToXZ, curveDrop } from '../../core/geo.ts';
@@ -19,7 +22,7 @@ export interface MeshResult {
   base: Float32Array;        // metres above MSL the walls stand on
   height: Float32Array;      // metres
   ground: Int16Array;        // stored ground elevation, decimetres (-32768 unknown)
-  meta: Uint8Array;          // kind | flood << 3 | estimated << 5
+  meta: Uint8Array;          // kind | flood << 3 | estimated << 5 | added << 6 (added = machine-detected, not in OpenStreetMap)
 }
 
 const SINK = 3, PAD = 0.25, Z = 14;
@@ -93,7 +96,8 @@ function build(job: MeshJob): MeshResult {
     o = off[i];
     const nv = dv.getUint16(o, true);
     if (nv < 3) continue;
-    const hh = dv.getUint8(o + 2), kind = Math.min(6, dv.getUint8(o + 3)), gd = dv.getInt16(o + 4, true), flood = Math.min(3, dv.getUint8(o + 6));
+    const kb = dv.getUint8(o + 3), added = (kb & 0x80) !== 0;   // bit 7: footprint detected from imagery, not in OpenStreetMap
+    const hh = dv.getUint8(o + 2), kind = Math.min(6, kb & 0x7f), gd = dv.getInt16(o + 4, true), flood = Math.min(3, dv.getUint8(o + 6));
     rx.length = rz.length = nv;
     let mx = 0, mz = 0, bx0 = Infinity, bz0 = Infinity, bx1 = -Infinity, bz1 = -Infinity, su = 0, sv = 0;
     for (let k = 0; k < nv; k++) {
@@ -169,7 +173,7 @@ function build(job: MeshJob): MeshResult {
     bbox[bi * 4] = bx0; bbox[bi * 4 + 1] = bz0; bbox[bi * 4 + 2] = bx1; bbox[bi * 4 + 3] = bz1;
     ringStart[bi] = ri;
     for (let k = 0; k < nv; k++) { ring[ri * 2] = rx[k]; ring[ri * 2 + 1] = rz[k]; ri++; }
-    base[bi] = b; height[bi] = H; ground[bi] = gd; meta[bi] = kind | (flood << 3) | (estimated ? 32 : 0);
+    base[bi] = b; height[bi] = H; ground[bi] = gd; meta[bi] = kind | (flood << 3) | (estimated ? 32 : 0) | (added ? 64 : 0);
     if ((bi & 7) === 0) refs.push(yb);
     bi++;
   }

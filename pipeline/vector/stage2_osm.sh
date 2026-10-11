@@ -9,12 +9,14 @@ mkdir -p "$CACHE" "$OSM"
 PBF="$CACHE/puerto-rico-latest.osm.pbf"
 if [ ! -s "$PBF" ]; then
   curl -fL --retry 5 --retry-delay 5 -A "$UA" -o "$PBF.tmp" "$URL" && mv "$PBF.tmp" "$PBF"
-  curl -fsI -A "$UA" "$URL" | tr -d '\r' | grep -i -E '^(last-modified|content-length|etag)' > "$CACHE/pbf_head.txt" || true
+  curl -fsIL -A "$UA" "$URL" | tr -d '\r' | grep -i -E '^(last-modified|content-length|etag)' > "$CACHE/pbf_head.txt" || true
 fi
 ls -l "$PBF"; cat "$CACHE/pbf_head.txt" 2>/dev/null || true
 command -v osmium >/dev/null || { sudo apt-get update -qq && sudo apt-get install -y -qq osmium-tool >/dev/null; }
 osmium --version | head -1
 osmium fileinfo "$PBF" | tee "$OSM/fileinfo.txt" | head -30
+# the date of the data itself (the extract's replication timestamp), for index.json
+grep -m1 -o 'osmosis_replication_timestamp=.*' "$OSM/fileinfo.txt" | cut -d= -f2 > "$OSM/pbf_timestamp.txt" || true
 
 cat > "$OSM/areas.json" <<'JSON'
 { "attributes": { "type": "@type", "id": "@id" }, "linear_tags": false, "area_tags": true }
