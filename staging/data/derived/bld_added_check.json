@@ -5,27 +5,68 @@
  "sample_2000": {
   "checked": 2000,
   "intersects_osm_over_0p5_m2": 0,
-  "touches_osm_at_all": 4,
+  "touches_osm_at_all": 5,
   "largest_shared_area_m2": 0.02,
   "centroid_inside_osm": 0,
   "contains_osm_centroid": 0,
   "centroid_not_on_land": 0,
-  "intersects_other_added_over_0p5_m2": 0,
-  "failures_any": 0,
-  "hint_ground_at_or_below_0m": 6,
+  "intersects_other_added_over_0p5_m2": 1,
+  "largest_area_shared_with_other_added_m2": 1.47,
+  "worst_added_pairs": [
+   {
+    "lon": -65.907856,
+    "lat": 18.408066,
+    "shared_m2": 1.47
+   }
+  ],
+  "failures_any": 1,
+  "hint_ground_at_or_below_0m": 4,
   "hint_ground_unknown": 0
  },
  "all_added": {
-  "checked": 439076,
+  "checked": 314919,
   "intersects_osm_over_0p5_m2": 0,
-  "touches_osm_at_all": 685,
+  "touches_osm_at_all": 478,
   "largest_shared_area_m2": 0.19,
   "centroid_inside_osm": 0,
   "contains_osm_centroid": 0,
   "centroid_not_on_land": 0,
-  "intersects_other_added_over_0p5_m2": 11,
-  "failures_any": 11,
-  "hint_ground_at_or_below_0m": 643,
+  "intersects_other_added_over_0p5_m2": 10,
+  "largest_area_shared_with_other_added_m2": 1.48,
+  "worst_added_pairs": [
+   {
+    "lon": -65.907347,
+    "lat": 18.406907,
+    "shared_m2": 1.48
+   },
+   {
+    "lon": -65.907395,
+    "lat": 18.406843,
+    "shared_m2": 1.48
+   },
+   {
+    "lon": -65.9078,
+    "lat": 18.408121,
+    "shared_m2": 1.47
+   },
+   {
+    "lon": -65.907856,
+    "lat": 18.408066,
+    "shared_m2": 1.47
+   },
+   {
+    "lon": -65.907953,
+    "lat": 18.407938,
+    "shared_m2": 1.3
+   },
+   {
+    "lon": -65.907904,
+    "lat": 18.407995,
+    "shared_m2": 1.3
+   }
+  ],
+  "failures_any": 10,
+  "hint_ground_at_or_below_0m": 441,
   "hint_ground_unknown": 0
  },
  "picture": {
@@ -35,8 +76,8 @@
     "geoid": "72131",
     "name": "San Sebasti\u00e1n",
     "buildings_osm": 21148,
-    "buildings_added": 11088,
-    "added_share": 0.344,
+    "buildings_added": 8382,
+    "added_share": 0.2838,
     "closeup_centre": [
      -66.99514,
      18.33115
@@ -46,11 +87,11 @@
     "geoid": "72127",
     "name": "San Juan",
     "buildings_osm": 103767,
-    "buildings_added": 14510,
-    "added_share": 0.1227,
+    "buildings_added": 10570,
+    "added_share": 0.0924,
     "closeup_centre": [
-     -66.01826,
-     18.40666
+     -66.05658,
+     18.35349
     ]
    }
   ]

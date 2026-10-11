@@ -1,31 +1,31 @@
-04:17:30 municipios offset 0 got 78 total 78
-04:17:30 municipios Census 2020 POP100/HU100 rows 78 layer 82
-04:17:30 municipios {"with_pop100":78,"pop100_total":3285874,"hu100_total":1598159,"count":78,"server_count":78,"bytes":621414,"extra_simplify_deg":0}
-04:17:31 barrios offset 0 got 100 total 100
-04:17:31 barrios offset 100 got 100 total 200
-04:17:31 barrios offset 200 got 100 total 300
-04:17:31 barrios offset 300 got 100 total 400
-04:17:31 barrios offset 400 got 100 total 500
-04:17:31 barrios offset 500 got 100 total 600
-04:17:32 barrios offset 600 got 100 total 700
-04:17:32 barrios offset 700 got 100 total 800
-04:17:32 barrios offset 800 got 100 total 900
-04:17:32 barrios offset 900 got 39 total 939
-04:17:32 barrios Census 2020 POP100/HU100 rows 939 layer 20
-04:17:32 barrios {"with_pop100":936,"pop100_total":3279731,"hu100_total":1595039,"count":939,"server_count":939,"bytes":2331493,"extra_simplify_deg":0}
-04:17:32 tracts offset 0 got 100 total 100
-04:17:33 tracts offset 100 got 100 total 200
-04:17:33 tracts offset 200 got 100 total 300
-04:17:33 tracts offset 300 got 100 total 400
-04:17:33 tracts offset 400 got 100 total 500
-04:17:33 tracts offset 500 got 100 total 600
-04:17:33 tracts offset 600 got 100 total 700
-04:17:34 tracts offset 700 got 100 total 800
-04:17:34 tracts offset 800 got 100 total 900
-04:17:34 tracts offset 900 got 81 total 981
-04:17:34 tracts Census 2020 POP100/HU100 rows 981 layer 6
-04:17:34 tracts {"with_pop100":981,"pop100_total":3285874,"hu100_total":1598159,"count":981,"server_count":981,"bytes":2203556,"extra_simplify_deg":0}
-04:17:34 sample names: Añasco, Bayamón, Canóvanas, Cataño, Comerío, Guánica, Juana Díaz, Las Marías, Loíza, Manatí, Mayagüez, Peñuelas, Rincón, Río Grande, San Germán, San Sebastián
+04:22:29 municipios offset 0 got 78 total 78
+04:22:29 municipios Census 2020 POP100/HU100 rows 78 layer 82
+04:22:29 municipios {"with_pop100":78,"pop100_total":3285874,"hu100_total":1598159,"count":78,"server_count":78,"bytes":621414,"extra_simplify_deg":0}
+04:22:29 barrios offset 0 got 100 total 100
+04:22:29 barrios offset 100 got 100 total 200
+04:22:29 barrios offset 200 got 100 total 300
+04:22:29 barrios offset 300 got 100 total 400
+04:22:30 barrios offset 400 got 100 total 500
+04:22:30 barrios offset 500 got 100 total 600
+04:22:30 barrios offset 600 got 100 total 700
+04:22:30 barrios offset 700 got 100 total 800
+04:22:30 barrios offset 800 got 100 total 900
+04:22:30 barrios offset 900 got 39 total 939
+04:22:30 barrios Census 2020 POP100/HU100 rows 939 layer 20
+04:22:30 barrios {"with_pop100":936,"pop100_total":3279731,"hu100_total":1595039,"count":939,"server_count":939,"bytes":2331493,"extra_simplify_deg":0}
+04:22:31 tracts offset 0 got 100 total 100
+04:22:31 tracts offset 100 got 100 total 200
+04:22:31 tracts offset 200 got 100 total 300
+04:22:31 tracts offset 300 got 100 total 400
+04:22:31 tracts offset 400 got 100 total 500
+04:22:31 tracts offset 500 got 100 total 600
+04:22:31 tracts offset 600 got 100 total 700
+04:22:32 tracts offset 700 got 100 total 800
+04:22:32 tracts offset 800 got 100 total 900
+04:22:32 tracts offset 900 got 81 total 981
+04:22:32 tracts Census 2020 POP100/HU100 rows 981 layer 6
+04:22:32 tracts {"with_pop100":981,"pop100_total":3285874,"hu100_total":1598159,"count":981,"server_count":981,"bytes":2203556,"extra_simplify_deg":0}
+04:22:32 sample names: Añasco, Bayamón, Canóvanas, Cataño, Comerío, Guánica, Juana Díaz, Las Marías, Loíza, Manatí, Mayagüez, Peñuelas, Rincón, Río Grande, San Germán, San Sebastián
 -rw-r--r-- 1 runner runner 74018096 Oct 11 04:11 /home/runner/work/garita/garita/work/cache/puerto-rico-latest.osm.pbf
 
 Running kernel seems to be up-to-date.
@@ -61,70 +61,67 @@ Header:
      5685 /home/runner/work/garita/garita/work/osm/facilities.geojsonl
   1507404 total
 total 551084
--rw-r--r-- 1 runner runner        91 Oct 11 04:17 all.json
--rw-r--r-- 1 runner runner        92 Oct 11 04:17 areas.json
--rw-r--r-- 1 runner runner         0 Oct 11 04:17 buildings.err
--rw-r--r-- 1 runner runner 508563790 Oct 11 04:17 buildings.geojsonl
--rw-r--r-- 1 runner runner  50147014 Oct 11 04:17 buildings.osm.pbf
--rw-r--r-- 1 runner runner         0 Oct 11 04:17 coast.err
--rw-r--r-- 1 runner runner   1774131 Oct 11 04:17 coast.geojsonl
--rw-r--r-- 1 runner runner    388286 Oct 11 04:17 coast.osm.pbf
--rw-r--r-- 1 runner runner         0 Oct 11 04:17 facilities.err
--rw-r--r-- 1 runner runner   3075428 Oct 11 04:17 facilities.geojsonl
--rw-r--r-- 1 runner runner    328457 Oct 11 04:17 facilities.osm.pbf
--rw-r--r-- 1 runner runner       596 Oct 11 04:17 fileinfo.txt
--rw-r--r-- 1 runner runner        92 Oct 11 04:17 lines.json
--rw-r--r-- 1 runner runner        21 Oct 11 04:17 pbf_timestamp.txt
+-rw-r--r-- 1 runner runner        91 Oct 11 04:22 all.json
+-rw-r--r-- 1 runner runner        92 Oct 11 04:22 areas.json
+-rw-r--r-- 1 runner runner         0 Oct 11 04:22 buildings.err
+-rw-r--r-- 1 runner runner 508563790 Oct 11 04:22 buildings.geojsonl
+-rw-r--r-- 1 runner runner  50147014 Oct 11 04:22 buildings.osm.pbf
+-rw-r--r-- 1 runner runner         0 Oct 11 04:22 coast.err
+-rw-r--r-- 1 runner runner   1774131 Oct 11 04:22 coast.geojsonl
+-rw-r--r-- 1 runner runner    388286 Oct 11 04:22 coast.osm.pbf
+-rw-r--r-- 1 runner runner         0 Oct 11 04:22 facilities.err
+-rw-r--r-- 1 runner runner   3075428 Oct 11 04:22 facilities.geojsonl
+-rw-r--r-- 1 runner runner    328457 Oct 11 04:22 facilities.osm.pbf
+-rw-r--r-- 1 runner runner       596 Oct 11 04:22 fileinfo.txt
+-rw-r--r-- 1 runner runner        92 Oct 11 04:22 lines.json
+-rw-r--r-- 1 runner runner        21 Oct 11 04:22 pbf_timestamp.txt
 {"type":"Feature","id":"a41771464","geometry":{"type":"MultiPolygon","coordinates":[[[[-66.0445718,18.402646],[-66.0445454,18.402325],[-66.0445363,18.4022138],[-66.0445281,18.4021147],[-66.043692,18.4021822],[-66.0437361,18.4027132],[-66.0445718,18.402646]]]]},"properties":{"@type":"way","@id":20885732,"access":"yes","addr:postcode":"00925","amenity":"parking","building":"yes","fee":"yes","name":"Multipisos UPRRP","operator":"UPR Parking System","parking":"multi-storey"}}
 {"type":"Feature","id":"a41774008","geometry":{"type":"MultiPolygon","coordinates":[[[[-66.0463973,18.4021623],[-66.0460674
 {"type":"Feature","id":"a41771464","geometry":{"type":"MultiPolygon","coordinates":[[[[-66.0445718,18.402646],[-66.0445454,18.402325],[-66.0445363,18.4022138],[-66.0445281,18.4021147],[-66.043692,18.4021822],[-66.0437361,18.4027132],[-66.0445718,18.402646]]]]},"properties":{"@type":"way","@id":20885732,"access":"yes","addr:postcode":"00925","amenity":"parking","building":"yes","fee":"yes","name":"
 {"type":"Feature","id":"n238054139","geometry":{"type":"Point","coordinates":[-66.0473769,18.2401997]},"properties":{"@type":"node","@id":238054139,"addr:full":"Urb. Valle Tolima Calle Milagros Carrillo, Blq. Q","addr:postcode":"00726","amenity":"school","contact:fax":"+1-787-7453120","contact:phone":"+1-787-7464262","isced:level":"1","name":"Escuela Pepita Arenas","operator":"Departamento de Educ
-Overture 2026-09-23.1 buildings downloaded in 7 s
 -rw-r--r-- 1 runner runner 314324163 Oct 11 04:18 /home/runner/work/garita/garita/work/cache/overture/pr_buildings_2026-09-23.1.parquet
 Overture {"release": "2026-09-23.1", "bbox": [-67.95, 17.85, -65.2, 18.55], "rows": 2157363, "file": "s3://overturemaps-us-west-2/release/2026-09-23.1/theme=buildings/type=building/", "datasets": [{"dataset": "OpenStreetMap", "license_in_data": "ODbL-1.0", "version_min": "2026-09-06T00:00:00.000Z", "version_max": "2026-09-07T18:26:30.000Z", "update_time_min": "2010-05-18T21:03:46.000Z", "update_time_max": "2026-09-07T18:26:30.000Z", "features": 1500399, "with_confidence": 0, "confidence_min": null, "confidence_max": null, "with_height": 203060, "with_floors": 8499}, {"dataset": "Google Open Buildings", "license_in_data": null, "version_min": "2024-04-16", "version_max": "2024-04-16", "update_time_min": "2023-05-01T00:00:00.000Z", "update_time_max": "2023-05-01T00:00:00.000Z", "features": 536571, "with_confidence": 536571, "confidence_min": 0.65, "confidence_max": 0.9791, "with_height": 0, "with_floors": 0}, {"dataset": "Microsoft ML Buildings", "license_in_data": "ODbL-1.0", "version_min": "2026-08-11", "version_max": "2026-08-11", "update_time_min": null, "update_time_max": null, "features": 120393, "with_confidence": 928, "confidence_min": 0.7279000282287598, "confidence_max": 1.0, "with_height": 0, "with_floors": 0}], "multi_source_features": 0, "osm_origin": 1500399, "candidates": 656964}
 656964 /home/runner/work/garita/garita/work/overture/added.jsonl
-total 180040
--rw-r--r-- 1 runner runner 184350382 Oct 11 04:18 added.jsonl
--rw-r--r-- 1 runner runner      1587 Oct 11 04:18 download.err
--rw-r--r-- 1 runner runner      1454 Oct 11 04:18 meta.json
-{"id":"4b79a5b2-1956-40d7-9f6e-4eb27b481790","ds":"Google Open Buildings","conf":0.6896,"h":null,"floors":null,"g":{"type":"Polygon","coordinates":[[[-67.9403512,18.0873137],[-67.9403133,18.0873185],[-67.9403167,18.0873426],[-67.9403545,18.0873378],[-67.9403512,18.0873137]]]}}
-{"id":"9959a7ce-3116-44c8-9ca9-21e77b61e986","ds":"Google Open Buildings","conf":0.7246,"h":null,"floors":null,"g":{"type":"Polygon","coordinates":[[[-67.9403545,18.0873378],[-67.9403167,18.0873426],[-67.9403206,18.0873707
-04:18:16 coastline ways 1135 closed rings 908 open chains 0
-04:18:16 land rings 878 largest 17043 vertices; enclosed-water rings 0
-04:18:20 municipios_land 78 clipped 78 failed 0 bytes 1281079 extra tol 0 4.0s
-node:internal/deps/undici/undici:15270
-      Error.captureStackTrace(err);
-            ^
-
-TypeError: fetch failed
-    at node:internal/deps/undici/undici:15270:13
-    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
-    at async fetchRetry (file:///home/runner/work/garita/garita/pipeline/vector/lib.mjs:24:19)
-    at async post (file:///home/runner/work/garita/garita/pipeline/vector/nfhl.mjs:35:7)
-    at async file:///home/runner/work/garita/garita/pipeline/vector/nfhl.mjs:52:18 {
-  [cause]: Error: read ECONNRESET
-      at TLSWrap.onStreamRead (node:internal/stream_base_commons:216:20) {
-    errno: -104,
-    code: 'ECONNRESET',
-    syscall: 'read'
-  }
-}
-
-Node.js v22.23.3
-04:18:29 municipios 78
-04:18:36 buildings {"features":1500584,"kept":1500471,"degenerate":29,"multi":43,"simplified":279,"height_tag":203069,"height_levels":3419,"height_none":1293983,"vertices":8451048}
-04:18:36 overlap grid 688037 cells for 1500471 OSM buildings
-04:18:40 additions {"candidates":656964,"candidates_by_dataset":{"Google Open Buildings":536571,"Microsoft ML Buildings":120393},"degenerate":0,"dropped_overlap":{"centroid_inside_osm":281,"osm_centroid_inside":19,"outlines_intersect_osm":17,"overlaps_accepted_addition":20373},"dropped_implausible":{"tiny":103596,"low_confidence":93579,"large_without_confidence":10},"dropped_not_on_land":13,"added":439076,"added_by_dataset":{"Google Open Buildings":321260,"Microsoft ML Buildings":117816},"added_with_height":0,"added_confidence_hist":{"0.75":88794,"0.70":93879,"0.80":71853,"none":116906,"0.90":14725,"0.95":1373,"0.85":51522,"1.00":24},"dropped_low_confidence_by_dataset":{"Google Open Buildings":93579},"land_test":true} 4.0s
-04:18:41 facilities 3084 {"airport":24,"clinic":430,"fire_station":70,"hospital":87,"police_station":127,"power_plant":67,"school":1802,"seaport":14,"substation":401,"water_plant":62}
-04:18:41 zoom-14 tiles with buildings or facilities 1791
-04:18:42 elevation tiles 400 / 1791
-04:18:44 elevation tiles 800 / 1791
-04:18:45 elevation tiles 1200 / 1791
-04:18:47 elevation tiles 1600 / 1791
-04:18:48 elevation {"tiles":1791,"fetched":19,"cached":1772,"failed":0}
-04:18:49 coast distance for 3084 facilities against 60036 coastline segments
-04:18:52 tiles written 1790 bytes 56713428 vertices clamped 0
-04:18:52 done {"buildings":1939547,"osm":1500471,"added":439076,"tiles":1790,"bytes":56713428,"facilities":3084,"floodAttached":false,"lt_1m":10890,"at_or_below":{"1":15225,"2":32261,"3":114122,"5":168509,"0.5":6142,"1.5":22587},"zone_counts":{"0":1939547,"1":0,"2":0,"3":0}}
-04:19:07 qa_added decoded 1939547 records; 439076 added; 1500471 OSM; 5s
-04:19:13 qa_added check {"osm_first_in_every_tile": true, "sample_2000": {"checked": 2000, "intersects_osm_over_0p5_m2": 0, "touches_osm_at_all": 4, "largest_shared_area_m2": 0.02, "centroid_inside_osm": 0, "contains_osm_centroid": 0, "centroid_not_on_land": 0, "intersects_other_added_over_0p5_m2": 0, "failures_any": 0, "hint_ground_at_or_below_0m": 6, "hint_ground_unknown": 0}, "all_added": {"checked": 439076, "intersects_osm_over_0p5_m2": 0, "touches_osm_at_all": 685, "largest_shared_area_m2": 0.19, "centroid_inside_osm": 0, "contains_osm_centroid": 0, "centroid_not_on_land": 0, "intersects_other_added_over_0p5_m2": 11, "failures_any": 11, "hint_ground_at_or_below_0m": 643, "hint_ground_unknown": 0}}
-04:19:16 qa_added picture and check written 14s
+total 180036
+-rw-r--r-- 1 runner runner 184350382 Oct 11 04:23 added.jsonl
+-rw-r--r-- 1 runner runner      1454 Oct 11 04:23 meta.json
+{"id":"26ec82e9-7c00-4f29-9f61-3fe0b9feac3f","ds":"Microsoft ML Buildings","conf":null,"h":null,"floors":null,"g":{"type":"Polygon","coordinates":[[[-67.2707754,18.3620044],[-67.2708251,18.3619857],[-67.2708114,18.3619527],[-67.2707616,18.3619713],[-67.2707754,18.3620044]]]}}
+{"id":"c0ce6a14-55c0-4389-a33e-e2bc5caf1035","ds":"Microsoft ML Buildings","conf":null,"h":null,"floors":null,"g":{"type":"Polygon","coordinates":[[[-67.2685772,18.3558057],[-67.2686653,18.3557824],[-67.2686503,18.3557313],
+04:23:07 coastline ways 1135 closed rings 908 open chains 0
+04:23:07 land rings 878 largest 17043 vertices; enclosed-water rings 0
+04:23:11 municipios_land 78 clipped 78 failed 0 bytes 1281079 extra tol 0 4.1s
+04:23:15 NFHL count 4894 ids 4894 oid field OBJECTID
+04:23:16 NFHL progress 280 / 4894 requests 10 queue 113 4s
+04:23:16 NFHL progress 680 / 4894 requests 20 queue 103 5s
+04:23:17 NFHL progress 1080 / 4894 requests 30 queue 93 5s
+04:23:17 NFHL progress 1480 / 4894 requests 40 queue 83 6s
+04:23:18 NFHL progress 1880 / 4894 requests 50 queue 73 7s
+04:23:21 NFHL progress 2280 / 4894 requests 60 queue 63 9s
+04:23:22 NFHL progress 2680 / 4894 requests 70 queue 53 11s
+04:23:23 NFHL progress 3080 / 4894 requests 80 queue 43 12s
+04:23:25 NFHL progress 3480 / 4894 requests 90 queue 33 13s
+04:23:26 NFHL progress 3880 / 4894 requests 100 queue 23 14s
+04:23:27 NFHL progress 4280 / 4894 requests 110 queue 13 15s
+04:23:29 NFHL progress 4680 / 4894 requests 120 queue 3 17s
+04:27:22 NFHL downloaded 4894 / 4894 failed 0 requests 123 
+04:27:23 nfhl_zones tolerance 0.000050 features 3830 bytes 5138271
+04:27:23 NFHL display file 3830 features 5138271 bytes; polygons by class {"0":729,"1":1648,"2":1978,"3":539}
+04:27:23 municipios 78
+04:27:30 buildings {"features":1500584,"kept":1500471,"degenerate":29,"multi":43,"simplified":279,"height_tag":203069,"height_levels":3419,"height_none":1293983,"vertices":8451048}
+04:27:31 overlap grid 688037 cells for 1500471 OSM buildings
+04:27:37 additions {"candidates":656964,"candidates_by_dataset":{"Microsoft ML Buildings":120393,"Google Open Buildings":536571},"degenerate":0,"dropped_overlap":{"centroid_inside_osm":281,"osm_centroid_inside":19,"outlines_intersect_osm":17,"overlaps_accepted_addition":17201},"dropped_implausible":{"tiny":277871,"low_confidence":46636,"large_without_confidence":10},"dropped_not_on_land":10,"added":314919,"added_by_dataset":{"Microsoft ML Buildings":98046,"Google Open Buildings":216873},"added_with_height":0,"added_confidence_hist":{"none":97366,"1.00":9,"0.95":1207,"0.90":14908,"0.85":49694,"0.80":52802,"0.75":50394,"0.70":48539},"dropped_low_confidence_by_dataset":{"Google Open Buildings":46636},"land_test":true,"not_overlapping_area_hist":{"Microsoft ML Buildings":{"<25":11587,"<60":23738,"<100":22988,"<40":18209,"<30":11262,"<200":17038,"<20":8262,"<1000":819,"<400":3866,"<15":1781,"<5000":132,">=5000":5},"Google Open Buildings":{"<5000":422,"<1000":2606,"<400":8522,">=5000":27,"<200":34461,"<40":63282,"<60":63311,"<100":46111,"<15":102818,"<20":88636,"<30":44776,"<25":64787}},"sensitivity":{"area>=15,conf>=0.65":534847,"area>=15,conf>=0.7":442289,"area>=15,conf>=0.75":348569,"area>=15,conf>=0.8":258029,"area>=20,conf>=0.65":437949,"area>=20,conf>=0.7":373459,"area>=20,conf>=0.75":306941,"area>=20,conf>=0.8":239333,"area>=25,conf>=0.65":361575,"area>=25,conf>=0.7":314939,"area>=25,conf>=0.75":266397,"area>=25,conf>=0.8":216001,"area>=30,conf>=0.65":305537,"area>=30,conf>=0.7":270832,"area>=30,conf>=0.75":234052,"area>=30,conf>=0.8":194905,"area>=40,conf>=0.65":224046,"area>=40,conf>=0.7":203781,"area>=40,conf>=0.75":181973,"area>=40,conf>=0.8":158234}} 5.9s
+04:27:37 facilities 3084 {"airport":24,"clinic":430,"fire_station":70,"hospital":87,"police_station":127,"power_plant":67,"school":1802,"seaport":14,"substation":401,"water_plant":62}
+04:27:37 zoom-14 tiles with buildings or facilities 1788
+04:27:38 elevation tiles 400 / 1788
+04:27:40 elevation tiles 800 / 1788
+04:27:41 elevation tiles 1200 / 1788
+04:27:43 elevation tiles 1600 / 1788
+04:27:43 elevation {"tiles":1788,"fetched":0,"cached":1788,"failed":0}
+04:27:44 NFHL polygons {"0":729,"1":1648,"2":1978,"3":539}
+04:27:44 flood class for 1815390 buildings in 0.5 s
+04:27:46 coast distance for 3084 facilities against 60036 coastline segments
+04:27:49 tiles written 1787 bytes 53726268 vertices clamped 0
+04:27:49 done {"buildings":1815390,"osm":1500471,"added":314919,"tiles":1787,"bytes":53726268,"facilities":3084,"floodAttached":true,"lt_1m":10268,"at_or_below":{"1":14348,"2":30372,"3":108242,"5":159632,"0.5":5784,"1.5":21291},"zone_counts":{"0":1589741,"1":61188,"2":160160,"3":4301}}
+04:28:03 qa_added decoded 1815390 records; 314919 added; 1500471 OSM; 5s
+04:28:08 qa_added check {"osm_first_in_every_tile": true, "sample_2000": {"checked": 2000, "intersects_osm_over_0p5_m2": 0, "touches_osm_at_all": 5, "largest_shared_area_m2": 0.02, "centroid_inside_osm": 0, "contains_osm_centroid": 0, "centroid_not_on_land": 0, "intersects_other_added_over_0p5_m2": 1, "largest_area_shared_with_other_added_m2": 1.47, "worst_added_pairs": [{"lon": -65.907856, "lat": 18.408066, "shared_m2": 1.47}], "failures_any": 1, "hint_ground_at_or_below_0m": 4, "hint_ground_unknown": 0}, "all_added": {"checked": 314919, "intersects_osm_over_0p5_m2": 0, "touches_osm_at_all": 478, "largest_shared_area_m2": 0.19, "centroid_inside_osm": 0, "contains_osm_centroid": 0, "centroid_not_on_land": 0, "intersects_other_added_over_0p5_m2": 10, "largest_area_shared_with_other_added_m2": 1.48, "worst_added_pairs": [{"lon": -65.907347, "lat": 18.406907, "shared_m2": 1.48}, {"lon": -65.907395, "lat": 18.406843, "shared_m2": 1.48}, {"lon": -65.9078, "lat": 18.408121, "shared_m2": 1.47}, {"lon": -65.907856, "lat": 18.408066, "shared_m2": 1.47}, {"lon": -65.907953, "lat": 18.407938, "shared_m2": 1.3}, {"lon": -65.907904, "lat": 18.407995, "shared_m2": 1.3}], "failures_any": 10, "hint_ground_at_or_below_0m": 441, "hint_ground_unknown": 0}}
+04:28:11 qa_added picture and check written 13s
