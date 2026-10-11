@@ -57,7 +57,7 @@ zoom-8 tiles x 79..81, y 114..115.
 |---|---|---|
 | `tiles/dem/{z}/{x}/{y}.png` | Terrarium-encoded elevation, 256 px, quantised to 0.5 m; z 8..10 everywhere, z 11..12 where land | AWS Terrain Tiles (USGS 3DEP on land) |
 | `tiles/img/{z}/{x}/{y}.jpg` | aerial photo, 256 px; z 8..10 everywhere, z 11..13 where land | USGS The National Map `USGSImageryOnly` (public domain) |
-| `tiles/bld/{z}/{x}/{y}.bin` | building footprints + heights, z 14 | OpenStreetMap (ODbL) |
+| `tiles/bld/{z}/{x}/{y}.bin` | building footprints + heights, z 14; bit 7 of `kind` marks a footprint detected from imagery by a machine where OSM has none | OpenStreetMap (ODbL); additions from Overture Maps: Google Open Buildings (CC BY 4.0), Microsoft ML Buildings (ODbL). Rule and counts in `tiles/bld/index.json` (`added_source`) |
 | `tiles/surge/c{1..5}/{z}/{x}/{y}.png`, `tiles/slide/{z}/{x}/{y}.png` | pre-coloured hazard overlays, z 8..13, with `index.json` (legend, disclaimer, tile list) | NOAA NHC surge risk maps; USGS OFR 2020-1022 |
 | `data/hazards/{lidar,surge,slide}/` | each raster's value at every building and asset, method and QA (`pipeline/hazards/README.md`) | hazard stages; folded into the tiles and the seed by `pipeline/hazards/merge.mjs` and `pipeline/derive.mjs` |
 | `data/twin.db` | seed SQLite database (objects, links, properties, sources) | `pipeline/build-db.mjs` |

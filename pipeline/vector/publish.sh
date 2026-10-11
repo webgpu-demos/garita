@@ -20,6 +20,7 @@ if [ -d "$OUT/tiles/bld" ]; then
   if [ "$TILES" = "1" ]; then
     [ "$REPLACE" = "--replace-tiles" ] && rm -rf "$SITE/${PREFIX}tiles/bld"
     mkdir -p "$SITE/${PREFIX}tiles/bld" && cp -r "$OUT/tiles/bld/." "$SITE/${PREFIX}tiles/bld/"
+    rm -f "$SITE/${PREFIX}data/derived/bld_index.json"   # the development copy would only go stale
   elif [ -f "$OUT/tiles/bld/index.json" ]; then
     # development run: the index only, beside the QA files (never where a client would look for tiles)
     cp "$OUT/tiles/bld/index.json" "$SITE/${PREFIX}data/derived/bld_index.json"
