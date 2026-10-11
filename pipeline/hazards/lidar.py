@@ -61,12 +61,12 @@ THRESHOLDS_M = (0.5, 1.0, 1.5, 2.0, 3.0)
 # Places a person can check. lon, lat, and a rough expectation written before the run (not a measurement).
 SPOTS = [
     ('Old San Juan, Plaza de Armas', -66.1165, 18.4655, 'on the ridge of the islet, roughly 20 m'),
-    ('Cataño waterfront (malecón)', -66.1180, 18.4445, 'bay shore, 1 to 2 m'),
+    ('Cataño, blocks nearest the bay', -66.1132, 18.4433, 'bay shore, about 1 m'),
     ('Loíza, town plaza', -65.8800, 18.4313, 'coastal plain, a few metres'),
     ('Ponce, La Playa', -66.6170, 17.9800, 'harbour barrio, 1 to 3 m'),
     ('Aibonito, town plaza', -66.2660, 18.1400, 'hill town, roughly 600 to 700 m'),
     ('San Juan airport (SJU), apron', -66.0018, 18.4394, 'published field elevation 9 ft = 2.7 m'),
-    ('Aguadilla airport (BQN), runway', -67.1294, 18.4949, 'published field elevation 237 ft = 72 m'),
+    ('Aguadilla airport (BQN), runway', -67.1294, 18.4949, 'published field elevation 237 ft = 72 m is the highest point of the runway; this is the airport reference point, so somewhat lower'),
     ('Condado, near Ashford Avenue', -66.0720, 18.4570, 'barrier strip beside the lagoon, 1 to 4 m'),
 ]
 
@@ -615,6 +615,8 @@ def cmd_merge(a):
         'at_or_below': {f'{th:g}m': {'old': int((old[old_ok] <= round(th * 10)).sum()), 'new': int((dm[has] <= round(th * 10)).sum()),
                                      'old_where_both': int((old[both] <= round(th * 10)).sum()), 'new_where_both': int((dm[both] <= round(th * 10)).sum())} for th in THRESHOLDS_M},
         'old_values_known': int(old_ok.sum()), 'compared': int(both.sum()),
+        'no_data_buildings': [{'index': int(i), 'lon': round(float(lon[i]), 5), 'lat': round(float(lat[i]), 5)} for i in np.nonzero(~has)[0][:200]],
+        'lowest_buildings': [{'index': int(i), 'lon': round(float(lon[i]), 5), 'lat': round(float(lat[i]), 5), 'lidar_m': float(dm[i]) / 10} for i in np.argsort(np.where(has, dm, 32767))[:10]],
         'median_minus_centre_cell_m': dist_stats((fb - fctr[:nb])[has & np.isfinite(fctr[:nb])]),
     }
     if nrank > 1:
@@ -653,8 +655,10 @@ def cmd_merge(a):
                          'The GeoTIFFs themselves carry no vertical CRS and no unit tag, and their sidecar XML only carries the national boilerplate quoted below, which names NAVD88 (a datum that does not exist in Puerto Rico).',
         'geotiff_vertical_crs': sorted({str(t['vert_cs']) for t in tiles}), 'geotiff_unit_type': sorted({repr(t['unit_type']) for t in tiles}), 'geotiff_horizontal_unit': sorted({str(t['linear_unit']) for t in tiles}),
         'wesm_vert_crs': vert, 'wesm_geoid': sorted({str(w.get('geoid')) for w in ev.get('workunits', [])}), 'vendor_altdatum': alt, 'vendor_altunits': altu,
-        'caveat': ('These projects also cover the U.S. Virgin Islands, whose part is referenced to the Virgin Islands Vertical Datum of 2009 (WESM vert_crs 6642 and/or vendor metadata, listed in virgin_islands_parts with the '
-                   'number of Garita buildings inside each bounding box). Neither the register nor the tiles say which tile came from which work unit, so a building inside such a box cannot be proven to be PRVD02 from the metadata alone.')
+        'caveat': ('These projects also cover the U.S. Virgin Islands, whose part is referenced to the Virgin Islands Vertical Datum of 2009 (WESM vert_crs 6642 and/or vendor metadata; see virgin_islands_parts, which lists '
+                   'each such part with its bounding box and the number of Garita buildings inside it). '
+                   + ('No building lies inside any of those boxes, so every value here comes from a PRVD02 work unit.' if vi and all(v['buildings_inside_bbox'] == 0 for v in vi) else
+                      'Neither the register nor the tiles say which tile came from which work unit, so a building inside such a box cannot be proven to be PRVD02 from the metadata alone.'))
                   if ('6642' in vert or vi) else None,
         'virgin_islands_parts': vi,
         'evidence': ev, 'sidecar_xml': plan.get('sidecar'),
