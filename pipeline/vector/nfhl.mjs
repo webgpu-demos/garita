@@ -27,8 +27,13 @@ function floodClass(zone, sub) {
   if (z === 'X' && /0\.2 ?PCT/i.test(String(sub || ''))) return 1;
   return 0;
 }
+// GET, not POST: since October 2026 the FEMA front end resets POSTed queries from the runner (ECONNRESET), while
+// the same query as a GET answers. Pages of ids keep the URL short; POST stays as the fallback for a long one.
 async function post(params, timeout = 240000, tries = 3) {
-  const res = await fetchRetry(`${LAYER}/query`, { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(params).toString() }, { timeout, tries });
+  const qs = new URLSearchParams(params).toString();
+  const res = qs.length < 6000
+    ? await fetchRetry(`${LAYER}/query?${qs}`, {}, { timeout, tries })
+    : await fetchRetry(`${LAYER}/query`, { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: qs }, { timeout, tries });
   const text = await res.text();
   let j; try { j = JSON.parse(text); } catch { throw new Error('not JSON: ' + text.slice(0, 120)); }
   if (j.error) throw new Error('ArcGIS error ' + JSON.stringify(j.error).slice(0, 200));
