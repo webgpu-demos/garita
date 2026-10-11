@@ -1,21 +1,21 @@
 {
- "generated": "2026-10-11T04:27:49.241Z",
+ "generated": "2026-10-11T04:31:15.809Z",
  "flood_attached": true,
  "buildings": {
-  "total": 1815390,
+  "total": 1767001,
   "buildings_osm": 1500471,
-  "buildings_added": 314919,
+  "buildings_added": 266530,
   "osm_features_read": 1500584,
   "dropped_degenerate": 29,
   "multipolygon": 43,
   "rings_simplified_over_64": 279,
-  "vertices": 9797213,
+  "vertices": 9600730,
   "height_from_height_tag": 203069,
   "height_from_levels": 3419,
   "height_unknown": 1293983,
-  "share_with_height": 0.1137,
+  "share_with_height": 0.1169,
   "by_kind": {
-   "0": 1757280,
+   "0": 1708891,
    "1": 1735,
    "2": 3204,
    "3": 1030,
@@ -141,7 +141,7 @@
      "version": "2024-04-16",
      "observed": "2023-05-01T00:00:00.000Z",
      "candidates": 536571,
-     "added": 216873,
+     "added": 179909,
      "confidence": {
       "features_with_value": 536571,
       "min": 0.65,
@@ -158,7 +158,7 @@
      "version": "2026-08-11",
      "observed": null,
      "candidates": 120393,
-     "added": 98046,
+     "added": 86621,
      "confidence": {
       "features_with_value": 928,
       "min": 0.7279000282287598,
@@ -169,18 +169,20 @@
    ],
    "overture_osm_snapshot": "2026-09-07T18:26:30.000Z"
   },
-  "rule": "OpenStreetMap is the base: every building of our own OSM extract is kept unchanged. An Overture building is added only if none of its sources is OpenStreetMap and (1) it does not overlap our OSM extract or an addition already accepted: dropped if its centroid is inside an OSM footprint, an OSM centroid is inside it, or the outlines intersect at all (outer rings); (2) it is plausible: at least 25 m2, confidence at least 0.7 where the source gives one, and not above 5000 m2 unless its confidence is at least 0.8; (3) its centroid is on land inside a municipio. Tests run in that order and a candidate is counted under the first one it fails. Added records have bit 7 (0x80) of kind set; kind is house under 400 m2, otherwise other; height is the source's own or 0.",
+  "rule": "OpenStreetMap is the base: every building of our own OSM extract is kept unchanged. An Overture building is added only if none of its sources is OpenStreetMap and (1) it does not overlap our OSM extract or an addition already accepted: dropped if its centroid is inside an OSM footprint, an OSM centroid is inside it, or the outlines intersect at all (outer rings); (2) it is plausible: at least 25 m2, confidence at least 0.7 where the source gives one, and not above 5000 m2 unless its confidence is at least 0.8; (3) its centroid is on land inside a municipio; (4) it is not a small footprint (under 60 m2) whose outline comes within 1.5 m of an OSM footprint (taken as part of the mapped building). Tests run in that order and a candidate is counted under the first one it fails. Added records have bit 7 (0x80) of kind set; kind is house under 400 m2, otherwise other; height is the source's own or 0.",
   "thresholds": {
    "min_area_m2": 25,
    "min_confidence": 0.7,
    "large_area_m2": 5000,
-   "large_min_confidence": 0.8
+   "large_min_confidence": 0.8,
+   "near_m": 1.5,
+   "near_max_area_m2": 60
   },
   "island": {
-   "buildings": 1815390,
+   "buildings": 1767001,
    "buildings_osm": 1500471,
-   "buildings_added": 314919,
-   "added_share": 0.1735
+   "buildings_added": 266530,
+   "added_share": 0.1508
   },
   "candidates": 656964,
   "candidates_by_dataset": {
@@ -192,93 +194,135 @@
    "centroid_inside_osm": 281,
    "osm_centroid_inside": 19,
    "outlines_intersect_osm": 17,
-   "overlaps_accepted_addition": 17201
+   "overlaps_accepted_addition": 15076
   },
-  "dropped_overlap_total": 17518,
+  "dropped_overlap_total": 15393,
   "dropped_implausible": {
-   "tiny": 277871,
-   "low_confidence": 46636,
+   "tiny": 278845,
+   "low_confidence": 47097,
    "large_without_confidence": 10
   },
-  "dropped_implausible_total": 324517,
+  "dropped_implausible_total": 325952,
   "dropped_low_confidence_by_dataset": {
-   "Google Open Buildings": 46636
+   "Google Open Buildings": 47097
   },
   "dropped_not_on_land": 10,
   "land_test_applied": true,
+  "dropped_attached_to_osm": 49079,
+  "distance_to_osm_hist": {
+   "note": "Candidates that passed tests 1 to 3, by footprint area (m2) and distance from their outline to the nearest OSM outline (m, looked for up to 5 m). Rule 4 drops the cells with area under near_max_area_m2 and distance under near_m.",
+   "counts": {
+    "area<60": {
+     ">=5": 35226,
+     "<2": 4456,
+     "<5": 9095,
+     "<1.5": 5509,
+     "<0.5": 7800,
+     "<1": 6453,
+     "<3": 6829
+    },
+    "area<100": {
+     "<3": 5238,
+     ">=5": 33501,
+     "<5": 7218,
+     "<1.5": 3874,
+     "<0.5": 5470,
+     "<2": 3254,
+     "<1": 4631
+    },
+    "area<40": {
+     ">=5": 50307,
+     "<1": 9633,
+     "<0.5": 11523,
+     "<5": 14413,
+     "<1.5": 8161,
+     "<3": 10731,
+     "<2": 6738
+    },
+    "area>=100": {
+     ">=5": 43897,
+     "<3": 3985,
+     "<1.5": 2666,
+     "<5": 5933,
+     "<1": 3110,
+     "<2": 2313,
+     "<0.5": 3645
+    }
+   }
+  },
   "not_overlapping_area_hist_m2": {
    "Microsoft ML Buildings": {
-    "<25": 11587,
-    "<60": 23738,
-    "<100": 22988,
-    "<40": 18209,
-    "<30": 11262,
-    "<200": 17038,
-    "<20": 8262,
+    "<25": 11590,
+    "<60": 23741,
+    "<100": 22997,
+    "<40": 18215,
+    "<30": 11265,
+    "<200": 17042,
+    "<20": 8263,
     "<1000": 819,
     "<400": 3866,
-    "<15": 1781,
+    "<15": 1782,
     "<5000": 132,
     ">=5000": 5
    },
    "Google Open Buildings": {
     "<5000": 422,
     "<1000": 2606,
-    "<400": 8522,
+    "<400": 8525,
     ">=5000": 27,
-    "<200": 34461,
-    "<40": 63282,
-    "<60": 63311,
-    "<100": 46111,
-    "<15": 102818,
-    "<20": 88636,
-    "<30": 44776,
-    "<25": 64787
+    "<200": 34496,
+    "<40": 63634,
+    "<60": 63633,
+    "<100": 46274,
+    "<15": 103148,
+    "<20": 88966,
+    "<30": 45027,
+    "<25": 65096
    }
   },
   "sensitivity": {
    "note": "Approximate count of additions other thresholds would give: candidates clear of OSM and of the additions accepted in this run, by minimum area (m2) and minimum confidence (candidates without a confidence always pass it). Before the land test.",
    "counts": {
-    "area>=15,conf>=0.65": 534847,
-    "area>=15,conf>=0.7": 442289,
-    "area>=15,conf>=0.75": 348569,
-    "area>=15,conf>=0.8": 258029,
-    "area>=20,conf>=0.65": 437949,
-    "area>=20,conf>=0.7": 373459,
-    "area>=20,conf>=0.75": 306941,
-    "area>=20,conf>=0.8": 239333,
-    "area>=25,conf>=0.65": 361575,
-    "area>=25,conf>=0.7": 314939,
-    "area>=25,conf>=0.75": 266397,
-    "area>=25,conf>=0.8": 216001,
-    "area>=30,conf>=0.65": 305537,
-    "area>=30,conf>=0.7": 270832,
-    "area>=30,conf>=0.75": 234052,
-    "area>=30,conf>=0.8": 194905,
-    "area>=40,conf>=0.65": 224046,
-    "area>=40,conf>=0.7": 203781,
-    "area>=40,conf>=0.75": 181973,
-    "area>=40,conf>=0.8": 158234
+    "area>=15,conf>=0.65": 536641,
+    "area>=15,conf>=0.7": 443323,
+    "area>=15,conf>=0.75": 348971,
+    "area>=15,conf>=0.8": 258136,
+    "area>=20,conf>=0.65": 439412,
+    "area>=20,conf>=0.7": 374323,
+    "area>=20,conf>=0.75": 307298,
+    "area>=20,conf>=0.8": 239438,
+    "area>=25,conf>=0.65": 362726,
+    "area>=25,conf>=0.7": 315629,
+    "area>=25,conf>=0.75": 266691,
+    "area>=25,conf>=0.8": 216093,
+    "area>=30,conf>=0.65": 306434,
+    "area>=30,conf>=0.7": 271389,
+    "area>=30,conf>=0.75": 234293,
+    "area>=30,conf>=0.8": 194986,
+    "area>=40,conf>=0.65": 224585,
+    "area>=40,conf>=0.7": 204120,
+    "area>=40,conf>=0.75": 182132,
+    "area>=40,conf>=0.8": 158291
    }
   },
-  "added": 314919,
+  "added": 266530,
   "added_by_dataset": {
-   "Microsoft ML Buildings": 98046,
-   "Google Open Buildings": 216873
+   "Microsoft ML Buildings": 86621,
+   "Google Open Buildings": 179909
   },
   "added_with_height": 0,
   "added_confidence_hist": {
-   "none": 97366,
+   "none": 86029,
    "1.00": 9,
-   "0.95": 1207,
-   "0.90": 14908,
-   "0.85": 49694,
-   "0.80": 52802,
-   "0.75": 50394,
-   "0.70": 48539
+   "0.95": 1132,
+   "0.90": 14808,
+   "0.85": 46365,
+   "0.80": 43692,
+   "0.75": 38531,
+   "0.70": 35964
   },
   "added_by_kind": {
-   "0": 311040,
+   "0": 262651,
    "6": 3879
   },
   "added_outside_municipios": 0,
@@ -286,790 +330,790 @@
    {
     "geoid": "72131",
     "name": "San Sebasti\u00e1n",
-    "buildings": 29530,
+    "buildings": 28552,
     "buildings_osm": 21148,
-    "buildings_added": 8382,
-    "added_share": 0.2838
+    "buildings_added": 7404,
+    "added_share": 0.2593
    },
    {
     "geoid": "72073",
     "name": "Jayuya",
-    "buildings": 10493,
+    "buildings": 10204,
     "buildings_osm": 7693,
-    "buildings_added": 2800,
-    "added_share": 0.2668
+    "buildings_added": 2511,
+    "added_share": 0.2461
    },
    {
     "geoid": "72099",
     "name": "Moca",
-    "buildings": 24961,
+    "buildings": 23902,
     "buildings_osm": 18303,
-    "buildings_added": 6658,
-    "added_share": 0.2667
-   },
-   {
-    "geoid": "72003",
-    "name": "Aguada",
-    "buildings": 24660,
-    "buildings_osm": 18301,
-    "buildings_added": 6359,
-    "added_share": 0.2579
+    "buildings_added": 5599,
+    "added_share": 0.2342
    },
    {
     "geoid": "72025",
     "name": "Caguas",
-    "buildings": 57246,
+    "buildings": 55684,
     "buildings_osm": 42665,
-    "buildings_added": 14581,
-    "added_share": 0.2547
+    "buildings_added": 13019,
+    "added_share": 0.2338
    },
    {
-    "geoid": "72115",
-    "name": "Quebradillas",
-    "buildings": 16088,
-    "buildings_osm": 12150,
-    "buildings_added": 3938,
-    "added_share": 0.2448
+    "geoid": "72003",
+    "name": "Aguada",
+    "buildings": 23626,
+    "buildings_osm": 18301,
+    "buildings_added": 5325,
+    "added_share": 0.2254
    },
    {
     "geoid": "72083",
     "name": "Las Mar\u00edas",
-    "buildings": 7042,
+    "buildings": 6866,
     "buildings_osm": 5335,
-    "buildings_added": 1707,
-    "added_share": 0.2424
+    "buildings_added": 1531,
+    "added_share": 0.223
    },
    {
     "geoid": "72041",
     "name": "Cidra",
-    "buildings": 24497,
+    "buildings": 23751,
     "buildings_osm": 18644,
-    "buildings_added": 5853,
-    "added_share": 0.2389
+    "buildings_added": 5107,
+    "added_share": 0.215
+   },
+   {
+    "geoid": "72115",
+    "name": "Quebradillas",
+    "buildings": 15391,
+    "buildings_osm": 12150,
+    "buildings_added": 3241,
+    "added_share": 0.2106
    },
    {
     "geoid": "72117",
     "name": "Rinc\u00f3n",
-    "buildings": 9903,
+    "buildings": 9609,
     "buildings_osm": 7604,
-    "buildings_added": 2299,
-    "added_share": 0.2322
+    "buildings_added": 2005,
+    "added_share": 0.2087
    },
    {
     "geoid": "72007",
     "name": "Aguas Buenas",
-    "buildings": 14095,
+    "buildings": 13747,
     "buildings_osm": 10889,
-    "buildings_added": 3206,
-    "added_share": 0.2275
+    "buildings_added": 2858,
+    "added_share": 0.2079
    }
   ],
   "bottom10_added_share": [
    {
     "geoid": "72127",
     "name": "San Juan",
-    "buildings": 114337,
+    "buildings": 112183,
     "buildings_osm": 103767,
-    "buildings_added": 10570,
-    "added_share": 0.0924
+    "buildings_added": 8416,
+    "added_share": 0.075
    },
    {
     "geoid": "72033",
     "name": "Cata\u00f1o",
-    "buildings": 10432,
+    "buildings": 10197,
     "buildings_osm": 9237,
-    "buildings_added": 1195,
-    "added_share": 0.1146
-   },
-   {
-    "geoid": "72031",
-    "name": "Carolina",
-    "buildings": 58648,
-    "buildings_osm": 51645,
-    "buildings_added": 7003,
-    "added_share": 0.1194
+    "buildings_added": 960,
+    "added_share": 0.0941
    },
    {
     "geoid": "72021",
     "name": "Bayam\u00f3n",
-    "buildings": 75857,
+    "buildings": 74068,
     "buildings_osm": 66744,
-    "buildings_added": 9113,
-    "added_share": 0.1201
+    "buildings_added": 7324,
+    "added_share": 0.0989
+   },
+   {
+    "geoid": "72031",
+    "name": "Carolina",
+    "buildings": 57527,
+    "buildings_osm": 51645,
+    "buildings_added": 5882,
+    "added_share": 0.1022
    },
    {
     "geoid": "72137",
     "name": "Toa Baja",
-    "buildings": 35528,
+    "buildings": 34612,
     "buildings_osm": 30977,
-    "buildings_added": 4551,
-    "added_share": 0.1281
-   },
-   {
-    "geoid": "72113",
-    "name": "Ponce",
-    "buildings": 71587,
-    "buildings_osm": 62155,
-    "buildings_added": 9432,
-    "added_share": 0.1318
+    "buildings_added": 3635,
+    "added_share": 0.105
    },
    {
     "geoid": "72015",
     "name": "Arroyo",
-    "buildings": 10808,
+    "buildings": 10566,
     "buildings_osm": 9364,
-    "buildings_added": 1444,
-    "added_share": 0.1336
+    "buildings_added": 1202,
+    "added_share": 0.1138
    },
    {
-    "geoid": "72053",
-    "name": "Fajardo",
-    "buildings": 19247,
-    "buildings_osm": 16624,
-    "buildings_added": 2623,
-    "added_share": 0.1363
+    "geoid": "72113",
+    "name": "Ponce",
+    "buildings": 70186,
+    "buildings_osm": 62155,
+    "buildings_added": 8031,
+    "added_share": 0.1144
    },
    {
     "geoid": "72097",
     "name": "Mayag\u00fcez",
-    "buildings": 39968,
+    "buildings": 38867,
     "buildings_osm": 34356,
-    "buildings_added": 5612,
-    "added_share": 0.1404
+    "buildings_added": 4511,
+    "added_share": 0.1161
+   },
+   {
+    "geoid": "72053",
+    "name": "Fajardo",
+    "buildings": 18818,
+    "buildings_osm": 16624,
+    "buildings_added": 2194,
+    "added_share": 0.1166
    },
    {
     "geoid": "72067",
     "name": "Hormigueros",
-    "buildings": 8668,
+    "buildings": 8433,
     "buildings_osm": 7449,
-    "buildings_added": 1219,
-    "added_share": 0.1406
+    "buildings_added": 984,
+    "added_share": 0.1167
    }
   ],
   "by_municipio": [
    {
     "geoid": "72131",
     "name": "San Sebasti\u00e1n",
-    "buildings": 29530,
+    "buildings": 28552,
     "buildings_osm": 21148,
-    "buildings_added": 8382,
-    "added_share": 0.2838
+    "buildings_added": 7404,
+    "added_share": 0.2593
    },
    {
     "geoid": "72073",
     "name": "Jayuya",
-    "buildings": 10493,
+    "buildings": 10204,
     "buildings_osm": 7693,
-    "buildings_added": 2800,
-    "added_share": 0.2668
+    "buildings_added": 2511,
+    "added_share": 0.2461
    },
    {
     "geoid": "72099",
     "name": "Moca",
-    "buildings": 24961,
+    "buildings": 23902,
     "buildings_osm": 18303,
-    "buildings_added": 6658,
-    "added_share": 0.2667
-   },
-   {
-    "geoid": "72003",
-    "name": "Aguada",
-    "buildings": 24660,
-    "buildings_osm": 18301,
-    "buildings_added": 6359,
-    "added_share": 0.2579
+    "buildings_added": 5599,
+    "added_share": 0.2342
    },
    {
     "geoid": "72025",
     "name": "Caguas",
-    "buildings": 57246,
+    "buildings": 55684,
     "buildings_osm": 42665,
-    "buildings_added": 14581,
-    "added_share": 0.2547
+    "buildings_added": 13019,
+    "added_share": 0.2338
    },
    {
-    "geoid": "72115",
-    "name": "Quebradillas",
-    "buildings": 16088,
-    "buildings_osm": 12150,
-    "buildings_added": 3938,
-    "added_share": 0.2448
+    "geoid": "72003",
+    "name": "Aguada",
+    "buildings": 23626,
+    "buildings_osm": 18301,
+    "buildings_added": 5325,
+    "added_share": 0.2254
    },
    {
     "geoid": "72083",
     "name": "Las Mar\u00edas",
-    "buildings": 7042,
+    "buildings": 6866,
     "buildings_osm": 5335,
-    "buildings_added": 1707,
-    "added_share": 0.2424
+    "buildings_added": 1531,
+    "added_share": 0.223
    },
    {
     "geoid": "72041",
     "name": "Cidra",
-    "buildings": 24497,
+    "buildings": 23751,
     "buildings_osm": 18644,
-    "buildings_added": 5853,
-    "added_share": 0.2389
+    "buildings_added": 5107,
+    "added_share": 0.215
+   },
+   {
+    "geoid": "72115",
+    "name": "Quebradillas",
+    "buildings": 15391,
+    "buildings_osm": 12150,
+    "buildings_added": 3241,
+    "added_share": 0.2106
    },
    {
     "geoid": "72117",
     "name": "Rinc\u00f3n",
-    "buildings": 9903,
+    "buildings": 9609,
     "buildings_osm": 7604,
-    "buildings_added": 2299,
-    "added_share": 0.2322
+    "buildings_added": 2005,
+    "added_share": 0.2087
    },
    {
     "geoid": "72007",
     "name": "Aguas Buenas",
-    "buildings": 14095,
+    "buildings": 13747,
     "buildings_osm": 10889,
-    "buildings_added": 3206,
-    "added_share": 0.2275
+    "buildings_added": 2858,
+    "added_share": 0.2079
    },
    {
     "geoid": "72027",
     "name": "Camuy",
-    "buildings": 22820,
+    "buildings": 22010,
     "buildings_osm": 17737,
-    "buildings_added": 5083,
-    "added_share": 0.2227
-   },
-   {
-    "geoid": "72071",
-    "name": "Isabela",
-    "buildings": 31131,
-    "buildings_osm": 24310,
-    "buildings_added": 6821,
-    "added_share": 0.2191
-   },
-   {
-    "geoid": "72019",
-    "name": "Barranquitas",
-    "buildings": 16628,
-    "buildings_osm": 13028,
-    "buildings_added": 3600,
-    "added_share": 0.2165
-   },
-   {
-    "geoid": "72051",
-    "name": "Dorado",
-    "buildings": 20590,
-    "buildings_osm": 16185,
-    "buildings_added": 4405,
-    "added_share": 0.2139
-   },
-   {
-    "geoid": "72045",
-    "name": "Comer\u00edo",
-    "buildings": 10478,
-    "buildings_osm": 8244,
-    "buildings_added": 2234,
-    "added_share": 0.2132
+    "buildings_added": 4273,
+    "added_share": 0.1941
    },
    {
     "geoid": "72001",
     "name": "Adjuntas",
-    "buildings": 12947,
+    "buildings": 12657,
     "buildings_osm": 10223,
-    "buildings_added": 2724,
-    "added_share": 0.2104
+    "buildings_added": 2434,
+    "added_share": 0.1923
    },
    {
-    "geoid": "72123",
-    "name": "Salinas",
-    "buildings": 21809,
-    "buildings_osm": 17220,
-    "buildings_added": 4589,
-    "added_share": 0.2104
+    "geoid": "72019",
+    "name": "Barranquitas",
+    "buildings": 16124,
+    "buildings_osm": 13028,
+    "buildings_added": 3096,
+    "added_share": 0.192
    },
    {
-    "geoid": "72105",
-    "name": "Naranjito",
-    "buildings": 15450,
-    "buildings_osm": 12213,
-    "buildings_added": 3237,
-    "added_share": 0.2095
+    "geoid": "72045",
+    "name": "Comer\u00edo",
+    "buildings": 10185,
+    "buildings_osm": 8244,
+    "buildings_added": 1941,
+    "added_share": 0.1906
+   },
+   {
+    "geoid": "72071",
+    "name": "Isabela",
+    "buildings": 30023,
+    "buildings_osm": 24310,
+    "buildings_added": 5713,
+    "added_share": 0.1903
    },
    {
     "geoid": "72039",
     "name": "Ciales",
-    "buildings": 11621,
+    "buildings": 11333,
     "buildings_osm": 9194,
-    "buildings_added": 2427,
-    "added_share": 0.2088
+    "buildings_added": 2139,
+    "added_share": 0.1887
    },
    {
-    "geoid": "72005",
-    "name": "Aguadilla",
-    "buildings": 34450,
-    "buildings_osm": 27338,
-    "buildings_added": 7112,
-    "added_share": 0.2064
+    "geoid": "72105",
+    "name": "Naranjito",
+    "buildings": 15029,
+    "buildings_osm": 12213,
+    "buildings_added": 2816,
+    "added_share": 0.1874
    },
    {
-    "geoid": "72065",
-    "name": "Hatillo",
-    "buildings": 25687,
-    "buildings_osm": 20467,
-    "buildings_added": 5220,
-    "added_share": 0.2032
-   },
-   {
-    "geoid": "72081",
-    "name": "Lares",
-    "buildings": 19918,
-    "buildings_osm": 15875,
-    "buildings_added": 4043,
-    "added_share": 0.203
-   },
-   {
-    "geoid": "72047",
-    "name": "Corozal",
-    "buildings": 18917,
-    "buildings_osm": 15085,
-    "buildings_added": 3832,
-    "added_share": 0.2026
-   },
-   {
-    "geoid": "72149",
-    "name": "Villalba",
-    "buildings": 13045,
-    "buildings_osm": 10413,
-    "buildings_added": 2632,
-    "added_share": 0.2018
+    "geoid": "72123",
+    "name": "Salinas",
+    "buildings": 21189,
+    "buildings_osm": 17220,
+    "buildings_added": 3969,
+    "added_share": 0.1873
    },
    {
     "geoid": "72147",
     "name": "Vieques",
-    "buildings": 8070,
+    "buildings": 7917,
     "buildings_osm": 6449,
-    "buildings_added": 1621,
-    "added_share": 0.2009
+    "buildings_added": 1468,
+    "added_share": 0.1854
    },
    {
-    "geoid": "72079",
-    "name": "Lajas",
-    "buildings": 18123,
-    "buildings_osm": 14569,
-    "buildings_added": 3554,
-    "added_share": 0.1961
+    "geoid": "72047",
+    "name": "Corozal",
+    "buildings": 18449,
+    "buildings_osm": 15085,
+    "buildings_added": 3364,
+    "added_share": 0.1823
    },
    {
-    "geoid": "72101",
-    "name": "Morovis",
-    "buildings": 16835,
-    "buildings_osm": 13539,
-    "buildings_added": 3296,
-    "added_share": 0.1958
+    "geoid": "72081",
+    "name": "Lares",
+    "buildings": 19398,
+    "buildings_osm": 15875,
+    "buildings_added": 3523,
+    "added_share": 0.1816
    },
    {
-    "geoid": "72129",
-    "name": "San Lorenzo",
-    "buildings": 24516,
-    "buildings_osm": 19780,
-    "buildings_added": 4736,
-    "added_share": 0.1932
+    "geoid": "72051",
+    "name": "Dorado",
+    "buildings": 19720,
+    "buildings_osm": 16185,
+    "buildings_added": 3535,
+    "added_share": 0.1793
    },
    {
-    "geoid": "72111",
-    "name": "Pe\u00f1uelas",
-    "buildings": 14282,
-    "buildings_osm": 11529,
-    "buildings_added": 2753,
-    "added_share": 0.1928
-   },
-   {
-    "geoid": "72063",
-    "name": "Gurabo",
-    "buildings": 22540,
-    "buildings_osm": 18225,
-    "buildings_added": 4315,
-    "added_share": 0.1914
+    "geoid": "72149",
+    "name": "Villalba",
+    "buildings": 12688,
+    "buildings_osm": 10413,
+    "buildings_added": 2275,
+    "added_share": 0.1793
    },
    {
     "geoid": "72093",
     "name": "Maricao",
-    "buildings": 4258,
+    "buildings": 4187,
     "buildings_osm": 3447,
-    "buildings_added": 811,
-    "added_share": 0.1905
+    "buildings_added": 740,
+    "added_share": 0.1767
    },
    {
     "geoid": "72049",
     "name": "Culebra",
-    "buildings": 2264,
+    "buildings": 2225,
     "buildings_osm": 1836,
-    "buildings_added": 428,
-    "added_share": 0.189
+    "buildings_added": 389,
+    "added_share": 0.1748
    },
    {
-    "geoid": "72013",
-    "name": "Arecibo",
-    "buildings": 57393,
-    "buildings_osm": 46619,
-    "buildings_added": 10774,
-    "added_share": 0.1877
+    "geoid": "72111",
+    "name": "Pe\u00f1uelas",
+    "buildings": 13967,
+    "buildings_osm": 11529,
+    "buildings_added": 2438,
+    "added_share": 0.1746
+   },
+   {
+    "geoid": "72079",
+    "name": "Lajas",
+    "buildings": 17637,
+    "buildings_osm": 14569,
+    "buildings_added": 3068,
+    "added_share": 0.174
+   },
+   {
+    "geoid": "72005",
+    "name": "Aguadilla",
+    "buildings": 33083,
+    "buildings_osm": 27338,
+    "buildings_added": 5745,
+    "added_share": 0.1737
+   },
+   {
+    "geoid": "72065",
+    "name": "Hatillo",
+    "buildings": 24763,
+    "buildings_osm": 20467,
+    "buildings_added": 4296,
+    "added_share": 0.1735
+   },
+   {
+    "geoid": "72101",
+    "name": "Morovis",
+    "buildings": 16381,
+    "buildings_osm": 13539,
+    "buildings_added": 2842,
+    "added_share": 0.1735
+   },
+   {
+    "geoid": "72129",
+    "name": "San Lorenzo",
+    "buildings": 23772,
+    "buildings_osm": 19780,
+    "buildings_added": 3992,
+    "added_share": 0.1679
    },
    {
     "geoid": "72141",
     "name": "Utuado",
-    "buildings": 22214,
+    "buildings": 21717,
     "buildings_osm": 18078,
-    "buildings_added": 4136,
-    "added_share": 0.1862
+    "buildings_added": 3639,
+    "added_share": 0.1676
+   },
+   {
+    "geoid": "72063",
+    "name": "Gurabo",
+    "buildings": 21856,
+    "buildings_osm": 18225,
+    "buildings_added": 3631,
+    "added_share": 0.1661
    },
    {
     "geoid": "72085",
     "name": "Las Piedras",
-    "buildings": 22030,
+    "buildings": 21476,
     "buildings_osm": 17968,
-    "buildings_added": 4062,
-    "added_share": 0.1844
-   },
-   {
-    "geoid": "72009",
-    "name": "Aibonito",
-    "buildings": 15651,
-    "buildings_osm": 12803,
-    "buildings_added": 2848,
-    "added_share": 0.182
-   },
-   {
-    "geoid": "72089",
-    "name": "Luquillo",
-    "buildings": 10793,
-    "buildings_osm": 8847,
-    "buildings_added": 1946,
-    "added_share": 0.1803
-   },
-   {
-    "geoid": "72054",
-    "name": "Florida",
-    "buildings": 6630,
-    "buildings_osm": 5436,
-    "buildings_added": 1194,
-    "added_share": 0.1801
-   },
-   {
-    "geoid": "72059",
-    "name": "Guayanilla",
-    "buildings": 12258,
-    "buildings_osm": 10052,
-    "buildings_added": 2206,
-    "added_share": 0.18
+    "buildings_added": 3508,
+    "added_share": 0.1633
    },
    {
     "geoid": "72107",
     "name": "Orocovis",
-    "buildings": 15069,
+    "buildings": 14758,
     "buildings_osm": 12376,
-    "buildings_added": 2693,
-    "added_share": 0.1787
+    "buildings_added": 2382,
+    "added_share": 0.1614
    },
    {
-    "geoid": "72143",
-    "name": "Vega Alta",
-    "buildings": 19292,
-    "buildings_osm": 15852,
-    "buildings_added": 3440,
-    "added_share": 0.1783
+    "geoid": "72013",
+    "name": "Arecibo",
+    "buildings": 55530,
+    "buildings_osm": 46619,
+    "buildings_added": 8911,
+    "added_share": 0.1605
+   },
+   {
+    "geoid": "72009",
+    "name": "Aibonito",
+    "buildings": 15216,
+    "buildings_osm": 12803,
+    "buildings_added": 2413,
+    "added_share": 0.1586
+   },
+   {
+    "geoid": "72089",
+    "name": "Luquillo",
+    "buildings": 10515,
+    "buildings_osm": 8847,
+    "buildings_added": 1668,
+    "added_share": 0.1586
    },
    {
     "geoid": "72133",
     "name": "Santa Isabel",
-    "buildings": 13507,
+    "buildings": 13184,
     "buildings_osm": 11115,
-    "buildings_added": 2392,
-    "added_share": 0.1771
+    "buildings_added": 2069,
+    "added_share": 0.1569
+   },
+   {
+    "geoid": "72054",
+    "name": "Florida",
+    "buildings": 6447,
+    "buildings_osm": 5436,
+    "buildings_added": 1011,
+    "added_share": 0.1568
+   },
+   {
+    "geoid": "72059",
+    "name": "Guayanilla",
+    "buildings": 11890,
+    "buildings_osm": 10052,
+    "buildings_added": 1838,
+    "added_share": 0.1546
    },
    {
     "geoid": "72091",
     "name": "Manat\u00ed",
-    "buildings": 22688,
+    "buildings": 22110,
     "buildings_osm": 18700,
-    "buildings_added": 3988,
-    "added_share": 0.1758
-   },
-   {
-    "geoid": "72029",
-    "name": "Can\u00f3vanas",
-    "buildings": 22045,
-    "buildings_osm": 18205,
-    "buildings_added": 3840,
-    "added_share": 0.1742
+    "buildings_added": 3410,
+    "added_share": 0.1542
    },
    {
     "geoid": "72151",
     "name": "Yabucoa",
-    "buildings": 21566,
+    "buildings": 21052,
     "buildings_osm": 17834,
-    "buildings_added": 3732,
-    "added_share": 0.1731
+    "buildings_added": 3218,
+    "added_share": 0.1529
    },
    {
-    "geoid": "72011",
-    "name": "A\u00f1asco",
-    "buildings": 17036,
-    "buildings_osm": 14101,
-    "buildings_added": 2935,
-    "added_share": 0.1723
+    "geoid": "72029",
+    "name": "Can\u00f3vanas",
+    "buildings": 21406,
+    "buildings_osm": 18205,
+    "buildings_added": 3201,
+    "added_share": 0.1495
+   },
+   {
+    "geoid": "72143",
+    "name": "Vega Alta",
+    "buildings": 18628,
+    "buildings_osm": 15852,
+    "buildings_added": 2776,
+    "added_share": 0.149
    },
    {
     "geoid": "72139",
     "name": "Trujillo Alto",
-    "buildings": 27625,
+    "buildings": 26943,
     "buildings_osm": 22944,
-    "buildings_added": 4681,
-    "added_share": 0.1694
-   },
-   {
-    "geoid": "72023",
-    "name": "Cabo Rojo",
-    "buildings": 39933,
-    "buildings_osm": 33199,
-    "buildings_added": 6734,
-    "added_share": 0.1686
-   },
-   {
-    "geoid": "72145",
-    "name": "Vega Baja",
-    "buildings": 31180,
-    "buildings_osm": 26002,
-    "buildings_added": 5178,
-    "added_share": 0.1661
-   },
-   {
-    "geoid": "72043",
-    "name": "Coamo",
-    "buildings": 23345,
-    "buildings_osm": 19480,
-    "buildings_added": 3865,
-    "added_share": 0.1656
-   },
-   {
-    "geoid": "72037",
-    "name": "Ceiba",
-    "buildings": 8603,
-    "buildings_osm": 7184,
-    "buildings_added": 1419,
-    "added_share": 0.1649
-   },
-   {
-    "geoid": "72075",
-    "name": "Juana D\u00edaz",
-    "buildings": 27741,
-    "buildings_osm": 23185,
-    "buildings_added": 4556,
-    "added_share": 0.1642
+    "buildings_added": 3999,
+    "added_share": 0.1484
    },
    {
     "geoid": "72095",
     "name": "Maunabo",
-    "buildings": 6790,
+    "buildings": 6663,
     "buildings_osm": 5687,
-    "buildings_added": 1103,
-    "added_share": 0.1624
+    "buildings_added": 976,
+    "added_share": 0.1465
    },
    {
-    "geoid": "72055",
-    "name": "Gu\u00e1nica",
-    "buildings": 11848,
-    "buildings_osm": 9943,
-    "buildings_added": 1905,
-    "added_share": 0.1608
+    "geoid": "72037",
+    "name": "Ceiba",
+    "buildings": 8406,
+    "buildings_osm": 7184,
+    "buildings_added": 1222,
+    "added_share": 0.1454
+   },
+   {
+    "geoid": "72043",
+    "name": "Coamo",
+    "buildings": 22775,
+    "buildings_osm": 19480,
+    "buildings_added": 3295,
+    "added_share": 0.1447
+   },
+   {
+    "geoid": "72023",
+    "name": "Cabo Rojo",
+    "buildings": 38786,
+    "buildings_osm": 33199,
+    "buildings_added": 5587,
+    "added_share": 0.144
    },
    {
     "geoid": "72119",
     "name": "R\u00edo Grande",
-    "buildings": 25913,
+    "buildings": 25410,
     "buildings_osm": 21763,
-    "buildings_added": 4150,
-    "added_share": 0.1602
+    "buildings_added": 3647,
+    "added_share": 0.1435
    },
    {
-    "geoid": "72125",
-    "name": "San Germ\u00e1n",
-    "buildings": 20459,
-    "buildings_osm": 17224,
-    "buildings_added": 3235,
-    "added_share": 0.1581
+    "geoid": "72075",
+    "name": "Juana D\u00edaz",
+    "buildings": 27061,
+    "buildings_osm": 23185,
+    "buildings_added": 3876,
+    "added_share": 0.1432
+   },
+   {
+    "geoid": "72011",
+    "name": "A\u00f1asco",
+    "buildings": 16434,
+    "buildings_osm": 14101,
+    "buildings_added": 2333,
+    "added_share": 0.142
+   },
+   {
+    "geoid": "72145",
+    "name": "Vega Baja",
+    "buildings": 30300,
+    "buildings_osm": 26002,
+    "buildings_added": 4298,
+    "added_share": 0.1418
+   },
+   {
+    "geoid": "72055",
+    "name": "Gu\u00e1nica",
+    "buildings": 11543,
+    "buildings_osm": 9943,
+    "buildings_added": 1600,
+    "added_share": 0.1386
    },
    {
     "geoid": "72035",
     "name": "Cayey",
-    "buildings": 24885,
+    "buildings": 24323,
     "buildings_osm": 20965,
-    "buildings_added": 3920,
-    "added_share": 0.1575
+    "buildings_added": 3358,
+    "added_share": 0.1381
    },
    {
-    "geoid": "72077",
-    "name": "Juncos",
-    "buildings": 21660,
-    "buildings_osm": 18254,
-    "buildings_added": 3406,
-    "added_share": 0.1572
-   },
-   {
-    "geoid": "72061",
-    "name": "Guaynabo",
-    "buildings": 36868,
-    "buildings_osm": 31141,
-    "buildings_added": 5727,
-    "added_share": 0.1553
+    "geoid": "72125",
+    "name": "San Germ\u00e1n",
+    "buildings": 19974,
+    "buildings_osm": 17224,
+    "buildings_added": 2750,
+    "added_share": 0.1377
    },
    {
     "geoid": "72103",
     "name": "Naguabo",
-    "buildings": 15080,
+    "buildings": 14757,
     "buildings_osm": 12778,
-    "buildings_added": 2302,
-    "added_share": 0.1527
+    "buildings_added": 1979,
+    "added_share": 0.1341
    },
    {
-    "geoid": "72153",
-    "name": "Yauco",
-    "buildings": 22832,
-    "buildings_osm": 19375,
-    "buildings_added": 3457,
-    "added_share": 0.1514
+    "geoid": "72061",
+    "name": "Guaynabo",
+    "buildings": 35933,
+    "buildings_osm": 31141,
+    "buildings_added": 4792,
+    "added_share": 0.1334
+   },
+   {
+    "geoid": "72077",
+    "name": "Juncos",
+    "buildings": 21045,
+    "buildings_osm": 18254,
+    "buildings_added": 2791,
+    "added_share": 0.1326
    },
    {
     "geoid": "72109",
     "name": "Patillas",
-    "buildings": 12096,
+    "buildings": 11830,
     "buildings_osm": 10273,
-    "buildings_added": 1823,
-    "added_share": 0.1507
+    "buildings_added": 1557,
+    "added_share": 0.1316
    },
    {
-    "geoid": "72135",
-    "name": "Toa Alta",
-    "buildings": 31194,
-    "buildings_osm": 26500,
-    "buildings_added": 4694,
-    "added_share": 0.1505
+    "geoid": "72153",
+    "name": "Yauco",
+    "buildings": 22264,
+    "buildings_osm": 19375,
+    "buildings_added": 2889,
+    "added_share": 0.1298
    },
    {
     "geoid": "72017",
     "name": "Barceloneta",
-    "buildings": 15055,
+    "buildings": 14718,
     "buildings_osm": 12809,
-    "buildings_added": 2246,
-    "added_share": 0.1492
-   },
-   {
-    "geoid": "72069",
-    "name": "Humacao",
-    "buildings": 31569,
-    "buildings_osm": 26891,
-    "buildings_added": 4678,
-    "added_share": 0.1482
+    "buildings_added": 1909,
+    "added_share": 0.1297
    },
    {
     "geoid": "72087",
     "name": "Lo\u00edza",
-    "buildings": 12979,
+    "buildings": 12688,
     "buildings_osm": 11056,
-    "buildings_added": 1923,
-    "added_share": 0.1482
+    "buildings_added": 1632,
+    "added_share": 0.1286
    },
    {
     "geoid": "72057",
     "name": "Guayama",
-    "buildings": 25128,
+    "buildings": 24636,
     "buildings_osm": 21470,
-    "buildings_added": 3658,
-    "added_share": 0.1456
+    "buildings_added": 3166,
+    "added_share": 0.1285
+   },
+   {
+    "geoid": "72135",
+    "name": "Toa Alta",
+    "buildings": 30408,
+    "buildings_osm": 26500,
+    "buildings_added": 3908,
+    "added_share": 0.1285
+   },
+   {
+    "geoid": "72069",
+    "name": "Humacao",
+    "buildings": 30705,
+    "buildings_osm": 26891,
+    "buildings_added": 3814,
+    "added_share": 0.1242
    },
    {
     "geoid": "72121",
     "name": "Sabana Grande",
-    "buildings": 14424,
+    "buildings": 14051,
     "buildings_osm": 12369,
-    "buildings_added": 2055,
-    "added_share": 0.1425
+    "buildings_added": 1682,
+    "added_share": 0.1197
    },
    {
     "geoid": "72067",
     "name": "Hormigueros",
-    "buildings": 8668,
+    "buildings": 8433,
     "buildings_osm": 7449,
-    "buildings_added": 1219,
-    "added_share": 0.1406
-   },
-   {
-    "geoid": "72097",
-    "name": "Mayag\u00fcez",
-    "buildings": 39968,
-    "buildings_osm": 34356,
-    "buildings_added": 5612,
-    "added_share": 0.1404
+    "buildings_added": 984,
+    "added_share": 0.1167
    },
    {
     "geoid": "72053",
     "name": "Fajardo",
-    "buildings": 19247,
+    "buildings": 18818,
     "buildings_osm": 16624,
-    "buildings_added": 2623,
-    "added_share": 0.1363
+    "buildings_added": 2194,
+    "added_share": 0.1166
    },
    {
-    "geoid": "72015",
-    "name": "Arroyo",
-    "buildings": 10808,
-    "buildings_osm": 9364,
-    "buildings_added": 1444,
-    "added_share": 0.1336
+    "geoid": "72097",
+    "name": "Mayag\u00fcez",
+    "buildings": 38867,
+    "buildings_osm": 34356,
+    "buildings_added": 4511,
+    "added_share": 0.1161
    },
    {
     "geoid": "72113",
     "name": "Ponce",
-    "buildings": 71587,
+    "buildings": 70186,
     "buildings_osm": 62155,
-    "buildings_added": 9432,
-    "added_share": 0.1318
+    "buildings_added": 8031,
+    "added_share": 0.1144
+   },
+   {
+    "geoid": "72015",
+    "name": "Arroyo",
+    "buildings": 10566,
+    "buildings_osm": 9364,
+    "buildings_added": 1202,
+    "added_share": 0.1138
    },
    {
     "geoid": "72137",
     "name": "Toa Baja",
-    "buildings": 35528,
+    "buildings": 34612,
     "buildings_osm": 30977,
-    "buildings_added": 4551,
-    "added_share": 0.1281
-   },
-   {
-    "geoid": "72021",
-    "name": "Bayam\u00f3n",
-    "buildings": 75857,
-    "buildings_osm": 66744,
-    "buildings_added": 9113,
-    "added_share": 0.1201
+    "buildings_added": 3635,
+    "added_share": 0.105
    },
    {
     "geoid": "72031",
     "name": "Carolina",
-    "buildings": 58648,
+    "buildings": 57527,
     "buildings_osm": 51645,
-    "buildings_added": 7003,
-    "added_share": 0.1194
+    "buildings_added": 5882,
+    "added_share": 0.1022
+   },
+   {
+    "geoid": "72021",
+    "name": "Bayam\u00f3n",
+    "buildings": 74068,
+    "buildings_osm": 66744,
+    "buildings_added": 7324,
+    "added_share": 0.0989
    },
    {
     "geoid": "72033",
     "name": "Cata\u00f1o",
-    "buildings": 10432,
+    "buildings": 10197,
     "buildings_osm": 9237,
-    "buildings_added": 1195,
-    "added_share": 0.1146
+    "buildings_added": 960,
+    "added_share": 0.0941
    },
    {
     "geoid": "72127",
     "name": "San Juan",
-    "buildings": 114337,
+    "buildings": 112183,
     "buildings_osm": 103767,
-    "buildings_added": 10570,
-    "added_share": 0.0924
+    "buildings_added": 8416,
+    "added_share": 0.075
    }
   ],
   "check": {
@@ -1079,29 +1123,23 @@
    "sample_2000": {
     "checked": 2000,
     "intersects_osm_over_0p5_m2": 0,
-    "touches_osm_at_all": 5,
-    "largest_shared_area_m2": 0.02,
+    "touches_osm_at_all": 1,
+    "largest_shared_area_m2": 0.0,
     "centroid_inside_osm": 0,
     "contains_osm_centroid": 0,
     "centroid_not_on_land": 0,
-    "intersects_other_added_over_0p5_m2": 1,
-    "largest_area_shared_with_other_added_m2": 1.47,
-    "worst_added_pairs": [
-     {
-      "lon": -65.907856,
-      "lat": 18.408066,
-      "shared_m2": 1.47
-     }
-    ],
-    "failures_any": 1,
-    "hint_ground_at_or_below_0m": 4,
+    "intersects_other_added_over_0p5_m2": 0,
+    "largest_area_shared_with_other_added_m2": 0.17,
+    "worst_added_pairs": [],
+    "failures_any": 0,
+    "hint_ground_at_or_below_0m": 5,
     "hint_ground_unknown": 0
    },
    "all_added": {
-    "checked": 314919,
+    "checked": 266530,
     "intersects_osm_over_0p5_m2": 0,
-    "touches_osm_at_all": 478,
-    "largest_shared_area_m2": 0.19,
+    "touches_osm_at_all": 160,
+    "largest_shared_area_m2": 0.05,
     "centroid_inside_osm": 0,
     "contains_osm_centroid": 0,
     "centroid_not_on_land": 0,
@@ -1129,18 +1167,18 @@
       "shared_m2": 1.47
      },
      {
-      "lon": -65.907953,
-      "lat": 18.407938,
+      "lon": -65.907904,
+      "lat": 18.407995,
       "shared_m2": 1.3
      },
      {
-      "lon": -65.907904,
-      "lat": 18.407995,
+      "lon": -65.907953,
+      "lat": 18.407938,
       "shared_m2": 1.3
      }
     ],
     "failures_any": 10,
-    "hint_ground_at_or_below_0m": 441,
+    "hint_ground_at_or_below_0m": 360,
     "hint_ground_unknown": 0
    },
    "picture": {
@@ -1150,8 +1188,8 @@
       "geoid": "72131",
       "name": "San Sebasti\u00e1n",
       "buildings_osm": 21148,
-      "buildings_added": 8382,
-      "added_share": 0.2838,
+      "buildings_added": 7404,
+      "added_share": 0.2593,
       "closeup_centre": [
        -66.99514,
        18.33115
@@ -1161,11 +1199,11 @@
       "geoid": "72127",
       "name": "San Juan",
       "buildings_osm": 103767,
-      "buildings_added": 10570,
-      "added_share": 0.0924,
+      "buildings_added": 8416,
+      "added_share": 0.075,
       "closeup_centre": [
-       -66.05658,
-       18.35349
+       -66.09491,
+       18.42945
       ]
      }
     ]
@@ -1174,9 +1212,9 @@
  },
  "tiles": {
   "count": 1787,
-  "bytes": 53726268,
+  "bytes": 52553224,
   "vertices_clamped": 0,
-  "max_per_tile": 9395
+  "max_per_tile": 9320
  },
  "elevation": {
   "tiles": 1788,
@@ -1184,42 +1222,42 @@
   "cached": 1788,
   "failed": 0,
   "unknown": 0,
-  "below_0": 1663,
-  "lt_1m": 10268,
-  "lt_2m": 28765,
-  "lt_3m": 71669,
+  "below_0": 1608,
+  "lt_1m": 10048,
+  "lt_2m": 28108,
+  "lt_3m": 70001,
   "at_or_below": {
-   "1": 14348,
-   "2": 30372,
-   "3": 108242,
-   "5": 159632,
-   "0.5": 5784,
-   "1.5": 21291
+   "1": 14030,
+   "2": 29660,
+   "3": 105791,
+   "5": 156044,
+   "0.5": 5657,
+   "1.5": 20825
   },
-  "above_10": 1552097,
+  "above_10": 1509747,
   "note": "lt_X = strictly below X m (histogram bins); at_or_below = inclusive. They differ a lot at 1, 3 m because of the whole-metre terraces in the elevation source.",
   "integer_plateaus": {
    "note": "buildings whose sampled ground elevation is a whole metre to within 5 mm, by metre, among buildings between 0.5 and 15.5 m",
    "by_metre": {
-    "1": 4789,
-    "2": 2363,
-    "3": 43870,
-    "4": 1507,
-    "5": 1103,
-    "6": 560,
-    "7": 11972,
-    "8": 259,
-    "9": 210,
-    "10": 9235,
-    "11": 195,
-    "12": 154,
-    "13": 6506,
-    "14": 168,
-    "15": 382
+    "1": 4677,
+    "2": 2290,
+    "3": 42901,
+    "4": 1471,
+    "5": 1081,
+    "6": 546,
+    "7": 11726,
+    "8": 253,
+    "9": 204,
+    "10": 9035,
+    "11": 193,
+    "12": 153,
+    "13": 6386,
+    "14": 162,
+    "15": 379
    },
-   "total": 83273,
-   "buildings_0p5_to_15p5m": 358302,
-   "share": 0.2324
+   "total": 81457,
+   "buildings_0p5_to_15p5m": 350005,
+   "share": 0.2327
   }
  },
  "flood": {
@@ -1247,93 +1285,93 @@
    }
   },
   "island_zone_counts": {
-   "0": 1589741,
-   "1": 61188,
-   "2": 160160,
-   "3": 4301
+   "0": 1546558,
+   "1": 59850,
+   "2": 156383,
+   "3": 4210
   },
   "top5_zone2": [
    {
     "geoid": "72113",
     "name": "Ponce",
-    "buildings": 71587,
-    "zone2": 15963,
-    "zone3": 119,
-    "sfha": 16082
+    "buildings": 70186,
+    "zone2": 15665,
+    "zone3": 118,
+    "sfha": 15783
    },
    {
     "geoid": "72127",
     "name": "San Juan",
-    "buildings": 114337,
-    "zone2": 15682,
-    "zone3": 109,
-    "sfha": 15791
+    "buildings": 112183,
+    "zone2": 15439,
+    "zone3": 108,
+    "sfha": 15547
    },
    {
     "geoid": "72031",
     "name": "Carolina",
-    "buildings": 58648,
-    "zone2": 14392,
+    "buildings": 57527,
+    "zone2": 14135,
     "zone3": 16,
-    "sfha": 14408
+    "sfha": 14151
    },
    {
     "geoid": "72123",
     "name": "Salinas",
-    "buildings": 21809,
-    "zone2": 9886,
-    "zone3": 268,
-    "sfha": 10154
+    "buildings": 21189,
+    "zone2": 9571,
+    "zone3": 264,
+    "sfha": 9835
    },
    {
     "geoid": "72097",
     "name": "Mayag\u00fcez",
-    "buildings": 39968,
-    "zone2": 8947,
-    "zone3": 41,
-    "sfha": 8988
+    "buildings": 38867,
+    "zone2": 8727,
+    "zone3": 40,
+    "sfha": 8767
    }
   ],
   "top5_sfha": [
    {
     "geoid": "72113",
     "name": "Ponce",
-    "buildings": 71587,
-    "zone2": 15963,
-    "zone3": 119,
-    "sfha": 16082
+    "buildings": 70186,
+    "zone2": 15665,
+    "zone3": 118,
+    "sfha": 15783
    },
    {
     "geoid": "72127",
     "name": "San Juan",
-    "buildings": 114337,
-    "zone2": 15682,
-    "zone3": 109,
-    "sfha": 15791
+    "buildings": 112183,
+    "zone2": 15439,
+    "zone3": 108,
+    "sfha": 15547
    },
    {
     "geoid": "72031",
     "name": "Carolina",
-    "buildings": 58648,
-    "zone2": 14392,
+    "buildings": 57527,
+    "zone2": 14135,
     "zone3": 16,
-    "sfha": 14408
+    "sfha": 14151
    },
    {
     "geoid": "72123",
     "name": "Salinas",
-    "buildings": 21809,
-    "zone2": 9886,
-    "zone3": 268,
-    "sfha": 10154
+    "buildings": 21189,
+    "zone2": 9571,
+    "zone3": 264,
+    "sfha": 9835
    },
    {
     "geoid": "72097",
     "name": "Mayag\u00fcez",
-    "buildings": 39968,
-    "zone2": 8947,
-    "zone3": 41,
-    "sfha": 8988
+    "buildings": 38867,
+    "zone2": 8727,
+    "zone3": 40,
+    "sfha": 8767
    }
   ],
   "reference": {
@@ -1350,53 +1388,53 @@
   "toa_baja": {
    "geoid": "72137",
    "name": "Toa Baja",
-   "buildings": 35528,
+   "buildings": 34612,
    "zone_counts": {
-    "0": 17735,
-    "1": 10545,
-    "2": 7200,
-    "3": 48
+    "0": 17273,
+    "1": 10285,
+    "2": 7007,
+    "3": 47
    },
-   "sfha": 7248,
-   "sfha_share": 0.204,
-   "lt_1m": 574,
-   "at_or_below_1m": 650,
-   "at_or_below_2m": 1645,
-   "at_or_below_3m": 13342
+   "sfha": 7054,
+   "sfha_share": 0.2038,
+   "lt_1m": 562,
+   "at_or_below_1m": 636,
+   "at_or_below_2m": 1610,
+   "at_or_below_3m": 12995
   },
   "catano": {
    "geoid": "72033",
    "name": "Cata\u00f1o",
-   "buildings": 10432,
+   "buildings": 10197,
    "zone_counts": {
-    "0": 837,
-    "1": 5740,
-    "2": 3413,
-    "3": 442
+    "0": 819,
+    "1": 5622,
+    "2": 3324,
+    "3": 432
    },
-   "sfha": 3855,
-   "sfha_share": 0.3695,
-   "lt_1m": 1845,
-   "at_or_below_1m": 1973,
-   "at_or_below_2m": 3418,
-   "at_or_below_3m": 7497
+   "sfha": 3756,
+   "sfha_share": 0.3683,
+   "lt_1m": 1795,
+   "at_or_below_1m": 1921,
+   "at_or_below_2m": 3325,
+   "at_or_below_3m": 7317
   },
   "san_juan": {
    "geoid": "72127",
    "name": "San Juan",
-   "buildings": 114337,
+   "buildings": 112183,
    "zone_counts": {
-    "0": 94768,
-    "1": 3778,
-    "2": 15682,
-    "3": 109
+    "0": 92918,
+    "1": 3718,
+    "2": 15439,
+    "3": 108
    },
-   "sfha": 15791,
-   "sfha_share": 0.1381,
-   "lt_1m": 1695,
-   "at_or_below_1m": 1827,
-   "at_or_below_2m": 4409,
-   "at_or_below_3m": 15541
+   "sfha": 15547,
+   "sfha_share": 0.1386,
+   "lt_1m": 1659,
+   "at_or_below_1m": 1790,
+   "at_or_below_2m": 4329,
+   "at_or_below_3m": 15297
   }
  },
  "facilities": {
@@ -1433,65 +1471,65 @@
   {
    "geoid": "72127",
    "name": "San Juan",
-   "buildings": 114337,
-   "zone2": 15682,
-   "zone3": 109,
-   "sfha": 15791
+   "buildings": 112183,
+   "zone2": 15439,
+   "zone3": 108,
+   "sfha": 15547
   },
   {
    "geoid": "72021",
    "name": "Bayam\u00f3n",
-   "buildings": 75857,
-   "zone2": 2316,
+   "buildings": 74068,
+   "zone2": 2277,
    "zone3": 0,
-   "sfha": 2316
+   "sfha": 2277
   },
   {
    "geoid": "72113",
    "name": "Ponce",
-   "buildings": 71587,
-   "zone2": 15963,
-   "zone3": 119,
-   "sfha": 16082
+   "buildings": 70186,
+   "zone2": 15665,
+   "zone3": 118,
+   "sfha": 15783
   },
   {
    "geoid": "72031",
    "name": "Carolina",
-   "buildings": 58648,
-   "zone2": 14392,
+   "buildings": 57527,
+   "zone2": 14135,
    "zone3": 16,
-   "sfha": 14408
+   "sfha": 14151
   },
   {
-   "geoid": "72013",
-   "name": "Arecibo",
-   "buildings": 57393,
-   "zone2": 2794,
-   "zone3": 537,
-   "sfha": 3331
+   "geoid": "72025",
+   "name": "Caguas",
+   "buildings": 55684,
+   "zone2": 4361,
+   "zone3": 0,
+   "sfha": 4361
   }
  ],
  "bottom5_buildings": [
   {
    "geoid": "72049",
    "name": "Culebra",
-   "buildings": 2264,
-   "zone2": 33,
-   "zone3": 142,
-   "sfha": 175
+   "buildings": 2225,
+   "zone2": 32,
+   "zone3": 140,
+   "sfha": 172
   },
   {
    "geoid": "72093",
    "name": "Maricao",
-   "buildings": 4258,
-   "zone2": 68,
+   "buildings": 4187,
+   "zone2": 67,
    "zone3": 0,
-   "sfha": 68
+   "sfha": 67
   },
   {
    "geoid": "72054",
    "name": "Florida",
-   "buildings": 6630,
+   "buildings": 6447,
    "zone2": 0,
    "zone3": 0,
    "sfha": 0
@@ -1499,15 +1537,15 @@
   {
    "geoid": "72095",
    "name": "Maunabo",
-   "buildings": 6790,
-   "zone2": 392,
+   "buildings": 6663,
+   "zone2": 385,
    "zone3": 1,
-   "sfha": 393
+   "sfha": 386
   },
   {
    "geoid": "72083",
    "name": "Las Mar\u00edas",
-   "buildings": 7042,
+   "buildings": 6866,
    "zone2": 19,
    "zone3": 0,
    "sfha": 19
