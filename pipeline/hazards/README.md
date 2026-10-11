@@ -38,6 +38,18 @@ date, licence, citation), `method` (one paragraph a reviewer can check: what is 
 
 `data/hazards/<stage>/qa.jpg`: one picture of the result over the island (or San Juan), to be looked at.
 
+### Lidar: what the number is
+
+`lidar.py` (workflow `lidar.yml`: plan -> 12 shards -> merge, about ten minutes) gives each point the **median of
+the 1 m DEM cells whose centre lies within 2 m of it**, accepted only when at least half of those cells hold data;
+otherwise no data. The DEMs are bare earth, so this is the ground at the building, not its roof or floor. The newest
+collection with a value wins (`PR_PuertoRicoUSVI_D24`, then `PR_PRVI_*_2018`); `meta.json` counts buildings per
+project and measures how far the two collections disagree. Metres above the **Puerto Rico Vertical Datum of 2002**
+(EPSG:6641): the GeoTIFFs carry no vertical CRS and their sidecar XML only repeats a national boilerplate, so the
+datum is taken from USGS's work-unit register (`WESM.csv`, `vert_crs`) and the vendor DEM metadata (`altdatum`),
+both quoted in `meta.json` under `datum`. `log.txt` is published by every run, failed or not. `LIDAR_ONLY` in the
+workflow limits a run to tiles matching a regular expression (a test; `meta.json` says so).
+
 ### Overlay tiles (surge and slide)
 
 Pre-coloured RGBA PNG, 256 px, Web Mercator XYZ, zoom 8 to 13, transparent where there is nothing to show; no empty

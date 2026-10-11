@@ -1,0 +1,149 @@
+name: lidar
+# Hazard stage "lidar": samples the USGS 3DEP 1 m bare-earth DEM at every building and asset (pipeline/hazards/lidar.py).
+# Owns on gh-pages: data/hazards/lidar/**
+# 108 GB of tiles do not fit on one runner, so: plan (which tiles hold points) -> 12 shards (download a tile, sample,
+# delete) -> merge (combine, QA, publish). plan and shard never fail on their own account: what went wrong is in their
+# log and status files, and merge publishes log.txt whatever happened.
+on:
+  push:
+    branches: [pipe-lidar]
+    paths:
+      - pipeline/hazards/lidar.py
+      - pipeline/hazards/common.py
+      - pipeline/hazards/publish.sh
+      - .github/workflows/lidar.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: lidar
+  cancel-in-progress: true
+env:
+  # A regular expression on the tile key limits the run to a few tiles (a test; meta.json says so). Empty = everything.
+  LIDAR_ONLY: ''
+  LIDAR_SHARDS: 12
+jobs:
+  plan:
+    # Free on a public repository; private repositories are billed by the minute. Never run there.
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - name: Site (sparse checkout of gh-pages)
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: site
+          sparse-checkout: |
+            tiles/bld
+            data/seed
+            data/osm
+      - name: Install GDAL
+        run: |
+          for i in 1 2 3; do sudo apt-get update -qq && sudo apt-get install -y -qq gdal-bin python3-gdal python3-numpy python3-pil && break; sleep 10; done || true
+      - name: Plan
+        run: |
+          mkdir -p work/plan
+          timeout 15m /usr/bin/python3 pipeline/hazards/lidar.py plan --site site --work work --shards "$LIDAR_SHARDS" --only "$LIDAR_ONLY" 2>&1 | tail -200 || true
+          [ -f work/plan/log_plan.txt ] || echo "plan wrote no log (run ${GITHUB_RUN_ID})" > work/plan/log_plan.txt
+          ls -la work/plan
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: plan
+          path: work/plan
+          retention-days: 3
+  shard:
+    needs: plan
+    # Free on a public repository; private repositories are billed by the minute. Never run there.
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install GDAL
+        run: |
+          for i in 1 2 3; do sudo apt-get update -qq && sudo apt-get install -y -qq gdal-bin python3-gdal python3-numpy && break; sleep 10; done || true
+      - uses: actions/download-artifact@v4
+        with:
+          name: plan
+          path: work/plan
+      - name: Sample
+        run: |
+          mkdir -p work/shard
+          df -h . | tail -1
+          timeout 50m /usr/bin/python3 pipeline/hazards/lidar.py shard --work work --shard ${{ matrix.shard }} 2>&1 | tail -300 || true
+          [ -f "work/shard/log_shard_$(printf %02d ${{ matrix.shard }}).txt" ] || echo "shard ${{ matrix.shard }} wrote no log (run ${GITHUB_RUN_ID})" > "work/shard/log_shard_$(printf %02d ${{ matrix.shard }}).txt"
+          ls -la work/shard
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: shard-${{ matrix.shard }}
+          path: work/shard
+          retention-days: 3
+  merge:
+    needs: [plan, shard]
+    # Free on a public repository; private repositories are billed by the minute. Never run there.
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install numpy and Pillow
+        run: |
+          for i in 1 2 3; do sudo apt-get update -qq && sudo apt-get install -y -qq python3-numpy python3-pil fonts-dejavu-core && break; sleep 10; done || true
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: plan
+          path: work/plan
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: shard-*
+          path: work/shard
+          merge-multiple: true
+      - name: Merge
+        id: merge
+        run: |
+          mkdir -p work out/data/hazards/lidar
+          set +e
+          timeout 12m /usr/bin/python3 pipeline/hazards/lidar.py merge --work work --out "$PWD/out" 2>&1 | tail -80
+          rc=${PIPESTATUS[0]}
+          echo "$rc" > work/merge.rc
+          echo "merge exit code $rc (0 complete, 2 published but incomplete, 1 failed)"
+          exit 0
+      - name: Publish to gh-pages
+        if: always()
+        run: |
+          set -uo pipefail
+          d=out/data/hazards/lidar; mkdir -p "$d"
+          {
+            cat work/plan/log_plan.txt 2>/dev/null || echo "no plan log"
+            cat work/shard/log_shard_*.txt 2>/dev/null || echo "no shard logs"
+            cat work/log_merge.txt 2>/dev/null || echo "no merge log"
+            echo "merge exit code $(cat work/merge.rc 2>/dev/null || echo none) (0 complete, 2 published but incomplete, 1 failed)"
+            echo "run ${GITHUB_RUN_ID} sha ${GITHUB_SHA} finished $(date -u +%FT%TZ)"
+          } > "$d/log.txt"
+          if [ ! -f "$d/meta.json" ]; then
+            # failed run: keep whatever is published, refresh only the log
+            git clone -q --depth 1 --filter=blob:none --sparse --branch gh-pages "https://github.com/${GITHUB_REPOSITORY}" prev && git -C prev sparse-checkout set data/hazards/lidar || true
+            for f in prev/data/hazards/lidar/*; do
+              if [ -f "$f" ] && [ "$(basename "$f")" != log.txt ]; then cp "$f" "$d/"; fi
+            done
+          fi
+          ls -la "$d"
+          GH_TOKEN=${{ github.token }} bash pipeline/hazards/publish.sh lidar "lidar: 3DEP 1 m ground elevation at buildings and assets (${GITHUB_SHA::7}, run ${GITHUB_RUN_ID})"
+      - name: Result
+        if: always()
+        run: |
+          rc=$(cat work/merge.rc 2>/dev/null || echo 1)
+          tail -40 out/data/hazards/lidar/log.txt || true
+          exit "$rc"
