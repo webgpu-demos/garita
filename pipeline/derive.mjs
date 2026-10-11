@@ -83,7 +83,7 @@ out('51-facility-exposure.batch.json', { source: 'garita_derived', fetchedAt: no
 // ---------- 52: building exposure per municipio ----------
 const exp = J('data/derived/exposure.json');
 const expObjs = Object.entries(exp.municipios).map(([geoid, m]) => ({ type: 'municipio', key: geoid, props: {
-  buildings: m.buildings, buildings_sfha: m.buildings_sfha, buildings_le_1m: m.at_or_below['1'], buildings_le_2m: m.at_or_below['2'], buildings_le_3m: m.at_or_below['3'],
+  buildings: m.buildings, buildings_osm: m.buildings_osm ?? m.buildings, buildings_added: m.buildings_added ?? 0, buildings_sfha: m.buildings_sfha, buildings_le_1m: m.at_or_below['1'], buildings_le_2m: m.at_or_below['2'], buildings_le_3m: m.at_or_below['3'],
   // bin i = buildings whose lidar ground elevation rounds to i/10 m: "at or below X" = below_0 + bins 0..10X, inclusive
   elev_hist: JSON.stringify({ bin_m: exp.bins.size_m, inclusive: true, from_m: 0, below_0: m.below_0, bins: m.elev_hist, above_10: m.above_10, unknown: m.elev_unknown, at_or_below: m.at_or_below }),
   zone_counts: JSON.stringify(m.zone_counts),
@@ -92,7 +92,7 @@ const expObjs = Object.entries(exp.municipios).map(([geoid, m]) => ({ type: 'mun
   buildings_slide_high: m.slide.high_or_above, buildings_slide_high_25m: m.slide.high_or_above_25m,
   slide_counts: JSON.stringify(m.slide),
 } }));
-out('52-building-exposure.batch.json', { source: 'garita_derived', fetchedAt: now, objects: expObjs, note: 'Buildings (OpenStreetMap footprints) per municipio. Ground elevation: USGS 3DEP 1 m lidar DEM at each building (median within 2 m of the centroid), metres above PRVD02, counted in 0.1 m steps; a bathtub screen. Flood zone: FEMA NFHL at the centroid. Storm surge: buildings in a cell with mapped inundation on the NOAA NHC storm surge risk map, by hurricane category (municipio-level screening; the publisher says not for parcel-level assessment). Landslide: buildings by USGS OFR 2020-1022 susceptibility class at the centroid, and by the highest class within 25 m. Full method in data/derived/exposure.json.' });
+out('52-building-exposure.batch.json', { source: 'garita_derived', fetchedAt: now, objects: expObjs, note: 'Buildings per municipio: OpenStreetMap footprints (buildings_osm) plus footprints detected from imagery by machine, Google Open Buildings and Microsoft ML Buildings via Overture Maps, where OpenStreetMap has none (buildings_added; detections, not surveyed buildings). Every count is over both. Ground elevation: USGS 3DEP 1 m lidar DEM at each building (median within 2 m of the centroid), metres above PRVD02, counted in 0.1 m steps; a bathtub screen. Flood zone: FEMA NFHL at the centroid. Storm surge: buildings in a cell with mapped inundation on the NOAA NHC storm surge risk map, by hurricane category (municipio-level screening; the publisher says not for parcel-level assessment). Landslide: buildings by USGS OFR 2020-1022 susceptibility class at the centroid, and by the highest class within 25 m. Full method in data/derived/exposure.json.' });
 
 // ---------- 53: seeded assets and sensors ----------
 const seeded = [];

@@ -154,6 +154,26 @@
      "primary": true
     },
     {
+     "id": "buildings_osm",
+     "label": {
+      "en": "Buildings in OpenStreetMap",
+      "es": "Edificios en OpenStreetMap"
+     },
+     "type": "number",
+     "unit": "buildings",
+     "format": "int"
+    },
+    {
+     "id": "buildings_added",
+     "label": {
+      "en": "Footprints added from imagery detections (not in OpenStreetMap)",
+      "es": "Huellas añadidas por detección en imágenes (no están en OpenStreetMap)"
+     },
+     "type": "number",
+     "unit": "buildings",
+     "format": "int"
+    },
+    {
      "id": "buildings_sfha",
      "label": {
       "en": "Buildings in FEMA 1% flood zone",
@@ -4772,6 +4792,15 @@
    "kind": "baked"
   },
   {
+   "id": "overture_buildings",
+   "name": "Machine-detected building footprints (Google Open Buildings, Microsoft ML Buildings) via Overture Maps",
+   "org": "Overture Maps Foundation",
+   "url": "https://docs.overturemaps.org/attribution/",
+   "license": "ODbL 1.0; Google Open Buildings CC BY 4.0",
+   "kind": "baked",
+   "note": "Added only where OpenStreetMap has no building. Detections from imagery, not surveyed and not reviewed by a person; many are outbuildings. © OpenStreetMap contributors, Overture Maps Foundation. Google Open Buildings, available under CC BY 4.0. Global ML Building Footprints, licensed by Microsoft under the Open Database License."
+  },
+  {
    "id": "usgs_lidar",
    "name": "3DEP 1 m lidar elevation (2024 and 2018 collections)",
    "org": "USGS",
@@ -4871,7 +4900,7 @@
    "url": "https://www.fema.gov/openfema-data-page/nfip-redacted-claims-v3",
    "license": "Public domain (US Government work); OpenFEMA terms and conditions apply",
    "kind": "baked",
-   "note": "Flood insurance claims, redacted by FEMA to protect policyholders: location is given to the census block group and 0.1 degree, and some records carry no location at all. Counts are claims filed, not flooded homes; most flooded homes in Puerto Rico had no flood policy. Dollars are nominal. OpenFEMA terms: \"This product uses the Federal Emergency Management Agency’s OpenFEMA API, but is not endorsed by FEMA. The Federal Government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).\""
+   "note": "Flood insurance claims, redacted by FEMA to protect policyholders: location is given to the census block group and 0.1 degree, and some records carry no location at all. Counts are claims filed by policyholders, not a count of flooded homes. Dollars are nominal. OpenFEMA terms: \"This product uses the Federal Emergency Management Agency’s OpenFEMA API, but is not endorsed by FEMA. The Federal Government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).\""
   },
   {
    "id": "openfema_nfip_policies",
