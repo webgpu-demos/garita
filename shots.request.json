@@ -1,0 +1,6 @@
+{ "shots": [
+  { "id": "1-live-default", "url": "https://webgpu-demos.github.io/garita/?post=basic", "w": 1600, "h": 900, "wait": 9000 },
+  { "id": "2-catano-plus2m", "url": "https://webgpu-demos.github.io/garita/?post=basic&sea=2&t=2026-10-10T15:30:00Z&cam=-66.14,18.44,7000,180,60", "w": 1600, "h": 900, "wait": 9000 },
+  { "id": "3-live-physical", "url": "https://webgpu-demos.github.io/garita/?ui=0", "w": 1280, "h": 800, "wait": 5000 },
+  { "id": "4-night-sj", "url": "https://webgpu-demos.github.io/garita/?ui=0&post=basic&t=2026-10-11T02:00:00Z&cam=-66.105,18.455,9000,200,45", "w": 1280, "h": 800, "wait": 5000 }
+] }
