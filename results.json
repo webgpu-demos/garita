@@ -1,0 +1,285 @@
+{
+ "at": "2026-10-11T03:21:55.750Z",
+ "results": [
+  {
+   "id": "surge-c5-es",
+   "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&nofeeds=1&overlay=surge&surge=5&lang=es&cam=-66.14,18.44,12000,180,60",
+   "loadMs": 509772,
+   "debug": {
+    "stats": {
+     "fps": 12,
+     "tiles": 2,
+     "pending": 12,
+     "drawCalls": 1,
+     "tris": 1
+    },
+    "view": {
+     "lon": -66.14,
+     "lat": 18.44,
+     "range": 11999.999999999993,
+     "heading": 180,
+     "pitch": 60,
+     "altitude": 10670.649148025701
+    },
+    "terrain": {
+     "tiles": 2,
+     "pending": 8,
+     "maxZoom": 9
+    },
+    "post": {
+     "mode": "basic",
+     "lutsReady": false,
+     "clouds": false,
+     "units": 0.42058823529411765,
+     "elevation": -73.23936366690924,
+     "dark": 1,
+     "daylight": 0,
+     "moonlight": 1,
+     "warmth": 1,
+     "lowSun": 0,
+     "fill": 0,
+     "ground": 0.723414520192371,
+     "observed": false,
+     "exposure": 3.2,
+     "bloom": 0.5,
+     "shadows": false,
+     "shadowExtent": 0,
+     "sun": [
+      -0.22,
+      -0.958,
+      -0.187
+     ]
+    },
+    "store": {
+     "persistent": true,
+     "seedVersion": "2026.10.10d",
+     "openedMs": 258,
+     "objects": 6960,
+     "links": 12792,
+     "obs": 0
+    },
+    "layers": [
+     {
+      "overlay": "surge",
+      "source": "surge:tiles/surge/c5:2026-10-11T02:40:46Z",
+      "aboveWater": false,
+      "lastError": "",
+      "legend": {
+       "title": "Inundación por marejada ciclónica según la categoría del huracán (NOAA NHC) · Categoría 5",
+       "note": "Acérquese para ver este mapa: sus teselas empiezan más cerca. Inundación por marejada ciclónica sobre el terreno en el caso cercano al peor posible para un huracán de la categoría elegida con marea alta (NOAA NHC, máximo de máximos de SLOSH con sobreelevación por oleaje, 2018). Ninguna tormenta individual inunda toda el área mostrada. Los colores son los cuatro grupos de profundidad del visor del NHC; los archivos contienen clases de un pie. Cada píxel del mapa muestra la clase más profunda de las celdas de origen (de unos 10 m) que contiene, por lo que las áreas inundadas se ven más grandes al alejar el mapa. Donde no se dibuja nada la fuente no tiene valor: no distingue el terreno seco del agua abierta ni de los lugares que su modelo no cubre.",
+       "stops": 4
+      }
+     },
+     {
+      "municipios": 78,
+      "vertices": 123952,
+      "queued": 0,
+      "lift": 21.8,
+      "selected": null,
+      "footprint": 0,
+      "highlights": 0,
+      "selectedId": null
+     },
+     {
+      "tiles": 8,
+      "buildings": 21486,
+      "triangles": 339666,
+      "pending": 34,
+      "photos": 2,
+      "photoPending": 0,
+      "textureMB": 10.7
+     },
+     {
+      "storm": null,
+      "info": null,
+      "legend": null,
+      "live": [],
+      "highlights": 0
+     },
+     {
+      "layer": "markers",
+      "types": {
+       "shelter": 336,
+       "public_housing": 304,
+       "assisted_housing": 264,
+       "hospital": 87,
+       "clinic": 430,
+       "school": 1802,
+       "fire_station": 70,
+       "police_station": 127,
+       "power_plant": 67,
+       "substation": 401,
+       "water_plant": 61,
+       "airport": 24,
+       "seaport": 14,
+       "reservoir": 28,
+       "stream_gauge": 125,
+       "tide_station": 13,
+       "buoy": 25,
+       "weather_station": 149,
+       "weather_alert": 0,
+       "earthquake": 0,
+       "tropical_cyclone": 0,
+       "aircraft": 0
+      },
+      "drawn": 53,
+      "dots": 0,
+      "clustered": 13,
+      "hidden": 1,
+      "labels": 2,
+      "cellM": 512,
+      "ms": 2.14
+     }
+    ]
+   },
+   "frameMs": 1200,
+   "ok": true,
+   "ms": 527310,
+   "logs": [
+    "[warning] Ignoring inability to install OPFS sqlite3_vfs: Cannot install OPFS: Missing SharedArrayBuffer and/or Atomics. The server must emit the COOP/COEP response headers to enable those. See https://sqlite.org/wasm/doc/trunk/persistence.md#coop-co",
+    "[shot] ready flag never set"
+   ],
+   "failedHosts": {}
+  },
+  {
+   "id": "surge-c1-rail",
+   "url": "https://webgpu-demos.github.io/garita/dev/ui/?post=basic&nofeeds=1&overlay=surge&surge=1&cam=-66.14,18.44,12000,180,60",
+   "loadMs": 512074,
+   "debug": {
+    "stats": {
+     "fps": 12,
+     "tiles": 2,
+     "pending": 7,
+     "drawCalls": 1,
+     "tris": 1
+    },
+    "view": {
+     "lon": -66.14,
+     "lat": 18.44,
+     "range": 11999.999999999993,
+     "heading": 180,
+     "pitch": 60,
+     "altitude": 10678.111653978154
+    },
+    "terrain": {
+     "tiles": 2,
+     "pending": 6,
+     "maxZoom": 9
+    },
+    "post": {
+     "mode": "basic",
+     "lutsReady": false,
+     "clouds": false,
+     "units": 0.42058823529411765,
+     "elevation": -73.24639652271816,
+     "dark": 1,
+     "daylight": 0,
+     "moonlight": 1,
+     "warmth": 1,
+     "lowSun": 0,
+     "fill": 0,
+     "ground": 0.723414520192371,
+     "observed": false,
+     "exposure": 3.2,
+     "bloom": 0.5,
+     "shadows": false,
+     "shadowExtent": 0,
+     "sun": [
+      -0.219,
+      -0.958,
+      -0.187
+     ]
+    },
+    "store": {
+     "persistent": true,
+     "seedVersion": "2026.10.10d",
+     "openedMs": 741,
+     "objects": 6960,
+     "links": 12792,
+     "obs": 0
+    },
+    "layers": [
+     {
+      "overlay": "surge",
+      "source": "surge:tiles/surge/c1:2026-10-11T02:40:46Z",
+      "aboveWater": false,
+      "lastError": "",
+      "legend": {
+       "title": "Storm surge flooding by hurricane category (NOAA NHC) · Category 1",
+       "note": "Near worst-case storm surge flooding above ground for a hurricane of the chosen category at high tide (NOAA NHC SLOSH maximum of maximums with wave setup, 2018). No single storm floods all of the area shown. Colours are the NHC viewer's four depth groups; the files hold one-foot classes. Each map pixel shows the deepest class of the roughly 10 m source cells inside it, so flooded areas look larger when zoomed out. Where nothing is drawn the source has no value: it does not distinguish dry ground from open water or from places its model grid does not reach.",
+       "stops": 4
+      }
+     },
+     {
+      "municipios": 78,
+      "vertices": 123952,
+      "queued": 41,
+      "lift": 21.8,
+      "selected": null,
+      "footprint": 0,
+      "highlights": 0,
+      "selectedId": null
+     },
+     {
+      "tiles": 12,
+      "buildings": 27731,
+      "triangles": 515183,
+      "pending": 30,
+      "photos": 3,
+      "photoPending": 0,
+      "textureMB": 16
+     },
+     {
+      "storm": null,
+      "info": null,
+      "legend": null,
+      "live": [],
+      "highlights": 0
+     },
+     {
+      "layer": "markers",
+      "types": {
+       "shelter": 336,
+       "public_housing": 304,
+       "assisted_housing": 264,
+       "hospital": 87,
+       "clinic": 430,
+       "school": 1802,
+       "fire_station": 70,
+       "police_station": 127,
+       "power_plant": 67,
+       "substation": 401,
+       "water_plant": 61,
+       "airport": 24,
+       "seaport": 14,
+       "reservoir": 28,
+       "stream_gauge": 125,
+       "tide_station": 13,
+       "buoy": 25,
+       "weather_station": 149,
+       "weather_alert": 0,
+       "earthquake": 0,
+       "tropical_cyclone": 0,
+       "aircraft": 0
+      },
+      "drawn": 53,
+      "dots": 0,
+      "clustered": 13,
+      "hidden": 1,
+      "labels": 2,
+      "cellM": 512,
+      "ms": 1.45
+     }
+    ]
+   },
+   "frameMs": 2000,
+   "ok": true,
+   "ms": 528624,
+   "logs": [
+    "[warning] Ignoring inability to install OPFS sqlite3_vfs: Cannot install OPFS: Missing SharedArrayBuffer and/or Atomics. The server must emit the COOP/COEP response headers to enable those. See https://sqlite.org/wasm/doc/trunk/persistence.md#coop-co",
+    "[shot] ready flag never set"
+   ],
+   "failedHosts": {}
+  }
+ ]
+}
