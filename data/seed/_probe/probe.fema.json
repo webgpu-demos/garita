@@ -1,0 +1,126 @@
+{
+ "nfip_claims": {
+  "rows": 25387,
+  "asOf": "2026-09-08",
+  "island": {
+   "claims": 25387,
+   "with_payment": 18592,
+   "paid_usd": 161097734.11,
+   "building_usd": 75998810.23,
+   "contents_usd": 85098923.88,
+   "icc_usd": 0,
+   "maria_claims": 712,
+   "maria_paid_usd": 27773782.73
+  },
+  "no_location": {
+   "claims": 3966,
+   "paid_usd": 14769930.37,
+   "maria_claims": 35,
+   "maria_paid_usd": 760748.55
+  },
+  "located_by_county_code_only": 1044,
+  "tracts": 658,
+  "in_tracts_not_current": 1281,
+  "no_amount_recorded": 6703,
+  "negative_amounts": 1,
+  "sep2017": {
+   "claims": 713,
+   "named_maria": 704,
+   "other": {
+    "Hurricane Irma": 6,
+    "no event name": 3
+   }
+  },
+  "top": "San Juan 3094, Vega Baja 2179, Toa Baja 2043, Carolina 1065, Humacao 1060"
+ },
+ "nfip_policies": {
+  "pr_terms_all_years": 315431,
+  "pulled": 7042,
+  "filter": "propertyState eq 'PR' and policyTerminationDate gt '2026-09-08T00:00:00.000Z'",
+  "in_force_on": "2026-09-08",
+  "island": {
+   "contracts": 6625,
+   "units": 10743,
+   "b": 1886036000,
+   "c": 162531000,
+   "prem": 3305802
+  },
+  "no_location": {
+   "contracts": 7,
+   "units": 7,
+   "b": 1075000,
+   "c": 0,
+   "prem": 1934
+  },
+  "not_yet_effective": 325,
+  "cancelled_by_date": 92,
+  "ended_by_date": 0,
+  "tracts": 703,
+  "in_tracts_not_current": 0,
+  "top": "Carolina 1097, San Juan 992, Ponce 462, Toa Baja 349, Caguas 303"
+ },
+ "public_assistance": {
+  "rows": 23021,
+  "records": 629,
+  "disasters": 20,
+  "projects": 23020,
+  "federal_share_obligated_usd": 39039384271.45,
+  "project_amount_usd": 58121616614.39,
+  "island_wide": {
+   "projects": 5792,
+   "federal_usd": 30387240034.51
+  },
+  "maria_4339": {
+   "projects": 11361,
+   "federal_usd": 35572962598.53,
+   "island_wide_federal_usd": 28784161107.89,
+   "municipio_federal_usd": 6788801490.64
+  },
+  "left_out": {
+   "n": 1,
+   "fed": 43157.14
+  },
+  "status": {
+   "Eligible": 23016,
+   "Withdrawn": 4,
+   "Ineligible": 1
+  },
+  "negative_rows": 47,
+  "last_refresh": "2026-10-10T15:06:56.435Z"
+ },
+ "hazard_mitigation": {
+  "rows": 1258,
+  "records": 358,
+  "total": {
+   "n": 1258,
+   "approved": 769,
+   "obligated": 1049143907.77
+  },
+  "kept_island_level": {
+   "named_island_wide": 166,
+   "no_county": 160,
+   "several_municipios": 36,
+   "not_a_municipio": 2
+  },
+  "status": {
+   "Approved": 601,
+   "Void": 135,
+   "Withdrawn": 31,
+   "Not Approved": 13,
+   "Closed": 161,
+   "Not Approved / Denied": 97,
+   "Not Selected": 15,
+   "Awarded": 5,
+   "Pending": 185,
+   "Ineligible": 7,
+   "Subaward Accepted": 1,
+   "Submitted to FEMA": 6,
+   "Completed": 1
+  },
+  "maria_4339": {
+   "subapplications": 476,
+   "approved": 268,
+   "obligated_usd": 673200719.07
+  }
+ }
+}

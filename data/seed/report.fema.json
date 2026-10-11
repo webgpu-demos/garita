@@ -1,0 +1,90 @@
+{
+ "startedAt": "2026-10-11T04:18:58.976Z",
+ "ontologyVersion": "2026.10.1",
+ "sources": {
+  "nfip": {
+   "status": "ok",
+   "files": [
+    {
+     "file": "data/seed/32-nfip-claims.batch.json",
+     "source": "openfema_nfip_claims",
+     "objects": {
+      "municipio": 78,
+      "tract": 658
+     },
+     "links": 0,
+     "validationErrors": 0,
+     "validationWarnings": 0,
+     "published": true,
+     "note": "OpenFEMA NfipClaims v3, state eq 'PR', 25387 claim records, data as of 2026-09-08. Island total: 25387 claims since 1978, 18592 with a payment, $161,097,734 paid (building $75,998,810, contents $85,098,924, increased cost of compliance $0); nominal dollars, not adjusted for inflation. Summed: amountPaidOnBuildingClaim + amountPaidOnContentsClaim + amountPaidOnIncreasedCostOfComplianceClaim, gross of later recoveries; 6703 records carry no amounts and count as claims with $0 paid; records with a negative amount (FEMA: a reissued check), summed as given: 1. nfip_claims_paid = claims whose three amounts sum to more than zero. Municipio = first five digits of censusGeoid (FEMA's block-group code), else countyCode (1044 records). 3966 claims ($14,769,930) have neither, or a code outside Puerto Rico, and are in no municipio (3448 of them with a loss before 2000): municipio values are a floor. FEMA redacts the address, so nothing finer than a block group is known. Hurricane María = floodEvent names Maria: 712 claims, $27,773,783 paid, of which 35 claims ($760,749) have no municipio. 704 of them have a date of loss in September 2017; September 2017 holds 713 claims in all, the rest being Hurricane Irma 6, no event name 3, which are not counted as María. Tract values use the first eleven digits of censusGeoid and only tracts that exist in the current TIGER set (658 tracts); 1281 located claims carry a tract code that is not current and appear at municipio level only. A claim is one policyholder's filing: not a count of flooded homes, since homes without a policy file nothing."
+    },
+    {
+     "file": "data/seed/33-nfip-policies.batch.json",
+     "source": "openfema_nfip_policies",
+     "objects": {
+      "municipio": 78,
+      "tract": 703
+     },
+     "links": 0,
+     "validationErrors": 0,
+     "validationWarnings": 0,
+     "published": true,
+     "note": "OpenFEMA NfipPolicies v3. Pulled with propertyState eq 'PR' and policyTerminationDate gt '2026-09-08T00:00:00.000Z': 7042 policy terms of the 315431 Puerto Rico terms the dataset holds since 2009; the filter leaves out every term that ended on or before the snapshot date, so no history of past years is kept. In force on 2026-09-08 (the asOfDate FEMA stamps on the records, the latest date the data can speak for) = policyEffectiveDate on or before that date, policyTerminationDate after it, and no cancellationDateOfFloodPolicy on or before it. Pulled but not counted: 325 terms not yet effective on that date, 92 cancelled by it, 0 ended by it. Island total: 6625 policy contracts covering 10743 insured units (FEMA's policyCount: a condominium association contract insures many units), building coverage $1,886,036,000, contents coverage $162,531,000, premium $3,305,802 (totalInsurancePremiumOfThePolicy for the term; fees and surcharges not included). Municipio = first five digits of censusGeoid; this version has no county field. 7 contracts (7 units) have no usable code and are in no municipio, so municipio values are a floor. FEMA says the dataset lags the system of record, so terms that began shortly before the date may still be missing. Tracts: first eleven digits of censusGeoid, current TIGER tracts only (703 tracts; 0 contracts in tract codes that are not current). Derived from redacted records; not FEMA's official policies-in-force count, and private flood insurance is not included."
+    }
+   ],
+   "objects": {
+    "municipio": 156,
+    "tract": 1361
+   },
+   "links": 0,
+   "problems": [],
+   "ms": 11544
+  },
+  "fema_recovery": {
+   "status": "ok",
+   "files": [
+    {
+     "file": "data/seed/34-public-assistance.batch.json",
+     "source": "openfema_pa",
+     "objects": {
+      "pa_record": 629,
+      "municipio": 78
+     },
+     "links": 1238,
+     "validationErrors": 0,
+     "validationWarnings": 0,
+     "published": true,
+     "note": "OpenFEMA PublicAssistanceFundedProjectsDetails v2, stateAbbreviation eq 'PR', 23021 project worksheets (latest lastRefresh 2026-10-10), summed to 629 records over 20 disasters. One record per disaster and municipio, the municipio being the applicant's county as FEMA lists it (where the applicant is, which is not always where the work is). Projects FEMA lists under county \"Statewide\" (5792 projects, $30,387,240,035 federal share) are one island-level record per disaster, linked to the declaration only and never spread over municipios. projects = project worksheets; federal_share_obligated_usd = federalShareObligated; project_amount_usd = projectAmount (estimated total cost, without administrative costs); total_obligated_usd = totalObligated; mitigation_usd = mitigationAmount (Section 406, proposed). Emergency work = categories A and B, permanent work = C to G, by federal share; category Z (management and administrative costs) is in the totals and in by_category only. All rows are summed as given, in nominal dollars: every projectStatus (Eligible 23016, Withdrawn 4, Ineligible 1) and 47 rows with a negative amount (FEMA: adjustments and deobligations). Total: 23020 projects, $39,039,384,271 federal share obligated. Hurricane María (DR-4339): $35,572,962,599, of which $28,784,161,108 island-wide and $6,788,801,491 under municipio applicants. 1 project(s) with $43,157 have a county that is neither Statewide nor a municipio and are left out. Projects still in pre-obligation processing are not in the dataset. municipio.pa_*_maria = the DR-4339 record of the municipio, 0 where no applicant is listed there."
+    },
+    {
+     "file": "data/seed/35-hazard-mitigation.batch.json",
+     "source": "openfema_hma",
+     "objects": {
+      "hma_record": 358
+     },
+     "links": 685,
+     "validationErrors": 0,
+     "validationWarnings": 0,
+     "published": true,
+     "note": "OpenFEMA HmaSubapplications v2 (replaces HazardMitigationAssistanceProjects v4, frozen 2026-08-31), subapplicantState eq 'Puerto Rico', 1258 subapplications of every type (projects, plans, management costs) and status, summed to 358 records. One record per disaster and municipio when benefitingCounties names exactly one municipio. The other 364 subapplications stay in one island-level record per disaster, linked to the declaration only: 166 named Statewide or Puerto Rico, 160 with no county, 36 naming several municipios (not spread), 2 naming something that is not a municipio. Grants with no disaster number (Pre-Disaster Mitigation, Flood Mitigation Assistance, Building Resilient Infrastructure and Communities) have key prefix \"nd\" and no declaration link. subapplications = all rows; approved = status Approved, Awarded, Closed, Completed or Subaward Accepted (769 of 1258); obligated_usd = totalObligatedAmount over all rows ($1,049,143,908 in all); approved_federal_share_usd = federalShareAmount and approved_total_usd = totalSubapplicationAmount of the approved rows only, since on other rows those fields are requests. Status counts: Approved 601, Void 135, Withdrawn 31, Not Approved 13, Closed 161, Not Approved / Denied 97, Not Selected 15, Awarded 5, Pending 185, Ineligible 7, Subaward Accepted 1, Submitted to FEMA 6, Completed 1. Nominal dollars. FEMA: the data are \"subject to a small percentage of human error\"."
+    }
+   ],
+   "objects": {
+    "pa_record": 629,
+    "municipio": 78,
+    "hma_record": 358
+   },
+   "links": 1923,
+   "problems": [
+    "disaster 1798, county \"null\": not Statewide and not a municipio; 1 project(s), $43,157 federal share left out",
+    "benefitingCounties value \"aguadillas\" is not a municipio (1 subapplication(s) kept island-level)",
+    "benefitingCounties value \"ponce pr\" is not a municipio (1 subapplication(s) kept island-level)"
+   ],
+   "ms": 6886
+  }
+ },
+ "replay": [],
+ "finishedAt": "2026-10-11T04:19:17.406Z",
+ "requests": 14,
+ "bytes": 20182426
+}

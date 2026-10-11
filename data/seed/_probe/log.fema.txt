@@ -1,0 +1,36 @@
+[municipios] Counties: 78 rows; fields: MTFCC,OID,GEOID,STATE,COUNTY,COUNTYNS,BASENAME,NAME,LSADC,FUNCSTAT,COUNTYCC,AREALAND,AREAWATER,OBJECTID,STGEOMETRY,CENTLAT,CENTLON,INTPTLAT,INTPTLON
+[nfip] Census Tracts: 981 rows; fields: MTFCC,OID,GEOID,STATE,COUNTY,TRACT,BASENAME,NAME,LSADC,FUNCSTAT,AREALAND,AREAWATER,STGEOMETRY,CENTLAT,CENTLON,INTPTLAT,INTPTLON,OBJECTID
+[nfip] NfipClaims skip 0: 10000
+[nfip] NfipClaims skip 10000: 10000
+[nfip] NfipClaims skip 20000: 5387
+[nfip] NfipPolicies skip 0: 7042
+[nfip] wrote 32-nfip-claims: {"municipio":78,"tract":658} links 0
+[nfip] wrote 33-nfip-policies: {"municipio":78,"tract":703} links 0
+[fema_recovery] DisasterDeclarationsSummaries skip 0: 2116
+[fema_recovery] PublicAssistanceFundedProjectsDetails skip 0: 10000
+[fema_recovery] PublicAssistanceFundedProjectsDetails skip 10000: 10000
+[fema_recovery] PublicAssistanceFundedProjectsDetails skip 20000: 3021
+[fema_recovery] HmaSubapplications skip 0: 1258
+[fema_recovery] wrote 34-public-assistance: {"pa_record":629,"municipio":78} links 1238
+[fema_recovery] wrote 35-hazard-mitigation: {"hma_record":358} links 685
+{
+ "nfip": {
+  "status": "ok",
+  "objects": {
+   "municipio": 156,
+   "tract": 1361
+  },
+  "links": 0,
+  "problems": 0
+ },
+ "fema_recovery": {
+  "status": "ok",
+  "objects": {
+   "pa_record": 629,
+   "municipio": 78,
+   "hma_record": 358
+  },
+  "links": 1923,
+  "problems": 3
+ }
+}
