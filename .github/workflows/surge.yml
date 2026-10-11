@@ -1,0 +1,61 @@
+name: surge
+# Hazard stage `surge`: samples NOAA NHC's National Storm Surge Risk Maps for Puerto Rico (categories 1 to 5) at every
+# building and asset, bakes the overlay tiles, and publishes them to gh-pages (see pipeline/hazards/README.md).
+# Owns on gh-pages: data/hazards/surge/**, tiles/surge/**
+on:
+  push:
+    branches: [pipe-surge]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: surge
+  cancel-in-progress: false
+jobs:
+  surge:
+    # Free on a public repository; private repositories are billed by the minute. Never run there.
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Site (sparse checkout of gh-pages)
+        run: |
+          git clone --quiet --depth 1 --filter=blob:none --no-checkout --single-branch --branch gh-pages \
+            "https://github.com/${GITHUB_REPOSITORY}.git" site
+          cd site
+          git sparse-checkout set tiles/bld data/seed data/osm data/hazards/surge
+          git checkout --quiet gh-pages
+          du -sh tiles/bld data/seed data/osm
+      - name: Install
+        run: pip install -q rasterio numpy pillow
+      - name: Build
+        run: |
+          mkdir -p out/data/hazards/surge work
+          set +e
+          timeout 17m python3 pipeline/hazards/surge.py --site "$PWD/site" --out "$PWD/out" --work "$PWD/work"
+          rc=$?
+          echo "build exit code $rc (run ${GITHUB_RUN_ID}, ${GITHUB_SHA::7})" | tee -a out/data/hazards/surge/log.txt
+          du -sh out/tiles/surge out/data/hazards/surge || true
+          echo "rc=$rc" >> "$GITHUB_ENV"
+          exit $rc
+      - name: Publish to gh-pages
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p out/data/hazards/surge
+          [ -f out/data/hazards/surge/log.txt ] || echo "no log was written (run ${GITHUB_RUN_ID})" > out/data/hazards/surge/log.txt
+          if [ "${rc:-0}" != "0" ] || [ ! -f out/data/hazards/surge/meta.json ] || [ ! -f out/tiles/surge/index.json ]; then
+            # failed build: publish the log only; keep whatever data and tiles were published before
+            mv out/data/hazards/surge/log.txt work/log.txt
+            rm -rf out/data/hazards/surge out/tiles/surge
+            mkdir -p out/data/hazards/surge
+            if [ -d site/data/hazards/surge ]; then cp -r site/data/hazards/surge/. out/data/hazards/surge/; fi
+            cp work/log.txt out/data/hazards/surge/log.txt
+            MSG="surge: build failed, log only (${GITHUB_SHA::7}, run ${GITHUB_RUN_ID})"
+          else
+            MSG="surge: NOAA NHC storm surge risk maps, samples and tiles (${GITHUB_SHA::7}, run ${GITHUB_RUN_ID})"
+          fi
+          bash pipeline/hazards/publish.sh surge "$MSG"
