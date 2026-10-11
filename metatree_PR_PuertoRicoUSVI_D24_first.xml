@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Fugro</origin>
+       <pubdate>20241229</pubdate>
+               <title>USGS_PR_PuertoRicoUSVI_1_D24; Derived Bare Earth DEM</title>
+               <geoform>raster digital data</geoform>
+             </citeinfo>
+           </citation>
+           <descript>
+           <abstract>Products: These are Lidar Point Cloud data for the Puerto Rico Vieques AOI, as part of the required deliverables for the USGS_PR_PuertoRicoUSVI_1_D24 project.
+	   Geographic Extent: Approximately 53.7 square miles  of total Deliverable, containing Vieques/Isla de Vieques. 
+	   Dataset Description: This Puerto Rico project called for the planning, acquisition, processing, and derivative products of lidar data to be collected at an aggregate nominal pulse 
+	   	                spacing (ANPS) of 0.35 meters (8ppsm). Project specifications are based on the U.S. Geological Survey National Geospatial Program Base Lidar Specification 2024 Rev A. The data was developed 
+	   	                based on a horizontal projection/datum of NAD83(2011) / Puerto Rico and Virgin Is. (EPSG: 6566), meters; vertical datum PRVD02, meters. Lidar data was delivered as classified  LAS 1.4 files, formatted 
+	   	                to individual 1000 m x 1000 m tiles, and as tiled bare earth DEMs; all tiled to the same 1000 m x 1000 m schema.  Swath separation images and maximum height surface rasters are included as well in the final deliverables.
+Ground Conditions:  Lidar was collected in Spring of 2024, under cloud, fog, and snow free conditions, with no unusual flooding or inundation. </abstract>
+<purpose>This lidar data will support the United States Geological Survey (USGS) initiatives.</purpose>
+	         <supplinf>USGS Contract No. 140G0221D0010 CONTRACTOR: Fugro Geospatial, Inc. SUBCONTRACTOR: Terrasurv, Inc. Ground control and checkpoints collected by Terrasurv, Inc. All processing was completed by the prime contractor.
+	 
+DEM Raster File Type = GeoTIFF
+Bit Depth/Pixel Type = 32-bit float 
+Raster Cell Size = .5 meter
+Interpolation or Resampling Technique = Triangulated Irregular Network (TIN)
+Network Required Vertical Accuracy = 10 cm NVA</supplinf>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <rngdates>
+          <begdate>20240120</begdate>
+          <enddate>20240328</enddate>
+        </rngdates>
+      </timeinfo>
+      <current>ground condition</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+             <bounding>
+                             <westbc>-65.578313</westbc>
+                             <eastbc>-65.266607</eastbc>
+                             <northbc>18.163884</northbc>
+                             <southbc>18.078078</southbc>
+                         </bounding>
+                         <lboundng>
+                             <leftbc>290509.577601 m</leftbc>
+                             <rightbc>323447.147489 m</rightbc>
+                             <topbc>236797.008981 m</topbc>
+                             <bottombc>227481.534880 m</bottombc>
+                   </lboundng>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>Model</themekey>
+        <themekey>LAS Point Cloud</themekey>
+        <themekey>LAS</themekey>
+        <themekey>Swath LAS</themekey>
+        <themekey>Remote Sensing</themekey>
+        <themekey>Elevation Data</themekey>
+        <themekey>Lidar</themekey>
+        <themekey>Digital Elevation Model</themekey>
+        
+        
+      </theme>
+   <place>
+           <placekt>Geographic Names Information System</placekt>
+           <placekey>Puerto Rico</placekey>
+   	<placekey>Virgin Islands</placekey>
+           <placekey>Vieques</placekey>
+      </place>
+    </keywords>
+    <accconst>No restrictions apply to these data.</accconst>
+    <useconst>None. However, users should be aware that temporal changes may have occurred since this dataset was collected and that some parts of these data may no longer represent actual surface conditions. Users should not use these data for critical 
+    applications without a full awareness of its limitations. Any conclusions drawn from the analysis of this information are not the responsibility of the U.S. Geological Survey or its partners. Acknowledgement of the U.S. Geological Survey would be 
+    appreciated for products derived from these data.</useconst>
+     <ptcontac>
+               <cntinfo>
+                    <cntorgp>
+                    <cntorg>Fugro</cntorg>
+                    <cntper>Suzee Parsons</cntper>
+                    </cntorgp>
+                    <cntaddr>
+                    <addrtype>Mailing and physical address</addrtype>
+                    <address>4991 New Design Road, Suite 105</address>
+                    <city>Frederick</city>
+                    <state>MD</state>
+                    <postal>21703</postal>
+                    <country>USA</country>
+                    </cntaddr>
+                    <cntvoice>(301)-948-8550</cntvoice>
+                    <cntfax>(301)-963-2064</cntfax>
+                    <cntemail>s.parsons@fugro.com</cntemail>
+                    <hours>Monday to Friday 8:00am to 5:00pm EST</hours>
+    </cntinfo>
+    </ptcontac>
+  </idinfo>
+  <dataqual>
+ <logic>Compliance with the accuracy standard was ensured by the collection of ground control and the establishment of GPS base stations in the project area. The following checks were performed:  1) The lidar data accuracy was validated by 
+    performing a full boresight adjustment and then checking it against the ground control prior to generating a digital terrain model (DTM) or other products.  2) Lidar elevation data was validated through an inspection of edge matching and 
+    visual inspection for quality (artifact removal). The following software was used for the validation:  1) RiProcess 1.8.3, RiWorld 5.0.2, RiAnalyze 6.2, RiServer 1.99.5; and 2) Fugro proprietary software.</logic>
+    <complete>A complete iteration of processing (GPS/IMU Processing, Raw Lidar Data Processing, and Verification of Coverage and Data Quality) was performed to ensure that the acquired data was complete, uncorrupted, and that the entire project 
+    area had been covered without gaps between flight lines. No void areas or missing data exist. The raw point cloud is of good quality and data passes Vertical Accuracy requirements.
+A visual qualitative assessment was performed to ensure data completeness. No void areas or missing data exist. The point cloud is of good quality and data passes Vertical Accuracy requirements.  A visual qualitative assessment was performed to ensure data completeness. No void areas or missing data exist. 
+The DEM raster files cover the entire project delivery boundary. The pixels that fall outside the project delivery boundary are set to Void with a unique “NODATA” value. The value is identified in the file headers. There are no void pixels 
+inside the project boundary. A visual qualitative assessment was performed to ensure data completeness. No void areas or missing data exist. The bare earth surface is of good quality and passes Vertical Accuracy requirements.</complete>
+    <posacc>
+      <vertacc>
+        <vertaccr>This data set was tested to meet ASPRS Positional Accuracy Standards for Digital 
+Geospatial Data, Edition 2 (2023) for a 10(cm) RMSEV Vertical Accuracy Class. Actual NVA accuracy was 
+found to be RMSEv = 3.2 cm. Actual VVA accuracy was found to be RMSEv = 3.0 cm</vertaccr>
+      </vertacc>
+    </posacc>
+    <lineage>
+      <srcinfo>
+              <srccite>
+                <citeinfo>
+                  <origin>Fugro</origin>
+                  <pubdate>20241229</pubdate>
+                  <title>USGS_PR_USVI_Lidar</title>
+                  <geoform>Vector digital data</geoform>
+                  <pubinfo>
+                    <pubplace>Fugro; Rapid City, SD</pubplace>
+                    <publish>Fugro; Aviation Department</publish>
+                  </pubinfo>
+                </citeinfo>
+              </srccite>
+              <typesrc>External hard drive</typesrc>
+              <srctime>
+                <timeinfo>
+                  <mdattim>
+                    <sngdate>
+                      <caldate>20240120</caldate>
+                    </sngdate>
+                    <sngdate>
+                      <caldate>20240328</caldate>
+                    </sngdate>
+                  </mdattim>
+                </timeinfo>
+                <srccurr>ground condition</srccurr>
+              </srctime>
+              <srccitea>Aerial Lidar Acquisition</srccitea>
+      	<srccontr>Fugro collected LMS derived lidar from January 20th, 2024 to March 28th 2024 for the Puerto Rico project, Vieques AOI with 0.35 meters ANPS. Data was collected when environmental conditions meet the criteria specified. To be specific, 
+              the following conditions existed prior to launch of the aircraft: 1) Cloud and fog-free between the aircraft and ground, 2) Snow free, 3) No unusual flooding or inundation.</srccontr>
+      </srcinfo>
+	      <srcinfo>
+	              <srccite>
+	                <citeinfo>
+	                  <origin>Terrasurv, Inc.</origin>
+	                  <pubdate>20240321</pubdate>
+	                  <title>Puerto Rico and USVI USGS Report of Survey</title>
+	                  <geoform>Vector digital data and tabular digital data</geoform>
+	                  <pubinfo>
+	                    <pubplace>Terrasurv, Inc.; Pittsburgh, PA</pubplace>
+	                    <publish>Terrasurv, Inc.</publish>
+	                  </pubinfo>
+	                </citeinfo>
+	              </srccite>
+	              <typesrc>Electronic mail system</typesrc>
+	              <srctime>
+	                <timeinfo>
+	                  <rngdates>
+	                    <begdate>20240128</begdate>
+	                    <enddate>20240307</enddate>
+	                  </rngdates>
+	                </timeinfo>
+	                <srccurr>ground condition</srccurr>
+	              </srctime>
+	              <srccitea>Ground Control</srccitea>
+	      	 <srccontr>Under Fugro’s direction, all surveying activities were performed by Fugro's approved ID/IQ subcontractor Terrasurv, Inc. A total of 71 ground control points to support the lidar collection, along with 73 VVA and 97 NVA checkpoints that were collected. 
+	      	        The National Spatial Reference System (NSRS) was used to provide control for the network. The 
+	      	horizontal datum for processing was the North American Datum of 1983 – NAD83 (2011), epoch 
+	      	2010.0. The vertical datum was the Puerto Rico Vertical Datum of 2002 (PRVD02), realized with 
+	      	the GEOID18 geoid model from the National Geodetic Survey (NGS).
+	      	
+	      	For Vieques, 4 ground control points, 2 NVA, 2 VVA, 1 Base, and 1 NSRS control were collected inside the AOI.
+	      	
+	      	</srccontr>
+      </srcinfo>
+            <procstep>
+              <procdesc>The bare earth DEM was generated using the lidar bare earth points to a resolution of .5 meter. This process was done in batch. The entire data set was checked for complete 
+              project coverage. Once the data was checked, the tiles were then converted to industry-standard, GIS-compatible, 32-bit floating point raster format. Georeference information is included in the raster files. Void areas (i.e., areas outside the project 
+              boundary but within the tiling scheme) are coded using a unique “NODATA” value.</procdesc>
+              <srcused>Automated Lidar Data</srcused>
+              <procdate>20241229</procdate>
+        <srcprod>Derived Bare Earth DEM</srcprod>
+        <proccont>
+   <cntinfo>
+                  <cntorgp>
+                  <cntorg>Fugro</cntorg>
+                  <cntper>Suzee Parsons</cntper>
+                  </cntorgp>
+                  <cntaddr>
+                  <addrtype>Mailing and physical address</addrtype>
+                  <address>4991 New Design Road, Suite 105</address>
+                  <city>Frederick</city>
+                  <state>MD</state>
+                  <postal>21703</postal>
+                  <country>USA</country>
+                  </cntaddr>
+                  <cntvoice>(301)-948-8550</cntvoice>
+                  <cntfax>(301)-963-2064</cntfax>
+                  <cntemail>s.parsons@fugro.com</cntemail>
+                  <hours>Monday to Friday 8:00am to 5:00pm EST</hours>
+</cntinfo>
+        </proccont>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Raster</direct>
+<rastinfo>
+<rasttype>Grid Cell</rasttype>
+<rowcount>2000</rowcount>
+<colcount>2000</colcount>
+</rastinfo>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <gridsys>
+      	<gridsysn>other grid system</gridsysn>
+      	<spcs>
+      	<spcszone>6566</spcszone>
+      	<lambertc>
+      	<stdparll>+18.4333333333333</stdparll>
+      	<stdparll>+18.0333333333333</stdparll>
+      	<longcm>-66.4333333333333</longcm>
+      	<latprjo>+17.8333333333333</latprjo>
+      	<feast>200000.00000000</feast>
+      	<fnorth>200000.00000000</fnorth>
+      	</lambertc>
+      	</spcs>
+</gridsys> 
+        <planci>
+          <plance>row and column</plance>
+          <coordrep>
+            <absres>.5</absres>
+            <ordres>.5</ordres>
+          </coordrep>
+          <plandu>meters</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>North American Datum of 1983 (National Spatial Reference System 2011)</horizdn>
+        <ellips>Geodetic Reference System 80</ellips>
+        <semiaxis>6378137</semiaxis>
+        <denflat>298.257222101</denflat>
+      </geodetic>
+    </horizsys>
+    <vertdef>
+      <altsys>
+        <altdatum>Puerto Rico Vertical Datum of 2002</altdatum>
+        <altres>0.01</altres>
+        <altunits>meters</altunits>
+        <altenc>Explicit elevation coordinate included with horizontal coordinates</altenc>
+      </altsys>
+    </vertdef>
+  </spref>
+  <metainfo>
+    <metd>20241229</metd>
+    <metrd>20241229</metrd>
+    <metc>
+    <cntinfo>
+                   <cntorgp>
+                   <cntorg>Fugro</cntorg>
+                   <cntper>Suzee Parsons</cntper>
+                   </cntorgp>
+                   <cntaddr>
+                   <addrtype>Mailing and physical address</addrtype>
+                   <address>4991 New Design Road, Suite 105</address>
+                   <city>Frederick</city>
+                   <state>MD</state>
+                   <postal>21703</postal>
+                   <country>USA</country>
+                   </cntaddr>
+                   <cntvoice>(301)-948-8550</cntvoice>
+                   <cntfax>(301)-963-2064</cntfax>
+                   <cntemail>s.parsons@fugro.com</cntemail>
+                   <hours>Monday to Friday 8:00am to 5:00pm EST</hours>
+</cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <metac>None</metac>
+    <metuc>None</metuc>
+    <metsi>
+      <metscs>None</metscs>
+      <metsc>Unclassified</metsc>
+      <metshd>None</metshd>
+    </metsi>
+    <metextns>
+      <onlink>None</onlink>
+      <metprof>None</metprof>
+    </metextns>
+  </metainfo>
+</metadata>

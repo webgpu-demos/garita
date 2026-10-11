@@ -1,0 +1,106 @@
+TIFFReadDirectory: Warning, Unknown field with tag 33550 (0x830e) encountered.
+TIFFReadDirectory: Warning, Unknown field with tag 33922 (0x8482) encountered.
+TIFFReadDirectory: Warning, Unknown field with tag 34735 (0x87af) encountered.
+TIFFReadDirectory: Warning, Unknown field with tag 34737 (0x87b1) encountered.
+TIFFReadDirectory: Warning, Unknown field with tag 42112 (0xa480) encountered.
+TIFFReadDirectory: Warning, Unknown field with tag 42113 (0xa481) encountered.
+TIFFReadDirectory: Warning, Unknown field with tag 42113 (0xa481) encountered.
+TIFFReadDirectory: Warning, Unknown field with tag 42113 (0xa481) encountered.
+TIFFReadDirectory: Warning, Unknown field with tag 42113 (0xa481) encountered.
+TIFFReadDirectory: Warning, Unknown field with tag 42113 (0xa481) encountered.
+TIFFReadDirectory: Warning, Unknown field with tag 42113 (0xa481) encountered.
+=== TIFF directory 0 ===
+TIFF Directory at offset 0xc0 (192)
+  Image Width: 10012 Image Length: 10012
+  Tile Width: 512 Tile Length: 512
+  Bits/Sample: 32
+  Sample Format: IEEE floating point
+  Compression Scheme: LZW
+  Photometric Interpretation: min-is-black
+  Samples/Pixel: 1
+  Planar Configuration: single image plane
+  Tag 33550: 1.000000,1.000000,0.000000
+  Tag 33922: 0.000000,0.000000,0.000000,799993.999954,2050006.000018,0.000000
+  Tag 34735: 1,1,0,7,1024,0,1,1,1025,0,1,1,1026,34737,21,0,2049,34737,6,21,2054,0,1,9102,3072,0,1,26919,3076,0,1,9001
+  Tag 34737: NAD83 / UTM zone 19N|NAD83|
+  GDAL Metadata: <GDALMetadata>
+  <Item name="STATISTICS_MAXIMUM" sample="0">46.153301239014</Item>
+  <Item name="STATISTICS_MEAN" sample="0">3.4657631563797</Item>
+  <Item name="STATISTICS_MINIMUM" sample="0">-10.104206085205</Item>
+  <Item name="STATISTICS_STDDEV" sample="0">5.0586105227771</Item>
+  <Item name="STATISTICS_VALID_PERCENT" sample="0">28.22</Item>
+</GDALMetadata>
+
+  GDAL NoDataValue: -999999
+  Predictor: floating point predictor 3 (0x3)
+
+=== TIFF directory 1 ===
+TIFF Directory at offset 0x3c4 (964)
+  Subfile Type: reduced-resolution image (1 = 0x1)
+  Image Width: 5006 Image Length: 5006
+  Tile Width: 512 Tile Length: 512
+  Bits/Sample: 32
+  Sample Format: IEEE floating point
+  Compression Scheme: LZW
+  Photometric Interpretation: min-is-black
+  Samples/Pixel: 1
+  Planar Configuration: single image plane
+  GDAL NoDataValue: -999999
+  Predictor: floating point predictor 3 (0x3)
+
+=== TIFF directory 2 ===
+TIFF Directory at offset 0x486 (1158)
+  Subfile Type: reduced-resolution image (1 = 0x1)
+  Image Width: 2503 Image Length: 2503
+  Tile Width: 512 Tile Length: 512
+  Bits/Sample: 32
+  Sample Format: IEEE floating point
+  Compression Scheme: LZW
+  Photometric Interpretation: min-is-black
+  Samples/Pixel: 1
+  Planar Configuration: single image plane
+  GDAL NoDataValue: -999999
+  Predictor: floating point predictor 3 (0x3)
+
+=== TIFF directory 3 ===
+TIFF Directory at offset 0x548 (1352)
+  Subfile Type: reduced-resolution image (1 = 0x1)
+  Image Width: 1251 Image Length: 1251
+  Tile Width: 512 Tile Length: 512
+  Bits/Sample: 32
+  Sample Format: IEEE floating point
+  Compression Scheme: LZW
+  Photometric Interpretation: min-is-black
+  Samples/Pixel: 1
+  Planar Configuration: single image plane
+  GDAL NoDataValue: -999999
+  Predictor: floating point predictor 3 (0x3)
+
+=== TIFF directory 4 ===
+TIFF Directory at offset 0x60a (1546)
+  Subfile Type: reduced-resolution image (1 = 0x1)
+  Image Width: 625 Image Length: 625
+  Tile Width: 512 Tile Length: 512
+  Bits/Sample: 32
+  Sample Format: IEEE floating point
+  Compression Scheme: LZW
+  Photometric Interpretation: min-is-black
+  Samples/Pixel: 1
+  Planar Configuration: single image plane
+  GDAL NoDataValue: -999999
+  Predictor: floating point predictor 3 (0x3)
+
+=== TIFF directory 5 ===
+TIFF Directory at offset 0x6cc (1740)
+  Subfile Type: reduced-resolution image (1 = 0x1)
+  Image Width: 312 Image Length: 312
+  Tile Width: 512 Tile Length: 512
+  Bits/Sample: 32
+  Sample Format: IEEE floating point
+  Compression Scheme: LZW
+  Photometric Interpretation: min-is-black
+  Samples/Pixel: 1
+  Planar Configuration: single image plane
+  GDAL NoDataValue: -999999
+  Predictor: floating point predictor 3 (0x3)
+

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE metadata SYSTEM "http://www.fgdc.gov/metadata/fgdc-std-001-1998.dtd">
+
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>USGS</origin>
+        <pubdate>201712</pubdate>
+        <pubtime>Unknown</pubtime>
+        <title>Hydro-Flattened Digital Elevation Models (DEMs)</title>
+        <geoform>Elevation Data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Leading Edge Geomatics (LEG) collected 3451 square miles in Puerto Rico. The nominal pulse spacing for this project was 1 point every 0.7 meters.  Dewberry used proprietary procedures to classify the LAS according to project specifications:  0-Never Classified, 1-Unclassified, 2-Ground, 7-Low Noise, 9-Water, 10-Ignored Ground due to breakline proximity, 17-Bridges, 18-High Noise. Dewberry produced 3D breaklines and combined these with the final lidar data to produce seamless hydro flattened DEMs for the project area. The data was formatted according to the USNG tile naming convention with each tile covering an area of 1,500 meters by 1,500 meters.  A total of 4,714 tiles were produced for the entire Puerto Rico project. An interim delivery was submitted to USGS in December 2016. There are 2,048 tiles in the tile grid, 1,995 LAS files, and 1,941 DEMs included in this second delivery. The discrepancy between the tile count and the LAS/DEM files is because several tiles cover only open water.</abstract>
+      <purpose>The purpose of this lidar data was to produce high accuracy 3D elevation products, including tiled lidar in LAS 1.4 format, 3D breaklines, and 1 meter cell size hydro flattened Digital Elevation Models (DEMs).  All products follow and comply with USGS Lidar Base Specification Version 1.2.</purpose>
+      <supplinf>A complete description of this dataset is available in the Final Project Report submitted to the U.S. Geological Survey.</supplinf>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <rngdates>
+          <begdate>20160126</begdate>
+          <enddate>20170316</enddate>
+        </rngdates>
+      </timeinfo>
+      <current>ground condition</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>As needed</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-67.029619</westbc>
+        <eastbc>-65.510515</eastbc>
+        <northbc>18.416085</northbc>
+        <southbc>17.871778</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>DTM</themekey>
+        <themekey>Elevation</themekey>
+        <themekey>Lidar</themekey>
+        <themekey>LAS</themekey>
+        <themekey>DEM</themekey>
+        <themekey>Hydro Flattened</themekey>
+        <themekey>Breaklines</themekey>
+      </theme>
+      <place>
+        <placekt>None</placekt>
+        <placekey>Puerto Rico</placekey>
+        <placekey>Vieques</placekey>
+        <placekey>Culebra</placekey>
+        <placekey>Isla de Mona</placekey>
+        <placekey>Isla de Desecheo</placekey>
+        <placekey>Isla de Muertos</placekey>
+        <placekey>Cabeza de Pero</placekey>
+        <placekey>Cayo Icacos</placekey>
+        <placekey>USA</placekey>
+      </place>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>This data was produced for the USGS according to specific project requirements.  This information is provided "as is".   Further documentation of this data can be obtained by contacting: USGS/NGTOC, 1400 Independence Road, Rolla, MO 65401.  Telephone (573) 308-3756.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>USGS</cntorg>
+        </cntorgp>
+        <cntpos>USGS NGTOC</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical address</addrtype>
+          <address>1400 Independence Road</address>
+          <city>Rolla</city>
+          <state>MO</state>
+          <postal>65401</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>(573) 308-3756</cntvoice>
+        <cntemail>gdunn@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <native>Microsoft Windows 7 Enterprise Service Pack 1; ESRI ArcCatalog 10.3</native>
+  </idinfo>
+  <dataqual>
+    <logic>Data covers the tile scheme provided for the second delivery.</logic>
+    <complete>A visual qualitative assessment was performed to ensure data completeness and full tiles. There are known voids in this dataset which have been accepted by USGS. These voids are due to persistent cloud cover which prevented an area in the southeast portion of the mainland from being acquired with lidar data. A shapefile defining the full void extent is included in the deliverables.</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>The DEMs are derived from the source lidar and 3D breaklines created from the lidar.  Horizontal accuracy is not performed on the DEMs or breaklines.  
+
+Only checkpoints photo-identifiable in the intensity imagery can be used to test the horizontal accuracy of the lidar.  Photo-identifiable checkpoints in intensity imagery typically include checkpoints located at the ends of paint stripes on concrete or asphalt surfaces or checkpoints located at 90 degree corners of different reflectivity, e.g. a sidewalk corner adjoining a grass surface.  The xy coordinates of checkpoints, as defined in the intensity imagery, are compared to surveyed xy coordinates for each photo-identifiable checkpoint.  These differences are used to compute the tested horizontal accuracy of the lidar.  As not all projects contain photo-identifiable checkpoints, the horizontal accuracy of the lidar cannot always be tested.</horizpar>
+        <qhorizpa>
+          <horizpav>21.6 cm</horizpav>
+          <horizpae>The DEMs are derived from the source lidar and 3D breaklines created from the lidar.  Horizontal accuracy is not performed on the DEMs or breaklines. Lidar vendors calibrate their lidar systems during installation of the system and then again for every project acquired.  Typical calibrations include cross flights that capture features from multiple directions that allow adjustments to be performed so that the captured features are consistent between all swaths and cross flights from all directions.   
+
+This data set was produced to meet ASPRS Positional Accuracy Standards for Digital Geospatial Data (2014) for a 41 cm RMSEx/RMSEy Horizontal Accuracy Class which equates to Positional Horizontal Accuracy = +/- 1 meter at a 95% confidence level.  Three (3) checkpoints were photo-identifiable but do not produce a statistically significant tested horizontal accuracy value. Using this small sample set of photo-identifiable checkpoints, positional accuracy of this dataset was found to be RMSEx = 7.9 cm and RMSEy = 9.7 cm which equates to +/- 21.6 cm at 95% confidence level.  While not statistically significant, the results of the small sample set of checkpoints are within the produced to meet horizontal accuracy.</horizpae>
+        </qhorizpa>
+      </horizpa>
+      <vertacc>
+        <vertaccr>The DEMs are derived from the source lidar and 3D breaklines created from the lidar.  The DEMs are created using controlled and tested methods to limit the amount of error introduced during DEM production so that any differences identified between the source lidar and final DEMs can be attributed to interpolation differences.  DEMs are created by averaging several lidar points within each pixel which may result in slightly different elevation values at a given location when compared to the source LAS, which is tested by comparing survey checkpoints to a triangulated irregular network (TIN) that is created from the lidar ground points.  TINs do not average several lidar points together but interpolate (linearly) between two or three points to derive an elevation value. 
+
+The vertical accuracy of the final bare earth DEMs was tested by Dewberry with 212 independent checkpoints. The same checkpoints that were used to test the source lidar data were used to validate the vertical accuracy of the final DEM products.  The survey checkpoints are evenly distributed throughout the project area and are located in areas of non-vegetated terrain, including bare earth, open terrain, and urban terrain (127), and vegetated terrain, including forest, brush, tall weeds, crops, and high grass (85).  The vertical accuracy is tested by extracting the elevation of the pixel that contains the x/y coordinates of the checkpoint and comparing these DEM elevations to the surveyed elevations.
+
+All checkpoints located in non-vegetated terrain were used to compute the Non-vegetated Vertical Accuracy (NVA).  Project specifications required a NVA of 19.6 cm at the 95% confidence level based on RMSEz (10 cm) x 1.9600.  All checkpoints located in vegetated terrain were used to compute the Vegetated Vertical Accuracy (VVA).  Project specifications required a VVA of 29.4 cm based on the 95th percentile.</vertaccr>
+        <qvertpa>
+          <vertaccv>18.5 cm</vertaccv>
+          <vertacce>This DEM dataset was tested to meet ASPRS Positional Accuracy Standards for Digital Geospatial Data (2014) for a 10 cm RMSEz Vertical Accuracy Class.  Actual NVA accuracy was found to be RMSEz =9.4 cm, equating to +/- 18.5 cm at 95% confidence level.</vertacce>
+        </qvertpa>
+        <qvertpa>
+          <vertaccv>23.1 cm</vertaccv>
+          <vertacce>This DEM dataset was tested to meet ASPRS Positional Accuracy Standards for Digital Geospatial Data (2014) for a 10 cm RMSEz Vertical Accuracy Class.  Actual VVA accuracy was found to be +/- 23.1 cm at the 95th percentile.
+
+The 5% outliers consisted of 5 checkpoints that are larger than the 95th percentile. These checkpoints have DZ values ranging between -33.6 cm and 54.1 cm.</vertacce>
+        </qvertpa>
+      </vertacc>
+    </posacc>
+    <lineage>
+      <procstep>
+        <procdesc>Data for the Puerto Rico Lidar project was acquired by Leading Edge Geomatics, Inc (LEG).
+
+The project area included approximately 3,451 contiguous square miles or 8,938 square kilometers for Puerto Rico and smaller municipal islands. 
+Lidar sensor data were collected with the Riegl 680i and Riegl 780 lidar systems.  The data was delivered in the Puerto Rico State Plane coordinate system, meters, horizontal datum NAD83 (2011), vertical datum PRVD02, Geoid 12B. The lidar data were acquired over two different acquisition campaigns. The first campaign occurred from January 26, 2016 through May 15, 2016 and acquired two thousand three hundred sixteen (2,316) square miles of topographic lidar data. The second campaign occurred from December 8, 2016 through March 16, 2017 and acquired one thousand seven hundred seventy nine (1,779) square miles of topographic lidar data. Deliverables for the project included a raw (unclassified) calibrated lidar point cloud, survey control, and a final acquisition/calibration report.
+
+The calibration process considered all errors inherent with the equipment including errors in GPS, IMU, and sensor specific parameters. Adjustments were made to achieve a flight line to flight line data match (relative calibration) and subsequently adjusted to control for absolute accuracy. Process steps to achieve this are as follows: 
+Rigorous lidar calibration: all sources of error such as the sensor's ranging and torsion parameters, atmospheric variables, GPS conditions, and IMU offsets were analyzed and removed to the highest level possible. This method addresses all errors, both vertical and horizontal in nature. Ranging, atmospheric variables, and GPS conditions affect the vertical position of the surface, whereas IMU offsets and torsion parameters affect the data horizontally. The horizontal accuracy is proven through repeatability: when the position of features remains constant no matter what direction the plane was flying and no matter where the feature is positioned within the swath, relative horizontal accuracy is achieved. 
+Absolute horizontal accuracy is achieved through the use of differential GPS with base lines shorter than 25 miles. The base station is set at a temporary monument that is 'tied-in' to the CORS network. The same position is used for every lift, ensuring that any errors in its position will affect all data equally and can therefore be removed equally. 
+
+Vertical accuracy is achieved through the adjustment to ground control survey points within the finished product. Although the base station has absolute vertical accuracy, adjustments to sensor parameters introduces vertical error that must be normalized in the final (mean) adjustment.
+
+The withheld and overlap bits are set and all headers, appropriate point data records, and variable length records, including spatial reference information, are updated in GeoCue software and then verified using proprietary Dewberry tools.</procdesc>
+        <procdate>201710</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Dewberry utilizes a variety of software suites for inventory management, classification, and data processing. All lidar related processes begin by importing the data into the GeoCue task management software.  The swath data is tiled according to project specifications (1,500 m x 1,500 m).  The tiled data is then opened in Terrascan where Dewberry classifies edge of flight line points that may be geometrically unusable with the withheld bit.  These points are separated from the main point cloud so that they are not used in the ground algorithms.  Overage points are then identified with the overlap bit.  Dewberry then uses proprietary ground classification routines to remove any non-ground points and generate an accurate ground surface. The ground routine consists of three main parameters (building size, iteration angle, and iteration distance); by adjusting these parameters and running several iterations of this routine an initial ground surface is developed. The building size parameter sets a roaming window size. Each tile is loaded with neighboring points from adjacent tiles and the routine classifies the data section by section based on this roaming window size. The second most important parameter is the maximum terrain angle, which sets the highest allowed terrain angle within the model. As part of the ground routine, low noise points are classified to class 7 and high noise points are classified to class 18.  Once the ground routine has been completed, bridge decks are classified to class 17 using bridge breaklines compiled by Dewberry.  A manual quality control routine is then performed using hillshades, cross-sections, and profiles within the Terrasolid software suite. After this QC step, a peer review is performed on all tiles and a supervisor manual inspection is completed on a percentage of the classified tiles based on the project size and variability of the terrain. After the ground classification and bridge deck corrections are completed, the dataset is processed through a water classification routine that utilizes breaklines compiled by Dewberry to automatically classify hydrographic features.  The water classification routine selects ground points within the breakline polygons and automatically classifies them as class 9, water. During this water classification routine, points that are within 1x NPS or less of the hydrographic features are moved to class 10, an ignored ground due to breakline proximity.  A final QC is performed on the data.  All headers, appropriate point data records, and variable length records, including spatial reference information, are updated in GeoCue software and then verified using proprietary Dewberry tools.
+
+
+The data was classified as follows:
+Class 1 = Unclassified.  This class includes vegetation, buildings, noise etc.
+Class 2 = Ground
+Class 7= Low Noise
+Class 9 = Water
+Class 10 = Ignored Ground due to breakline proximity
+Class 17 = Bridge Decks
+Class 18 = High Noise
+
+The LAS header information was verified to contain the following:
+Class (Integer)
+Adjusted GPS Time (0.0001 seconds)
+Easting (0.003 m)
+Northing (0.003 m)
+Elevation (0.003 m)
+Echo Number (Integer)
+Echo (Integer)
+Intensity (16 bit integer)
+Flight Line (Integer)
+Scan Angle (degree)</procdesc>
+        <procdate>201711</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Dewberry used GeoCue software to produce intensity imagery and raster stereo models from the source lidar for use in lidargrammetry techniques.  Dewberry then produced full point cloud intensity imagery, bare earth ground models, density models, and slope models.  These files were ingested into eCognition software, segmented into polygons, and training samples were created to identify water.  eCognition used the training samples and defined parameters to identify water segments throughout the project area.  Water segments were then reviewed for completeness, separated into project defined feature classes, merged, and smoothed.  Elevations derived from a bare earth lidar terrain were applied to each feature for 3D attribution. 
+
+The delineation of lakes and ponds and tidal waters, or other water bodies at a constant elevation, was achieved using eCognition software. Lidargrammetry was used to monotonically collect streams and rivers, or features that have gradient 3D elevations.  All breaklines were collected according to specifications for the project.</procdesc>
+        <procdate>201711</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Dewberry digitzed 2D bridge deck polygons from the intensity imagery and used these polygons to classify bridge deck points in the LAS to class 17.  As some bridges are hard to identify in intensity imagery, Dewberry then used ESRI software to generate bare earth elevation rasters.  Bare earth elevation rasters do not contain bridges.  As bridges are removed from bare earth DEMs but DEMs are continuous surfaces, the area between bridge abutments must be interpolated.  The rasters are reviewed to ensure all locations where the interpolation in a DEM indicates a bridge have been collected in the 2D bridge deck polygons.</procdesc>
+        <procdate>201711</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>The bridge deck polygons are loaded into Terrascan software.  Lidar points and surface models created from ground lidar points are reviewed and 3D bridge breaklines are compiled in Terrascan.  Typically, two breaklines are compiled for each bridge deck-one breakline along the ground of each abutment.  The bridge breaklines are placed perpendicular to the bridge deck and extend just beyond the extents of the bridge deck.  Extending the bridge breaklines beyond the extent of the bridge deck allows the compiler to use ground elevations from the ground lidar data for each endpoint of the breakline.  The 3D endpoints of each breakline are used to enforce a continous slope on the ground under the bridge deck along the collected breakline.  These breaklines are used in the final DEM production and help to reduce the appearance of bridge saddles.</procdesc>
+        <procdate>201711</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Breaklines are reviewed against lidar intensity imagery to verify completeness of capture.  All breaklines are then compared to ESRI terrains created from ground only points prior to water classification.  The horizontal placement of breaklines is compared to terrain features and the breakline elevations are compared to lidar elevations to ensure all breaklines match the lidar within acceptable tolerances.  Some deviation is expected between hydrographic breakline and lidar elevations due to monotonicity, connectivity, and flattening rules that are enforced on the hydrographic breaklines.  Once completeness, horizontal placement, and vertical variance is reviewed, all breaklines are reviewed for topological consistency and data integrity using a combination of ESRI Data Reviewer tools and proprietary tools.  Corrections are performed within the QC workflow and re-validated.</procdesc>
+        <procdate>201712</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Class 2, ground, lidar points are exported from the LAS files into an Arc Geodatabase (GDB) in multipoint format.  The 3D breaklines,  Inland Lakes and Ponds, Inland Streams and Rivers, Tidal Water, and bridge breaklines are imported into the same GDB.  An ESRI Terrain is generated from these inputs.  The surface type of each input is as follows:
+
+Ground Multipoint:  Masspoints
+Inland Lakes and Ponds:  Hard Replace
+Inland Rivers and Streams : Hard Line
+Tidal: Hard Line
+Bridge Breaklines: Hard Line</procdesc>
+        <procdate>201712</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>The ESRI Terrain is converted to a raster.  The raster is created using linear interpolation with a 1 meter cell size.  The DEM is reviewed with hillshades in both ArcGIS and Global Mapper.  Hillshades allow the analyst to view the DEMs in 3D and to more efficiently locate and identify potential issues.  Analysts review the DEM for missed lidar classification issues, incorrect  breakline elevations, incorrect hydro-flattening, and artifacts that are introduced during the raster creation process.</procdesc>
+        <procdate>201712</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>The corrected and final DEM is clipped to individual tiles.  Dewberry uses a proprietary tool that clips the DEM to each tile located within the final Tile Grid, names the clipped DEM to the Tile Grid Cell name, and verifies that final extents are correct.  All individual tiles are loaded into Global Mapper for the last review.  During this last review, an analsyt checks to ensure full, complete coverage, no issues along tile boundaries, tiles seamlessly edge-match, and that there are no remaining processing artifacts in the dataset.</procdesc>
+        <procdate>201712</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Raster</direct>
+    <rastinfo>
+      <rasttype>Grid Cell</rasttype>
+      <rowcount>1500</rowcount>
+      <colcount>1500</colcount>
+      <vrtcount>1</vrtcount>
+    </rastinfo>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>Lambert Conformal Conic (State Plane Puerto Rico Virgin Isls FIPS 5200)</mapprojn>
+          <lambertc>
+            <stdparll>18.033</stdparll>
+            <stdparll>18.433</stdparll>
+            <longcm>-66.433</longcm>
+            <latprjo>17.833</latprjo>
+            <feast>200000.0</feast>
+            <fnorth>200000.0</fnorth>
+          </lambertc>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>1.0</absres>
+            <ordres>1.0</ordres>
+          </coordrep>
+          <plandu>Meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>North American Datum of 1983(2011)</horizdn>
+        <ellips>Geodetic Reference System 80</ellips>
+        <semiaxis>6378137.000000</semiaxis>
+        <denflat>298.257222</denflat>
+      </geodetic>
+    </horizsys>
+    <vertdef>
+      <altsys>
+        <altdatum>Puerto Rico Vertical Datum of 2002 (Geoid12B)</altdatum>
+        <altres>0.000100</altres>
+        <altunits>meters</altunits>
+        <altenc>Explicit elevation coordinate included with horizontal coordinates</altenc>
+      </altsys>
+    </vertdef>
+  </spref>
+  <metainfo>
+    <metd>201712</metd>
+    <metc>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>USGS</cntorg>
+          <cntper>Gail Dunn</cntper>
+        </cntorgp>
+        <cntpos>USGS NGTOC</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical address</addrtype>
+          <address>1400 Independence Road</address>
+          <city>Rolla</city>
+          <state>MO</state>
+          <postal>65401</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>(573) 308-3756</cntvoice>
+        <cntemail>gdunn@usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+    <metextns>
+      <onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+      <metprof>ESRI Metadata Profile</metprof>
+    </metextns>
+  </metainfo>
+</metadata>
+
