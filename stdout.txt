@@ -1,0 +1,22 @@
+200 2988016B https://www.fema.gov/api/open/v2/HmaSubapplications?$filter=subapplicantStateAbbreviation%20eq%20'PR'&$top=10000&$skip=0
+hmasub: 1134
+200 3309487B https://www.fema.gov/api/open/v2/HmaSubapplications?$filter=subapplicantState%20eq%20'Puerto%20Rico'&$top=10000&$skip=0
+hmasub_state: 1258
+404 660218B https://www.fema.gov/api/open/v2/HmaSubapplicationsProjectSiteInventories?$filter=stateAbbreviation%20eq%20'PR'&$top=10000&$skip=0
+<!DOCTYPE html>
+<html lang=en dir=ltr prefix="og: https://ogp.me/ns#"
+  class="js tablesaw-enhanced"
+  data-once="drupal-dialog-deprecation-listener tablesaw-create" style>
+<meta charset=utf-8>
+<meta name=description content="Page not found">
+<link rel=canonical
+  href=https://www.fema.gov/partnerships/resilient-nation-partnership-network>
+<meta property=og:title content="Resilient Nation Partnership Network">
+<meta property=og:description content="Page not found">
+<meta property=og:image
+  cont
+hmasites: 0
+200 2506870B https://www.fema.gov/api/open/v1/HmaSubapplicationsProjectSiteInventories?$filter=stateAbbreviation%20eq%20'PR'&$top=10000&$skip=0
+hmasites2: 2440
+exit code 0
+468K	out
