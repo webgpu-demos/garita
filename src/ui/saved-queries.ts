@@ -78,6 +78,61 @@ LEFT JOIN prop_best m ON m.object_id = o.id AND m.key = 'municipio_name'
 LEFT JOIN prop_best d ON d.object_id = o.id AND d.key = 'total_damage_usd'
 WHERE o.type = 'disaster_impact' AND r.value > 0
 ORDER BY usd_per_registration DESC` },
+  { id: 'nfip_gap', title: ['Flood insurance gap: policies in force against buildings in the FEMA 1% flood zone', 'Brecha de seguro de inundación: pólizas vigentes frente a edificios en la zona inundable FEMA 1%'], sql:
+`-- Compares NFIP flood insurance policy contracts in force in the whole municipio (FEMA's redacted records, any flood zone,
+-- counted on the date in the last column) with OpenStreetMap building footprints whose centroid is in a FEMA A or V zone.
+-- A screen, not a penetration rate: footprints include buildings that are not homes and miss unmapped ones, policies outside
+-- the zone are counted too, one condominium contract insures many units (insured_units), and private flood insurance is not in the data.
+SELECT o.name AS municipio, s.value AS buildings_in_1pct_zone, c.value AS contracts_in_force, u.value AS insured_units,
+       s.value - c.value AS buildings_minus_contracts,
+       ROUND(100.0 * c.value / s.value, 1) AS contracts_per_100_buildings_in_zone,
+       cov.value AS building_coverage_usd, date(d.value / 1000, 'unixepoch') AS policies_counted_on
+FROM object o
+JOIN prop_best s ON s.object_id = o.id AND s.key = 'buildings_sfha'
+JOIN prop_best c ON c.object_id = o.id AND c.key = 'nfip_contracts'
+LEFT JOIN prop_best u ON u.object_id = o.id AND u.key = 'nfip_policies'
+LEFT JOIN prop_best cov ON cov.object_id = o.id AND cov.key = 'nfip_building_coverage_usd'
+LEFT JOIN prop_best d ON d.object_id = o.id AND d.key = 'nfip_policies_date'
+WHERE o.type = 'municipio' AND o.expired = 0 AND s.value > 0
+ORDER BY buildings_minus_contracts DESC` },
+  { id: 'maria_three_programs', title: ['Hurricane María per municipio: flood insurance paid, housing assistance and Public Assistance', 'Huracán María por municipio: seguro de inundación pagado, asistencia de vivienda y Asistencia Pública'], sql:
+`-- Three FEMA programmes side by side, nominal dollars. Flood insurance: NFIP claims FEMA names Hurricane Maria (claims filed by
+-- policyholders, not a count of flooded homes; claims without a location are in no municipio). Housing assistance: DR-4339
+-- registrations and aid approved (Individuals and Households). Public Assistance: DR-4339 projects of applicants listed in the
+-- municipio only; island-wide projects, most of the money, are in the island-level record (see the next query).
+SELECT o.name AS municipio, nc.value AS nfip_claims, np.value AS nfip_paid_usd,
+       ir.value AS housing_registrations, ia.value AS housing_approved_usd,
+       pp.value AS pa_projects, pf.value AS pa_federal_obligated_usd,
+       ROUND(1000.0 * nc.value / ir.value, 1) AS nfip_claims_per_1000_registrations
+FROM object o
+LEFT JOIN prop_best nc ON nc.object_id = o.id AND nc.key = 'nfip_claims_maria'
+LEFT JOIN prop_best np ON np.object_id = o.id AND np.key = 'nfip_paid_usd_maria'
+LEFT JOIN prop_best ir ON ir.object_id = o.id AND ir.key = 'ihp_registrations_maria'
+LEFT JOIN prop_best ia ON ia.object_id = o.id AND ia.key = 'ihp_approved_usd_maria'
+LEFT JOIN prop_best pp ON pp.object_id = o.id AND pp.key = 'pa_projects_maria'
+LEFT JOIN prop_best pf ON pf.object_id = o.id AND pf.key = 'pa_federal_obligated_usd_maria'
+WHERE o.type = 'municipio' AND o.expired = 0
+ORDER BY ia.value DESC` },
+  { id: 'pa_by_disaster', title: ['Public Assistance by disaster: island-wide projects against projects of municipio applicants', 'Asistencia Pública por desastre: proyectos de toda la isla frente a proyectos de solicitantes municipales'], sql:
+`-- FEMA Public Assistance, federal share obligated, nominal dollars. "Island-wide" = projects FEMA lists under county Statewide,
+-- kept as one record per disaster and not spread over municipios. A municipio is where the applicant is listed, not always where the work is.
+SELECT n.value AS disaster, COALESCE(d.name, 'no declaration row') AS declaration,
+       SUM(p.value) AS projects, ROUND(SUM(f.value), 2) AS federal_obligated_usd,
+       ROUND(SUM(CASE WHEN sc.value = 'island' THEN f.value ELSE 0 END), 2) AS island_wide_usd,
+       ROUND(SUM(CASE WHEN sc.value = 'municipio' THEN f.value ELSE 0 END), 2) AS municipio_applicants_usd,
+       ROUND(100.0 * SUM(CASE WHEN sc.value = 'island' THEN f.value ELSE 0 END) / NULLIF(SUM(f.value), 0), 1) AS pct_island_wide,
+       SUM(CASE WHEN sc.value = 'municipio' THEN 1 ELSE 0 END) AS municipios_with_projects,
+       ROUND(SUM(e.value), 2) AS emergency_work_usd, ROUND(SUM(w.value), 2) AS permanent_work_usd
+FROM object o
+JOIN prop_best n ON n.object_id = o.id AND n.key = 'disaster_number'
+JOIN prop_best sc ON sc.object_id = o.id AND sc.key = 'scope'
+JOIN prop_best p ON p.object_id = o.id AND p.key = 'projects'
+JOIN prop_best f ON f.object_id = o.id AND f.key = 'federal_share_obligated_usd'
+LEFT JOIN prop_best e ON e.object_id = o.id AND e.key = 'emergency_work_federal_usd'
+LEFT JOIN prop_best w ON w.object_id = o.id AND w.key = 'permanent_work_federal_usd'
+LEFT JOIN object d ON d.id = 'disaster_declaration:' || CAST(n.value AS INTEGER)
+WHERE o.type = 'pa_record' AND o.expired = 0
+GROUP BY n.value ORDER BY federal_obligated_usd DESC` },
   { id: 'disagree', title: ['Properties where two sources disagree', 'Propiedades donde dos fuentes difieren'], sql:
 `-- Same object, same property, different values from different sources
 SELECT a.object_id AS id, a.key, a.value AS value_a, a.source_id AS source_a, b.value AS value_b, b.source_id AS source_b
