@@ -16,7 +16,7 @@ const seedDir = join(out, 'data/seed'), replayDir = join(out, 'data/replay'), pr
 for (const d of [seedDir, replayDir, probeDir]) mkdirSync(d, { recursive: true });
 
 // Chains run in parallel (different hosts); sources inside a chain run in order.
-const CHAINS = [['census_tiger', 'hurdat2'], ['hud', 'cdbg'], ['openfema'], ['coops', 'ndbc'], ['usgs', 'nwps'], ['nws', 'luma'], ['cdc_svi'], ['shelters'], ['census_acs']];
+const CHAINS = [['census_tiger', 'hurdat2'], ['hud', 'cdbg'], ['openfema', 'nfip', 'fema_recovery'], ['coops', 'ndbc'], ['usgs', 'nwps'], ['nws', 'luma'], ['cdc_svi'], ['shelters'], ['census_acs']];
 const report = { startedAt: new Date().toISOString(), ontologyVersion: ontology.version, sources: {}, replay: [] };
 const probes = {};
 let muniP = null;

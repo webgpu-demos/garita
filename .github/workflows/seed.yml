@@ -24,8 +24,10 @@ jobs:
         run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils tesseract-ocr tesseract-ocr-spa
       - name: Build batches
         run: |
-          node pipeline/seed/run.mjs --out out 2>&1 | tee seed.log
-          cp seed.log out/data/seed/_probe/log.txt
+          # pipe-seed (FEMA flood insurance and recovery spending): only the new sources run here, so the other sources' batches,
+          # report.json and log.txt on gh-pages are left as they are. Drop --only/--report to rebuild everything.
+          node pipeline/seed/run.mjs --out out --only nfip,fema_recovery --report report.fema.json 2>&1 | tee seed.log
+          cp seed.log out/data/seed/_probe/log.fema.txt
       - name: Publish to gh-pages
         if: always()
         run: |

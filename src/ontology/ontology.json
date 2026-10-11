@@ -244,6 +244,173 @@
      "format": "usd"
     },
     {
+     "id": "nfip_claims",
+     "label": {
+      "en": "Flood insurance claims filed (NFIP), 1978 to date",
+      "es": "Reclamaciones al seguro de inundación (NFIP), 1978 al presente"
+     },
+     "type": "number",
+     "unit": "claims",
+     "format": "int"
+    },
+    {
+     "id": "nfip_claims_paid",
+     "label": {
+      "en": "Flood insurance claims with a payment (NFIP)",
+      "es": "Reclamaciones al seguro de inundación con pago (NFIP)"
+     },
+     "type": "number",
+     "unit": "claims",
+     "format": "int"
+    },
+    {
+     "id": "nfip_paid_usd",
+     "label": {
+      "en": "Flood insurance paid, building + contents + compliance (NFIP, nominal)",
+      "es": "Seguro de inundación pagado, estructura + contenido + cumplimiento (NFIP, nominal)"
+     },
+     "type": "number",
+     "unit": "USD",
+     "format": "usd"
+    },
+    {
+     "id": "nfip_paid_building_usd",
+     "label": {
+      "en": "Flood insurance paid on buildings (NFIP, nominal)",
+      "es": "Seguro de inundación pagado por estructuras (NFIP, nominal)"
+     },
+     "type": "number",
+     "unit": "USD",
+     "format": "usd"
+    },
+    {
+     "id": "nfip_paid_contents_usd",
+     "label": {
+      "en": "Flood insurance paid on contents (NFIP, nominal)",
+      "es": "Seguro de inundación pagado por contenido (NFIP, nominal)"
+     },
+     "type": "number",
+     "unit": "USD",
+     "format": "usd"
+    },
+    {
+     "id": "nfip_paid_icc_usd",
+     "label": {
+      "en": "Flood insurance paid for increased cost of compliance (NFIP, nominal)",
+      "es": "Seguro de inundación pagado por costo aumentado de cumplimiento (NFIP, nominal)"
+     },
+     "type": "number",
+     "unit": "USD",
+     "format": "usd"
+    },
+    {
+     "id": "nfip_claims_by_year",
+     "label": {
+      "en": "Flood insurance claims and payments by year of loss (NFIP)",
+      "es": "Reclamaciones y pagos del seguro de inundación por año de la pérdida (NFIP)"
+     },
+     "type": "json"
+    },
+    {
+     "id": "nfip_claims_maria",
+     "label": {
+      "en": "Flood insurance claims, Hurricane María (NFIP)",
+      "es": "Reclamaciones al seguro de inundación, huracán María (NFIP)"
+     },
+     "type": "number",
+     "unit": "claims",
+     "format": "int"
+    },
+    {
+     "id": "nfip_paid_usd_maria",
+     "label": {
+      "en": "Flood insurance paid, Hurricane María (NFIP, nominal)",
+      "es": "Seguro de inundación pagado, huracán María (NFIP, nominal)"
+     },
+     "type": "number",
+     "unit": "USD",
+     "format": "usd"
+    },
+    {
+     "id": "nfip_policies",
+     "label": {
+      "en": "Flood insurance policies in force, insured units (NFIP)",
+      "es": "Pólizas de seguro de inundación vigentes, unidades aseguradas (NFIP)"
+     },
+     "type": "number",
+     "unit": "policies",
+     "format": "int"
+    },
+    {
+     "id": "nfip_contracts",
+     "label": {
+      "en": "Flood insurance policy contracts in force (NFIP)",
+      "es": "Contratos de póliza de seguro de inundación vigentes (NFIP)"
+     },
+     "type": "number",
+     "unit": "contracts",
+     "format": "int"
+    },
+    {
+     "id": "nfip_building_coverage_usd",
+     "label": {
+      "en": "Building coverage in force (NFIP)",
+      "es": "Cubierta de estructura vigente (NFIP)"
+     },
+     "type": "number",
+     "unit": "USD",
+     "format": "usd"
+    },
+    {
+     "id": "nfip_contents_coverage_usd",
+     "label": {
+      "en": "Contents coverage in force (NFIP)",
+      "es": "Cubierta de contenido vigente (NFIP)"
+     },
+     "type": "number",
+     "unit": "USD",
+     "format": "usd"
+    },
+    {
+     "id": "nfip_premium_usd",
+     "label": {
+      "en": "Premium of the policies in force (NFIP)",
+      "es": "Prima de las pólizas vigentes (NFIP)"
+     },
+     "type": "number",
+     "unit": "USD",
+     "format": "usd"
+    },
+    {
+     "id": "nfip_policies_date",
+     "label": {
+      "en": "Flood insurance policies in force as of",
+      "es": "Pólizas de seguro de inundación vigentes al"
+     },
+     "type": "date",
+     "format": "date"
+    },
+    {
+     "id": "pa_projects_maria",
+     "label": {
+      "en": "FEMA Public Assistance projects, María (applicants in the municipio)",
+      "es": "Proyectos de Asistencia Pública de FEMA, María (solicitantes del municipio)"
+     },
+     "type": "number",
+     "unit": "projects",
+     "format": "int"
+    },
+    {
+     "id": "pa_federal_obligated_usd_maria",
+     "label": {
+      "en": "FEMA Public Assistance federal share obligated, María (applicants in the municipio; island-wide projects not included)",
+      "es": "Aportación federal obligada de Asistencia Pública de FEMA, María (solicitantes del municipio; sin proyectos de toda la isla)"
+     },
+     "type": "number",
+     "unit": "USD",
+     "format": "usd"
+    },
+    {
      "id": "nws_zone",
      "label": {
       "en": "NWS forecast zone",
@@ -615,6 +782,56 @@
      "type": "number",
      "unit": "km2",
      "format": "fixed2"
+    },
+    {
+     "id": "nfip_claims",
+     "label": {
+      "en": "Flood insurance claims filed (NFIP), 1978 to date",
+      "es": "Reclamaciones al seguro de inundación (NFIP), 1978 al presente"
+     },
+     "type": "number",
+     "unit": "claims",
+     "format": "int"
+    },
+    {
+     "id": "nfip_paid_usd",
+     "label": {
+      "en": "Flood insurance paid, building + contents + compliance (NFIP, nominal)",
+      "es": "Seguro de inundación pagado, estructura + contenido + cumplimiento (NFIP, nominal)"
+     },
+     "type": "number",
+     "unit": "USD",
+     "format": "usd"
+    },
+    {
+     "id": "nfip_claims_maria",
+     "label": {
+      "en": "Flood insurance claims, Hurricane María (NFIP)",
+      "es": "Reclamaciones al seguro de inundación, huracán María (NFIP)"
+     },
+     "type": "number",
+     "unit": "claims",
+     "format": "int"
+    },
+    {
+     "id": "nfip_policies",
+     "label": {
+      "en": "Flood insurance policies in force, insured units (NFIP)",
+      "es": "Pólizas de seguro de inundación vigentes, unidades aseguradas (NFIP)"
+     },
+     "type": "number",
+     "unit": "policies",
+     "format": "int"
+    },
+    {
+     "id": "nfip_contracts",
+     "label": {
+      "en": "Flood insurance policy contracts in force (NFIP)",
+      "es": "Contratos de póliza de seguro de inundación vigentes (NFIP)"
+     },
+     "type": "number",
+     "unit": "contracts",
+     "format": "int"
     },
     {
      "id": "households",
@@ -3959,6 +4176,248 @@
    ]
   },
   {
+   "id": "pa_record",
+   "kind": "record",
+   "group": "records",
+   "label": {
+    "en": "Public Assistance record",
+    "es": "Registro de Asistencia Pública"
+   },
+   "plural": {
+    "en": "Public Assistance records",
+    "es": "Registros de Asistencia Pública"
+   },
+   "keyScheme": "fema:disaster+geoid",
+   "icon": "fema",
+   "color": "#8d7fd1",
+   "properties": [
+    {
+     "id": "disaster_number",
+     "label": {
+      "en": "Disaster",
+      "es": "Desastre"
+     },
+     "type": "number",
+     "format": "int",
+     "primary": true
+    },
+    {
+     "id": "municipio_name",
+     "label": {
+      "en": "Municipality",
+      "es": "Municipio"
+     },
+     "type": "string",
+     "primary": true
+    },
+    {
+     "id": "scope",
+     "label": {
+      "en": "Scope (municipio, or island for projects FEMA lists as Statewide)",
+      "es": "Alcance (municipio, o isla para proyectos que FEMA lista como Statewide)"
+     },
+     "type": "string",
+     "primary": true
+    },
+    {
+     "id": "projects",
+     "label": {
+      "en": "Funded projects (project worksheets)",
+      "es": "Proyectos con fondos (hojas de proyecto)"
+     },
+     "type": "number",
+     "unit": "projects",
+     "format": "int",
+     "primary": true
+    },
+    {
+     "id": "federal_share_obligated_usd",
+     "label": {
+      "en": "Federal share obligated",
+      "es": "Aportación federal obligada"
+     },
+     "type": "number",
+     "unit": "USD",
+     "format": "usd",
+     "primary": true
+    },
+    {
+     "id": "project_amount_usd",
+     "label": {
+      "en": "Project amount (estimated total cost)",
+      "es": "Monto del proyecto (costo total estimado)"
+     },
+     "type": "number",
+     "unit": "USD",
+     "format": "usd",
+     "primary": true
+    },
+    {
+     "id": "total_obligated_usd",
+     "label": {
+      "en": "Total obligated, with administrative costs",
+      "es": "Total obligado, con costos administrativos"
+     },
+     "type": "number",
+     "unit": "USD",
+     "format": "usd"
+    },
+    {
+     "id": "mitigation_usd",
+     "label": {
+      "en": "Section 406 mitigation proposed",
+      "es": "Mitigación de la Sección 406 propuesta"
+     },
+     "type": "number",
+     "unit": "USD",
+     "format": "usd"
+    },
+    {
+     "id": "emergency_work_federal_usd",
+     "label": {
+      "en": "Federal share, emergency work (categories A and B)",
+      "es": "Aportación federal, trabajo de emergencia (categorías A y B)"
+     },
+     "type": "number",
+     "unit": "USD",
+     "format": "usd"
+    },
+    {
+     "id": "permanent_work_federal_usd",
+     "label": {
+      "en": "Federal share, permanent work (categories C to G)",
+      "es": "Aportación federal, trabajo permanente (categorías C a G)"
+     },
+     "type": "number",
+     "unit": "USD",
+     "format": "usd"
+    },
+    {
+     "id": "by_category",
+     "label": {
+      "en": "Projects and dollars by damage category (A debris, B emergency measures, C roads and bridges, D water control, E buildings and equipment, F utilities, G parks and other, Z management costs)",
+      "es": "Proyectos y dólares por categoría de daño (A escombros, B medidas de emergencia, C carreteras y puentes, D control de aguas, E edificios y equipo, F utilidades, G parques y otros, Z costos de manejo)"
+     },
+     "type": "json"
+    }
+   ]
+  },
+  {
+   "id": "hma_record",
+   "kind": "record",
+   "group": "records",
+   "label": {
+    "en": "Hazard Mitigation Assistance record",
+    "es": "Registro de Asistencia para Mitigación de Riesgos"
+   },
+   "plural": {
+    "en": "Hazard Mitigation Assistance records",
+    "es": "Registros de Asistencia para Mitigación de Riesgos"
+   },
+   "keyScheme": "fema:disaster+geoid",
+   "icon": "fema",
+   "color": "#7f9bd1",
+   "properties": [
+    {
+     "id": "disaster_number",
+     "label": {
+      "en": "Disaster",
+      "es": "Desastre"
+     },
+     "type": "number",
+     "format": "int",
+     "primary": true
+    },
+    {
+     "id": "municipio_name",
+     "label": {
+      "en": "Municipality",
+      "es": "Municipio"
+     },
+     "type": "string",
+     "primary": true
+    },
+    {
+     "id": "scope",
+     "label": {
+      "en": "Scope (municipio, or island for island-wide, multi-municipio and unlocated subapplications)",
+      "es": "Alcance (municipio, o isla para solicitudes de toda la isla, de varios municipios o sin ubicación)"
+     },
+     "type": "string",
+     "primary": true
+    },
+    {
+     "id": "subapplications",
+     "label": {
+      "en": "Subapplications, any status",
+      "es": "Subsolicitudes, cualquier estado"
+     },
+     "type": "number",
+     "unit": "subapplications",
+     "format": "int",
+     "primary": true
+    },
+    {
+     "id": "approved",
+     "label": {
+      "en": "Subapplications approved, awarded, completed or closed",
+      "es": "Subsolicitudes aprobadas, adjudicadas, completadas o cerradas"
+     },
+     "type": "number",
+     "unit": "subapplications",
+     "format": "int",
+     "primary": true
+    },
+    {
+     "id": "obligated_usd",
+     "label": {
+      "en": "Federal amount obligated",
+      "es": "Monto federal obligado"
+     },
+     "type": "number",
+     "unit": "USD",
+     "format": "usd",
+     "primary": true
+    },
+    {
+     "id": "approved_federal_share_usd",
+     "label": {
+      "en": "Federal share of approved subapplications",
+      "es": "Aportación federal de las subsolicitudes aprobadas"
+     },
+     "type": "number",
+     "unit": "USD",
+     "format": "usd"
+    },
+    {
+     "id": "approved_total_usd",
+     "label": {
+      "en": "Total amount of approved subapplications",
+      "es": "Monto total de las subsolicitudes aprobadas"
+     },
+     "type": "number",
+     "unit": "USD",
+     "format": "usd"
+    },
+    {
+     "id": "by_status",
+     "label": {
+      "en": "Subapplications by status",
+      "es": "Subsolicitudes por estado"
+     },
+     "type": "json"
+    },
+    {
+     "id": "by_program",
+     "label": {
+      "en": "Subapplications and obligated dollars by program",
+      "es": "Subsolicitudes y dólares obligados por programa"
+     },
+     "type": "json"
+    }
+   ]
+  },
+  {
    "id": "aircraft",
    "kind": "track",
    "group": "tracks",
@@ -4202,7 +4661,9 @@
     "es": "tiene registro"
    },
    "from": [
-    "disaster_impact"
+    "disaster_impact",
+    "pa_record",
+    "hma_record"
    ],
    "to": [
     "disaster_declaration",
@@ -4402,6 +4863,42 @@
    "url": "https://www.fema.gov/about/openfema/data-sets",
    "license": "Public domain",
    "kind": "baked"
+  },
+  {
+   "id": "openfema_nfip_claims",
+   "name": "NFIP Redacted Claims (v3)",
+   "org": "FEMA (OpenFEMA)",
+   "url": "https://www.fema.gov/openfema-data-page/nfip-redacted-claims-v3",
+   "license": "Public domain (US Government work); OpenFEMA terms and conditions apply",
+   "kind": "baked",
+   "note": "Flood insurance claims, redacted by FEMA to protect policyholders: location is given to the census block group and 0.1 degree, and some records carry no location at all. Counts are claims filed, not flooded homes; most flooded homes in Puerto Rico had no flood policy. Dollars are nominal. OpenFEMA terms: \"This product uses the Federal Emergency Management Agency’s OpenFEMA API, but is not endorsed by FEMA. The Federal Government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).\""
+  },
+  {
+   "id": "openfema_nfip_policies",
+   "name": "NFIP Redacted Policies (v3)",
+   "org": "FEMA (OpenFEMA)",
+   "url": "https://www.fema.gov/openfema-data-page/nfip-redacted-policies-v3",
+   "license": "Public domain (US Government work); OpenFEMA terms and conditions apply",
+   "kind": "baked",
+   "note": "Flood insurance policy terms, redacted by FEMA; updated about monthly, with a lag behind the system of record. Policies in force are derived here from effective, termination and cancellation dates; they are not an official FEMA count. Private flood insurance is not included. OpenFEMA terms: \"This product uses the Federal Emergency Management Agency’s OpenFEMA API, but is not endorsed by FEMA. The Federal Government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).\""
+  },
+  {
+   "id": "openfema_pa",
+   "name": "Public Assistance Funded Projects Details (v2)",
+   "org": "FEMA (OpenFEMA)",
+   "url": "https://www.fema.gov/openfema-data-page/public-assistance-funded-projects-details-v2",
+   "license": "Public domain (US Government work); OpenFEMA terms and conditions apply",
+   "kind": "baked",
+   "note": "Obligated Public Assistance project worksheets. The municipio is where the applicant is, not always where the work is; projects FEMA lists as Statewide are kept island-wide. Projects still in pre-obligation processing are not in the data. Dollars are nominal. OpenFEMA terms: \"This product uses the Federal Emergency Management Agency’s OpenFEMA API, but is not endorsed by FEMA. The Federal Government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).\""
+  },
+  {
+   "id": "openfema_hma",
+   "name": "Hazard Mitigation Assistance Subapplications (v2)",
+   "org": "FEMA (OpenFEMA)",
+   "url": "https://www.fema.gov/openfema-data-page/hma-subapplications-v2",
+   "license": "Public domain (US Government work); OpenFEMA terms and conditions apply",
+   "kind": "baked",
+   "note": "Hazard mitigation subapplications and subgrants in any status. FEMA says the data are subject to a small percentage of human error and that some fields were not provided. Dollars are nominal. OpenFEMA terms: \"This product uses the Federal Emergency Management Agency’s OpenFEMA API, but is not endorsed by FEMA. The Federal Government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).\""
   },
   {
    "id": "coops_meta",

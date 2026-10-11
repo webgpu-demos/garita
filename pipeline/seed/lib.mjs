@@ -76,10 +76,10 @@ export async function arcgisFirst(layerUrl, wheres, opts = {}) {
   throw err;
 }
 
-export async function openfemaAll(entity, filter, { select, log = () => {} } = {}) {
+export async function openfemaAll(entity, filter, { select, log = () => {}, version = 'v2' } = {}) {
   const rows = []; const top = 10000;
   for (let skip = 0; ; skip += top) {
-    const url = `https://www.fema.gov/api/open/v2/${entity}?$filter=${encodeURIComponent(filter)}${select ? `&$select=${select}` : ''}&$top=${top}&$skip=${skip}`;
+    const url = `https://www.fema.gov/api/open/${version}/${entity}?$filter=${encodeURIComponent(filter)}${select ? `&$select=${select}` : ''}&$top=${top}&$skip=${skip}`;
     const j = await fetchJson(url, { timeout: 180000 });
     const part = j[entity] || [];
     rows.push(...part);
