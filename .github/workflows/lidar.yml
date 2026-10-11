@@ -20,7 +20,7 @@ concurrency:
   cancel-in-progress: true
 env:
   # A regular expression on the tile key limits the run to a few tiles (a test; meta.json says so). Empty = everything.
-  LIDAR_ONLY: 'x80y20[45]|x81y204'
+  LIDAR_ONLY: ''
   LIDAR_SHARDS: 12
 jobs:
   plan:

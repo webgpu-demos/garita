@@ -58,7 +58,7 @@ RADIUS_M = 2.0          # cells whose centre is within this distance of the poin
 MIN_SHARE = 0.5         # share of those cells that must hold data
 NODATA16 = -32768
 THRESHOLDS_M = (0.5, 1.0, 1.5, 2.0, 3.0)
-# Places a person can check. lon, lat, and what to expect there.
+# Places a person can check. lon, lat, and a rough expectation written before the run (not a measurement).
 SPOTS = [
     ('Old San Juan, Plaza de Armas', -66.1165, 18.4655, 'on the ridge of the islet, roughly 20 m'),
     ('Cataño waterfront (malecón)', -66.1180, 18.4445, 'bay shore, 1 to 2 m'),
@@ -67,7 +67,7 @@ SPOTS = [
     ('Aibonito, town plaza', -66.2660, 18.1400, 'hill town, roughly 600 to 700 m'),
     ('San Juan airport (SJU), apron', -66.0018, 18.4394, 'published field elevation 9 ft = 2.7 m'),
     ('Aguadilla airport (BQN), runway', -67.1294, 18.4949, 'published field elevation 237 ft = 72 m'),
-    ('Condado, Ashford Avenue', -66.0720, 18.4570, 'barrier strip, 2 to 4 m'),
+    ('Condado, near Ashford Avenue', -66.0720, 18.4570, 'barrier strip beside the lagoon, 1 to 4 m'),
 ]
 
 os.environ.update({
@@ -265,7 +265,9 @@ def datum_evidence(projects):
                     if re.search(r'DEM', k, re.I) and k.lower().endswith('.xml'):
                         x = fetch(BUCKET + urllib.parse.quote(k)).decode('utf-8', 'replace')
                         g = lambda tag: [s.strip() for s in re.findall(rf'<{tag}>(.*?)</{tag}>', x, flags=re.S)]  # noqa: E731
-                        ev['vendor_dem_metadata'].append({'workunit': r.get('workunit'), 'file': BUCKET + k, 'altdatum': g('altdatum'), 'altunits': g('altunits'), 'altres': g('altres')})
+                        num = lambda tag: next((float(v) for v in g(tag) if re.fullmatch(r'-?[\d.]+', v)), None)  # noqa: E731
+                        ev['vendor_dem_metadata'].append({'workunit': r.get('workunit'), 'file': BUCKET + k, 'title': g('title')[:1], 'altdatum': g('altdatum'), 'altunits': g('altunits'), 'altres': g('altres'),
+                                                          'bbox_wsen': [num('westbc'), num('southbc'), num('eastbc'), num('northbc')]})
             except Exception as e:  # noqa: BLE001
                 ev['errors'].append(f"{r.get('workunit')}: {e}")
     return ev
@@ -637,6 +639,13 @@ def cmd_merge(a):
     alt = sorted({s for v in ev.get('vendor_dem_metadata', []) for s in v.get('altdatum', [])})
     altu = sorted({s for v in ev.get('vendor_dem_metadata', []) for s in v.get('altunits', [])})
     confirmed = bool(vert) and set(vert) <= {'6641', '6642'} and '6641' in vert
+    # Work units whose own metadata names the Virgin Islands datum: do their extents reach any building?
+    vi = []
+    for v in ev.get('vendor_dem_metadata', []):
+        if any('Virgin' in s for s in v.get('altdatum', [])):
+            w, so, e, n = v.get('bbox_wsen') or [None] * 4
+            reach = None if None in (w, so, e, n) else int(((lon[:nb] >= w) & (lon[:nb] <= e) & (lat[:nb] >= so) & (lat[:nb] <= n)).sum())
+            vi.append({'workunit': v.get('workunit'), 'file': v['file'].split('/')[-1], 'bbox_wsen': v.get('bbox_wsen'), 'buildings_inside_bbox': reach})
     datum = {
         'vertical': 'Puerto Rico Vertical Datum of 2002 (PRVD02), EPSG:6641' if confirmed else 'NOT CONFIRMED (see evidence)',
         'units': 'metres', 'horizontal': sorted({f'{t["crs"]} (EPSG:{t["epsg"]})' for t in tiles}), 'confirmed': confirmed,
@@ -644,8 +653,10 @@ def cmd_merge(a):
                          'The GeoTIFFs themselves carry no vertical CRS and no unit tag, and their sidecar XML only carries the national boilerplate quoted below, which names NAVD88 (a datum that does not exist in Puerto Rico).',
         'geotiff_vertical_crs': sorted({str(t['vert_cs']) for t in tiles}), 'geotiff_unit_type': sorted({repr(t['unit_type']) for t in tiles}), 'geotiff_horizontal_unit': sorted({str(t['linear_unit']) for t in tiles}),
         'wesm_vert_crs': vert, 'wesm_geoid': sorted({str(w.get('geoid')) for w in ev.get('workunits', [])}), 'vendor_altdatum': alt, 'vendor_altunits': altu,
-        'caveat': ('One work unit of the newest collection is registered with vert_crs 6642 (Virgin Islands Vertical Datum of 2009); the register does not say which tiles it produced. '
-                   'It is expected to be the U.S. Virgin Islands part of the project, where Garita has no buildings.') if '6642' in vert else None,
+        'caveat': ('These projects also cover the U.S. Virgin Islands, whose part is referenced to the Virgin Islands Vertical Datum of 2009 (WESM vert_crs 6642 and/or vendor metadata, listed in virgin_islands_parts with the '
+                   'number of Garita buildings inside each bounding box). Neither the register nor the tiles say which tile came from which work unit, so a building inside such a box cannot be proven to be PRVD02 from the metadata alone.')
+                  if ('6642' in vert or vi) else None,
+        'virgin_islands_parts': vi,
         'evidence': ev, 'sidecar_xml': plan.get('sidecar'),
     }
     used = sorted({t['project'] for t in tiles})
