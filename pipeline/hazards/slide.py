@@ -14,6 +14,8 @@ What is made
   data/hazards/slide/buildings.bin  uint8 per building, canonical order: the class of the cell the centroid falls in
                                     (nearest cell, no interpolation); 0 = no data
   data/hazards/slide/assets.json    { "<type>:<key>": class }
+  data/hazards/slide/buildings_max25m.bin, assets_max25m.json
+                                    an extra of ours, labelled as such: the highest class within 25 m of the point
   data/hazards/slide/meta.json      source, method, classes, the publisher's use limits (verbatim), QA
   data/hazards/slide/qa.jpg         the map over the island, with the spot-check places
   data/hazards/slide/log.txt        this run's log
@@ -170,6 +172,29 @@ def sample(a, tf, crs, lon, lat):
         out[i:i + 250000] = v
         inside[i:i + 250000] = ok
     return out, inside
+
+
+def highest_near(a, tf, crs, lon, lat, own, cells):
+    """Highest class among the cells whose centre lies within `cells` cells of the point's own cell. Only for points
+    that have data themselves (0 stays 0); cells without data are ignored."""
+    from rasterio.warp import transform as wt
+    h, w = a.shape
+    out = np.zeros(len(lon), np.uint8)
+    offs = [(dx, dy) for dy in range(-cells, cells + 1) for dx in range(-cells, cells + 1) if dx * dx + dy * dy <= cells * cells]
+    for i in range(0, len(lon), 250000):
+        xs, ys = wt('EPSG:4326', crs, list(map(float, lon[i:i + 250000])), list(map(float, lat[i:i + 250000])))
+        col = np.floor((np.asarray(xs) - tf.c) / tf.a).astype(np.int64)
+        row = np.floor((np.asarray(ys) - tf.f) / tf.e).astype(np.int64)
+        m = np.zeros(len(col), np.uint8)
+        for dx, dy in offs:
+            r, c = row + dy, col + dx
+            ok = (r >= 0) & (r < h) & (c >= 0) & (c < w)
+            v = a[np.clip(r, 0, h - 1), np.clip(c, 0, w - 1)]
+            v[~ok] = 0
+            np.maximum(m, v, out=m)
+        out[i:i + 250000] = m
+    out[np.asarray(own) == 0] = 0
+    return out
 
 
 def counts(v):
@@ -339,6 +364,12 @@ def main():
     and_ = acls == 0
     a_nd = {'total': int(and_.sum()), 'outside_raster_extent': int((and_ & ~ain).sum()), 'inside_extent_cell_without_data': int((and_ & ain).sum())}
     log('buildings without data', b_nd, '| assets without data', a_nd)
+    # an extra, ours: the highest class within 25 m, because a building's own cell is often a graded pad that reads Low
+    NEAR = 5
+    bnear = highest_near(a, ds.transform, ds.crs, lon, lat, bcls, NEAR)
+    anear = highest_near(a, ds.transform, ds.crs, np.array([p[1] for p in assets]), np.array([p[2] for p in assets]), acls, NEAR)
+    bnc, anc = counts(bnear), counts(anear)
+    log(f'highest class within {NEAR * 5} m: buildings', bnc, '| assets', anc)
     by_type = {}
     for (i, _lo, _la), c in zip(assets, acls):
         by_type.setdefault(i.split(':')[0], [0] * 6)[int(c)] += 1
@@ -430,7 +461,7 @@ def main():
                'island only: Vieques, Culebra, Mona and the smaller islands have no data, which is not the same as low susceptibility. It shows where '
                'landslides are likely to start, not how far they travel downslope.'),
         'es': ('Susceptibilidad relativa a deslizamientos durante o poco después de lluvia intensa, del mapa del USGS de 5 m (Open-File Report 2020-1022). '
-               'Cinco clases según la porción de la isla: Baja (cerca de 40%), Moderada (30%), Alta (20%), Muy alta (9%), Extremadamente alta (1%). '
+               'Cinco clases según la porción de la isla: Baja (cerca de 40%), Moderada (30%), Alta (20%), Muy Alta (9%), Extremadamente Alta (1%). '
                'Los colores son los del mapa publicado (Extremadamente Alta es azul); Baja se dibuja en gris tenue. Cada píxel muestra la clase mayoritaria de las '
                'celdas de 5 m que cubre (16 celdas en zoom 13, unas 16,000 en zoom 8; los empates van a la clase más alta) y es transparente donde menos de la mitad '
                'tienen datos. El mapa cubre solo la isla grande: Vieques, Culebra, Mona y las islas menores no tienen datos, lo que no equivale a susceptibilidad '
@@ -473,6 +504,8 @@ def main():
         'buildings_no_data': b_nd,
         'assets_total': len(assets), 'assets_by_class': ac, 'assets_no_data': a_nd,
         'assets_by_type_and_class': {k: {str(i): v[i] for i in range(6)} for k, v in sorted(by_type.items())},
+        'highest_class_within_25_m': {'buildings_by_class': bnc, 'buildings_pct_by_class': {k: round(100.0 * v / nb, 2) for k, v in bnc.items()},
+                                      'buildings_pct_high_or_above': round(100.0 * (bnc['3'] + bnc['4'] + bnc['5']) / nb, 2), 'assets_by_class': anc},
         'raster_pct_of_mapped_cells_by_class': raster_share, 'raster_mapped_km2': round(cells_valid * 25 / 1e6, 1),
         'spots': spot_meta,
         'tiles': {'count': len(tiles), 'bytes': total, 'zoom': [ZMIN, maxzoom], 'per_zoom': {str(k): v for k, v in sorted(per_zoom.items())}, 'dropped': dropped,
@@ -484,7 +517,16 @@ def main():
                            'paragraphs': limits['use_and_limitations'], 'distribution_liability': limits['distribution_liability'],
                            'es': disclaimer_es, 'es_source': es_source, 'es_paragraphs': es_paras},
             'qa': qa, 'generated': generated, 'commit': os.environ.get('GITHUB_SHA', '?')[:7], 'run': os.environ.get('GITHUB_RUN_ID', '?')}
-    common.write_stage(out, 'slide', bcls, 'u1', {i: int(c) for (i, _lo, _la), c in zip(assets, acls)}, meta, stamp)
+    meta['extras'] = {
+        'buildings_max25m.bin': 'uint8 per building, canonical order. NOT a published value: the highest class among the 5 m cells whose centre is within 25 m (5 cells) '
+                                'of the building\'s own cell; 0 where the building itself has no data. Offered because a building\'s own cell is often a graded pad that '
+                                'reads Low while the slope cut beside it does not; the 25 m radius is our choice, not the publisher\'s. buildings.bin remains the class at the point.',
+        'assets_max25m.json': 'the same for assets: { "<type>:<key>": class }',
+        'slide_limits_es.txt': 'not published; in the repository (pipeline/hazards/), the Spanish use limits as extracted from the Spanish plate'}
+    d = common.write_stage(out, 'slide', bcls, 'u1', {i: int(c) for (i, _lo, _la), c in zip(assets, acls)}, meta, stamp)
+    bnear.tofile(os.path.join(d, 'buildings_max25m.bin'))
+    with open(os.path.join(d, 'assets_max25m.json'), 'w') as fjson:
+        json.dump({i: int(c) for (i, _lo, _la), c in zip(assets, anear)}, fjson, separators=(',', ':'))
     index = {'stage': 'slide', 'minZoom': ZMIN, 'maxZoom': maxzoom, 'tileSize': 256, 'tiles': tiles,
              'title': {'en': 'Landslide susceptibility (intense rainfall)', 'es': 'Susceptibilidad a deslizamientos (lluvia intensa)'},
              'unit': 'class', 'legend': legend, 'legendSource': COLOUR_SOURCE, 'note': note,
