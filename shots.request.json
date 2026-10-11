@@ -1,0 +1,10 @@
+{ "shots": [
+  { "id": "1-surge-c3-sanjuan", "url": "https://webgpu-demos.github.io/garita/?post=basic&overlay=surge&surge=3&t=2026-10-10T15:30:00Z&cam=-66.10,18.44,26000,180,62", "w": 1600, "h": 900, "wait": 9000 },
+  { "id": "2-surge-c5-south", "url": "https://webgpu-demos.github.io/garita/?post=basic&ui=0&overlay=surge&surge=5&t=2026-10-10T15:30:00Z&cam=-66.30,17.98,40000,0,60", "w": 1280, "h": 800, "wait": 7000 },
+  { "id": "3-slide-utuado", "url": "https://webgpu-demos.github.io/garita/?post=basic&overlay=slide&t=2026-10-10T15:30:00Z&cam=-66.70,18.26,30000,0,58", "w": 1600, "h": 900, "wait": 9000 },
+  { "id": "4-nightlights-live", "url": "https://webgpu-demos.github.io/garita/?post=basic&overlay=nightlights&cam=-66.45,18.2,330000,0,58", "w": 1600, "h": 900, "wait": 12000 },
+  { "id": "5-nightlights-maria-after", "url": "https://webgpu-demos.github.io/garita/?post=basic&ui=0&overlay=nightlights&t=2017-09-25T06:00:00Z&cam=-66.45,18.2,330000,0,58", "w": 1280, "h": 800, "wait": 12000 },
+  { "id": "6-nightlights-baseline", "url": "https://webgpu-demos.github.io/garita/?post=basic&ui=0&overlay=nightlights&nl=baseline&t=2017-09-25T06:00:00Z&cam=-66.45,18.2,330000,0,58", "w": 1280, "h": 800, "wait": 12000 },
+  { "id": "7-scenario-1m-catano", "url": "https://webgpu-demos.github.io/garita/?post=basic&sea=1&panel=scenario&t=2026-10-10T15:30:00Z&cam=-66.14,18.44,7000,180,60", "w": 1600, "h": 900, "wait": 9000 },
+  { "id": "8-default-day", "url": "https://webgpu-demos.github.io/garita/?post=basic&t=2026-10-10T15:30:00Z", "w": 1600, "h": 900, "wait": 9000 }
+] }
