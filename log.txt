@@ -1,0 +1,41 @@
+[03:42:51] scene s02a https://webgpu-demos.github.io/garita/?ui=0&t=2026-10-11T14:20:00Z&shot=1&video=1&scale=0.67 450 frames at 30 fps
+[03:44:48] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:44:48] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:44:48] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:44:48] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:44:48] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:44:48] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:46:23] booted after 212 s, 250 steps {"booted":true,"ready":true,"tiles":58,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[03:46:32] settle {"ms":9062,"steps":52,"pending":0,"degraded":2,"down":false}
+[03:46:36] settle {"ms":3751,"steps":24,"pending":0,"degraded":0,"down":false}
+[03:46:36] settle {"ms":3,"steps":1,"pending":0,"degraded":0,"down":false}
+[03:46:41] settle {"ms":4677,"steps":1,"pending":0,"degraded":0,"down":false}
+[03:46:44] frame 0/450 3 s settle 7 ms 1 steps {"booted":true,"ready":true,"tiles":69,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[03:48:03] frame 30/450 82 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":69,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[03:49:29] frame 60/450 169 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":66,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[03:51:31] frame 90/450 290 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":51,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[03:53:42] frame 120/450 421 s settle 1134 ms 18 steps {"booted":true,"ready":true,"tiles":69,"pending":0,"terrain":0,"layers":0,"maxZoom":12,"degraded":0,"down":false}
+[03:56:10] frame 150/450 569 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":84,"pending":0,"terrain":0,"layers":0,"maxZoom":13,"degraded":0,"down":false}
+[03:58:51] frame 180/450 730 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":89,"pending":0,"terrain":0,"layers":0,"maxZoom":13,"degraded":0,"down":false}
+[04:00:02] [console] Failed to load resource: the server responded with a status of 503 (Service Unavailable)
+[04:01:34] frame 210/450 894 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":89,"pending":0,"terrain":0,"layers":0,"maxZoom":13,"degraded":0,"down":false}
+[04:04:20] frame 240/450 1059 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":87,"pending":0,"terrain":0,"layers":0,"maxZoom":13,"degraded":0,"down":false}
+[04:07:24] frame 270/450 1243 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":92,"pending":0,"terrain":0,"layers":0,"maxZoom":14,"degraded":0,"down":false}
+[04:10:24] frame 300/450 1423 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":74,"pending":0,"terrain":0,"layers":0,"maxZoom":14,"degraded":0,"down":false}
+[04:13:30] frame 330/450 1610 s settle 7 ms 1 steps {"booted":true,"ready":true,"tiles":59,"pending":0,"terrain":0,"layers":0,"maxZoom":14,"degraded":0,"down":false}
+[04:17:11] frame 360/450 1831 s settle 5 ms 1 steps {"booted":true,"ready":true,"tiles":56,"pending":0,"terrain":0,"layers":0,"maxZoom":15,"degraded":0,"down":false}
+[04:20:55] frame 390/450 2054 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":51,"pending":0,"terrain":0,"layers":0,"maxZoom":15,"degraded":0,"down":false}
+[04:24:34] frame 420/450 2273 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":47,"pending":0,"terrain":0,"layers":0,"maxZoom":15,"degraded":0,"down":false}
+[04:28:03] done 450 frames in 2482 s
+director exit 0
+frames: 450
+total 47872
+drwxr-xr-x  2 runner runner     4096 Oct 12 04:28 .
+drwxr-xr-x 12 runner runner     4096 Oct 12 03:42 ..
+-rw-r--r--  1 runner runner     3801 Oct 12 04:28 log.txt
+-rw-r--r--  1 runner runner 47486306 Oct 12 04:28 s02a.mp4
+-rw-r--r--  1 runner runner   133888 Oct 12 04:28 sheet.jpg
+-rw-r--r--  1 runner runner     3773 Oct 12 04:28 stdout-tail.txt
+-rw-r--r--  1 runner runner   372456 Oct 12 04:28 still-00000.jpg
+-rw-r--r--  1 runner runner   408946 Oct 12 04:28 still-00225.jpg
+-rw-r--r--  1 runner runner   594268 Oct 12 04:28 still-00449.jpg
