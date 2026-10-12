@@ -1,0 +1,28 @@
+[03:28:08] scene t1 https://webgpu-demos.github.io/garita/?ui=0&t=2026-10-10T21:40:00Z&shot=1&video=1&scale=0.67 90 frames at 30 fps
+[03:29:45] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:29:45] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:29:45] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:29:45] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:29:45] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:29:45] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:30:34] booted after 146 s, 210 steps {"booted":true,"ready":true,"tiles":45,"pending":0,"terrain":0,"layers":0,"maxZoom":11}
+[03:30:41] settle {"ms":7492,"steps":20,"pending":0}
+[03:30:41] settle {"ms":3,"steps":1,"pending":0}
+[03:30:44] settle {"ms":2555,"steps":1,"pending":0}
+[03:30:44] settle {"ms":3,"steps":1,"pending":0}
+[03:30:49] frame 0/90 5 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":59,"pending":0,"terrain":0,"layers":0,"maxZoom":11}
+[03:31:47] frame 30/90 63 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":58,"pending":0,"terrain":0,"layers":0,"maxZoom":11}
+[03:32:45] frame 60/90 121 s settle 3 ms 1 steps {"booted":true,"ready":true,"tiles":56,"pending":0,"terrain":0,"layers":0,"maxZoom":11}
+[03:33:42] done 90 frames in 178 s
+director exit 0
+frames: 90
+total 6384
+drwxr-xr-x  2 runner runner    4096 Oct 12 03:33 .
+drwxr-xr-x 12 runner runner    4096 Oct 12 03:28 ..
+-rw-r--r--  1 runner runner    1480 Oct 12 03:33 log.txt
+-rw-r--r--  1 runner runner   60469 Oct 12 03:33 sheet.jpg
+-rw-r--r--  1 runner runner    1453 Oct 12 03:33 stdout-tail.txt
+-rw-r--r--  1 runner runner  429107 Oct 12 03:33 still-00000.jpg
+-rw-r--r--  1 runner runner  410186 Oct 12 03:33 still-00045.jpg
+-rw-r--r--  1 runner runner  385385 Oct 12 03:33 still-00089.jpg
+-rw-r--r--  1 runner runner 5222880 Oct 12 03:33 t1.mp4
