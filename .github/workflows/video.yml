@@ -57,9 +57,11 @@ jobs:
         run: |
           mkdir -p out
           set +e
-          NODE_PATH=/tmp/pw/node_modules timeout 315m node tools/video/director.mjs video.spec.json "${{ matrix.scene }}" work
+          mkdir -p work
+          NODE_PATH=/tmp/pw/node_modules timeout 315m node tools/video/director.mjs video.spec.json "${{ matrix.scene }}" work > work/stdout.txt 2>&1
           echo "director exit $?" >> work/log.txt
           cp work/log.txt out/log.txt 2>/dev/null || true
+          tail -n 60 work/stdout.txt > out/stdout-tail.txt 2>/dev/null || true
       - name: Encode
         if: always()
         run: |

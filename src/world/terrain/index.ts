@@ -15,7 +15,8 @@ const NEW = 0, QUEUED = 1, LOADING = 2, READY = 3, FAILED = 4;
 const HN = 129;
 const MAX_GEOM_Z = 15;
 const RETRY_MS = 60000;
-const MAX_FETCH = 6;                 // photos in flight; also bounds requests per host
+// photos in flight; also bounds requests per host. ?video=1 (frame-by-frame recording, tools/video/) loads harder.
+const MAX_FETCH = /[?&]video=1/.test(globalThis.location?.search ?? '') ? 12 : 6;
 export const ABYSSAL_NAME = 'abyssal-plain';
 export const ABYSSAL_DEPTH = -4000;
 
@@ -571,7 +572,7 @@ export function createTerrain(world: World): TerrainApi {
       // (observed night lights on the map: our modelled town lights would be read as part of the image)
       globalU.uLightGain.value = S.overlay.value === 'nightlights' ? 0 : LIGHT_GAIN;
       globalU.uOvEmit.value = S.overlay.value === 'nightlights' ? 0.34 * world.night : 0;
-      flushBuilt(frame.dt > 0.03 ? 2 : 4);
+      flushBuilt(MAX_FETCH > 6 ? 64 : frame.dt > 0.03 ? 2 : 4);
       if (indexDone && bathyDone) { for (let i = 0; i < roots.length; i++) visit(roots[i]); dispatch(); }
       if (frameNo % 20 === 0) housekeeping();
     },

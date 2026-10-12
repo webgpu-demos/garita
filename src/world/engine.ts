@@ -72,7 +72,8 @@ export function createEngine(canvas: HTMLCanvasElement, parts: EngineParts = {})
 
     world.terrain.update(frame);
     for (const cb of frameCbs) cb(frame);
-    world.post.render(frame);
+    // (frame-by-frame recording advances the scene without drawing while tiles arrive: tools/video/director.mjs)
+    if (!(globalThis as any).__garitaSkipDraw) world.post.render(frame);
 
     // scene -> state, a few times a second
     fpsAcc += dt; fpsN++;

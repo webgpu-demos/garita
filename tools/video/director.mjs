@@ -12,7 +12,11 @@
 //               { t, js: "<code using S, W, G>" }
 //               { t, type: "text", cps? }
 //               { t, scroll: { sel, dy, dur } }
-//               { t, key: "Enter" }]
+//               { t, key: "Enter" }
+//               { t, select: "<selector of a <select>>", value }
+//               { t, drag: "<selector of a range input>", to: value, dur }
+//               { t, geo: [lon, lat, metres above ground] }               move the pointer over a place in the scene
+//               any action may add hold: ms — real time to let tiles and overlays arrive before the next frame]
 //     tweens:  [{ from, to, js: "<code using S, W, G and k (0..1)>", ease? }]
 //     setup:   ["<code>"]                     run once after loading, before frame 0
 //     cursor:  false                          hide the pointer for this scene
@@ -30,7 +34,7 @@ if (!scene) throw new Error(`no scene ${sceneId}`);
 const W = spec.width ?? 1920, H = spec.height ?? 1080, FPS = scene.fps ?? spec.fps ?? 30;
 const N = Math.round(scene.duration * FPS);
 const base = spec.base ?? 'https://webgpu-demos.github.io/garita/';
-const url = base + scene.url + (scene.url.includes('?') ? '&' : '?') + `shot=1&scale=${scene.renderScale ?? spec.renderScale ?? 0.67}`;
+const url = base + scene.url + (scene.url.includes('?') ? '&' : '?') + `shot=1&video=1&scale=${scene.renderScale ?? spec.renderScale ?? 0.67}`;
 fs.mkdirSync(path.join(outDir, 'frames'), { recursive: true });
 const log = (...a) => { const l = `[${new Date().toISOString().slice(11, 19)}] ${a.join(' ')}`; console.log(l); fs.appendFileSync(path.join(outDir, 'log.txt'), l + '\n'); };
 
@@ -54,33 +58,39 @@ await page.addInitScript(() => {
   };
 });
 
-const stepPage = (dt) => page.evaluate((d) => window.__vt.step(d), dt);
+// A step either draws (one output frame) or only advances the scene: terrain and layers request and upload tiles,
+// the post-processing pass that costs seconds under software GL is skipped.
+const stepPage = (dt, draw = true) => page.evaluate(({ d, draw }) => { window.__garitaSkipDraw = !draw; try { return window.__vt.step(d); } finally { window.__garitaSkipDraw = false; } }, { d: dt, draw });
 const stats = () => page.evaluate(() => {
   const g = window.__garita, s = g?.state, t = g?.world?.terrain?.stats?.() ?? { tiles: 0, pending: 1 };
-  return { booted: !!s?.booted?.value, ready: !!g?.ready, tiles: t.tiles, pending: t.pending, maxZoom: t.maxZoom };
+  let layers = 0;
+  try { for (const l of g.debug?.().layers ?? []) if (l && typeof l.pending === 'number') layers += l.pending; } catch { /* not booted */ }
+  return { booted: !!s?.booted?.value, ready: !!g?.ready, tiles: t.tiles, pending: t.pending + layers, terrain: t.pending, layers, maxZoom: t.maxZoom };
 });
-/** Draw frames without moving time until nothing is waiting to load (or the budget runs out). */
-async function settle(budgetMs, needQuiet = 3) {
-  const t0 = Date.now(); let quiet = 0, n = 0;
-  while (Date.now() - t0 < budgetMs) {
-    await stepPage(0); n++;
-    const s = await stats();
-    quiet = s.pending === 0 && s.tiles > 0 ? quiet + 1 : 0;
-    if (quiet >= needQuiet) break;
-    await new Promise((r) => setTimeout(r, 40));
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+/** Advance the scene without drawing or moving time until nothing is waiting to load (or the budget runs out). */
+async function settle(budgetMs, minMs = 0) {
+  const t0 = Date.now(); let n = 0, s;
+  for (;;) {
+    await stepPage(0, false); n++;
+    s = await stats();
+    const el = Date.now() - t0;
+    if ((s.pending === 0 && s.tiles > 0 && el >= minMs) || el > budgetMs) break;
+    await sleep(60);
   }
-  return { ms: Date.now() - t0, frames: n };
+  return { ms: Date.now() - t0, steps: n, pending: s.pending };
 }
 
 log('scene', scene.id, url, `${N} frames at ${FPS} fps`);
 await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 120000 });
-// boot: let virtual time run (the curtain, the store, the first tiles), then wait for the view to settle
+// boot: let virtual time run (the curtain, the store, the first tiles), drawing now and then (the sky's tables are
+// computed on draw), then wait for the view to settle
 {
   const t0 = Date.now(); let i = 0;
-  while (Date.now() - t0 < 240000) {
-    await stepPage(33); i++;
-    if (i % 10 === 0) { const s = await stats(); if (s.booted && s.tiles > 0 && s.pending === 0 && i > 90) break; }
-    await new Promise((r) => setTimeout(r, 15));
+  while (Date.now() - t0 < 300000) {
+    await stepPage(33, i % 6 === 0); i++;
+    if (i % 10 === 0) { const s = await stats(); if (s.booted && s.tiles > 0 && s.pending === 0 && i > 120) break; }
+    await sleep(20);
   }
   log('booted after', Math.round((Date.now() - t0) / 1000), 's,', i, 'steps', JSON.stringify(await stats()));
 }
@@ -105,7 +115,7 @@ function camAt(t) {
 }
 const setCam = (c) => c && page.evaluate((c) => window.__garita.world.controls.flyTo({ lon: c[0], lat: c[1], range: c[2], heading: c[3], pitch: c[4], seconds: 0 }), c);
 await setCam(camAt(0));
-log('settled', JSON.stringify(await settle(90000, 6)));
+for (let i = 0; i < 4; i++) { await stepPage(0, true); log('settle', JSON.stringify(await settle(60000))); }
 
 // ---- the pointer: drawn into the page so it is in the screenshot ----
 const showCursor = scene.cursor !== false;
@@ -124,18 +134,37 @@ const actions = (scene.actions ?? []).map((a, i) => ({ ...a, i, done: false })).
 const moves = [];   // pointer movements { t0, t1, from, to }
 let pointer = scene.start ?? [W * 0.62, H * 0.55], lastClick = -10;
 async function target(a) {
-  if (a.click) { const box = await page.locator(a.click).first().boundingBox({ timeout: 5000 }).catch(() => null); return box && [box.x + box.width / 2, box.y + box.height / 2]; }
+  if (a.click || a.select) { const box = await page.locator(a.click ?? a.select).first().boundingBox({ timeout: 5000 }).catch(() => null); return box && [box.x + box.width / 2, box.y + box.height / 2]; }
   if (a.clickjs) {
     const h = await page.evaluateHandle(({ code }) => { const g = window.__garita; return new Function('S', 'W', 'G', code)(g.state, g.world, g); }, { code: a.clickjs });
     const el = h.asElement(); const box = el && (await el.boundingBox()); return box && [box.x + box.width / 2, box.y + box.height / 2];
+  }
+  if (a.drag) {
+    // a range input: from the thumb at its current value to the thumb at `to`
+    const r = await page.locator(a.drag).first().evaluate((el) => { const b = el.getBoundingClientRect(); return { x: b.x, y: b.y, w: b.width, h: b.height, min: +el.min || 0, max: +el.max || 100, v: +el.value }; }).catch(() => null);
+    if (!r) return null;
+    const at = (v) => [r.x + 8 + ((v - r.min) / (r.max - r.min)) * (r.w - 16), r.y + r.h / 2];
+    a.dragTo = at(a.to); return at(r.v);
+  }
+  if (a.geo) {
+    return page.evaluate(([lon, lat, h]) => {
+      const W = window.__garita.world, M_LON = 105773.6, M_LAT = 110682.9;
+      const x = (lon + 66.45) * M_LON, z = -(lat - 18.22) * M_LAT;
+      const y = (W.terrain.heightAt(x, z) ?? 0) - (x * x + z * z) / (2 * 6371008.8) + (h ?? 0);
+      const v = W.camera.position.clone().set(x, y, z).project(W.camera);
+      const r = W.canvas.getBoundingClientRect();
+      return [r.left + (v.x + 1) / 2 * r.width, r.top + (1 - v.y) / 2 * r.height];
+    }, a.geo);
   }
   if (a.point) return a.point;
   return null;
 }
 // pointer moves start `move` seconds before each click; targets are looked up when the move starts
-const pending = actions.filter((a) => a.click || a.clickjs || a.point);
-let typing = null, scrolls = [];
+const pending = actions.filter((a) => a.click || a.clickjs || a.point || a.geo || a.drag || a.select);
+let typing = null, scrolls = [], drag = null, mouseAt = null, holdMs = 0;
 const t0 = Date.now();
+process.on('unhandledRejection', (e) => { log('unhandled', String(e?.stack ?? e).slice(0, 600)); process.exit(2); });
+process.on('uncaughtException', (e) => { log('uncaught', String(e?.stack ?? e).slice(0, 600)); process.exit(2); });
 for (let f = 0; f < N; f++) {
   const t = f / FPS;
   // pointer moves due to start
@@ -148,12 +177,15 @@ for (let f = 0; f < N; f++) {
     if (a.done || t < a.t) continue;
     a.done = true;
     try {
-      if ((a.click || a.clickjs) && a.to) { await page.mouse.click(a.to[0], a.to[1]); lastClick = t; pointer = a.to; }
-      else if (a.point && a.to) { await page.mouse.move(a.to[0], a.to[1]); pointer = a.to; }
+      if ((a.click || a.clickjs) && a.to) { await page.mouse.click(a.to[0], a.to[1]); lastClick = t; pointer = a.to; mouseAt = a.to; }
+      else if (a.select && a.to) { await page.selectOption(a.select, a.value); lastClick = t; pointer = a.to; }
+      else if (a.drag && a.to) { await page.mouse.move(a.to[0], a.to[1]); await page.mouse.down(); lastClick = t; drag = { from: a.to, to: a.dragTo, t0: t, dur: a.dur ?? 2 }; }
+      else if ((a.point || a.geo) && a.to) { await page.mouse.move(a.to[0], a.to[1]); pointer = a.to; mouseAt = a.to; }
       if (a.js) await run(a.js);
       if (a.type) typing = { text: a.type, i: 0, next: t, dt: 1 / (a.cps ?? 14) };
       if (a.key) await page.keyboard.press(a.key);
       if (a.scroll) scrolls.push({ ...a.scroll, from: t, start: null, done: 0 });
+      if (a.hold) holdMs = Math.max(holdMs, a.hold);
     } catch (e) { log('action failed at', a.t, String(e).slice(0, 200)); }
   }
   if (typing && t >= typing.next) { await page.keyboard.type(typing.text[typing.i]); typing.i++; typing.next = t + typing.dt; if (typing.i >= typing.text.length) typing = null; }
@@ -168,14 +200,24 @@ for (let f = 0; f < N; f++) {
   let p = pointer;
   for (const m of moves) if (t >= m.t0 && t <= m.t1) { const k = ease((t - m.t0) / (m.t1 - m.t0)); p = [m.from[0] + (m.to[0] - m.from[0]) * k, m.from[1] + (m.to[1] - m.from[1]) * k]; }
   for (const m of moves) if (t > m.t1) pointer = m.to;
+  if (drag) {
+    const k = ease(Math.min(1, (t - drag.t0) / drag.dur));
+    p = [drag.from[0] + (drag.to[0] - drag.from[0]) * k, drag.from[1] + (drag.to[1] - drag.from[1]) * k];
+    await page.mouse.move(p[0], p[1]); mouseAt = p;
+    if (k >= 1) { await page.mouse.up(); pointer = p; drag = null; }
+  } else if (showCursor && (!mouseAt || Math.hypot(p[0] - mouseAt[0], p[1] - mouseAt[1]) > 0.5)) {
+    // the real pointer follows the drawn one, so hover states and hover cards appear as they would
+    await page.mouse.move(p[0], p[1]); mouseAt = p;
+  }
   const rk = (t - lastClick) / 0.45;
   await page.evaluate(({ x, y, r }) => window.__cursor?.set(x, y, r), { x: p[0], y: p[1], r: rk });
   await setCam(camAt(t));
-  // one frame of virtual time, then let the tiles it asked for arrive
-  await stepPage(1000 / FPS);
-  const st = await settle(scene.settleMs ?? spec.settleMs ?? 2500, 1);
-  await page.screenshot({ path: path.join(outDir, 'frames', String(f).padStart(5, '0') + '.jpg'), type: 'jpeg', quality: 92 });
-  if (f % 30 === 0) log(`frame ${f}/${N}`, `${Math.round((Date.now() - t0) / 1000)} s`, `settle ${st.ms} ms`, JSON.stringify(await stats()));
+  // one frame of virtual time without drawing, let the tiles it asked for arrive, then draw it once
+  await stepPage(1000 / FPS, false);
+  const st = await settle(scene.settleMs ?? spec.settleMs ?? 20000, holdMs); holdMs = 0;
+  await stepPage(0, true);
+  await page.screenshot({ path: path.join(outDir, 'frames', String(f).padStart(5, '0') + '.jpg'), type: 'jpeg', quality: 92, timeout: 180000 });
+  if (f % 30 === 0) log(`frame ${f}/${N}`, `${Math.round((Date.now() - t0) / 1000)} s`, `settle ${st.ms} ms ${st.steps} steps`, JSON.stringify(await stats()));
 }
 log('done', N, 'frames in', Math.round((Date.now() - t0) / 1000), 's');
 await browser.close();

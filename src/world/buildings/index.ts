@@ -16,7 +16,7 @@ import type { Frame } from '../types';
 import { createBuildingMaterial, createSharedUniforms, type TileUniforms } from './material';
 import type { MeshJob, MeshResult } from './worker';
 
-const Z = 14, MAX_RANGE = 14000, FADE_S = 0.45, MAX_FETCH = 4, SINK = 3, SHADOW_TILES = 2.2;
+const Z = 14, MAX_RANGE = 14000, FADE_S = 0.45, MAX_FETCH = /[?&]video=1/.test(globalThis.location?.search ?? '') ? 8 : 4, SINK = 3, SHADOW_TILES = 2.2;
 
 interface Tile {
   key: string; x: number; y: number; id: number;
