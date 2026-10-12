@@ -6,6 +6,7 @@ import { readFileSync } from 'node:fs';
 import { openNodeStore } from '../src/ontology/node.ts';
 import { SCHEMA_DOC } from '../src/ontology/schema.ts';
 import { validateBatch } from '../src/ontology/validate.ts';
+import { SAVED_QUERIES } from '../src/ui/saved-queries.ts';
 import { assertReadOnly, capabilities, fold, housekeeping, ingest, timed, readCarryOver, writeCarryOver } from '../src/ontology/engine.ts';
 import type { IngestBatch, ObjectInput, Ontology } from '../src/ontology/types.ts';
 
@@ -347,6 +348,10 @@ test('query(): read-only guard and row cap', async () => {
     await assert.rejects(s.query(bad), /query:/, bad);
   }
   assert.throws(() => assertReadOnly('BEGIN'));
+  // an apostrophe in a comment is not a string, and '--' inside a string is not a comment
+  assert.doesNotThrow(() => assertReadOnly("-- FEMA's records, the shelter's point\nSELECT '--' AS a, 'it''s' AS b"));
+  assert.throws(() => assertReadOnly("-- it's\nDELETE FROM object"));
+  for (const q of SAVED_QUERIES) assert.doesNotThrow(() => assertReadOnly(q.sql), q.id);
   assert.equal((await s.countByType()).earthquake, quakes.features.length, 'nothing was written');
   const many = await s.query('WITH RECURSIVE c(x) AS (SELECT 1 UNION ALL SELECT x + 1 FROM c WHERE x < 20000) SELECT x FROM c');
   assert.equal(many.length, 5000);

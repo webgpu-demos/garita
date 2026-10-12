@@ -771,8 +771,10 @@ export function sources(db: SqlDb, ontology: Ontology, now: number = Date.now())
 
 /** Rejects anything that could write. The statement-level check in the adapter backs this up where available. */
 export function assertReadOnly(sql: string): string {
-  // Literals and comments are blanked first so a ';' or a keyword inside a string does not trip the checks.
-  const bare = sql.replace(/'(?:[^']|'')*'/g, "''").replace(/"(?:[^"]|"")*"/g, '""').replace(/--[^\n]*/g, ' ').replace(/\/\*[\s\S]*?\*\//g, ' ').trim();
+  // Literals and comments are blanked first so a ';' or a keyword inside a string does not trip the checks. One pass,
+  // left to right: an apostrophe inside a comment ("-- FEMA's records") is not the start of a string, and "--" inside
+  // a string is not a comment.
+  const bare = sql.replace(/--[^\n]*|\/\*[\s\S]*?\*\/|'(?:[^']|'')*'|"(?:[^"]|"")*"/g, (m) => (m[0] === "'" ? "''" : m[0] === '"' ? '""' : ' ')).trim();
   const body = bare.replace(/;\s*$/, '');
   if (!body) throw new Error('query: empty statement');
   if (body.includes(';')) throw new Error('query: only a single statement is allowed');
