@@ -1,0 +1,35 @@
+[03:42:57] scene s04 https://webgpu-demos.github.io/garita/?t=2026-10-11T15:00:00Z&shot=1&video=1&scale=0.67 552 frames at 30 fps
+[03:44:40] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:44:40] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:44:40] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:44:40] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:44:40] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:44:40] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:45:49] booted after 171 s, 200 steps {"booted":true,"ready":true,"tiles":56,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":1,"down":false}
+[03:45:53] settle {"ms":4345,"steps":2,"pending":0,"degraded":0,"down":false}
+[03:45:53] settle {"ms":6,"steps":1,"pending":0,"degraded":0,"down":false}
+[03:45:58] settle {"ms":4367,"steps":1,"pending":0,"degraded":0,"down":false}
+[03:45:58] settle {"ms":5,"steps":1,"pending":0,"degraded":0,"down":false}
+[03:46:03] frame 0/552 5 s settle 15 ms 1 steps {"booted":true,"ready":true,"tiles":58,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[03:47:14] frame 30/552 76 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":58,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[03:48:22] frame 60/552 144 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":58,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[03:49:31] frame 90/552 213 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":58,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[03:50:41] frame 120/552 283 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":57,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[03:52:01] frame 150/552 364 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":56,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[03:53:00] [console] Failed to load resource: the server responded with a status of 404 ()
+[03:53:20] frame 180/552 442 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":54,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[03:54:30] frame 210/552 513 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":53,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[03:55:56] frame 240/552 598 s settle 5 ms 1 steps {"booted":true,"ready":true,"tiles":51,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[03:58:13] frame 270/552 736 s settle 3 ms 1 steps {"booted":true,"ready":true,"tiles":49,"pending":0,"terrain":0,"layers":0,"maxZoom":10,"degraded":0,"down":false}
+[03:58:28] [console] Failed to load resource: the server responded with a status of 404 ()
+[03:58:28] [console] Failed to load resource: the server responded with a status of 404 ()
+[03:59:25] frame 300/552 807 s settle 5 ms 1 steps {"booted":true,"ready":true,"tiles":41,"pending":0,"terrain":0,"layers":0,"maxZoom":10,"degraded":0,"down":false}
+[04:00:32] frame 330/552 875 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":40,"pending":0,"terrain":0,"layers":0,"maxZoom":10,"degraded":0,"down":false}
+[04:01:40] frame 360/552 942 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":38,"pending":0,"terrain":0,"layers":0,"maxZoom":10,"degraded":0,"down":false}
+[04:02:45] frame 390/552 1007 s settle 3 ms 1 steps {"booted":true,"ready":true,"tiles":38,"pending":0,"terrain":0,"layers":0,"maxZoom":10,"degraded":0,"down":false}
+[04:03:50] frame 420/552 1072 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":38,"pending":0,"terrain":0,"layers":0,"maxZoom":10,"degraded":0,"down":false}
+[04:04:53] frame 450/552 1136 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":37,"pending":0,"terrain":0,"layers":0,"maxZoom":10,"degraded":0,"down":false}
+[04:05:56] frame 480/552 1199 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":37,"pending":0,"terrain":0,"layers":0,"maxZoom":10,"degraded":0,"down":false}
+[04:07:01] frame 510/552 1263 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":37,"pending":0,"terrain":0,"layers":0,"maxZoom":10,"degraded":0,"down":false}
+[04:08:04] frame 540/552 1326 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":37,"pending":0,"terrain":0,"layers":0,"maxZoom":10,"degraded":0,"down":false}
+[04:08:27] done 552 frames in 1349 s
