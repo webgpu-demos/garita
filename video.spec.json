@@ -1,0 +1,728 @@
+{
+ "width": 1920,
+ "height": 1080,
+ "fps": 30,
+ "renderScale": 0.67,
+ "settleMs": 20000,
+ "scenes": [
+  {
+   "id": "s01",
+   "url": "?ui=0&t=2026-10-10T21:50:00Z",
+   "duration": 16.6,
+   "cursor": false,
+   "pre": 1.5,
+   "clip": "01",
+   "setup": [
+    "S.layerOn.value = { ...S.layerOn.value, markers: false, municipios: false }"
+   ],
+   "camera": [
+    {
+     "t": 0,
+     "cam": [
+      -66.52,
+      18.06,
+      330000,
+      332,
+      33
+     ]
+    },
+    {
+     "t": 16.6,
+     "cam": [
+      -66.38,
+      18.2,
+      250000,
+      8,
+      45
+     ],
+     "ease": "linear"
+    }
+   ]
+  },
+  {
+   "id": "s02a",
+   "url": "?ui=0&t=2026-10-11T14:20:00Z",
+   "duration": 15.0,
+   "cursor": false,
+   "pre": 0.6,
+   "clip": "02",
+   "clipFrom": 0,
+   "clipTo": 13.5,
+   "setup": [
+    "S.layerOn.value = { ...S.layerOn.value, markers: false, municipios: false }"
+   ],
+   "camera": [
+    {
+     "t": 0,
+     "cam": [
+      -66.4,
+      18.2,
+      240000,
+      0,
+      48
+     ]
+    },
+    {
+     "t": 6.8,
+     "cam": [
+      -65.83,
+      18.33,
+      30000,
+      200,
+      22
+     ]
+    },
+    {
+     "t": 10.6,
+     "cam": [
+      -65.95,
+      18.445,
+      15000,
+      228,
+      26
+     ]
+    },
+    {
+     "t": 15.0,
+     "cam": [
+      -66.058,
+      18.447,
+      4300,
+      206,
+      32
+     ],
+     "ease": "out"
+    }
+   ]
+  },
+  {
+   "id": "s02b",
+   "url": "?t=2026-10-11T15:00:00Z",
+   "duration": 12.6,
+   "pre": 0.6,
+   "clip": "02",
+   "clipFrom": 13.5,
+   "clipTo": null,
+   "setup": [
+    "document.querySelector('.dock-fold')?.click()"
+   ],
+   "camera": [
+    {
+     "t": 0,
+     "cam": [
+      -66.1049,
+      18.1979,
+      380,
+      345,
+      48
+     ]
+    },
+    {
+     "t": 12.6,
+     "cam": [
+      -66.1049,
+      18.1979,
+      360,
+      352,
+      49
+     ],
+     "ease": "linear"
+    }
+   ],
+   "start": [
+    1200,
+    760
+   ],
+   "actions": [
+    {
+     "t": 1.1,
+     "geo": [
+      -66.105149,
+      18.197767,
+      4
+     ],
+     "move": 0.7
+    },
+    {
+     "t": 3.3,
+     "geo": [
+      -66.104727,
+      18.197849,
+      2
+     ],
+     "move": 0.8
+    },
+    {
+     "t": 8.4,
+     "geo": [
+      -66.104847,
+      18.197682,
+      2
+     ],
+     "move": 0.6
+    }
+   ]
+  },
+  {
+   "id": "s03",
+   "url": "?t=2026-10-11T15:00:00Z",
+   "duration": 23.4,
+   "pre": 0.6,
+   "clip": "03",
+   "start": [
+    900,
+    600
+   ],
+   "actions": [
+    {
+     "t": 3.2,
+     "hover": "button.kpi:has-text('Weather alerts')",
+     "move": 0.9
+    },
+    {
+     "t": 4.2,
+     "hover": "button.kpi:has-text('Earthquakes')",
+     "move": 0.45
+    },
+    {
+     "t": 5.1,
+     "hover": "button.kpi:has-text('Rivers')",
+     "move": 0.45
+    },
+    {
+     "t": 6.8,
+     "hover": "button.kpi:has-text('Customers without power')",
+     "move": 0.45
+    },
+    {
+     "t": 8.4,
+     "hover": "button.kpi:has-text('San Juan tide')",
+     "move": 0.45
+    },
+    {
+     "t": 10.0,
+     "hover": "button.kpi:has-text('Wind')",
+     "move": 0.45
+    },
+    {
+     "t": 10.8,
+     "hover": "button.kpi:has-text('Tropical cyclones')",
+     "move": 0.45
+    },
+    {
+     "t": 13.6,
+     "hover": "button.feed-chip",
+     "move": 0.8
+    },
+    {
+     "t": 17.6,
+     "hover": ".dock button.inbox-row",
+     "move": 0.8
+    },
+    {
+     "t": 19.4,
+     "scroll": {
+      "sel": ".dock .pane-scroll",
+      "dy": 320,
+      "dur": 1.6
+     }
+    }
+   ],
+   "camera": [
+    {
+     "t": 0,
+     "cam": [
+      -66.3,
+      18.21,
+      235000,
+      0,
+      52
+     ]
+    },
+    {
+     "t": 23.4,
+     "cam": [
+      -66.28,
+      18.22,
+      215000,
+      0,
+      53
+     ],
+     "ease": "linear"
+    }
+   ]
+  },
+  {
+   "id": "s04",
+   "url": "?t=2026-10-11T15:00:00Z",
+   "duration": 18.4,
+   "pre": 0.6,
+   "clip": "04",
+   "start": [
+    700,
+    640
+   ],
+   "camera": [
+    {
+     "t": 0,
+     "cam": [
+      -66.3,
+      18.21,
+      235000,
+      0,
+      52
+     ]
+    },
+    {
+     "t": 18.4,
+     "cam": [
+      -66.22,
+      18.28,
+      150000,
+      0,
+      56
+     ],
+     "ease": "inOut"
+    }
+   ],
+   "actions": [
+    {
+     "t": 1.8,
+     "click": "button.rail-btn[title='Overlays']",
+     "move": 0.9
+    },
+    {
+     "t": 4.6,
+     "click": "label.fly-row:has-text('Radar')",
+     "hold": 9000
+    },
+    {
+     "t": 5.9,
+     "click": "label.fly-row:has-text('GOES')",
+     "hold": 12000
+    },
+    {
+     "t": 7.7,
+     "click": "label.fly-row:has-text('Night lights')",
+     "hold": 14000
+    },
+    {
+     "t": 10.6,
+     "hover": "aside.legend",
+     "move": 0.9
+    },
+    {
+     "t": 13.5,
+     "hover": "button.kpi:has-text('Customers without power')",
+     "move": 0.9
+    },
+    {
+     "t": 15.8,
+     "geo": [
+      -66.06,
+      18.4,
+      0
+     ],
+     "move": 1.0
+    }
+   ],
+   "tweens": [
+    {
+     "from": 7.7,
+     "to": 9.2,
+     "js": "S.clockMode.value = 'manual'; S.sceneTime.value = Date.parse('2026-10-11T15:00:00Z') + k * 13 * 3600e3"
+    }
+   ]
+  },
+  {
+   "id": "s05",
+   "url": "?t=2026-10-11T15:00:00Z",
+   "duration": 24.4,
+   "pre": 0.6,
+   "clip": "05",
+   "start": [
+    700,
+    640
+   ],
+   "camera": [
+    {
+     "t": 0,
+     "cam": [
+      -66.1,
+      18.44,
+      27000,
+      180,
+      62
+     ]
+    },
+    {
+     "t": 14.2,
+     "cam": [
+      -66.12,
+      18.43,
+      23000,
+      188,
+      60
+     ],
+     "ease": "linear"
+    },
+    {
+     "t": 17.6,
+     "cam": [
+      -66.7,
+      18.25,
+      34000,
+      0,
+      58
+     ]
+    },
+    {
+     "t": 24.4,
+     "cam": [
+      -66.7,
+      18.25,
+      31000,
+      8,
+      58
+     ],
+     "ease": "linear"
+    }
+   ],
+   "actions": [
+    {
+     "t": 1.2,
+     "click": "button.rail-btn[title='Overlays']",
+     "move": 0.9
+    },
+    {
+     "t": 2.9,
+     "click": "label.fly-row:has-text('Storm surge')",
+     "hold": 14000
+    },
+    {
+     "t": 7.2,
+     "hover": "aside.legend",
+     "move": 0.9
+    },
+    {
+     "t": 10.7,
+     "click": "button[aria-label='Category 1']",
+     "hold": 8000,
+     "move": 0.8
+    },
+    {
+     "t": 11.4,
+     "click": "button[aria-label='Category 2']",
+     "hold": 8000,
+     "move": 0.35
+    },
+    {
+     "t": 12.1,
+     "click": "button[aria-label='Category 3']",
+     "hold": 8000,
+     "move": 0.35
+    },
+    {
+     "t": 12.8,
+     "click": "button[aria-label='Category 4']",
+     "hold": 8000,
+     "move": 0.35
+    },
+    {
+     "t": 13.5,
+     "click": "button[aria-label='Category 5']",
+     "hold": 8000,
+     "move": 0.35
+    },
+    {
+     "t": 14.2,
+     "click": "label.fly-row:has-text('Landslide')",
+     "hold": 14000,
+     "move": 0.6
+    },
+    {
+     "t": 20.4,
+     "hover": "aside.legend",
+     "move": 1.0
+    }
+   ]
+  },
+  {
+   "id": "s06",
+   "url": "?t=2026-10-11T15:00:00Z",
+   "duration": 21.8,
+   "pre": 0.6,
+   "clip": "06",
+   "start": [
+    800,
+    600
+   ],
+   "camera": [
+    {
+     "t": 0,
+     "cam": [
+      -66.135,
+      18.437,
+      7600,
+      172,
+      57
+     ]
+    },
+    {
+     "t": 21.8,
+     "cam": [
+      -66.135,
+      18.437,
+      6800,
+      196,
+      58
+     ],
+     "ease": "linear"
+    }
+   ],
+   "actions": [
+    {
+     "t": 1.5,
+     "click": "button.dock-tab[aria-label='Scenario']",
+     "move": 0.9
+    },
+    {
+     "t": 5.0,
+     "click": "table.sc-presets tbody tr:nth-child(3) td:last-child button.sc-cell",
+     "move": 0.9,
+     "hold": 4000
+    },
+    {
+     "t": 7.6,
+     "drag": ".dock input[type='range']",
+     "to": 2.0,
+     "dur": 1.8,
+     "move": 0.6
+    },
+    {
+     "t": 10.2,
+     "scroll": {
+      "sel": ".dock .pane-scroll",
+      "dy": 300,
+      "dur": 1.4
+     }
+    },
+    {
+     "t": 13.7,
+     "scroll": {
+      "sel": ".dock .pane-scroll",
+      "dy": 330,
+      "dur": 1.2
+     }
+    },
+    {
+     "t": 15.2,
+     "click": "button.sc-asset:has-text('Shelters')",
+     "move": 0.8
+    },
+    {
+     "t": 18.2,
+     "click": "button.link-btn:has-text('Method and caveats')",
+     "move": 0.8
+    }
+   ]
+  },
+  {
+   "id": "s07",
+   "url": "?t=2026-10-11T15:00:00Z",
+   "duration": 18.9,
+   "pre": 0.6,
+   "clip": "07",
+   "start": [
+    800,
+    600
+   ],
+   "actions": [
+    {
+     "t": 1.4,
+     "click": "button.dock-tab[aria-label='Replay']",
+     "move": 0.9
+    },
+    {
+     "t": 6.2,
+     "clickjs": "const r = [...document.querySelectorAll('table.rp-list tbody tr')].find((x) => /mar[i\u00ed]a/i.test(x.textContent) && x.textContent.includes('2017')); r?.scrollIntoView({ block: 'center' }); return r;",
+     "move": 0.9,
+     "hold": 6000
+    },
+    {
+     "t": 6.25,
+     "js": "S.sceneTime.value += 5 * 3600e3"
+    },
+    {
+     "t": 8.9,
+     "click": "button.btn:has-text('Play')",
+     "move": 0.8
+    },
+    {
+     "t": 11.6,
+     "scroll": {
+      "sel": ".dock .pane-scroll",
+      "dy": 260,
+      "dur": 1.4
+     }
+    }
+   ]
+  },
+  {
+   "id": "s08",
+   "url": "?t=2026-10-11T15:00:00Z",
+   "duration": 20.3,
+   "pre": 0.6,
+   "clip": "08",
+   "start": [
+    900,
+    500
+   ],
+   "actions": [
+    {
+     "t": 3.0,
+     "click": "button.tb-search",
+     "move": 0.9
+    },
+    {
+     "t": 3.6,
+     "type": "San Juan",
+     "cps": 13
+    },
+    {
+     "t": 5.5,
+     "clickjs": "return [...document.querySelectorAll('button.pal-row')].find((b) => b.querySelector('.pal-meta')?.textContent.trim() === '72127') ?? document.querySelector('button.pal-row');",
+     "move": 0.7,
+     "hold": 5000
+    },
+    {
+     "t": 7.8,
+     "scroll": {
+      "sel": ".dock .pane-scroll",
+      "dy": 420,
+      "dur": 2.6
+     }
+    },
+    {
+     "t": 11.2,
+     "scroll": {
+      "sel": ".dock .pane-scroll",
+      "dy": 520,
+      "dur": 2.8
+     }
+    },
+    {
+     "t": 15.2,
+     "click": "button.dock-tab[aria-label='Graph']",
+     "move": 0.9,
+     "hold": 3000
+    },
+    {
+     "t": 17.6,
+     "hover": ".gr-wrap",
+     "move": 0.9
+    }
+   ]
+  },
+  {
+   "id": "s09",
+   "url": "?t=2026-10-11T15:00:00Z",
+   "duration": 15.6,
+   "pre": 0.6,
+   "clip": "09",
+   "start": [
+    900,
+    500
+   ],
+   "actions": [
+    {
+     "t": 1.5,
+     "click": "button.dock-tab[aria-label='SQL']",
+     "move": 0.9
+    },
+    {
+     "t": 5.0,
+     "select": "select[aria-label='Saved queries']",
+     "value": "nfip_gap",
+     "move": 0.9,
+     "hold": 5000
+    },
+    {
+     "t": 7.2,
+     "hover": ".dock table.sql-table",
+     "move": 0.9
+    },
+    {
+     "t": 10.4,
+     "click": "button.dock-tab[aria-label='Lineage']",
+     "move": 0.9,
+     "hold": 2000
+    },
+    {
+     "t": 12.6,
+     "scroll": {
+      "sel": ".dock .pane-scroll",
+      "dy": 300,
+      "dur": 1.6
+     }
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "url": "?ui=0&t=2026-10-10T21:50:00Z",
+   "duration": 22.6,
+   "cursor": false,
+   "pre": 0.5,
+   "clip": "10",
+   "setup": [
+    "S.layerOn.value = { ...S.layerOn.value, markers: false, municipios: false }"
+   ],
+   "camera": [
+    {
+     "t": 0,
+     "cam": [
+      -66.118,
+      18.467,
+      2600,
+      212,
+      20
+     ]
+    },
+    {
+     "t": 6.0,
+     "cam": [
+      -66.13,
+      18.45,
+      14000,
+      200,
+      28
+     ],
+     "ease": "in"
+    },
+    {
+     "t": 17.5,
+     "cam": [
+      -66.42,
+      18.2,
+      300000,
+      355,
+      40
+     ],
+     "ease": "out"
+    },
+    {
+     "t": 22.6,
+     "cam": [
+      -66.41,
+      18.2,
+      292000,
+      0,
+      41
+     ],
+     "ease": "linear"
+    }
+   ]
+  }
+ ]
+}
