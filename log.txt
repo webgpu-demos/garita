@@ -1,0 +1,20 @@
+[03:12:42] scene t1 https://webgpu-demos.github.io/garita/?ui=0&t=2026-10-10T21:40:00Z&shot=1&scale=0.67 90 frames at 30 fps
+[03:15:54] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:15:54] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:15:54] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:15:54] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:15:54] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:15:54] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:16:58] booted after 256 s, 66 steps {"booted":true,"ready":false,"tiles":15,"pending":55,"maxZoom":9}
+[03:18:34] settled {"ms":95458,"frames":34}
+[03:18:51] frame 0/90 17 s settle 16334 ms {"booted":true,"ready":false,"tiles":30,"pending":57,"maxZoom":10}
+director exit 1
+frames: 11
+total 2304
+drwxr-xr-x  2 runner runner   4096 Oct 12 03:22 .
+drwxr-xr-x 12 runner runner   4096 Oct 12 03:12 ..
+-rw-r--r--  1 runner runner    958 Oct 12 03:22 log.txt
+-rw-r--r--  1 runner runner 460513 Oct 12 03:22 still-00000.jpg
+-rw-r--r--  1 runner runner 459922 Oct 12 03:22 still-00005.jpg
+-rw-r--r--  1 runner runner 459097 Oct 12 03:22 still-00010.jpg
+-rw-r--r--  1 runner runner 954592 Oct 12 03:22 t1.mp4
