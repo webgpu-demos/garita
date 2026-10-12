@@ -1,0 +1,9 @@
+{
+  "width": 1920, "height": 1080, "fps": 30, "renderScale": 0.67,
+  "scenes": [
+    { "id": "t1", "url": "?ui=0&t=2026-10-10T21:40:00Z", "duration": 3, "cursor": false,
+      "camera": [ { "t": 0, "cam": [-66.45, 18.2, 300000, 350, 40] }, { "t": 3, "cam": [-66.40, 18.22, 260000, 0, 44], "ease": "linear" } ] },
+    { "id": "t2", "url": "?post=basic&t=2026-10-10T15:00:00Z", "duration": 4,
+      "actions": [ { "t": 1.0, "click": "button.rail-btn[title='Overlays']" }, { "t": 2.4, "click": "label.fly-row:has-text('Radar (rain)')" } ] }
+  ]
+}
