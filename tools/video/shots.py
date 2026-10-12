@@ -73,7 +73,9 @@ scenes.append({'id': 's03', 'url': UI, 'duration': 23.4, 'pre': PRE, 'clip': '03
                'camera': [{'t': 0, 'cam': [-66.30, 18.21, 235000, 0, 52]}, {'t': 23.4, 'cam': [-66.28, 18.22, 215000, 0, 53], 'ease': 'linear'}]})
 
 # 04 Overlays: radar, GOES, night lights (the scene clock runs into the night), beside the outage count
-NIGHT_TWEEN = "S.clockMode.value = 'manual'; S.sceneTime.value = Date.parse('2026-10-11T15:00:00Z') + k * 13 * 3600e3"
+# to 20:30 on the same evening: the newest night-lights pass is the one dated by the scene's night (a scene after
+# midnight asks for tonight's pass, which is not out yet)
+NIGHT_TWEEN = "S.clockMode.value = 'manual'; S.sceneTime.value = Date.parse('2026-10-11T15:00:00Z') + k * 9.5 * 3600e3"
 scenes.append({'id': 's04', 'url': UI, 'duration': 18.4, 'pre': PRE, 'clip': '04', 'start': [700, 640],
     'camera': [{'t': 0, 'cam': [-66.30, 18.21, 235000, 0, 52]}, {'t': 18.4, 'cam': [-66.22, 18.28, 150000, 0, 56], 'ease': 'inOut'}],
     'actions': [
@@ -81,9 +83,9 @@ scenes.append({'id': 's04', 'url': UI, 'duration': 18.4, 'pre': PRE, 'clip': '04
         {'t': at(4.0), 'click': "label.fly-row:has-text('Radar')", 'hold': 9000},
         {'t': at(5.3), 'click': "label.fly-row:has-text('GOES')", 'hold': 12000},
         {'t': at(7.1), 'click': "label.fly-row:has-text('Night lights')", 'hold': 14000},
-        {'t': at(10.0), 'hover': 'aside.legend', 'move': 0.9},
+        {'t': at(10.0), 'click': "label:has-text('2016 baseline')", 'move': 0.9, 'hold': 12000},
         {'t': at(12.9), 'hover': "button.kpi:has-text('Customers without power')", 'move': 0.9},
-        {'t': at(15.2), 'geo': [-66.06, 18.40, 0], 'move': 1.0},
+        {'t': at(14.7), 'click': "label:has-text('2016 baseline')", 'move': 0.9, 'hold': 8000},
     ],
     'tweens': [{'from': at(7.1), 'to': at(8.6), 'js': NIGHT_TWEEN}],
 })
@@ -132,8 +134,8 @@ scenes.append({'id': 's07', 'url': UI, 'duration': 18.9, 'pre': PRE, 'clip': '07
     'actions': [
         {'t': at(0.8), 'click': "button.dock-tab[aria-label='Replay']", 'move': 0.9},
         {'t': at(5.6), 'clickjs': MARIA, 'move': 0.9, 'hold': 6000},
-        {'t': at(5.65), 'js': 'S.sceneTime.value += 5 * 3600e3'},
-        {'t': at(8.3), 'click': "button.btn:has-text('Play')", 'move': 0.8},
+        {'t': at(5.65), 'js': 'S.sceneTime.value += 9 * 3600e3'},
+        {'t': at(8.3), 'click': "button.btn:has-text('1 h/s')", 'move': 0.8},
         {'t': at(11.0), 'scroll': {'sel': '.dock .pane-scroll', 'dy': 260, 'dur': 1.4}},
     ],
 })
@@ -166,12 +168,16 @@ scenes.append({'id': 's09', 'url': UI, 'duration': 15.6, 'pre': PRE, 'clip': '09
 scenes.append({'id': 's10', 'url': f'?ui=0&t={DUSK}', 'duration': 22.6, 'cursor': False, 'pre': 0.5, 'clip': '10',
     'setup': CINE,
     'camera': [
-        {'t': 0, 'cam': [-66.118, 18.467, 2600, 212, 20]},
-        {'t': 6.0, 'cam': [-66.13, 18.45, 14000, 200, 28], 'ease': 'in'},
+        {'t': 0, 'cam': [-66.116, 18.462, 2600, 12, 20]},
+        {'t': 6.0, 'cam': [-66.13, 18.44, 14000, 5, 28], 'ease': 'in'},
         {'t': 17.5, 'cam': [-66.42, 18.20, 300000, 355, 40], 'ease': 'out'},
         {'t': 22.6, 'cam': [-66.41, 18.20, 292000, 0, 41], 'ease': 'linear'},
     ],
 })
+
+SOURCES = {'s02a': 'USGS 3DEP elevation · USGS National Map photo · NOAA NCEI CUDEM depth', 's02b': 'OpenStreetMap footprints · Google and Microsoft detections via Overture Maps · USGS 3DEP 1 m lidar', 's03': 'Live: NWS · USGS · NOAA · NHC · LUMA · Open-Meteo', 's04': 'RainViewer radar · NOAA GOES-East via NASA GIBS · NASA/NOAA VIIRS night lights', 's05': 'NOAA NHC storm surge risk maps (SLOSH) · USGS landslide susceptibility, OFR 2020-1022', 's06': 'NOAA 2022 sea level scenarios · USGS 3DEP 1 m lidar · Vivienda shelters · HUD public housing', 's07': 'NOAA HURDAT2 storm tracks · Census ACS population', 's08': 'Census ACS · OpenFEMA flood insurance and declarations · HUD · Vivienda', 's09': 'OpenFEMA NFIP policies · FEMA flood zones (NFHL) · OpenStreetMap footprints'}
+for sc in scenes:
+    if sc['id'] in SOURCES: sc['sources'] = SOURCES[sc['id']]
 
 spec = {'width': 1920, 'height': 1080, 'fps': 30, 'renderScale': 0.67, 'settleMs': 20000, 'scenes': scenes}
 out = sys.argv[2] if len(sys.argv) > 2 else 'docs/video/shots.json'

@@ -93,7 +93,8 @@
      ],
      "ease": "out"
     }
-   ]
+   ],
+   "sources": "USGS 3DEP elevation \u00b7 USGS National Map photo \u00b7 NOAA NCEI CUDEM depth"
   },
   {
    "id": "s02b",
@@ -161,7 +162,8 @@
      ],
      "move": 0.6
     }
-   ]
+   ],
+   "sources": "OpenStreetMap footprints \u00b7 Google and Microsoft detections via Overture Maps \u00b7 USGS 3DEP 1 m lidar"
   },
   {
    "id": "s03",
@@ -250,7 +252,8 @@
      ],
      "ease": "linear"
     }
-   ]
+   ],
+   "sources": "Live: NWS \u00b7 USGS \u00b7 NOAA \u00b7 NHC \u00b7 LUMA \u00b7 Open-Meteo"
   },
   {
    "id": "s04",
@@ -308,8 +311,9 @@
     },
     {
      "t": 10.6,
-     "hover": "aside.legend",
-     "move": 0.9
+     "click": "label:has-text('2016 baseline')",
+     "move": 0.9,
+     "hold": 12000
     },
     {
      "t": 13.5,
@@ -317,22 +321,20 @@
      "move": 0.9
     },
     {
-     "t": 15.8,
-     "geo": [
-      -66.06,
-      18.4,
-      0
-     ],
-     "move": 1.0
+     "t": 15.3,
+     "click": "label:has-text('2016 baseline')",
+     "move": 0.9,
+     "hold": 8000
     }
    ],
    "tweens": [
     {
      "from": 7.7,
      "to": 9.2,
-     "js": "S.clockMode.value = 'manual'; S.sceneTime.value = Date.parse('2026-10-11T15:00:00Z') + k * 13 * 3600e3"
+     "js": "S.clockMode.value = 'manual'; S.sceneTime.value = Date.parse('2026-10-11T15:00:00Z') + k * 9.5 * 3600e3"
     }
-   ]
+   ],
+   "sources": "RainViewer radar \u00b7 NOAA GOES-East via NASA GIBS \u00b7 NASA/NOAA VIIRS night lights"
   },
   {
    "id": "s05",
@@ -445,7 +447,8 @@
      "hover": "aside.legend",
      "move": 1.0
     }
-   ]
+   ],
+   "sources": "NOAA NHC storm surge risk maps (SLOSH) \u00b7 USGS landslide susceptibility, OFR 2020-1022"
   },
   {
    "id": "s06",
@@ -525,7 +528,8 @@
      "click": "button.link-btn:has-text('Method and caveats')",
      "move": 0.8
     }
-   ]
+   ],
+   "sources": "NOAA 2022 sea level scenarios \u00b7 USGS 3DEP 1 m lidar \u00b7 Vivienda shelters \u00b7 HUD public housing"
   },
   {
    "id": "s07",
@@ -551,11 +555,11 @@
     },
     {
      "t": 6.25,
-     "js": "S.sceneTime.value += 5 * 3600e3"
+     "js": "S.sceneTime.value += 9 * 3600e3"
     },
     {
      "t": 8.9,
-     "click": "button.btn:has-text('Play')",
+     "click": "button.btn:has-text('1 h/s')",
      "move": 0.8
     },
     {
@@ -566,7 +570,8 @@
       "dur": 1.4
      }
     }
-   ]
+   ],
+   "sources": "NOAA HURDAT2 storm tracks \u00b7 Census ACS population"
   },
   {
    "id": "s08",
@@ -622,7 +627,8 @@
      "hover": ".gr-wrap",
      "move": 0.9
     }
-   ]
+   ],
+   "sources": "Census ACS \u00b7 OpenFEMA flood insurance and declarations \u00b7 HUD \u00b7 Vivienda"
   },
   {
    "id": "s09",
@@ -666,7 +672,8 @@
       "dur": 1.6
      }
     }
-   ]
+   ],
+   "sources": "OpenFEMA NFIP policies \u00b7 FEMA flood zones (NFHL) \u00b7 OpenStreetMap footprints"
   },
   {
    "id": "s10",
@@ -682,10 +689,10 @@
     {
      "t": 0,
      "cam": [
-      -66.118,
-      18.467,
+      -66.116,
+      18.462,
       2600,
-      212,
+      12,
       20
      ]
     },
@@ -693,9 +700,9 @@
      "t": 6.0,
      "cam": [
       -66.13,
-      18.45,
+      18.44,
       14000,
-      200,
+      5,
       28
      ],
      "ease": "in"

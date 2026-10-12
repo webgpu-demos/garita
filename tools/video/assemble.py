@@ -58,7 +58,7 @@ def ts(x):
 
 def chunks(text, maxc=74):
     out = []
-    for sent in re.findall(r'[^.!?:]+[.!?:]?', text):
+    for sent in re.split(r'(?<=[.!?:])\s+', text):          # a sentence ends at punctuation and a space (not 1.7)
         sent = sent.strip()
         if not sent: continue
         while len(sent) > maxc:
@@ -69,6 +69,10 @@ def chunks(text, maxc=74):
         out.append(sent)
     return out
 
+SAY = [('one point seven million', '1.7 million'), ('one and a half million', '1.5 million'), ('twenty-six thousand', '26,000'),
+       ('thirty historical storms', '30 historical storms'), ('one-metre', '1-metre'), ('webgpu-demos dot github dot io, slash garita', 'webgpu-demos.github.io/garita')]
+for k in paras:
+    for a_, b_ in SAY: paras[k] = paras[k].replace(a_, b_)
 events = []
 for c in clips:
     path = os.path.join(AUDIO, f'{c}.mp3')
@@ -112,7 +116,8 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Cap,Inter SemiBold,40,&H00FFFFFF,&H00FFFFFF,&H00000000,&H90000000,0,0,0,0,100,100,0,0,4,0,0,2,260,260,54,1
+Style: Cap,Inter SemiBold,40,&H00FFFFFF,&H00FFFFFF,&H90000000,&H90000000,0,0,0,0,100,100,0,0,4,10,0,2,300,300,58,1
+Style: Src,Inter Medium,25,&H00F2F2F2,&H00FFFFFF,&H70141010,&H70141010,0,0,0,0,100,100,0.5,0,4,9,0,8,80,80,0,1
 Style: Title,Inter Display SemiBold,132,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,26,0,1,0,3,5,80,80,0,1
 Style: Sub,Inter,44,&H00E8E8E8,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,1,0,1,0,2,5,80,80,0,1
 Style: Url,Inter SemiBold,64,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,1,0,1,0,3,5,80,80,0,1
@@ -126,6 +131,14 @@ ass.append(f'Dialogue: 1,{ts(0.6)},{ts(5.6)},Sub,,0,0,0,,{{\\fad(700,700)\\pos({
 # end card
 ass.append(f'Dialogue: 1,{ts(url_at)},{ts(END)},Url,,0,0,0,,{{\\fad(600,0)\\pos({W/2},{H/2 - 30})}}webgpu-demos.github.io/garita')
 ass.append(f'Dialogue: 1,{ts(url_at + 0.5)},{ts(END)},Fine,,0,0,0,,{{\\fad(600,0)\\pos({W/2},{H/2 + 46})}}Free · public data · a demonstrator, not an official tool')
+# data sources of each scene, small, over the sea at the top of the map area
+for i, s in enumerate(scenes):
+    if not s.get('sources'): continue
+    t0 = T[i] + 0.5
+    t1 = (T[i + 1] if i + 1 < len(scenes) else END) - 0.2
+    x = 795 if 'ui=0' not in s['url'] else W / 2
+    y = 124 if 'ui=0' not in s['url'] else 56
+    ass.append(f'Dialogue: 1,{ts(t0)},{ts(t1)},Src,,0,0,0,,{{\\fad(400,300)\\an8\\pos({x},{y})}}{s["sources"]}')
 for t0, t1, p in events:
     ass.append(f'Dialogue: 0,{ts(t0)},{ts(t1 - 0.02)},Cap,,0,0,0,,{p}')
 cap = os.path.join(WORK, 'captions.ass')
@@ -162,7 +175,7 @@ fil.append(f"{''.join(amix)}amix=inputs={len(clips)}:normalize=0:duration=longes
 graph = os.path.join(WORK, 'graph.txt')
 open(graph, 'w').write(';\n'.join(fil))
 cmd = ['ffmpeg', '-hide_banner', '-loglevel', 'error', '-y', *inputs, '-filter_complex_script', graph, '-map', '[vout]', '-map', '[aout]',
-       '-c:v', 'libx264', '-preset', 'slow', '-crf', '19', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '192k', '-ar', '48000',
+       '-c:v', 'libx264', '-preset', os.environ.get('PRESET', 'slow'), '-crf', '19', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '192k', '-ar', '48000',
        '-movflags', '+faststart', '-t', f'{END:.3f}', OUT]
 print(' '.join(cmd[:8]), '…')
 subprocess.run(cmd, check=True)
