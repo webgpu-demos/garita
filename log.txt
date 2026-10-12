@@ -1,0 +1,52 @@
+[03:43:01] scene s10 https://webgpu-demos.github.io/garita/?ui=0&t=2026-10-10T21:50:00Z&shot=1&video=1&scale=0.67 678 frames at 30 fps
+[03:44:31] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:44:31] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:44:31] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:44:31] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:44:31] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:44:31] [console] Failed to load resource: the server responded with a status of 400 ()
+[03:47:36] booted after 274 s, 570 steps {"booted":true,"ready":true,"tiles":58,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[03:48:15] settle {"ms":29877,"steps":453,"pending":0,"degraded":0,"down":false}
+[03:48:15] settle {"ms":2,"steps":1,"pending":0,"degraded":0,"down":false}
+[03:48:22] settle {"ms":6801,"steps":1,"pending":0,"degraded":0,"down":false}
+[03:48:22] settle {"ms":3,"steps":1,"pending":0,"degraded":0,"down":false}
+[03:48:37] frame 0/678 15 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":136,"pending":0,"terrain":0,"layers":0,"maxZoom":15,"degraded":0,"down":false}
+[03:51:10] frame 30/678 168 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":136,"pending":0,"terrain":0,"layers":0,"maxZoom":15,"degraded":0,"down":false}
+[03:53:45] frame 60/678 323 s settle 376 ms 7 steps {"booted":true,"ready":true,"tiles":137,"pending":0,"terrain":0,"layers":0,"maxZoom":15,"degraded":0,"down":false}
+[03:56:24] frame 90/678 483 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":142,"pending":0,"terrain":0,"layers":0,"maxZoom":15,"degraded":0,"down":false}
+[03:59:11] frame 120/678 650 s settle 579 ms 10 steps {"booted":true,"ready":true,"tiles":143,"pending":0,"terrain":0,"layers":0,"maxZoom":15,"degraded":0,"down":false}
+[04:02:09] frame 150/678 827 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":126,"pending":0,"terrain":0,"layers":0,"maxZoom":15,"degraded":0,"down":false}
+[04:05:17] frame 180/678 1015 s settle 128 ms 3 steps {"booted":true,"ready":true,"tiles":91,"pending":0,"terrain":0,"layers":0,"maxZoom":14,"degraded":0,"down":false}
+[04:07:58] frame 210/678 1177 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":83,"pending":0,"terrain":0,"layers":0,"maxZoom":13,"degraded":0,"down":false}
+[04:10:08] frame 240/678 1307 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":72,"pending":0,"terrain":0,"layers":0,"maxZoom":12,"degraded":0,"down":false}
+[04:12:08] frame 270/678 1426 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":65,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[04:14:24] frame 300/678 1562 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":81,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[04:15:11] [console] Access to fetch at 'https://api.weather.gov/stations/TJNR/observations/latest' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+[04:15:11] [console] Failed to load resource: net::ERR_FAILED
+[04:15:57] [console] Access to fetch at 'https://api.weather.gov/alerts/active?area=PR' from origin 'https://webgpu-demos.github.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+[04:15:57] [console] Failed to load resource: net::ERR_FAILED
+[04:16:30] frame 330/678 1689 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":71,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[04:18:18] frame 360/678 1796 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":78,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[04:19:39] frame 390/678 1877 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":85,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[04:20:43] frame 420/678 1941 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":88,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[04:21:46] frame 450/678 2005 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":92,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[04:22:50] frame 480/678 2068 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":90,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[04:23:53] frame 510/678 2131 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":90,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[04:24:56] frame 540/678 2194 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":89,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[04:25:59] frame 570/678 2257 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":89,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[04:27:02] frame 600/678 2320 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":88,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[04:28:04] frame 630/678 2383 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":88,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[04:29:08] frame 660/678 2446 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":88,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[04:29:43] done 678 frames in 2482 s
+director exit 0
+frames: 678
+total 50432
+drwxr-xr-x  2 runner runner     4096 Oct 12 04:30 .
+drwxr-xr-x 12 runner runner     4096 Oct 12 03:43 ..
+-rw-r--r--  1 runner runner     5653 Oct 12 04:29 log.txt
+-rw-r--r--  1 runner runner 50353027 Oct 12 04:30 s10.mp4
+-rw-r--r--  1 runner runner   156986 Oct 12 04:30 sheet.jpg
+-rw-r--r--  1 runner runner     5625 Oct 12 04:29 stdout-tail.txt
+-rw-r--r--  1 runner runner   309554 Oct 12 04:30 still-00000.jpg
+-rw-r--r--  1 runner runner   377242 Oct 12 04:30 still-00339.jpg
+-rw-r--r--  1 runner runner   406959 Oct 12 04:30 still-00677.jpg
