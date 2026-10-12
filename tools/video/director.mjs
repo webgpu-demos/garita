@@ -16,6 +16,7 @@
 //               { t, select: "<selector of a <select>>", value }
 //               { t, drag: "<selector of a range input>", to: value, dur }
 //               { t, geo: [lon, lat, metres above ground] }               move the pointer over a place in the scene
+//               { t, hover: "<selector>" }                                move the pointer onto an element without clicking
 //               any action may add hold: ms — real time to let tiles and overlays arrive before the next frame]
 //     tweens:  [{ from, to, js: "<code using S, W, G and k (0..1)>", ease? }]
 //     setup:   ["<code>"]                     run once after loading, before frame 0
@@ -65,7 +66,7 @@ const stats = () => page.evaluate(() => {
   const g = window.__garita, s = g?.state, t = g?.world?.terrain?.stats?.() ?? { tiles: 0, pending: 1 };
   let layers = 0;
   try { for (const l of g.debug?.().layers ?? []) if (l && typeof l.pending === 'number') layers += l.pending; } catch { /* not booted */ }
-  return { booted: !!s?.booted?.value, ready: !!g?.ready, tiles: t.tiles, pending: t.pending + layers, terrain: t.pending, layers, maxZoom: t.maxZoom };
+  return { booted: !!s?.booted?.value, ready: !!g?.ready, tiles: t.tiles, pending: t.pending + layers, terrain: t.pending, layers, maxZoom: t.maxZoom, degraded: t.degraded ?? 0, down: !!(t.imgDown || t.demDown) };
 });
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 /** Advance the scene without drawing or moving time until nothing is waiting to load (or the budget runs out). */
@@ -75,10 +76,12 @@ async function settle(budgetMs, minMs = 0) {
     await stepPage(0, false); n++;
     s = await stats();
     const el = Date.now() - t0;
-    if ((s.pending === 0 && s.tiles > 0 && el >= minMs) || el > budgetMs) break;
+    // tiles drawn without their photo (a failed request) are retried a few seconds later: give them a while
+    const missing = (s.degraded > 0 || s.down) && el < (spec.degradedWaitMs ?? 9000);
+    if ((s.pending === 0 && s.tiles > 0 && el >= minMs && !missing) || el > budgetMs) break;
     await sleep(60);
   }
-  return { ms: Date.now() - t0, steps: n, pending: s.pending };
+  return { ms: Date.now() - t0, steps: n, pending: s.pending, degraded: s.degraded, down: s.down };
 }
 
 log('scene', scene.id, url, `${N} frames at ${FPS} fps`);
@@ -134,7 +137,7 @@ const actions = (scene.actions ?? []).map((a, i) => ({ ...a, i, done: false })).
 const moves = [];   // pointer movements { t0, t1, from, to }
 let pointer = scene.start ?? [W * 0.62, H * 0.55], lastClick = -10;
 async function target(a) {
-  if (a.click || a.select) { const box = await page.locator(a.click ?? a.select).first().boundingBox({ timeout: 5000 }).catch(() => null); return box && [box.x + box.width / 2, box.y + box.height / 2]; }
+  if (a.click || a.select || a.hover) { const box = await page.locator(a.click ?? a.select ?? a.hover).first().boundingBox({ timeout: 5000 }).catch(() => null); return box && [box.x + box.width / 2, box.y + box.height / 2]; }
   if (a.clickjs) {
     const h = await page.evaluateHandle(({ code }) => { const g = window.__garita; return new Function('S', 'W', 'G', code)(g.state, g.world, g); }, { code: a.clickjs });
     const el = h.asElement(); const box = el && (await el.boundingBox()); return box && [box.x + box.width / 2, box.y + box.height / 2];
@@ -160,7 +163,7 @@ async function target(a) {
   return null;
 }
 // pointer moves start `move` seconds before each click; targets are looked up when the move starts
-const pending = actions.filter((a) => a.click || a.clickjs || a.point || a.geo || a.drag || a.select);
+const pending = actions.filter((a) => a.click || a.clickjs || a.point || a.geo || a.drag || a.select || a.hover);
 let typing = null, scrolls = [], drag = null, mouseAt = null, holdMs = 0;
 const t0 = Date.now();
 process.on('unhandledRejection', (e) => { log('unhandled', String(e?.stack ?? e).slice(0, 600)); process.exit(2); });
@@ -180,7 +183,7 @@ for (let f = 0; f < N; f++) {
       if ((a.click || a.clickjs) && a.to) { await page.mouse.click(a.to[0], a.to[1]); lastClick = t; pointer = a.to; mouseAt = a.to; }
       else if (a.select && a.to) { await page.selectOption(a.select, a.value); lastClick = t; pointer = a.to; }
       else if (a.drag && a.to) { await page.mouse.move(a.to[0], a.to[1]); await page.mouse.down(); lastClick = t; drag = { from: a.to, to: a.dragTo, t0: t, dur: a.dur ?? 2 }; }
-      else if ((a.point || a.geo) && a.to) { await page.mouse.move(a.to[0], a.to[1]); pointer = a.to; mouseAt = a.to; }
+      else if ((a.point || a.geo || a.hover) && a.to) { await page.mouse.move(a.to[0], a.to[1]); pointer = a.to; mouseAt = a.to; }
       if (a.js) await run(a.js);
       if (a.type) typing = { text: a.type, i: 0, next: t, dt: 1 / (a.cps ?? 14) };
       if (a.key) await page.keyboard.press(a.key);

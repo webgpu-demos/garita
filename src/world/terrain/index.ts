@@ -15,8 +15,11 @@ const NEW = 0, QUEUED = 1, LOADING = 2, READY = 3, FAILED = 4;
 const HN = 129;
 const MAX_GEOM_Z = 15;
 const RETRY_MS = 60000;
-// photos in flight; also bounds requests per host. ?video=1 (frame-by-frame recording, tools/video/) loads harder.
-const MAX_FETCH = /[?&]video=1/.test(globalThis.location?.search ?? '') ? 12 : 6;
+// ?video=1: frame-by-frame recording (tools/video/). The page's clock is virtual there and moves 1/30 s per frame
+// however long the frame takes, so retry and back-off timing runs on the wall clock instead; tiles also load harder.
+const VIDEO = /[?&]video=1/.test(globalThis.location?.search ?? '');
+const clock = VIDEO ? () => Date.now() : () => performance.now();
+const MAX_FETCH = VIDEO ? 8 : 6;      // photos in flight; also bounds requests per host
 export const ABYSSAL_NAME = 'abyssal-plain';
 export const ABYSSAL_DEPTH = -4000;
 
@@ -250,7 +253,7 @@ export function createTerrain(world: World): TerrainApi {
   function onResult(wi: number, r: TileResult & { type?: string }) {
     if (r.type) return;
     const t = jobs.get(r.id);
-    const now = performance.now();
+    const now = clock();
     for (const f of r.failed) {
       // 'net|': the host could not be reached, back off the whole host; 'http|': that one tile does not exist.
       const u = f.slice(f.indexOf('|') + 1);
@@ -274,7 +277,7 @@ export function createTerrain(world: World): TerrainApi {
       const { t, r } = built.shift()!;
       if (t.dead) continue;
       if (t.state === READY) { freeGpu(t); readyCount--; }     // a degraded tile reloaded in place
-      t.degradedAt = r.degraded ? performance.now() : 0;
+      t.degradedAt = r.degraded ? clock() : 0;
       build(t, r);
     }
   }
@@ -558,7 +561,7 @@ export function createTerrain(world: World): TerrainApi {
   const api: TerrainApi = {
     group,
     update(frame: Frame) {
-      frameNo++; nowMs = performance.now();
+      frameNo++; nowMs = clock();
       camPos.setFromMatrixPosition(camera.matrixWorld);
       pv.multiplyMatrices(camera.projectionMatrix, camera.matrixWorldInverse);
       frustum.setFromProjectionMatrix(pv);
@@ -572,7 +575,7 @@ export function createTerrain(world: World): TerrainApi {
       // (observed night lights on the map: our modelled town lights would be read as part of the image)
       globalU.uLightGain.value = S.overlay.value === 'nightlights' ? 0 : LIGHT_GAIN;
       globalU.uOvEmit.value = S.overlay.value === 'nightlights' ? 0.34 * world.night : 0;
-      flushBuilt(MAX_FETCH > 6 ? 64 : frame.dt > 0.03 ? 2 : 4);
+      flushBuilt(VIDEO ? 64 : frame.dt > 0.03 ? 2 : 4);
       if (indexDone && bathyDone) { for (let i = 0; i < roots.length; i++) visit(roots[i]); dispatch(); }
       if (frameNo % 20 === 0) housekeeping();
     },
@@ -588,7 +591,7 @@ export function createTerrain(world: World): TerrainApi {
       for (const r of roots) eachTile(r, (t) => { t.ovKey = ''; if (t.u) t.u.tOverlay.value = clear; });
       loadAbyssalOverlay(source);
     },
-    stats: () => ({ tiles: drawn.length, pending: queue.length + jobs.size + built.length, maxZoom: deepest }),
+    stats: () => ({ tiles: drawn.length, pending: queue.length + jobs.size + built.length, maxZoom: deepest, degraded: drawn.reduce((n, t) => n + (t.degradedAt ? 1 : 0), 0), imgDown: hostDown.img > nowMs, demDown: hostDown.dem > nowMs }),
     dispose() {
       for (const w of workers) w.terminate();
       for (const r of roots) eachTile(r, disposeTile);

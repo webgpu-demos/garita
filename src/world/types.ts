@@ -53,7 +53,7 @@ export interface TerrainApi {
   setOverlay(source: OverlaySource | null, opacity: number): void;
   /** Shader tint computed from the elevation itself: 'elevation' = hypsometric colours over a muted photo. */
   setTint?(mode: 'none' | 'elevation'): void;
-  stats(): { tiles: number; pending: number; maxZoom: number };
+  stats(): { tiles: number; pending: number; maxZoom: number; degraded?: number; imgDown?: boolean; demDown?: boolean };
   dispose(): void;
 }
 
