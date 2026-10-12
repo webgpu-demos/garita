@@ -1,0 +1,33 @@
+[04:11:02] scene s07 https://webgpu-demos.github.io/garita/?t=2026-10-11T15:00:00Z&shot=1&video=1&scale=0.67 567 frames at 30 fps
+[04:12:09] [console] Failed to load resource: the server responded with a status of 400 ()
+[04:12:09] [console] Failed to load resource: the server responded with a status of 400 ()
+[04:12:09] [console] Failed to load resource: the server responded with a status of 400 ()
+[04:12:09] [console] Failed to load resource: the server responded with a status of 400 ()
+[04:12:09] [console] Failed to load resource: the server responded with a status of 400 ()
+[04:12:09] [console] Failed to load resource: the server responded with a status of 400 ()
+[04:12:53] booted after 110 s, 240 steps {"booted":true,"ready":true,"tiles":56,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":1,"down":false}
+[04:12:55] settle {"ms":1609,"steps":7,"pending":0,"degraded":0,"down":false}
+[04:12:56] settle {"ms":1103,"steps":1,"pending":0,"degraded":0,"down":false}
+[04:12:56] settle {"ms":3,"steps":1,"pending":0,"degraded":0,"down":false}
+[04:12:58] settle {"ms":1786,"steps":1,"pending":0,"degraded":0,"down":false}
+[04:13:00] frame 0/567 2 s settle 5 ms 1 steps {"booted":true,"ready":true,"tiles":56,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[04:13:38] frame 30/567 40 s settle 4 ms 1 steps {"booted":true,"ready":true,"tiles":56,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[04:14:13] frame 60/567 76 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":56,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[04:14:51] frame 90/567 113 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":56,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[04:15:28] frame 120/567 150 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":56,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[04:16:05] frame 150/567 188 s settle 0 ms 1 steps {"booted":true,"ready":true,"tiles":56,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[04:16:41] frame 180/567 224 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":56,"pending":0,"terrain":0,"layers":0,"maxZoom":11,"degraded":0,"down":false}
+[04:18:19] frame 210/567 321 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":6,"pending":0,"terrain":0,"layers":0,"maxZoom":8,"degraded":0,"down":false}
+[04:19:11] frame 240/567 373 s settle 6 ms 1 steps {"booted":true,"ready":true,"tiles":6,"pending":0,"terrain":0,"layers":0,"maxZoom":8,"degraded":0,"down":false}
+[04:19:19] target not found for action at 8.9 button.btn:has-text('1 h/s')
+[04:20:11] frame 270/567 433 s settle 8 ms 1 steps {"booted":true,"ready":true,"tiles":6,"pending":0,"terrain":0,"layers":0,"maxZoom":8,"degraded":0,"down":false}
+[04:21:07] frame 300/567 489 s settle 7 ms 1 steps {"booted":true,"ready":true,"tiles":6,"pending":0,"terrain":0,"layers":0,"maxZoom":8,"degraded":0,"down":false}
+[04:22:02] frame 330/567 544 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":6,"pending":0,"terrain":0,"layers":0,"maxZoom":8,"degraded":0,"down":false}
+[04:22:50] frame 360/567 592 s settle 3 ms 1 steps {"booted":true,"ready":true,"tiles":6,"pending":0,"terrain":0,"layers":0,"maxZoom":8,"degraded":0,"down":false}
+[04:23:38] frame 390/567 640 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":6,"pending":0,"terrain":0,"layers":0,"maxZoom":8,"degraded":0,"down":false}
+[04:24:24] frame 420/567 687 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":6,"pending":0,"terrain":0,"layers":0,"maxZoom":8,"degraded":0,"down":false}
+[04:25:09] frame 450/567 732 s settle 2 ms 1 steps {"booted":true,"ready":true,"tiles":6,"pending":0,"terrain":0,"layers":0,"maxZoom":8,"degraded":0,"down":false}
+[04:25:57] frame 480/567 779 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":6,"pending":0,"terrain":0,"layers":0,"maxZoom":8,"degraded":0,"down":false}
+[04:26:40] frame 510/567 823 s settle 1 ms 1 steps {"booted":true,"ready":true,"tiles":6,"pending":0,"terrain":0,"layers":0,"maxZoom":8,"degraded":0,"down":false}
+[04:27:23] frame 540/567 865 s settle 7 ms 1 steps {"booted":true,"ready":true,"tiles":6,"pending":0,"terrain":0,"layers":0,"maxZoom":8,"degraded":0,"down":false}
+[04:28:01] done 567 frames in 904 s
