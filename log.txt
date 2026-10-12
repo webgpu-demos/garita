@@ -1,0 +1,10 @@
+frames: 104
+total 2116
+drwxr-xr-x  2 runner runner   4096 Oct 12 03:29 .
+drwxr-xr-x 12 runner runner   4096 Oct 12 03:12 ..
+-rw-r--r--  1 runner runner     12 Oct 12 03:29 log.txt
+-rw-r--r--  1 runner runner  57802 Oct 12 03:29 sheet.jpg
+-rw-r--r--  1 runner runner 421694 Oct 12 03:29 still-00000.jpg
+-rw-r--r--  1 runner runner 420020 Oct 12 03:29 still-00052.jpg
+-rw-r--r--  1 runner runner 345177 Oct 12 03:29 still-00103.jpg
+-rw-r--r--  1 runner runner 899291 Oct 12 03:29 t2.mp4
