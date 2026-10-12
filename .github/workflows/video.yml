@@ -1,0 +1,88 @@
+# Renders the walkthrough video's footage on GitHub runners: one job per scene, frame by frame, from the deployed
+# site (software GL, live network). Triggered by pushing a branch named video/<name> that carries video.spec.json
+# (and optionally video.only, a space-separated list of scene ids). Each scene lands on the branch
+# video-out/<name>-<scene id> as an mp4 with a log and a contact sheet. See tools/video.sh and tools/video/.
+name: video
+on:
+  push:
+    branches: ['video/**']
+permissions:
+  contents: write
+jobs:
+  plan:
+    # Free on a public repository; private repositories are billed by the minute. Never run there.
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    outputs:
+      scenes: ${{ steps.p.outputs.scenes }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: p
+        run: |
+          node -e "
+            const s = require('./video.spec.json');
+            const only = require('fs').existsSync('video.only') ? require('fs').readFileSync('video.only', 'utf8').split(/\s+/).filter(Boolean) : null;
+            const ids = s.scenes.map((x) => x.id).filter((id) => !only || only.includes(id));
+            console.log('scenes=' + JSON.stringify(ids));
+          " >> "$GITHUB_OUTPUT"
+          cat "$GITHUB_OUTPUT"
+  render:
+    needs: plan
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix:
+        scene: ${{ fromJson(needs.plan.outputs.scenes) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/ms-playwright
+            /tmp/pw
+          key: playwright-1.56-chromium
+      - name: Install the browser and ffmpeg
+        run: |
+          mkdir -p /tmp/pw && cd /tmp/pw
+          [ -d node_modules/playwright ] || npm install --no-audit --no-fund playwright@1.56.0
+          npx playwright install --with-deps chromium
+          which ffmpeg || (sudo apt-get update -q && sudo apt-get install -y -q ffmpeg)
+      - name: Render
+        run: |
+          mkdir -p out
+          set +e
+          NODE_PATH=/tmp/pw/node_modules timeout 315m node tools/video/director.mjs video.spec.json "${{ matrix.scene }}" work
+          echo "director exit $?" >> work/log.txt
+          cp work/log.txt out/log.txt 2>/dev/null || true
+      - name: Encode
+        if: always()
+        run: |
+          ID="${{ matrix.scene }}"
+          FPS=$(node -e "const s=require('./video.spec.json');const x=s.scenes.find(a=>a.id==='$ID');console.log(x.fps??s.fps??30)")
+          N=$(ls work/frames 2>/dev/null | wc -l)
+          echo "frames: $N" >> out/log.txt
+          if [ "$N" -gt 0 ]; then
+            ffmpeg -hide_banner -loglevel error -y -framerate "$FPS" -i work/frames/%05d.jpg -c:v libx264 -preset slow -crf 17 -pix_fmt yuv420p -movflags +faststart "out/$ID.mp4"
+            ffmpeg -hide_banner -loglevel error -y -i "out/$ID.mp4" -vf "fps=1/2,scale=480:-1,tile=4x4" -frames:v 1 out/sheet.jpg || true
+            # a few full-size stills to judge quality
+            for f in 00000 $(printf '%05d' $((N / 2))) $(printf '%05d' $((N - 1))); do [ -f "work/frames/$f.jpg" ] && cp "work/frames/$f.jpg" "out/still-$f.jpg"; done
+            ls -la out >> out/log.txt
+            # git refuses files over 100 MB: re-encode harder if needed
+            if [ "$(stat -c %s "out/$ID.mp4")" -gt 95000000 ]; then
+              ffmpeg -hide_banner -loglevel error -y -framerate "$FPS" -i work/frames/%05d.jpg -c:v libx264 -preset slow -crf 22 -pix_fmt yuv420p -movflags +faststart "out/$ID.mp4"
+            fi
+          fi
+      - name: Publish
+        if: always()
+        run: |
+          NAME="${GITHUB_REF_NAME#video/}"
+          mkdir -p out && cd out
+          git init -q -b "video-out/$NAME-${{ matrix.scene }}" && git config user.name "garita-video" && git config user.email "actions@users.noreply.github.com"
+          git add -A && git commit -q -m "video $NAME ${{ matrix.scene }} $(date -u +%FT%TZ)"
+          for i in 1 2 3 4 5; do git push -q -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" "HEAD:refs/heads/video-out/$NAME-${{ matrix.scene }}" && break; sleep 10; done
