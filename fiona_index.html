@@ -1,0 +1,868 @@
+<!-- This page created by nhcWeb -->
+
+
+<!-- This _public page copied by nhcWeb -->
+
+<!-- Used by archived advisories -->
+
+
+
+  
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- This _public page copied by nhcWeb -->
+  
+  <title></title>
+  <meta charset="utf-8">
+  <script async="" src="/assets/js/uswds-init.min.js"></script>
+  <link rel="preload" as="style" href="/assets/css/uswds-styles-22f6e7a4a2.min.css" />
+  <link rel="stylesheet" href="/assets/css/uswds-styles-22f6e7a4a2.min.css" type="text/css" />
+  
+  </head>
+<body>
+  <div class="skipheader">
+    <a href="#contents"><img height="1" alt="Skip Navigation Links" src="/css/images/skipgraphic.gif" width="1" border="0"></a>
+  </div>
+  
+  <!-- Top Menu Navigation Section -->
+<div class="altformatcenter">
+  <div class="altformatcontent">
+    <script src="https://www.weather.gov/source/nws/govshutdown.js" defer></script>
+    <div class="altformat">
+      <div class="format-type">
+        <a href="/index.shtml">Home</a>
+      </div>
+      <div class="format-type">
+        <a href="/mobile">Mobile Site</a>
+      </div>
+      <div class="format-type">
+        <a href="?text">Text Version</a>
+      </div>
+      <div class="format-type">
+        <a href="/aboutrss.shtml">RSS</a>
+      </div>
+
+      <div class="local-forecast">
+        <form name="getForecast" id="getForecast" action="https://forecast.weather.gov/zipcity.php" method="get">
+    <!--    <label for="inputstring">Local forecast by "City, St" or ZIP code</label> -->
+        <input id="inputstring" name="inputstring" type="text" size="8" value="Enter City,St or ZIP code" onclick="this.value=''">
+        <input name="btnSearch" id="btnSearch" type="submit" value="Go">
+        </form>
+      </div>
+      <div class="forecast-description">
+        <a href="https://www.weather.gov">Local Forecast</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+<!-- Header Section -->
+<div class="header">
+  <div class="header-content">
+    <a href="http://www.noaa.gov"><img class="header-noaa-icon" src="/assets/images/NOAA_noText_logo.svg" alt="National Oceanic and Atmospheric Administration logo" role="img" style="height: 68px; margin-top: 5px;"></a>
+    <a href="http://www.weather.gov"><img class="header-nws-icon" src="/assets/images/NWS_logo.svg" alt="National Weather Service logo" role="img" style="height: 68px; margin-top: 5px;"></a>
+    <a href="http://www.commerce.gov" class="header-doc"><img src="/assets/images/DOC_logo.svg" alt="United States Department of Commerce" role="img" style="height: 68px; margin-top: 5px; margin-right: 6px;"></a>
+    <div class="header-center-text"><a class="header-center-text" href="/index.php" style="height:auto;">NATIONAL HURRICANE CENTER and<br>CENTRAL PACIFIC HURRICANE CENTER</a></div>
+    <div class="header-noaa-text"><a class="header-noaa-text">National Oceanic and Atmospheric Administration</a></div>
+  </div>
+</div>
+<div class="header-shadow"><div class="header-shadow-content"></div></div>
+
+  <div class="center">
+    <div class="content">
+  <div class="usa-overlay"></div>
+<header class="usa-header nhc-header">
+  <div class="usa-nav-container">
+    <nav id="nhc-main-nav" aria-label="Primary navigation" class="usa-nav bg-white border-bottom-1px border-base-lighter">      
+      <ul class="usa-nav__primary usa-accordion margin-0 padding-0 display-flex flex-wrap">
+
+        <!-- Forecast Links -->
+        <li class="usa-nav__primary-item">
+          <button
+            type="button"
+            class="usa-accordion__button usa-nav__link"
+            aria-expanded="false"
+            aria-controls="nav-forecast-menu"
+          >
+            <span>Analysis & Forecasts</span>
+          </button>
+          <ul id="nav-forecast-menu" class="usa-nav__submenu bg-white" hidden>
+            <li><a class="usa-link" href="/cyclones">Tropical Cyclone Products</a></li>
+            <li><a class="usa-link" href="/gtwo.php">Tropical Weather Outlooks</a></li>
+            <li><a class="usa-link" href="/marine">Marine Products</a></li>
+            <li><a class="usa-link" href="/rip-currents/map.html">Rip Currents Map</a></li>
+            <li><a class="usa-link" href="/aboutrss.shtml">RSS Feeds</a></li>
+            <li><a class="usa-link" href="/gis/">GIS Products</a></li>
+            <li><a class="usa-link" href="/aboutalternate.shtml">Alternate Formats</a></li>
+            <li><a class="usa-link" href="/aboutnhcprod.shtml">Tropical Cyclone Product Descriptions</a></li>
+            <li><a class="usa-link" href="/productexamples/">Tropical Cyclone Product Examples</a></li>
+            <li><a class="usa-link" href="/abouttafbprod.shtml">Marine Product Descriptions</a></li>
+          </ul>
+        </li>
+        
+        <!-- Data & Tools -->
+        <li class="usa-nav__primary-item">
+          <button
+            type="button"
+            class="usa-accordion__button usa-nav__link"
+            aria-expanded="false"
+            aria-controls="nav-data-menu"
+          >
+            <span>Data & Tools</span>
+          </button>
+          <ul id="nav-data-menu" class="usa-nav__submenu bg-white" hidden>
+            <li><a class="usa-link" href="/satellite.php">Satellite Imagery</a></li>
+            <li><a class="usa-link" href="/radar.php">Radar Imagery</a></li>
+            <li><a class="usa-link" href="/recon.php">Aircraft Reconnaissance</a></li>
+            <li><a class="usa-link" href="/analysis_tools.php">Tropical Analysis Tools</a></li>
+            <li><a class="usa-link" href="/experimental/">Experimental Products</a></li>
+            <li><a class="usa-link" href="/gccalc.shtml">Lat/Lon Distance Calculator</a></li>
+            <li><a class="usa-link" href="/tracking_charts.shtml">Blank Tracking Maps</a></li>
+          </ul>
+        </li>
+
+        <!-- Outreach & Education-->
+        <li class="usa-nav__primary-item">
+          <button
+            type="button"
+            class="usa-accordion__button usa-nav__link"
+            aria-expanded="false"
+            aria-controls="nav-education-menu"
+          >
+            <span>Educational Resources</span>
+          </button>
+          <ul id="nav-education-menu" class="usa-nav__submenu bg-white" hidden>
+            <li>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="http://www.weather.gov/wrn/hurricane-preparedness"
+                target="_blank"
+              >
+                Be Prepared!<br>NWS Hurricane Prep Week
+              </a>
+            </li>
+            <li><a class="usa-link" href="/outreach">Outreach Documents</a></li>
+            <li><a class="usa-link" href="/TCvideos.shtml">TC Videos</a></li>
+            <li><a class="usa-link" href="/rip-currents/">Rip Currents</a></li>
+            <li><a class="usa-link" href="/surge/">Storm Surge</a></li>
+            <li><a class="usa-link" href="/breakpoints/">Watch/Warning Breakpoints</a></li>
+            <li><a class="usa-link" href="/climo/">Climatology</a></li>
+            <li><a class="usa-link" href="/aboutnames.shtml">Tropical Cyclone Names</a></li>
+            <li><a class="usa-link" href="/aboutsshws.php">Wind Scale</a></li>
+            <li><a class="usa-link" href="/dcmi.shtml">Records and Facts</a></li>
+            <li><a class="usa-link" href="/outreach/history">Historical Hurricane Summaries</a></li>
+            <li><a class="usa-link" href="/modelsummary.shtml">Forecast Models</a></li>
+            <li><a class="usa-link" href="/aboutpubs.shtml">NHC Publications</a></li>
+            <li><a class="usa-link" href="/aboutgloss.shtml">NHC Glossary</a></li>
+            <li><a class="usa-link" href="/acronyms.shtml">Acronyms</a></li>
+            <li><a class="usa-link" href="/faq.shtml">Frequent Questions</a></li>
+          </ul>
+        </li>
+
+        <!-- Archives -->
+        <li class="usa-nav__primary-item">
+          <button
+            type="button"
+            class="usa-accordion__button usa-nav__link"
+            aria-expanded="false"
+            aria-controls="nav-archive-menu"
+          >
+            <span>Archives</span>
+          </button>
+          <ul id="nav-archive-menu" class="usa-nav__submenu bg-white" hidden>
+            <li><a class="usa-link" href="/archive/2026/">Tropical Cyclone Advisories</a></li>
+            <li><a class="usa-link" href="/archive/xgtwo/gtwo_archive.php">Tropical Weather Outlooks</a></li>
+            <li><a class="usa-link" href="/data/tcr/index.php">Tropical Cyclone Reports and Season Summaries</a></li>
+            <li><a class="usa-link" href="/verification/">Tropical Cyclone Forecast Verification</a></li> 
+            <li><a class="usa-link" href="/newsarchive.shtml">NHC News Archive</a></li>
+            <li><a class="usa-link" href="/data/">Other Archives: HURDAT, Track Maps, Marine Products, and more</a></li>
+          </ul>
+        </li>
+
+        <!-- About NHC/CPHC -->
+        <li class="usa-nav__primary-item">
+          <button
+            type="button"
+            class="usa-accordion__button usa-nav__link"
+            aria-expanded="false"
+            aria-controls="nav-about-menu"
+          >
+            <span>About</span>
+          </button>
+          <ul id="nav-about-menu" class="usa-nav__submenu bg-white" hidden>
+            <li><a class="usa-link" href="/aboutintro.shtml">National Hurricane Center</a></li>
+            <li><a class="usa-link" href="/aboutcphc.php">Central Pacific Hurricane Center</a></li>
+            <li><a class="usa-link" href="/aboutlibrary.php">Library</a></li>
+            <li><a class="usa-link" href="/contact.shtml">Contact Us</a></li>
+          </ul>
+        </li>
+
+        <!-- Search -->
+        <li class="usa-nav__primary-item">
+          <button
+            type="button"
+            class="usa-accordion__button usa-nav__link"
+            aria-expanded="false"
+            aria-controls="nav-search-menu"
+          >
+            <span>Search</span>
+          </button>
+          <ul id="nav-search-menu" class="usa-nav__submenu bg-white" hidden>
+            <li>
+              <form id="search-form" method="get" action="https://search.usa.gov/search" class="usa-search usa-search--small padding-1" role="search">
+                <fieldset class="usa-fieldset">
+                  <legend class="usa-legend usa-legend">Search for</legend>
+                  <input type="hidden" name="v:project" value="firstgov">
+                  <input type="hidden" name="affiliate" value="nws.noaa.gov">
+                  <label class="usa-sr-only" for="search-field-en-small">Search</label>
+                  <input
+                    class="usa-input width-auto"
+                    id="search-field-en-small"
+                    type="search"
+                    name="query"
+                  />
+                  <button class="usa-button" type="submit">
+                    <img
+                      src="/assets/img/usa-icons-bg/search--white.svg"
+                      class="usa-search__submit-icon"
+                      alt="Search"
+                    />
+                  </button>
+                </fieldset>
+              </form>
+            </li>
+          </ul>
+        </li>
+      </ul>
+  
+    </nav>
+  </div>
+</header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Find the sub-menu that contains the search form
+  const searchMenuContainer = document.querySelector('#nav-search-menu');
+
+  if (searchMenuContainer) {
+    // Prevent the 'click' event from bubbling up to the document.
+    // This stops the USWDS script from closing the menu when you
+    // interact with the form inside it.
+    searchMenuContainer.addEventListener('click', function(event) {
+      event.stopPropagation();
+    });
+  }
+});
+</script>
+
+  <!-- BEGIN Google Analytics code -->
+<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+<script src="//dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&amp;subagency=NOAA" id="_fed_an_ua_tag"></script>
+<!-- END Google Analytics code -->
+
+  <a name="contents" id="contents"></a><br>
+  
+  <h2 align="center" style="width: 100%;">Hurricane FIONA Advisory Archive</h2>
+  <hr width="100%" align="left">
+  
+  <!-- This page created by nhcWeb -->
+
+
+<center>
+  <a href="/archive/2022/FIONA_graphics.php"><b>Graphics Archive</b></a>
+</center>
+<hr noshade>
+<table border="0" cellpadding="4" cellspacing="9" width="100%">
+  <tr><th align="left" id="col1" width="25%" style="background-color:#DDD;">Forecast Advisory</th><th align="left" id="col2" width="25%" style="background-color:#DDD;">Public Advisory</th><th align="left" id="col3" width="25%" style="background-color:#DDD;">Forecast Discussion</th><th align="left" id="col4" width="25%" style="background-color:#DDD;">Wind Speed Probabilities</th>
+  </tr>
+  <tr>
+    <td colspan="4" style="border-bottom:1px solid #DDD;">
+      <b><i>Wednesday, September 14, 2022</i></b>
+    </td>
+  </tr>
+  <tr><td align="left" valign="middle" headers="col1">
+      <!-- 20220914 1500 --><a href="/archive/2022/al07/al072022.fstadv.001.shtml">1:&nbsp;1500 UTC</a><br>
+      <!-- 20220914 2100 --><a href="/archive/2022/al07/al072022.fstadv.002.shtml">2:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220914 1500 --><a href="/archive/2022/al07/al072022.public.001.shtml">1:&nbsp;1500 UTC</a><br>
+      <!-- 20220914 2100 --><a href="/archive/2022/al07/al072022.public.002.shtml">2:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220914 1500 --><a href="/archive/2022/al07/al072022.discus.001.shtml">1:&nbsp;1500 UTC</a><br>
+      <!-- 20220914 2100 --><a href="/archive/2022/al07/al072022.discus.002.shtml">2:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220914 1500 --><a href="/archive/2022/al07/al072022.wndprb.001.shtml">1:&nbsp;1500 UTC</a><br>
+      <!-- 20220914 2100 --><a href="/archive/2022/al07/al072022.wndprb.002.shtml">2:&nbsp;2100 UTC</a><br>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4" style="border-bottom:1px solid #DDD;">
+      <b><i>Thursday, September 15, 2022</i></b>
+    </td>
+  </tr>
+  <tr><td align="left" valign="middle" headers="col1">
+      <!-- 20220915 0300 --><a href="/archive/2022/al07/al072022.fstadv.003.shtml">3:&nbsp;0300 UTC</a><br>
+      <!-- 20220915 0900 --><a href="/archive/2022/al07/al072022.fstadv.004.shtml">4:&nbsp;0900 UTC</a><br>
+      <!-- 20220915 1500 --><a href="/archive/2022/al07/al072022.fstadv.005.shtml">5:&nbsp;1500 UTC</a><br>
+      <!-- 20220915 2100 --><a href="/archive/2022/al07/al072022.fstadv.006.shtml">6:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220915 0145 --><a href="/archive/2022/al07/al072022.update.09150145.shtml">update:&nbsp;0145 UTC</a><br>
+      <!-- 20220915 0300 --><a href="/archive/2022/al07/al072022.public.003.shtml">3:&nbsp;0300 UTC</a><br>
+      <!-- 20220915 0600 --><a href="/archive/2022/al07/al072022.public_a.003.shtml">3a:&nbsp;0600 UTC</a><br>
+      <!-- 20220915 0900 --><a href="/archive/2022/al07/al072022.public.004.shtml">4:&nbsp;0900 UTC</a><br>
+      <!-- 20220915 1200 --><a href="/archive/2022/al07/al072022.public_a.004.shtml">4a:&nbsp;1200 UTC</a><br>
+      <!-- 20220915 1500 --><a href="/archive/2022/al07/al072022.public.005.shtml">5:&nbsp;1500 UTC</a><br>
+      <!-- 20220915 1800 --><a href="/archive/2022/al07/al072022.public_a.005.shtml">5a:&nbsp;1800 UTC</a><br>
+      <!-- 20220915 2100 --><a href="/archive/2022/al07/al072022.public.006.shtml">6:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220915 0300 --><a href="/archive/2022/al07/al072022.discus.003.shtml">3:&nbsp;0300 UTC</a><br>
+      <!-- 20220915 0900 --><a href="/archive/2022/al07/al072022.discus.004.shtml">4:&nbsp;0900 UTC</a><br>
+      <!-- 20220915 1500 --><a href="/archive/2022/al07/al072022.discus.005.shtml">5:&nbsp;1500 UTC</a><br>
+      <!-- 20220915 2100 --><a href="/archive/2022/al07/al072022.discus.006.shtml">6:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220915 0300 --><a href="/archive/2022/al07/al072022.wndprb.003.shtml">3:&nbsp;0300 UTC</a><br>
+      <!-- 20220915 0900 --><a href="/archive/2022/al07/al072022.wndprb.004.shtml">4:&nbsp;0900 UTC</a><br>
+      <!-- 20220915 1500 --><a href="/archive/2022/al07/al072022.wndprb.005.shtml">5:&nbsp;1500 UTC</a><br>
+      <!-- 20220915 2100 --><a href="/archive/2022/al07/al072022.wndprb.006.shtml">6:&nbsp;2100 UTC</a><br>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4" style="border-bottom:1px solid #DDD;">
+      <b><i>Friday, September 16, 2022</i></b>
+    </td>
+  </tr>
+  <tr><td align="left" valign="middle" headers="col1">
+      <!-- 20220916 0300 --><a href="/archive/2022/al07/al072022.fstadv.007.shtml">7:&nbsp;0300 UTC</a><br>
+      <!-- 20220916 0900 --><a href="/archive/2022/al07/al072022.fstadv.008.shtml">8:&nbsp;0900 UTC</a><br>
+      <!-- 20220916 1500 --><a href="/archive/2022/al07/al072022.fstadv.009.shtml">9:&nbsp;1500 UTC</a><br>
+      <!-- 20220916 2100 --><a href="/archive/2022/al07/al072022.fstadv.010.shtml">10:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220916 0000 --><a href="/archive/2022/al07/al072022.public_a.006.shtml">6a:&nbsp;0000 UTC</a><br>
+      <!-- 20220916 0300 --><a href="/archive/2022/al07/al072022.public.007.shtml">7:&nbsp;0300 UTC</a><br>
+      <!-- 20220916 0600 --><a href="/archive/2022/al07/al072022.public_a.007.shtml">7a:&nbsp;0600 UTC</a><br>
+      <!-- 20220916 0900 --><a href="/archive/2022/al07/al072022.public.008.shtml">8:&nbsp;0900 UTC</a><br>
+      <!-- 20220916 1100 --><a href="/archive/2022/al07/al072022.update.09161058.shtml">update:&nbsp;1100 UTC</a><br>
+      <!-- 20220916 1200 --><a href="/archive/2022/al07/al072022.public_a.008.shtml">8a:&nbsp;1200 UTC</a><br>
+      <!-- 20220916 1500 --><a href="/archive/2022/al07/al072022.public.009.shtml">9:&nbsp;1500 UTC</a><br>
+      <!-- 20220916 1800 --><a href="/archive/2022/al07/al072022.public_a.009.shtml">9a:&nbsp;1800 UTC</a><br>
+      <!-- 20220916 2100 --><a href="/archive/2022/al07/al072022.public.010.shtml">10:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220916 0300 --><a href="/archive/2022/al07/al072022.discus.007.shtml">7:&nbsp;0300 UTC</a><br>
+      <!-- 20220916 0900 --><a href="/archive/2022/al07/al072022.discus.008.shtml">8:&nbsp;0900 UTC</a><br>
+      <!-- 20220916 1500 --><a href="/archive/2022/al07/al072022.discus.009.shtml">9:&nbsp;1500 UTC</a><br>
+      <!-- 20220916 2100 --><a href="/archive/2022/al07/al072022.discus.010.shtml">10:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220916 0300 --><a href="/archive/2022/al07/al072022.wndprb.007.shtml">7:&nbsp;0300 UTC</a><br>
+      <!-- 20220916 0900 --><a href="/archive/2022/al07/al072022.wndprb.008.shtml">8:&nbsp;0900 UTC</a><br>
+      <!-- 20220916 1500 --><a href="/archive/2022/al07/al072022.wndprb.009.shtml">9:&nbsp;1500 UTC</a><br>
+      <!-- 20220916 2100 --><a href="/archive/2022/al07/al072022.wndprb.010.shtml">10:&nbsp;2100 UTC</a><br>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4" style="border-bottom:1px solid #DDD;">
+      <b><i>Saturday, September 17, 2022</i></b>
+    </td>
+  </tr>
+  <tr><td align="left" valign="middle" headers="col1">
+      <!-- 20220917 0300 --><a href="/archive/2022/al07/al072022.fstadv.011.shtml">11:&nbsp;0300 UTC</a><br>
+      <!-- 20220917 0900 --><a href="/archive/2022/al07/al072022.fstadv.012.shtml">12:&nbsp;0900 UTC</a><br>
+      <!-- 20220917 1500 --><a href="/archive/2022/al07/al072022.fstadv.013.shtml">13:&nbsp;1500 UTC</a><br>
+      <!-- 20220917 2100 --><a href="/archive/2022/al07/al072022.fstadv.014.shtml">14:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220917 0000 --><a href="/archive/2022/al07/al072022.public_a.010.shtml">10a:&nbsp;0000 UTC</a><br>
+      <!-- 20220917 0300 --><a href="/archive/2022/al07/al072022.public.011.shtml">11:&nbsp;0300 UTC</a><br>
+      <!-- 20220917 0600 --><a href="/archive/2022/al07/al072022.public_a.011.shtml">11a:&nbsp;0600 UTC</a><br>
+      <!-- 20220917 0900 --><a href="/archive/2022/al07/al072022.public.012.shtml">12:&nbsp;0900 UTC</a><br>
+      <!-- 20220917 1200 --><a href="/archive/2022/al07/al072022.public_a.012.shtml">12a:&nbsp;1200 UTC</a><br>
+      <!-- 20220917 1500 --><a href="/archive/2022/al07/al072022.public.013.shtml">13:&nbsp;1500 UTC</a><br>
+      <!-- 20220917 1800 --><a href="/archive/2022/al07/al072022.public_a.013.shtml">13a:&nbsp;1800 UTC</a><br>
+      <!-- 20220917 2100 --><a href="/archive/2022/al07/al072022.public.014.shtml">14:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220917 0300 --><a href="/archive/2022/al07/al072022.discus.011.shtml">11:&nbsp;0300 UTC</a><br>
+      <!-- 20220917 0900 --><a href="/archive/2022/al07/al072022.discus.012.shtml">12:&nbsp;0900 UTC</a><br>
+      <!-- 20220917 1500 --><a href="/archive/2022/al07/al072022.discus.013.shtml">13:&nbsp;1500 UTC</a><br>
+      <!-- 20220917 2100 --><a href="/archive/2022/al07/al072022.discus.014.shtml">14:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220917 0300 --><a href="/archive/2022/al07/al072022.wndprb.011.shtml">11:&nbsp;0300 UTC</a><br>
+      <!-- 20220917 0900 --><a href="/archive/2022/al07/al072022.wndprb.012.shtml">12:&nbsp;0900 UTC</a><br>
+      <!-- 20220917 1500 --><a href="/archive/2022/al07/al072022.wndprb.013.shtml">13:&nbsp;1500 UTC</a><br>
+      <!-- 20220917 2100 --><a href="/archive/2022/al07/al072022.wndprb.014.shtml">14:&nbsp;2100 UTC</a><br>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4" style="border-bottom:1px solid #DDD;">
+      <b><i>Sunday, September 18, 2022</i></b>
+    </td>
+  </tr>
+  <tr><td align="left" valign="middle" headers="col1">
+      <!-- 20220918 0300 --><a href="/archive/2022/al07/al072022.fstadv.015.shtml">15:&nbsp;0300 UTC</a><br>
+      <!-- 20220918 0900 --><a href="/archive/2022/al07/al072022.fstadv.016.shtml">16:&nbsp;0900 UTC</a><br>
+      <!-- 20220918 1500 --><a href="/archive/2022/al07/al072022.fstadv.017.shtml">17:&nbsp;1500 UTC</a><br>
+      <!-- 20220918 2100 --><a href="/archive/2022/al07/al072022.fstadv.018.shtml">18:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220918 0000 --><a href="/archive/2022/al07/al072022.public_a.014.shtml">14a:&nbsp;0000 UTC</a><br>
+      <!-- 20220918 0300 --><a href="/archive/2022/al07/al072022.public.015.shtml">15:&nbsp;0300 UTC</a><br>
+      <!-- 20220918 0600 --><a href="/archive/2022/al07/al072022.public_a.015.shtml">15a:&nbsp;0600 UTC</a><br>
+      <!-- 20220918 0900 --><a href="/archive/2022/al07/al072022.public.016.shtml">16:&nbsp;0900 UTC</a><br>
+      <!-- 20220918 1200 --><a href="/archive/2022/al07/al072022.public_a.016.shtml">16a:&nbsp;1200 UTC</a><br>
+      <!-- 20220918 1500 --><a href="/archive/2022/al07/al072022.public.017.shtml">17:&nbsp;1500 UTC</a><br>
+      <!-- 20220918 1800 --><a href="/archive/2022/al07/al072022.public_a.017.shtml">17a:&nbsp;1800 UTC</a><br>
+      <!-- 20220918 1935 --><a href="/archive/2022/al07/al072022.update.09181935.shtml">update:&nbsp;1935 UTC</a><br>
+      <!-- 20220918 2100 --><a href="/archive/2022/al07/al072022.public.018.shtml">18:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220918 0300 --><a href="/archive/2022/al07/al072022.discus.015.shtml">15:&nbsp;0300 UTC</a><br>
+      <!-- 20220918 0900 --><a href="/archive/2022/al07/al072022.discus.016.shtml">16:&nbsp;0900 UTC</a><br>
+      <!-- 20220918 1500 --><a href="/archive/2022/al07/al072022.discus.017.shtml">17:&nbsp;1500 UTC</a><br>
+      <!-- 20220918 2100 --><a href="/archive/2022/al07/al072022.discus.018.shtml">18:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220918 0300 --><a href="/archive/2022/al07/al072022.wndprb.015.shtml">15:&nbsp;0300 UTC</a><br>
+      <!-- 20220918 0900 --><a href="/archive/2022/al07/al072022.wndprb.016.shtml">16:&nbsp;0900 UTC</a><br>
+      <!-- 20220918 1500 --><a href="/archive/2022/al07/al072022.wndprb.017.shtml">17:&nbsp;1500 UTC</a><br>
+      <!-- 20220918 2100 --><a href="/archive/2022/al07/al072022.wndprb.018.shtml">18:&nbsp;2100 UTC</a><br>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4" style="border-bottom:1px solid #DDD;">
+      <b><i>Monday, September 19, 2022</i></b>
+    </td>
+  </tr>
+  <tr><td align="left" valign="middle" headers="col1">
+      <!-- 20220919 0300 --><a href="/archive/2022/al07/al072022.fstadv.019.shtml">19:&nbsp;0300 UTC</a><br>
+      <!-- 20220919 0900 --><a href="/archive/2022/al07/al072022.fstadv.020.shtml">20:&nbsp;0900 UTC</a><br>
+      <!-- 20220919 1500 --><a href="/archive/2022/al07/al072022.fstadv.021.shtml">21:&nbsp;1500 UTC</a><br>
+      <!-- 20220919 2100 --><a href="/archive/2022/al07/al072022.fstadv.022.shtml">22:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220919 0000 --><a href="/archive/2022/al07/al072022.public_a.018.shtml">18a:&nbsp;0000 UTC</a><br>
+      <!-- 20220919 0300 --><a href="/archive/2022/al07/al072022.public.019.shtml">19:&nbsp;0300 UTC</a><br>
+      <!-- 20220919 0600 --><a href="/archive/2022/al07/al072022.public_a.019.shtml">19a:&nbsp;0600 UTC</a><br>
+      <!-- 20220919 0735 --><a href="/archive/2022/al07/al072022.update.09190735.shtml">update:&nbsp;0735 UTC</a><br>
+      <!-- 20220919 0900 --><a href="/archive/2022/al07/al072022.public.020.shtml">20:&nbsp;0900 UTC</a><br>
+      <!-- 20220919 1200 --><a href="/archive/2022/al07/al072022.public_a.020.shtml">20a:&nbsp;1200 UTC</a><br>
+      <!-- 20220919 1500 --><a href="/archive/2022/al07/al072022.public.021.shtml">21:&nbsp;1500 UTC</a><br>
+      <!-- 20220919 1800 --><a href="/archive/2022/al07/al072022.public_a.021.shtml">21a:&nbsp;1800 UTC</a><br>
+      <!-- 20220919 2100 --><a href="/archive/2022/al07/al072022.public.022.shtml">22:&nbsp;2100 UTC</a><br>
+      <!-- 20220919 2125 --><a href="/archive/2022/al07/al072022.update.09192122.shtml">update:&nbsp;2125 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220919 0300 --><a href="/archive/2022/al07/al072022.discus.019.shtml">19:&nbsp;0300 UTC</a><br>
+      <!-- 20220919 0900 --><a href="/archive/2022/al07/al072022.discus.020.shtml">20:&nbsp;0900 UTC</a><br>
+      <!-- 20220919 1500 --><a href="/archive/2022/al07/al072022.discus.021.shtml">21:&nbsp;1500 UTC</a><br>
+      <!-- 20220919 2100 --><a href="/archive/2022/al07/al072022.discus.022.shtml">22:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220919 0300 --><a href="/archive/2022/al07/al072022.wndprb.019.shtml">19:&nbsp;0300 UTC</a><br>
+      <!-- 20220919 0900 --><a href="/archive/2022/al07/al072022.wndprb.020.shtml">20:&nbsp;0900 UTC</a><br>
+      <!-- 20220919 1500 --><a href="/archive/2022/al07/al072022.wndprb.021.shtml">21:&nbsp;1500 UTC</a><br>
+      <!-- 20220919 2100 --><a href="/archive/2022/al07/al072022.wndprb.022.shtml">22:&nbsp;2100 UTC</a><br>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4" style="border-bottom:1px solid #DDD;">
+      <b><i>Tuesday, September 20, 2022</i></b>
+    </td>
+  </tr>
+  <tr><td align="left" valign="middle" headers="col1">
+      <!-- 20220920 0300 --><a href="/archive/2022/al07/al072022.fstadv.023.shtml">23:&nbsp;0300 UTC</a><br>
+      <!-- 20220920 0900 --><a href="/archive/2022/al07/al072022.fstadv.024.shtml">24:&nbsp;0900 UTC</a><br>
+      <!-- 20220920 1500 --><a href="/archive/2022/al07/al072022.fstadv.025.shtml">25:&nbsp;1500 UTC</a><br>
+      <!-- 20220920 2100 --><a href="/archive/2022/al07/al072022.fstadv.026.shtml">26:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220920 0000 --><a href="/archive/2022/al07/al072022.public_a.022.shtml">22a:&nbsp;0000 UTC</a><br>
+      <!-- 20220920 0300 --><a href="/archive/2022/al07/al072022.public.023.shtml">23:&nbsp;0300 UTC</a><br>
+      <!-- 20220920 0600 --><a href="/archive/2022/al07/al072022.public_a.023.shtml">23a:&nbsp;0600 UTC</a><br>
+      <!-- 20220920 0900 --><a href="/archive/2022/al07/al072022.public.024.shtml">24:&nbsp;0900 UTC</a><br>
+      <!-- 20220920 1200 --><a href="/archive/2022/al07/al072022.public_a.024.shtml">24a:&nbsp;1200 UTC</a><br>
+      <!-- 20220920 1500 --><a href="/archive/2022/al07/al072022.public.025.shtml">25:&nbsp;1500 UTC</a><br>
+      <!-- 20220920 1800 --><a href="/archive/2022/al07/al072022.public_a.025.shtml">25a:&nbsp;1800 UTC</a><br>
+      <!-- 20220920 2100 --><a href="/archive/2022/al07/al072022.public.026.shtml">26:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220920 0300 --><a href="/archive/2022/al07/al072022.discus.023.shtml">23:&nbsp;0300 UTC</a><br>
+      <!-- 20220920 0900 --><a href="/archive/2022/al07/al072022.discus.024.shtml">24:&nbsp;0900 UTC</a><br>
+      <!-- 20220920 1500 --><a href="/archive/2022/al07/al072022.discus.025.shtml">25:&nbsp;1500 UTC</a><br>
+      <!-- 20220920 2100 --><a href="/archive/2022/al07/al072022.discus.026.shtml">26:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220920 0300 --><a href="/archive/2022/al07/al072022.wndprb.023.shtml">23:&nbsp;0300 UTC</a><br>
+      <!-- 20220920 0900 --><a href="/archive/2022/al07/al072022.wndprb.024.shtml">24:&nbsp;0900 UTC</a><br>
+      <!-- 20220920 1500 --><a href="/archive/2022/al07/al072022.wndprb.025.shtml">25:&nbsp;1500 UTC</a><br>
+      <!-- 20220920 2100 --><a href="/archive/2022/al07/al072022.wndprb.026.shtml">26:&nbsp;2100 UTC</a><br>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4" style="border-bottom:1px solid #DDD;">
+      <b><i>Wednesday, September 21, 2022</i></b>
+    </td>
+  </tr>
+  <tr><td align="left" valign="middle" headers="col1">
+      <!-- 20220921 0300 --><a href="/archive/2022/al07/al072022.fstadv.027.shtml">27:&nbsp;0300 UTC</a><br>
+      <!-- 20220921 0900 --><a href="/archive/2022/al07/al072022.fstadv.028.shtml">28:&nbsp;0900 UTC</a><br>
+      <!-- 20220921 1500 --><a href="/archive/2022/al07/al072022.fstadv.029.shtml">29:&nbsp;1500 UTC</a><br>
+      <!-- 20220921 2100 --><a href="/archive/2022/al07/al072022.fstadv.030.shtml">30:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220921 0000 --><a href="/archive/2022/al07/al072022.public_a.026.shtml">26a:&nbsp;0000 UTC</a><br>
+      <!-- 20220921 0300 --><a href="/archive/2022/al07/al072022.public.027.shtml">27:&nbsp;0300 UTC</a><br>
+      <!-- 20220921 0600 --><a href="/archive/2022/al07/al072022.public_a.027.shtml">27a:&nbsp;0600 UTC</a><br>
+      <!-- 20220921 0900 --><a href="/archive/2022/al07/al072022.public.028.shtml">28:&nbsp;0900 UTC</a><br>
+      <!-- 20220921 1200 --><a href="/archive/2022/al07/al072022.public_a.028.shtml">28a:&nbsp;1200 UTC</a><br>
+      <!-- 20220921 1500 --><a href="/archive/2022/al07/al072022.public.029.shtml">29:&nbsp;1500 UTC</a><br>
+      <!-- 20220921 1800 --><a href="/archive/2022/al07/al072022.public_a.029.shtml">29a:&nbsp;1800 UTC</a><br>
+      <!-- 20220921 2100 --><a href="/archive/2022/al07/al072022.public.030.shtml">30:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220921 0300 --><a href="/archive/2022/al07/al072022.discus.027.shtml">27:&nbsp;0300 UTC</a><br>
+      <!-- 20220921 0900 --><a href="/archive/2022/al07/al072022.discus.028.shtml">28:&nbsp;0900 UTC</a><br>
+      <!-- 20220921 1500 --><a href="/archive/2022/al07/al072022.discus.029.shtml">29:&nbsp;1500 UTC</a><br>
+      <!-- 20220921 2100 --><a href="/archive/2022/al07/al072022.discus.030.shtml">30:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220921 0300 --><a href="/archive/2022/al07/al072022.wndprb.027.shtml">27:&nbsp;0300 UTC</a><br>
+      <!-- 20220921 0900 --><a href="/archive/2022/al07/al072022.wndprb.028.shtml">28:&nbsp;0900 UTC</a><br>
+      <!-- 20220921 1500 --><a href="/archive/2022/al07/al072022.wndprb.029.shtml">29:&nbsp;1500 UTC</a><br>
+      <!-- 20220921 2100 --><a href="/archive/2022/al07/al072022.wndprb.030.shtml">30:&nbsp;2100 UTC</a><br>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4" style="border-bottom:1px solid #DDD;">
+      <b><i>Thursday, September 22, 2022</i></b>
+    </td>
+  </tr>
+  <tr><td align="left" valign="middle" headers="col1">
+      <!-- 20220922 0300 --><a href="/archive/2022/al07/al072022.fstadv.031.shtml">31:&nbsp;0300 UTC</a><br>
+      <!-- 20220922 0900 --><a href="/archive/2022/al07/al072022.fstadv.032.shtml">32:&nbsp;0900 UTC</a><br>
+      <!-- 20220922 1500 --><a href="/archive/2022/al07/al072022.fstadv.033.shtml">33:&nbsp;1500 UTC</a><br>
+      <!-- 20220922 2100 --><a href="/archive/2022/al07/al072022.fstadv.034.shtml">34:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220922 0000 --><a href="/archive/2022/al07/al072022.public_a.030.shtml">30a:&nbsp;0000 UTC</a><br>
+      <!-- 20220922 0300 --><a href="/archive/2022/al07/al072022.public.031.shtml">31:&nbsp;0300 UTC</a><br>
+      <!-- 20220922 0600 --><a href="/archive/2022/al07/al072022.public_a.031.shtml">31a:&nbsp;0600 UTC</a><br>
+      <!-- 20220922 0900 --><a href="/archive/2022/al07/al072022.public.032.shtml">32:&nbsp;0900 UTC</a><br>
+      <!-- 20220922 1200 --><a href="/archive/2022/al07/al072022.public_a.032.shtml">32a:&nbsp;1200 UTC</a><br>
+      <!-- 20220922 1500 --><a href="/archive/2022/al07/al072022.public.033.shtml">33:&nbsp;1500 UTC</a><br>
+      <!-- 20220922 1800 --><a href="/archive/2022/al07/al072022.public_a.033.shtml">33a:&nbsp;1800 UTC</a><br>
+      <!-- 20220922 2100 --><a href="/archive/2022/al07/al072022.public.034.shtml">34:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220922 0300 --><a href="/archive/2022/al07/al072022.discus.031.shtml">31:&nbsp;0300 UTC</a><br>
+      <!-- 20220922 0900 --><a href="/archive/2022/al07/al072022.discus.032.shtml">32:&nbsp;0900 UTC</a><br>
+      <!-- 20220922 1500 --><a href="/archive/2022/al07/al072022.discus.033.shtml">33:&nbsp;1500 UTC</a><br>
+      <!-- 20220922 2100 --><a href="/archive/2022/al07/al072022.discus.034.shtml">34:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220922 0300 --><a href="/archive/2022/al07/al072022.wndprb.031.shtml">31:&nbsp;0300 UTC</a><br>
+      <!-- 20220922 0900 --><a href="/archive/2022/al07/al072022.wndprb.032.shtml">32:&nbsp;0900 UTC</a><br>
+      <!-- 20220922 1500 --><a href="/archive/2022/al07/al072022.wndprb.033.shtml">33:&nbsp;1500 UTC</a><br>
+      <!-- 20220922 2100 --><a href="/archive/2022/al07/al072022.wndprb.034.shtml">34:&nbsp;2100 UTC</a><br>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4" style="border-bottom:1px solid #DDD;">
+      <b><i>Friday, September 23, 2022</i></b>
+    </td>
+  </tr>
+  <tr><td align="left" valign="middle" headers="col1">
+      <!-- 20220923 0300 --><a href="/archive/2022/al07/al072022.fstadv.035.shtml">35:&nbsp;0300 UTC</a><br>
+      <!-- 20220923 0900 --><a href="/archive/2022/al07/al072022.fstadv.036.shtml">36:&nbsp;0900 UTC</a><br>
+      <!-- 20220923 1500 --><a href="/archive/2022/al07/al072022.fstadv.037.shtml">37:&nbsp;1500 UTC</a><br>
+      <!-- 20220923 2100 --><a href="/archive/2022/al07/al072022.fstadv.038.shtml">38:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220923 0000 --><a href="/archive/2022/al07/al072022.public_a.034.shtml">34a:&nbsp;0000 UTC</a><br>
+      <!-- 20220923 0300 --><a href="/archive/2022/al07/al072022.public.035.shtml">35:&nbsp;0300 UTC</a><br>
+      <!-- 20220923 0600 --><a href="/archive/2022/al07/al072022.public_a.035.shtml">35a:&nbsp;0600 UTC</a><br>
+      <!-- 20220923 0900 --><a href="/archive/2022/al07/al072022.public.036.shtml">36:&nbsp;0900 UTC</a><br>
+      <!-- 20220923 1200 --><a href="/archive/2022/al07/al072022.public_a.036.shtml">36a:&nbsp;1200 UTC</a><br>
+      <!-- 20220923 1500 --><a href="/archive/2022/al07/al072022.public.037.shtml">37:&nbsp;1500 UTC</a><br>
+      <!-- 20220923 1800 --><a href="/archive/2022/al07/al072022.public_a.037.shtml">37a:&nbsp;1800 UTC</a><br>
+      <!-- 20220923 2100 --><a href="/archive/2022/al07/al072022.public.038.shtml">38:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220923 0300 --><a href="/archive/2022/al07/al072022.discus.035.shtml">35:&nbsp;0300 UTC</a><br>
+      <!-- 20220923 0900 --><a href="/archive/2022/al07/al072022.discus.036.shtml">36:&nbsp;0900 UTC</a><br>
+      <!-- 20220923 1500 --><a href="/archive/2022/al07/al072022.discus.037.shtml">37:&nbsp;1500 UTC</a><br>
+      <!-- 20220923 2100 --><a href="/archive/2022/al07/al072022.discus.038.shtml">38:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220923 0300 --><a href="/archive/2022/al07/al072022.wndprb.035.shtml">35:&nbsp;0300 UTC</a><br>
+      <!-- 20220923 0900 --><a href="/archive/2022/al07/al072022.wndprb.036.shtml">36:&nbsp;0900 UTC</a><br>
+      <!-- 20220923 1500 --><a href="/archive/2022/al07/al072022.wndprb.037.shtml">37:&nbsp;1500 UTC</a><br>
+      <!-- 20220923 2100 --><a href="/archive/2022/al07/al072022.wndprb.038.shtml">38:&nbsp;2100 UTC</a><br>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4" style="border-bottom:1px solid #DDD;">
+      <b><i>Saturday, September 24, 2022</i></b>
+    </td>
+  </tr>
+  <tr><td align="left" valign="middle" headers="col1">
+      <!-- 20220924 0300 --><a href="/archive/2022/al07/al072022.fstadv.039.shtml">39:&nbsp;0300 UTC</a><br>
+      <!-- 20220924 0900 --><a href="/archive/2022/al07/al072022.fstadv.040.shtml">40:&nbsp;0900 UTC</a><br>
+      <!-- 20220924 1500 --><a href="/archive/2022/al07/al072022.fstadv.041.shtml">41:&nbsp;1500 UTC</a><br>
+      <!-- 20220924 2100 --><a href="/archive/2022/al07/al072022.fstadv.042.shtml">42:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220924 0000 --><a href="/archive/2022/al07/al072022.public_a.038.shtml">38a:&nbsp;0000 UTC</a><br>
+      <!-- 20220924 0300 --><a href="/archive/2022/al07/al072022.public.039.shtml">39:&nbsp;0300 UTC</a><br>
+      <!-- 20220924 0600 --><a href="/archive/2022/al07/al072022.public_a.039.shtml">39a:&nbsp;0600 UTC</a><br>
+      <!-- 20220924 0900 --><a href="/archive/2022/al07/al072022.public.040.shtml">40:&nbsp;0900 UTC</a><br>
+      <!-- 20220924 1200 --><a href="/archive/2022/al07/al072022.public_a.040.shtml">40a:&nbsp;1200 UTC</a><br>
+      <!-- 20220924 1500 --><a href="/archive/2022/al07/al072022.public.041.shtml">41:&nbsp;1500 UTC</a><br>
+      <!-- 20220924 1800 --><a href="/archive/2022/al07/al072022.public_a.041.shtml">41a:&nbsp;1800 UTC</a><br>
+      <!-- 20220924 2100 --><a href="/archive/2022/al07/al072022.public.042.shtml">42:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220924 0300 --><a href="/archive/2022/al07/al072022.discus.039.shtml">39:&nbsp;0300 UTC</a><br>
+      <!-- 20220924 0900 --><a href="/archive/2022/al07/al072022.discus.040.shtml">40:&nbsp;0900 UTC</a><br>
+      <!-- 20220924 1500 --><a href="/archive/2022/al07/al072022.discus.041.shtml">41:&nbsp;1500 UTC</a><br>
+      <!-- 20220924 2100 --><a href="/archive/2022/al07/al072022.discus.042.shtml">42:&nbsp;2100 UTC</a><br>
+    </td><td align="left" valign="middle" headers="col1">
+      <!-- 20220924 0300 --><a href="/archive/2022/al07/al072022.wndprb.039.shtml">39:&nbsp;0300 UTC</a><br>
+      <!-- 20220924 0900 --><a href="/archive/2022/al07/al072022.wndprb.040.shtml">40:&nbsp;0900 UTC</a><br>
+      <!-- 20220924 1500 --><a href="/archive/2022/al07/al072022.wndprb.041.shtml">41:&nbsp;1500 UTC</a><br>
+      <!-- 20220924 2100 --><a href="/archive/2022/al07/al072022.wndprb.042.shtml">42:&nbsp;2100 UTC</a><br>
+    </td>
+  </tr>
+</table>
+          <br><br>
+        <div class="footer">
+          <div class="footer-content">
+            <div class='footer-header'>
+               Quick Links and Additional Resources<br>
+            </div>
+            <div class='footer-column'>
+              <a class='footer-column-head' href='/cyclones/'>Tropical Cyclone Forecasts</a><br>
+              <a class="usa-link" href='/cyclones'>Tropical Cyclone Advisories</a><br>
+              <a class="usa-link" href='/gtwo.php'>Tropical Weather Outlook</a><br>
+              <a class="usa-link" href='/audio'>Audio/Podcasts</a><br>
+              <a class="usa-link" href='/aboutnhcprod.shtml'>About Advisories</a><br>
+              <br>
+              <a class='footer-column-head' href='/marine'>Marine Forecasts</a><br>
+              <a class="usa-link" href='/marine/offshores.php'>Offshore Waters Forecasts</a><br>
+              <a class="usa-link" href='/marine/grids.php'>Gridded Forecasts</a><br>
+              <a class="usa-link" href='/marine/graphicast.php'>Graphicast</a><br>
+              <a class="usa-link" href='/abouttafbprod.shtml'>About Marine</a><br>
+            </div>
+            <div class='footer-column'>
+              <a class='footer-column-head' href='/socialmedia'>Social Media</a><br>
+              <a 
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="/nhcexit.php?outurl=http://www.facebook.com/NWSNHC"
+              >
+                <img src="/css/images/f_logo.png" alt="Follow the National Hurricane Center on Facebook" width="15" height="15"> &nbsp; NHC on Facebook
+              </a><br>
+              <a 
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="/x.php"
+              >
+                <img src="/css/images/x-logo.png" alt="Follow the National Hurricane Center on X" height="13" width="15"> &nbsp; NHC on X
+              </a><br>
+              <a 
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="/nhcexit.php?outurl=http://www.youtube.com/user/NWSNHC"
+              >
+                <img src="/css/images/youtube_logo.png" alt="Subscribe the National Hurricane Center on YouTube" height="12" width="15"> &nbsp; NHC on YouTube
+              </a><br>
+              <a 
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="/nhcexit.php?outurl=http://noaanhc.wordpress.com/"
+              >
+                <img src="/css/images/w_logo.png" alt="Read the National Hurricane Center Inside the Eye blog on WordPress" height="15" width="15"> &nbsp; NHC Blog:<br>&nbsp; &nbsp; &nbsp; "Inside the Eye"
+              </a><br>
+              <br>
+              <a class='footer-column-head' href="/prepare">Hurricane Preparedness</a><br>
+              <a 
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="https://www.weather.gov/safety/hurricane-plan"
+              >
+                Preparedness Guide
+              </a><br>
+              <a class="usa-link" href="/prepare/hazards.php">Hurricane Hazards</a><br>
+              <a
+                class="usa-link usa-link--external" 
+                rel="noreferrer"
+                href="https://www.weather.gov/safety/hurricane-ww"
+              >
+                Watches and Warnings
+              </a><br>
+              <a class="usa-link" href="/prepare/marine.php">Marine Safety</a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="http://www.ready.gov/hurricanes"
+              >
+                Ready.gov Hurricanes
+              </a><br>
+              <a class="usa-link" href="https://www.weather.gov/wrn/force">Weather-Ready Nation</a><br>
+              <a 
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="http://www.fema.gov/emergency-management-agencies"
+              >
+                Emergency Management Offices
+              </a><br>
+            </div>
+            <div class='footer-column'>
+              <a class='footer-column-head' href='/aboutresearch.shtml'>Research and Development</a><br>
+              <a 
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="http://www.aoml.noaa.gov/hrd/"
+              >
+                NOAA Hurricane Research Division
+              </a><br>
+              <a class="usa-link" href="/hot/">Hurricane and Ocean Testbed</a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="/nhcexit.php?outurl=http://www.hfip.org"
+              >
+                Hurricane Forecast Improvement Program
+              </a><br>
+              <br>
+              <a class='footer-column-head' href='/aboutintro.shtml'>Other Resources</a><br>
+              <a class="usa-link" href="/qa/">Q & A with NHC</a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="http://www.aoml.noaa.gov/general/lib/lib1/nhclib/"
+              >
+                NHC/AOML Library Branch
+              </a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="http://www.aoml.noaa.gov/hrd/tcfaq/tcfaqHED.html"
+              >
+                NOAA: Hurricane FAQs
+              </a><br>
+              <a class="usa-link" href="/nhop">National Hurricane Operations Plan</a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="/nhcexit.php?outurl=http://www.wx4nhc.org"
+              >
+                WX4NHC Amateur Radio
+              </a><br>
+            </div>
+            <div class='footer-column'>
+              <a class='footer-column-head' href="http://www.ncep.noaa.gov">NWS Forecast Offices</a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="http://www.wpc.ncep.noaa.gov"
+              >
+                Weather Prediction Center
+              </a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="http://www.spc.noaa.gov"
+              >
+                Storm Prediction Center
+              </a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="https://ocean.weather.gov"
+              >
+                Ocean Prediction Center
+              </a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="http://www.weather.gov"
+              >
+                Local Forecast Offices
+              </a><br>
+              <br>
+              <a class='footer-column-head' href="/aboutrsmc.shtml">Worldwide Tropical Cyclone Centers</a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="/nhcexit.php?outurl=https://www.canada.ca/hurricanes"
+              >
+                Canadian Hurricane Centre
+              </a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="/nhcexit.php?outurl=https://www.metoc.navy.mil/jtwc/jtwc.html"
+              >
+                Joint Typhoon Warning Center
+              </a><br>
+              <a class="usa-link" href="/aboutrsmc.shtml">Other Tropical Cyclone Centers</a><br>
+              <a
+                class="usa-link usa-link--external"
+                rel="noreferrer"
+                href="/nhcexit.php?outurl=http://severe.worldweather.org"
+              >
+                WMO Severe Weather Info Centre
+              </a>
+            </div>
+          </div>
+        </div>
+        
+
+  <!-- legal footer area -->
+<div class="footer-legal">
+  <div class="footer-legal-content">
+    <div class="footer-legal-gov">
+      <a href="http://www.usa.gov"><img src="/css/images/usa_gov.png" alt="usa.gov" width="110" height="30"></a>
+    </div> 
+    <div class="footer-legal-column" style="width:200px;">
+      <p> 
+          <a 
+            class="usa-link usa-link--external"
+            rel="noreferrer"
+            href="http://www.commerce.gov"
+          >
+            US Dept of Commerce
+          </a><br>
+          <a 
+            class="usa-link usa-link--external"
+            rel="noreferrer"
+            href="http://www.noaa.gov"
+          >
+            National Oceanic and Atmospheric Administration
+          </a><br>
+          National Hurricane Center<br>
+          11691 SW 17th Street<br>
+          Miami, FL, 33165<br>
+          <a href='mailto:nhcwebmaster@noaa.gov'>nhcwebmaster@noaa.gov</a>
+      </p>
+    </div>
+
+    <div class="footer-legal-column" style="width:200px;">
+      <p>
+          Central Pacific Hurricane Center<br>
+          2525 Correa Rd<br>
+          Suite 250<br>
+          Honolulu, HI 96822<br>
+          <a href='mailto:W-HFO.webmaster@noaa.gov'>W-HFO.webmaster@noaa.gov</a>
+      </p>
+    </div>
+
+    <div class="footer-legal-column2">
+      <p>
+        <a href="http://www.weather.gov/disclaimer">Disclaimer</a><br>
+        <a href="http://www.cio.noaa.gov/Policy_Programs/info_quality.html">Information Quality</a><br>
+        <a href="http://www.weather.gov/help">Help</a><br>
+        <a href="http://www.weather.gov/glossary">Glossary</a>
+      </p>
+    </div>
+
+    <div class="footer-legal-column3">
+      <p>
+        <a href="http://www.weather.gov/privacy">Privacy Policy</a><br>
+        <a href="http://www.rdc.noaa.gov/~foia">Freedom of Information Act (FOIA)</a><br>
+        <a href="http://www.weather.gov/about">About Us</a><br>
+        <a href="http://www.weather.gov/careers">Career Opportunities</a>
+      </p>
+    </div>
+  </div>
+</div><!-- end of <div class="footer-legal"> -->
+      </div><!-- End of content div -->
+    </div><!-- End of center div -->
+    <div id="wrap"> </div>
+    <script async src="/assets/js/uswds.min.js"></script>
+  </body>
+</html>
+
+  
+
+

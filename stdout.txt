@@ -1,0 +1,15 @@
+50455 fiona_index.html
+35611 gis_fc.html
+254732 gis_wsp.html
+19426307 fc_archive_dir.html
+166 al07_files.txt
+945 wsp_files.txt
+aal072022.dat.gz
+bal072022.dat.gz
+-rw-r--r-- 1 runner runner 5915936 Oct 13 14:40 tcr.pdf
+tcr.pdf: PDF document, version 1.7, 60 page(s)
+24384 pub_001.html
+26546 pub_005.html
+28347 pub_010.html
+exit code 0
+25M	out

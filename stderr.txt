@@ -1,0 +1,31 @@
++ cd /home/runner/work/garita/garita/out
++ UA='landfall-exercise (github.com/webgpu-demos)'
++ curl -sSL -A 'landfall-exercise (github.com/webgpu-demos)' https://www.nhc.noaa.gov/archive/2022/FIONA.shtml -o fiona_index.html
++ wc -c fiona_index.html
++ curl -sSL -A 'landfall-exercise (github.com/webgpu-demos)' 'https://www.nhc.noaa.gov/gis/archive_forecast_results.php?id=al07&year=2022&name=Hurricane%20FIONA' -o gis_fc.html
++ wc -c gis_fc.html
++ curl -sSL -A 'landfall-exercise (github.com/webgpu-demos)' 'https://www.nhc.noaa.gov/gis/archive_wsp.php?year=2022' -o gis_wsp.html
++ wc -c gis_wsp.html
++ curl -sSL -A 'landfall-exercise (github.com/webgpu-demos)' https://www.nhc.noaa.gov/gis/forecast/archive/ -o fc_archive_dir.html
++ wc -c fc_archive_dir.html
++ grep -o 'al072022[^"<> ]*' fc_archive_dir.html
++ sort -u
++ wc -l al07_files.txt
++ grep -o '202209[0-9]*_wsp[^"<> ]*' fc_archive_dir.html
++ sort -u
++ wc -l wsp_files.txt
++ curl -sSL -A 'landfall-exercise (github.com/webgpu-demos)' https://ftp.nhc.noaa.gov/atcf/archive/2022/ -o atcf_dir.html
++ grep -o '[ab]al072022[^"<> ]*' atcf_dir.html
++ sort -u
++ curl -sSL -A 'landfall-exercise (github.com/webgpu-demos)' https://www.nhc.noaa.gov/data/tcr/AL072022_Fiona.pdf -o tcr.pdf
++ ls -la tcr.pdf
++ file tcr.pdf
++ for a in 001 005 010
++ curl -sSL -A 'landfall-exercise (github.com/webgpu-demos)' https://www.nhc.noaa.gov/archive/2022/al07/al072022.public.001.shtml -o pub_001.html
++ wc -c pub_001.html
++ for a in 001 005 010
++ curl -sSL -A 'landfall-exercise (github.com/webgpu-demos)' https://www.nhc.noaa.gov/archive/2022/al07/al072022.public.005.shtml -o pub_005.html
++ wc -c pub_005.html
++ for a in 001 005 010
++ curl -sSL -A 'landfall-exercise (github.com/webgpu-demos)' https://www.nhc.noaa.gov/archive/2022/al07/al072022.public.010.shtml -o pub_010.html
++ wc -c pub_010.html
