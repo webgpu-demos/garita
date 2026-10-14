@@ -98,6 +98,14 @@ const q = (u, extra) => base + (base.includes('?') ? '&' : '?') + 'post=basic&sc
   check('closes at the end', await gone(p));
   await p.context().close();
 }
+// 7. the file cannot load (404): the overlay must not stay over the app
+{
+  const p = await page();
+  await p.route('**/media/*.mp4', (r) => r.fulfill({ status: 404, contentType: 'text/html', body: 'not found' }));
+  await p.goto(q('', 'intro=1'), { waitUntil: 'domcontentloaded' });
+  check('missing file: closes by itself', await gone(p));
+  await p.context().close();
+}
 // 6. a real first visit (the automation flag masked): plays by itself once, remembered; a deep link never plays it
 {
   const ctx = await browser.newContext({ viewport: { width: 1600, height: 900 } });
