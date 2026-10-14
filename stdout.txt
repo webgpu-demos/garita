@@ -1,0 +1,35 @@
+HTTP/2 200 
+content-type: video/mp4
+cache-control: max-age=600
+accept-ranges: bytes
+content-length: 42714712
+range: 206 1000
+HTTP/2 200 
+content-type: image/jpeg
+/usr/bin/google-chrome
+Google Chrome 154.0.8037.97 
+PASS opens and plays {"open":true,"t":4.37,"paused":false,"muted":true,"ready":4,"src":"garita-intro-20261012-1080.mp4","err":null,"skipDraw":true,"sound":"Sound on","big":false,"focus":"intro-skip"}
+PASS muted autoplay when sound is refused muted=true
+PASS skips drawing the hidden scene 
+PASS Skip button has focus intro-skip
+PASS Sound on unmutes {"open":true,"t":5.62,"paused":false,"muted":false,"ready":4,"src":"garita-intro-20261012-1080.mp4","err":null,"skipDraw":true,"sound":"Mute","big":false,"focus":"intro-btn intro-sound"}
+PASS k pauses 
+PASS space resumes 
+PASS arrow seeks forward 5.93 -> 10.93
+PASS Escape closes and the scene draws again {"open":false,"skipDraw":false}
+PASS no console errors from the intro Failed to load resource: the server responded with a status of 400 () | Failed to load resource: the server responded with a status of 400 () | Failed to load resource: the server responded with a status of 400 () | Failed to load resource: the server responded with a status of 400 () | Failed to lo
+PASS not shown to an automated browser without ?intro=1 
+PASS ?intro=1 wins over a deep link 
+PASS Skip intro closes 
+PASS reduced motion: paused with Play button {"open":true,"t":0,"paused":true,"muted":false,"ready":4,"src":"garita-intro-20261012-720.mp4","err":null,"skipDraw":true,"sound":"Mute","big":true,"focus":"intro-skip"}
+PASS Play button plays with sound {"open":true,"t":2.34,"paused":false,"muted":false,"ready":4,"src":"garita-intro-20261012-720.mp4","err":null,"skipDraw":true,"sound":"Mute","big":false,"focus":"intro-skip"}
+PASS About: Watch the intro plays with sound {"open":true,"t":2.43,"paused":false,"muted":false,"ready":4,"src":"garita-intro-20261012-1080.mp4","err":null,"skipDraw":true,"sound":"Mute","big":false,"focus":"intro-skip"}
+PASS closes at the end 
+PASS missing file: closes by itself 
+PASS first plain visit: plays by itself {"open":true,"t":21.57,"paused":false,"muted":true,"ready":2,"src":"garita-intro-20261012-1080.mp4","err":null,"skipDraw":true,"sound":"Sound on","big":false,"focus":"intro-skip"}
+PASS second visit: not again 
+PASS About did not pop up instead 
+PASS first visit by a deep link: not shown 
+22 / 22 passed
+exit code 0
+1016K	out

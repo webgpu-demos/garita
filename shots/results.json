@@ -1,0 +1,112 @@
+[
+ {
+  "name": "opens and plays",
+  "ok": true,
+  "extra": "{\"open\":true,\"t\":4.37,\"paused\":false,\"muted\":true,\"ready\":4,\"src\":\"garita-intro-20261012-1080.mp4\",\"err\":null,\"skipDraw\":true,\"sound\":\"Sound on\",\"big\":false,\"focus\":\"intro-skip\"}"
+ },
+ {
+  "name": "muted autoplay when sound is refused",
+  "ok": true,
+  "extra": "muted=true"
+ },
+ {
+  "name": "skips drawing the hidden scene",
+  "ok": true,
+  "extra": ""
+ },
+ {
+  "name": "Skip button has focus",
+  "ok": true,
+  "extra": "intro-skip"
+ },
+ {
+  "name": "Sound on unmutes",
+  "ok": true,
+  "extra": "{\"open\":true,\"t\":5.62,\"paused\":false,\"muted\":false,\"ready\":4,\"src\":\"garita-intro-20261012-1080.mp4\",\"err\":null,\"skipDraw\":true,\"sound\":\"Mute\",\"big\":false,\"focus\":\"intro-btn intro-sound\"}"
+ },
+ {
+  "name": "k pauses",
+  "ok": true,
+  "extra": ""
+ },
+ {
+  "name": "space resumes",
+  "ok": true,
+  "extra": ""
+ },
+ {
+  "name": "arrow seeks forward",
+  "ok": true,
+  "extra": "5.93 -> 10.93"
+ },
+ {
+  "name": "Escape closes and the scene draws again",
+  "ok": true,
+  "extra": "{\"open\":false,\"skipDraw\":false}"
+ },
+ {
+  "name": "no console errors from the intro",
+  "ok": true,
+  "extra": "Failed to load resource: the server responded with a status of 400 () | Failed to load resource: the server responded with a status of 400 () | Failed to load resource: the server responded with a status of 400 () | Failed to load resource: the server responded with a status of 400 () | Failed to lo"
+ },
+ {
+  "name": "not shown to an automated browser without ?intro=1",
+  "ok": true,
+  "extra": ""
+ },
+ {
+  "name": "?intro=1 wins over a deep link",
+  "ok": true,
+  "extra": ""
+ },
+ {
+  "name": "Skip intro closes",
+  "ok": true,
+  "extra": ""
+ },
+ {
+  "name": "reduced motion: paused with Play button",
+  "ok": true,
+  "extra": "{\"open\":true,\"t\":0,\"paused\":true,\"muted\":false,\"ready\":4,\"src\":\"garita-intro-20261012-720.mp4\",\"err\":null,\"skipDraw\":true,\"sound\":\"Mute\",\"big\":true,\"focus\":\"intro-skip\"}"
+ },
+ {
+  "name": "Play button plays with sound",
+  "ok": true,
+  "extra": "{\"open\":true,\"t\":2.34,\"paused\":false,\"muted\":false,\"ready\":4,\"src\":\"garita-intro-20261012-720.mp4\",\"err\":null,\"skipDraw\":true,\"sound\":\"Mute\",\"big\":false,\"focus\":\"intro-skip\"}"
+ },
+ {
+  "name": "About: Watch the intro plays with sound",
+  "ok": true,
+  "extra": "{\"open\":true,\"t\":2.43,\"paused\":false,\"muted\":false,\"ready\":4,\"src\":\"garita-intro-20261012-1080.mp4\",\"err\":null,\"skipDraw\":true,\"sound\":\"Mute\",\"big\":false,\"focus\":\"intro-skip\"}"
+ },
+ {
+  "name": "closes at the end",
+  "ok": true,
+  "extra": ""
+ },
+ {
+  "name": "missing file: closes by itself",
+  "ok": true,
+  "extra": ""
+ },
+ {
+  "name": "first plain visit: plays by itself",
+  "ok": true,
+  "extra": "{\"open\":true,\"t\":21.57,\"paused\":false,\"muted\":true,\"ready\":2,\"src\":\"garita-intro-20261012-1080.mp4\",\"err\":null,\"skipDraw\":true,\"sound\":\"Sound on\",\"big\":false,\"focus\":\"intro-skip\"}"
+ },
+ {
+  "name": "second visit: not again",
+  "ok": true,
+  "extra": ""
+ },
+ {
+  "name": "About did not pop up instead",
+  "ok": true,
+  "extra": ""
+ },
+ {
+  "name": "first visit by a deep link: not shown",
+  "ok": true,
+  "extra": ""
+ }
+]
