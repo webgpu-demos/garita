@@ -111,7 +111,13 @@ npm test                              # store and feed mappers, on recorded real
 ```
 
 URL flags: `?cam=lon,lat,range,heading,pitch` · `?t=<ISO time>` · `?sea=<metres>` · `?overlay=radar|goes|nfhl|slr|choropleth|elevation`
-· `?q=low|medium|high` · `?lang=es` · `?ui=0` · `?fixtures=1` (recorded feeds, no network) · `?post=basic` (analytic sky).
+· `?q=low|medium|high` · `?lang=es` · `?ui=0` · `?fixtures=1` (recorded feeds, no network) · `?post=basic` (analytic sky)
+· `?intro=1|0` (force or turn off the intro video).
+
+The intro: the narrated walkthrough (`docs/video/`) plays over the app on a browser's first plain visit, muted with
+captions unless the browser allows sound, with Skip intro (or Esc); it is not shown for shared deep links or automated
+renders, and About has Watch the intro. The files are on `gh-pages` under `media/` (`tools/publish-intro.sh`);
+`src/ui/intro.ts` names the version.
 
 Controls: drag pans; right-drag or Ctrl-drag rotates and tilts; the wheel zooms to the cursor; double-click
 flies; ⌘K or `/` searches; click anything to open it.

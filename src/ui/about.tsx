@@ -5,6 +5,7 @@ import * as S from '../core/state';
 import { tr } from '../i18n/index';
 import { Icon, GaritaMark } from './icons';
 import { aboutOpen } from './uistate';
+import { introShownThisLoad, openIntro } from './intro';
 
 const KEY = 'garita.about.seen.v1';
 export function maybeShowAboutOnce() {
@@ -12,6 +13,7 @@ export function maybeShowAboutOnce() {
     if ((navigator as any).webdriver || /[?&](shot|about)=/.test(location.search)) return;
     if (localStorage.getItem(KEY)) return;
     localStorage.setItem(KEY, String(Date.now()));
+    if (introShownThisLoad) return;      // the intro video already introduced the twin on this first visit
     aboutOpen.value = true;
   } catch { /* storage blocked: stay quiet rather than nag on every load */ }
 }
@@ -75,6 +77,7 @@ export function AboutSheet() {
           <p class="muted">{tr('Heavy on older machines? Switch quality to Low (top right).', '¿Va lento en equipos viejos? Cambia la calidad a Baja (arriba a la derecha).')}</p>
         </div>
         <footer class="about-foot">
+          <button class="btn" onClick={() => { close(); openIntro(); }}><Icon name="play" size={12} />{tr('Watch the intro', 'Ver la introducción')} <span class="num muted">3:22</span></button>
           <a href="https://github.com/webgpu-demos/garita" target="_blank" rel="noopener noreferrer"><Icon name="external" size={12} />github.com/webgpu-demos/garita</a>
           <button class="link-btn" onClick={() => { S.rightPanel.value = 'lineage'; close(); }}>{tr('Where every number comes from', 'De dónde sale cada número')}</button>
           <button class="btn primary" onClick={close}>{tr('Explore the island', 'Explorar la isla')}</button>
