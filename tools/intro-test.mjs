@@ -98,6 +98,27 @@ const q = (u, extra) => base + (base.includes('?') ? '&' : '?') + 'post=basic&sc
   check('closes at the end', await gone(p));
   await p.context().close();
 }
+// 6. a real first visit (the automation flag masked): plays by itself once, remembered; a deep link never plays it
+{
+  const ctx = await browser.newContext({ viewport: { width: 1600, height: 900 } });
+  await ctx.addInitScript(() => Object.defineProperty(Navigator.prototype, 'webdriver', { get: () => false }));
+  if (webm) await ctx.route('**/media/*.mp4', (r) => r.fulfill({ status: 200, contentType: 'video/webm', body: fs.readFileSync(webm) }));
+  const p = await ctx.newPage();
+  await p.goto(base, { waitUntil: 'domcontentloaded' }); await wait(6000);
+  let s = await st(p); check('first plain visit: plays by itself', s.open && !s.paused && s.t > 0.5, JSON.stringify(s));
+  await p.screenshot({ path: `${out}/7-first-visit.jpg`, type: 'jpeg', quality: 80 });
+  await p.reload({ waitUntil: 'domcontentloaded' }); await wait(4000);
+  check('second visit: not again', !(await st(p)).open);
+  const about = await p.evaluate(() => !!document.querySelector('.about'));
+  check('About did not pop up instead', !about);
+  await ctx.close();
+  const ctx2 = await browser.newContext({ viewport: { width: 1600, height: 900 } });
+  await ctx2.addInitScript(() => Object.defineProperty(Navigator.prototype, 'webdriver', { get: () => false }));
+  const p2 = await ctx2.newPage();
+  await p2.goto(base + '?select=municipio:72127', { waitUntil: 'domcontentloaded' }); await wait(4000);
+  check('first visit by a deep link: not shown', !(await st(p2)).open);
+  await ctx2.close();
+}
 fs.writeFileSync(`${out}/results.json`, JSON.stringify(results, null, 1));
 console.log(results.filter((r) => r.ok).length, '/', results.length, 'passed');
 await browser.close();
