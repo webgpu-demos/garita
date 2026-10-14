@@ -1,0 +1,33 @@
+HTTP/2 404 
+content-type: text/html; charset=utf-8
+accept-ranges: bytes
+content-length: 9379
+range: 404 9379
+HTTP/2 404 
+content-type: text/html; charset=utf-8
+/usr/bin/google-chrome
+Google Chrome 154.0.8037.97 
+FAIL opens and plays {"open":true,"t":0,"paused":false,"muted":true,"ready":0,"src":"garita-intro-20261012-1080.mp4","err":null,"skipDraw":true,"sound":"Sound on","big":false,"focus":"intro-skip"}
+PASS muted autoplay when sound is refused muted=true
+PASS skips drawing the hidden scene 
+PASS Skip button has focus intro-skip
+PASS Sound on unmutes {"open":true,"t":0,"paused":false,"muted":false,"ready":0,"src":"garita-intro-20261012-1080.mp4","err":null,"skipDraw":true,"sound":"Mute","big":false,"focus":"intro-btn intro-sound"}
+PASS k pauses 
+PASS space resumes 
+FAIL arrow seeks forward 0 -> 0
+PASS Escape closes and the scene draws again {"open":false,"skipDraw":false}
+PASS no console errors from the intro Failed to load resource: the server responded with a status of 400 () | Failed to load resource: the server responded with a status of 400 () | Failed to load resource: the server responded with a status of 400 () | Failed to load resource: the server responded with a status of 400 () | Failed to lo
+PASS not shown to an automated browser without ?intro=1 
+PASS ?intro=1 wins over a deep link 
+PASS Skip intro closes 
+PASS reduced motion: paused with Play button {"open":true,"t":0,"paused":true,"muted":false,"ready":4,"src":"garita-intro-20261012-720.mp4","err":null,"skipDraw":true,"sound":"Mute","big":true,"focus":"intro-skip"}
+PASS Play button plays with sound {"open":true,"t":2.3,"paused":false,"muted":false,"ready":4,"src":"garita-intro-20261012-720.mp4","err":null,"skipDraw":true,"sound":"Mute","big":false,"focus":"intro-skip"}
+PASS About: Watch the intro plays with sound {"open":true,"t":2.44,"paused":false,"muted":false,"ready":4,"src":"garita-intro-20261012-1080.mp4","err":null,"skipDraw":true,"sound":"Mute","big":false,"focus":"intro-skip"}
+PASS closes at the end 
+PASS first plain visit: plays by itself {"open":true,"t":1.17,"paused":false,"muted":true,"ready":4,"src":"garita-intro-20261012-1080.mp4","err":null,"skipDraw":true,"sound":"Sound on","big":false,"focus":"intro-skip"}
+PASS second visit: not again 
+PASS About did not pop up instead 
+PASS first visit by a deep link: not shown 
+19 / 21 passed
+exit code 0
+1020K	out
