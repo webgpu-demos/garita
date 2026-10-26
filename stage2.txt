@@ -1,0 +1,60 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   283  100   283    0     0    410      0 --:--:-- --:--:-- --:--:--   410
+  0 70.7M    0 93709    0     0  80700      0  0:15:19  0:00:01  0:15:18 80700  2 70.7M    2 1923k    0     0   892k      0  0:01:21  0:00:02  0:01:19 1839k 15 70.7M   15 11.0M    0     0  3514k      0  0:00:20  0:00:03  0:00:17 5445k 32 70.7M   32 23.2M    0     0  5729k      0  0:00:12  0:00:04  0:00:08 7918k 49 70.7M   49 35.2M    0     0  6993k      0  0:00:10  0:00:05  0:00:05 9003k 66 70.7M   66 46.9M    0     0  7808k      0  0:00:09  0:00:06  0:00:03 9603k 81 70.7M   81 57.8M    0     0  8281k      0  0:00:08  0:00:07  0:00:01 11.2M 98 70.7M   98 69.4M    0     0  8715k      0  0:00:08  0:00:08 --:--:-- 11.8M100 70.7M  100 70.7M    0     0  8741k      0  0:00:08  0:00:08 --:--:-- 11.4M
+-rw-r--r-- 1 runner runner 74179565 Oct 26 14:57 /home/runner/work/garita/garita/g/work/cache/puerto-rico-latest.osm.pbf
+Last-Modified: Sun, 25 Oct 2026 23:30:28 GMT
+ETag: "46be3ed-65eb29945539b"
+Content-Length: 74179565
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+osmium version 1.16.0
+File:
+  Name: /home/runner/work/garita/garita/g/work/cache/puerto-rico-latest.osm.pbf
+  Format: PBF
+  Compression: none
+  Size: 74179565
+Header:
+  Bounding boxes:
+    (-68.310244,17.515728,-65.092622,18.81272)
+  With history: no
+  Options:
+    generator=osmium/1.16.0
+    osmosis_replication_base_url=https://download.geofabrik.de/north-america/us/puerto-rico-updates
+    osmosis_replication_sequence_number=3289
+    osmosis_replication_timestamp=2026-10-25T21:21:21Z
+    pbf_dense_nodes=true
+    pbf_optional_feature_0=Sort.Type_then_ID
+    sorting=Type_then_ID
+    timestamp=2026-10-25T21:21:21Z
+  1500760 /home/runner/work/garita/garita/g/work/osm/buildings.geojsonl
+     1135 /home/runner/work/garita/garita/g/work/osm/coast.geojsonl
+     5687 /home/runner/work/garita/garita/g/work/osm/facilities.geojsonl
+  1507582 total
+total 551196
+-rw-r--r-- 1 runner runner        91 Oct 26 14:57 all.json
+-rw-r--r-- 1 runner runner        92 Oct 26 14:57 areas.json
+-rw-r--r-- 1 runner runner         0 Oct 26 14:57 buildings.err
+-rw-r--r-- 1 runner runner 508656768 Oct 26 14:57 buildings.geojsonl
+-rw-r--r-- 1 runner runner  50165574 Oct 26 14:57 buildings.osm.pbf
+-rw-r--r-- 1 runner runner         0 Oct 26 14:57 coast.err
+-rw-r--r-- 1 runner runner   1774540 Oct 26 14:57 coast.geojsonl
+-rw-r--r-- 1 runner runner    388408 Oct 26 14:57 coast.osm.pbf
+-rw-r--r-- 1 runner runner         0 Oct 26 14:57 facilities.err
+-rw-r--r-- 1 runner runner   3079016 Oct 26 14:57 facilities.geojsonl
+-rw-r--r-- 1 runner runner    328888 Oct 26 14:57 facilities.osm.pbf
+-rw-r--r-- 1 runner runner       598 Oct 26 14:57 fileinfo.txt
+-rw-r--r-- 1 runner runner        92 Oct 26 14:57 lines.json
+-rw-r--r-- 1 runner runner        21 Oct 26 14:57 pbf_timestamp.txt
+{"type":"Feature","id":"a41771464","geometry":{"type":"MultiPolygon","coordinates":[[[[-66.0445718,18.402646],[-66.0445454,18.402325],[-66.0445363,18.4022138],[-66.0445281,18.4021147],[-66.043692,18.4021822],[-66.0437361,18.4027132],[-66.0445718,18.402646]]]]},"properties":{"@type":"way","@id":20885732,"access":"yes","addr:postcode":"00925","amenity":"parking","building":"yes","fee":"yes","name":"Multipisos UPRRP","operator":"UPR Parking System","parking":"multi-storey"}}
+{"type":"Feature","id":"a41774008","geometry":{"type":"MultiPolygon","coordinates":[[[[-66.0463973,18.4021623],[-66.0460674
+{"type":"Feature","id":"a41771464","geometry":{"type":"MultiPolygon","coordinates":[[[[-66.0445718,18.402646],[-66.0445454,18.402325],[-66.0445363,18.4022138],[-66.0445281,18.4021147],[-66.043692,18.4021822],[-66.0437361,18.4027132],[-66.0445718,18.402646]]]]},"properties":{"@type":"way","@id":20885732,"access":"yes","addr:postcode":"00925","amenity":"parking","building":"yes","fee":"yes","name":"
+{"type":"Feature","id":"n238054139","geometry":{"type":"Point","coordinates":[-66.0473769,18.2401997]},"properties":{"@type":"node","@id":238054139,"addr:full":"Urb. Valle Tolima Calle Milagros Carrillo, Blq. Q","addr:postcode":"00726","amenity":"school","contact:fax":"+1-787-7453120","contact:phone":"+1-787-7464262","isced:level":"1","name":"Escuela Pepita Arenas","operator":"Departamento de Educ

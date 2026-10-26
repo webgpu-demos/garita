@@ -1,0 +1,1475 @@
+{
+ "generated": "2026-10-26T14:59:20.663Z",
+ "flood_attached": false,
+ "ids": {
+  "osm": 1500646,
+  "osm_with_ref": 1500646,
+  "osm_with_gers": 1500287,
+  "mapping_rows": 1500399,
+  "added_with_gers": 236516,
+  "overture_release": "2026-10-21.0"
+ },
+ "heights": {
+  "source": {
+   "name": "FEMA / ORNL USA Structures (public domain)",
+   "release": "Deliverable20250606PR",
+   "url": "https://fema-femadata.s3.amazonaws.com/Partners/ORNL/USA_Structures/Puerto%20Rico/Deliverable20250606PR.zip",
+   "structures": 1194236,
+   "with_height": 234162,
+   "fetched": "2026-10-26T14:58:28Z"
+  },
+  "footprints": 234162,
+  "filled_osm": 111432,
+  "filled_added": 5293,
+  "before": 206489,
+  "after": 323214
+ },
+ "buildings": {
+  "total": 1737162,
+  "buildings_osm": 1500646,
+  "buildings_added": 236516,
+  "osm_features_read": 1500760,
+  "dropped_degenerate": 29,
+  "multipolygon": 43,
+  "rings_simplified_over_64": 281,
+  "vertices": 9482781,
+  "height_from_height_tag": 203050,
+  "height_from_levels": 3439,
+  "height_unknown": 1294157,
+  "share_with_height": 0.1189,
+  "by_kind": {
+   "0": 1678924,
+   "1": 1740,
+   "2": 3207,
+   "3": 1030,
+   "4": 2045,
+   "5": 614,
+   "6": 49602
+  },
+  "top_building_tags": [
+   [
+    "yes",
+    1427322
+   ],
+   [
+    "house",
+    50131
+   ],
+   [
+    "detached",
+    10169
+   ],
+   [
+    "residential",
+    2934
+   ],
+   [
+    "apartments",
+    1737
+   ],
+   [
+    "roof",
+    1723
+   ],
+   [
+    "commercial",
+    1024
+   ],
+   [
+    "school",
+    933
+   ],
+   [
+    "industrial",
+    894
+   ],
+   [
+    "construction",
+    747
+   ],
+   [
+    "shed",
+    611
+   ],
+   [
+    "grandstand",
+    404
+   ],
+   [
+    "retail",
+    294
+   ],
+   [
+    "church",
+    177
+   ],
+   [
+    "garage",
+    169
+   ],
+   [
+    "university",
+    162
+   ],
+   [
+    "greenhouse",
+    146
+   ],
+   [
+    "hospital",
+    135
+   ],
+   [
+    "ruins",
+    84
+   ],
+   [
+    "stadium",
+    65
+   ],
+   [
+    "barn",
+    65
+   ],
+   [
+    "warehouse",
+    54
+   ],
+   [
+    "hotel",
+    49
+   ],
+   [
+    "service",
+    43
+   ],
+   [
+    "hangar",
+    43
+   ]
+  ],
+  "outside_municipios": 37
+ },
+ "added": {
+  "source": {
+   "name": "Overture Maps Foundation, buildings theme: features whose origin is not OpenStreetMap (footprints detected from imagery by machine learning)",
+   "release": "2026-10-21.0",
+   "datasets": [
+    {
+     "dataset": "Google Open Buildings",
+     "family": "Google",
+     "licence": "CC BY 4.0",
+     "licence_field_in_data": null,
+     "attribution": "Google Open Buildings. Available under CC BY 4.0. Via Overture Maps Foundation.",
+     "version": "2024-04-16",
+     "observed": "2023-05-01T00:00:00.000Z",
+     "candidates": 536571,
+     "added": 154518,
+     "confidence": {
+      "features_with_value": 536571,
+      "min": 0.65,
+      "max": 0.9791
+     },
+     "with_height": 0
+    },
+    {
+     "dataset": "Microsoft ML Buildings",
+     "family": "Microsoft",
+     "licence": "ODbL 1.0",
+     "licence_field_in_data": "ODbL-1.0",
+     "attribution": "Global ML Building Footprints. Licensed by Microsoft under the Open Database License. Via Overture Maps Foundation.",
+     "version": "2026-08-11",
+     "observed": null,
+     "candidates": 120393,
+     "added": 81998,
+     "confidence": {
+      "features_with_value": 928,
+      "min": 0.7279000282287598,
+      "max": 1
+     },
+     "with_height": 0
+    }
+   ],
+   "overture_osm_snapshot": "2026-09-07T18:26:30.000Z"
+  },
+  "rule": "OpenStreetMap is the base: every building of our own OSM extract is kept unchanged. An Overture building is added only if none of its sources is OpenStreetMap and (1) it does not overlap our OSM extract or an addition already accepted: dropped if its centroid is inside an OSM footprint, an OSM centroid is inside it, or the outlines intersect at all (outer rings); (2) it is plausible: at least 25 m2, confidence at least 0.7 where the source gives one, not above 5000 m2 unless its confidence is at least 0.8, and at least 4 m wide (short side of its smallest enclosing rectangle; containers, trailers and vehicles are narrower); (3) its centroid is on land inside a municipio; (4) it is not a small footprint (under 60 m2) whose outline comes within 1.5 m of an OSM footprint (taken as part of the mapped building). Tests run in that order and a candidate is counted under the first one it fails. Added records have bit 7 (0x80) of kind set; kind is house under 400 m2, otherwise other; height is the source's own or 0.",
+  "thresholds": {
+   "min_area_m2": 25,
+   "min_confidence": 0.7,
+   "large_area_m2": 5000,
+   "large_min_confidence": 0.8,
+   "min_width_m": 4,
+   "near_m": 1.5,
+   "near_max_area_m2": 60
+  },
+  "island": {
+   "buildings": 1737162,
+   "buildings_osm": 1500646,
+   "buildings_added": 236516,
+   "added_share": 0.1362
+  },
+  "candidates": 656964,
+  "candidates_by_dataset": {
+   "Microsoft ML Buildings": 120393,
+   "Google Open Buildings": 536571
+  },
+  "degenerate": 0,
+  "dropped_overlap": {
+   "centroid_inside_osm": 360,
+   "osm_centroid_inside": 25,
+   "outlines_intersect_osm": 46,
+   "overlaps_accepted_addition": 11894
+  },
+  "dropped_overlap_total": 12325,
+  "dropped_implausible": {
+   "tiny": 279894,
+   "low_confidence": 47766,
+   "large_without_confidence": 10,
+   "narrow": 41099
+  },
+  "dropped_implausible_total": 368769,
+  "dropped_low_confidence_by_dataset": {
+   "Google Open Buildings": 47766
+  },
+  "dropped_not_on_land": 10,
+  "land_test_applied": true,
+  "dropped_attached_to_osm": 39344,
+  "width_hist_m": {
+   "note": "Candidates that passed the overlap, area, confidence and size tests, by the short side of their smallest enclosing rectangle (m). Those under min_width_m are dropped as narrow.",
+   "counts": {
+    "<6": 63934,
+    ">=8": 74175,
+    "<8": 74399,
+    "<5": 63362,
+    "<4": 20372,
+    "<3.5": 12292,
+    "<3": 8429,
+    "<2": 6
+   }
+  },
+  "distance_to_osm_hist": {
+   "note": "Candidates that passed tests 1 to 3, by footprint area (m2) and distance from their outline to the nearest OSM outline (m, looked for up to 5 m). Rule 4 drops the cells with area under near_max_area_m2 and distance under near_m.",
+   "counts": {
+    "area<60": {
+     ">=5": 30004,
+     "<2": 4060,
+     "<5": 8373,
+     "<1.5": 4999,
+     "<0.5": 7043,
+     "<1": 5825,
+     "<3": 6300
+    },
+    "area<100": {
+     "<3": 5173,
+     ">=5": 33165,
+     "<5": 7144,
+     "<1.5": 3834,
+     "<0.5": 5373,
+     "<2": 3220,
+     "<1": 4567
+    },
+    "area<40": {
+     ">=5": 35336,
+     "<1": 7066,
+     "<0.5": 8342,
+     "<5": 11227,
+     "<1.5": 6069,
+     "<3": 8233,
+     "<2": 5069
+    },
+    "area>=100": {
+     ">=5": 43805,
+     "<3": 3977,
+     "<1.5": 2664,
+     "<5": 5934,
+     "<1": 3108,
+     "<2": 2310,
+     "<0.5": 3640
+    }
+   }
+  },
+  "not_overlapping_area_hist_m2": {
+   "Microsoft ML Buildings": {
+    "<25": 11590,
+    "<60": 23747,
+    "<100": 23002,
+    "<40": 18220,
+    "<30": 11265,
+    "<200": 17043,
+    "<20": 8264,
+    "<1000": 818,
+    "<400": 3868,
+    "<15": 1781,
+    "<5000": 132,
+    ">=5000": 5
+   },
+   "Google Open Buildings": {
+    "<5000": 423,
+    "<1000": 2606,
+    "<400": 8527,
+    ">=5000": 27,
+    "<200": 34514,
+    "<40": 64459,
+    "<60": 64270,
+    "<100": 46414,
+    "<15": 103498,
+    "<20": 89306,
+    "<30": 45405,
+    "<25": 65455
+   }
+  },
+  "sensitivity": {
+   "note": "Approximate count of additions other thresholds would give: candidates clear of OSM and of the additions accepted in this run, by minimum area (m2) and minimum confidence (candidates without a confidence always pass it). Before the land test.",
+   "counts": {
+    "area>=15,conf>=0.65": 539360,
+    "area>=15,conf>=0.7": 445078,
+    "area>=15,conf>=0.75": 349668,
+    "area>=15,conf>=0.8": 258226,
+    "area>=20,conf>=0.65": 441790,
+    "area>=20,conf>=0.7": 375886,
+    "area>=20,conf>=0.75": 307931,
+    "area>=20,conf>=0.8": 239524,
+    "area>=25,conf>=0.65": 364745,
+    "area>=25,conf>=0.7": 316979,
+    "area>=25,conf>=0.75": 267241,
+    "area>=25,conf>=0.8": 216160,
+    "area>=30,conf>=0.65": 308075,
+    "area>=30,conf>=0.7": 272506,
+    "area>=30,conf>=0.75": 234764,
+    "area>=30,conf>=0.8": 195043,
+    "area>=40,conf>=0.65": 225396,
+    "area>=40,conf>=0.7": 204687,
+    "area>=40,conf>=0.75": 182366,
+    "area>=40,conf>=0.8": 158303
+   }
+  },
+  "added": 236516,
+  "added_by_dataset": {
+   "Microsoft ML Buildings": 81998,
+   "Google Open Buildings": 154518
+  },
+  "added_with_height": 0,
+  "added_confidence_hist": {
+   "none": 81446,
+   "1.00": 8,
+   "0.95": 1101,
+   "0.90": 14774,
+   "0.85": 45593,
+   "0.80": 38067,
+   "0.75": 28673,
+   "0.70": 26854
+  },
+  "added_by_kind": {
+   "0": 232638,
+   "6": 3878
+  },
+  "added_outside_municipios": 0,
+  "top10_added_share": [
+   {
+    "geoid": "72131",
+    "name": "San Sebastián",
+    "buildings": 27931,
+    "buildings_osm": 21148,
+    "buildings_added": 6783,
+    "added_share": 0.2428
+   },
+   {
+    "geoid": "72073",
+    "name": "Jayuya",
+    "buildings": 10022,
+    "buildings_osm": 7693,
+    "buildings_added": 2329,
+    "added_share": 0.2324
+   },
+   {
+    "geoid": "72025",
+    "name": "Caguas",
+    "buildings": 54632,
+    "buildings_osm": 42660,
+    "buildings_added": 11972,
+    "added_share": 0.2191
+   },
+   {
+    "geoid": "72099",
+    "name": "Moca",
+    "buildings": 23303,
+    "buildings_osm": 18303,
+    "buildings_added": 5000,
+    "added_share": 0.2146
+   },
+   {
+    "geoid": "72083",
+    "name": "Las Marías",
+    "buildings": 6750,
+    "buildings_osm": 5334,
+    "buildings_added": 1416,
+    "added_share": 0.2098
+   },
+   {
+    "geoid": "72003",
+    "name": "Aguada",
+    "buildings": 23051,
+    "buildings_osm": 18301,
+    "buildings_added": 4750,
+    "added_share": 0.2061
+   },
+   {
+    "geoid": "72041",
+    "name": "Cidra",
+    "buildings": 23299,
+    "buildings_osm": 18644,
+    "buildings_added": 4655,
+    "added_share": 0.1998
+   },
+   {
+    "geoid": "72007",
+    "name": "Aguas Buenas",
+    "buildings": 13531,
+    "buildings_osm": 10889,
+    "buildings_added": 2642,
+    "added_share": 0.1953
+   },
+   {
+    "geoid": "72117",
+    "name": "Rincón",
+    "buildings": 9409,
+    "buildings_osm": 7604,
+    "buildings_added": 1805,
+    "added_share": 0.1918
+   },
+   {
+    "geoid": "72115",
+    "name": "Quebradillas",
+    "buildings": 14962,
+    "buildings_osm": 12150,
+    "buildings_added": 2812,
+    "added_share": 0.1879
+   }
+  ],
+  "bottom10_added_share": [
+   {
+    "geoid": "72127",
+    "name": "San Juan",
+    "buildings": 111097,
+    "buildings_osm": 103778,
+    "buildings_added": 7319,
+    "added_share": 0.0659
+   },
+   {
+    "geoid": "72033",
+    "name": "Cataño",
+    "buildings": 9989,
+    "buildings_osm": 9238,
+    "buildings_added": 751,
+    "added_share": 0.0752
+   },
+   {
+    "geoid": "72031",
+    "name": "Carolina",
+    "buildings": 56583,
+    "buildings_osm": 51645,
+    "buildings_added": 4938,
+    "added_share": 0.0873
+   },
+   {
+    "geoid": "72021",
+    "name": "Bayamón",
+    "buildings": 73190,
+    "buildings_osm": 66762,
+    "buildings_added": 6428,
+    "added_share": 0.0878
+   },
+   {
+    "geoid": "72137",
+    "name": "Toa Baja",
+    "buildings": 34060,
+    "buildings_osm": 30978,
+    "buildings_added": 3082,
+    "added_share": 0.0905
+   },
+   {
+    "geoid": "72015",
+    "name": "Arroyo",
+    "buildings": 10398,
+    "buildings_osm": 9364,
+    "buildings_added": 1034,
+    "added_share": 0.0994
+   },
+   {
+    "geoid": "72053",
+    "name": "Fajardo",
+    "buildings": 18470,
+    "buildings_osm": 16624,
+    "buildings_added": 1846,
+    "added_share": 0.0999
+   },
+   {
+    "geoid": "72067",
+    "name": "Hormigueros",
+    "buildings": 8310,
+    "buildings_osm": 7449,
+    "buildings_added": 861,
+    "added_share": 0.1036
+   },
+   {
+    "geoid": "72097",
+    "name": "Mayagüez",
+    "buildings": 38352,
+    "buildings_osm": 34356,
+    "buildings_added": 3996,
+    "added_share": 0.1042
+   },
+   {
+    "geoid": "72113",
+    "name": "Ponce",
+    "buildings": 69392,
+    "buildings_osm": 62155,
+    "buildings_added": 7237,
+    "added_share": 0.1043
+   }
+  ],
+  "by_municipio": [
+   {
+    "geoid": "72131",
+    "name": "San Sebastián",
+    "buildings": 27931,
+    "buildings_osm": 21148,
+    "buildings_added": 6783,
+    "added_share": 0.2428
+   },
+   {
+    "geoid": "72073",
+    "name": "Jayuya",
+    "buildings": 10022,
+    "buildings_osm": 7693,
+    "buildings_added": 2329,
+    "added_share": 0.2324
+   },
+   {
+    "geoid": "72025",
+    "name": "Caguas",
+    "buildings": 54632,
+    "buildings_osm": 42660,
+    "buildings_added": 11972,
+    "added_share": 0.2191
+   },
+   {
+    "geoid": "72099",
+    "name": "Moca",
+    "buildings": 23303,
+    "buildings_osm": 18303,
+    "buildings_added": 5000,
+    "added_share": 0.2146
+   },
+   {
+    "geoid": "72083",
+    "name": "Las Marías",
+    "buildings": 6750,
+    "buildings_osm": 5334,
+    "buildings_added": 1416,
+    "added_share": 0.2098
+   },
+   {
+    "geoid": "72003",
+    "name": "Aguada",
+    "buildings": 23051,
+    "buildings_osm": 18301,
+    "buildings_added": 4750,
+    "added_share": 0.2061
+   },
+   {
+    "geoid": "72041",
+    "name": "Cidra",
+    "buildings": 23299,
+    "buildings_osm": 18644,
+    "buildings_added": 4655,
+    "added_share": 0.1998
+   },
+   {
+    "geoid": "72007",
+    "name": "Aguas Buenas",
+    "buildings": 13531,
+    "buildings_osm": 10889,
+    "buildings_added": 2642,
+    "added_share": 0.1953
+   },
+   {
+    "geoid": "72117",
+    "name": "Rincón",
+    "buildings": 9409,
+    "buildings_osm": 7604,
+    "buildings_added": 1805,
+    "added_share": 0.1918
+   },
+   {
+    "geoid": "72115",
+    "name": "Quebradillas",
+    "buildings": 14962,
+    "buildings_osm": 12150,
+    "buildings_added": 2812,
+    "added_share": 0.1879
+   },
+   {
+    "geoid": "72001",
+    "name": "Adjuntas",
+    "buildings": 12457,
+    "buildings_osm": 10223,
+    "buildings_added": 2234,
+    "added_share": 0.1793
+   },
+   {
+    "geoid": "72045",
+    "name": "Comerío",
+    "buildings": 10040,
+    "buildings_osm": 8244,
+    "buildings_added": 1796,
+    "added_share": 0.1789
+   },
+   {
+    "geoid": "72019",
+    "name": "Barranquitas",
+    "buildings": 15871,
+    "buildings_osm": 13047,
+    "buildings_added": 2824,
+    "added_share": 0.1779
+   },
+   {
+    "geoid": "72039",
+    "name": "Ciales",
+    "buildings": 11167,
+    "buildings_osm": 9194,
+    "buildings_added": 1973,
+    "added_share": 0.1767
+   },
+   {
+    "geoid": "72027",
+    "name": "Camuy",
+    "buildings": 21470,
+    "buildings_osm": 17737,
+    "buildings_added": 3733,
+    "added_share": 0.1739
+   },
+   {
+    "geoid": "72105",
+    "name": "Naranjito",
+    "buildings": 14771,
+    "buildings_osm": 12213,
+    "buildings_added": 2558,
+    "added_share": 0.1732
+   },
+   {
+    "geoid": "72071",
+    "name": "Isabela",
+    "buildings": 29278,
+    "buildings_osm": 24310,
+    "buildings_added": 4968,
+    "added_share": 0.1697
+   },
+   {
+    "geoid": "72149",
+    "name": "Villalba",
+    "buildings": 12530,
+    "buildings_osm": 10411,
+    "buildings_added": 2119,
+    "added_share": 0.1691
+   },
+   {
+    "geoid": "72047",
+    "name": "Corozal",
+    "buildings": 18142,
+    "buildings_osm": 15085,
+    "buildings_added": 3057,
+    "added_share": 0.1685
+   },
+   {
+    "geoid": "72081",
+    "name": "Lares",
+    "buildings": 19077,
+    "buildings_osm": 15875,
+    "buildings_added": 3202,
+    "added_share": 0.1678
+   },
+   {
+    "geoid": "72093",
+    "name": "Maricao",
+    "buildings": 4141,
+    "buildings_osm": 3447,
+    "buildings_added": 694,
+    "added_share": 0.1676
+   },
+   {
+    "geoid": "72123",
+    "name": "Salinas",
+    "buildings": 20632,
+    "buildings_osm": 17220,
+    "buildings_added": 3412,
+    "added_share": 0.1654
+   },
+   {
+    "geoid": "72147",
+    "name": "Vieques",
+    "buildings": 7704,
+    "buildings_osm": 6449,
+    "buildings_added": 1255,
+    "added_share": 0.1629
+   },
+   {
+    "geoid": "72101",
+    "name": "Morovis",
+    "buildings": 16144,
+    "buildings_osm": 13539,
+    "buildings_added": 2605,
+    "added_share": 0.1614
+   },
+   {
+    "geoid": "72051",
+    "name": "Dorado",
+    "buildings": 19292,
+    "buildings_osm": 16183,
+    "buildings_added": 3109,
+    "added_share": 0.1612
+   },
+   {
+    "geoid": "72111",
+    "name": "Peñuelas",
+    "buildings": 13690,
+    "buildings_osm": 11529,
+    "buildings_added": 2161,
+    "added_share": 0.1579
+   },
+   {
+    "geoid": "72141",
+    "name": "Utuado",
+    "buildings": 21430,
+    "buildings_osm": 18078,
+    "buildings_added": 3352,
+    "added_share": 0.1564
+   },
+   {
+    "geoid": "72005",
+    "name": "Aguadilla",
+    "buildings": 32302,
+    "buildings_osm": 27338,
+    "buildings_added": 4964,
+    "added_share": 0.1537
+   },
+   {
+    "geoid": "72129",
+    "name": "San Lorenzo",
+    "buildings": 23354,
+    "buildings_osm": 19782,
+    "buildings_added": 3572,
+    "added_share": 0.153
+   },
+   {
+    "geoid": "72107",
+    "name": "Orocovis",
+    "buildings": 14604,
+    "buildings_osm": 12376,
+    "buildings_added": 2228,
+    "added_share": 0.1526
+   },
+   {
+    "geoid": "72065",
+    "name": "Hatillo",
+    "buildings": 24121,
+    "buildings_osm": 20467,
+    "buildings_added": 3654,
+    "added_share": 0.1515
+   },
+   {
+    "geoid": "72063",
+    "name": "Gurabo",
+    "buildings": 21460,
+    "buildings_osm": 18225,
+    "buildings_added": 3235,
+    "added_share": 0.1507
+   },
+   {
+    "geoid": "72079",
+    "name": "Lajas",
+    "buildings": 17141,
+    "buildings_osm": 14569,
+    "buildings_added": 2572,
+    "added_share": 0.15
+   },
+   {
+    "geoid": "72049",
+    "name": "Culebra",
+    "buildings": 2156,
+    "buildings_osm": 1836,
+    "buildings_added": 320,
+    "added_share": 0.1484
+   },
+   {
+    "geoid": "72085",
+    "name": "Las Piedras",
+    "buildings": 21072,
+    "buildings_osm": 17968,
+    "buildings_added": 3104,
+    "added_share": 0.1473
+   },
+   {
+    "geoid": "72089",
+    "name": "Luquillo",
+    "buildings": 10369,
+    "buildings_osm": 8847,
+    "buildings_added": 1522,
+    "added_share": 0.1468
+   },
+   {
+    "geoid": "72009",
+    "name": "Aibonito",
+    "buildings": 14949,
+    "buildings_osm": 12803,
+    "buildings_added": 2146,
+    "added_share": 0.1436
+   },
+   {
+    "geoid": "72013",
+    "name": "Arecibo",
+    "buildings": 54421,
+    "buildings_osm": 46619,
+    "buildings_added": 7802,
+    "added_share": 0.1434
+   },
+   {
+    "geoid": "72054",
+    "name": "Florida",
+    "buildings": 6345,
+    "buildings_osm": 5436,
+    "buildings_added": 909,
+    "added_share": 0.1433
+   },
+   {
+    "geoid": "72059",
+    "name": "Guayanilla",
+    "buildings": 11723,
+    "buildings_osm": 10052,
+    "buildings_added": 1671,
+    "added_share": 0.1425
+   },
+   {
+    "geoid": "72091",
+    "name": "Manatí",
+    "buildings": 21745,
+    "buildings_osm": 18700,
+    "buildings_added": 3045,
+    "added_share": 0.14
+   },
+   {
+    "geoid": "72151",
+    "name": "Yabucoa",
+    "buildings": 20844,
+    "buildings_osm": 17960,
+    "buildings_added": 2884,
+    "added_share": 0.1384
+   },
+   {
+    "geoid": "72133",
+    "name": "Santa Isabel",
+    "buildings": 12870,
+    "buildings_osm": 11115,
+    "buildings_added": 1755,
+    "added_share": 0.1364
+   },
+   {
+    "geoid": "72029",
+    "name": "Canóvanas",
+    "buildings": 21051,
+    "buildings_osm": 18205,
+    "buildings_added": 2846,
+    "added_share": 0.1352
+   },
+   {
+    "geoid": "72095",
+    "name": "Maunabo",
+    "buildings": 6581,
+    "buildings_osm": 5693,
+    "buildings_added": 888,
+    "added_share": 0.1349
+   },
+   {
+    "geoid": "72143",
+    "name": "Vega Alta",
+    "buildings": 18310,
+    "buildings_osm": 15852,
+    "buildings_added": 2458,
+    "added_share": 0.1342
+   },
+   {
+    "geoid": "72139",
+    "name": "Trujillo Alto",
+    "buildings": 26494,
+    "buildings_osm": 22944,
+    "buildings_added": 3550,
+    "added_share": 0.134
+   },
+   {
+    "geoid": "72043",
+    "name": "Coamo",
+    "buildings": 22455,
+    "buildings_osm": 19480,
+    "buildings_added": 2975,
+    "added_share": 0.1325
+   },
+   {
+    "geoid": "72075",
+    "name": "Juana Díaz",
+    "buildings": 26681,
+    "buildings_osm": 23185,
+    "buildings_added": 3496,
+    "added_share": 0.131
+   },
+   {
+    "geoid": "72119",
+    "name": "Río Grande",
+    "buildings": 25045,
+    "buildings_osm": 21763,
+    "buildings_added": 3282,
+    "added_share": 0.131
+   },
+   {
+    "geoid": "72125",
+    "name": "San Germán",
+    "buildings": 19738,
+    "buildings_osm": 17224,
+    "buildings_added": 2514,
+    "added_share": 0.1274
+   },
+   {
+    "geoid": "72145",
+    "name": "Vega Baja",
+    "buildings": 29727,
+    "buildings_osm": 26002,
+    "buildings_added": 3725,
+    "added_share": 0.1253
+   },
+   {
+    "geoid": "72011",
+    "name": "Añasco",
+    "buildings": 16111,
+    "buildings_osm": 14101,
+    "buildings_added": 2010,
+    "added_share": 0.1248
+   },
+   {
+    "geoid": "72037",
+    "name": "Ceiba",
+    "buildings": 8207,
+    "buildings_osm": 7184,
+    "buildings_added": 1023,
+    "added_share": 0.1246
+   },
+   {
+    "geoid": "72055",
+    "name": "Guánica",
+    "buildings": 11351,
+    "buildings_osm": 9943,
+    "buildings_added": 1408,
+    "added_share": 0.124
+   },
+   {
+    "geoid": "72035",
+    "name": "Cayey",
+    "buildings": 23914,
+    "buildings_osm": 20965,
+    "buildings_added": 2949,
+    "added_share": 0.1233
+   },
+   {
+    "geoid": "72109",
+    "name": "Patillas",
+    "buildings": 11708,
+    "buildings_osm": 10273,
+    "buildings_added": 1435,
+    "added_share": 0.1226
+   },
+   {
+    "geoid": "72023",
+    "name": "Cabo Rojo",
+    "buildings": 37800,
+    "buildings_osm": 33199,
+    "buildings_added": 4601,
+    "added_share": 0.1217
+   },
+   {
+    "geoid": "72017",
+    "name": "Barceloneta",
+    "buildings": 14570,
+    "buildings_osm": 12809,
+    "buildings_added": 1761,
+    "added_share": 0.1209
+   },
+   {
+    "geoid": "72103",
+    "name": "Naguabo",
+    "buildings": 14517,
+    "buildings_osm": 12778,
+    "buildings_added": 1739,
+    "added_share": 0.1198
+   },
+   {
+    "geoid": "72153",
+    "name": "Yauco",
+    "buildings": 22014,
+    "buildings_osm": 19376,
+    "buildings_added": 2638,
+    "added_share": 0.1198
+   },
+   {
+    "geoid": "72061",
+    "name": "Guaynabo",
+    "buildings": 35373,
+    "buildings_osm": 31141,
+    "buildings_added": 4232,
+    "added_share": 0.1196
+   },
+   {
+    "geoid": "72077",
+    "name": "Juncos",
+    "buildings": 20707,
+    "buildings_osm": 18254,
+    "buildings_added": 2453,
+    "added_share": 0.1185
+   },
+   {
+    "geoid": "72087",
+    "name": "Loíza",
+    "buildings": 12518,
+    "buildings_osm": 11056,
+    "buildings_added": 1462,
+    "added_share": 0.1168
+   },
+   {
+    "geoid": "72135",
+    "name": "Toa Alta",
+    "buildings": 29963,
+    "buildings_osm": 26500,
+    "buildings_added": 3463,
+    "added_share": 0.1156
+   },
+   {
+    "geoid": "72057",
+    "name": "Guayama",
+    "buildings": 24143,
+    "buildings_osm": 21470,
+    "buildings_added": 2673,
+    "added_share": 0.1107
+   },
+   {
+    "geoid": "72069",
+    "name": "Humacao",
+    "buildings": 30222,
+    "buildings_osm": 26891,
+    "buildings_added": 3331,
+    "added_share": 0.1102
+   },
+   {
+    "geoid": "72121",
+    "name": "Sabana Grande",
+    "buildings": 13882,
+    "buildings_osm": 12369,
+    "buildings_added": 1513,
+    "added_share": 0.109
+   },
+   {
+    "geoid": "72113",
+    "name": "Ponce",
+    "buildings": 69392,
+    "buildings_osm": 62155,
+    "buildings_added": 7237,
+    "added_share": 0.1043
+   },
+   {
+    "geoid": "72097",
+    "name": "Mayagüez",
+    "buildings": 38352,
+    "buildings_osm": 34356,
+    "buildings_added": 3996,
+    "added_share": 0.1042
+   },
+   {
+    "geoid": "72067",
+    "name": "Hormigueros",
+    "buildings": 8310,
+    "buildings_osm": 7449,
+    "buildings_added": 861,
+    "added_share": 0.1036
+   },
+   {
+    "geoid": "72053",
+    "name": "Fajardo",
+    "buildings": 18470,
+    "buildings_osm": 16624,
+    "buildings_added": 1846,
+    "added_share": 0.0999
+   },
+   {
+    "geoid": "72015",
+    "name": "Arroyo",
+    "buildings": 10398,
+    "buildings_osm": 9364,
+    "buildings_added": 1034,
+    "added_share": 0.0994
+   },
+   {
+    "geoid": "72137",
+    "name": "Toa Baja",
+    "buildings": 34060,
+    "buildings_osm": 30978,
+    "buildings_added": 3082,
+    "added_share": 0.0905
+   },
+   {
+    "geoid": "72021",
+    "name": "Bayamón",
+    "buildings": 73190,
+    "buildings_osm": 66762,
+    "buildings_added": 6428,
+    "added_share": 0.0878
+   },
+   {
+    "geoid": "72031",
+    "name": "Carolina",
+    "buildings": 56583,
+    "buildings_osm": 51645,
+    "buildings_added": 4938,
+    "added_share": 0.0873
+   },
+   {
+    "geoid": "72033",
+    "name": "Cataño",
+    "buildings": 9989,
+    "buildings_osm": 9238,
+    "buildings_added": 751,
+    "added_share": 0.0752
+   },
+   {
+    "geoid": "72127",
+    "name": "San Juan",
+    "buildings": 111097,
+    "buildings_osm": 103778,
+    "buildings_added": 7319,
+    "added_share": 0.0659
+   }
+  ]
+ },
+ "tiles": {
+  "count": 1787,
+  "bytes": 51842716,
+  "vertices_clamped": 0,
+  "max_per_tile": 9299
+ },
+ "elevation": {
+  "tiles": 1788,
+  "fetched": 1788,
+  "cached": 0,
+  "failed": 0,
+  "unknown": 0,
+  "below_0": 1553,
+  "lt_1m": 9837,
+  "lt_2m": 27544,
+  "lt_3m": 68646,
+  "at_or_below": {
+   "1": 13764,
+   "2": 29076,
+   "3": 103942,
+   "5": 153184,
+   "0.5": 5532,
+   "1.5": 20406
+  },
+  "above_10": 1484625,
+  "note": "lt_X = strictly below X m (histogram bins); at_or_below = inclusive. They differ a lot at 1, 3 m because of the whole-metre terraces in the elevation source.",
+  "integer_plateaus": {
+   "note": "buildings whose sampled ground elevation is a whole metre to within 5 mm, by metre, among buildings between 0.5 and 15.5 m",
+   "by_metre": {
+    "1": 4604,
+    "2": 2253,
+    "3": 42279,
+    "4": 1442,
+    "5": 1061,
+    "6": 533,
+    "7": 11513,
+    "8": 246,
+    "9": 201,
+    "10": 8883,
+    "11": 189,
+    "12": 152,
+    "13": 6281,
+    "14": 160,
+    "15": 368
+   },
+   "total": 80165,
+   "buildings_0p5_to_15p5m": 343797,
+   "share": 0.2332
+  }
+ },
+ "flood": {
+  "nfhl": {
+   "polygons": 0,
+   "by_class": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "by_zone": {}
+  },
+  "island_zone_counts": {
+   "0": 1737162,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "top5_zone2": [
+   {
+    "geoid": "72001",
+    "name": "Adjuntas",
+    "buildings": 12457,
+    "zone2": 0,
+    "zone3": 0,
+    "sfha": 0
+   },
+   {
+    "geoid": "72003",
+    "name": "Aguada",
+    "buildings": 23051,
+    "zone2": 0,
+    "zone3": 0,
+    "sfha": 0
+   },
+   {
+    "geoid": "72005",
+    "name": "Aguadilla",
+    "buildings": 32302,
+    "zone2": 0,
+    "zone3": 0,
+    "sfha": 0
+   },
+   {
+    "geoid": "72007",
+    "name": "Aguas Buenas",
+    "buildings": 13531,
+    "zone2": 0,
+    "zone3": 0,
+    "sfha": 0
+   },
+   {
+    "geoid": "72009",
+    "name": "Aibonito",
+    "buildings": 14949,
+    "zone2": 0,
+    "zone3": 0,
+    "sfha": 0
+   }
+  ],
+  "top5_sfha": [
+   {
+    "geoid": "72001",
+    "name": "Adjuntas",
+    "buildings": 12457,
+    "zone2": 0,
+    "zone3": 0,
+    "sfha": 0
+   },
+   {
+    "geoid": "72003",
+    "name": "Aguada",
+    "buildings": 23051,
+    "zone2": 0,
+    "zone3": 0,
+    "sfha": 0
+   },
+   {
+    "geoid": "72005",
+    "name": "Aguadilla",
+    "buildings": 32302,
+    "zone2": 0,
+    "zone3": 0,
+    "sfha": 0
+   },
+   {
+    "geoid": "72007",
+    "name": "Aguas Buenas",
+    "buildings": 13531,
+    "zone2": 0,
+    "zone3": 0,
+    "sfha": 0
+   },
+   {
+    "geoid": "72009",
+    "name": "Aibonito",
+    "buildings": 14949,
+    "zone2": 0,
+    "zone3": 0,
+    "sfha": 0
+   }
+  ],
+  "reference": {
+   "note": "An earlier study by the same owner (OSM building tiles, same FEMA layer) found 6,862 of 33,461 buildings in the 1 % zones in Toa Baja and 3,806 of 9,915 in Catano.",
+   "toa_baja": {
+    "in_1pct": 6862,
+    "buildings": 33461
+   },
+   "catano": {
+    "in_1pct": 3806,
+    "buildings": 9915
+   }
+  },
+  "toa_baja": {
+   "geoid": "72137",
+   "name": "Toa Baja",
+   "buildings": 34060,
+   "zone_counts": {
+    "0": 34060,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "sfha": 0,
+   "sfha_share": 0,
+   "lt_1m": 554,
+   "at_or_below_1m": 627,
+   "at_or_below_2m": 1587,
+   "at_or_below_3m": 12842
+  },
+  "catano": {
+   "geoid": "72033",
+   "name": "Cataño",
+   "buildings": 9989,
+   "zone_counts": {
+    "0": 9989,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "sfha": 0,
+   "sfha_share": 0,
+   "lt_1m": 1780,
+   "at_or_below_1m": 1904,
+   "at_or_below_2m": 3275,
+   "at_or_below_3m": 7173
+  },
+  "san_juan": {
+   "geoid": "72127",
+   "name": "San Juan",
+   "buildings": 111097,
+   "zone_counts": {
+    "0": 111097,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "sfha": 0,
+   "sfha_share": 0,
+   "lt_1m": 1629,
+   "at_or_below_1m": 1761,
+   "at_or_below_2m": 4251,
+   "at_or_below_3m": 15068
+  }
+ },
+ "facilities": {
+  "total": 3088,
+  "counts": {
+   "airport": 24,
+   "clinic": 431,
+   "fire_station": 74,
+   "hospital": 87,
+   "police_station": 127,
+   "power_plant": 67,
+   "school": 1801,
+   "seaport": 14,
+   "substation": 401,
+   "water_plant": 62
+  },
+  "without_municipio": 0,
+  "dropped_outside_puerto_rico": 1,
+  "in_sfha": 0,
+  "in_sfha_by_type": {}
+ },
+ "top5_buildings": [
+  {
+   "geoid": "72127",
+   "name": "San Juan",
+   "buildings": 111097,
+   "zone2": 0,
+   "zone3": 0,
+   "sfha": 0
+  },
+  {
+   "geoid": "72021",
+   "name": "Bayamón",
+   "buildings": 73190,
+   "zone2": 0,
+   "zone3": 0,
+   "sfha": 0
+  },
+  {
+   "geoid": "72113",
+   "name": "Ponce",
+   "buildings": 69392,
+   "zone2": 0,
+   "zone3": 0,
+   "sfha": 0
+  },
+  {
+   "geoid": "72031",
+   "name": "Carolina",
+   "buildings": 56583,
+   "zone2": 0,
+   "zone3": 0,
+   "sfha": 0
+  },
+  {
+   "geoid": "72025",
+   "name": "Caguas",
+   "buildings": 54632,
+   "zone2": 0,
+   "zone3": 0,
+   "sfha": 0
+  }
+ ],
+ "bottom5_buildings": [
+  {
+   "geoid": "72049",
+   "name": "Culebra",
+   "buildings": 2156,
+   "zone2": 0,
+   "zone3": 0,
+   "sfha": 0
+  },
+  {
+   "geoid": "72093",
+   "name": "Maricao",
+   "buildings": 4141,
+   "zone2": 0,
+   "zone3": 0,
+   "sfha": 0
+  },
+  {
+   "geoid": "72054",
+   "name": "Florida",
+   "buildings": 6345,
+   "zone2": 0,
+   "zone3": 0,
+   "sfha": 0
+  },
+  {
+   "geoid": "72095",
+   "name": "Maunabo",
+   "buildings": 6581,
+   "zone2": 0,
+   "zone3": 0,
+   "sfha": 0
+  },
+  {
+   "geoid": "72083",
+   "name": "Las Marías",
+   "buildings": 6750,
+   "zone2": 0,
+   "zone3": 0,
+   "sfha": 0
+  }
+ ]
+}

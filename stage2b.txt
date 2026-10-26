@@ -1,0 +1,11 @@
+Overture 2026-10-21.0 buildings downloaded in 6 s
+-rw-r--r-- 1 runner runner 314303216 Oct 26 14:58 /home/runner/work/garita/garita/g/work/cache/overture/pr_buildings_2026-10-21.0.parquet
+Overture {"release": "2026-10-21.0", "bbox": [-67.95, 17.85, -65.2, 18.55], "rows": 2157363, "file": "s3://overturemaps-us-west-2/release/2026-10-21.0/theme=buildings/type=building/", "datasets": [{"dataset": "OpenStreetMap", "license_in_data": "ODbL-1.0", "version_min": "2026-09-06T00:00:00.000Z", "version_max": "2026-09-07T18:26:30.000Z", "update_time_min": "2010-05-18T21:03:46.000Z", "update_time_max": "2026-09-07T18:26:30.000Z", "features": 1500399, "with_confidence": 0, "confidence_min": null, "confidence_max": null, "with_height": 203060, "with_floors": 8499}, {"dataset": "Google Open Buildings", "license_in_data": null, "version_min": "2024-04-16", "version_max": "2024-04-16", "update_time_min": "2023-05-01T00:00:00.000Z", "update_time_max": "2023-05-01T00:00:00.000Z", "features": 536571, "with_confidence": 536571, "confidence_min": 0.65, "confidence_max": 0.9791, "with_height": 0, "with_floors": 0}, {"dataset": "Microsoft ML Buildings", "license_in_data": "ODbL-1.0", "version_min": "2026-08-11", "version_max": "2026-08-11", "update_time_min": null, "update_time_max": null, "features": 120393, "with_confidence": 928, "confidence_min": 0.7279000282287598, "confidence_max": 1.0, "with_height": 0, "with_floors": 0}], "multi_source_features": 0, "osm_origin": 1500399, "candidates": 656964, "osm_gers": 1500399}
+656964 /home/runner/work/garita/garita/g/work/overture/added.jsonl
+total 250388
+-rw-r--r-- 1 runner runner 184350382 Oct 26 14:58 added.jsonl
+-rw-r--r-- 1 runner runner      1284 Oct 26 14:58 download.err
+-rw-r--r-- 1 runner runner      1476 Oct 26 14:58 meta.json
+-rw-r--r-- 1 runner runner  72033414 Oct 26 14:58 osm_gers.csv
+{"id":"26ec82e9-7c00-4f29-9f61-3fe0b9feac3f","ds":"Microsoft ML Buildings","conf":null,"h":null,"floors":null,"g":{"type":"Polygon","coordinates":[[[-67.2707754,18.3620044],[-67.2708251,18.3619857],[-67.2708114,18.3619527],[-67.2707616,18.3619713],[-67.2707754,18.3620044]]]}}
+{"id":"c0ce6a14-55c0-4389-a33e-e2bc5caf1035","ds":"Microsoft ML Buildings","conf":null,"h":null,"floors":null,"g":{"type":"Polygon","coordinates":[[[-67.2685772,18.3558057],[-67.2686653,18.3557824],[-67.2686503,18.3557313],

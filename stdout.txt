@@ -1,0 +1,71 @@
+Mon Oct 26 14:57:16 UTC 2026
+deps 14:57:20
+total 1860
+-rw-r--r-- 1 runner runner  621414 Oct 26 14:57 municipios.geojson
+-rw-r--r-- 1 runner runner 1281079 Oct 26 14:57 municipios_land.geojson
+stage2 0 14:57:56
+stage2b 0 14:58:14
+-rw-r--r-- 1 runner runner  72033414 Oct 26 14:58 osm_gers.csv
+{"id":"26ec82e9-7c00-4f29-9f61-3fe0b9feac3f","ds":"Microsoft ML Buildings","conf":null,"h":null,"floors":null,"g":{"type":"Polygon","coordinates":[[[-67.2707754,18.3620044],[-67.2708251,18.3619857],[-67.2708114,18.3619527],[-67.2707616,18.3619713],[-67.2707754,18.3620044]]]}}
+{"id":"c0ce6a14-55c0-4389-a33e-e2bc5caf1035","ds":"Microsoft ML Buildings","conf":null,"h":null,"floors":null,"g":{"type":"Polygon","coordinates":[[[-67.2685772,18.3558057],[-67.2686653,18.3557824],[-67.2686503,18.3557313],
+1500399 work/overture/osm_gers.csv
+w1039997390,9f9b43e6-ef55-4b8e-80af-2d7b4497e02f
+w715371544,5131734d-43d8-4361-abae-a3757e6404be
+stage2c 0 14:58:28
+USA Structures {"name": "FEMA / ORNL USA Structures (public domain)", "release": "Deliverable20250606PR", "url": "https://fema-femadata.s3.amazonaws.com/Partners/ORNL/USA_Structures/Puerto%20Rico/Deliverable20250606PR.zip", "structures": 1194236, "with_height": 234162, "fetched": "2026-10-26T14:58:28Z", "by_occupancy": [{"occ": "Residential", "structures": 641491, "with_height": 190589}, {"occ": "
+234162 /home/runner/work/garita/garita/g/work/structures/heights.jsonl
+{"id":3000001,"h":2.630000114440918,"occ":"Unclassified","g":{"type":"MultiPolygon","coordinates":[[[[-65.93556911000002,18.340775458999985],[-65.93577274299997,18.340760364000005],[-65.93578957699998,18.340967455999987],[-65.93555139300003,18.340985112999988],[-65.935537109,18.34080937599998],[-65.935571659,18.340806815000008],[-65.93556911000002,18.340775458999985]]]]}}
+{"id":3000002,"h":3.50999
+build 0 14:59:20
+14:58:35 buildings {"features":1500760,"kept":1500646,"degenerate":29,"multi":43,"simplified":281,"height_tag":203050,"height_levels":3439,"height_none":1294157,"vertices":8453227}
+14:58:37 ids {"osm":1500646,"osm_with_ref":1500646,"osm_with_gers":1500287,"mapping_rows":1500399,"added_with_gers":0}
+14:58:50 heights {"source":{"name":"FEMA / ORNL USA Structures (public domain)","release":"Deliverable20250606PR","url":"https://fema-femadata.s3.amazonaws.com/Partners/ORNL/USA_Structures/Puerto%20Rico/Deliverable20250606PR.zip","structures":1194236,"with_height":234162,"fetched":"2026-10-26T14:58:28Z"},"footprints":234162,"filled_osm":111432,"filled_added":5293,"before":206489,"after":323214}
+14:58:56 elevation tiles 400 / 1788
+14:59:02 elevation tiles 800 / 1788
+14:59:08 elevation tiles 1200 / 1788
+14:59:13 elevation tiles 1600 / 1788
+14:59:16 elevation {"tiles":1788,"fetched":1788,"cached":0,"failed":0}
+14:59:20 tiles written 1787 bytes 51842716 vertices clamped 0
+{
+ "ids": {
+  "osm": 1500646,
+  "osm_with_ref": 1500646,
+  "osm_with_gers": 1500287,
+  "mapping_rows": 1500399,
+  "added_with_gers": 236516,
+  "overture_release": "2026-10-21.0"
+ },
+ "heights": {
+  "source": {
+   "name": "FEMA / ORNL USA Structures (public domain)",
+   "release": "Deliverable20250606PR",
+   "url": "https://fema-femadata.s3.amazonaws.com/Partners/ORNL/USA_Structures/Puerto%20Rico/Deliverable20250606PR.zip",
+   "structures": 1194236,
+   "with_height": 234162,
+   "fetched": "2026-10-26T14:58:28Z"
+  },
+  "footprints": 234162,
+  "filled_osm": 111432,
+  "filled_added": 5293,
+  "before": 206489,
+  "after": 323214
+ },
+ "total": 1737162
+}
+-rw-r--r-- 1 runner runner 5958864 Oct 26 14:59 /home/runner/work/garita/garita/out/sj_tiles.tgz
+/home/runner/work/garita/garita/g/vout/tiles/bld/14/5185/7337.ids
+31f9ad86-3d49-4140-8ccd-90764e6ac51e,w60472480,levels
+975544f8-4192-4f41-ad91-164de6761cad,w60472484,levels
+b332e2e2-bdab-4575-953c-e6f7171c6a09,w196598857,usas
+0a2cc46b-0888-41ea-9956-202a2eb49454,w196598858,levels
+a3e400fc-8ad7-4991-933b-e7802102815a,w196598859,levels
+usas     71892 (15.6%)
+none     201409 (43.7%)
+levels   2554 (0.6%)
+osm      185333 (40.2%)
+Mon Oct 26 14:59:21 UTC 2026
+GERS in San Juan's tiles:
+461046 of 461188 (100.0%)
+14:58:44 additions {"candidates":656964,"candidates_by_dataset":{"Microsoft ML Buildings":120393,"Google Open Buildings":536571},"degenerate":0,"dropped_overlap":{"centroid_inside_osm":360,"osm_centroid_inside":25,"outlines_intersect_osm":46,"overlaps_accepted_addition":11894},"dropped_implausible":{"tiny":279894,"low_confidence":47766,"large_without_confidence":10,"narrow":41099},"dropped_not_on_
+exit code 0
+5.8M	out
