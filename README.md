@@ -34,7 +34,7 @@ store; [`clear-Vieques`](https://github.com/webgpu-demos/clear-Vieques) for wate
 - **Hazard maps with counts.** NOAA's storm surge maps for hurricane categories 1 to 5 and the USGS landslide
   susceptibility map, each with the buildings, shelters, housing and hospitals inside it, by municipio. NASA
   night lights for any night since 2012, to set an outage beside the utility's numbers.
-- **Questions the Department would ask.** Raise the sea and count what sits at or below it, by municipio, with
+- **Questions a housing-recovery agency would ask.** Raise the sea and count what sits at or below it, by municipio, with
   NOAA's scenarios for San Juan as presets and NOAA's own inundation mapping as a comparison overlay. Replay
   María or any of 29 other storms since 1980. For the 19 with wind radii in the record (2004 on), see which
   municipios and how many of today's residents fall inside each wind radius, and which of today's public housing
@@ -210,7 +210,7 @@ in the sea. Those are fixed and the text here corrected.
   derived for those 33, and each says why.
 - **Storm replay counts use today's inventories** (residents, housing, shelters), not those of the storm's year.
   The best track's landfall fixes of 2004–2011 carry no wind radii; they are interpolated from the fixes either side.
-- **No parcels, cases, inspections or grants.** The ontology has room for them; the data is the Department's.
+- **No parcels, cases, inspections or grants.** The ontology has room for them; that data is held by the agencies that run the programs.
 - **LUMA's regions are not linked to municipios**: no authoritative public mapping was found, so none was made up.
 - **The NHC forecast cone** is parsed from a service response shape that was not available to test against.
 - **Reviewed on** an Apple M3 in Chrome for the early rounds (about 64 fps, 140,000 buildings in view), then
