@@ -4538,6 +4538,142 @@
     }
    ],
    "ephemeral": true
+  },
+  {
+   "id": "structure",
+   "kind": "asset",
+   "group": "local",
+   "label": {
+    "en": "Building with your records",
+    "es": "Edificio con sus registros"
+   },
+   "plural": {
+    "en": "Buildings with your records",
+    "es": "Edificios con sus registros"
+   },
+   "keyScheme": "overture:gers",
+   "icon": "housing",
+   "color": "#ffb547",
+   "properties": [
+    {
+     "id": "records",
+     "label": {
+      "en": "Your records about it",
+      "es": "Sus registros sobre él"
+     },
+     "type": "number",
+     "unit": "records",
+     "format": "int",
+     "primary": true
+    },
+    {
+     "id": "height_m",
+     "label": {
+      "en": "Height",
+      "es": "Altura"
+     },
+     "type": "number",
+     "unit": "m",
+     "format": "fixed1",
+     "primary": true
+    },
+    {
+     "id": "height_source",
+     "label": {
+      "en": "Height from",
+      "es": "Altura de"
+     },
+     "type": "string"
+    },
+    {
+     "id": "ground_elev_m",
+     "label": {
+      "en": "Ground elevation",
+      "es": "Elevación del terreno"
+     },
+     "type": "number",
+     "unit": "m",
+     "format": "fixed1"
+    },
+    {
+     "id": "osm_url",
+     "label": {
+      "en": "OpenStreetMap",
+      "es": "OpenStreetMap"
+     },
+     "type": "url"
+    },
+    {
+     "id": "gers_id",
+     "label": {
+      "en": "GERS id (Overture Maps)",
+      "es": "Id GERS (Overture Maps)"
+     },
+     "type": "string"
+    }
+   ]
+  },
+  {
+   "id": "local_record",
+   "kind": "record",
+   "group": "local",
+   "label": {
+    "en": "Your record",
+    "es": "Su registro"
+   },
+   "plural": {
+    "en": "Your records",
+    "es": "Sus registros"
+   },
+   "keyScheme": "local:file-row",
+   "icon": "note",
+   "color": "#ffb547",
+   "properties": [
+    {
+     "id": "file",
+     "label": {
+      "en": "File",
+      "es": "Archivo"
+     },
+     "type": "string",
+     "primary": true
+    },
+    {
+     "id": "row",
+     "label": {
+      "en": "Row",
+      "es": "Fila"
+     },
+     "type": "number",
+     "format": "int"
+    },
+    {
+     "id": "matched_by",
+     "label": {
+      "en": "Matched to a building by",
+      "es": "Unido a un edificio por"
+     },
+     "type": "string",
+     "primary": true
+    },
+    {
+     "id": "summary",
+     "label": {
+      "en": "Summary",
+      "es": "Resumen"
+     },
+     "type": "string",
+     "primary": true
+    },
+    {
+     "id": "fields",
+     "label": {
+      "en": "Fields as in the file",
+      "es": "Campos como en el archivo"
+     },
+     "type": "json"
+    }
+   ]
   }
  ],
  "linkTypes": [
@@ -4723,6 +4859,23 @@
    "to": [
     "school",
     "public_housing"
+   ]
+  },
+  {
+   "id": "describes",
+   "label": {
+    "en": "is about",
+    "es": "trata de"
+   },
+   "inverse": {
+    "en": "is described by",
+    "es": "descrito en"
+   },
+   "from": [
+    "local_record"
+   ],
+   "to": [
+    "structure"
    ]
   }
  ],
@@ -5079,6 +5232,15 @@
    "url": "",
    "license": "Local to this browser",
    "kind": "user"
+  },
+  {
+   "id": "local_file",
+   "name": "Files you loaded (kept in this browser)",
+   "org": "You",
+   "url": "",
+   "license": "Yours; never leaves this browser",
+   "kind": "user",
+   "note": "Records from a file loaded in the Your data panel. They live in this browser's database only: nothing is uploaded, and Forget removes them. Joined to buildings by GERS id, OSM id or position."
   }
  ]
 }

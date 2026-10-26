@@ -614,3 +614,16 @@ table.grid.rp-bands td.num { font-family: var(--font-mono); font-size: var(--fs-
 .bcard-ids a { color: inherit; }
 .bcard .btn { justify-self: start; text-decoration: none; }
 .is-narrow .bcard { bottom: calc(var(--dock-top-gap, 0px) + var(--timeline-h) + var(--gap)); }
+
+/* Your data (ui/panels/local.tsx) */
+.local { display: grid; gap: 8px; }
+.local-privacy { font-size: var(--fs-1); color: var(--fg-2); line-height: 1.4; display: flex; gap: 6px; align-items: flex-start; }
+.local-drop { position: relative; display: grid; place-items: center; min-height: 64px; padding: 10px; border: 1px dashed var(--line-strong); border-radius: var(--radius); cursor: pointer; text-align: center; font-size: var(--fs-1); }
+.local-drop:hover { background: var(--row-hover); }
+.local-drop.busy { cursor: progress; opacity: 0.8; }
+.local-drop input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.local-formats { font-size: var(--fs-0); line-height: 1.4; }
+.local-err { font-size: var(--fs-1); color: var(--flame); overflow-wrap: anywhere; }
+.local-result { display: grid; gap: 3px; font-size: var(--fs-1); }
+.local-files { display: grid; gap: 2px; font-size: var(--fs-1); }
+.local-files li { display: flex; justify-content: space-between; gap: 8px; }

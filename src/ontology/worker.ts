@@ -22,7 +22,7 @@ export interface StoreDetail {
   notes: string[];
 }
 
-const METHODS = new Set(['query', 'getObject', 'getLinks', 'listObjects', 'search', 'series', 'neighborhood', 'countByType', 'sources', 'ingest', 'reportRun', 'annotate', 'actionLog']);
+const METHODS = new Set(['query', 'getObject', 'getLinks', 'listObjects', 'search', 'series', 'neighborhood', 'countByType', 'sources', 'ingest', 'reportRun', 'annotate', 'actionLog', 'forgetSource']);
 // A step of the persistent path that neither finishes nor fails must not keep the app on its loading screen.
 const OPFS_STEP_TIMEOUT_MS = 6000;
 const LOCK_NAME = 'garita-db';

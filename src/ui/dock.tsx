@@ -15,6 +15,7 @@ import { ScenarioPanel } from './panels/scenario';
 import { ReplayPanel } from './panels/replay';
 import { GraphPanel } from './panels/graph';
 import { SqlPanel } from './panels/sql';
+import { LocalPanel } from './panels/local';
 
 export interface DockTab {
   /** A value of S.RightPanel; 'replay' is not in that union yet, hence the plain string. */
@@ -33,6 +34,7 @@ export const TABS: DockTab[] = [
   { id: 'explorer', label: 'tab.explorer', icon: 'table', component: ExplorerPanel },
   { id: 'lineage', label: 'tab.lineage', icon: 'lineage', component: LineagePanel },
   { id: 'sql', label: 'tab.sql', icon: 'sql', component: SqlPanel },
+  { id: 'local', label: 'tab.local', icon: 'note', component: LocalPanel },
 ];
 export function registerTab(tab: DockTab) { if (!TABS.some((x) => x.id === tab.id)) TABS.push(tab); }
 

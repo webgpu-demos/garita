@@ -39,6 +39,11 @@ store; [`clear-Vieques`](https://github.com/webgpu-demos/clear-Vieques) for wate
   María or any of 29 other storms since 1980. For the 19 with wind radii in the record (2004 on), see which
   municipios and how many of today's residents fall inside each wind radius, and which of today's public housing
   developments and listed shelters fall inside the 64 kt radius, hour by hour. Open any object and walk its links.
+- **Your own records, in your browser only.** The *Your data* panel reads a CSV or GeoJSON file of yours
+  (inspections, cases, model outputs) and joins each row to a building by its GERS id, its OpenStreetMap id or its
+  point. The rows go into this browser's database and nowhere else: nothing is uploaded, and *Forget* removes them.
+  The buildings they are about appear on the map, in search and in the SQL console, and each building's card links to
+  them. `docs/examples/your-data-example.csv` shows the columns.
 - **Down to the street in San Juan.** Click a building to pin it (its card says what the tile knows about it); in
   the municipio of San Juan the card, and the object view of anything located there, open
   [procedural San Juan](https://github.com/webgpu-demos/procedural-sanjuan), the same city at street level, at that
