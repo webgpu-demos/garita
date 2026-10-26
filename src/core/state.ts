@@ -122,7 +122,7 @@ export interface PinnedBuilding {
 }
 export const pinnedBuilding = signal<PinnedBuilding | null>(null);
 /** ?pick=lon,lat: the buildings layer pins the footprint under this point once its tile is in, then clears it. */
-export const pendingPick = signal<{ lon: number; lat: number; at: number } | null>(null);
+export const pendingPick = signal<{ lon: number; lat: number; at: number; gers?: string | null } | null>(null);
 
 /** Multiplies the render resolution. 1 normally; automated screenshots load at a fraction (software GL is slow) and
  *  switch to 1 for the final frame. */

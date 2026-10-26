@@ -10,7 +10,7 @@ export function BuildingCard() {
   const b = S.pinnedBuilding.value;
   if (!b) return null;
   const sea = S.scenario.value.seaLevelM;
-  const sv = streetViewUrl(b.lon, b.lat, { sea });
+  const sv = streetViewUrl(b.lon, b.lat, { sea, gers: b.gers });
   return (
     <aside class="bcard panel" aria-label={t('bld.title')}>
       <div class="bcard-head">

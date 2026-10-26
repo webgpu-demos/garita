@@ -4,7 +4,7 @@ import * as THREE from 'three';
 import * as S from './core/state';
 import { effect } from '@preact/signals';
 import { dataUrl, flag, params } from './core/config';
-import { parsePick } from './core/streetview';
+import { parsePick, parseGers } from './core/streetview';
 import { createEngine } from './world/engine';
 import { createTerrain } from './world/terrain/index';
 import { createControls } from './world/controls';
@@ -76,7 +76,7 @@ export function bootApp(opts: BootOptions = {}) {
   // ?pick=lon,lat (the street view's "this building in Garita"): look down on the point and pin the building there
   const pick = parsePick(params.get('pick'));
   if (pick) {
-    S.pendingPick.value = { ...pick, at: Date.now() };
+    S.pendingPick.value = { ...pick, at: Date.now(), gers: parseGers(params.get('bld')) };
     if (!camOk) S.flyTo.value = { lon: pick.lon, lat: pick.lat, range: 650, heading: 0, pitch: 55, seconds: 0 };
   }
   engine.start();

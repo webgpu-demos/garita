@@ -150,6 +150,45 @@ for await (const l of lines(path.join(OSM, 'buildings.geojsonl'))) {
 }
 const NB_OSM = B.cx.length;
 log('buildings', JSON.stringify({ ...stats, by_building_tag: undefined }));
+
+// ---- building:part: a building with no height tag of its own takes the height of its tallest part ----
+// (OSM maps a tower on its podium as parts; the outline's own building:levels then often counts the podium only.)
+// A part belongs to the building whose outline holds the part's centroid. stage 2: work/osm/building_parts.geojsonl
+const partStats = { parts: 0, with_height: 0, buildings_raised: 0 };
+{
+  const f = path.join(OSM, 'building_parts.geojsonl');
+  if (fs.existsSync(f)) {
+    const PC = 0.002, pg = new Map(), pk = (gx, gy) => gx * 1048576 + gy;
+    for await (const l of lines(f)) {
+      let p; try { p = JSON.parse(l); } catch { continue; }
+      partStats.parts++;
+      const { h } = parseHeight(p.properties || {});
+      if (h === null) continue;
+      let ring = null, best = 0;
+      for (const q of polygonsOf(p.geometry)) { const a = Math.abs(ringArea(q[0])); if (a > best) { best = a; ring = q[0]; } }
+      if (!ring) continue;
+      const [cx, cy] = ringCentroid(ring);
+      if (!Number.isFinite(cx)) continue;
+      partStats.with_height++;
+      const k = pk(Math.floor((cx + 180) / PC), Math.floor((cy + 90) / PC)), a = pg.get(k);
+      if (a) a.push([cx, cy, h]); else pg.set(k, [[cx, cy, h]]);
+    }
+    const inStoredRing = (i, x, y) => { let c = false; const s = B.start[i] * 2, n = B.nv[i]; for (let k = 0, j = n - 1; k < n; j = k++) { const xk = coords[s + 2 * k], yk = coords[s + 2 * k + 1], xj = coords[s + 2 * j], yj = coords[s + 2 * j + 1]; if ((yk > y) !== (yj > y) && x < (xj - xk) * (y - yk) / (yj - yk) + xk) c = !c; } return c; };
+    if (pg.size) for (let i = 0; i < NB_OSM; i++) {
+      if (B.hsrc[i] === 'osm') continue;   // its own height tag stands
+      let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+      for (let k = 0, s = B.start[i] * 2; k < B.nv[i]; k++, s += 2) { const x = coords[s], y = coords[s + 1]; if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y; }
+      let top = 0;
+      for (let gx = Math.floor((x0 + 180) / PC); gx <= Math.floor((x1 + 180) / PC); gx++) for (let gy = Math.floor((y0 + 90) / PC); gy <= Math.floor((y1 + 90) / PC); gy++) {
+        const a = pg.get(pk(gx, gy)); if (!a) continue;
+        for (const [px, py, h] of a) if (h > top && px >= x0 && px <= x1 && py >= y0 && py <= y1 && inStoredRing(i, px, py)) top = h;
+      }
+      const hb = Math.max(1, Math.min(255, Math.round(top * 2)));
+      if (top > 0 && hb > B.h[i]) { B.h[i] = hb; B.hsrc[i] = 'parts'; partStats.buildings_raised++; }
+    }
+  }
+  log('building parts', JSON.stringify(partStats));
+}
 // ---- GERS ids of our OSM buildings, from their Overture twins (stage 2b: work/overture/osm_gers.csv) ----
 const idStats = { osm: NB_OSM, osm_with_ref: 0, osm_with_gers: 0, mapping_rows: 0, added_with_gers: 0 };
 {
@@ -567,7 +606,7 @@ writeOut('tiles/bld/index.json', JSON.stringify({
     ring: 'outer ring only, closing vertex not repeated, winding as in OSM (not normalised); rings above 64 vertices simplified (Douglas-Peucker)',
     assignment: 'a building is stored once, in the tile containing the centroid of its outer ring',
     added_flag: 'kind & 0x80: the footprint comes from added_source (a machine detection), not from OpenStreetMap; kind & 0x7f is the kind. In each tile the OpenStreetMap records come first, then the added ones.',
-    ids: 'tiles/bld/14/{x}/{y}.ids beside each tile: one text line per record, in record order, "<gers>,<osm>,<height source>". gers: the Overture Maps GERS id (a stable feature id; for an OSM building the id of the Overture feature carrying it, for an addition its own), empty where there is none. osm: "w<id>" or "r<id>" for the OpenStreetMap way or relation, empty for an addition. height source: osm (height tag), levels (building:levels x 3.2 m + 1 m), ovt (the detection source, via Overture), usas (FEMA USA Structures), empty (none: height_half_m is 0).',
+    ids: 'tiles/bld/14/{x}/{y}.ids beside each tile: one text line per record, in record order, "<gers>,<osm>,<height source>". gers: the Overture Maps GERS id (a stable feature id; for an OSM building the id of the Overture feature carrying it, for an addition its own), empty where there is none. osm: "w<id>" or "r<id>" for the OpenStreetMap way or relation, empty for an addition. height source: osm (height tag), levels (building:levels x 3.2 m + 1 m), parts (its tallest building:part), ovt (the detection source, via Overture), usas (FEMA USA Structures), empty (none: height_half_m is 0).',
   },
   ids: { ...idStats, overture_release: ovtMeta?.release ?? null }, heights: heightStats,
   flood_attached: floodAttached, total: NB, osm: NB_OSM, added: NB_ADDED, bytes, tiles: index,
@@ -627,7 +666,7 @@ const topTags = Object.entries(stats.by_building_tag).sort((a, b) => b[1] - a[1]
 writeOut('data/derived/qa.json', JSON.stringify({
   generated, flood_attached: floodAttached,
   ids: { ...idStats, overture_release: ovtMeta?.release ?? null },
-  heights: heightStats,
+  heights: heightStats, building_parts: partStats,
   buildings: { total: NB, buildings_osm: NB_OSM, buildings_added: NB_ADDED, osm_features_read: stats.features, dropped_degenerate: stats.degenerate, multipolygon: stats.multi, rings_simplified_over_64: stats.simplified, vertices: stats.vertices,
     height_from_height_tag: stats.height_tag, height_from_levels: stats.height_levels, height_unknown: stats.height_none, share_with_height: +((stats.height_tag + stats.height_levels) / Math.max(1, NB)).toFixed(4),
     by_kind: island.by_kind, top_building_tags: topTags, outside_municipios: noMuni },

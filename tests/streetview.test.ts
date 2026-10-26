@@ -1,7 +1,7 @@
 // The links between Garita and the street view of San Juan (src/core/streetview.ts).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { STREET_VIEW, inStreetView, parsePick, streetViewUrl } from '../src/core/streetview.ts';
+import { STREET_VIEW, inStreetView, parsePick, parseGers, streetViewUrl } from '../src/core/streetview.ts';
 
 test('the street view covers the municipio of San Juan only', () => {
   assert.equal(inStreetView(-66.1057, 18.4655), true);      // Plaza de Armas
@@ -26,4 +26,11 @@ test('?pick is longitude first and checked', () => {
   assert.equal(parsePick('-66.07'), null);
   assert.equal(parsePick('18.45,-266.07'), null);
   assert.equal(parsePick('a,b'), null);
+});
+
+test('a building travels by its GERS id', () => {
+  const g = '3c7e1178-1189-4241-9eb6-9ca1225b8876';
+  assert.equal(parseGers(g.toUpperCase()), g); assert.equal(parseGers('w123'), null); assert.equal(parseGers(null), null);
+  assert.equal(new URL(streetViewUrl(-66.07, 18.45, { gers: g })!).searchParams.get('bld'), g);
+  assert.equal(new URL(streetViewUrl(-66.07, 18.45, { gers: 'nope' })!).searchParams.has('bld'), false);
 });

@@ -15,11 +15,12 @@ export function inStreetView(lon: number, lat: number): boolean {
 }
 
 /** The street view at (lon, lat), or null outside its area. The sea level goes along when the scenario raised it. */
-export function streetViewUrl(lon: number, lat: number, opts: { sea?: number | null } = {}): string | null {
+export function streetViewUrl(lon: number, lat: number, opts: { sea?: number | null; gers?: string | null } = {}): string | null {
   if (!inStreetView(lon, lat)) return null;
   const u = new URL(STREET_VIEW.url);
   u.searchParams.set('ll', `${+lat.toFixed(6)},${+lon.toFixed(6)}`);   // latitude first: that city's convention
   if (opts.sea != null && Number.isFinite(opts.sea) && opts.sea > 0.005) u.searchParams.set('sea', String(+opts.sea.toFixed(2)));
+  if (opts.gers && parseGers(opts.gers)) u.searchParams.set('bld', opts.gers.toLowerCase());   // the building itself, when the street view has its id
   u.searchParams.set('from', 'garita');
   return u.href.replace(/%2C/g, ',');
 }
@@ -30,4 +31,9 @@ export function parsePick(s: string | null | undefined): { lon: number; lat: num
   const [lon, lat] = s.split(',').map((v) => (v.trim() === '' ? NaN : Number(v)));
   if (!Number.isFinite(lon) || !Number.isFinite(lat) || Math.abs(lon) > 180 || Math.abs(lat) > 90) return null;
   return { lon, lat };
+}
+
+/** ?bld=<GERS id> (with ?pick or ?ll): the building by its Overture id, which wins over the point. */
+export function parseGers(s: string | null | undefined): string | null {
+  return s && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(s.trim()) ? s.trim().toLowerCase() : null;
 }
