@@ -1,0 +1,59 @@
+Mon Oct 26 16:55:46 UTC 2026
+/tmp/site/tiles/bld/14/5184:
+7336.bin
+7336.ids
+7337.bin
+7337.ids
+
+/tmp/site/tiles/bld/14/5185:
+7337.bin
+7337.ids
+env ok
+[    0.0s] buildings 11293 of 2026-10-26T14:59:20.663Z
+[    4.9s] collection USGS_LPC_PR_PRVI_A_2018 EPSG:3857 points 90878087626 bounds [-7564421, 2027264, -189, -7294366, 2084753, 2148]
+[    4.9s] collection USGS_LPC_PR_PRVI_C_2018 EPSG:3857 points 5865072350 bounds [-7406625, 2023547, -168, -7260257, 2078692, 1141]
+[    4.9s] collection USGS_LPC_PR_PRVI_D_2018 EPSG:3857 points 95858824868 bounds [-7460103, 2052920, -184, -7332131, 2081539, 5721]
+[    4.9s] collection USGS_LPC_PR_PRVI_E_2018 EPSG:3857 points 19241620294 bounds [-7488731, 2062305, -163, -7328352, 2093360, 1486]
+[    4.9s] collection USGS_LPC_PR_PRVI_F_2018 EPSG:3857 points 30759497718 bounds [-7486208, 2079845, -163, -7398484, 2098139, 3892]
+[    4.9s] collection USGS_LPC_PR_PRVI_G_2018 EPSG:3857 points 22435137525 bounds [-7398487, 2078261, -171, -7332112, 2095605, 1344]
+[    4.9s] collection USGS_LPC_PR_PRVI_H_2018 EPSG:3857 points 56409693116 bounds [-7389016, 2033663, -193, -7301297, 2087800, 2768]
+[    4.9s] collections per cell: [0, 38]
+[    4.9s] cells 38 without a collection 0 buildings in cells 11293
+[    4.9s]   shard  0: 24 cells, 3784 buildings
+[    4.9s]   shard  1: 14 cells, 7509 buildings
+[    5.0s] plan written
+[    0.0s] shard 0: 24 cells, 3784 buildings; resolution 2.0 m; 11 s left
+[   11.4s] time is up: 16 cells left unread
+[   15.2s] shard done {"cells": 24, "done": 8, "empty": 0, "failed": 0, "skipped_for_time": 16, "points": 4012289, "read_s": 25.3, "measure_s": 0.6, "readers": 3, "restarts": 0, "measured": 153, "buildings": 230, "complete": true}
+exit 0
+[    0.0s] resuming: 8 cells already done, 230 buildings
+[    0.0s] shard 0: 24 cells, 3784 buildings; resolution 2.0 m; 599 s left
+exit 0
+[    0.0s] shard 1: 14 cells, 7509 buildings; resolution 2.0 m; 599 s left
+[   23.0s] shard done {"cells": 14, "done": 14, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 13836445, "read_s": 59.5, "measure_s": 4.6, "readers": 3, "restarts": 0, "measured": 6983, "buildings": 7509, "complete": true}
+exit 0
+shards 65 s
+[    0.0s] buildings 11293, in the plan 11293, read 11293, measured 10290; shards in 2/2; complete True
+ "measured": 10290,
+ "share_measured_of_read": 0.9112,
+ "share_measured_osm": 0.9369,
+ "share_measured_added": 0.3944,
+   "median_abs_m": 0.59,
+   "median_abs_m": 1.35,
+  "osm": {
+   "median_abs_m": 0.53,
+   "median_abs_m": 0.97,
+   "tile_source": "osm"
+   "tile_source": "osm"
+total 468
+drwxr-xr-x 2 runner runner   4096 Oct 26 16:58 .
+drwxr-xr-x 3 runner runner   4096 Oct 26 16:58 ..
+-rw-r--r-- 1 runner runner      2 Oct 26 16:58 assets.json
+-rw-r--r-- 1 runner runner  22586 Oct 26 16:58 buildings.bin
+-rw-r--r-- 1 runner runner  11293 Oct 26 16:58 buildings_cover.bin
+-rw-r--r-- 1 runner runner  22586 Oct 26 16:58 buildings_p50.bin
+-rw-r--r-- 1 runner runner   9960 Oct 26 16:58 meta.json
+-rw-r--r-- 1 runner runner 391094 Oct 26 16:58 qa.jpg
+Mon Oct 26 16:58:10 UTC 2026
+exit code 0
+660K	out
