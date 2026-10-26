@@ -1,0 +1,780 @@
+[    3.7s] buildings 1737161 of 2026-10-26T19:16:41.230Z
+[    7.7s] collection USGS_LPC_PR_PRVI_A_2018 EPSG:3857 points 90878087626 bounds [-7564421, 2027264, -189, -7294366, 2084753, 2148]
+[    7.7s] collection USGS_LPC_PR_PRVI_C_2018 EPSG:3857 points 5865072350 bounds [-7406625, 2023547, -168, -7260257, 2078692, 1141]
+[    7.7s] collection USGS_LPC_PR_PRVI_D_2018 EPSG:3857 points 95858824868 bounds [-7460103, 2052920, -184, -7332131, 2081539, 5721]
+[    7.7s] collection USGS_LPC_PR_PRVI_E_2018 EPSG:3857 points 19241620294 bounds [-7488731, 2062305, -163, -7328352, 2093360, 1486]
+[    7.7s] collection USGS_LPC_PR_PRVI_F_2018 EPSG:3857 points 30759497718 bounds [-7486208, 2079845, -163, -7398484, 2098139, 3892]
+[    7.7s] collection USGS_LPC_PR_PRVI_G_2018 EPSG:3857 points 22435137525 bounds [-7398487, 2078261, -171, -7332112, 2095605, 1344]
+[    7.7s] collection USGS_LPC_PR_PRVI_H_2018 EPSG:3857 points 56409693116 bounds [-7389016, 2033663, -193, -7301297, 2087800, 2768]
+[    8.3s] collections per cell: [68, 20375, 1407, 21]
+[    8.3s] cells 21871 without a collection 68 buildings in cells 1737161
+[    8.3s]   shard  0: 685 cells, 75533 buildings
+[    8.3s]   shard  1: 743 cells, 52080 buildings
+[    8.3s]   shard  2: 740 cells, 53713 buildings
+[    8.3s]   shard  3: 730 cells, 57412 buildings
+[    8.3s]   shard  4: 768 cells, 42404 buildings
+[    8.3s]   shard  5: 815 cells, 23415 buildings
+[    8.3s]   shard  6: 757 cells, 46851 buildings
+[    8.3s]   shard  7: 789 cells, 34103 buildings
+[    8.3s]   shard  8: 688 cells, 73967 buildings
+[    8.3s]   shard  9: 748 cells, 50560 buildings
+[    8.3s]   shard 10: 704 cells, 67897 buildings
+[    8.3s]   shard 11: 695 cells, 71982 buildings
+[    8.3s]   shard 12: 546 cells, 130749 buildings
+[    8.3s]   shard 13: 782 cells, 36392 buildings
+[    8.3s]   shard 14: 814 cells, 24077 buildings
+[    8.3s]   shard 15: 796 cells, 31165 buildings
+[    8.3s]   shard 16: 686 cells, 75430 buildings
+[    8.3s]   shard 17: 758 cells, 45789 buildings
+[    8.3s]   shard 18: 769 cells, 42044 buildings
+[    8.3s]   shard 19: 756 cells, 47235 buildings
+[    8.3s]   shard 20: 765 cells, 43326 buildings
+[    8.3s]   shard 21: 728 cells, 57895 buildings
+[    8.3s]   shard 22: 524 cells, 140149 buildings
+[    8.3s]   shard 23: 682 cells, 76968 buildings
+[    8.3s]   shard 24: 701 cells, 69152 buildings
+[    8.3s]   shard 25: 704 cells, 68119 buildings
+[    8.3s]   shard 26: 734 cells, 55660 buildings
+[    8.3s]   shard 27: 779 cells, 38120 buildings
+[    8.3s]   shard 28: 747 cells, 50855 buildings
+[    8.3s]   shard 29: 738 cells, 54119 buildings
+[    8.9s] plan written
+site af49ce805103a93d171f028143a8ff0bdf63b92e
+[    0.1s] shard 0: 685 cells, 75533 buildings; resolution 2.0 m; 2898 s left
+[    2.2s]   cell 1/685 20399/29419: 7 buildings, 1 collections, 340967 points (6.3/m2), read 2.0 s, measure 0.1 s
+[   68.1s]   cell 51/685 20526/29371: 107 buildings, 1 collections, 1349563 points (3.3/m2), read 4.4 s, measure 0.2 s
+[  141.1s]   cell 101/685 20530/29370: 37 buildings, 1 collections, 1212156 points (3.9/m2), read 3.5 s, measure 0.1 s
+[  213.1s]   cell 151/685 20534/29360: 2 buildings, 1 collections, 8205 points (1.3/m2), read 1.3 s, measure 0.0 s
+[  286.5s]   cell 201/685 20537/29359: 61 buildings, 1 collections, 385935 points (2.3/m2), read 2.3 s, measure 0.1 s
+[  357.3s]   cell 251/685 20539/29372: 74 buildings, 1 collections, 1113457 points (3.7/m2), read 3.7 s, measure 0.2 s
+[  419.9s]   cell 301/685 20541/29373: 54 buildings, 1 collections, 1898364 points (4.9/m2), read 4.5 s, measure 0.2 s
+[  477.7s]   cell 351/685 20543/29354: 303 buildings, 1 collections, 1661915 points (3.3/m2), read 4.8 s, measure 0.6 s
+[  537.6s]   cell 401/685 20546/29341: 12 buildings, 1 collections, 421149 points (1.5/m2), read 2.8 s, measure 0.0 s
+[  591.7s]   cell 451/685 20549/29349: 86 buildings, 1 collections, 1021338 points (3.1/m2), read 4.2 s, measure 0.1 s
+[  644.9s]   cell 501/685 20554/29342: 87 buildings, 1 collections, 603832 points (2.6/m2), read 2.5 s, measure 0.1 s
+[  692.8s]   cell 551/685 20562/29341: 312 buildings, 1 collections, 599652 points (1.5/m2), read 2.9 s, measure 0.2 s
+[  742.5s]   cell 601/685 20571/29340: 8 buildings, 1 collections, 177393 points (2.2/m2), read 1.8 s, measure 0.0 s
+[  790.0s]   cell 651/685 20594/29342: 75 buildings, 1 collections, 487763 points (1.5/m2), read 2.5 s, measure 0.1 s
+[  822.5s] shard done {"cells": 685, "done": 684, "empty": 1, "failed": 0, "skipped_for_time": 0, "points": 592926740, "read_s": 2381.7, "measure_s": 116.5, "readers": 3, "restarts": 0, "measured": 61024, "buildings": 75532, "complete": true}
+[    0.1s] shard 1: 743 cells, 52080 buildings; resolution 2.0 m; 2899 s left
+[    2.9s]   cell 1/743 20544/29352: 33 buildings, 1 collections, 400033 points (2.6/m2), read 2.5 s, measure 0.2 s
+[   72.5s]   cell 51/743 20546/29363: 69 buildings, 2 collections, 628455 points (2.0/m2), read 4.2 s, measure 0.1 s
+[  137.7s]   cell 101/743 20548/29366: 31 buildings, 1 collections, 1176682 points (4.6/m2), read 3.2 s, measure 0.1 s
+[  195.6s]   cell 151/743 20550/29371: 38 buildings, 1 collections, 443606 points (3.4/m2), read 2.8 s, measure 0.0 s
+[  254.8s]   cell 201/743 20552/29369: 78 buildings, 1 collections, 1663690 points (4.3/m2), read 3.4 s, measure 0.2 s
+[  307.2s]   cell 251/743 20554/29362: 79 buildings, 1 collections, 1083060 points (2.6/m2), read 3.4 s, measure 0.1 s
+[  361.8s]   cell 301/743 20556/29353: 1 buildings, 1 collections, 16041 points (4.4/m2), read 1.3 s, measure 0.0 s
+[  414.2s]   cell 351/743 20558/29345: 172 buildings, 1 collections, 757628 points (1.8/m2), read 3.1 s, measure 0.2 s
+[  464.8s]   cell 401/743 20559/29368: 112 buildings, 1 collections, 1138538 points (3.9/m2), read 3.8 s, measure 0.2 s
+[  518.0s]   cell 451/743 20561/29362: 64 buildings, 1 collections, 1147626 points (3.0/m2), read 3.5 s, measure 0.1 s
+[  573.4s]   cell 501/743 20563/29361: 131 buildings, 1 collections, 1119875 points (2.7/m2), read 4.1 s, measure 0.2 s
+[  630.7s]   cell 551/743 20565/29367: 180 buildings, 1 collections, 1358058 points (3.3/m2), read 4.4 s, measure 0.2 s
+[  686.1s]   cell 601/743 20568/29345: 138 buildings, 1 collections, 686346 points (1.8/m2), read 3.3 s, measure 0.1 s
+[  744.2s]   cell 651/743 20570/29361: 22 buildings, 1 collections, 684404 points (2.7/m2), read 2.5 s, measure 0.1 s
+[  797.2s]   cell 701/743 20573/29352: 6 buildings, 1 collections, 404367 points (4.1/m2), read 2.0 s, measure 0.0 s
+[  842.8s] shard done {"cells": 743, "done": 743, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 637146324, "read_s": 2433.6, "measure_s": 81.9, "readers": 3, "restarts": 0, "measured": 39198, "buildings": 52080, "complete": true}
+[    0.0s] shard 2: 740 cells, 53713 buildings; resolution 2.0 m; 2899 s left
+[    4.6s]   cell 1/740 20560/29374: 32 buildings, 1 collections, 1404736 points (3.5/m2), read 4.3 s, measure 0.2 s
+[   61.5s]   cell 51/740 20571/29368: 49 buildings, 1 collections, 385717 points (1.0/m2), read 2.9 s, measure 0.0 s
+[  109.8s]   cell 101/740 20576/29362: 42 buildings, 1 collections, 808181 points (2.4/m2), read 3.2 s, measure 0.1 s
+[  160.4s]   cell 151/740 20578/29365: 8 buildings, 1 collections, 234377 points (3.7/m2), read 2.4 s, measure 0.0 s
+[  214.3s]   cell 201/740 20580/29363: 82 buildings, 1 collections, 1055682 points (2.6/m2), read 3.7 s, measure 0.1 s
+[  273.0s]   cell 251/740 20582/29359: 56 buildings, 1 collections, 819000 points (3.7/m2), read 3.2 s, measure 0.0 s
+[  331.9s]   cell 301/740 20584/29347: 127 buildings, 1 collections, 849394 points (2.1/m2), read 4.5 s, measure 0.1 s
+[  380.9s]   cell 351/740 20585/29375: 135 buildings, 1 collections, 360711 points (0.9/m2), read 2.8 s, measure 0.1 s
+[  438.1s]   cell 401/740 20587/29367: 51 buildings, 2 collections, 317401 points (1.4/m2), read 3.5 s, measure 0.0 s
+[  494.3s]   cell 451/740 20589/29360: 61 buildings, 1 collections, 1196276 points (3.1/m2), read 3.6 s, measure 0.1 s
+[  549.2s]   cell 501/740 20591/29346: 205 buildings, 1 collections, 726660 points (1.7/m2), read 3.5 s, measure 0.1 s
+[  610.3s]   cell 551/740 20593/29350: 112 buildings, 1 collections, 916321 points (2.5/m2), read 5.0 s, measure 0.1 s
+[  662.9s]   cell 601/740 20596/29357: 6 buildings, 1 collections, 85221 points (4.0/m2), read 1.7 s, measure 0.0 s
+[  723.5s]   cell 651/740 20600/29352: 3 buildings, 1 collections, 28458 points (3.0/m2), read 1.9 s, measure 0.0 s
+[  774.5s]   cell 701/740 20605/29345: 75 buildings, 1 collections, 924878 points (2.4/m2), read 3.9 s, measure 0.1 s
+[  822.9s] shard done {"cells": 740, "done": 740, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 459018465, "read_s": 2424.4, "measure_s": 40.2, "readers": 3, "restarts": 0, "measured": 39363, "buildings": 53713, "complete": true}
+[    0.1s] shard 3: 730 cells, 57412 buildings; resolution 2.0 m; 2899 s left
+[    3.4s]   cell 1/730 20527/29376: 29 buildings, 1 collections, 1076569 points (2.7/m2), read 2.9 s, measure 0.3 s
+[   57.0s]   cell 51/730 20535/29380: 35 buildings, 1 collections, 383632 points (1.9/m2), read 2.2 s, measure 0.0 s
+[  104.6s]   cell 101/730 20537/29409: 65 buildings, 1 collections, 737485 points (2.9/m2), read 3.2 s, measure 0.1 s
+[  159.1s]   cell 151/730 20538/29421: 156 buildings, 1 collections, 466725 points (2.9/m2), read 2.5 s, measure 0.4 s
+[  208.8s]   cell 201/730 20539/29432: 64 buildings, 1 collections, 529146 points (3.3/m2), read 2.7 s, measure 0.1 s
+[  263.0s]   cell 251/730 20541/29376: 33 buildings, 1 collections, 1732792 points (5.1/m2), read 3.1 s, measure 0.2 s
+[  311.8s]   cell 301/730 20541/29436: 26 buildings, 1 collections, 612205 points (3.8/m2), read 2.1 s, measure 0.1 s
+[  372.8s]   cell 351/730 20542/29425: 73 buildings, 1 collections, 2237803 points (5.8/m2), read 4.9 s, measure 0.2 s
+[  421.9s]   cell 401/730 20543/29416: 9 buildings, 1 collections, 181164 points (3.4/m2), read 1.3 s, measure 0.0 s
+[  479.6s]   cell 451/730 20547/29380: 503 buildings, 1 collections, 936654 points (2.2/m2), read 2.8 s, measure 0.5 s
+[  525.9s]   cell 501/730 20592/29365: 8 buildings, 1 collections, 366865 points (2.2/m2), read 2.6 s, measure 0.0 s
+[  566.8s]   cell 551/730 20595/29373: 27 buildings, 1 collections, 793231 points (2.0/m2), read 2.0 s, measure 0.1 s
+[  607.5s]   cell 601/730 20598/29375: 5 buildings, 1 collections, 39556 points (1.5/m2), read 1.0 s, measure 0.0 s
+[  646.7s]   cell 651/730 20602/29364: 19 buildings, 1 collections, 688286 points (2.4/m2), read 2.6 s, measure 0.1 s
+[  687.7s]   cell 701/730 20605/29371: 56 buildings, 1 collections, 496169 points (1.4/m2), read 1.8 s, measure 0.1 s
+[  707.5s] shard done {"cells": 730, "done": 730, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 583361577, "read_s": 2014.2, "measure_s": 107.5, "readers": 3, "restarts": 0, "measured": 46447, "buildings": 57412, "complete": true}
+[    0.1s] shard 4: 768 cells, 42404 buildings; resolution 2.0 m; 2899 s left
+[    1.3s]   cell 1/768 20544/29386: 1 buildings, 1 collections, 6870 points (1.4/m2), read 1.1 s, measure 0.1 s
+[   79.3s]   cell 51/768 20546/29394: 39 buildings, 2 collections, 1080674 points (5.2/m2), read 5.9 s, measure 0.1 s
+[  165.8s]   cell 101/768 20548/29399: 49 buildings, 1 collections, 2370624 points (7.4/m2), read 5.5 s, measure 0.3 s
+[  249.7s]   cell 151/768 20550/29401: 30 buildings, 1 collections, 2345752 points (7.1/m2), read 5.5 s, measure 0.2 s
+[  321.2s]   cell 201/768 20552/29400: 14 buildings, 1 collections, 988535 points (7.4/m2), read 4.0 s, measure 0.1 s
+[  391.5s]   cell 251/768 20554/29394: 88 buildings, 2 collections, 2533983 points (6.3/m2), read 6.3 s, measure 0.3 s
+[  464.8s]   cell 301/768 20556/29386: 13 buildings, 1 collections, 1797818 points (5.1/m2), read 3.9 s, measure 0.2 s
+[  534.1s]   cell 351/768 20558/29376: 18 buildings, 1 collections, 963045 points (4.0/m2), read 3.2 s, measure 0.1 s
+[  599.1s]   cell 401/768 20559/29401: 1 buildings, 1 collections, 34632 points (8.8/m2), read 1.5 s, measure 0.0 s
+[  662.1s]   cell 451/768 20561/29399: 14 buildings, 1 collections, 1592329 points (9.3/m2), read 4.2 s, measure 0.2 s
+[  723.1s]   cell 501/768 20563/29400: 21 buildings, 1 collections, 2063063 points (6.8/m2), read 5.1 s, measure 0.1 s
+[  786.5s]   cell 551/768 20566/29379: 11 buildings, 1 collections, 397407 points (3.5/m2), read 2.6 s, measure 0.0 s
+[  850.2s]   cell 601/768 20568/29386: 24 buildings, 2 collections, 785416 points (2.6/m2), read 4.4 s, measure 0.1 s
+[  897.0s]   cell 651/768 20570/29392: 7 buildings, 1 collections, 89530 points (2.4/m2), read 1.3 s, measure 0.0 s
+[  944.5s]   cell 701/768 20572/29397: 1 buildings, 1 collections, 23255 points (5.0/m2), read 1.8 s, measure 0.0 s
+[  992.2s]   cell 751/768 20575/29381: 9 buildings, 1 collections, 260906 points (1.5/m2), read 1.7 s, measure 0.0 s
+[ 1007.6s] shard done {"cells": 768, "done": 768, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 995844948, "read_s": 2888.4, "measure_s": 101.4, "readers": 3, "restarts": 0, "measured": 33932, "buildings": 42404, "complete": true}
+[    0.1s] shard 5: 815 cells, 23415 buildings; resolution 2.0 m; 2899 s left
+[    3.0s]   cell 1/815 20560/29404: 3 buildings, 1 collections, 565630 points (8.1/m2), read 2.5 s, measure 0.3 s
+[   68.0s]   cell 51/815 20571/29402: 8 buildings, 1 collections, 3607441 points (11.2/m2), read 6.7 s, measure 0.5 s
+[  125.4s]   cell 101/815 20577/29379: 13 buildings, 1 collections, 409824 points (1.2/m2), read 1.9 s, measure 0.1 s
+[  165.7s]   cell 151/815 20579/29379: 120 buildings, 1 collections, 608666 points (1.5/m2), read 2.0 s, measure 0.1 s
+[  212.4s]   cell 201/815 20580/29401: 5 buildings, 1 collections, 1461030 points (10.8/m2), read 5.6 s, measure 0.1 s
+[  252.6s]   cell 251/815 20582/29397: 3 buildings, 1 collections, 49635 points (6.4/m2), read 1.6 s, measure 0.0 s
+[  303.7s]   cell 301/815 20584/29404: 5 buildings, 1 collections, 105046 points (8.6/m2), read 2.3 s, measure 0.0 s
+[  347.2s]   cell 351/815 20586/29395: 27 buildings, 2 collections, 2745080 points (7.2/m2), read 6.7 s, measure 0.3 s
+[  389.1s]   cell 401/815 20588/29390: 36 buildings, 1 collections, 802486 points (2.0/m2), read 2.0 s, measure 0.1 s
+[  439.0s]   cell 451/815 20590/29377: 61 buildings, 1 collections, 411076 points (1.4/m2), read 1.7 s, measure 0.1 s
+[  488.1s]   cell 501/815 20591/29400: 5 buildings, 1 collections, 794933 points (7.6/m2), read 3.1 s, measure 0.1 s
+[  528.2s]   cell 551/815 20594/29377: 50 buildings, 1 collections, 733906 points (2.0/m2), read 2.3 s, measure 0.2 s
+[  562.7s]   cell 601/815 20596/29383: 18 buildings, 1 collections, 283640 points (1.4/m2), read 1.5 s, measure 0.0 s
+[  599.5s]   cell 651/815 20598/29386: 37 buildings, 1 collections, 577773 points (1.9/m2), read 2.0 s, measure 0.1 s
+[  636.9s]   cell 701/815 20600/29392: 2 buildings, 1 collections, 137722 points (2.2/m2), read 1.1 s, measure 0.0 s
+[  664.4s]   cell 751/815 20603/29389: 2 buildings, 2 collections, 12166 points (1.5/m2), read 1.3 s, measure 0.0 s
+[  700.8s]   cell 801/815 20607/29376: 3 buildings, 1 collections, 11974 points (1.6/m2), read 0.8 s, measure 0.0 s
+[  710.6s] shard done {"cells": 815, "done": 815, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 567809197, "read_s": 1983.7, "measure_s": 80.2, "readers": 3, "restarts": 0, "measured": 15797, "buildings": 23415, "complete": true}
+[    0.1s] shard 6: 757 cells, 46851 buildings; resolution 2.0 m; 2899 s left
+[    5.1s]   cell 1/757 20544/29408: 248 buildings, 1 collections, 1407649 points (3.4/m2), read 4.4 s, measure 0.3 s
+[   74.2s]   cell 51/757 20545/29434: 2 buildings, 1 collections, 208911 points (1.6/m2), read 2.3 s, measure 0.0 s
+[  134.8s]   cell 101/757 20547/29425: 7 buildings, 1 collections, 578085 points (5.6/m2), read 2.8 s, measure 0.1 s
+[  202.5s]   cell 151/757 20549/29426: 67 buildings, 1 collections, 1936120 points (6.1/m2), read 4.9 s, measure 0.2 s
+[  270.2s]   cell 201/757 20551/29430: 60 buildings, 1 collections, 598983 points (3.2/m2), read 2.9 s, measure 0.1 s
+[  329.9s]   cell 251/757 20554/29411: 7 buildings, 1 collections, 491037 points (2.6/m2), read 2.6 s, measure 0.0 s
+[  397.3s]   cell 301/757 20556/29413: 33 buildings, 1 collections, 1354462 points (3.4/m2), read 5.0 s, measure 0.1 s
+[  477.2s]   cell 351/757 20558/29418: 15 buildings, 1 collections, 1124321 points (3.9/m2), read 4.5 s, measure 0.1 s
+[  556.8s]   cell 401/757 20560/29422: 38 buildings, 1 collections, 1446778 points (6.5/m2), read 3.6 s, measure 0.2 s
+[  643.8s]   cell 451/757 20564/29409: 45 buildings, 1 collections, 3088010 points (7.8/m2), read 6.3 s, measure 0.4 s
+[  730.3s]   cell 501/757 20567/29416: 19 buildings, 1 collections, 1955644 points (7.1/m2), read 5.1 s, measure 0.2 s
+[  804.7s]   cell 551/757 20570/29421: 18 buildings, 1 collections, 2244915 points (6.5/m2), read 4.8 s, measure 0.2 s
+[  875.8s]   cell 601/757 20575/29417: 109 buildings, 1 collections, 1964847 points (4.8/m2), read 5.0 s, measure 0.2 s
+[  945.4s]   cell 651/757 20598/29400: 30 buildings, 1 collections, 2776157 points (7.8/m2), read 5.3 s, measure 0.2 s
+[ 1017.8s]   cell 701/757 20603/29403: 8 buildings, 1 collections, 1986161 points (8.3/m2), read 4.3 s, measure 0.1 s
+[ 1095.5s]   cell 751/757 20607/29399: 43 buildings, 1 collections, 2514745 points (8.3/m2), read 5.3 s, measure 0.2 s
+[ 1103.9s] shard done {"cells": 757, "done": 757, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 1128729384, "read_s": 3126.7, "measure_s": 124.2, "readers": 3, "restarts": 0, "measured": 37808, "buildings": 46851, "complete": true}
+[    0.1s] shard 7: 789 cells, 34103 buildings; resolution 2.0 m; 2899 s left
+[    1.6s]   cell 1/789 20552/29437: 1 buildings, 1 collections, 36543 points (6.6/m2), read 1.4 s, measure 0.1 s
+[   57.5s]   cell 51/789 20562/29428: 157 buildings, 1 collections, 1546319 points (3.7/m2), read 3.9 s, measure 0.3 s
+[  102.6s]   cell 101/789 20566/29428: 3 buildings, 1 collections, 43868 points (4.4/m2), read 1.0 s, measure 0.0 s
+[  144.3s]   cell 151/789 20571/29430: 1 buildings, 1 collections, 8178 points (2.2/m2), read 1.2 s, measure 0.0 s
+[  197.6s]   cell 201/789 20576/29420: 449 buildings, 1 collections, 1110151 points (2.6/m2), read 3.5 s, measure 0.5 s
+[  252.4s]   cell 251/789 20578/29432: 1 buildings, 1 collections, 18137 points (3.9/m2), read 0.9 s, measure 0.0 s
+[  305.9s]   cell 301/789 20580/29432: 6 buildings, 1 collections, 712181 points (3.5/m2), read 2.4 s, measure 0.0 s
+[  362.3s]   cell 351/789 20583/29418: 76 buildings, 1 collections, 1921407 points (6.9/m2), read 4.6 s, measure 0.4 s
+[  421.3s]   cell 401/789 20585/29426: 63 buildings, 1 collections, 1562358 points (5.8/m2), read 4.2 s, measure 0.2 s
+[  468.4s]   cell 451/789 20587/29433: 1 buildings, 1 collections, 12141 points (2.5/m2), read 0.9 s, measure 0.0 s
+[  523.6s]   cell 501/789 20589/29432: 2 buildings, 1 collections, 29423 points (2.2/m2), read 1.2 s, measure 0.0 s
+[  585.7s]   cell 551/789 20591/29431: 170 buildings, 1 collections, 1641504 points (5.8/m2), read 4.0 s, measure 0.3 s
+[  654.6s]   cell 601/789 20594/29414: 13 buildings, 1 collections, 1078440 points (7.3/m2), read 3.4 s, measure 0.1 s
+[  718.0s]   cell 651/789 20597/29421: 36 buildings, 1 collections, 1204615 points (7.6/m2), read 3.5 s, measure 0.1 s
+[  792.3s]   cell 701/789 20601/29409: 9 buildings, 1 collections, 435015 points (5.4/m2), read 2.1 s, measure 0.0 s
+[  860.3s]   cell 751/789 20604/29418: 34 buildings, 1 collections, 2153828 points (7.5/m2), read 4.1 s, measure 0.2 s
+[  917.5s] shard done {"cells": 789, "done": 789, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 901461884, "read_s": 2541.7, "measure_s": 135.3, "readers": 3, "restarts": 0, "measured": 26931, "buildings": 34103, "complete": true}
+[    0.1s] shard 8: 688 cells, 73967 buildings; resolution 2.0 m; 2899 s left
+[    9.2s]   cell 1/688 20592/29428: 103 buildings, 1 collections, 1813647 points (4.6/m2), read 8.4 s, measure 0.3 s
+[  120.4s]   cell 51/688 20597/29424: 6 buildings, 1 collections, 1020867 points (5.4/m2), read 5.9 s, measure 0.1 s
+[  228.4s]   cell 101/688 20600/29434: 8 buildings, 1 collections, 708403 points (5.4/m2), read 4.3 s, measure 0.0 s
+[  326.7s]   cell 151/688 20605/29426: 61 buildings, 1 collections, 1813379 points (5.3/m2), read 7.7 s, measure 0.2 s
+[  412.4s]   cell 201/688 20608/29362: 2 buildings, 1 collections, 22988 points (4.1/m2), read 2.2 s, measure 0.0 s
+[  490.8s]   cell 251/688 20611/29348: 287 buildings, 1 collections, 736844 points (1.9/m2), read 4.5 s, measure 0.2 s
+[  571.2s]   a reader died at cell 20614/29344: saving, to go on in a new run
+[  571.3s] shard stopped (a reader died); {"cells": 688, "done": 300, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 307325654, "read_s": 1655.7, "measure_s": 51.0, "readers": 3, "restarts": 0, "measured": 25330, "buildings": 31538, "complete": false}
+[    0.1s] resuming: 300 cells already done, 31538 buildings
+[    0.1s] shard 8: 688 cells, 73967 buildings; resolution 2.0 m; 2327 s left
+[    5.4s]   cell 301/688 20614/29344: 116 buildings, 1 collections, 787534 points (1.8/m2), read 4.7 s, measure 0.3 s
+[   96.8s]   cell 351/688 20617/29347: 551 buildings, 1 collections, 642070 points (1.5/m2), read 5.1 s, measure 0.4 s
+[  178.6s]   cell 401/688 20620/29355: 47 buildings, 1 collections, 404431 points (5.0/m2), read 3.4 s, measure 0.0 s
+[  244.3s]   cell 451/688 20625/29346: 2 buildings, 1 collections, 269819 points (1.7/m2), read 3.0 s, measure 0.0 s
+[  306.3s]   cell 501/688 20629/29344: 24 buildings, 1 collections, 72062 points (2.5/m2), read 2.4 s, measure 0.0 s
+[  377.5s]   cell 551/688 20632/29353: 33 buildings, 1 collections, 138028 points (2.5/m2), read 3.1 s, measure 0.0 s
+[  458.3s]   cell 601/688 20636/29342: 215 buildings, 1 collections, 618628 points (1.5/m2), read 4.7 s, measure 0.2 s
+[  529.2s]   cell 651/688 20639/29349: 81 buildings, 1 collections, 384289 points (2.1/m2), read 3.8 s, measure 0.1 s
+[  577.4s] shard done {"cells": 688, "done": 688, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 542042715, "read_s": 3344.6, "measure_s": 98.0, "readers": 3, "restarts": 1, "measured": 59183, "buildings": 73967, "complete": true}
+[    0.1s] shard 9: 748 cells, 50560 buildings; resolution 2.0 m; 2899 s left
+[    5.3s]   cell 1/748 20608/29364: 145 buildings, 1 collections, 655833 points (1.7/m2), read 4.9 s, measure 0.2 s
+[   66.2s]   cell 51/748 20612/29375: 8 buildings, 1 collections, 29743 points (1.3/m2), read 3.5 s, measure 0.0 s
+[  139.7s]   cell 101/748 20618/29362: 33 buildings, 1 collections, 1593145 points (4.5/m2), read 4.7 s, measure 0.1 s
+[  218.8s]   cell 151/748 20626/29362: 34 buildings, 1 collections, 1615237 points (4.2/m2), read 6.0 s, measure 0.1 s
+[  288.6s]   cell 201/748 20631/29364: 31 buildings, 2 collections, 283866 points (1.4/m2), read 5.9 s, measure 0.0 s
+[  357.0s]   cell 251/748 20636/29366: 1 buildings, 1 collections, 9391 points (1.9/m2), read 3.8 s, measure 0.0 s
+[  423.0s]   cell 301/748 20641/29350: 4 buildings, 1 collections, 28059 points (2.5/m2), read 2.5 s, measure 0.0 s
+[  501.8s]   cell 351/748 20643/29367: 96 buildings, 1 collections, 369690 points (1.1/m2), read 4.4 s, measure 0.1 s
+[  570.9s]   cell 401/748 20646/29365: 12 buildings, 1 collections, 243967 points (1.4/m2), read 3.0 s, measure 0.0 s
+[  653.7s]   cell 451/748 20649/29355: 140 buildings, 1 collections, 1234333 points (3.0/m2), read 5.5 s, measure 0.2 s
+[  738.6s]   cell 501/748 20651/29364: 50 buildings, 2 collections, 109951 points (1.3/m2), read 4.2 s, measure 0.0 s
+[  815.0s]   cell 551/748 20654/29353: 106 buildings, 1 collections, 1024244 points (4.1/m2), read 3.7 s, measure 0.2 s
+[  887.9s]   cell 601/748 20658/29355: 63 buildings, 1 collections, 1839763 points (4.5/m2), read 5.4 s, measure 0.1 s
+[  954.8s]   cell 651/748 20663/29354: 746 buildings, 1 collections, 899882 points (2.1/m2), read 5.0 s, measure 0.6 s
+[ 1033.5s]   cell 701/748 20667/29353: 109 buildings, 1 collections, 1524159 points (3.5/m2), read 5.9 s, measure 0.2 s
+[ 1118.8s] shard done {"cells": 748, "done": 748, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 428659911, "read_s": 3249.2, "measure_s": 64.6, "readers": 3, "restarts": 0, "measured": 38822, "buildings": 50560, "complete": true}
+[    0.1s] shard 10: 704 cells, 67897 buildings; resolution 2.0 m; 2899 s left
+[    1.5s]   cell 1/704 20640/29372: 2 buildings, 1 collections, 50168 points (2.1/m2), read 1.3 s, measure 0.2 s
+[   28.2s]   cell 51/704 20656/29361: 7 buildings, 1 collections, 257559 points (3.0/m2), read 1.8 s, measure 0.0 s
+[   62.0s]   cell 101/704 20661/29364: 23 buildings, 2 collections, 320477 points (1.0/m2), read 2.5 s, measure 0.0 s
+[   95.4s]   cell 151/704 20665/29371: 11 buildings, 1 collections, 181335 points (1.7/m2), read 1.4 s, measure 0.0 s
+[  135.5s]   cell 201/704 20669/29361: 4 buildings, 2 collections, 1066690 points (10.2/m2), read 3.3 s, measure 0.1 s
+[  187.8s]   cell 251/704 20673/29344: 59 buildings, 1 collections, 1101271 points (5.1/m2), read 3.2 s, measure 0.1 s
+[  239.9s]   cell 301/704 20675/29361: 18 buildings, 1 collections, 1699852 points (6.2/m2), read 4.4 s, measure 0.1 s
+[  294.2s]   cell 351/704 20678/29352: 177 buildings, 1 collections, 2303620 points (5.6/m2), read 4.8 s, measure 0.5 s
+[  355.6s]   cell 401/704 20681/29358: 12 buildings, 1 collections, 3299919 points (8.2/m2), read 5.8 s, measure 0.2 s
+[  414.5s]   cell 451/704 20686/29350: 5 buildings, 1 collections, 513694 points (2.1/m2), read 2.3 s, measure 0.0 s
+[  474.0s]   cell 501/704 20689/29359: 34 buildings, 1 collections, 2567812 points (7.4/m2), read 4.6 s, measure 0.2 s
+[  535.3s]   cell 551/704 20693/29350: 264 buildings, 1 collections, 2025880 points (6.1/m2), read 4.3 s, measure 0.5 s
+[  593.3s]   cell 601/704 20697/29350: 41 buildings, 1 collections, 3420574 points (8.9/m2), read 5.1 s, measure 0.2 s
+[  656.3s]   cell 651/704 20700/29354: 35 buildings, 1 collections, 505505 points (4.7/m2), read 1.9 s, measure 0.1 s
+[  717.1s]   cell 701/704 20703/29356: 8 buildings, 1 collections, 172224 points (6.8/m2), read 1.5 s, measure 0.0 s
+[  722.5s] shard done {"cells": 704, "done": 704, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 703569219, "read_s": 1996.7, "measure_s": 155.4, "readers": 3, "restarts": 0, "measured": 55080, "buildings": 67897, "complete": true}
+[    0.1s] shard 11: 695 cells, 71982 buildings; resolution 2.0 m; 2899 s left
+[    8.0s]   cell 1/695 20672/29364: 37 buildings, 1 collections, 2282861 points (8.8/m2), read 7.3 s, measure 0.4 s
+[   89.9s]   cell 51/695 20676/29367: 136 buildings, 1 collections, 1522215 points (4.1/m2), read 6.4 s, measure 0.2 s
+[  183.8s]   cell 101/695 20679/29374: 256 buildings, 1 collections, 399697 points (1.0/m2), read 4.0 s, measure 0.2 s
+[  272.8s]   cell 151/695 20683/29361: 296 buildings, 1 collections, 1993590 points (4.8/m2), read 6.9 s, measure 0.5 s
+[  364.8s]   cell 201/695 20686/29363: 123 buildings, 1 collections, 1993539 points (5.0/m2), read 7.4 s, measure 0.3 s
+[  467.0s]   cell 251/695 20689/29367: 48 buildings, 1 collections, 1780683 points (5.8/m2), read 6.6 s, measure 0.2 s
+[  569.3s]   cell 301/695 20692/29369: 124 buildings, 2 collections, 1434031 points (3.6/m2), read 7.5 s, measure 0.2 s
+[  667.6s]   cell 351/695 20695/29371: 254 buildings, 1 collections, 403962 points (1.0/m2), read 4.0 s, measure 0.2 s
+[  764.7s]   cell 401/695 20698/29374: 189 buildings, 1 collections, 446892 points (1.2/m2), read 4.8 s, measure 0.1 s
+[  864.3s]   cell 451/695 20702/29360: 2 buildings, 1 collections, 752018 points (9.7/m2), read 4.2 s, measure 0.0 s
+[  961.9s]   cell 501/695 20705/29348: 340 buildings, 1 collections, 1756775 points (4.6/m2), read 6.6 s, measure 0.4 s
+[ 1046.5s]   cell 551/695 20710/29357: 139 buildings, 1 collections, 2217142 points (4.9/m2), read 7.7 s, measure 0.4 s
+[ 1162.3s]   cell 601/695 20715/29357: 438 buildings, 1 collections, 2684277 points (6.4/m2), read 8.2 s, measure 0.6 s
+[ 1268.2s]   cell 651/695 20719/29355: 240 buildings, 1 collections, 1752608 points (4.0/m2), read 8.3 s, measure 0.4 s
+[ 1348.3s] shard done {"cells": 695, "done": 695, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 795740529, "read_s": 3863.6, "measure_s": 123.3, "readers": 3, "restarts": 0, "measured": 57329, "buildings": 71982, "complete": true}
+[    0.1s] shard 12: 546 cells, 130749 buildings; resolution 2.0 m; 2898 s left
+[    4.9s]   cell 1/546 20704/29360: 87 buildings, 1 collections, 1302670 points (6.7/m2), read 4.3 s, measure 0.3 s
+[   67.8s]   cell 51/546 20707/29363: 21 buildings, 1 collections, 672352 points (3.5/m2), read 3.0 s, measure 0.1 s
+[  116.2s]   cell 101/546 20710/29374: 22 buildings, 1 collections, 418375 points (1.6/m2), read 1.9 s, measure 0.0 s
+[  182.7s]   cell 151/546 20714/29363: 305 buildings, 1 collections, 1784446 points (4.3/m2), read 3.9 s, measure 0.6 s
+[  244.6s]   cell 201/546 20717/29365: 539 buildings, 1 collections, 1639764 points (3.6/m2), read 4.5 s, measure 0.9 s
+[  307.9s]   cell 251/546 20720/29359: 397 buildings, 1 collections, 1514662 points (3.5/m2), read 4.2 s, measure 0.7 s
+[  376.5s]   cell 301/546 20722/29369: 167 buildings, 2 collections, 1083827 points (2.6/m2), read 4.3 s, measure 0.3 s
+[  445.0s]   cell 351/546 20725/29361: 455 buildings, 1 collections, 1170292 points (2.8/m2), read 3.7 s, measure 0.8 s
+[  512.6s]   cell 401/546 20728/29353: 248 buildings, 1 collections, 1162428 points (2.9/m2), read 3.0 s, measure 0.3 s
+[  576.3s]   cell 451/546 20731/29350: 4 buildings, 1 collections, 35304 points (1.2/m2), read 1.1 s, measure 0.0 s
+[  648.6s]   cell 501/546 20733/29362: 200 buildings, 1 collections, 2486681 points (5.8/m2), read 6.0 s, measure 0.7 s
+[  706.6s] shard done {"cells": 546, "done": 546, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 657643813, "read_s": 1993.0, "measure_s": 245.1, "readers": 3, "restarts": 0, "measured": 115593, "buildings": 130749, "complete": true}
+[    0.1s] shard 13: 782 cells, 36392 buildings; resolution 2.0 m; 2899 s left
+[    2.1s]   cell 1/782 20608/29378: 1 buildings, 1 collections, 7148 points (2.0/m2), read 2.0 s, measure 0.1 s
+[   79.6s]   cell 51/782 20610/29380: 19 buildings, 1 collections, 608758 points (1.8/m2), read 3.4 s, measure 0.0 s
+[  162.3s]   cell 101/782 20611/29404: 21 buildings, 1 collections, 2536895 points (9.8/m2), read 6.6 s, measure 0.2 s
+[  241.4s]   cell 151/782 20613/29398: 23 buildings, 1 collections, 1123950 points (5.6/m2), read 5.4 s, measure 0.1 s
+[  320.9s]   cell 201/782 20615/29388: 1 buildings, 2 collections, 5435 points (1.1/m2), read 3.7 s, measure 0.0 s
+[  400.5s]   cell 251/782 20617/29385: 21 buildings, 1 collections, 691920 points (2.4/m2), read 3.8 s, measure 0.0 s
+[  477.6s]   cell 301/782 20619/29379: 140 buildings, 1 collections, 425241 points (1.1/m2), read 3.1 s, measure 0.1 s
+[  543.7s]   cell 351/782 20620/29402: 34 buildings, 1 collections, 876913 points (4.4/m2), read 4.3 s, measure 0.1 s
+[  611.2s]   cell 401/782 20622/29394: 38 buildings, 2 collections, 710747 points (1.8/m2), read 5.1 s, measure 0.1 s
+[  682.4s]   cell 451/782 20624/29389: 59 buildings, 1 collections, 545210 points (1.4/m2), read 3.4 s, measure 0.1 s
+[  737.6s]   cell 501/782 20628/29377: 12 buildings, 1 collections, 62293 points (0.9/m2), read 2.9 s, measure 0.0 s
+[  787.7s]   cell 551/782 20631/29380: 6 buildings, 1 collections, 288984 points (2.3/m2), read 3.3 s, measure 0.0 s
+[  845.3s]   cell 601/782 20634/29383: 9 buildings, 1 collections, 281864 points (1.5/m2), read 3.3 s, measure 0.0 s
+[  895.5s]   cell 651/782 20637/29391: 34 buildings, 1 collections, 340305 points (1.4/m2), read 2.8 s, measure 0.0 s
+[  947.6s]   cell 701/782 20725/29370: 139 buildings, 1 collections, 536162 points (1.3/m2), read 4.3 s, measure 0.1 s
+[ 1018.6s]   cell 751/782 20732/29368: 278 buildings, 2 collections, 1477869 points (3.6/m2), read 7.9 s, measure 0.3 s
+[ 1063.8s] shard done {"cells": 782, "done": 782, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 584934067, "read_s": 3085.1, "measure_s": 53.5, "readers": 3, "restarts": 0, "measured": 26522, "buildings": 36392, "complete": true}
+[    0.1s] shard 14: 814 cells, 24077 buildings; resolution 2.0 m; 2899 s left
+[    5.0s]   cell 1/814 20620/29405: 74 buildings, 1 collections, 1569939 points (6.3/m2), read 4.2 s, measure 0.3 s
+[   46.6s]   cell 51/814 20626/29402: 59 buildings, 1 collections, 616594 points (1.5/m2), read 2.6 s, measure 0.1 s
+[   77.4s]   cell 101/814 20630/29403: 2 buildings, 1 collections, 8076 points (1.3/m2), read 1.0 s, measure 0.0 s
+[  113.2s]   cell 151/814 20634/29399: 5 buildings, 1 collections, 392497 points (1.9/m2), read 1.9 s, measure 0.0 s
+[  148.8s]   cell 201/814 20638/29398: 43 buildings, 1 collections, 570966 points (1.6/m2), read 2.3 s, measure 0.1 s
+[  185.3s]   cell 251/814 20641/29377: 5 buildings, 1 collections, 218327 points (1.9/m2), read 1.9 s, measure 0.0 s
+[  217.3s]   cell 301/814 20642/29404: 12 buildings, 1 collections, 436575 points (2.1/m2), read 1.9 s, measure 0.1 s
+[  251.2s]   cell 351/814 20644/29393: 161 buildings, 1 collections, 524370 points (1.2/m2), read 2.0 s, measure 0.2 s
+[  285.8s]   cell 401/814 20646/29394: 126 buildings, 1 collections, 588296 points (1.4/m2), read 2.0 s, measure 0.2 s
+[  319.6s]   cell 451/814 20648/29397: 32 buildings, 1 collections, 709890 points (1.8/m2), read 2.8 s, measure 0.1 s
+[  350.4s]   cell 501/814 20650/29399: 30 buildings, 1 collections, 232793 points (1.4/m2), read 1.9 s, measure 0.0 s
+[  381.2s]   cell 551/814 20653/29382: 25 buildings, 1 collections, 747070 points (2.4/m2), read 2.4 s, measure 0.1 s
+[  410.6s]   cell 601/814 20656/29377: 84 buildings, 1 collections, 408919 points (1.2/m2), read 1.9 s, measure 0.1 s
+[  439.1s]   cell 651/814 20659/29391: 4 buildings, 1 collections, 34393 points (1.6/m2), read 1.5 s, measure 0.0 s
+[  468.8s]   cell 701/814 20663/29383: 34 buildings, 1 collections, 497580 points (1.5/m2), read 2.1 s, measure 0.1 s
+[  499.3s]   cell 751/814 20666/29387: 35 buildings, 1 collections, 471256 points (1.6/m2), read 2.5 s, measure 0.1 s
+[  525.4s]   cell 801/814 20671/29378: 3 buildings, 1 collections, 20335 points (1.2/m2), read 0.9 s, measure 0.0 s
+[  533.5s] shard done {"cells": 814, "done": 814, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 294423292, "read_s": 1555.6, "measure_s": 43.3, "readers": 3, "restarts": 0, "measured": 15393, "buildings": 24077, "complete": true}
+[    0.1s] shard 15: 796 cells, 31165 buildings; resolution 2.0 m; 2898 s left
+[    2.1s]   cell 1/796 20608/29411: 1 buildings, 1 collections, 26689 points (7.2/m2), read 1.9 s, measure 0.1 s
+[   85.9s]   cell 51/796 20610/29412: 5 buildings, 1 collections, 483914 points (7.8/m2), read 3.3 s, measure 0.0 s
+[  155.2s]   cell 101/796 20612/29419: 2 buildings, 1 collections, 44649 points (7.2/m2), read 2.6 s, measure 0.0 s
+[  229.1s]   cell 151/796 20614/29429: 3 buildings, 1 collections, 107627 points (4.9/m2), read 2.1 s, measure 0.0 s
+[  299.3s]   cell 201/796 20617/29409: 25 buildings, 1 collections, 1746566 points (5.1/m2), read 4.8 s, measure 0.1 s
+[  376.9s]   cell 251/796 20619/29418: 40 buildings, 1 collections, 2006797 points (8.1/m2), read 6.2 s, measure 0.2 s
+[  447.1s]   cell 301/796 20621/29416: 1 buildings, 1 collections, 19527 points (5.3/m2), read 1.9 s, measure 0.0 s
+[  520.5s]   cell 351/796 20623/29416: 7 buildings, 1 collections, 961372 points (9.5/m2), read 3.7 s, measure 0.1 s
+[  592.1s]   cell 401/796 20626/29417: 9 buildings, 1 collections, 224362 points (5.6/m2), read 2.6 s, measure 0.0 s
+[  673.9s]   cell 451/796 20628/29429: 80 buildings, 1 collections, 2811476 points (7.0/m2), read 6.9 s, measure 0.3 s
+[  747.3s]   cell 501/796 20631/29418: 3 buildings, 1 collections, 103675 points (7.3/m2), read 2.1 s, measure 0.0 s
+[  826.1s]   cell 551/796 20634/29419: 6 buildings, 1 collections, 322657 points (8.8/m2), read 2.7 s, measure 0.0 s
+[  900.6s]   cell 601/796 20639/29408: 17 buildings, 1 collections, 942776 points (2.5/m2), read 2.7 s, measure 0.1 s
+[  947.8s]   cell 651/796 20660/29397: 2 buildings, 1 collections, 10144 points (1.8/m2), read 1.3 s, measure 0.0 s
+[  990.9s]   cell 701/796 20665/29392: 17 buildings, 1 collections, 627538 points (2.7/m2), read 2.8 s, measure 0.1 s
+[ 1031.7s]   cell 751/796 20668/29405: 8 buildings, 1 collections, 683529 points (1.8/m2), read 2.6 s, measure 0.1 s
+[ 1063.4s] shard done {"cells": 796, "done": 795, "empty": 1, "failed": 0, "skipped_for_time": 0, "points": 852137424, "read_s": 2990.0, "measure_s": 102.7, "readers": 3, "restarts": 0, "measured": 21456, "buildings": 31161, "complete": true}
+[    0.1s] shard 16: 686 cells, 75430 buildings; resolution 2.0 m; 2899 s left
+[    1.9s]   cell 1/686 20624/29432: 1 buildings, 1 collections, 10451 points (2.8/m2), read 1.8 s, measure 0.1 s
+[   82.7s]   cell 51/686 20634/29432: 265 buildings, 1 collections, 1999798 points (4.8/m2), read 6.0 s, measure 0.4 s
+[  158.2s]   cell 101/686 20638/29426: 15 buildings, 1 collections, 1926383 points (7.4/m2), read 4.8 s, measure 0.1 s
+[  242.0s]   cell 151/686 20640/29430: 43 buildings, 1 collections, 1972212 points (6.2/m2), read 5.6 s, measure 0.2 s
+[  327.7s]   cell 201/686 20642/29433: 302 buildings, 1 collections, 1388304 points (3.1/m2), read 5.6 s, measure 0.4 s
+[  410.4s]   cell 251/686 20645/29410: 7 buildings, 2 collections, 112690 points (1.9/m2), read 3.7 s, measure 0.0 s
+[  480.6s]   cell 301/686 20647/29416: 3 buildings, 1 collections, 93732 points (5.6/m2), read 2.9 s, measure 0.0 s
+[  547.4s]   cell 351/686 20650/29412: 4 buildings, 1 collections, 70351 points (7.9/m2), read 2.0 s, measure 0.0 s
+[  617.5s]   cell 401/686 20652/29424: 64 buildings, 1 collections, 1101898 points (3.0/m2), read 5.1 s, measure 0.1 s
+[  691.3s]   cell 451/686 20655/29409: 3 buildings, 1 collections, 797774 points (2.7/m2), read 3.8 s, measure 0.1 s
+[  768.6s]   cell 501/686 20659/29408: 13 buildings, 1 collections, 168229 points (1.3/m2), read 3.1 s, measure 0.0 s
+[  849.9s]   cell 551/686 20662/29413: 5 buildings, 1 collections, 764374 points (5.9/m2), read 3.8 s, measure 0.1 s
+[  935.3s]   cell 601/686 20665/29418: 79 buildings, 1 collections, 1816584 points (7.4/m2), read 4.7 s, measure 0.2 s
+[ 1008.9s]   cell 651/686 20669/29408: 36 buildings, 1 collections, 682657 points (2.2/m2), read 3.4 s, measure 0.1 s
+[ 1060.1s] shard done {"cells": 686, "done": 685, "empty": 1, "failed": 0, "skipped_for_time": 0, "points": 767482714, "read_s": 3024.6, "measure_s": 113.0, "readers": 3, "restarts": 0, "measured": 56734, "buildings": 75428, "complete": true}
+[    0.1s] shard 17: 758 cells, 45789 buildings; resolution 2.0 m; 2898 s left
+[    7.5s]   cell 1/758 20640/29436: 113 buildings, 1 collections, 1098875 points (2.6/m2), read 6.9 s, measure 0.3 s
+[   86.9s]   cell 51/758 20654/29437: 6 buildings, 1 collections, 158955 points (4.4/m2), read 2.8 s, measure 0.0 s
+[  168.9s]   cell 101/758 20659/29426: 52 buildings, 1 collections, 1676828 points (4.9/m2), read 6.7 s, measure 0.2 s
+[  264.1s]   cell 151/758 20662/29437: 587 buildings, 1 collections, 1248681 points (3.0/m2), read 6.1 s, measure 0.6 s
+[  360.7s]   cell 201/758 20667/29432: 49 buildings, 1 collections, 853334 points (2.3/m2), read 5.6 s, measure 0.1 s
+[  434.7s]   cell 251/758 20671/29438: 1 buildings, 1 collections, 17008 points (2.5/m2), read 2.4 s, measure 0.0 s
+[  498.6s]   cell 301/758 20674/29391: 33 buildings, 1 collections, 192727 points (1.2/m2), read 4.0 s, measure 0.0 s
+[  561.5s]   cell 351/758 20677/29385: 7 buildings, 1 collections, 153024 points (1.4/m2), read 2.7 s, measure 0.0 s
+[  623.8s]   cell 401/758 20680/29383: 55 buildings, 1 collections, 377018 points (1.4/m2), read 3.9 s, measure 0.1 s
+[  685.2s]   cell 451/758 20683/29390: 115 buildings, 2 collections, 544724 points (1.3/m2), read 4.5 s, measure 0.1 s
+[  768.3s]   cell 501/758 20687/29383: 2 buildings, 1 collections, 11475 points (1.2/m2), read 2.0 s, measure 0.0 s
+[  846.3s]   cell 551/758 20690/29388: 10 buildings, 1 collections, 1146938 points (3.9/m2), read 5.4 s, measure 0.1 s
+[  927.6s]   cell 601/758 20694/29377: 6 buildings, 1 collections, 261394 points (1.5/m2), read 3.4 s, measure 0.0 s
+[ 1013.9s]   cell 651/758 20697/29379: 100 buildings, 1 collections, 487664 points (1.3/m2), read 4.2 s, measure 0.1 s
+[ 1098.6s]   cell 701/758 20700/29382: 5 buildings, 1 collections, 106818 points (1.5/m2), read 3.0 s, measure 0.0 s
+[ 1192.0s]   cell 751/758 20703/29384: 74 buildings, 2 collections, 1136532 points (2.7/m2), read 7.9 s, measure 0.1 s
+[ 1206.1s] shard done {"cells": 758, "done": 758, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 480798608, "read_s": 3533.1, "measure_s": 70.2, "readers": 3, "restarts": 0, "measured": 30394, "buildings": 45789, "complete": true}
+[    0.0s] shard 18: 769 cells, 42044 buildings; resolution 2.0 m; 2899 s left
+[    4.0s]   cell 1/769 20672/29396: 24 buildings, 1 collections, 333941 points (1.6/m2), read 3.8 s, measure 0.1 s
+[   44.4s]   a reader died at cell 20676/29397: saving, to go on in a new run
+[   44.4s] shard stopped (a reader died); {"cells": 769, "done": 45, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 14232440, "read_s": 126.4, "measure_s": 1.1, "readers": 3, "restarts": 0, "measured": 678, "buildings": 1150, "complete": false}
+[    0.0s] resuming: 45 cells already done, 1150 buildings
+[    0.0s] shard 18: 769 cells, 42044 buildings; resolution 2.0 m; 2854 s left
+[    7.7s]   cell 51/769 20676/29402: 14 buildings, 1 collections, 380278 points (1.5/m2), read 4.0 s, measure 0.0 s
+[   56.2s]   cell 101/769 20680/29399: 20 buildings, 1 collections, 270821 points (1.6/m2), read 2.5 s, measure 0.0 s
+[  104.4s]   cell 151/769 20683/29401: 7 buildings, 2 collections, 355742 points (2.1/m2), read 3.0 s, measure 0.0 s
+[  180.8s]   cell 201/769 20687/29394: 6 buildings, 1 collections, 367226 points (5.0/m2), read 3.1 s, measure 0.0 s
+[  254.3s]   cell 251/769 20690/29399: 311 buildings, 1 collections, 1165712 points (2.7/m2), read 4.1 s, measure 0.2 s
+[  326.8s]   cell 301/769 20693/29402: 73 buildings, 1 collections, 1449642 points (3.7/m2), read 4.3 s, measure 0.1 s
+[  399.0s]   cell 351/769 20696/29405: 18 buildings, 1 collections, 376223 points (3.4/m2), read 3.0 s, measure 0.0 s
+[  473.6s]   cell 401/769 20700/29393: 116 buildings, 1 collections, 1260404 points (3.1/m2), read 4.6 s, measure 0.1 s
+[  547.6s]   cell 451/769 20703/29397: 26 buildings, 1 collections, 1183303 points (3.6/m2), read 4.7 s, measure 0.1 s
+[  619.0s]   cell 501/769 20706/29385: 51 buildings, 2 collections, 1427203 points (4.6/m2), read 5.1 s, measure 0.1 s
+[  702.7s]   cell 551/769 20709/29387: 103 buildings, 1 collections, 1312735 points (3.2/m2), read 6.1 s, measure 0.1 s
+[  771.4s]   cell 601/769 20713/29378: 233 buildings, 1 collections, 548990 points (1.3/m2), read 2.4 s, measure 0.1 s
+[  827.8s]   cell 651/769 20716/29382: 9 buildings, 1 collections, 249514 points (2.4/m2), read 2.3 s, measure 0.0 s
+[  887.8s]   cell 701/769 20719/29390: 8 buildings, 1 collections, 274358 points (3.8/m2), read 2.6 s, measure 0.0 s
+[  938.1s]   cell 751/769 20726/29376: 151 buildings, 1 collections, 389755 points (1.3/m2), read 2.5 s, measure 0.1 s
+[  953.6s] shard done {"cells": 769, "done": 769, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 590865128, "read_s": 2933.1, "measure_s": 49.1, "readers": 3, "restarts": 1, "measured": 30466, "buildings": 42044, "complete": true}
+[    0.1s] shard 19: 756 cells, 47235 buildings; resolution 2.0 m; 2899 s left
+[    2.6s]   cell 1/756 20672/29408: 2 buildings, 1 collections, 7800 points (1.5/m2), read 2.4 s, measure 0.1 s
+[   92.5s]   cell 51/756 20681/29409: 24 buildings, 1 collections, 335982 points (1.5/m2), read 4.1 s, measure 0.0 s
+[  193.8s]   cell 101/756 20704/29399: 69 buildings, 1 collections, 1680861 points (4.2/m2), read 7.9 s, measure 0.2 s
+[  283.9s]   cell 151/756 20708/29394: 40 buildings, 1 collections, 482305 points (4.0/m2), read 4.6 s, measure 0.1 s
+[  367.9s]   cell 201/756 20711/29404: 5 buildings, 1 collections, 116482 points (2.8/m2), read 2.8 s, measure 0.0 s
+[  448.2s]   cell 251/756 20715/29400: 14 buildings, 1 collections, 512778 points (3.4/m2), read 4.5 s, measure 0.0 s
+[  533.5s]   cell 301/756 20718/29404: 118 buildings, 1 collections, 1403159 points (3.4/m2), read 5.5 s, measure 0.2 s
+[  638.7s]   cell 351/756 20721/29391: 36 buildings, 1 collections, 1449555 points (3.9/m2), read 8.9 s, measure 0.2 s
+[  737.8s]   cell 401/756 20723/29393: 2 buildings, 1 collections, 109036 points (2.3/m2), read 3.5 s, measure 0.0 s
+[  834.7s]   cell 451/756 20725/29396: 33 buildings, 1 collections, 880501 points (3.7/m2), read 4.8 s, measure 0.1 s
+[  931.7s]   cell 501/756 20727/29399: 23 buildings, 1 collections, 131357 points (2.7/m2), read 2.4 s, measure 0.0 s
+[ 1026.5s]   cell 551/756 20729/29392: 107 buildings, 1 collections, 1498214 points (3.8/m2), read 7.2 s, measure 0.2 s
+[ 1122.8s]   cell 601/756 20731/29378: 24 buildings, 1 collections, 374352 points (1.4/m2), read 3.6 s, measure 0.0 s
+[ 1212.1s]   cell 651/756 20732/29396: 328 buildings, 1 collections, 1229276 points (3.1/m2), read 6.1 s, measure 0.4 s
+[ 1307.3s]   cell 701/756 20734/29384: 90 buildings, 2 collections, 897665 points (2.3/m2), read 7.6 s, measure 0.1 s
+[ 1399.6s]   cell 751/756 20735/29402: 9 buildings, 1 collections, 79498 points (4.6/m2), read 2.3 s, measure 0.0 s
+[ 1410.1s] shard done {"cells": 756, "done": 756, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 696616802, "read_s": 4091.0, "measure_s": 91.3, "readers": 3, "restarts": 0, "measured": 35902, "buildings": 47235, "complete": true}
+[    0.1s] shard 20: 765 cells, 43326 buildings; resolution 2.0 m; 2898 s left
+[    2.1s]   cell 1/765 20672/29417: 7 buildings, 1 collections, 161758 points (6.1/m2), read 1.9 s, measure 0.1 s
+[   52.5s]   cell 51/765 20675/29418: 27 buildings, 1 collections, 944619 points (5.2/m2), read 3.3 s, measure 0.1 s
+[  110.9s]   cell 101/765 20677/29432: 50 buildings, 1 collections, 391021 points (3.0/m2), read 2.5 s, measure 0.1 s
+[  172.7s]   cell 151/765 20680/29416: 9 buildings, 1 collections, 1599499 points (8.1/m2), read 5.1 s, measure 0.1 s
+[  237.2s]   cell 201/765 20682/29422: 30 buildings, 1 collections, 1564823 points (5.0/m2), read 5.9 s, measure 0.1 s
+[  299.7s]   cell 251/765 20684/29429: 7 buildings, 1 collections, 1264916 points (4.2/m2), read 3.9 s, measure 0.1 s
+[  358.7s]   cell 301/765 20687/29417: 6 buildings, 1 collections, 235155 points (2.0/m2), read 2.1 s, measure 0.0 s
+[  420.1s]   cell 351/765 20689/29432: 10 buildings, 2 collections, 275857 points (5.2/m2), read 3.7 s, measure 0.0 s
+[  468.4s]   cell 401/765 20691/29435: 221 buildings, 1 collections, 442442 points (1.9/m2), read 2.2 s, measure 0.2 s
+[  519.6s]   cell 451/765 20693/29431: 9 buildings, 1 collections, 81983 points (2.8/m2), read 1.4 s, measure 0.0 s
+[  571.0s]   cell 501/765 20696/29411: 117 buildings, 1 collections, 829107 points (2.4/m2), read 3.4 s, measure 0.2 s
+[  624.2s]   cell 551/765 20698/29423: 24 buildings, 1 collections, 1032155 points (2.8/m2), read 2.9 s, measure 0.1 s
+[  675.4s]   cell 601/765 20700/29434: 36 buildings, 1 collections, 1082357 points (2.9/m2), read 2.9 s, measure 0.1 s
+[  735.2s]   cell 651/765 20703/29417: 21 buildings, 1 collections, 546478 points (2.6/m2), read 2.5 s, measure 0.1 s
+[  801.0s]   cell 701/765 20708/29415: 46 buildings, 1 collections, 1234594 points (3.6/m2), read 3.5 s, measure 0.2 s
+[  870.6s]   cell 751/765 20716/29410: 112 buildings, 1 collections, 820840 points (3.6/m2), read 3.2 s, measure 0.2 s
+[  880.9s] shard done {"cells": 765, "done": 761, "empty": 4, "failed": 0, "skipped_for_time": 0, "points": 550097999, "read_s": 2523.7, "measure_s": 81.9, "readers": 3, "restarts": 0, "measured": 33008, "buildings": 43121, "complete": true}
+[    0.0s] shard 21: 728 cells, 57895 buildings; resolution 2.0 m; 2899 s left
+[    2.2s]   cell 1/728 20704/29418: 10 buildings, 1 collections, 87698 points (2.5/m2), read 2.1 s, measure 0.1 s
+[   51.4s]   cell 51/728 20707/29434: 9 buildings, 1 collections, 119225 points (2.3/m2), read 1.8 s, measure 0.0 s
+[  104.4s]   cell 101/728 20710/29424: 17 buildings, 1 collections, 518913 points (4.6/m2), read 3.1 s, measure 0.0 s
+[  156.2s]   cell 151/728 20713/29422: 1 buildings, 1 collections, 11504 points (2.3/m2), read 2.5 s, measure 0.0 s
+[  210.0s]   cell 201/728 20716/29416: 3 buildings, 1 collections, 33232 points (3.5/m2), read 2.2 s, measure 0.0 s
+[  263.1s]   cell 251/728 20718/29437: 1 buildings, 1 collections, 12261 points (2.7/m2), read 2.1 s, measure 0.0 s
+[  313.3s]   cell 301/728 20721/29417: 5 buildings, 1 collections, 199910 points (2.7/m2), read 1.9 s, measure 0.0 s
+[  363.3s]   cell 351/728 20723/29429: 8 buildings, 1 collections, 535559 points (3.5/m2), read 3.0 s, measure 0.0 s
+[  413.2s]   cell 401/728 20726/29413: 432 buildings, 1 collections, 332738 points (0.8/m2), read 2.6 s, measure 0.1 s
+[  468.8s]   cell 451/728 20728/29418: 4 buildings, 1 collections, 167711 points (3.9/m2), read 2.1 s, measure 0.0 s
+[  521.0s]   cell 501/728 20730/29417: 7 buildings, 1 collections, 564898 points (4.6/m2), read 2.8 s, measure 0.0 s
+[  569.5s]   cell 551/728 20732/29418: 13 buildings, 1 collections, 462306 points (4.0/m2), read 3.2 s, measure 0.0 s
+[  625.8s]   cell 601/728 20734/29415: 3 buildings, 1 collections, 485058 points (4.8/m2), read 3.0 s, measure 0.0 s
+[  677.2s]   cell 651/728 20736/29353: 57 buildings, 1 collections, 598363 points (1.8/m2), read 3.6 s, measure 0.1 s
+[  741.6s]   cell 701/728 20743/29350: 1027 buildings, 1 collections, 787479 points (1.8/m2), read 3.6 s, measure 0.4 s
+[  765.7s] shard done {"cells": 728, "done": 705, "empty": 23, "failed": 0, "skipped_for_time": 0, "points": 437412636, "read_s": 2230.8, "measure_s": 48.6, "readers": 3, "restarts": 0, "measured": 41485, "buildings": 54680, "complete": true}
+[    0.0s] shard 22: 524 cells, 140149 buildings; resolution 2.0 m; 2899 s left
+[    5.6s]   cell 1/524 20736/29356: 649 buildings, 1 collections, 995247 points (2.4/m2), read 4.9 s, measure 0.4 s
+[   93.2s]   cell 51/524 20738/29366: 347 buildings, 1 collections, 1791117 points (4.2/m2), read 6.6 s, measure 0.3 s
+[  170.3s]   cell 101/524 20740/29374: 155 buildings, 1 collections, 595998 points (1.4/m2), read 3.0 s, measure 0.1 s
+[  253.9s]   cell 151/524 20743/29357: 198 buildings, 1 collections, 1363622 points (3.2/m2), read 5.8 s, measure 0.3 s
+[  338.7s]   cell 201/524 20745/29359: 607 buildings, 2 collections, 1532407 points (3.4/m2), read 6.4 s, measure 0.4 s
+[  418.2s]   cell 251/524 20747/29363: 285 buildings, 1 collections, 1617605 points (3.8/m2), read 4.8 s, measure 0.3 s
+[  501.0s]   cell 301/524 20749/29371: 112 buildings, 1 collections, 419737 points (1.3/m2), read 2.7 s, measure 0.1 s
+[  546.3s]   a reader died at cell 20751/29356: saving, to go on in a new run
+[  546.5s] shard stopped (a reader died); {"cells": 524, "done": 331, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 398678657, "read_s": 1603.0, "measure_s": 76.3, "readers": 3, "restarts": 0, "measured": 80727, "buildings": 91112, "complete": false}
+[    0.1s] resuming: 331 cells already done, 91112 buildings
+[    0.1s] shard 22: 524 cells, 140149 buildings; resolution 2.0 m; 2353 s left
+[   32.4s]   cell 351/524 20751/29375: 132 buildings, 1 collections, 647605 points (1.5/m2), read 3.1 s, measure 0.1 s
+[  113.3s]   cell 401/524 20754/29360: 110 buildings, 1 collections, 1388464 points (3.1/m2), read 4.3 s, measure 0.2 s
+[  181.9s]   cell 451/524 20757/29354: 540 buildings, 1 collections, 736686 points (1.7/m2), read 3.4 s, measure 0.3 s
+[  252.2s]   cell 501/524 20761/29358: 449 buildings, 2 collections, 809874 points (2.0/m2), read 5.3 s, measure 0.2 s
+[  282.8s] shard done {"cells": 524, "done": 523, "empty": 1, "failed": 0, "skipped_for_time": 0, "points": 576254540, "read_s": 2414.9, "measure_s": 108.4, "readers": 3, "restarts": 1, "measured": 121003, "buildings": 140148, "complete": true}
+[    0.1s] shard 23: 682 cells, 76968 buildings; resolution 2.0 m; 2899 s left
+[    4.9s]   cell 1/682 20752/29368: 247 buildings, 2 collections, 1908185 points (5.0/m2), read 4.2 s, measure 0.3 s
+[   40.4s]   cell 51/682 20757/29374: 103 buildings, 1 collections, 494099 points (1.2/m2), read 1.8 s, measure 0.1 s
+[   85.9s]   cell 101/682 20761/29369: 70 buildings, 2 collections, 960131 points (2.9/m2), read 3.3 s, measure 0.1 s
+[  127.8s]   cell 151/682 20764/29373: 100 buildings, 1 collections, 583721 points (1.4/m2), read 1.7 s, measure 0.1 s
+[  170.6s]   cell 201/682 20767/29375: 115 buildings, 1 collections, 489156 points (1.2/m2), read 2.2 s, measure 0.1 s
+[  210.6s]   cell 251/682 20770/29370: 50 buildings, 1 collections, 362829 points (1.4/m2), read 1.8 s, measure 0.1 s
+[  246.4s]   cell 301/682 20773/29353: 52 buildings, 1 collections, 229900 points (2.0/m2), read 1.6 s, measure 0.0 s
+[  288.4s]   cell 351/682 20775/29365: 214 buildings, 1 collections, 1586009 points (3.8/m2), read 3.4 s, measure 0.3 s
+[  332.1s]   cell 401/682 20778/29352: 114 buildings, 1 collections, 529843 points (2.6/m2), read 1.6 s, measure 0.1 s
+[  380.7s]   cell 451/682 20780/29369: 49 buildings, 1 collections, 1435439 points (4.2/m2), read 4.3 s, measure 0.1 s
+[  420.1s]   cell 501/682 20783/29364: 49 buildings, 1 collections, 552019 points (2.2/m2), read 2.2 s, measure 0.2 s
+[  460.7s]   cell 551/682 20786/29368: 74 buildings, 1 collections, 1367208 points (4.2/m2), read 3.7 s, measure 0.3 s
+[  502.6s]   cell 601/682 20790/29366: 37 buildings, 1 collections, 1090015 points (3.8/m2), read 3.5 s, measure 0.2 s
+[  545.7s]   cell 651/682 20795/29365: 50 buildings, 1 collections, 1100883 points (2.7/m2), read 2.7 s, measure 0.2 s
+[  568.5s] shard done {"cells": 682, "done": 682, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 554312286, "read_s": 1615.4, "measure_s": 104.4, "readers": 3, "restarts": 0, "measured": 61403, "buildings": 76968, "complete": true}
+[    0.1s] shard 24: 701 cells, 69152 buildings; resolution 2.0 m; 2899 s left
+[    4.6s]   cell 1/701 20736/29376: 59 buildings, 1 collections, 566213 points (1.5/m2), read 4.2 s, measure 0.2 s
+[   80.5s]   cell 51/701 20739/29379: 53 buildings, 1 collections, 577331 points (1.6/m2), read 4.7 s, measure 0.1 s
+[  159.8s]   cell 101/701 20742/29383: 56 buildings, 1 collections, 699934 points (1.8/m2), read 4.3 s, measure 0.1 s
+[  242.3s]   cell 151/701 20745/29386: 496 buildings, 1 collections, 671808 points (1.6/m2), read 4.7 s, measure 0.5 s
+[  320.5s]   cell 201/701 20748/29390: 485 buildings, 1 collections, 694690 points (1.6/m2), read 4.8 s, measure 0.5 s
+[  392.5s]   cell 251/701 20752/29378: 13 buildings, 1 collections, 85345 points (1.4/m2), read 3.0 s, measure 0.0 s
+[  463.9s]   cell 301/701 20755/29385: 1 buildings, 2 collections, 5838 points (1.6/m2), read 3.9 s, measure 0.0 s
+[  531.1s]   cell 351/701 20759/29378: 12 buildings, 1 collections, 487251 points (1.6/m2), read 3.9 s, measure 0.0 s
+[  597.3s]   cell 401/701 20764/29382: 15 buildings, 1 collections, 398028 points (1.6/m2), read 3.8 s, measure 0.0 s
+[  670.2s]   cell 451/701 20795/29370: 19 buildings, 1 collections, 977727 points (3.7/m2), read 4.5 s, measure 0.1 s
+[  747.6s]   cell 501/701 20802/29362: 20 buildings, 1 collections, 632654 points (2.6/m2), read 4.3 s, measure 0.1 s
+[  831.6s]   cell 551/701 20805/29372: 43 buildings, 1 collections, 1349833 points (3.3/m2), read 5.5 s, measure 0.1 s
+[  911.2s]   cell 601/701 20811/29375: 72 buildings, 1 collections, 729004 points (3.0/m2), read 5.0 s, measure 0.1 s
+[ 1004.5s]   cell 651/701 20817/29371: 500 buildings, 1 collections, 735661 points (1.7/m2), read 5.2 s, measure 0.5 s
+[ 1077.7s]   cell 701/701 20832/29369: 2 buildings, 1 collections, 13448 points (2.6/m2), read 2.0 s, measure 0.0 s
+[ 1077.9s] shard done {"cells": 701, "done": 701, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 416361173, "read_s": 3173.9, "measure_s": 87.6, "readers": 3, "restarts": 0, "measured": 57394, "buildings": 69152, "complete": true}
+[    0.1s] shard 25: 704 cells, 68119 buildings; resolution 2.0 m; 2899 s left
+[    7.6s]   cell 1/704 20736/29392: 74 buildings, 1 collections, 1114155 points (4.9/m2), read 7.1 s, measure 0.2 s
+[   98.2s]   cell 51/704 20739/29396: 119 buildings, 1 collections, 1406195 points (3.4/m2), read 6.4 s, measure 0.2 s
+[  179.5s]   cell 101/704 20742/29404: 49 buildings, 1 collections, 1580385 points (3.9/m2), read 5.8 s, measure 0.2 s
+[  269.2s]   cell 151/704 20745/29407: 47 buildings, 1 collections, 1020222 points (3.5/m2), read 4.9 s, measure 0.1 s
+[  358.1s]   cell 201/704 20749/29394: 571 buildings, 1 collections, 1037658 points (2.4/m2), read 5.3 s, measure 0.7 s
+[  442.9s]   cell 251/704 20752/29396: 88 buildings, 1 collections, 1729182 points (4.2/m2), read 5.7 s, measure 0.2 s
+[  530.3s]   cell 301/704 20755/29402: 1 buildings, 1 collections, 17942 points (2.7/m2), read 2.1 s, measure 0.0 s
+[  614.0s]   cell 351/704 20758/29403: 1 buildings, 1 collections, 16256 points (3.4/m2), read 1.8 s, measure 0.0 s
+[  699.2s]   cell 401/704 20761/29390: 73 buildings, 1 collections, 1671797 points (4.0/m2), read 6.3 s, measure 0.2 s
+[  783.7s]   cell 451/704 20763/29392: 73 buildings, 1 collections, 1568920 points (3.9/m2), read 5.4 s, measure 0.2 s
+[  862.9s]   cell 501/704 20765/29396: 34 buildings, 1 collections, 768744 points (3.1/m2), read 4.6 s, measure 0.1 s
+[  947.2s]   cell 551/704 20767/29401: 88 buildings, 1 collections, 545159 points (1.9/m2), read 4.5 s, measure 0.1 s
+[ 1099.8s]   cell 651/704 20775/29376: 3 buildings, 2 collections, 137149 points (1.7/m2), read 5.9 s, measure 0.0 s
+[ 1191.7s]   cell 701/704 20781/29379: 5 buildings, 1 collections, 157271 points (2.7/m2), read 2.5 s, measure 0.0 s
+[ 1196.1s] shard done {"cells": 704, "done": 699, "empty": 5, "failed": 0, "skipped_for_time": 0, "points": 622982615, "read_s": 3494.2, "measure_s": 102.0, "readers": 3, "restarts": 0, "measured": 52473, "buildings": 67995, "complete": true}
+[    0.1s] shard 26: 734 cells, 55660 buildings; resolution 2.0 m; 2899 s left
+[    5.3s]   cell 1/734 20736/29408: 110 buildings, 1 collections, 904760 points (2.2/m2), read 4.8 s, measure 0.3 s
+[  128.2s]   cell 101/734 20745/29422: 12 buildings, 1 collections, 1254173 points (4.1/m2), read 5.1 s, measure 0.1 s
+[  172.4s]   cell 151/734 20751/29411: 100 buildings, 1 collections, 18100 points (0.1/m2), read 3.0 s, measure 0.0 s
+[  252.3s]   cell 201/734 20770/29392: 289 buildings, 1 collections, 782935 points (1.9/m2), read 5.1 s, measure 0.3 s
+[  329.1s]   cell 251/734 20773/29390: 40 buildings, 1 collections, 957190 points (2.5/m2), read 5.5 s, measure 0.1 s
+[  409.4s]   cell 301/734 20776/29384: 112 buildings, 1 collections, 1183871 points (2.9/m2), read 6.8 s, measure 0.2 s
+[  487.9s]   cell 351/734 20778/29392: 379 buildings, 1 collections, 1038084 points (2.7/m2), read 6.8 s, measure 0.4 s
+[  556.9s]   cell 401/734 20780/29404: 72 buildings, 1 collections, 1514412 points (3.7/m2), read 6.1 s, measure 0.2 s
+[  625.2s]   cell 451/734 20783/29394: 8 buildings, 1 collections, 327335 points (1.7/m2), read 3.4 s, measure 0.0 s
+[  696.6s]   cell 501/734 20785/29406: 426 buildings, 1 collections, 658012 points (1.5/m2), read 5.0 s, measure 0.4 s
+[  779.5s]   cell 551/734 20788/29400: 91 buildings, 1 collections, 382970 points (1.2/m2), read 3.3 s, measure 0.1 s
+[  841.0s]   cell 601/734 20791/29376: 2 buildings, 1 collections, 25964 points (4.2/m2), read 2.2 s, measure 0.0 s
+[  896.7s]   cell 651/734 20794/29376: 2 buildings, 1 collections, 14382 points (2.8/m2), read 2.5 s, measure 0.0 s
+[  960.0s]   cell 701/734 20798/29388: 3 buildings, 1 collections, 118564 points (3.0/m2), read 3.7 s, measure 0.0 s
+[  986.9s] shard done {"cells": 734, "done": 658, "empty": 76, "failed": 0, "skipped_for_time": 0, "points": 428863336, "read_s": 2877.0, "measure_s": 74.9, "readers": 3, "restarts": 0, "measured": 38738, "buildings": 52736, "complete": true}
+[    0.1s] shard 27: 779 cells, 38120 buildings; resolution 2.0 m; 2898 s left
+[    4.0s]   cell 1/779 20736/29424: 22 buildings, 1 collections, 1351000 points (3.6/m2), read 3.5 s, measure 0.2 s
+[   44.0s]   cell 51/779 20740/29436: 52 buildings, 1 collections, 1200216 points (3.7/m2), read 3.1 s, measure 0.1 s
+[   90.7s]   cell 101/779 20744/29433: 19 buildings, 1 collections, 830108 points (2.7/m2), read 3.0 s, measure 0.1 s
+[  143.1s]   cell 151/779 20748/29431: 23 buildings, 1 collections, 411821 points (3.2/m2), read 1.8 s, measure 0.1 s
+[  188.6s]   cell 201/779 20752/29412: 112 buildings, 1 collections, 1084947 points (2.6/m2), read 3.0 s, measure 0.2 s
+[  241.5s]   cell 251/779 20753/29439: 124 buildings, 1 collections, 1590408 points (4.0/m2), read 5.1 s, measure 0.3 s
+[  295.5s]   cell 301/779 20755/29435: 26 buildings, 1 collections, 1331571 points (3.6/m2), read 3.1 s, measure 0.1 s
+[  341.5s]   cell 351/779 20757/29426: 7 buildings, 1 collections, 75481 points (2.5/m2), read 1.0 s, measure 0.0 s
+[  380.0s]   cell 401/779 20759/29432: 1 buildings, 1 collections, 21015 points (4.5/m2), read 0.9 s, measure 0.0 s
+[  423.2s]   cell 451/779 20761/29424: 72 buildings, 1 collections, 791110 points (2.9/m2), read 2.9 s, measure 0.2 s
+[  471.0s]   cell 501/779 20763/29423: 92 buildings, 1 collections, 1177159 points (3.1/m2), read 3.0 s, measure 0.3 s
+[  517.8s]   cell 551/779 20765/29419: 24 buildings, 1 collections, 1094103 points (3.0/m2), read 3.2 s, measure 0.1 s
+[  563.2s]   cell 601/779 20767/29409: 62 buildings, 1 collections, 1097402 points (3.2/m2), read 3.0 s, measure 0.2 s
+[  611.8s]   cell 651/779 20769/29418: 44 buildings, 1 collections, 1207568 points (3.0/m2), read 3.2 s, measure 0.1 s
+[  667.6s]   cell 701/779 20774/29411: 30 buildings, 1 collections, 570925 points (2.4/m2), read 2.8 s, measure 0.1 s
+[  718.0s]   cell 751/779 20780/29409: 2 buildings, 1 collections, 13923 points (1.7/m2), read 0.8 s, measure 0.0 s
+[  746.2s] shard done {"cells": 779, "done": 779, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 637060247, "read_s": 2137.7, "measure_s": 101.3, "readers": 3, "restarts": 0, "measured": 27973, "buildings": 38120, "complete": true}
+[    0.1s] shard 28: 747 cells, 50855 buildings; resolution 2.0 m; 2899 s left
+[    5.3s]   cell 1/747 20768/29420: 36 buildings, 1 collections, 1155234 points (3.3/m2), read 4.8 s, measure 0.2 s
+[   62.5s]   cell 51/747 20770/29436: 2 buildings, 1 collections, 24666 points (1.5/m2), read 1.4 s, measure 0.0 s
+[  117.4s]   cell 101/747 20774/29418: 52 buildings, 1 collections, 817924 points (2.2/m2), read 3.9 s, measure 0.1 s
+[  171.3s]   cell 151/747 20777/29416: 58 buildings, 1 collections, 1256802 points (3.2/m2), read 3.4 s, measure 0.1 s
+[  224.1s]   cell 201/747 20780/29430: 52 buildings, 1 collections, 1337980 points (3.6/m2), read 4.5 s, measure 0.1 s
+[  278.7s]   cell 251/747 20784/29412: 198 buildings, 1 collections, 1281813 points (3.1/m2), read 4.5 s, measure 0.3 s
+[  329.4s]   cell 301/747 20787/29417: 6 buildings, 1 collections, 414894 points (1.8/m2), read 3.1 s, measure 0.0 s
+[  380.5s]   cell 351/747 20791/29408: 227 buildings, 1 collections, 317930 points (1.5/m2), read 2.7 s, measure 0.1 s
+[  427.9s]   cell 401/747 20802/29395: 59 buildings, 1 collections, 811108 points (2.1/m2), read 3.7 s, measure 0.1 s
+[  469.6s]   cell 451/747 20805/29399: 149 buildings, 1 collections, 945632 points (2.4/m2), read 3.4 s, measure 0.2 s
+[  513.4s]   cell 501/747 20809/29376: 18 buildings, 1 collections, 396691 points (2.4/m2), read 3.2 s, measure 0.0 s
+[  565.7s]   cell 551/747 20812/29397: 1 buildings, 1 collections, 11110 points (2.8/m2), read 1.6 s, measure 0.0 s
+[  607.7s]   cell 601/747 20816/29392: 2 buildings, 1 collections, 47063 points (3.6/m2), read 2.2 s, measure 0.0 s
+[  652.1s]   cell 651/747 20819/29390: 14 buildings, 1 collections, 791342 points (3.1/m2), read 3.0 s, measure 0.1 s
+[  690.2s] shard done {"cells": 747, "done": 653, "empty": 94, "failed": 0, "skipped_for_time": 0, "points": 340939044, "read_s": 1994.5, "measure_s": 54.4, "readers": 3, "restarts": 0, "measured": 36534, "buildings": 47452, "complete": true}
+[    0.1s] shard 29: 738 cells, 54119 buildings; resolution 2.0 m; 2899 s left
+[    3.2s]   cell 1/738 20532/29440: 244 buildings, 1 collections, 496731 points (2.7/m2), read 2.7 s, measure 0.3 s
+[   45.4s]   cell 51/738 20560/29441: 5 buildings, 1 collections, 35360 points (3.5/m2), read 1.1 s, measure 0.0 s
+[   90.5s]   cell 101/738 20580/29447: 28 buildings, 1 collections, 337295 points (4.8/m2), read 1.8 s, measure 0.0 s
+[  138.3s]   cell 151/738 20596/29444: 1 buildings, 1 collections, 19949 points (4.2/m2), read 1.0 s, measure 0.0 s
+[  170.2s]   cell 201/738 20676/29443: 2 buildings, 1 collections, 11187 points (1.6/m2), read 0.8 s, measure 0.0 s
+[  210.9s]   cell 251/738 20690/29440: 145 buildings, 2 collections, 590035 points (2.0/m2), read 3.1 s, measure 0.2 s
+[  257.3s]   cell 301/738 20705/29447: 50 buildings, 1 collections, 840764 points (2.8/m2), read 3.2 s, measure 0.1 s
+[  301.4s]   cell 351/738 20716/29446: 1 buildings, 1 collections, 9458 points (2.5/m2), read 0.9 s, measure 0.0 s
+[  344.3s]   cell 401/738 20724/29445: 27 buildings, 1 collections, 615835 points (2.3/m2), read 2.9 s, measure 0.1 s
+[  389.3s]   cell 451/738 20732/29444: 30 buildings, 1 collections, 510763 points (2.1/m2), read 2.8 s, measure 0.1 s
+[  436.1s]   cell 501/738 20755/29440: 166 buildings, 1 collections, 741755 points (2.1/m2), read 2.3 s, measure 0.2 s
+[  464.3s]   cell 551/738 20844/29410: 1 buildings, 1 collections, 27661 points (1.5/m2), read 1.1 s, measure 0.0 s
+[  508.1s]   cell 601/738 20851/29408: 134 buildings, 1 collections, 854320 points (2.4/m2), read 3.2 s, measure 0.2 s
+[  560.8s]   cell 651/738 20860/29411: 4 buildings, 1 collections, 43518 points (4.0/m2), read 1.0 s, measure 0.0 s
+[  598.2s]   cell 701/738 20882/29380: 29 buildings, 1 collections, 432849 points (3.5/m2), read 1.9 s, measure 0.0 s
+[  627.2s] shard done {"cells": 738, "done": 738, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 415347363, "read_s": 1774.1, "measure_s": 83.6, "readers": 3, "restarts": 0, "measured": 42893, "buildings": 54119, "complete": true}
+[    0.4s] buildings 1737161, in the plan 1737161, read 1727282, measured 1356278; shards in 30/30; complete True
+[   47.2s] {
+ "buildings": 1737161,
+ "in_plan": 1737161,
+ "read": 1727282,
+ "measured": 1356278,
+ "share_measured_of_read": 0.7852,
+ "share_measured_osm": 0.8465,
+ "share_measured_added": 0.3952,
+ "no_value_reasons": {
+  "no_ground_or_no_points": 13303,
+  "too_few_roof_points": 162707,
+  "cover_below_min": 194994
+ },
+ "height_m": {
+  "p10": 2.84,
+  "p50": 3.92,
+  "p90": 7.07,
+  "p99": 13.2,
+  "max": 115.82
+ },
+ "p90_minus_p50_m": {
+  "p50": 0.17,
+  "p90": 1.68
+ },
+ "against_tile_height": {
+  "all_with_a_height": {
+   "n": 301412,
+   "median_diff_m": 0.29,
+   "p05": -1.14,
+   "p95": 3.12,
+   "median_abs_m": 0.5,
+   "share_within_2m": 0.869,
+   "share_within_3m": 0.937,
+   "share_within_20pct": 0.661
+  },
+  "levels": {
+   "n": 3196,
+   "median_diff_m": 0.59,
+   "p05": -2.69,
+   "p95": 7.23,
+   "median_abs_m": 1.69,
+   "share_within_2m": 0.575,
+   "share_within_3m": 0.699,
+   "share_within_20pct": 0.394
+  },
+  "osm": {
+   "n": 193952,
+   "median_diff_m": 0.1,
+   "p05": -1.47,
+   "p95": 3.31,
+   "median_abs_m": 0.43,
+   "share_within_2m": 0.855,
+   "share_within_3m": 0.928,
+   "share_within_20pct": 0.701
+  },
+  "parts": {
+   "n": 44,
+   "median_diff_m": -0.05,
+   "p05": -32.43,
+   "p95": 9.18,
+   "median_abs_m": 2.62,
+   "share_within_2m": 0.432,
+   "share_within_3m": 0.523,
+   "share_within_20pct": 0.705
+  },
+  "usas": {
+   "n": 104220,
+   "median_diff_m": 0.55,
+   "p05": -0.37,
+   "p95": 2.62,
+   "median_abs_m": 0.6,
+   "share_within_2m": 0.905,
+   "share_within_3m": 0.961,
+   "share_within_20pct": 0.594
+  }
+ },
+ "tallest": [
+  {
+   "i": 1060985,
+   "lon": -66.167435,
+   "lat": 18.226107,
+   "height_m": 115.8,
+   "p50_m": 5.6,
+   "tile_height_m": null,
+   "tile_source": null
+  },
+  {
+   "i": 909901,
+   "lon": -66.254047,
+   "lat": 18.246632,
+   "height_m": 114.5,
+   "p50_m": 107.5,
+   "tile_height_m": null,
+   "tile_source": null
+  },
+  {
+   "i": 443036,
+   "lon": -66.754485,
+   "lat": 18.343334,
+   "height_m": 113.9,
+   "p50_m": 112.3,
+   "tile_height_m": null,
+   "tile_source": null
+  },
+  {
+   "i": 1147053,
+   "lon": -66.128355,
+   "lat": 18.161814,
+   "height_m": 113.5,
+   "p50_m": 16.1,
+   "tile_height_m": null,
+   "tile_source": null
+  },
+  {
+   "i": 1061427,
+   "lon": -66.167033,
+   "lat": 18.226045,
+   "height_m": 113.0,
+   "p50_m": 5.4,
+   "tile_height_m": null,
+   "tile_source": null
+  },
+  {
+   "i": 1141086,
+   "lon": -66.129566,
+   "lat": 18.236115,
+   "height_m": 111.8,
+   "p50_m": 3.7,
+   "tile_height_m": null,
+   "tile_source": null
+  },
+  {
+   "i": 1061533,
+   "lon": -66.169508,
+   "lat": 18.226077,
+   "height_m": 101.6,
+   "p50_m": 3.1,
+   "tile_height_m": null,
+   "tile_source": null
+  },
+  {
+   "i": 92568,
+   "lon": -67.148143,
+   "lat": 18.322396,
+   "height_m": 92.3,
+   "p50_m": 10.5,
+   "tile_height_m": null,
+   "tile_source": null
+  },
+  {
+   "i": 857266,
+   "lon": -66.295313,
+   "lat": 18.158554,
+   "height_m": 90.4,
+   "p50_m": 3.0,
+   "tile_height_m": null,
+   "tile_source": null
+  },
+  {
+   "i": 857271,
+   "lon": -66.296349,
+   "lat": 18.158241,
+   "height_m": 90.4,
+   "p50_m": 64.0,
+   "tile_height_m": null,
+   "tile_source": null
+  },
+  {
+   "i": 553034,
+   "lon": -66.639468,
+   "lat": 18.018416,
+   "height_m": 85.1,
+   "p50_m": 56.6,
+   "tile_height_m": null,
+   "tile_source": null
+  },
+  {
+   "i": 1252080,
+   "lon": -66.060225,
+   "lat": 18.431622,
+   "height_m": 84.6,
+   "p50_m": 81.1,
+   "tile_height_m": 97.0,
+   "tile_source": "parts"
+  },
+  {
+   "i": 1155503,
+   "lon": -66.095072,
+   "lat": 18.464483,
+   "height_m": 82.8,
+   "p50_m": 13.0,
+   "tile_height_m": 13.0,
+   "tile_source": "osm"
+  },
+  {
+   "i": 1257571,
+   "lon": -66.060167,
+   "lat": 18.425117,
+   "height_m": 82.7,
+   "p50_m": 77.6,
+   "tile_height_m": 95.0,
+   "tile_source": "osm"
+  },
+  {
+   "i": 1204298,
+   "lon": -66.087647,
+   "lat": 18.453948,
+   "height_m": 82.4,
+   "p50_m": 77.3,
+   "tile_height_m": 84.0,
+   "tile_source": "levels"
+  }
+ ]
+}
+[   47.8s] written /home/runner/work/garita/garita/out/data/hazards/heights complete
+merge exit code 0 (0 complete, 2 incomplete, other failed)
+run 40385562005 sha f4bf51759026ed5e85f07d466faa95aa9ca6b9eb site af49ce805103a93d171f028143a8ff0bdf63b92e 2026-10-26T20:06:21Z
