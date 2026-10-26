@@ -68,7 +68,10 @@ vertical datum cancels out. Over Condado against OpenStreetMap height tags (8 39
 machine-detected ones, many of which are sheds and cars). `buildings.bin` is `uint16` decimetres (0 = no value),
 `buildings_p50.bin` the median roof, `buildings_cover.bin` the roof share (percent, 255 = not measured).
 `merge.mjs` folds it in when it is there: the height byte takes the measured value, except where OpenStreetMap
-tags the building's own height, and the ids file says `lidar`.
+tags the building's own height, and the ids file says `lidar`. A roof of two heights (a tower over its podium, a tree
+or a taller neighbour over a house: the 90th percentile more than max(3 m, a quarter of the median) above the
+median, about 4 % of the measured footprints) takes the median instead: the 90th percentile would raise the whole
+footprint to the tower.
 
 ### Overlay tiles (surge and slide)
 
