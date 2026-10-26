@@ -1,0 +1,29 @@
+Mon Oct 26 20:19:39 UTC 2026
+991bdd1 Merge pull request #5 from webgpu-demos/tile-ids
+garita tiles: ok
+synth labels: ok
+fetch condado exit 0
+   0.9s lidar: 215 tiles listed, 3 under the area, 3 to download
+  29.5s garita: 3 building tiles (with ids), 6 files to get
+compile condado exit 0
+  11.2s lidar: 278917 of 433716 grid cells from 3 tiles (64%), mean change 1.45 m; land cells on a whole metre 25% -> 4%
+  11.5s garita: 11292 buildings in 3 tiles, 11292 with ids, 11262 with a GERS id, 1892 with a lidar height
+  11.9s buildings: 6150 kept of 6095 OSM outlines (53 building parts standing for 38 outlines) and 134 FEMA-only; 63 dropped, 0 in the sea
+  11.9s   heights from: OSM height 4889, Garita lidar 1036, OSM floors 39, FEMA LiDAR 18, default 97 (FEMA has 4856 outlines here)
+  11.9s   GERS ids from Garita: 6093 of 6213 buildings
+  18.3s landmarks: 1 forts, 2 garitas, 0 domes, 0 lighthouses, 0 other models, 1900 triangles in 1 tiles
+-rw-r--r-- 1 runner runner 3766458 Oct 26 20:20 /home/runner/work/garita/garita/out/tiles_condado.tgz
+fetch hatorey exit 0
+   1.2s lidar: 215 tiles listed, 6 under the area, 6 to download
+  49.2s garita: 6 building tiles (with ids), 12 files to get
+compile hatorey exit 0
+   8.8s lidar: 433716 of 433716 grid cells from 4 tiles (100%), mean change 1.67 m; land cells on a whole metre 40% -> 4%
+   9.1s garita: 35793 buildings in 6 tiles, 35793 with ids, 35781 with a GERS id, 3045 with a lidar height
+   9.6s buildings: 9936 kept of 9803 OSM outlines (158 building parts standing for 19 outlines) and 244 FEMA-only; 110 dropped, 0 in the sea
+   9.6s   heights from: OSM height 8670, Garita lidar 862, OSM floors 156, FEMA LiDAR 17, default 97 (FEMA has 7888 outlines here)
+   9.6s   GERS ids from Garita: 9792 of 10046 buildings
+  18.8s landmarks: 0 forts, 0 garitas, 0 domes, 0 lighthouses, 0 other models, 0 triangles in 0 tiles
+-rw-r--r-- 1 runner runner 5886287 Oct 26 20:21 /home/runner/work/garita/garita/out/tiles_hatorey.tgz
+Mon Oct 26 20:21:44 UTC 2026
+exit code 0
+9.3M	out
