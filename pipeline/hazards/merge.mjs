@@ -6,7 +6,8 @@
 //                                  order of buildings do not change, so the stages' buildings.bin still line up);
 //                                  the last byte of each record keeps the offset to the terrain the scene draws;
 //                                  with the heights stage, the height byte takes the height measured from the lidar
-//                                  point cloud, except where OpenStreetMap carries the building's own height tag
+//                                  point cloud (the median where the roof has two heights), except where OpenStreetMap
+//                                  carries the building's own height tag
 //         tiles/bld/14/**.ids      height source 'lidar' for the heights taken (tiles that have ids files)
 //         tiles/bld/index.json     says where the ground elevation now comes from
 //         data/derived/exposure.json   per municipio: elevation histogram from lidar, surge and landslide counts
@@ -35,7 +36,13 @@ const slide25 = bin('data/hazards/slide/buildings_max25m.bin', Uint8Array, 1);
 const heightsMeta = fs.existsSync(path.join(site, 'data/hazards/heights/meta.json')) ? J('data/hazards/heights/meta.json') : null;
 if (heightsMeta && heightsMeta.buildings.bld_generated !== idx.generated) throw new Error(`heights was measured on building tiles of ${heightsMeta.buildings.bld_generated}, tiles are ${idx.generated}`);
 const heights = heightsMeta && bin('data/hazards/heights/buildings.bin', Uint16Array, 1);
-const hStats = { taken: 0, kept_osm_tag: 0, no_value: 0, clamped_at_127_5m: 0, by_old_source: {} };
+// and the median of the same roof returns: the height most of the footprint has (absent in older runs)
+const heights50 = heightsMeta && fs.existsSync(path.join(site, 'data/hazards/heights/buildings_p50.bin')) ? bin('data/hazards/heights/buildings_p50.bin', Uint16Array, 1) : null;
+// A roof of two heights (a tower over its podium, a tree over a house, a taller neighbour's overhang): its 90th
+// percentile is the higher one, and the whole footprint would be drawn that high. When the 90th percentile stands
+// more than max(3 m, a quarter of the median) above the median, the median is taken.
+const MIXED = (p90, p50) => p50 > 0 && p90 - p50 > Math.max(30, 0.25 * p50);   // decimetres
+const hStats = { taken: 0, median_for_two_heights: 0, kept_osm_tag: 0, no_value: 0, clamped_at_127_5m: 0, by_old_source: {} };
 
 const munis = J('data/geo/municipios.geojson').features;
 const muniIdx = new PolyIndex({ band: 0.002, cell: 0.05 });
@@ -72,7 +79,9 @@ for (const [x, y, count] of idx.tiles) {
       if (!heights[i]) hStats.no_value++;
       else if (src === 'osm') hStats.kept_osm_tag++;
       else {
-        const hb = Math.round(heights[i] / 5);         // decimetres to half metres
+        const mixed = heights50 && MIXED(heights[i], heights50[i]);
+        if (mixed) hStats.median_for_two_heights++;
+        const hb = Math.round((mixed ? heights50[i] : heights[i]) / 5);   // decimetres to half metres
         if (hb > 255) hStats.clamped_at_127_5m++;
         height = Math.max(1, Math.min(255, hb));
         dv.setUint8(o + 2, height);
@@ -151,7 +160,7 @@ idx.ground = { source: L.source.name, statistic: 'median of the 1 m cells within
 idx.encoding.record = idx.encoding.record.map((r) => (r.startsWith('int16 ground_dm') ? 'int16 ground_dm (ground elevation at the centroid from the 1 m lidar DEM, decimetres above the datum in "ground"; -32768 = no lidar value)'
   : r.startsWith('uint8 reserved') || r.startsWith('int8 place') ? 'int8 place_half_m (half metres to add to ground_dm to get the elevation of the 10 m terrain the scene is drawn on; used only to stand the building on that terrain)' : r));
 if (heightsMeta) {
-  idx.heights_lidar = { source: heightsMeta.source.name, flown: heightsMeta.source.flown, statistic: '90th percentile of the roof last returns minus the ground beside the building (data/hazards/heights/meta.json, method)',
+  idx.heights_lidar = { source: heightsMeta.source.name, flown: heightsMeta.source.flown, statistic: heights50 ? '90th percentile of the roof last returns minus the ground beside the building, or their median where the roof has two heights (the 90th percentile more than max(3 m, a quarter of the median) above the median: a tower over its podium, a tree over a house); data/hazards/heights/meta.json, method' : '90th percentile of the roof last returns minus the ground beside the building (data/hazards/heights/meta.json, method)',
     rule: 'taken for every building with a measured value, except where OpenStreetMap carries its own height tag (ids: osm); the ids file says lidar where it was taken', merged: new Date().toISOString(), stage: 'data/hazards/heights', ...hStats };
   if (idx.encoding?.ids) idx.encoding.ids = idx.encoding.ids.replace('height source: osm (height tag),', 'height source: osm (height tag), lidar (measured from the 3DEP 2018 lidar point cloud, data/hazards/heights),');
 }
