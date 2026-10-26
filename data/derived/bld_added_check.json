@@ -6,19 +6,19 @@
   "checked": 2000,
   "intersects_osm_over_0p5_m2": 0,
   "touches_osm_at_all": 2,
-  "largest_shared_area_m2": 0.01,
+  "largest_shared_area_m2": 0.0,
   "centroid_inside_osm": 0,
   "contains_osm_centroid": 0,
   "centroid_not_on_land": 0,
   "intersects_other_added_over_0p5_m2": 0,
-  "largest_area_shared_with_other_added_m2": 0.18,
+  "largest_area_shared_with_other_added_m2": 0.1,
   "worst_added_pairs": [],
   "failures_any": 0,
-  "hint_ground_at_or_below_0m": 4,
+  "hint_ground_at_or_below_0m": 2,
   "hint_ground_unknown": 0
  },
  "all_added": {
-  "checked": 236613,
+  "checked": 236515,
   "intersects_osm_over_0p5_m2": 0,
   "touches_osm_at_all": 158,
   "largest_shared_area_m2": 0.05,
@@ -60,7 +60,7 @@
    }
   ],
   "failures_any": 12,
-  "hint_ground_at_or_below_0m": 289,
+  "hint_ground_at_or_below_0m": 288,
   "hint_ground_unknown": 0
  },
  "picture": {
@@ -80,9 +80,9 @@
    {
     "geoid": "72127",
     "name": "San Juan",
-    "buildings_osm": 103767,
-    "buildings_added": 7329,
-    "added_share": 0.066,
+    "buildings_osm": 103778,
+    "buildings_added": 7318,
+    "added_share": 0.0659,
     "closeup_centre": [
      -66.07191,
      18.3307
