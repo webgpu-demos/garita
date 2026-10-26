@@ -1,0 +1,45 @@
+Mon Oct 26 15:40:25 UTC 2026
+== list StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_6_D24/
+['StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_6_D24/', 'StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_6_D24/browse/', 'StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_6_D24/metadata/']
+['StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_6_D24/0_file_download_links.txt', 'StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_6_D24/PR_PuertoRicoUSVI_6_D24.vpc']
+
+== list StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_6_D24/LAZ/
+[] [] ['0']
+== list StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_6_D24/laz/
+[] [] ['0']
+== list StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_6_D24/COPC/
+[] [] ['0']
+== list StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_6_D24/las/
+[] [] ['0']
+== search for the Condado tile name anywhere under the project
+1000 keys
+StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_1_D24/0_file_download_links.txt
+StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_1_D24/PR_PuertoRicoUSVI_1_D24.vpc
+StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_2_D24/0_file_download_links.txt
+StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_3_D24/0_file_download_links.txt
+StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_4_D24/0_file_download_links.txt
+StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_4_D24/PR_PuertoRicoUSVI_4_D24.vpc
+pdal install 20 s
+== 2018 EPT conforming bounds vs Condado
+condado 3857 -7354934 2091027
+A conforming [-7564421, 2027264, -189, -7294366, 2084753, 2148] points 90878087626 
+C conforming [-7406625, 2023547, -168, -7260257, 2078692, 1141] points 5865072350 
+D conforming [-7460103, 2052920, -184, -7332131, 2081539, 5721] points 95858824868 
+E conforming [-7488731, 2062305, -163, -7328352, 2093360, 1486] points 19241620294 IN
+F conforming [-7486208, 2079845, -163, -7398484, 2098139, 3892] points 30759497718 
+G conforming [-7398487, 2078261, -171, -7332112, 2095605, 1344] points 22435137525 IN
+H conforming [-7389016, 2033663, -193, -7301297, 2087800, 2768] points 56409693116 
+PuertoRico_2015_LAS_2018 [-7564719, 2023329, -562, -7259475, 2098401, 1785] 89457819260
+PuertoRico_2016_LAS_2017 [-7564719, 2028538, -562, -7259475, 2098401, 1728] 27224980362
+E
+ept r10 1 km2 6 s
+Z 8074245 (-30.2, 1034.3)
+ReturnNumber 8074245 [1, 2, 3, 4, 5, 6, 7]
+Classification 8074245 [1, 2, 7, 9, 17, 18, 20]
+ept r05 1 km2 12 s
+Z 17192017 (-30.2, 1034.3)
+ReturnNumber 17192017 [1, 2, 3, 4, 5, 6, 7]
+Classification 17192017 [1, 2, 7, 9, 17, 18, 20]
+Mon Oct 26 15:41:04 UTC 2026
+exit code 0
+8.0K	out
