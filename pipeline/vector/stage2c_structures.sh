@@ -29,7 +29,7 @@ ls -l "$CACHE/$REL.zip"
 rm -rf "$CACHE/unzipped" && mkdir -p "$CACHE/unzipped" && unzip -q -o -d "$CACHE/unzipped" "$CACHE/$REL.zip"
 GDB="$(find "$CACHE/unzipped" -maxdepth 3 -name '*.gdb' | head -1)"
 [ -n "$GDB" ] || { echo "USA Structures: no file geodatabase in $REL.zip"; exit 1; }
-python3 -m pip install -q "duckdb>=1.1" 2>&1 | tail -2
+python3 -m pip install -q "duckdb>=1.3" 2>&1 | tail -2
 REL="$REL" URL="$URL" GDB="$GDB" OUTD="$OUTD" python3 - <<'PY'
 import duckdb, json, os, datetime
 rel, gdb, outd = os.environ['REL'], os.environ['GDB'], os.environ['OUTD']

@@ -14,7 +14,7 @@ set -euo pipefail
 WORK="${WORK_DIR:-work}"; CACHE="$WORK/cache/overture"; OVT="$WORK/overture"
 BBOX="-67.95,17.85,-65.2,18.55"
 mkdir -p "$CACHE" "$OVT"
-python3 -m pip install -q "overturemaps>=1.0.2" "duckdb>=1.1" 2>&1 | tail -2
+python3 -m pip install -q "overturemaps>=1.0.2" "duckdb>=1.3" 2>&1 | tail -2
 LIST="https://overturemaps-us-west-2.s3.amazonaws.com/?list-type=2&prefix=release/&delimiter=/"
 REL="${OVERTURE_RELEASE:-}"
 if [ -z "$REL" ]; then
@@ -37,7 +37,8 @@ import duckdb, json, os
 rel, pq, ovt = os.environ['REL'], os.environ['PQ'], os.environ['OVT']
 c = duckdb.connect(); c.execute("install spatial; load spatial;")
 q = lambda s: c.execute(s).fetchall()
-is_osm = "list_contains(list_transform(sources, x -> x.dataset), 'OpenStreetMap')"
+# (the lambda syntax DuckDB 1.3+ reads; the old "x -> x.dataset" arrow is refused by current releases)
+is_osm = "list_contains(list_transform(sources, lambda x: x.dataset), 'OpenStreetMap')"
 by = q(f"""select sources[1].dataset, any_value(sources[1].license), min(sources[1].version), max(sources[1].version),
                   min(sources[1].update_time), max(sources[1].update_time), count(*), count(sources[1].confidence),
                   min(sources[1].confidence), max(sources[1].confidence), count(height), count(num_floors)
