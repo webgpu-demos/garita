@@ -8,7 +8,8 @@
 # The `overturemaps` command picks the files through Overture's STAC catalogue, so the bounding box of the island
 # comes down in seconds (about 300 MB, 2.16 million rows in release 2026-09-23.1).
 #   OVERTURE_RELEASE  pin a release (default: the newest listed in the bucket)
-# Writes work/overture/added.jsonl (one candidate per line) and work/overture/meta.json (release, counts, licences).
+# Writes work/overture/added.jsonl (one candidate per line), work/overture/osm_gers.csv (the GERS id of each
+# OpenStreetMap building Overture carries) and work/overture/meta.json (release, counts, licences).
 set -euo pipefail
 WORK="${WORK_DIR:-work}"; CACHE="$WORK/cache/overture"; OVT="$WORK/overture"
 BBOX="-67.95,17.85,-65.2,18.55"
@@ -58,6 +59,14 @@ c.execute(f"""copy (select id, sources[1].dataset as ds, sources[1].confidence a
                     order by (sources[1].dataset = 'Microsoft ML Buildings') desc, sources[1].confidence desc nulls first, bbox.xmin, bbox.ymin, id)
               to '{ovt}/added.jsonl' (format json)""")
 meta['candidates'] = q(f"select count(*) from '{pq}' where not {is_osm}")[0][0]
+# OpenStreetMap's own buildings as Overture carries them: each one's GERS id (Overture's stable feature id), keyed by
+# the OSM object ("w123", "r456"; Overture's record_id without its "@version"). build.mjs gives every OSM record of
+# ours the id of its Overture twin where there is one (Overture's OSM snapshot is weeks older than our extract, so the
+# newest buildings have none). One line per building: osm,gers.
+c.execute(f"""copy (select regexp_replace(sources[1].record_id, '@.*$', '') as osm, id as gers
+                    from '{pq}' where sources[1].dataset = 'OpenStreetMap' and sources[1].record_id is not null)
+              to '{ovt}/osm_gers.csv' (header false)""")
+meta['osm_gers'] = q(f"select count(*) from '{pq}' where sources[1].dataset = 'OpenStreetMap' and sources[1].record_id is not null")[0][0]
 json.dump(meta, open(f'{ovt}/meta.json', 'w'), indent=1)
 print('Overture', json.dumps(meta))
 PY
