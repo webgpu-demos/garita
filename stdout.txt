@@ -1,0 +1,182 @@
+Mon Oct 26 22:40:42 UTC 2026
+991bdd1 Merge pull request #5 from webgpu-demos/tile-ids
+fetch condado exit 0
+  23.3s osm osm_poi.json: 2096 elements (from the extract)
+  23.3s garita: skipped
+  23.3s done
+total 11784
+drwxr-xr-x 3 runner runner    4096 Oct 26 22:41 .
+drwxr-xr-x 4 runner runner    4096 Oct 26 22:40 ..
+drwxr-xr-x 4 runner runner    4096 Oct 26 22:40 dem
+-rw-r--r-- 1 runner runner 2291289 Oct 26 22:40 fema_structures.json
+-rw-r--r-- 1 runner runner  752960 Oct 26 22:41 osm.json
+-rw-r--r-- 1 runner runner 4991315 Oct 26 22:41 osm_buildings.json
+-rw-r--r-- 1 runner runner  133901 Oct 26 22:41 osm_coast.json
+-rw-r--r-- 1 runner runner 1524687 Oct 26 22:41 osm_extra.json
+-rw-r--r-- 1 runner runner 1747217 Oct 26 22:41 osm_land.json
+-rw-r--r-- 1 runner runner  598555 Oct 26 22:41 osm_poi.json
+-rw-r--r-- 1 runner runner 1294180 Oct 26 22:41 /home/runner/work/garita/garita/out/raw_condado.tgz
+fema 4849 sample {'BUILD_ID': 3214564, 'OCC_CLS': 'Residential', 'PRIM_OCC': 'Single Family Dwelling', 'HEIGHT': 6.65, 'SQMETERS': 111.8493, 'PROP_ADDR': None}
+[('Residential', 4007), ('Unclassified', 543), ('Commercial', 162), ('Government', 62), ('Education', 42), ('Industrial', 18), ('Utility and Misc', 15)]
+[('Unclassified', 2818), ('Single Family Dwelling', 1235), ('Multi - Family Dwelling', 395), ('Retail Trade', 159), ('Temporary Lodging', 102), ('General Services', 61), ('Pre-K - 12 Schools', 26), ('Light', 18), ('Colleges/Universities', 16), ('Ground', 15), ('Hospital', 3), ('Emergency Response', 1)]
+fetch hatorey exit 0
+  18.5s osm osm_poi.json: 840 elements (from the extract)
+  18.5s garita: skipped
+  18.5s done
+total 16912
+drwxr-xr-x 3 runner runner    4096 Oct 26 22:41 .
+drwxr-xr-x 5 runner runner    4096 Oct 26 22:41 ..
+drwxr-xr-x 4 runner runner    4096 Oct 26 22:41 dem
+-rw-r--r-- 1 runner runner 3578832 Oct 26 22:41 fema_structures.json
+-rw-r--r-- 1 runner runner 1072800 Oct 26 22:41 osm.json
+-rw-r--r-- 1 runner runner 8734590 Oct 26 22:41 osm_buildings.json
+-rw-r--r-- 1 runner runner   23768 Oct 26 22:41 osm_coast.json
+-rw-r--r-- 1 runner runner 1718387 Oct 26 22:41 osm_extra.json
+-rw-r--r-- 1 runner runner 1954191 Oct 26 22:41 osm_land.json
+-rw-r--r-- 1 runner runner  209658 Oct 26 22:41 osm_poi.json
+-rw-r--r-- 1 runner runner 2233161 Oct 26 22:41 /home/runner/work/garita/garita/out/raw_hatorey.tgz
+fema 7871 sample {'BUILD_ID': 3190496, 'OCC_CLS': 'Residential', 'PRIM_OCC': 'Unclassified', 'HEIGHT': 4.17, 'SQMETERS': 81.07383, 'PROP_ADDR': None}
+[('Residential', 6173), ('Commercial', 867), ('Unclassified', 408), ('Government', 217), ('Education', 183), ('Utility and Misc', 14), ('Industrial', 9)]
+[('Unclassified', 2794), ('Single Family Dwelling', 2277), ('Multi - Family Dwelling', 1510), ('Retail Trade', 864), ('General Services', 215), ('Pre-K - 12 Schools', 141), ('Colleges/Universities', 39), ('Ground', 14), ('Light', 9), ('Other Educational Buildings', 3), ('Hospital', 3), ('Emergency Response', 2)]
+== way 275267363
+  height=74.8
+v6 2015-07-10T02:27:11Z
+  addr:city=San Juan
+  addr:housenumber=1309
+  addr:postcode=00907
+  addr:street=Avenida Ashford
+  building=yes
+  building:levels=2
+v7 2017-07-17T22:42:12Z
+  addr:city=San Juan
+  addr:housenumber=1309
+  addr:postcode=00907
+  addr:state=PR
+  addr:street=Avenida Ashford
+  building=yes
+  building:levels=2
+v8 2023-02-16T17:34:40Z
+  addr:city=San Juan
+  addr:housenumber=1309
+  addr:postcode=00907
+  addr:state=PR
+  addr:street=Avenida Ashford
+  building=yes
+  building:levels=2
+v9 2026-08-29T13:57:50Z
+  addr:city=San Juan
+  addr:housenumber=1309
+  addr:postcode=00907
+  addr:state=PR
+  addr:street=Avenida Ashford
+  building=yes
+  building:levels=2
+v10 2026-10-22T14:45:31Z
+  addr:city=San Juan
+  addr:housenumber=1309
+  addr:postcode=00907
+  addr:state=PR
+  addr:street=Avenida Ashford
+  building=yes
+  building:levels=7
+== way 279474364
+v1 2014-05-04T22:31:00Z
+  building=part
+  building:levels=18
+  building:min_level=2
+v2 2015-03-28T22:39:05Z
+  building:levels=18
+  building:min_level=2
+  building:part=yes
+v3 2015-07-10T02:27:07Z
+  building:levels=18
+  building:min_level=2
+  building:part=yes
+  height=74.8
+== way 279483342
+v1 2014-05-05T01:43:12Z
+  building=part
+  building:levels=8
+  building:min_level=2
+v2 2015-03-28T22:39:06Z
+  building:levels=8
+  building:min_level=2
+  building:part=yes
+v3 2026-10-22T14:45:31Z
+  amenity=parking
+  building:levels=8
+  building:min_level=2
+  building:part=yes
+  parking=multi-storey
+v4 2026-10-22T14:46:23Z
+  access=yes
+  amenity=parking
+  building:levels=8
+  building:min_level=2
+  building:part=yes
+  fee=yes
+  operator=Marriott Car Parking
+  parking=multi-storey
+== way 381416330
+v1 2015-11-20T04:45:36Z
+  building=yes
+== way 944487477
+v1 2021-05-19T02:47:04Z
+  building=apartments
+== way 61108930
+v1 2010-06-04T17:04:25Z
+  amenity=parking
+v2 2014-09-07T18:28:56Z
+  building=yes
+v3 2017-12-12T03:38:23Z
+  addr:city=Hato Rey
+  addr:postcode=00917
+  addr:state=PR
+  addr:street=Calle Juan Pablo Duarte
+  building=commercial
+  building:levels=2
+  name=Metropolis Management
+== way 301866453
+v2 2019-07-24T18:46:06Z
+  addr:city=San Juan
+  addr:housenumber=150
+  addr:postcode=00918
+  addr:state=PR
+  addr:street=Avenida Carlos E. Chardón
+  amenity=courthouse
+  building=yes
+  name=Edificio Federal Federico Degetau
+  note=It is actually a street type of Avenue (Avenida) and not Street (Calle) as shown in Google Maps and here in OSM. http://www.gsa.gov/portal/content/104785
+v3 2026-01-15T23:01:54Z
+  addr:city=San Juan
+  addr:housenumber=150
+  addr:postcode=00918
+  addr:state=PR
+  addr:street=Avenida Carlos E. Chardón
+  amenity=courthouse
+  building=yes
+  name=Edificio Federal Federico Degetau
+  note=It is actually a street type of Avenue (Avenida) and not Street (Calle) as shown in Google Maps and here in OSM. http://www.gsa.gov/portal/content/104785
+v4 2026-01-16T17:39:00Z
+  addr:city=San Juan
+  addr:housenumber=150
+  addr:postcode=00918
+  addr:state=PR
+  addr:street=Avenida Carlos E. Chardón
+  amenity=courthouse
+  building=yes
+  name=Edificio Federal Federico Degetau
+  note=It is actually a street type of Avenue (Avenida) and not Street (Calle) as shown in Google Maps and here in OSM. http://www.gsa.gov/portal/content/104785
+v5 2026-01-16T22:14:41Z
+  addr:city=San Juan
+  addr:housenumber=150
+  addr:postcode=00918
+  addr:state=PR
+  addr:street=Avenida Carlos E. Chardón
+  amenity=courthouse
+  building=yes
+  name=Edificio Federal Federico Degetau
+  note=It is actually a street type of Avenue (Avenida) and not Street (Calle) as shown in Google Maps and here in OSM. http://www.gsa.gov/portal/content/104785
+Mon Oct 26 22:41:32 UTC 2026
+exit code 0
+3.4M	out
