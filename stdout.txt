@@ -1,0 +1,28 @@
+200 https://webgpu-demos.github.io/garita/
+200 https://webgpu-demos.github.io/garita/data/manifest.json
+200 https://webgpu-demos.github.io/garita/tiles/bld/14/5184/7339.ids
+200 https://webgpu-demos.github.io/garita/data/hazards/heights/meta.json
+200 https://webgpu-demos.github.io/procedural-sanjuan/
+200 https://webgpu-demos.github.io/procedural-sanjuan/tiles/sanjuan/t_-1_-1.ids
+200 https://webgpu-demos.github.io/procedural-sanjuan/tiles/condado/manifest.json
+assets/index-CKeFpKQr.js
+assets/index-BLj2bKqo.js
+{ "seedVersion": "2026.10.26", "built": "2026-10-26T20:07:55Z" }
+3f137a7c-abb6-42ce-8f0d-6f26ba8ca5b2,w55788712,lidar
+aca63732-a56d-4d26-bfc7-01b5a1dab63a,w286614600,lidar
+condado 2026-10-26T20:20:34.563Z 102 ['Elevation: USGS 3DEP via AWS Terrain Tiles', 'Elevation: USGS 3D Elevation Program, 1 m DEM from lidar (PR_PuertoRicoUSVI_D24)']
+{
+ "pinned": {
+  "gers": "2aa6f1c9-a84b-4411-8dd1-715660462ff7",
+  "osm": "w275293398",
+  "text": "Building (apartments) · 24.5 m (height from OpenStreetMap) · ground 5.5 m"
+ },
+ "card": "Building\n\nBuilding (apartments) · 24.5 m (height from OpenStreetMap) · ground 5.5 m\n\n18.45608, -66.06878\n\nOSM w275293398\n·\nGERS 2aa6f1c9…\n\nStreet view",
+ "links": [
+  "https://www.openstreetmap.org/way/275293398",
+  "https://webgpu-demos.github.io/procedural-sanjuan/?ll=18.45608,-66.068777&bld=2aa6f1c9-a84b-4411-8dd1-715660462ff7&from=garita"
+ ]
+}
+page errors []
+exit code 0
+620K	out
