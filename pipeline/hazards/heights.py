@@ -69,7 +69,8 @@ MIN_ROOF = 6
 MIN_GROUND = 3
 MIN_COVER = 0.5
 MIN_H = 2.0
-MAX_H = 250.0
+MAX_H = 120.0    # the tallest building in Puerto Rico is about 102 m (Caribbean Sea View); returns higher above the
+                 # ground than this are not a roof, and are dropped before anything else
 GAP_M = 10.0     # roof elevations further apart than this, with nothing between, are separate groups
 FLAT_M = 8.0     # a group above the lowest is a roof only if its p95 - p5 is within this
 CELL_Z = 16
@@ -324,6 +325,9 @@ def measure(ring_xy, k, P, grid):
     last = (rn >= nr) & (rn > 0)          # (return number 0 is invalid; some flight lines have it)
     di = seg_dist(X[isel], Y[isel], rx, ry) / k
     inset = last & (di > INSET_M)
+    sky = inset.copy()
+    sky[sky] = Z[isel][inset] > ground + MAX_H
+    inset &= ~sky
     zi, ci = Z[isel][inset], C[isel][inset]
     roof = ((ci == 1) | (ci == 6)) & (zi > ground + MIN_H)
     # Noise left in class 1: in some flight lines returns from 100 to 300 m above the ground (birds, haze) are not
