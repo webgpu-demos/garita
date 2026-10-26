@@ -1,0 +1,16 @@
+Mon Oct 26 22:42:55 UTC 2026
+loaded 155 s
+title {"waited":0,"r":null,"mode":"explore","loaded":66,"cam":[5968,1951,5399],"hud":"San Juan  18.45084N 66.08816W  2.9 m | San Juan 05:27 · sun -14° | 11 fps (quality step 2) · 777 draws · 2.85M tris | tiles 62/4499 (+4) · 857 buildings"}
+  click "Explorar libremente": Explorar libremente
+explore {"waited":185780,"r":{"mode":"car","v":null,"cam":[5968,1951,5399],"keys":[],"dir":false,"chase":true},"mode":"car","loaded":80,"cam":[6270,10,4645],"hud":"San Juan  18.42339N 66.05721W  8.5 m | San Juan 05:27 · sun -14° | 10 fps (quality step 4) · 644 draws · 8.77M tris | tiles 80/4499 (+4) · 7740 buildings"}
+car_fwd {"waited":0,"r":{"mode":"car","v":{"x":6268.5,"z":4638.3,"y":7.1,"h":-2.9,"sp":0.25415999999999994},"cam":[6270,10,4645],"keys":[],"dir":false,"chase":true},"mode":"car","loaded":80,"cam":[6270,10,4645],"hud":"San Juan  18.42340N 66.05721W  8.5 m | San Juan 05:27 · sun -14° | 10 fps (quality step 4) · 649 draws · 8.80M tris | tiles 80/4499 (+4) · 7740 buildings"}
+car_day {"waited":181610,"r":{"mode":"car","v":{"x":6268.5,"z":4638.3,"y":7.1,"h":-2.9,"sp":0.10073980477489006},"cam":[6270,10,4645],"keys":[],"dir":false,"chase":true},"mode":"car","loaded":80,"cam":[6270,10,4645],"hud":"San Juan  18.42339N 66.05721W  8.5 m | San Juan 09:30 · sun 40° | 10 fps (quality step 4) · 552 draws · 9.24M tris | tiles 80/4499 · 7740 buildings"}
+walk {"waited":0,"r":{"mode":"walk","v":null,"cam":[6270,10,4645],"keys":[],"dir":false,"chase":true},"mode":"walk","loaded":74,"cam":[6273,10,4642],"hud":"San Juan  18.42340N 66.05718W  8.7 m | San Juan 09:30 · sun 40° | 10 fps (quality step 6) · 749 draws · 16.89M tris | tiles 74/4499 · 7050 buildings"}
+walk_fwd {"waited":0,"r":{"mode":"walk","v":{"x":6271.9,"z":4637.4,"y":7.2,"h":-2.9,"sp":0},"cam":[6273,10,4642],"keys":[],"dir":false,"chase":true},"mode":"walk","loaded":74,"cam":[6273,10,4642],"hud":"San Juan  18.42340N 66.05718W  8.7 m | San Juan 09:30 · sun 40° | 10 fps (quality step 6) · 444 draws · 8.08M tris | tiles 74/4499 · 7050 buildings"}
+fly {"waited":0,"r":{"mode":"fly","v":{"x":6271.9,"z":4637.4,"y":97.2,"h":-2.9,"sp":0},"cam":[6277,106,4660],"keys":[],"dir":false,"chase":true},"mode":"fly","loaded":74,"cam":[6277,106,4660],"hud":"San Juan  18.42340N 66.05718W  99.2 m | San Juan 09:30 · sun 40° | 10 fps (quality step 6) · 455 draws · 8.11M tris | tiles 74/4499 · 7050 buildings"}
+fly_fwd {"waited":0,"r":{"mode":"fly","v":{"x":6271.9,"z":4637.3,"y":97.2,"h":-2.9,"sp":1.0920000000000003},"cam":[6277,106,4660],"keys":[],"dir":false,"chase":true},"mode":"fly","loaded":74,"cam":[6277,106,4659],"hud":"San Juan  18.42341N 66.05718W  99.2 m | San Juan 09:30 · sun 40° | 11 fps (quality step 6) · 455 draws · 8.11M tris | tiles 74/4499 · 7050 buildings"}
+[http 404] https://webgpu-demos.github.io/favicon.ico
+[error] Failed to load resource: the server responded with a status of 404 ()
+Mon Oct 26 22:59:01 UTC 2026
+exit code 0
+4.8M	out
