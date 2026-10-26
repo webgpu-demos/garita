@@ -1,0 +1,48 @@
+{
+ "options": {
+  "url": "http://localhost:5173/",
+  "area": "condado",
+  "out": "/home/runner/work/garita/garita/out/syn",
+  "frames": 14,
+  "size": [
+   640,
+   480
+  ],
+  "hfov": 73.7,
+  "alt": [
+   45,
+   90
+  ],
+  "pitch": [
+   -90,
+   -70
+  ],
+  "hour": [
+   8.5,
+   16.5
+  ],
+  "damage": 0.5,
+  "box": null,
+  "seed": 1,
+  "val": 0.1,
+  "minPixels": 40,
+  "maxBlock": 0.02,
+  "ortho": false,
+  "minBuildings": 20,
+  "cars": 300,
+  "masks": true,
+  "chrome": "/usr/bin/google-chrome",
+  "timeout": 300
+ },
+ "counts": {
+  "frames": 14,
+  "skipped": 0,
+  "instances": [
+   181,
+   57,
+   53,
+   198
+  ]
+ },
+ "finished": "2026-10-26T16:46:20.387Z"
+}

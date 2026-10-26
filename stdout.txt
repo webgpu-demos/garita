@@ -1,0 +1,89 @@
+Mon Oct 26 16:40:05 UTC 2026
+npm ci 16:40:10
+skip hatorey (no compiled tiles)
+twin links: ok
+garita tiles: ok
+synth labels: ok
+textures exit 0 18M
+fetch exit 0
+compile exit 0 16:40:52
+chrome /usr/bin/google-chrome Google Chrome 155.0.8059.39 
+4
+               total        used        free      shared  buff/cache   available
+Mem:              15           1          11           0           3          14
+    5s opening http://localhost:5173/?area=condado&quality=high&xp=0&sim=0&ortho=0&time=8.5&cars=300
+   27s city loaded
+   40s 19 poses planned
+   88s condado_00000 (train): 17 instances [building 1, blue_tarp 1, debris 0, vehicle 15], alt 63 m, pitch -75°, 9.9 h
+  112s condado_00001 (train): 25 instances [building 13, blue_tarp 4, debris 5, vehicle 3], alt 49 m, pitch -87°, 14.2 h
+  123s condado_00002 (train): 8 instances [building 2, blue_tarp 1, debris 1, vehicle 4], alt 53 m, pitch -76°, 10.2 h
+  143s condado_00003 (train): 15 instances [building 9, blue_tarp 3, debris 1, vehicle 2], alt 53 m, pitch -82°, 13.4 h
+  167s condado_00004 (train): 58 instances [building 27, blue_tarp 11, debris 13, vehicle 7], alt 69 m, pitch -70°, 10.2 h
+  184s condado_00005 (train): 18 instances [building 7, blue_tarp 2, debris 3, vehicle 6], alt 82 m, pitch -89°, 10.2 h
+  201s condado_00006 (train): 24 instances [building 10, blue_tarp 2, debris 0, vehicle 12], alt 51 m, pitch -85°, 10.6 h
+  216s condado_00007 (train): 51 instances [building 4, blue_tarp 0, debris 1, vehicle 46], alt 53 m, pitch -89°, 16.5 h
+  236s condado_00008 (val): 26 instances [building 16, blue_tarp 4, debris 4, vehicle 2], alt 61 m, pitch -84°, 16.0 h
+  252s condado_00009 (train): 33 instances [building 19, blue_tarp 7, debris 5, vehicle 2], alt 58 m, pitch -90°, 13.3 h
+  271s condado_00010 (train): 110 instances [building 31, blue_tarp 9, debris 6, vehicle 64], alt 85 m, pitch -75°, 8.9 h
+  285s condado_00011 (train): 27 instances [building 12, blue_tarp 5, debris 4, vehicle 6], alt 82 m, pitch -74°, 8.7 h
+  301s condado_00012 (train): 48 instances [building 23, blue_tarp 7, debris 10, vehicle 8], alt 62 m, pitch -71°, 9.7 h
+  320s condado_00013 (train): 29 instances [building 7, blue_tarp 1, debris 0, vehicle 21], alt 50 m, pitch -73°, 12.7 h
+  320s done {"frames":14,"skipped":0,"instances":[181,57,53,198]}
+export 16:46:20
+/home/runner/work/garita/garita/out/syn:
+dataset.yaml
+images
+labels
+masks
+meta
+run.json
+
+/home/runner/work/garita/garita/out/syn/images/train:
+condado_00000.jpg
+2.0M	/home/runner/work/garita/garita/out/syn
+{
+ "options": {
+  "url": "http://localhost:5173/",
+  "area": "condado",
+  "out": "/home/runner/work/garita/garita/out/syn",
+  "frames": 14,
+  "size": [
+   640,
+   480
+  ],
+  "hfov": 73.7,
+  "alt": [
+   45,
+   90
+  ],
+  "pitch": [
+   -90,
+   -70
+  ],
+  "hour": [
+   8.5,
+   16.5
+  ],
+  "damage": 0.5,
+  "box": null,
+  "seed": 1,
+  "val": 0.1,
+  "minPixels": 40,
+  "maxBlock": 0.02,
+  "ortho": false,
+  "minBuildings": 20,
+  "cars": 300,
+  "masks": true,
+  "chrome": "/usr/bin/google-chrome",
+  "timeout": 300
+ },
+ "counts": {
+  "frames": 14,
+  "skipped": 0,
+  "instances": [
+   181,
+   57,
+   53,
+   1Mon Oct 26 16:46:20 UTC 2026
+exit code 0
+2.0M	out

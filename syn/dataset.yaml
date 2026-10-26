@@ -1,0 +1,9 @@
+# procedural-sanjuan synthetic drone images (tools/synth/export.mjs)
+path: /home/runner/work/garita/garita/out/syn
+train: images/train
+val: images/val
+names:
+  0: building
+  1: blue_tarp
+  2: debris
+  3: vehicle
