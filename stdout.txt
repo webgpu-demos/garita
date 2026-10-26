@@ -1,0 +1,28 @@
+Mon Oct 26 15:36:31 UTC 2026
+HTTP/1.1 404 Not Found
+b'<?xml version="1' version 100 105 no copc in first 2 KB header size 25632
+pdal install 19 s
+--------------------------------------------------------------------------------
+pdal 2.10.2 (git-version: 21d285)
+1 198 tiles; crs None
+2 no vpc HTTP Error 404: Not Found
+3 no vpc HTTP Error 404: Not Found
+4 4819 tiles; crs None
+5 574 tiles; crs None
+6 4391 tiles; crs None
+  Condado tile USGS_LPC_PR_PuertoRicoUSVI_D24_238000_268000 38712437 ./LAZ/USGS_LPC_PR_PuertoRicoUSVI_D24_238000_268000.laz
+tile url https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_6_D24/LAZ/USGS_LPC_PR_PuertoRicoUSVI_D24_238000_268000.laz
+HTTP/1.1 404 Not Found
+PDAL: Could not read from 'prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_6_D24/LAZ/USGS_LPC_PR_PuertoRicoUSVI_D24_238000_268000.laz'. Response message returned '<?xml version="1.0" encoding="UTF-8"?>
+<Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_6_D24/LAZ/USGS_LPC_PR_PuertoRicoUSVI_D24_238000_268000.laz</Key><RequestId>AZBFA392T1WN4WEM</RequestId><HostId>oV2sdxVsJJcGqsdsq9W8yQrQVKU9cganf6elwm6PGncO3fRBS6T9vQ5uuWmne1waWTOxG/jEK9I=</HostId></Error>'
+
+copc read (resolution 0.7 m) 0 s
+ls: cannot access '/tmp/copc_lo.laz': No such file or directory
+Traceback (most recent call last):
+  File "<string>", line 2, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/copc_meta.json'
+ept 2018 1 km2 read (resolution 0.7 m) 2 s
+points 0 classes None
+Mon Oct 26 15:36:59 UTC 2026
+exit code 0
+8.0K	out
