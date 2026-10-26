@@ -11,7 +11,7 @@
   ],
   "file": "landslide_susceptibility_raster/landslide_susceptibility_raster.tif",
   "version": "data release published 2021-08-17; report published 2020",
-  "retrieved": "2026-10-11T04:46:07Z",
+  "retrieved": "2026-10-26T19:18:52Z",
   "licence": "U.S. Government work in the public domain. Metadata: access constraints \"None.  Please see 'Distribution Info' for details.\"; use constraints \"none\".",
   "citation": "Hughes, K.S., and Schulz, W.H., 2020, Map depicting susceptibility to landslides triggered by intense rainfall, Puerto Rico: U.S. Geological Survey Open-File Report 2020\u20131022, 91 p., 1 plate, scale 1:150,000, https://doi.org/10.3133/ofr20201022.",
   "citation_data": "Hughes, K.S., and Schulz, W.H., 2021, Geographic Information System Layer of a Map Depicting Susceptibility to Landslides Triggered by Intense Rainfall, Puerto Rico: U.S. Geological Survey data release, https://doi.org/10.5066/P990ZP4C.",
@@ -102,13 +102,13 @@
   ]
  },
  "qa": {
-  "buildings_total": 1737084,
+  "buildings_total": 1737161,
   "buildings_by_class": {
-   "0": 11045,
-   "1": 1318543,
-   "2": 343306,
-   "3": 55188,
-   "4": 8389,
+   "0": 11044,
+   "1": 1318613,
+   "2": 343317,
+   "3": 55186,
+   "4": 8388,
    "5": 613
   },
   "buildings_pct_by_class": {
@@ -119,18 +119,18 @@
    "4": 0.48,
    "5": 0.04
   },
-  "buildings_pct_high_or_above": 3.7,
+  "buildings_pct_high_or_above": 3.69,
   "buildings_no_data": {
-   "total": 11045,
+   "total": 11044,
    "outside_raster_extent": 9923,
-   "inside_extent_cell_without_data": 1122,
+   "inside_extent_cell_without_data": 1121,
    "east_of_65.58W (Vieques, Culebra and the eastern cays, which the map does not cover)": 9883,
    "west_of_67.28W (Mona, Desecheo)": 33
   },
-  "assets_total": 3988,
+  "assets_total": 3992,
   "assets_by_class": {
    "0": 52,
-   "1": 3533,
+   "1": 3537,
    "2": 323,
    "3": 56,
    "4": 23,
@@ -160,7 +160,7 @@
    },
    "clinic": {
     "0": 3,
-    "1": 417,
+    "1": 418,
     "2": 9,
     "3": 1,
     "4": 0,
@@ -168,7 +168,7 @@
    },
    "fire_station": {
     "0": 2,
-    "1": 67,
+    "1": 71,
     "2": 1,
     "3": 0,
     "4": 0,
@@ -208,7 +208,7 @@
    },
    "school": {
     "0": 9,
-    "1": 1539,
+    "1": 1538,
     "2": 207,
     "3": 35,
     "4": 12,
@@ -249,28 +249,28 @@
   },
   "highest_class_within_25_m": {
    "buildings_by_class": {
-    "0": 11045,
-    "1": 838015,
-    "2": 416114,
-    "3": 277891,
-    "4": 162855,
-    "5": 31164
+    "0": 11044,
+    "1": 838029,
+    "2": 416182,
+    "3": 277892,
+    "4": 162851,
+    "5": 31163
    },
    "buildings_pct_by_class": {
     "0": 0.64,
     "1": 48.24,
-    "2": 23.95,
+    "2": 23.96,
     "3": 16.0,
-    "4": 9.38,
+    "4": 9.37,
     "5": 1.79
    },
    "buildings_pct_high_or_above": 27.17,
    "assets_by_class": {
     "0": 52,
-    "1": 2712,
-    "2": 780,
+    "1": 2713,
+    "2": 782,
     "3": 276,
-    "4": 147,
+    "4": 148,
     "5": 21
    }
   },
@@ -494,7 +494,7 @@
   ],
   "tiles": {
    "count": 683,
-   "bytes": 5844950,
+   "bytes": 5824460,
    "zoom": [
     8,
     13
@@ -502,7 +502,7 @@
    "per_zoom": {
     "8": {
      "tiles": 4,
-     "bytes": 6577,
+     "bytes": 6457,
      "pct_of_mapped_pixels_by_class": {
       "1": 39.52,
       "2": 32.94,
@@ -513,7 +513,7 @@
     },
     "9": {
      "tiles": 6,
-     "bytes": 21231,
+     "bytes": 21051,
      "pct_of_mapped_pixels_by_class": {
       "1": 39.24,
       "2": 32.78,
@@ -524,7 +524,7 @@
     },
     "10": {
      "tiles": 17,
-     "bytes": 77377,
+     "bytes": 76867,
      "pct_of_mapped_pixels_by_class": {
       "1": 39.04,
       "2": 32.37,
@@ -535,7 +535,7 @@
     },
     "11": {
      "tiles": 45,
-     "bytes": 291211,
+     "bytes": 289861,
      "pct_of_mapped_pixels_by_class": {
       "1": 39.03,
       "2": 31.7,
@@ -546,7 +546,7 @@
     },
     "12": {
      "tiles": 138,
-     "bytes": 1123743,
+     "bytes": 1119603,
      "pct_of_mapped_pixels_by_class": {
       "1": 39.11,
       "2": 31.05,
@@ -557,7 +557,7 @@
     },
     "13": {
      "tiles": 473,
-     "bytes": 4324811,
+     "bytes": 4310621,
      "pct_of_mapped_pixels_by_class": {
       "1": 38.89,
       "2": 30.44,
@@ -577,11 +577,11 @@
     "5": 1.0
    }
   },
-  "seconds": 61
+  "seconds": 89
  },
- "generated": "2026-10-11T04:46:07Z",
- "commit": "4267c9c",
- "run": "38112609780",
+ "generated": "2026-10-26T19:18:52Z",
+ "commit": "f4bf517",
+ "run": "40385557877",
  "extras": {
   "buildings_max25m.bin": "uint8 per building, canonical order. NOT a published value: the highest class among the 5 m cells whose centre is within 25 m (5 cells) of the building's own cell; 0 where the building itself has no data. Offered because a building's own cell is often a graded pad that reads Low while the slope cut beside it does not; the 25 m radius is our choice, not the publisher's. buildings.bin remains the class at the point.",
   "assets_max25m.json": "the same for assets: { \"<type>:<key>\": class }",
@@ -592,10 +592,10 @@
   "file": "buildings.bin",
   "dtype": "u1",
   "shape": [
-   1737084
+   1737161
   ],
   "order": "tiles/bld/index.json order, then tile order",
-  "bld_generated": "2026-10-11T04:42:03.587Z"
+  "bld_generated": "2026-10-26T19:16:41.230Z"
  },
- "assets": 3988
+ "assets": 3992
 }
