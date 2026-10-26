@@ -262,7 +262,8 @@ export const createBuildings: LayerFactory = async (ctx) => {
     }
     // where the height comes from: the ids file says, for tiles that have one; else OSM or the detection's source
     const src = bt.ids?.[bi]?.split(',')[2];
-    const hSrc = src === 'usas' ? (es ? 'FEMA USA Structures, lidar' : 'FEMA USA Structures, lidar') : src === 'levels' ? (es ? 'pisos en OpenStreetMap' : 'OpenStreetMap floors')
+    const hSrc = src === 'lidar' ? (es ? 'lidar USGS 2023-25' : 'USGS lidar 2023-25') : src === 'usas' ? 'FEMA USA Structures, lidar' : src === 'parts' ? (es ? 'partes del edificio en OpenStreetMap' : 'OpenStreetMap building parts')
+      : src === 'levels' ? (es ? 'pisos en OpenStreetMap' : 'OpenStreetMap floors')
       : src === 'ovt' || (!src && added) ? 'Overture Maps' : 'OpenStreetMap';
     parts.push(`${p.height[bi].toFixed(1)} m ` + (est ? (es ? '(altura estimada)' : '(height estimated)') : (es ? `(altura de ${hSrc})` : `(height from ${hSrc})`)));
     if (p.ground[bi] !== -32768) {
@@ -329,6 +330,7 @@ export const createBuildings: LayerFactory = async (ctx) => {
     if (!t || t.state !== 'ready' || !t.pick) return;
     S.pendingPick.value = null;
     const p = t.pick, [wx, wz] = lonLatToXZ(want.lon, want.lat), x = wx - p.cx, z = wz - p.cz;
+    if (want.gers && t.ids) { const k = t.ids.findIndex((l) => l.startsWith(want.gers + ',')); if (k >= 0 && k < p.count) { pin(t, k); return; } }
     let best = -1, bestD = 15;
     for (let i = 0; i < p.count; i++) {
       const bb = p.bbox;

@@ -32,6 +32,11 @@ EXPORT="--overwrite -f geojsonseq -x print_record_separator=false --add-unique-i
 osmium tags-filter --overwrite -o "$OSM/buildings.osm.pbf" "$PBF" wr/building
 osmium export $EXPORT -c "$OSM/areas.json" --geometry-types=polygon -o "$OSM/buildings.geojsonl" "$OSM/buildings.osm.pbf" 2> "$OSM/buildings.err" || { tail -5 "$OSM/buildings.err"; exit 1; }
 
+# building:part: the parts of a building mapped in 3D (a tower on its podium). build.mjs gives a building with no
+# height tag of its own the height of its tallest part.
+osmium tags-filter --overwrite -o "$OSM/parts.osm.pbf" "$PBF" wr/building:part
+osmium export $EXPORT -c "$OSM/areas.json" --geometry-types=polygon -o "$OSM/building_parts.geojsonl" "$OSM/parts.osm.pbf" 2> "$OSM/parts.err" || { tail -5 "$OSM/parts.err"; exit 1; }
+
 osmium tags-filter --overwrite -o "$OSM/facilities.osm.pbf" "$PBF" \
   nwr/amenity=hospital,clinic,doctors,school,college,university,fire_station,police,ferry_terminal \
   nwr/power=plant,substation nwr/man_made=water_works,wastewater_plant nwr/aeroway=aerodrome \
