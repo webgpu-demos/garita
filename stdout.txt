@@ -1,0 +1,14 @@
+Mon Oct 26 22:38:26 UTC 2026
+1.1G	/tmp/site
+loaded 182 s
+title {"waited":0,"r":null,"mode":"explore","loaded":62,"cam":[5968,1951,5399],"hud":"San Juan  18.45084N 66.08816W  2.9 m | San Juan 05:27 · sun -14° | 11 fps (quality step 2) · 858 draws · 3.09M tris | tiles 58/4499 (+4) · 768 buildings"}
+  click "Comenzar": ▶ Comenzar · with sound
+s10 {"waited":0,"r":null,"mode":"explore","loaded":20,"cam":[1303,552,7697],"hud":"San Juan  18.43819N 66.06543W  49.0 m | San Juan 05:28 · sun -13° | 11 fps (quality step 2) · 292 draws · 2.16M tris | tiles 16/4499 (+4) · 1612 buildings"}
+s30 {"waited":0,"r":null,"mode":"explore","loaded":59,"cam":[1324,550,7676],"hud":"San Juan  18.43815N 66.06537W  48.9 m | San Juan 05:28 · sun -13° | 10 fps (quality step 2) · 1467 draws · 7.77M tris | tiles 56/4499 (+4) · 6004 buildings"}
+s60 {"waited":0,"r":null,"mode":"explore","loaded":81,"cam":[1363,545,7637],"hud":"San Juan  18.43807N 66.06525W  48.2 m | San Juan 05:28 · sun -13° | 11 fps (quality step 2) · 1180 draws · 5.25M tris | tiles 81/4499 (+4) · 7607 buildings"}
+s100 {"waited":0,"r":null,"mode":"explore","loaded":83,"cam":[1437,534,7563],"hud":"San Juan  18.43791N 66.06504W  47.0 m | San Juan 05:28 · sun -13° | 11 fps (quality step 2) · 1153 draws · 4.60M tris | tiles 83/4499 (+4) · 7807 buildings"}
+[http 404] http://localhost:8080/favicon.ico
+[error] Failed to load resource: the server responded with a status of 404 (File not found)
+Mon Oct 26 22:46:17 UTC 2026
+exit code 0
+784K	out
