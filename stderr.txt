@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<stdin>", line 24, in <module>
+_duckdb.BinderException: Binder Error: Cannot call function '"ST_Contains"' with geometries of different coordinate reference systems (CRS).
+First geometry type is in 'EPSG:4326' which is not compatible with 'OGC:CRS84'.
+ * Use 'ST_Transform' to convert geometries to the same CRS before passing them to this function.
+ * Use 'ST_SetCRS' to explicitly override the CRS of a geometry expression, without performing a transformation.
+
+
+LINE 1: ..., u.OCC_CLS as occ from osm o join us u on ST_Contains(u.geom, o.c)
+                                                                          ^^^

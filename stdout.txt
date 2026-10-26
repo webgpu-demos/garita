@@ -1,0 +1,48 @@
+Mon Oct 26 14:31:33 UTC 2026
+Key>Partners/ORNL/USA_Structures/Puerto Rico/
+LastModified>2022-02-15T22:22:01.000Z
+Size>0
+Key>Partners/ORNL/USA_Structures/Puerto Rico/Deliverable20211222PR.zip
+LastModified>2022-02-15T22:22:15.000Z
+Size>211147152
+Key>Partners/ORNL/USA_Structures/Puerto Rico/Deliverable20230630PR.zip
+LastModified>2023-07-03T20:09:37.000Z
+Size>369675591
+Key>Partners/ORNL/USA_Structures/Puerto Rico/Deliverable20250606PR.zip
+LastModified>2025-06-12T16:00:37.000Z
+Size>171051407
+Key>Partners/ORNL/USA_Structures/Puerto Rico/PR_Structures_20260913.zip
+LastModified>2026-09-22T20:28:16.000Z
+Size>212477595
+KEY=Partners/ORNL/USA_Structures/Puerto Rico/PR_Structures_20260913.zip
+zip s: 4 212477595
+/tmp/us
+/tmp/us/PR_Structures.gdb
+/tmp/us/PR_Structures.gdb/a00000004.gdbtable
+/tmp/us/PR_Structures.gdb/a00000009.gdbindexes
+/tmp/us/PR_Structures.gdb/a00000009.spx
+/tmp/us/PR_Structures.gdb/a00000002.gdbtable
+/tmp/us/PR_Structures.gdb/a00000009.gdbtable
+/tmp/us/PR_Structures.gdb/a00000009.horizon
+/tmp/us/PR_Structures.gdb/gdb
+/tmp/us/PR_Structures.gdb/a00000005.gdbtable
+/tmp/us/PR_Structures.gdb/a00000007.gdbtable
+/tmp/us/PR_Structures.gdb/a00000009.gdbtablx
+/tmp/us/PR_Structures.gdb/a00000005.gdbtablx
+/tmp/us/PR_Structures.gdb/timestamps
+/tmp/us/PR_Structures.gdb/a00000006.gdbtable
+/tmp/us/PR_Structures.gdb/a00000006.gdbtablx
+/tmp/us/PR_Structures.gdb/a00000001.gdbtablx
+/tmp/us/PR_Structures.gdb/a00000003.gdbtablx
+/tmp/us/PR_Structures.gdb/a00000007.gdbtablx
+/tmp/us/PR_Structures.gdb/a00000002.gdbtablx
+SRC=/tmp/us/PR_Structures.gdb
+[]
+read s 8.9 [('OBJECTID', 'BIGINT', 'YES', None, None, None), ('Shape_Area', 'DOUBLE', 'YES', None, None, None), ('Shape_Length', 'DOUBLE', 'YES', None, None, None), ('BUILD_ID', 'INTEGER', 'YES', None, None, None), ('OCC_CLS', 'VARCHAR', 'YES', None, None, None), ('PRIM_OCC', 'VARCHAR', 'YES', None, None, None), ('SEC_OCC', 'VARCHAR', 'YES', None, None, None), ('PROP_ADDR', 'VARCHAR', 'YES', None, None, None), ('PROP_CITY', 'VARCHAR', 'YES', None, None, None), ('PROP_ST', 'VARCHAR', 'YES', None, None, None), ('PROP_ZIP', 'VARCHAR', 'YES', None, None, None), ('PROP_CNTY', 'VARCHAR', 'YES', None, None, None), ('OUTBLDG', 'VARCHAR', 'YES', None, None, None), ('HEIGHT', 'FLOAT', 'YES', None, None, None), ('SQMETERS', 'FLOAT', 'YES', None, None, None), ('SQFEET', 'FLOAT', 'YES', None, None, None), ('H_ADJ_ELEV', 'FLOAT', 'YES', None, None, None), ('L_ADJ_ELEV', 'FLOAT', 'YES', None, None, None), ('FIPS', 'VARCHAR', 'YES', None, None, None), ('CENSUSCODE', 'VARCHAR', 'YES', None, None, None), ('PROD_DATE', 'TIMESTAMP_MS', 'YES', None, None, None), ('SOURCE', 'VARCHAR', 'YES', None, None, None), ('USNG', 'VARCHAR', 'YES', None, None, None), ('LONGITUDE', 'DOUBLE', 'YES', None, None, None), ('LATITUDE', 'DOUBLE', 'YES', None, None, None), ('IMAGE_NAME', 'VARCHAR', 'YES', None, None, None), ('IMAGE_DATE', 'TIMESTAMP_MS', 'YES', None, None, None), ('VAL_METHOD', 'VARCHAR', 'YES', None, None, None), ('REMARKS', 'VARCHAR', 'YES', None, None, None), ('UUID', 'VARCHAR', 'YES', None, None, None), ('B_CODE', 'VARCHAR', 'YES', None, None, None), ('POP_CI95_UPPER', 'INTEGER', 'YES', None, None, None), ('POP_MEDIAN', 'INTEGER', 'YES', None, None, None), ('POP_CI95_LOWER', 'INTEGER', 'YES', None, None, None), ('Shape', "GEOMETRY('EPSG:4326')", 'YES', None, None, None)]
+crs []
+bbox [(-67.94172250899999, -65.22751953900001, 17.885906897999973, 18.51515634399999)]
+us rows, heights [(1247633, 153080, 153080, 3.0799999237060547, 6.039999961853027, 58.29999923706055)]
+occ [('Residential', 1114525), ('Unclassified', 63113), ('Agriculture', 19192), ('Government', 16254), ('Commercial', 12126), ('Education', 9455), ('Industrial', 6638), ('Utility and Misc', 6329), ('Assembly', 1)]
+Mon Oct 26 14:32:09 UTC 2026
+exit code 0
+12K	out
