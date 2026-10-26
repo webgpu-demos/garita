@@ -16,6 +16,7 @@ import { BottomBar } from './bottombar';
 import { SearchPalette } from './search';
 import { Toasts } from './toasts';
 import { HoverTip, LegendCard } from './hover';
+import { BuildingCard } from './building';
 import { AboutSheet, maybeShowAboutOnce } from './about';
 
 function App({ store }: { store: TwinStore }) {
@@ -42,6 +43,7 @@ function App({ store }: { store: TwinStore }) {
       <BottomBar />
       <Toasts store={store} />
       <LegendCard />
+      <BuildingCard />
       <HoverTip store={store} />
       {paletteOpen.value && <SearchPalette store={store} />}
       {aboutOpen.value && <AboutSheet />}

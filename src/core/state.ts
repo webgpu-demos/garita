@@ -113,6 +113,12 @@ export const overlayLegend = signal<Legend | null>(null);
 export const replayStormId = signal<string | null>(null);
 /** Short text for the hovered thing that is not a store object (e.g. "Bayamón · municipio"). */
 export const hoverText = signal<string | null>(null);
+/** A building clicked, or named by ?pick=lon,lat: where it stands and what the tile says about it (the building card).
+ *  Buildings are tile records, not store objects; `tile` and `index` say which record. */
+export interface PinnedBuilding { lon: number; lat: number; text: string; tile: string; index: number }
+export const pinnedBuilding = signal<PinnedBuilding | null>(null);
+/** ?pick=lon,lat: the buildings layer pins the footprint under this point once its tile is in, then clears it. */
+export const pendingPick = signal<{ lon: number; lat: number; at: number } | null>(null);
 
 /** Multiplies the render resolution. 1 normally; automated screenshots load at a fraction (software GL is slow) and
  *  switch to 1 for the final frame. */

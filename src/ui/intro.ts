@@ -18,7 +18,7 @@ export const introOpen = signal(false);
 /** True once the intro has opened by itself during this page load (the About sheet then stays closed). */
 export let introShownThisLoad = false;
 
-const DEEP_LINK = ['select', 'cam', 'overlay', 'sea', 't', 'panel', 'surge', 'nl', 'q'];
+const DEEP_LINK = ['select', 'cam', 'overlay', 'sea', 't', 'panel', 'surge', 'nl', 'q', 'pick'];
 const ICON = {
   play: '<path d="M4.5 3v10l8.5-5z" fill="currentColor"/>',
   pause: '<path d="M5 3v10M11 3v10" stroke="currentColor" stroke-width="2"/>',
