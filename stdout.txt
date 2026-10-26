@@ -1,0 +1,94 @@
+Mon Oct 26 16:03:05 UTC 2026
+54M	/tmp/site/tiles/bld
+[    6.0s] buildings 1737084 of 2026-10-11T04:42:03.587Z
+[    7.3s]   shard  0: 1048 cells, 104841 buildings
+[    7.3s]   shard  1: 1120 cells, 76485 buildings
+[    7.3s]   shard  2: 1130 cells, 72129 buildings
+[    7.3s]   shard  3: 1183 cells, 51103 buildings
+[    7.3s]   shard  4: 1151 cells, 64031 buildings
+[    7.3s]   shard  5: 1083 cells, 90889 buildings
+[    7.3s]   shard  6: 1116 cells, 78016 buildings
+[    7.3s]   shard  7: 1030 cells, 111842 buildings
+[    7.3s]   shard  8: 927 cells, 154066 buildings
+[    7.3s]   shard  9: 1216 cells, 37745 buildings
+[    7.3s]   shard 10: 1146 cells, 65630 buildings
+[    7.3s]   shard 11: 1094 cells, 86756 buildings
+[    7.3s]   shard 12: 1154 cells, 62769 buildings
+[    7.3s]   shard 13: 1136 cells, 69841 buildings
+[    7.3s]   shard 14: 974 cells, 135192 buildings
+[    7.3s]   shard 15: 960 cells, 139818 buildings
+[    7.3s]   shard 16: 1041 cells, 107875 buildings
+[    7.3s]   shard 17: 1098 cells, 85065 buildings
+[    7.3s]   shard 18: 1144 cells, 66911 buildings
+[    7.3s]   shard 19: 1120 cells, 76080 buildings
+[    8.1s] plan written
+cells 21871 buildings 1737084 per cell p50 35.0 p90 218.0 cells with <5 buildings 3056 multi-collection cells 18093 ds count hist [0, 3778, 5003, 6896, 3115, 2890, 189]
+[    1.0s]   shard  0: 38 cells, 11293 buildings
+[    1.0s] plan written
+[    0.0s] shard 0: 38 cells, 11293 buildings; resolution 2.0 m; budget 800.0 s
+[   62.7s]   cell 26/38 20740/29351: 321 buildings, 875257 points (2.2/m2), read 2.3 s, measure 0.3 s
+[   99.9s] shard done {"cells": 38, "done": 38, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 30717906, "read_s": 87.7, "measure_s": 11.8, "measured": 10290, "buildings": 11293, "elapsed_s": 99.9}
+res 2.0: 100 s
+[    0.0s] buildings 11293, in the plan 11293, read 11293, measured 10290; shards in 1/1; complete True
+[    0.3s] {
+ "buildings": 11293,
+ "in_plan": 11293,
+ "read": 11293,
+ "measured": 10290,
+ "share_measured_of_read": 0.9112,
+ "share_measured_osm": 0.9369,
+ "share_measured_added": 0.3944,
+ "no_value_reasons": {
+  "no_ground_or_no_points": 0,
+  "too_few_roof_points": 458,
+  "cover_below_min": 545
+ },
+ "height_m": {
+  "p10": 3.44,
+  "p50": 6.29,
+  "p90": 12.12,
+  "p99": 41.39,
+  "max": 82.4
+ },
+ "p90_minus_p50_m": {
+  "p50": 0.3,
+  "p90": 2.83
+ },
+ "against_tile_height": {
+  "all_with_a_height": {
+   "n": 9908,
+   "median_diff_m": 0.27,
+   "p05": -1.31,
+   "p95": 4.78,
+   "median_abs_m": 0.59,
+   "share_within_2m": 0.81,
+   "share_within_3m": 0.887,
+   "share_within_20pct": 0.694
+  },
+  "levels": {
+   "n": 756,
+   "median_diff_m": 0.26,
+   "p05": -2.77,
+   "p95": 8.98,
+   "median_abs_m": 1.35,
+   "share_within_2m": 0.656,
+   "share_within_3m": 0.779,
+   "share_within_20pct": 0.627
+  },
+  "osm": {
+   "n": 8398,
+   "median_diff_m": 0.24,
+   "p05": -0.99,
+   "p95": 4.29,
+   "median_abs_m": 0.53,
+   "share_within_2m": 0.831,
+   "share_within_3m": 0.902,
+   "share_within_20pct": 0.713
+  },
+  "usas": {
+   "n": 754,
+   "median_diff_m": 0.63,
+   "p05": -4.87,
+Mon Oct 26 16:05:28 UTC 2026
+exit code 0
+8.0K	out
