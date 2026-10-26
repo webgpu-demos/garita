@@ -1,0 +1,133 @@
+Mon Oct 26 16:07:18 UTC 2026
+/tmp/site/tiles/bld/14/5184:
+7336.bin
+7336.ids
+7337.bin
+7337.ids
+
+/tmp/site/tiles/bld/14/5185:
+7337.bin
+7337.ids
+env ok
+[    0.1s] buildings 11293 of 2026-10-26T14:59:20.663Z
+[    5.9s] collection USGS_LPC_PR_PRVI_A_2018 EPSG:3857 points 90878087626 bounds [-7564421, 2027264, -189, -7294366, 2084753, 2148]
+[    5.9s] collection USGS_LPC_PR_PRVI_C_2018 EPSG:3857 points 5865072350 bounds [-7406625, 2023547, -168, -7260257, 2078692, 1141]
+[    5.9s] collection USGS_LPC_PR_PRVI_D_2018 EPSG:3857 points 95858824868 bounds [-7460103, 2052920, -184, -7332131, 2081539, 5721]
+[    5.9s] collection USGS_LPC_PR_PRVI_E_2018 EPSG:3857 points 19241620294 bounds [-7488731, 2062305, -163, -7328352, 2093360, 1486]
+[    5.9s] collection USGS_LPC_PR_PRVI_F_2018 EPSG:3857 points 30759497718 bounds [-7486208, 2079845, -163, -7398484, 2098139, 3892]
+[    5.9s] collection USGS_LPC_PR_PRVI_G_2018 EPSG:3857 points 22435137525 bounds [-7398487, 2078261, -171, -7332112, 2095605, 1344]
+[    5.9s] collection USGS_LPC_PR_PRVI_H_2018 EPSG:3857 points 56409693116 bounds [-7389016, 2033663, -193, -7301297, 2087800, 2768]
+[    5.9s] collections per cell: [0, 38]
+[    5.9s] cells 38 without a collection 0 buildings in cells 11293
+[    5.9s]   shard  0: 24 cells, 3784 buildings
+[    5.9s]   shard  1: 14 cells, 7509 buildings
+[    5.9s] plan written
+[    0.0s] shard 0: 24 cells, 3784 buildings; resolution 2.0 m; budget 700.0 s
+(PDAL Error) Can't load library /tmp/mamba/envs/pd/lib/libpdal_plugin_reader_hdf.so: Failed to load "/tmp/mamba/envs/pd/lib/libpdal_plugin_reader_hdf.so": libhdf5_cpp.so.320: cannot open shared object file: No such file or directory(PDAL Error) Can't load library /tmp/mamba/envs/pd/lib/libpdal_plugin_reader_icebridge.so: Failed to load "/tmp/mamba/envs/pd/lib/libpdal_plugin_reader_icebridge.so": libhdf5_cpp.so.320: cannot open shared object file: No such file or directory(PDAL Error) Can't load library /tmp/mamba/envs/pd/lib/libpdal_plugin_reader_hdf.so: Failed to load "/tmp/mamba/envs/pd/lib/libpdal_plugin_reader_hdf.so": libhdf5_cpp.so.320: cannot open shared object file: No such file or directory(PDAL Error) Can't load library /tmp/mamba/envs/pd/lib/libpdal_plugin_reader_icebridge.so: Failed to load "/tmp/mamba/envs/pd/lib/libpdal_plugin_reader_icebridge.so": libhdf5_cpp.so.320: cannot open shared object file: No such file or directory[    3.2s]   cell 1/24 20736/29346: 15 buildings, 1 collections, 591875 points (2.2/m2), read 3.0 s, measure 0.2 s
+[   24.1s] shard done {"cells": 24, "done": 24, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 16881461, "read_s": 67.5, "measure_s": 6.9, "readers": 3, "measured": 3307, "buildings": 3784, "elapsed_s": 24.1}
+[    0.0s] shard 1: 14 cells, 7509 buildings; resolution 2.0 m; budget 700.0 s
+(PDAL Error) Can't load library /tmp/mamba/envs/pd/lib/libpdal_plugin_reader_hdf.so: Failed to load "/tmp/mamba/envs/pd/lib/libpdal_plugin_reader_hdf.so": libhdf5_cpp.so.320: cannot open shared object file: No such file or directory(PDAL Error) Can't load library /tmp/mamba/envs/pd/lib/libpdal_plugin_reader_icebridge.so: Failed to load "/tmp/mamba/envs/pd/lib/libpdal_plugin_reader_icebridge.so": libhdf5_cpp.so.320: cannot open shared object file: No such file or directory(PDAL Error) Can't load library /tmp/mamba/envs/pd/lib/libpdal_plugin_reader_hdf.so: Failed to load "/tmp/mamba/envs/pd/lib/libpdal_plugin_reader_hdf.so": libhdf5_cpp.so.320: cannot open shared object file: No such file or directory(PDAL Error) Can't load library /tmp/mamba/envs/pd/lib/libpdal_plugin_reader_icebridge.so: Failed to load "/tmp/mamba/envs/pd/lib/libpdal_plugin_reader_icebridge.so": libhdf5_cpp.so.320: cannot open shared object file: No such file or directory[    4.5s]   cell 1/14 20740/29349: 396 buildings, 1 collections, 1211585 points (2.8/m2), read 3.8 s, measure 0.5 s
+[   18.5s] shard done {"cells": 14, "done": 14, "empty": 0, "failed": 0, "skipped_for_time": 0, "points": 13836445, "read_s": 48.8, "measure_s": 8.7, "readers": 3, "measured": 6983, "buildings": 7509, "elapsed_s": 18.5}
+shards 48 s
+   "lat": 18.45522,
+   "height_m": 75.1,
+   "p50_m": 70.2,
+   "tile_height_m": 4.0,
+   "tile_source": "levels"
+  },
+  {
+   "i": 40,
+   "lon": -66.087523,
+   "lat": 18.462522,
+   "height_m": 74.2,
+   "p50_m": 68.5,
+   "tile_height_m": 62.0,
+   "tile_source": "levels"
+  },
+  {
+   "i": 3605,
+   "lon": -66.070464,
+   "lat": 18.456285,
+   "height_m": 73.8,
+   "p50_m": 62.7,
+   "tile_height_m": 23.5,
+   "tile_source": "levels"
+  },
+  {
+   "i": 9870,
+   "lon": -66.061582,
+   "lat": 18.442714,
+   "height_m": 73.1,
+   "p50_m": 71.3,
+   "tile_height_m": 72.0,
+   "tile_source": "osm"
+  },
+  {
+   "i": 9869,
+   "lon": -66.061797,
+   "lat": 18.442089,
+   "height_m": 72.1,
+   "p50_m": 69.4,
+   "tile_height_m": 72.0,
+   "tile_source": "osm"
+  },
+  {
+   "i": 163,
+   "lon": -66.079827,
+   "lat": 18.45367,
+   "height_m": 71.0,
+   "p50_m": 68.3,
+   "tile_height_m": 10.5,
+   "tile_source": "levels"
+  },
+  {
+   "i": 42,
+   "lon": -66.08681,
+   "lat": 18.462992,
+   "height_m": 68.5,
+   "p50_m": 63.0,
+   "tile_height_m": 62.5,
+   "tile_source": "osm"
+  },
+  {
+   "i": 3551,
+   "lon": -66.061006,
+   "lat": 18.452893,
+   "height_m": 67.6,
+   "p50_m": 59.7,
+   "tile_height_m": 59.5,
+   "tile_source": "osm"
+  },
+  {
+   "i": 4,
+   "lon": -66.085649,
+   "lat": 18.463522,
+   "height_m": 67.2,
+   "p50_m": 35.9,
+   "tile_height_m": 7.5,
+   "tile_source": "levels"
+  },
+  {
+   "i": 3542,
+   "lon": -66.064622,
+   "lat": 18.455037,
+   "height_m": 66.3,
+   "p50_m": 62.5,
+   "tile_height_m": 62.5,
+   "tile_source": "osm"
+  }
+ ]
+}
+[    0.3s] written /tmp/out/data/hazards/heights complete
+total 468
+drwxr-xr-x 2 runner runner   4096 Oct 26 16:08 .
+drwxr-xr-x 3 runner runner   4096 Oct 26 16:08 ..
+-rw-r--r-- 1 runner runner      2 Oct 26 16:08 assets.json
+-rw-r--r-- 1 runner runner  22586 Oct 26 16:08 buildings.bin
+-rw-r--r-- 1 runner runner  11293 Oct 26 16:08 buildings_cover.bin
+-rw-r--r-- 1 runner runner  22586 Oct 26 16:08 buildings_p50.bin
+-rw-r--r-- 1 runner runner   9923 Oct 26 16:08 meta.json
+-rw-r--r-- 1 runner runner 391094 Oct 26 16:08 qa.jpg
+Mon Oct 26 16:08:29 UTC 2026
+exit code 0
+664K	out

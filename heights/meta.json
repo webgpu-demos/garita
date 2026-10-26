@@ -1,0 +1,394 @@
+{
+ "complete": true,
+ "partial_test_run_only_tiles_matching": null,
+ "source": {
+  "name": "USGS 3D Elevation Program (3DEP) lidar point clouds, Entwine Point Tiles on AWS Open Data (usgs-lidar-public)",
+  "publisher": "U.S. Geological Survey",
+  "licence": "Public domain (U.S. Government work)",
+  "urls": [
+   "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/USGS_LPC_PR_PRVI_A_2018/ept.json",
+   "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/USGS_LPC_PR_PRVI_C_2018/ept.json",
+   "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/USGS_LPC_PR_PRVI_D_2018/ept.json",
+   "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/USGS_LPC_PR_PRVI_E_2018/ept.json",
+   "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/USGS_LPC_PR_PRVI_F_2018/ept.json",
+   "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/USGS_LPC_PR_PRVI_G_2018/ept.json",
+   "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/USGS_LPC_PR_PRVI_H_2018/ept.json"
+  ],
+  "collections": [
+   {
+    "name": "USGS_LPC_PR_PRVI_A_2018",
+    "url": "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/USGS_LPC_PR_PRVI_A_2018/ept.json",
+    "bounds": [
+     -7564421,
+     2027264,
+     -189,
+     -7294366,
+     2084753,
+     2148
+    ],
+    "points": 90878087626,
+    "srs": "EPSG:3857",
+    "vertical": null,
+    "classes_in_schema": true,
+    "source_files": 1163
+   },
+   {
+    "name": "USGS_LPC_PR_PRVI_C_2018",
+    "url": "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/USGS_LPC_PR_PRVI_C_2018/ept.json",
+    "bounds": [
+     -7406625,
+     2023547,
+     -168,
+     -7260257,
+     2078692,
+     1141
+    ],
+    "points": 5865072350,
+    "srs": "EPSG:3857",
+    "vertical": null,
+    "classes_in_schema": true,
+    "source_files": 148
+   },
+   {
+    "name": "USGS_LPC_PR_PRVI_D_2018",
+    "url": "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/USGS_LPC_PR_PRVI_D_2018/ept.json",
+    "bounds": [
+     -7460103,
+     2052920,
+     -184,
+     -7332131,
+     2081539,
+     5721
+    ],
+    "points": 95858824868,
+    "srs": "EPSG:3857",
+    "vertical": null,
+    "classes_in_schema": true,
+    "source_files": 855
+   },
+   {
+    "name": "USGS_LPC_PR_PRVI_E_2018",
+    "url": "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/USGS_LPC_PR_PRVI_E_2018/ept.json",
+    "bounds": [
+     -7488731,
+     2062305,
+     -163,
+     -7328352,
+     2093360,
+     1486
+    ],
+    "points": 19241620294,
+    "srs": "EPSG:3857",
+    "vertical": null,
+    "classes_in_schema": true,
+    "source_files": 279
+   },
+   {
+    "name": "USGS_LPC_PR_PRVI_F_2018",
+    "url": "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/USGS_LPC_PR_PRVI_F_2018/ept.json",
+    "bounds": [
+     -7486208,
+     2079845,
+     -163,
+     -7398484,
+     2098139,
+     3892
+    ],
+    "points": 30759497718,
+    "srs": "EPSG:3857",
+    "vertical": null,
+    "classes_in_schema": true,
+    "source_files": 494
+   },
+   {
+    "name": "USGS_LPC_PR_PRVI_G_2018",
+    "url": "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/USGS_LPC_PR_PRVI_G_2018/ept.json",
+    "bounds": [
+     -7398487,
+     2078261,
+     -171,
+     -7332112,
+     2095605,
+     1344
+    ],
+    "points": 22435137525,
+    "srs": "EPSG:3857",
+    "vertical": null,
+    "classes_in_schema": true,
+    "source_files": 303
+   },
+   {
+    "name": "USGS_LPC_PR_PRVI_H_2018",
+    "url": "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/USGS_LPC_PR_PRVI_H_2018/ept.json",
+    "bounds": [
+     -7389016,
+     2033663,
+     -193,
+     -7301297,
+     2087800,
+     2768
+    ],
+    "points": 56409693116,
+    "srs": "EPSG:3857",
+    "vertical": null,
+    "classes_in_schema": true,
+    "source_files": 1133
+   }
+  ],
+  "registry": "https://registry.opendata.aws/usgs-lidar/",
+  "flown": "2018-04 to 2019-04 (USGS project PR_PRVI 2018, after hurricane Maria)"
+ },
+ "method": "For each building footprint (outer ring): roof = last returns (return number equal to the number of returns) of class 1 (unclassified) or 6 (building) inside the ring and more than 0.5 m from it, more than 2.0 m above the ground; ground = the median of class 2 (ground) points 1 to 8.0 m outside the ring (1 to 25.0 m when fewer than 3 are found). Height = 90th percentile of the roof elevations minus the ground; p50 = their median. No value unless there are at least 6 roof points and 3 ground points, at least 50 % of the last returns inside the inset ring are roof points, and the height is 2.0 to 250.0 m. Points read with PDAL readers.ept at resolution 2.0 m, one query per zoom-16 cell; every 2018 collection whose bounds meet the cell is pooled. Heights are differences within one point cloud, so its vertical datum cancels out.",
+ "records": {
+  "buildings.bin": "uint16 height_dm, p90 roof minus ground, decimetres; 0 = no value",
+  "buildings_p50.bin": "uint16 p50_dm, median roof minus ground, decimetres; 0 = no value",
+  "buildings_cover.bin": "uint8 percent of the last returns inside the inset ring that are roof points; 255 = not measured (no points, no ground, or the cell was not read)"
+ },
+ "limits": "The lidar is of 2018-2019: a building built, raised or demolished since then is wrong or has no value. Footprints mostly under trees get no value. A footprint that covers more than one building gets the taller part (p90).",
+ "shards": [
+  {
+   "cells": 24,
+   "done": 24,
+   "empty": 0,
+   "failed": 0,
+   "skipped_for_time": 0,
+   "points": 16881461,
+   "read_s": 67.453209400177,
+   "measure_s": 6.908473968505859,
+   "readers": 3,
+   "measured": 3307,
+   "buildings": 3784,
+   "elapsed_s": 24.1
+  },
+  {
+   "cells": 14,
+   "done": 14,
+   "empty": 0,
+   "failed": 0,
+   "skipped_for_time": 0,
+   "points": 13836445,
+   "read_s": 48.822147369384766,
+   "measure_s": 8.733090162277222,
+   "readers": 3,
+   "measured": 6983,
+   "buildings": 7509,
+   "elapsed_s": 18.5
+  }
+ ],
+ "qa": {
+  "buildings": 11293,
+  "in_plan": 11293,
+  "read": 11293,
+  "measured": 10290,
+  "share_measured_of_read": 0.9112,
+  "share_measured_osm": 0.9369,
+  "share_measured_added": 0.3944,
+  "no_value_reasons": {
+   "no_ground_or_no_points": 0,
+   "too_few_roof_points": 458,
+   "cover_below_min": 545
+  },
+  "height_m": {
+   "p10": 3.44,
+   "p50": 6.29,
+   "p90": 12.12,
+   "p99": 41.39,
+   "max": 82.4
+  },
+  "p90_minus_p50_m": {
+   "p50": 0.3,
+   "p90": 2.83
+  },
+  "against_tile_height": {
+   "all_with_a_height": {
+    "n": 9908,
+    "median_diff_m": 0.27,
+    "p05": -1.31,
+    "p95": 4.78,
+    "median_abs_m": 0.59,
+    "share_within_2m": 0.81,
+    "share_within_3m": 0.887,
+    "share_within_20pct": 0.694
+   },
+   "levels": {
+    "n": 756,
+    "median_diff_m": 0.26,
+    "p05": -2.77,
+    "p95": 8.98,
+    "median_abs_m": 1.35,
+    "share_within_2m": 0.656,
+    "share_within_3m": 0.779,
+    "share_within_20pct": 0.627
+   },
+   "osm": {
+    "n": 8398,
+    "median_diff_m": 0.24,
+    "p05": -0.99,
+    "p95": 4.29,
+    "median_abs_m": 0.53,
+    "share_within_2m": 0.831,
+    "share_within_3m": 0.902,
+    "share_within_20pct": 0.713
+   },
+   "usas": {
+    "n": 754,
+    "median_diff_m": 0.63,
+    "p05": -4.87,
+    "p95": 6.59,
+    "median_abs_m": 0.97,
+    "share_within_2m": 0.735,
+    "share_within_3m": 0.826,
+    "share_within_20pct": 0.552
+   }
+  },
+  "tallest": [
+   {
+    "i": 550,
+    "lon": -66.087647,
+    "lat": 18.453948,
+    "height_m": 82.4,
+    "p50_m": 77.3,
+    "tile_height_m": 84.0,
+    "tile_source": "levels"
+   },
+   {
+    "i": 2886,
+    "lon": -66.088004,
+    "lat": 18.453867,
+    "height_m": 82.0,
+    "p50_m": 9.4,
+    "tile_height_m": 18.5,
+    "tile_source": "usas"
+   },
+   {
+    "i": 2884,
+    "lon": -66.087747,
+    "lat": 18.453636,
+    "height_m": 81.7,
+    "p50_m": 81.7,
+    "tile_height_m": 18.5,
+    "tile_source": "usas"
+   },
+   {
+    "i": 10792,
+    "lon": -66.066118,
+    "lat": 18.446396,
+    "height_m": 78.8,
+    "p50_m": 17.9,
+    "tile_height_m": null,
+    "tile_source": null
+   },
+   {
+    "i": 3905,
+    "lon": -66.063617,
+    "lat": 18.451529,
+    "height_m": 78.0,
+    "p50_m": 70.6,
+    "tile_height_m": 20.0,
+    "tile_source": "levels"
+   },
+   {
+    "i": 3707,
+    "lon": -66.069906,
+    "lat": 18.45522,
+    "height_m": 75.1,
+    "p50_m": 70.2,
+    "tile_height_m": 4.0,
+    "tile_source": "levels"
+   },
+   {
+    "i": 40,
+    "lon": -66.087523,
+    "lat": 18.462522,
+    "height_m": 74.2,
+    "p50_m": 68.5,
+    "tile_height_m": 62.0,
+    "tile_source": "levels"
+   },
+   {
+    "i": 3605,
+    "lon": -66.070464,
+    "lat": 18.456285,
+    "height_m": 73.8,
+    "p50_m": 62.7,
+    "tile_height_m": 23.5,
+    "tile_source": "levels"
+   },
+   {
+    "i": 9870,
+    "lon": -66.061582,
+    "lat": 18.442714,
+    "height_m": 73.1,
+    "p50_m": 71.3,
+    "tile_height_m": 72.0,
+    "tile_source": "osm"
+   },
+   {
+    "i": 9869,
+    "lon": -66.061797,
+    "lat": 18.442089,
+    "height_m": 72.1,
+    "p50_m": 69.4,
+    "tile_height_m": 72.0,
+    "tile_source": "osm"
+   },
+   {
+    "i": 163,
+    "lon": -66.079827,
+    "lat": 18.45367,
+    "height_m": 71.0,
+    "p50_m": 68.3,
+    "tile_height_m": 10.5,
+    "tile_source": "levels"
+   },
+   {
+    "i": 42,
+    "lon": -66.08681,
+    "lat": 18.462992,
+    "height_m": 68.5,
+    "p50_m": 63.0,
+    "tile_height_m": 62.5,
+    "tile_source": "osm"
+   },
+   {
+    "i": 3551,
+    "lon": -66.061006,
+    "lat": 18.452893,
+    "height_m": 67.6,
+    "p50_m": 59.7,
+    "tile_height_m": 59.5,
+    "tile_source": "osm"
+   },
+   {
+    "i": 4,
+    "lon": -66.085649,
+    "lat": 18.463522,
+    "height_m": 67.2,
+    "p50_m": 35.9,
+    "tile_height_m": 7.5,
+    "tile_source": "levels"
+   },
+   {
+    "i": 3542,
+    "lon": -66.064622,
+    "lat": 18.455037,
+    "height_m": 66.3,
+    "p50_m": 62.5,
+    "tile_height_m": 62.5,
+    "tile_source": "osm"
+   }
+  ]
+ },
+ "generated": "2026-10-26T16:08:29Z",
+ "stage": "heights",
+ "buildings": {
+  "file": "buildings.bin",
+  "dtype": "<u2",
+  "shape": [
+   11293
+  ],
+  "order": "tiles/bld/index.json order, then tile order",
+  "bld_generated": "2026-10-26T14:59:20.663Z"
+ },
+ "assets": 0
+}
