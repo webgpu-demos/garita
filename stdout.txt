@@ -1,0 +1,38 @@
+Mon Oct 26 22:17:25 UTC 2026
+84M	/tmp/site
+loaded
+ashford_low {"waited":245882,"loaded":158,"extra":null}
+lagoon {"waited":209814,"loaded":165,"extra":null}
+bridge {"waited":154453,"loaded":165,"extra":null}
+file:///tmp/t/node_modules/puppeteer-core/lib/esm/puppeteer/common/CallbackRegistry.js:79
+            this._reject(callback, new TargetCloseError('Target closed'));
+                                   ^
+
+TargetCloseError: Protocol error (Runtime.callFunctionOn): Target closed
+    at CallbackRegistry.clear (file:///tmp/t/node_modules/puppeteer-core/lib/esm/puppeteer/common/CallbackRegistry.js:79:36)
+    at CdpCDPSession.onClosed (file:///tmp/t/node_modules/puppeteer-core/lib/esm/puppeteer/cdp/CdpSession.js:112:25)
+    at #onClose (file:///tmp/t/node_modules/puppeteer-core/lib/esm/puppeteer/cdp/Connection.js:186:21)
+    at WebSocket.<anonymous> (file:///tmp/t/node_modules/puppeteer-core/lib/esm/puppeteer/node/NodeWebSocketTransport.js:42:30)
+    at callListener (/tmp/t/node_modules/ws/lib/event-target.js:290:14)
+    at WebSocket.onClose (/tmp/t/node_modules/ws/lib/event-target.js:220:9)
+    at WebSocket.emit (node:events:519:28)
+    at WebSocket.emitClose (/tmp/t/node_modules/ws/lib/websocket.js:292:10)
+    at Socket.socketOnClose (/tmp/t/node_modules/ws/lib/websocket.js:1374:15)
+    at Socket.emit (node:events:519:28) {
+  cause: ProtocolError
+      at <instance_members_initializer> (file:///tmp/t/node_modules/puppeteer-core/lib/esm/puppeteer/common/CallbackRegistry.js:99:14)
+      at new Callback (file:///tmp/t/node_modules/puppeteer-core/lib/esm/puppeteer/common/CallbackRegistry.js:103:16)
+      at CallbackRegistry.create (file:///tmp/t/node_modules/puppeteer-core/lib/esm/puppeteer/common/CallbackRegistry.js:22:26)
+      at Connection._rawSend (file:///tmp/t/node_modules/puppeteer-core/lib/esm/puppeteer/cdp/Connection.js:104:26)
+      at CdpCDPSession.send (file:///tmp/t/node_modules/puppeteer-core/lib/esm/puppeteer/cdp/CdpSession.js:71:33)
+      at #evaluate (file:///tmp/t/node_modules/puppeteer-core/lib/esm/puppeteer/cdp/ExecutionContext.js:360:50)
+      at ExecutionContext.evaluate (file:///tmp/t/node_modules/puppeteer-core/lib/esm/puppeteer/cdp/ExecutionContext.js:274:36)
+      at IsolatedWorld.evaluate (file:///tmp/t/node_modules/puppeteer-core/lib/esm/puppeteer/cdp/IsolatedWorld.js:102:30)
+      at CdpFrame.evaluate (file:///tmp/t/node_modules/puppeteer-core/lib/esm/puppeteer/api/Frame.js:359:43)
+      at CdpFrame.<anonymous> (file:///tmp/t/node_modules/puppeteer-core/lib/esm/puppeteer/util/decorators.js:101:27)
+}
+
+Node.js v22.23.3
+Mon Oct 26 22:31:40 UTC 2026
+exit code 0
+2.3M	out
