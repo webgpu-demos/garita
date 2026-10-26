@@ -1,0 +1,27 @@
+   0.0s area condado: 3486 x 2380 m around [-66.07165,18.45604]
+   0.2s coastline (OSM): 35 ways in 11 chains, 6 cross the area, 2 islands -> 4 sea polygons
+   0.3s terrain 769 x 564 @ 5 m, -0.1..42.6 m (0 filled; 181468 sea cells, 3 lagoons and ponds levelled)
+   0.3s surroundings: 223 x 215 @ 128 m, 49% land
+   0.4s garita: 11293 buildings in 3 tiles, 11293 with ids, 11263 with a GERS id, 0 with a lidar height
+   0.6s buildings: 6179 kept of 6095 OSM outlines (53 building parts standing for 38 outlines) and 166 FEMA-only; 66 dropped, 0 in the sea
+   0.6s   heights from: OSM height 4889, Garita lidar 0, OSM floors 541, FEMA LiDAR 412, default 237 (FEMA has 4732 outlines here)
+   0.6s   GERS ids from Garita: 6116 of 6245 buildings
+   0.6s   height median 5.9 m, p95 22.2 m, max 75.4 m; ground drop under outline p95 1.4 m
+   0.6s   usage codes: 411:2579 461:2284 412:691 402:410 421:86 422:78 441:25 403:12 431:9 452:3 401:1 454:1
+   2.5s road surfaces: 1714 streets and 98 expressway edges -> 285 outline pieces, 90 expressway pieces over 111 tiles; 1 FEMA structures in the street dropped
+   2.5s road graph (OSM): 1411 nodes, 1855 edges, 125.7 km
+   2.5s   residential 62.9, service 13.6, tertiary 13.5, motorway 13.1, primary 6.9, motorway_link 6.2, secondary 5.9, unclassified 2.3, primary_link 0.6, tertiary_link 0.4, secondary_link 0.3
+   2.5s   bridges 36 (4 street-level spans), tunnels 11, oneway 877
+   2.5s railways (OSM): 0 lines (0 elevated sections), 0 portals where tracks pass through buildings
+   3.9s road outlines: 285 polygons -> 317 carriageway, 1293 sidewalk pieces (0 pedestrian streets, 0 without any OSM way, 5 failed to clip); 0 cobbled
+   3.9s sea: 101 pieces
+   3.9s land cover (OSM): park 374, wood 81, water 3, pitch 38, beach 8
+   4.2s street bridges: 4 decks, 1043 polygons on them, 16 parapet segments
+   4.3s OSM extras: footway 270, footbridge 28, cycleway 13, plaza 105, stairs 25, bridge stairs 2, pedestrian 6, canopy 25, car park 447, parked car 4118, fence 54, pool 91, wall 37, guard_rail 4, hedge 1, ditch 1, retaining_wall 10, hydrant 69, info board 13, playground 2
+   4.6s paint: 32425 marks; props: tree 10572, light 1995, pole 1938, decal 555, signal 124, parked 4118, hydrant 68, info 13, play 2; wires 1391
+   4.6s OSM building hints: 0 buildings with a mapped colour or material; 1 with a colour in all
+   4.6s landmarks: 1 forts, 1 garitas, 0 domes, 0 lighthouses, 0 other models, 1708 triangles in 1 tiles
+   4.8s ads: 6 billboards, 0 screens, 2 rooftop boards, 12 banners
+   4.8s signs: 1144 from 1649 named places (fascia 769, blade 177, building names 178)
+   4.8s street furniture (OSM): bus_stop 104, bench 62, bollard 20, post_box 7, statue 35, bikes 11
+   4.9s wrote 165 tiles (5.1 MB), terrain 1.7 MB, roads 0.8 MB, rails 0.0 MB -> public/tiles/condado
