@@ -1,0 +1,28 @@
+   0.0s area condado: bbox lat 18.44400..18.46550 lon -66.08900..-66.05600
+   0.0s dem terrarium: 16 tiles, 16 to download
+   1.0s lidar: 215 tiles listed, 3 under the area, 3 to download
+   4.6s   USGS_1M_19_x81y205_PR_PuertoRicoUSVI_D24.tif
+   4.9s   USGS_1M_19_x80y205_PR_PuertoRicoUSVI_D24.tif
+  24.0s   USGS_1M_20_x17y205_PR_PuertoRicoUSVI_D24.tif
+  24.0s aerial photo: 56 tiles, 56 to download
+  24.2s surroundings: 65 tiles, 65 to download
+  25.0s fema structures: 2000
+  25.4s fema structures: 4000
+  25.6s fema structures: 4731
+  25.6s fema structures: 4731 buildings
+  25.6s osm extract: downloading https://download.geofabrik.de/north-america/us/puerto-rico-latest.osm.pbf
+  58.8s osm extract: 74 MB
+  59.8s   extract: 2M elements read, 0.1M nodes kept
+  60.7s   extract: 4M elements read, 0.2M nodes kept
+  61.5s   extract: 6M elements read, 0.2M nodes kept
+  62.4s   extract: 8M elements read, 0.2M nodes kept
+  63.2s   extract: 10M elements read, 0.2M nodes kept
+  66.4s   extract: 12M elements read, 0.3M nodes kept
+  68.6s   extract: 12.9M elements read, 315981 nodes and 39110 ways near the area
+  68.7s osm osm.json: 7094 elements (from the extract)
+  68.7s osm osm_buildings.json: 51541 elements (from the extract)
+  68.7s osm osm_coast.json: 1657 elements (from the extract)
+  68.7s osm osm_land.json: 19816 elements (from the extract)
+  68.8s osm osm_extra.json: 17542 elements (from the extract)
+  68.8s osm osm_poi.json: 2096 elements (from the extract)
+  68.8s done
