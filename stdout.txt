@@ -1,0 +1,17 @@
+Mon Oct 26 22:42:57 UTC 2026
+1.1G	/tmp/site
+loaded 177 s
+title {"waited":0,"r":null,"mode":"explore","loaded":63,"cam":[5968,1951,5399],"hud":"San Juan  18.45084N 66.08816W  2.9 m | San Juan 05:27 · sun -14° | 11 fps (quality step 2) · 875 draws · 3.10M tris | tiles 59/4499 (+4) · 783 buildings"}
+  click "Explorar libremente": Explorar libremente
+explore {"waited":188869,"r":{"mode":"car","v":null,"cam":[5968,1951,5399],"keys":[],"dir":false,"chase":true},"mode":"car","loaded":82,"cam":[6270,10,4645],"hud":"San Juan  18.42339N 66.05721W  8.5 m | San Juan 05:27 · sun -14° | 10 fps (quality step 4) · 664 draws · 8.70M tris | tiles 82/4499 (+4) · 7977 buildings"}
+car_fwd {"waited":0,"r":{"mode":"car","v":{"x":6268.5,"z":4638.3,"y":7.1,"h":-2.9,"sp":0.25415999999999994},"cam":[6270,10,4645],"keys":[],"dir":false,"chase":true},"mode":"car","loaded":82,"cam":[6270,10,4645],"hud":"San Juan  18.42340N 66.05721W  8.5 m | San Juan 05:27 · sun -14° | 10 fps (quality step 4) · 645 draws · 8.79M tris | tiles 82/4499 (+4) · 7977 buildings"}
+car_day {"waited":188351,"r":{"mode":"car","v":{"x":6268.5,"z":4638.3,"y":7.1,"h":-2.9,"sp":0.126118159252648},"cam":[6270,10,4645],"keys":[],"dir":false,"chase":true},"mode":"car","loaded":82,"cam":[6270,10,4645],"hud":"San Juan  18.42339N 66.05721W  8.5 m | San Juan 09:30 · sun 40° | 10 fps (quality step 4) · 766 draws · 16.95M tris | tiles 82/4499 · 7977 buildings"}
+walk FAILED Protocol error (Page.captureScreenshot): Target closed
+walk_fwd FAILED Protocol error (Input.dispatchKeyEvent): Session closed. Most likely the page has been closed.
+fly FAILED Protocol error (Input.dispatchKeyEvent): Session closed. Most likely the page has been closed.
+fly_fwd FAILED Protocol error (Input.dispatchKeyEvent): Session closed. Most likely the page has been closed.
+[http 404] http://localhost:8080/favicon.ico
+[error] Failed to load resource: the server responded with a status of 404 (File not found)
+Mon Oct 26 22:57:19 UTC 2026
+exit code 0
+1.1M	out
