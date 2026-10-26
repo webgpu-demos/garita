@@ -65,6 +65,9 @@ jobs:
       - name: Stage 2b - Overture Maps buildings (machine-detected footprints)
         if: ${{ hashFiles('pipeline/vector/stage2b_overture.sh') != '' }}
         run: bash pipeline/vector/stage2b_overture.sh 2>&1 | tee -a "$OUT_DIR/vector_log.txt"
+      - name: Stage 2c - USA Structures heights
+        if: ${{ hashFiles('pipeline/vector/stage2c_structures.sh') != '' }}
+        run: bash pipeline/vector/stage2c_structures.sh 2>&1 | tee -a "$OUT_DIR/vector_log.txt"
       - name: Land-clipped municipios
         run: node --max-old-space-size=8000 pipeline/vector/land.mjs 2>&1 | tee -a "$OUT_DIR/vector_log.txt"
       - name: Stage 4 - FEMA NFHL download

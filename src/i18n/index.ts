@@ -134,6 +134,8 @@ const D: Dict = {
   'bld.street': ['Street view', 'Vista de calle'],
   'bld.street.help': ['Open this building at street level in procedural San Juan (the scenario sea level goes along)', 'Abrir este edificio a nivel de calle en procedural San Juan (con el nivel del mar del escenario)'],
   'bld.nostreet': ['Street view covers the municipio of San Juan only.', 'La vista de calle cubre solo el municipio de San Juan.'],
+  'bld.osm.help': ['This building in OpenStreetMap', 'Este edificio en OpenStreetMap'],
+  'bld.gers.help': ['Copy its GERS id: Overture Maps\' stable id for this footprint, the key other data can join on', 'Copiar su id GERS: el id estable de Overture Maps para esta huella, la clave para unir otros datos'],
   'ob.note.ph': ['What did you see or decide?', '¿Qué viste o decidiste?'],
   'ob.status.ph': ['e.g. inspected, closed, needs visit', 'p. ej. inspeccionado, cerrado, requiere visita'],
   'ob.save': ['Save', 'Guardar'], 'ob.cancel': ['Cancel', 'Cancelar'],

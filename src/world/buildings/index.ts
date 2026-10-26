@@ -3,7 +3,8 @@
 // the tile, drawn the same, named as detections in the tooltip), streamed as zoom-14 tiles around the
 // orbit target when the camera is low, meshed in a Worker into one geometry per tile, drawn with one material.
 //
-// REAL (from the tiles): footprints, the heights OpenStreetMap carries (13.8 %), ground elevation at the centroid,
+// REAL (from the tiles): footprints, the heights OpenStreetMap carries and, where it has none, FEMA USA Structures'
+// lidar heights (the ids file beside each tile says which; qa.json counts them), ground elevation at the centroid,
 // FEMA flood class; the roof albedo is the aerial photo itself (the imagery the terrain drapes: zoom 16 near the
 // target, zoom 15 beyond), lifted to the roof. PROCEDURAL: all other heights (flagged; the tooltip says
 // "estimated"), wall colours, windows, lit rooms, the parapet rim, and roofs where the photo has no data. The sea-level tint is a bathtub screen: ground elevation against the scenario level.
@@ -27,6 +28,8 @@ interface Tile {
   material: THREE.MeshStandardMaterial | null; uni: TileUniforms | null;
   // roof photo: zoom loaded (0 = none), loading flag, when it arrived, when to try again after a failure
   tex: THREE.Texture | null; photoZ: number; photoBusy: boolean; photoBorn: number; photoRetry: number; texBytes: number;
+  /** The tile's ids file (tiles/bld/14/{x}/{y}.ids): per record "<gers>,<osm>,<height source>"; null for tiles built before it. */
+  ids: string[] | null;
 }
 
 export const createBuildings: LayerFactory = async (ctx) => {
@@ -111,6 +114,9 @@ export const createBuildings: LayerFactory = async (ctx) => {
 
   const startLoad = (t: Tile) => {
     t.state = 'loading'; loading++;
+    // the ids beside it, when the build wrote them (an HTML 404 page from a static host is no ids file)
+    fetch(dataUrl(`tiles/bld/${Z}/${t.x}/${t.y}.ids`)).then((r) => (r.ok && !(r.headers.get('content-type') || '').startsWith('text/html') ? r.text() : null))
+      .then((txt) => { if (txt && tiles.get(t.key) === t) t.ids = txt.split('\n'); }).catch(() => {});
     fetch(dataUrl(`tiles/bld/${Z}/${t.x}/${t.y}.bin`))
       .then((r) => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.arrayBuffer(); })
       .then((buf) => {
@@ -165,7 +171,7 @@ export const createBuildings: LayerFactory = async (ctx) => {
       const dx = Math.max(x - tx, 0, tx - x - 1), dy = Math.max(y - ty, 0, ty - y - 1);
       if (dx * dx + dy * dy > rT * rT) continue;
       let t = tiles.get(key);
-      if (!t) { t = { key, x, y, id: nextId++, state: 'queued', used: 0, d: 0, born: 0, fading: false, mesh: null, pick: null, count: 0, tris: 0, yRef: 0, material: null, uni: null, tex: null, photoZ: 0, photoBusy: false, photoBorn: 0, photoRetry: 0, texBytes: 0 }; tiles.set(key, t); byId.set(t.id, t); }
+      if (!t) { t = { key, x, y, id: nextId++, state: 'queued', used: 0, d: 0, born: 0, fading: false, mesh: null, pick: null, count: 0, tris: 0, yRef: 0, material: null, uni: null, tex: null, photoZ: 0, photoBusy: false, photoBorn: 0, photoRetry: 0, texBytes: 0, ids: null }; tiles.set(key, t); byId.set(t.id, t); }
       t.d = Math.hypot(x + 0.5 - tx, y + 0.5 - ty);
       wanted.push(t);
     }
@@ -254,7 +260,10 @@ export const createBuildings: LayerFactory = async (ctx) => {
         ? `huella detectada por máquina en imágenes${addedBy ? ` (${addedBy}, vía Overture Maps)` : ''}; no está en OpenStreetMap`
         : `footprint detected from imagery by machine${addedBy ? ` (${addedBy}, via Overture Maps)` : ''}; not in OpenStreetMap`);
     }
-    const hSrc = added ? 'Overture Maps' : 'OpenStreetMap';
+    // where the height comes from: the ids file says, for tiles that have one; else OSM or the detection's source
+    const src = bt.ids?.[bi]?.split(',')[2];
+    const hSrc = src === 'usas' ? (es ? 'FEMA USA Structures, lidar' : 'FEMA USA Structures, lidar') : src === 'levels' ? (es ? 'pisos en OpenStreetMap' : 'OpenStreetMap floors')
+      : src === 'ovt' || (!src && added) ? 'Overture Maps' : 'OpenStreetMap';
     parts.push(`${p.height[bi].toFixed(1)} m ` + (est ? (es ? '(altura estimada)' : '(height estimated)') : (es ? `(altura de ${hSrc})` : `(height from ${hSrc})`)));
     if (p.ground[bi] !== -32768) {
       const gm = p.ground[bi] / 10, sea = world.seaLevel;
@@ -288,7 +297,9 @@ export const createBuildings: LayerFactory = async (ctx) => {
     let sx = 0, sz = 0;
     for (const [x, z] of ring) { sx += x; sz += z; }
     const [lon, lat] = xzToLonLat(sx / ring.length, sz / ring.length);
-    S.pinnedBuilding.value = { lon, lat, text: describe(t, i), tile: t.key, index: i };
+    const [gers, osm] = (t.ids?.[i] ?? '').split(',');   // (tiles built before the ids file have none: the card goes without)
+    S.pinnedBuilding.value = { lon, lat, text: describe(t, i), tile: t.key, index: i, gers: gers || null, osm: osm || null };
+
     // roof and ground rings, joined at the corners, drawn over everything so it reads through other buildings
     const pos: number[] = [];
     const drop = curveDrop(sx / ring.length, sz / ring.length), yTop = p.base[i] + p.height[i] - drop + 0.3, yLow = p.base[i] - drop;

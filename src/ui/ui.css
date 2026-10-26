@@ -609,6 +609,8 @@ table.grid.rp-bands td.num { font-family: var(--font-mono); font-size: var(--fs-
 .bcard-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
 .bcard-head b { font-weight: 600; }
 .bcard-text { font-size: var(--fs-1); line-height: 1.4; overflow-wrap: anywhere; }
-.bcard-pos, .bcard-note { font-size: var(--fs-0); }
+.bcard-pos, .bcard-note, .bcard-ids { font-size: var(--fs-0); }
+.bcard-ids { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+.bcard-ids a { color: inherit; }
 .bcard .btn { justify-self: start; text-decoration: none; }
 .is-narrow .bcard { bottom: calc(var(--dock-top-gap, 0px) + var(--timeline-h) + var(--gap)); }

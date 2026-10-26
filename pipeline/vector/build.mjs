@@ -106,7 +106,13 @@ log('municipios', munis.length);
 
 // ---- buildings ----
 let cap = 1 << 24, coords = new Float64Array(cap), nc = 0; // lon, lat pairs
-const B = { start: [], nv: [], cx: [], cy: [], h: [], kind: [], elev: [], flood: [], muni: [], added: [] };
+// ref: the OSM object ("w123", "r456"; null for an addition); gers: Overture's stable feature id (GERS), for an OSM
+// building the id of its Overture twin, for an addition its own; null where there is none. Written beside each tile
+// (tiles/bld/14/{x}/{y}.ids), in record order: the keys other data (inspections, parcels, the street view) join on.
+// hsrc: where the height comes from: 'osm' (height tag), 'levels' (building:levels x 3.2 m + 1 m), 'ovt' (the
+// detection's own source, via Overture), 'usas' (FEMA USA Structures, stage 2c), '' (none: the client estimates one).
+const B = { start: [], nv: [], cx: [], cy: [], h: [], kind: [], elev: [], flood: [], muni: [], added: [], ref: [], gers: [], hsrc: [] };
+const shortRef = (r) => { const m = /^(way|relation)\/(\d+)$/.exec(r || ''); return m ? (m[1] === 'way' ? 'w' : 'r') + m[2] : null; };
 const stats = { features: 0, kept: 0, degenerate: 0, multi: 0, simplified: 0, height_tag: 0, height_levels: 0, height_none: 0, vertices: 0, by_building_tag: {} };
 for await (const l of lines(path.join(OSM, 'buildings.geojsonl'))) {
   let f; try { f = JSON.parse(l); } catch { continue; }
@@ -138,11 +144,23 @@ for await (const l of lines(path.join(OSM, 'buildings.geojsonl'))) {
   B.h.push(h === null ? 0 : Math.max(1, Math.min(255, Math.round(h * 2))));
   B.kind.push(kindOf(t, areaM2));
   B.elev.push(NaN); B.flood.push(0); B.muni.push(null); B.added.push(0);
+  B.ref.push(shortRef(osmRef(f))); B.gers.push(null); B.hsrc.push(real === 1 ? 'osm' : real === 2 ? 'levels' : '');
   stats.vertices += n; stats.kept++;
   const bt = String(t.building); stats.by_building_tag[bt] = (stats.by_building_tag[bt] || 0) + 1;
 }
 const NB_OSM = B.cx.length;
 log('buildings', JSON.stringify({ ...stats, by_building_tag: undefined }));
+// ---- GERS ids of our OSM buildings, from their Overture twins (stage 2b: work/overture/osm_gers.csv) ----
+const idStats = { osm: NB_OSM, osm_with_ref: 0, osm_with_gers: 0, mapping_rows: 0, added_with_gers: 0 };
+{
+  const f = path.join(WORK, 'overture', 'osm_gers.csv');
+  if (fs.existsSync(f)) {
+    const byRef = new Map();
+    for await (const l of lines(f)) { const c = l.indexOf(','); if (c > 0) { byRef.set(l.slice(0, c), l.slice(c + 1).trim()); idStats.mapping_rows++; } }
+    for (let i = 0; i < NB_OSM; i++) { if (B.ref[i]) { idStats.osm_with_ref++; const g = byRef.get(B.ref[i]); if (g) { B.gers[i] = g; idStats.osm_with_gers++; } } }
+  } else for (let i = 0; i < NB_OSM; i++) if (B.ref[i]) idStats.osm_with_ref++;
+  log('ids', JSON.stringify(idStats));
+}
 
 // ---- additions: machine-detected footprints (Overture Maps) where our OSM extract has no building ----
 // OpenStreetMap is the base and is never changed. A candidate (an Overture building with no OpenStreetMap source)
@@ -310,6 +328,8 @@ if (ovtMeta && fs.existsSync(path.join(ovtDir, 'added.jsonl')) && process.env.NO
     B.h.push(h === null ? 0 : Math.max(1, Math.min(255, Math.round(h * 2))));
     B.kind.push(areaM2 < 400 ? 0 : 6); // the building=yes rule
     B.elev.push(NaN); B.flood.push(0); B.muni.push(null); B.added.push(1);
+    B.ref.push(null); B.gers.push(typeof f.id === 'string' && f.id ? f.id : null); if (B.gers[i]) idStats.added_with_gers++;
+    B.hsrc.push(h !== null ? 'ovt' : '');
     let d = DS.indexOf(f.ds); if (d < 0) d = DS.push(f.ds) - 1; B.ds[i] = d;
     insert(i);
     stats.vertices += n; addStats.added++; addStats.added_by_dataset[f.ds] = (addStats.added_by_dataset[f.ds] || 0) + 1;
@@ -318,6 +338,35 @@ if (ovtMeta && fs.existsSync(path.join(ovtDir, 'added.jsonl')) && process.env.NO
   log('additions', JSON.stringify(addStats), ((Date.now() - t0) / 1000).toFixed(1) + 's');
 } else log('additions: no Overture candidates (stage 2b not run, or NO_ADDED=1): OSM only');
 const NB = B.cx.length, NB_ADDED = NB - NB_OSM;
+
+// ---- heights from FEMA USA Structures (stage 2c) for the buildings that have none of their own ----
+// A building with no height takes the HEIGHT of the USA Structures footprint its centroid stands in (only footprints
+// with a height are read). OSM's own height and floors, and a detection source's height, are never replaced.
+const heightStats = { source: null, footprints: 0, filled_osm: 0, filled_added: 0, before: 0, after: 0 };
+for (let i = 0; i < NB; i++) if (B.h[i]) heightStats.before++;
+{
+  const dir = path.join(WORK, 'structures'), f = path.join(dir, 'heights.jsonl');
+  if (fs.existsSync(f) && process.env.NO_STRUCTURES !== '1') {
+    heightStats.source = fs.existsSync(path.join(dir, 'meta.json')) ? JSON.parse(fs.readFileSync(path.join(dir, 'meta.json'), 'utf8')) : null;
+    if (heightStats.source) delete heightStats.source.by_occupancy;
+    const idx = new PolyIndex();
+    for await (const l of lines(f)) {
+      let r; try { r = JSON.parse(l); } catch { continue; }
+      const polys = polygonsOf(typeof r.g === 'string' ? JSON.parse(r.g) : r.g);
+      for (const p of polys) idx.add([p[0]], r.h);
+      heightStats.footprints++;
+    }
+    for (let i = 0; i < NB; i++) {
+      if (B.h[i]) continue;
+      const h = idx.first(B.cx[i], B.cy[i]);
+      if (!(h > 0)) continue;
+      B.h[i] = Math.max(1, Math.min(255, Math.round(h * 2))); B.hsrc[i] = 'usas';
+      if (i < NB_OSM) heightStats.filled_osm++; else heightStats.filled_added++;
+    }
+  }
+  for (let i = 0; i < NB; i++) if (B.h[i]) heightStats.after++;
+  log('heights', JSON.stringify(heightStats));
+}
 
 // ---- facilities ----
 const KEEP_TAGS = ['operator', 'operator:type', 'beds', 'emergency', 'healthcare', 'healthcare:speciality', 'isced:level', 'plant:source', 'plant:output:electricity', 'plant:method', 'generator:source', 'voltage', 'substation', 'iata', 'icao', 'faa', 'aerodrome:type', 'phone', 'website', 'wikidata', 'capacity', 'ref', 'alt_name', 'name:en', 'name:es', 'short_name', 'ferry', 'military'];
@@ -482,6 +531,7 @@ for (const t of tileList) {
     }
   }
   writeOut(`tiles/bld/${Z}/${t.x}/${t.y}.bin`, buf);
+  writeOut(`tiles/bld/${Z}/${t.x}/${t.y}.ids`, t.b.map((i) => `${B.gers[i] ?? ''},${B.ref[i] ?? ''},${B.hsrc[i]}`).join('\n') + '\n');
   index.push([t.x, t.y, t.b.length]); bytes += size;
 }
 index.sort((a, b) => a[0] - b[0] || a[1] - b[1]);
@@ -517,7 +567,9 @@ writeOut('tiles/bld/index.json', JSON.stringify({
     ring: 'outer ring only, closing vertex not repeated, winding as in OSM (not normalised); rings above 64 vertices simplified (Douglas-Peucker)',
     assignment: 'a building is stored once, in the tile containing the centroid of its outer ring',
     added_flag: 'kind & 0x80: the footprint comes from added_source (a machine detection), not from OpenStreetMap; kind & 0x7f is the kind. In each tile the OpenStreetMap records come first, then the added ones.',
+    ids: 'tiles/bld/14/{x}/{y}.ids beside each tile: one text line per record, in record order, "<gers>,<osm>,<height source>". gers: the Overture Maps GERS id (a stable feature id; for an OSM building the id of the Overture feature carrying it, for an addition its own), empty where there is none. osm: "w<id>" or "r<id>" for the OpenStreetMap way or relation, empty for an addition. height source: osm (height tag), levels (building:levels x 3.2 m + 1 m), ovt (the detection source, via Overture), usas (FEMA USA Structures), empty (none: height_half_m is 0).',
   },
+  ids: { ...idStats, overture_release: ovtMeta?.release ?? null }, heights: heightStats,
   flood_attached: floodAttached, total: NB, osm: NB_OSM, added: NB_ADDED, bytes, tiles: index,
 }));
 log('tiles written', index.length, 'bytes', bytes, 'vertices clamped', clampedVerts);
@@ -574,6 +626,8 @@ const pick = (g) => { const r = byMuni[g]; return r && { geoid: g, name: r.name,
 const topTags = Object.entries(stats.by_building_tag).sort((a, b) => b[1] - a[1]).slice(0, 25);
 writeOut('data/derived/qa.json', JSON.stringify({
   generated, flood_attached: floodAttached,
+  ids: { ...idStats, overture_release: ovtMeta?.release ?? null },
+  heights: heightStats,
   buildings: { total: NB, buildings_osm: NB_OSM, buildings_added: NB_ADDED, osm_features_read: stats.features, dropped_degenerate: stats.degenerate, multipolygon: stats.multi, rings_simplified_over_64: stats.simplified, vertices: stats.vertices,
     height_from_height_tag: stats.height_tag, height_from_levels: stats.height_levels, height_unknown: stats.height_none, share_with_height: +((stats.height_tag + stats.height_levels) / Math.max(1, NB)).toFixed(4),
     by_kind: island.by_kind, top_building_tags: topTags, outside_municipios: noMuni },
