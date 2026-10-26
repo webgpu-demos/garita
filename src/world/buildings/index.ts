@@ -3,8 +3,8 @@
 // the tile, drawn the same, named as detections in the tooltip), streamed as zoom-14 tiles around the
 // orbit target when the camera is low, meshed in a Worker into one geometry per tile, drawn with one material.
 //
-// REAL (from the tiles): footprints, the heights OpenStreetMap carries and, where it has none, FEMA USA Structures'
-// lidar heights (the ids file beside each tile says which; qa.json counts them), ground elevation at the centroid,
+// REAL (from the tiles): footprints, the heights OpenStreetMap carries and, where it has none, heights measured from
+// the USGS 2018 lidar point cloud or FEMA USA Structures' (the ids file beside each tile says which; qa.json counts them), ground elevation at the centroid,
 // FEMA flood class; the roof albedo is the aerial photo itself (the imagery the terrain drapes: zoom 16 near the
 // target, zoom 15 beyond), lifted to the roof. PROCEDURAL: all other heights (flagged; the tooltip says
 // "estimated"), wall colours, windows, lit rooms, the parapet rim, and roofs where the photo has no data. The sea-level tint is a bathtub screen: ground elevation against the scenario level.
@@ -262,7 +262,7 @@ export const createBuildings: LayerFactory = async (ctx) => {
     }
     // where the height comes from: the ids file says, for tiles that have one; else OSM or the detection's source
     const src = bt.ids?.[bi]?.split(',')[2];
-    const hSrc = src === 'lidar' ? (es ? 'lidar USGS 2023-25' : 'USGS lidar 2023-25') : src === 'usas' ? 'FEMA USA Structures, lidar' : src === 'parts' ? (es ? 'partes del edificio en OpenStreetMap' : 'OpenStreetMap building parts')
+    const hSrc = src === 'lidar' ? (es ? 'nube de puntos lidar USGS 2018' : 'USGS lidar point cloud, 2018') : src === 'usas' ? 'FEMA USA Structures, lidar' : src === 'parts' ? (es ? 'partes del edificio en OpenStreetMap' : 'OpenStreetMap building parts')
       : src === 'levels' ? (es ? 'pisos en OpenStreetMap' : 'OpenStreetMap floors')
       : src === 'ovt' || (!src && added) ? 'Overture Maps' : 'OpenStreetMap';
     parts.push(`${p.height[bi].toFixed(1)} m ` + (est ? (es ? '(altura estimada)' : '(height estimated)') : (es ? `(altura de ${hSrc})` : `(height from ${hSrc})`)));

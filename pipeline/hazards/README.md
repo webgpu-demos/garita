@@ -10,6 +10,7 @@ the municipio exposure numbers and the seed database.
 | `lidar` | `pipe-lidar` / `lidar.yml` | USGS 3DEP 1 m DEM (lidar), `prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/PR_*` | `data/hazards/lidar/` |
 | `surge` | `pipe-surge` / `surge.yml` | NOAA NHC National Storm Surge Risk Maps, `nhc.noaa.gov/gis/hazardmaps/PR_SLOSH_MOM_Inundation.zip` | `data/hazards/surge/`, `tiles/surge/` |
 | `slide` | `pipe-slide` / `slide.yml` | USGS OFR 2020-1022 landslide susceptibility raster (ScienceBase item 61087009d34ef8d70565c154) | `data/hazards/slide/`, `tiles/slide/` |
+| `heights` | `pipe-heights` / `heights.yml` | USGS 3DEP lidar point clouds, Entwine Point Tiles in `usgs-lidar-public` (`USGS_LPC_PR_PRVI_*_2018`) | `data/hazards/heights/` (published only when dispatched with `publish = yes`) |
 
 ## Points (`common.py`)
 
@@ -49,6 +50,25 @@ project and measures how far the two collections disagree. Metres above the **Pu
 datum is taken from USGS's work-unit register (`WESM.csv`, `vert_crs`) and the vendor DEM metadata (`altdatum`),
 both quoted in `meta.json` under `datum`. `log.txt` is published by every run, failed or not. `LIDAR_ONLY` in the
 workflow limits a run to tiles matching a regular expression (a test; `meta.json` says so).
+
+### Heights: what the number is
+
+`heights.py` (workflow `heights.yml`: plan -> 30 shards -> merge) measures every footprint in the 2018 lidar point
+cloud: the **90th percentile of the roof** (last returns of unclassified points inside the outline and more than
+0.5 m from it, more than 2 m above the ground) **minus the ground beside it** (median of ground-class points 1 to 8 m
+outside the outline, out to 25 m when there are fewer than 3). No value without at least 6 roof and 3 ground points,
+or when fewer than half of the last returns inside the outline are roof (bare ground, ruins, not yet built in 2018,
+mostly under trees). Some 2018 flight lines leave returns 100 to 300 m above the ground (birds, haze) in the
+unclassified class: returns more than 120 m above the ground are dropped (the tallest building in Puerto Rico is
+about 102 m), roof elevations are split wherever 10 m holds no point, and a group above the lowest is kept only if
+it is flat (a tower over a podium; p95 - p5 within 8 m). Read with PDAL `readers.ept` at 2 m resolution, one query per zoom-16 cell; the collections
+read for a cell are those whose source files meet it. Heights are differences within one point cloud, so the
+vertical datum cancels out. Over Condado against OpenStreetMap height tags (8 398 buildings): median difference
++0.24 m, median absolute 0.53 m, 83 % within 2 m; 91 % of footprints get a value (94 % of OSM's, 39 % of the
+machine-detected ones, many of which are sheds and cars). `buildings.bin` is `uint16` decimetres (0 = no value),
+`buildings_p50.bin` the median roof, `buildings_cover.bin` the roof share (percent, 255 = not measured).
+`merge.mjs` folds it in when it is there: the height byte takes the measured value, except where OpenStreetMap
+tags the building's own height, and the ids file says `lidar`.
 
 ### Overlay tiles (surge and slide)
 

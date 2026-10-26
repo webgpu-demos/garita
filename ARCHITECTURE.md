@@ -74,8 +74,10 @@ Building tiles are the root of a chain; a rebuild goes through all of it or the 
 2. Promote: in a checkout of `gh-pages`, replace `tiles/bld`, `data/osm`, `data/derived`, `data/geo` with their
    `staging/` copies, delete `staging/`, push.
 3. Run `lidar.yml`, `surge.yml`, `slide.yml` (workflow dispatch): each samples its raster at every building in tile
-   order and publishes `data/hazards/<stage>/`.
-4. In the checkout: `node pipeline/hazards/merge.mjs <site>` (lidar ground into the tiles, exposure per municipio),
+   order and publishes `data/hazards/<stage>/`. `heights.yml` (dispatch with `publish = yes`) measures every
+   building's height in the lidar point cloud and publishes `data/hazards/heights/`.
+4. In the checkout: `node pipeline/hazards/merge.mjs <site>` (lidar ground into the tiles, measured heights where
+   OSM has no height tag, exposure per municipio),
    `node pipeline/derive.mjs <site>` (batches 50 to 53), `node src/ontology/build-seed.ts <site>/data/seed
    <site>/data/twin.db --version <v>`, new `data/manifest.json`, push, then `tools/deploy.sh`.
 

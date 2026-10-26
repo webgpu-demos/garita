@@ -1,9 +1,13 @@
 // Folds the three hazard stages into what the app reads. Runs in the sandbox on a checkout of gh-pages (no network):
 //   node pipeline/hazards/merge.mjs <site>
-// Reads   tiles/bld/**, data/hazards/{lidar,surge,slide}/**, data/geo/municipios.geojson, data/derived/exposure.json
+// Reads   tiles/bld/**, data/hazards/{lidar,surge,slide}/**, data/geo/municipios.geojson, data/derived/exposure.json,
+//         and data/hazards/heights/** when that stage has run on these tiles
 // Writes  tiles/bld/14/**.bin      ground elevation of every building replaced by the lidar value (the format and the
 //                                  order of buildings do not change, so the stages' buildings.bin still line up);
-//                                  the last byte of each record keeps the offset to the terrain the scene draws
+//                                  the last byte of each record keeps the offset to the terrain the scene draws;
+//                                  with the heights stage, the height byte takes the height measured from the lidar
+//                                  point cloud, except where OpenStreetMap carries the building's own height tag
+//         tiles/bld/14/**.ids      height source 'lidar' for the heights taken (tiles that have ids files)
 //         tiles/bld/index.json     says where the ground elevation now comes from
 //         data/derived/exposure.json   per municipio: elevation histogram from lidar, surge and landslide counts
 // Everything in exposure.json is recomputed here from the tiles and the stage files, so its parts agree with each
@@ -27,6 +31,11 @@ const lidar = bin('data/hazards/lidar/buildings.bin', Int16Array, 1);
 const surge = bin('data/hazards/surge/buildings.bin', Uint8Array, 5);
 const slide = bin('data/hazards/slide/buildings.bin', Uint8Array, 1);
 const slide25 = bin('data/hazards/slide/buildings_max25m.bin', Uint8Array, 1);
+// Building heights from the lidar point cloud (stage "heights"), optional: decimetres, 0 = no value
+const heightsMeta = fs.existsSync(path.join(site, 'data/hazards/heights/meta.json')) ? J('data/hazards/heights/meta.json') : null;
+if (heightsMeta && heightsMeta.buildings.bld_generated !== idx.generated) throw new Error(`heights was measured on building tiles of ${heightsMeta.buildings.bld_generated}, tiles are ${idx.generated}`);
+const heights = heightsMeta && bin('data/hazards/heights/buildings.bin', Uint16Array, 1);
+const hStats = { taken: 0, kept_osm_tag: 0, no_value: 0, clamped_at_127_5m: 0, by_old_source: {} };
 
 const munis = J('data/geo/municipios.geojson').features;
 const muniIdx = new PolyIndex({ band: 0.002, cell: 0.05 });
@@ -53,9 +62,24 @@ for (const [x, y, count] of idx.tiles) {
   const file = path.join(site, `tiles/bld/${Z}/${x}/${y}.bin`);
   const b = fs.readFileSync(file), dv = new DataView(b.buffer, b.byteOffset, b.byteLength);
   if (b.toString('latin1', 0, 4) !== 'GBL1' || dv.getUint32(4, true) !== count) throw new Error(`bad tile ${x}/${y}`);
+  const idsFile = file.replace(/\.bin$/, '.ids'), ids = fs.existsSync(idsFile) ? fs.readFileSync(idsFile, 'utf8').split('\n').slice(0, count) : null;
   let o = 8;
   for (let k = 0; k < count; k++, i++) {
-    const nv = dv.getUint16(o, true), height = dv.getUint8(o + 2), kindByte = dv.getUint8(o + 3), kind = Math.min(6, kindByte & 0x7f), added = (kindByte & 0x80) !== 0, stored = dv.getInt16(o + 4, true), flood = dv.getUint8(o + 6);
+    const nv = dv.getUint16(o, true), kindByte = dv.getUint8(o + 3), kind = Math.min(6, kindByte & 0x7f), added = (kindByte & 0x80) !== 0, stored = dv.getInt16(o + 4, true), flood = dv.getUint8(o + 6);
+    let height = dv.getUint8(o + 2);
+    if (heights) {
+      const f = ids ? (ids[k] ?? '').split(',') : null, src = f?.[2] ?? '';
+      if (!heights[i]) hStats.no_value++;
+      else if (src === 'osm') hStats.kept_osm_tag++;
+      else {
+        const hb = Math.round(heights[i] / 5);         // decimetres to half metres
+        if (hb > 255) hStats.clamped_at_127_5m++;
+        height = Math.max(1, Math.min(255, hb));
+        dv.setUint8(o + 2, height);
+        hStats.taken++; hStats.by_old_source[src || 'none'] = (hStats.by_old_source[src || 'none'] ?? 0) + 1;
+        if (f) { while (f.length < 3) f.push(''); f[2] = 'lidar'; ids[k] = f.join(','); }
+      }
+    }
     // The scene stands each building on the terrain it draws, which is the 10 m model the tiles were first built
     // with. That elevation is kept as an offset from the lidar value (int8, half metres) in the record's last byte.
     // (On a re-run the tile already holds lidar + offset: the terrain value is rebuilt from them.)
@@ -99,6 +123,7 @@ for (const [x, y, count] of idx.tiles) {
     o += 8 + 4 * nv;
   }
   fs.writeFileSync(file, b);
+  if (heights && ids) fs.writeFileSync(idsFile, ids.join('\n') + '\n');
 }
 if (i !== total) throw new Error(`walked ${i} buildings, index says ${total}`);
 
@@ -125,10 +150,15 @@ fs.writeFileSync(path.join(site, 'data/derived/exposure.json'), JSON.stringify(o
 idx.ground = { source: L.source.name, statistic: 'median of the 1 m cells within 2 m of the centroid', datum: L.datum, no_value: -32768, merged: out.generated, stage: 'data/hazards/lidar' };
 idx.encoding.record = idx.encoding.record.map((r) => (r.startsWith('int16 ground_dm') ? 'int16 ground_dm (ground elevation at the centroid from the 1 m lidar DEM, decimetres above the datum in "ground"; -32768 = no lidar value)'
   : r.startsWith('uint8 reserved') || r.startsWith('int8 place') ? 'int8 place_half_m (half metres to add to ground_dm to get the elevation of the 10 m terrain the scene is drawn on; used only to stand the building on that terrain)' : r));
+if (heightsMeta) {
+  idx.heights_lidar = { source: heightsMeta.source.name, flown: heightsMeta.source.flown, statistic: '90th percentile of the roof last returns minus the ground beside the building (data/hazards/heights/meta.json, method)',
+    rule: 'taken for every building with a measured value, except where OpenStreetMap carries its own height tag (ids: osm); the ids file says lidar where it was taken', merged: new Date().toISOString(), stage: 'data/hazards/heights', ...hStats };
+  if (idx.encoding?.ids) idx.encoding.ids = idx.encoding.ids.replace('height source: osm (height tag),', 'height source: osm (height tag), lidar (measured from the 3DEP 2018 lidar point cloud, data/hazards/heights),');
+}
 fs.writeFileSync(path.join(site, 'tiles/bld/index.json'), JSON.stringify(idx));
 
 console.log(JSON.stringify({
-  buildings: total, osm: island.buildings_osm, added: island.buildings_added, ground_values_changed: changed, placement_offsets_clamped: clamped, mean_abs_change_m: +(sumAbs / nDiff).toFixed(2), outside_municipios: noMuni, municipio_totals_that_moved: drift,
+  buildings: total, osm: island.buildings_osm, added: island.buildings_added, ground_values_changed: changed, heights: heightsMeta ? hStats : 'stage not run', placement_offsets_clamped: clamped, mean_abs_change_m: +(sumAbs / nDiff).toFixed(2), outside_municipios: noMuni, municipio_totals_that_moved: drift,
   at_or_below: { before: old.island.at_or_below, after: island.at_or_below, osm_only: islandOsm.at_or_below }, below_0: island.below_0, unknown: island.elev_unknown,
   sfha: { before: old.island.buildings_sfha, after: island.buildings_sfha },
   surge_osm_only_c3: islandOsm.surge.c3, slide_osm_only: islandOsm.slide.high_or_above,

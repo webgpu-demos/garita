@@ -1,0 +1,165 @@
+name: heights
+# Stage "heights": the height of every building measured from the USGS 3DEP 2018 lidar point clouds
+# (pipeline/hazards/heights.py). plan (cells and collections) -> 30 shards (read the points, measure) -> merge (QA).
+# About 22 000 cells of 600 m; a shard reads ~730 of them in 25 to 45 minutes; 20 run at once on a free account.
+# Owns on gh-pages, only when dispatched with publish = yes: data/hazards/heights/**. Any other run (a push to the
+# pipe-heights branch, or a dispatch without publish) keeps its result as the workflow artifact "heights-out" and
+# leaves the site alone (the result also goes to the branch heights-out, outside the site). The building tiles are
+# read at one gh-pages commit for the whole run (plan's output).
+on:
+  push:
+    branches: [pipe-heights]
+    paths:
+      - pipeline/hazards/heights.py
+      - pipeline/hazards/common.py
+      - .github/workflows/heights.yml
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Publish data/hazards/heights to gh-pages (yes / no)'
+        default: 'no'
+      only:
+        description: 'Regular expression on the z14 tile key "x/y": a test run over those tiles only (empty = all)'
+        default: ''
+      site_ref:
+        description: 'Branch or commit holding the building tiles (tiles/bld) to measure'
+        default: 'gh-pages'
+permissions:
+  contents: write
+concurrency:
+  group: heights
+  cancel-in-progress: true
+env:
+  HEIGHTS_SHARDS: 30
+  HEIGHTS_RES: '2.0'
+jobs:
+  plan:
+    # Free on a public repository; private repositories are billed by the minute. Never run there.
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      site_sha: ${{ steps.site.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Site (sparse checkout of the building tiles)
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.site_ref || 'gh-pages' }}
+          path: site
+          sparse-checkout: |
+            tiles/bld
+      - id: site
+        run: echo "sha=$(git -C site rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Install numpy
+        run: |
+          for i in 1 2 3; do sudo apt-get update -qq && sudo apt-get install -y -qq python3-numpy && break; sleep 10; done || true
+      - name: Plan
+        run: |
+          mkdir -p work/plan
+          timeout 15m /usr/bin/python3 pipeline/hazards/heights.py plan --site site --work work --shards "$HEIGHTS_SHARDS" --only "${{ inputs.only }}" 2>&1 | tail -80
+          echo "site $(git -C site rev-parse HEAD)" >> work/plan/log_plan.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: plan
+          path: work/plan
+          retention-days: 5
+  shard:
+    needs: plan
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.plan.outputs.site_sha }}
+          path: site
+          sparse-checkout: |
+            tiles/bld
+      - name: Install PDAL (conda-forge, via micromamba)
+        run: |
+          for i in 1 2 3; do curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xj -C /tmp bin/micromamba && break; sleep 10; done
+          export MAMBA_ROOT_PREFIX=/tmp/mamba
+          for i in 1 2 3; do /tmp/bin/micromamba create -y -q -n pd -c conda-forge python=3.12 pdal python-pdal numpy matplotlib-base > /dev/null && break; sleep 15; done
+          /tmp/mamba/envs/pd/bin/pdal --version | head -2
+      - uses: actions/download-artifact@v4
+        with:
+          name: plan
+          path: work/plan
+      - name: Measure
+        run: |
+          mkdir -p work/shard
+          # a run that dies (PDAL in a reader) saved what it had: start it again, up to the same deadline
+          deadline=$(( $(date +%s) + 2900 ))
+          for attempt in 1 2 3 4; do
+            timeout 55m /tmp/mamba/envs/pd/bin/python pipeline/hazards/heights.py shard --site site --work work --shard ${{ matrix.shard }} --deadline "$deadline" 2>&1 | grep -v "PDAL Error" | tail -60
+            rc=${PIPESTATUS[0]}; echo "attempt $attempt: exit $rc"
+            [ "$rc" = 0 ] && break
+            [ "$(date +%s)" -ge "$deadline" ] && break
+          done
+          [ -f "work/shard/log_shard_$(printf %02d ${{ matrix.shard }}).txt" ] || echo "shard ${{ matrix.shard }} wrote no log (run ${GITHUB_RUN_ID})" > "work/shard/log_shard_$(printf %02d ${{ matrix.shard }}).txt"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: shard-${{ matrix.shard }}
+          path: work/shard
+          retention-days: 5
+  merge:
+    needs: [plan, shard]
+    if: always() && github.event.repository.private == false && needs.plan.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.plan.outputs.site_sha }}
+          path: site
+          sparse-checkout: |
+            tiles/bld
+      - name: Install numpy and Pillow
+        run: |
+          for i in 1 2 3; do sudo apt-get update -qq && sudo apt-get install -y -qq python3-numpy python3-pil fonts-dejavu-core && break; sleep 10; done || true
+      - uses: actions/download-artifact@v4
+        with:
+          name: plan
+          path: work/plan
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: shard-*
+          path: work/shard
+          merge-multiple: true
+      - name: Merge
+        run: |
+          mkdir -p out
+          set +e
+          timeout 15m /usr/bin/python3 pipeline/hazards/heights.py merge --site site --work work --out "$PWD/out" 2>&1 | tail -120
+          echo "${PIPESTATUS[0]}" > work/merge.rc
+          d=out/data/hazards/heights; mkdir -p "$d"
+          { cat work/plan/log_plan.txt; cat work/shard/log_shard_*.txt; cat work/log_merge.txt; echo "merge exit code $(cat work/merge.rc) (0 complete, 2 incomplete, other failed)"; echo "run ${GITHUB_RUN_ID} sha ${GITHUB_SHA} site ${{ needs.plan.outputs.site_sha }} $(date -u +%FT%TZ)"; } > "$d/log.txt" 2>/dev/null
+          exit 0
+      - uses: actions/upload-artifact@v4
+        with:
+          name: heights-out
+          path: out/data/hazards/heights
+          retention-days: 14
+      - name: Result to the branch heights-out (not the site; for reading without the Actions artifact store)
+        run: |
+          cd out/data/hazards/heights && git init -q -b heights-out && git config user.name "garita-pipeline" && git config user.email "actions@users.noreply.github.com"
+          git add -A && git commit -q -m "heights: run ${GITHUB_RUN_ID}, ${GITHUB_SHA::7}, site ${{ needs.plan.outputs.site_sha }}"
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" HEAD:refs/heads/heights-out
+      - name: Publish to gh-pages (only when dispatched with publish = yes)
+        if: github.event_name == 'workflow_dispatch' && inputs.publish == 'yes'
+        run: |
+          GH_TOKEN=${{ github.token }} bash pipeline/hazards/publish.sh heights "heights: building heights from the 3DEP 2018 lidar point clouds (${GITHUB_SHA::7}, run ${GITHUB_RUN_ID})"
+      - name: Result
+        run: |
+          tail -30 out/data/hazards/heights/log.txt || true
+          rc=$(cat work/merge.rc 2>/dev/null || echo 1); [ "$rc" = 0 ] || [ "$rc" = 2 ]
