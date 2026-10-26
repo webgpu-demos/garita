@@ -1,549 +1,549 @@
-[    0.0s] lidar plan run 38112643363 sha 4267c9cff33b3294940307b8c6982ceea05ba357
-[    6.4s] points: 1737084 buildings (2026-10-11T04:42:03.587Z), 3988 assets, 8 spots; old ground known for 1737084
-[    8.6s] projects in the bucket: ['PR_PRVI_A_2018', 'PR_PRVI_C_2018', 'PR_PRVI_D_2018', 'PR_PRVI_E_2018', 'PR_PRVI_F_2018', 'PR_PRVI_G_2018', 'PR_PRVI_H_2018', 'PR_PRVI_VI_B1_2018', 'PR_PRVI_VI_B2_2018', 'PR_PuertoRicoUSVI_D24']
-[    8.8s]   PR_PRVI_A_2018: 67 tiles, 10.7 GB
-[    8.9s]   PR_PRVI_C_2018: 13 tiles, 0.9 GB
-[    9.1s]   PR_PRVI_D_2018: 58 tiles, 10.9 GB
-[    9.2s]   PR_PRVI_E_2018: 26 tiles, 3.2 GB
-[    9.4s]   PR_PRVI_F_2018: 19 tiles, 4.3 GB
-[    9.5s]   PR_PRVI_G_2018: 24 tiles, 5.5 GB
-[    9.7s]   PR_PRVI_H_2018: 86 tiles, 18.2 GB
-[    9.9s]   PR_PRVI_VI_B1_2018: 11 tiles, 0.6 GB
-[   10.0s]   PR_PRVI_VI_B2_2018: 9 tiles, 1.0 GB
-[   10.3s]   PR_PuertoRicoUSVI_D24: 215 tiles, 56.0 GB
-[   15.1s] headers read: 528, failed 0; zones [19, 20]; crs ['NAD83 / UTM zone 19N', 'NAD83 / UTM zone 20N']; nodata ['-3.4028230607370965e+38', '-999999.0']; vertical CRS in the GeoTIFF ['None']; unit type ["''"]; sizes [(10012, 10012)]; pixel [(1.0, -1.0)]
-[   15.7s] projection check zone 19 (EPSG:26919): max difference to PROJ 0.0000 m over 2000 points
-[   15.7s] projection check zone 20 (EPSG:26920): max difference to PROJ 0.0000 m over 2000 points
-[   21.1s] tiles holding at least one point: 477 of 528, 108.1 GB; points inside no tile at all: 0 buildings, 0 assets
-[   21.1s] shard load (GB): [9.8, 9.8, 9.8, 9.8, 9.8, 9.8, 9.8, 9.8, 9.8, 9.8, 9.8, 9.8]
-[   27.7s] vertical reference per USGS WESM: [('PR_PRVI_A_2018', '6641', 'GEOID12B'), ('PR_PRVI_C_2018', '6641', 'GEOID12B'), ('PR_PRVI_D_2018', '6641', 'GEOID12B'), ('PR_PRVI_E_2018', '6641', 'GEOID12B'), ('PR_PRVI_F_2018', '6641', 'GEOID12B'), ('PR_PRVI_G_2018', '6641', 'GEOID12B'), ('PR_PRVI_H_2018', '6641', 'GEOID12B'), ('PR_PuertoRicoUSVI_1_D24', '6641', 'GEOID18'), ('PR_PuertoRicoUSVI_2_D24', '6641', 'GEOID18'), ('PR_PuertoRicoUSVI_3_D24', '6641', 'GEOID18'), ('PR_PuertoRicoUSVI_4_D24', '6641', 'GEOID18'), ('PR_PuertoRicoUSVI_5_D24', '6642', 'GEOID18'), ('PR_PuertoRicoUSVI_6_D24', '6641', 'GEOID18')]
-[   27.7s] vendor DEM metadata: [('PR_PRVI_D_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_D_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_D_2018', ['Puerto Rico Vertical Datum of 2002, Geoid 12B'], ['Meters']), ('PR_PRVI_F_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_F_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_F_2018', ['Puerto Rico Vertical Datum of 2002, Geoid 12B'], ['Meters']), ('PR_PRVI_G_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_G_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_G_2018', ['Puerto Rico Vertical Datum of 2002, Geoid 12B'], ['Meters']), ('PR_PRVI_E_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_E_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_E_2018', ['Puerto Rico Vertical Datum of 2002, Geoid 12B'], ['Meters']), ('PR_PRVI_H_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_H_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_H_2018', ['Puerto Rico Vertical Datum of 2002, Geoid 12B'], ['Meters']), ('PR_PRVI_A_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_A_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_A_2018', ['Puerto Rico Vertical Datum of 2002, Geoid 12B'], ['Meters']), ('PR_PRVI_C_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_C_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_C_2018', ['Puerto Rico Vertical Datum of 2002, Geoid 12B'], ['Meters']), ('PR_PuertoRicoUSVI_4_D24', ['Puerto Rico Vertical Datum of 2002'], ['meters']), ('PR_PuertoRicoUSVI_3_D24', ['Puerto Rico Vertical Datum of 2002'], ['meters']), ('PR_PuertoRicoUSVI_1_D24', ['Puerto Rico Vertical Datum of 2002'], ['meters']), ('PR_PuertoRicoUSVI_2_D24', ['Puerto Rico Vertical Datum of 2002'], ['meters']), ('PR_PuertoRicoUSVI_5_D24', ['Virgin Islands Vertical Datum of 2009'], ['meters'])] errors: []
-[   29.0s] plan written, ok = True
-[    0.0s] lidar shard run 38112643363 sha 4267c9cff33b3294940307b8c6982ceea05ba357
-[    1.4s] shard 0: 40 tiles, 9.0 GB, 587527 point lookups
-[   15.8s]   USGS_1M_20_x19y204_PR_PuertoRicoUSVI_D24.tif: 34769 points, 34769 accepted, 0 without any cell; download 11.7 s, read+sample 2.7 s
-[   15.8s]   USGS_1m_x70y200_PR_PRVI_A_2018.tif: 15359 points, 15359 accepted, 0 without any cell; download 11.0 s, read+sample 2.5 s
-[   15.8s]   USGS_1m_x74y200_PR_PRVI_A_2018.tif: 25158 points, 25158 accepted, 0 without any cell; download 10.4 s, read+sample 2.3 s
-[   27.0s]   USGS_1m_x15y200_PR_PRVI_H_2018.tif: 12012 points, 12012 accepted, 0 without any cell; download 10.7 s, read+sample 2.1 s
-[   27.6s]   USGS_1m_x71y203_PR_PRVI_D_2018.tif: 15347 points, 15347 accepted, 0 without any cell; download 10.3 s, read+sample 2.2 s
-[   29.6s]   USGS_1M_20_x18y203_PR_PuertoRicoUSVI_D24.tif: 25946 points, 25946 accepted, 0 without any cell; download 11.4 s, read+sample 2.3 s
-[   39.7s]   USGS_1M_19_x73y203_PR_PuertoRicoUSVI_D24.tif: 6837 points, 6837 accepted, 0 without any cell; download 10.5 s, read+sample 2.1 s
-[   40.4s]   USGS_1M_19_x78y203_PR_PuertoRicoUSVI_D24.tif: 18692 points, 18692 accepted, 0 without any cell; download 10.6 s, read+sample 2.2 s
-[   42.5s]   USGS_1M_19_x72y204_PR_PuertoRicoUSVI_D24.tif: 10679 points, 10679 accepted, 0 without any cell; download 10.7 s, read+sample 2.2 s
-[   53.0s]   USGS_1M_19_x72y201_PR_PuertoRicoUSVI_D24.tif: 3887 points, 3887 accepted, 0 without any cell; download 11.0 s, read+sample 2.3 s
-[   53.0s]   USGS_1m_x20y202_PR_PRVI_H_2018.tif: 15020 points, 14245 accepted, 774 without any cell; download 9.7 s, read+sample 2.1 s
-[   54.3s]   USGS_1M_19_x69y200_PR_PuertoRicoUSVI_D24.tif: 16334 points, 16334 accepted, 0 without any cell; download 9.5 s, read+sample 2.3 s
-[   65.3s]   USGS_1m_x78y201_PR_PRVI_H_2018.tif: 15600 points, 15590 accepted, 10 without any cell; download 10.7 s, read+sample 2.2 s
-[   74.6s]   USGS_1m_x18y201_PR_PRVI_H_2018.tif: 9487 points, 8643 accepted, 838 without any cell; download 19.4 s, read+sample 2.1 s
-[   74.6s]   USGS_1M_19_x69y201_PR_PuertoRicoUSVI_D24.tif: 23703 points, 23702 accepted, 1 without any cell; download 8.5 s, read+sample 2.1 s
-[   75.3s]   USGS_1m_x84y202_PR_PRVI_H_2018.tif: 12420 points, 12292 accepted, 127 without any cell; download 8.3 s, read+sample 2.0 s
-[   76.3s]   USGS_1m_x17y203_PR_PRVI_D_2018.tif: 29615 points, 18871 accepted, 10742 without any cell; download 8.7 s, read+sample 2.2 s
-[   84.6s]   USGS_1m_x84y204_PR_PRVI_H_2018.tif: 12238 points, 12238 accepted, 0 without any cell; download 7.9 s, read+sample 2.1 s
-[   84.6s]   USGS_1m_x15y205_PR_PRVI_G_2018.tif: 19630 points, 19630 accepted, 0 without any cell; download 7.5 s, read+sample 1.4 s
-[   84.8s]   USGS_1M_19_x75y205_PR_PuertoRicoUSVI_D24.tif: 14960 points, 14960 accepted, 0 without any cell; download 6.7 s, read+sample 1.7 s
-[   92.1s]   USGS_1m_x73y205_PR_PRVI_F_2018.tif: 26119 points, 26119 accepted, 0 without any cell; download 6.6 s, read+sample 1.3 s
-[   92.1s]   USGS_1m_x84y203_PR_PRVI_H_2018.tif: 2500 points, 1350 accepted, 1149 without any cell; download 3.8 s, read+sample 1.9 s
-[   92.1s]   USGS_1m_x69y199_PR_PRVI_A_2018.tif: 4564 points, 4564 accepted, 0 without any cell; download 4.9 s, read+sample 1.3 s
-[   96.9s]   USGS_1m_x13y205_PR_PRVI_G_2018.tif: 24854 points, 13528 accepted, 11326 without any cell; download 5.1 s, read+sample 1.5 s
-[   96.9s]   USGS_1m_x86y201_PR_PRVI_C_2018.tif: 151 points, 151 accepted, 0 without any cell; download 3.1 s, read+sample 0.9 s
-[   96.9s]   USGS_1m_x17y205_PR_PRVI_E_2018.tif: 29522 points, 29520 accepted, 2 without any cell; download 2.9 s, read+sample 1.0 s
-[   98.3s]   USGS_1M_19_x70y199_PR_PuertoRicoUSVI_D24.tif: 2221 points, 2214 accepted, 7 without any cell; download 2.6 s, read+sample 0.7 s
-[   99.3s]   USGS_1m_x81y205_PR_PRVI_E_2018.tif: 22732 points, 22731 accepted, 1 without any cell; download 2.5 s, read+sample 0.8 s
-[   99.6s]   USGS_1M_19_x61y201_PR_PuertoRicoUSVI_D24.tif: 17 points, 17 accepted, 0 without any cell; download 2.4 s, read+sample 0.2 s
-[  101.0s]   USGS_1M_20_x22y202_PR_PuertoRicoUSVI_D24.tif: 921 points, 920 accepted, 1 without any cell; download 2.0 s, read+sample 0.6 s
-[  103.1s]   USGS_1m_x14y203_PR_PRVI_H_2018.tif: 13728 points, 2416 accepted, 11311 without any cell; download 2.0 s, read+sample 1.7 s
-[  103.1s]   USGS_1m_x78y199_PR_PRVI_A_2018.tif: 5909 points, 2769 accepted, 3138 without any cell; download 1.9 s, read+sample 0.9 s
-[  103.4s]   USGS_1M_20_x22y204_PR_PuertoRicoUSVI_D24.tif: 1658 points, 1658 accepted, 0 without any cell; download 1.7 s, read+sample 0.8 s
-[  104.1s]   USGS_1m_x74y199_PR_PRVI_A_2018.tif: 494 points, 494 accepted, 0 without any cell; download 1.5 s, read+sample 0.3 s
-[  106.2s]   USGS_1m_x16y204_PR_PRVI_E_2018.tif: 86285 points, 1092 accepted, 85190 without any cell; download 1.4 s, read+sample 1.8 s
-[  106.3s]   USGS_1m_x77y203_PR_PRVI_H_2018.tif: 14500 points, 282 accepted, 14217 without any cell; download 1.2 s, read+sample 1.6 s
-[  106.3s]   USGS_1M_20_x18y199_PR_PuertoRicoUSVI_D24.tif: 749 points, 749 accepted, 0 without any cell; download 1.1 s, read+sample 0.2 s
-[  106.4s]   USGS_1M_19_x82y199_PR_PuertoRicoUSVI_D24.tif: 484 points, 484 accepted, 0 without any cell; download 0.9 s, read+sample 0.0 s
-[  108.7s]   USGS_1m_x84y202_PR_PRVI_A_2018.tif: 12420 points, 15 accepted, 12405 without any cell; download 0.9 s, read+sample 1.5 s
-[  108.7s]   USGS_1m_x86y202_PR_PRVI_C_2018.tif: 6 points, 0 accepted, 6 without any cell; download 0.8 s, read+sample 0.0 s
-[  109.1s] shard 0 done in 109.1 s, ok = True
-[    0.0s] lidar shard run 38112643363 sha 4267c9cff33b3294940307b8c6982ceea05ba357
-[    0.7s] shard 1: 40 tiles, 9.0 GB, 600478 point lookups
-[   14.7s]   USGS_1M_19_x82y204_PR_PuertoRicoUSVI_D24.tif: 38965 points, 38965 accepted, 0 without any cell; download 11.7 s, read+sample 2.2 s
-[   14.7s]   USGS_1m_x19y201_PR_PRVI_H_2018.tif: 17894 points, 17894 accepted, 0 without any cell; download 10.7 s, read+sample 2.1 s
-[   14.7s]   USGS_1M_20_x21y203_PR_PuertoRicoUSVI_D24.tif: 13703 points, 13703 accepted, 0 without any cell; download 10.7 s, read+sample 1.9 s
-[   26.2s]   USGS_1M_20_x13y204_PR_PuertoRicoUSVI_D24.tif: 14350 points, 14350 accepted, 0 without any cell; download 10.8 s, read+sample 2.0 s
-[   26.2s]   USGS_1M_20_x17y203_PR_PuertoRicoUSVI_D24.tif: 29615 points, 29615 accepted, 0 without any cell; download 10.3 s, read+sample 1.9 s
-[   27.1s]   USGS_1M_19_x81y203_PR_PuertoRicoUSVI_D24.tif: 29586 points, 29586 accepted, 0 without any cell; download 10.3 s, read+sample 2.1 s
-[   36.3s]   USGS_1M_19_x75y203_PR_PuertoRicoUSVI_D24.tif: 4583 points, 4583 accepted, 0 without any cell; download 8.7 s, read+sample 1.8 s
-[   37.4s]   USGS_1M_19_x79y203_PR_PuertoRicoUSVI_D24.tif: 19980 points, 19980 accepted, 0 without any cell; download 9.2 s, read+sample 1.9 s
-[   38.7s]   USGS_1m_x72y203_PR_PRVI_D_2018.tif: 15957 points, 15957 accepted, 0 without any cell; download 9.6 s, read+sample 1.9 s
-[   48.1s]   USGS_1M_19_x72y203_PR_PuertoRicoUSVI_D24.tif: 15957 points, 15957 accepted, 0 without any cell; download 9.8 s, read+sample 1.9 s
-[   48.8s]   USGS_1M_19_x73y201_PR_PuertoRicoUSVI_D24.tif: 3465 points, 3465 accepted, 0 without any cell; download 9.6 s, read+sample 1.8 s
-[   50.0s]   USGS_1m_x13y200_PR_PRVI_A_2018.tif: 13049 points, 13049 accepted, 0 without any cell; download 9.4 s, read+sample 1.9 s
-[   59.3s]   USGS_1M_20_x13y200_PR_PuertoRicoUSVI_D24.tif: 13049 points, 13049 accepted, 0 without any cell; download 9.3 s, read+sample 1.8 s
-[   59.5s]   USGS_1m_x69y201_PR_PRVI_A_2018.tif: 23703 points, 23703 accepted, 0 without any cell; download 9.0 s, read+sample 1.7 s
-[   61.2s]   USGS_1m_x19y202_PR_PRVI_H_2018.tif: 33191 points, 27975 accepted, 5206 without any cell; download 9.3 s, read+sample 1.7 s
-[   68.9s]   USGS_1m_x79y203_PR_PRVI_D_2018.tif: 19980 points, 17163 accepted, 2815 without any cell; download 8.0 s, read+sample 1.7 s
-[   69.1s]   USGS_1m_x82y203_PR_PRVI_D_2018.tif: 21211 points, 13689 accepted, 7520 without any cell; download 7.7 s, read+sample 1.8 s
-[   70.1s]   USGS_1m_x77y202_PR_PRVI_D_2018.tif: 12012 points, 8425 accepted, 3585 without any cell; download 7.1 s, read+sample 1.8 s
-[   77.3s]   USGS_1m_x76y201_PR_PRVI_A_2018.tif: 14759 points, 10622 accepted, 4131 without any cell; download 6.7 s, read+sample 1.7 s
-[   77.3s]   USGS_1m_x75y205_PR_PRVI_F_2018.tif: 14960 points, 14960 accepted, 0 without any cell; download 6.6 s, read+sample 1.1 s
-[   77.3s]   USGS_1m_x71y202_PR_PRVI_D_2018.tif: 6279 points, 3388 accepted, 2890 without any cell; download 3.5 s, read+sample 1.5 s
-[   79.5s]   USGS_1m_x77y201_PR_PRVI_A_2018.tif: 8897 points, 4526 accepted, 4367 without any cell; download 2.8 s, read+sample 1.6 s
-[   81.6s]   USGS_1m_x13y204_PR_PRVI_G_2018.tif: 14350 points, 6216 accepted, 8131 without any cell; download 3.1 s, read+sample 1.6 s
-[   81.6s]   USGS_1M_19_x83y200_PR_PuertoRicoUSVI_D24.tif: 6716 points, 6716 accepted, 0 without any cell; download 2.4 s, read+sample 1.2 s
-[   82.7s]   USGS_1M_19_x85y202_PR_PuertoRicoUSVI_D24.tif: 3426 points, 3425 accepted, 1 without any cell; download 2.5 s, read+sample 0.8 s
-[   84.5s]   USGS_1m_x76y204_PR_PRVI_D_2018.tif: 15386 points, 2543 accepted, 12843 without any cell; download 2.0 s, read+sample 1.5 s
-[   85.5s]   USGS_1m_x74y201_PR_PRVI_D_2018.tif: 6735 points, 1942 accepted, 4792 without any cell; download 2.3 s, read+sample 1.5 s
-[   85.7s]   USGS_1m_x80y205_PR_PRVI_E_2018.tif: 17842 points, 16553 accepted, 1288 without any cell; download 2.1 s, read+sample 0.8 s
-[   86.7s]   USGS_1M_20_x25y203_PR_PuertoRicoUSVI_D24.tif: 1895 points, 1895 accepted, 0 without any cell; download 1.6 s, read+sample 0.6 s
-[   88.7s]   USGS_1m_x77y202_PR_PRVI_H_2018.tif: 12012 points, 3588 accepted, 8420 without any cell; download 1.7 s, read+sample 1.5 s
-[   88.7s]   USGS_1m_x15y204_PR_PRVI_D_2018.tif: 32839 points, 5336 accepted, 27498 without any cell; download 1.5 s, read+sample 1.4 s
-[   88.9s]   USGS_1m_x22y203_PR_PRVI_H_2018.tif: 7181 points, 5112 accepted, 2067 without any cell; download 1.4 s, read+sample 0.8 s
-[   90.7s]   USGS_1m_x16y205_PR_PRVI_E_2018.tif: 25187 points, 5919 accepted, 19268 without any cell; download 1.2 s, read+sample 0.9 s
-[   90.7s]   USGS_1m_x78y199_PR_PRVI_H_2018.tif: 5909 points, 3140 accepted, 2769 without any cell; download 1.0 s, read+sample 0.7 s
-[   90.7s]   USGS_1M_19_x83y205_PR_PuertoRicoUSVI_D24.tif: 5588 points, 5588 accepted, 0 without any cell; download 0.9 s, read+sample 0.2 s
-[   91.1s]   USGS_1m_x20y200_PR_PRVI_H_2018.tif: 555 points, 555 accepted, 0 without any cell; download 1.0 s, read+sample 0.3 s
-[   92.7s]   USGS_1m_x83y204_PR_PRVI_E_2018.tif: 25453 points, 247 accepted, 25205 without any cell; download 0.9 s, read+sample 1.3 s
-[   92.9s]   USGS_1m_x70y202_PR_PRVI_D_2018.tif: 9189 points, 29 accepted, 9159 without any cell; download 0.7 s, read+sample 1.4 s
-[   93.3s]   USGS_1m_x70y204_PR_PRVI_D_2018.tif: 15477 points, 39 accepted, 15438 without any cell; download 0.7 s, read+sample 1.5 s
-[   94.4s]   USGS_1m_x21y202_PR_PRVI_A_2018.tif: 9593 points, 0 accepted, 9593 without any cell; download 0.6 s, read+sample 1.1 s
-[   94.8s] shard 1 done in 94.8 s, ok = True
-[    0.0s] lidar shard run 38112643363 sha 4267c9cff33b3294940307b8c6982ceea05ba357
-[    1.2s] shard 2: 39 tiles, 9.0 GB, 727060 point lookups
-[   18.2s]   USGS_1M_19_x83y204_PR_PuertoRicoUSVI_D24.tif: 25453 points, 25453 accepted, 0 without any cell; download 15.4 s, read+sample 1.7 s
-[   18.2s]   USGS_1M_19_x70y200_PR_PuertoRicoUSVI_D24.tif: 15359 points, 15359 accepted, 0 without any cell; download 13.2 s, read+sample 1.6 s
-[   20.9s]   USGS_1M_19_x76y204_PR_PuertoRicoUSVI_D24.tif: 15386 points, 15386 accepted, 0 without any cell; download 18.1 s, read+sample 1.6 s
-[   28.1s]   USGS_1M_19_x77y204_PR_PuertoRicoUSVI_D24.tif: 15599 points, 15599 accepted, 0 without any cell; download 10.5 s, read+sample 1.5 s
-[   31.6s]   USGS_1m_x17y200_PR_PRVI_H_2018.tif: 20697 points, 20690 accepted, 7 without any cell; download 11.6 s, read+sample 1.7 s
-[   34.1s]   USGS_1M_19_x82y200_PR_PuertoRicoUSVI_D24.tif: 10608 points, 10608 accepted, 0 without any cell; download 11.4 s, read+sample 1.7 s
-[   43.3s]   USGS_1M_20_x14y200_PR_PuertoRicoUSVI_D24.tif: 9809 points, 9809 accepted, 0 without any cell; download 13.6 s, read+sample 1.4 s
-[   43.3s]   USGS_1M_20_x16y200_PR_PuertoRicoUSVI_D24.tif: 5192 points, 5192 accepted, 0 without any cell; download 9.7 s, read+sample 1.6 s
-[   47.2s]   USGS_1M_20_x17y202_PR_PuertoRicoUSVI_D24.tif: 36176 points, 36176 accepted, 0 without any cell; download 11.5 s, read+sample 1.6 s
-[   55.4s]   USGS_1M_19_x81y201_PR_PuertoRicoUSVI_D24.tif: 7841 points, 7841 accepted, 0 without any cell; download 10.9 s, read+sample 1.6 s
-[   55.8s]   USGS_1M_19_x76y201_PR_PuertoRicoUSVI_D24.tif: 14759 points, 14759 accepted, 0 without any cell; download 11.0 s, read+sample 1.5 s
-[   59.8s]   USGS_1M_19_x83y203_PR_PuertoRicoUSVI_D24.tif: 5376 points, 5376 accepted, 0 without any cell; download 11.0 s, read+sample 1.6 s
-[   67.1s]   USGS_1M_20_x13y202_PR_PuertoRicoUSVI_D24.tif: 6666 points, 6666 accepted, 0 without any cell; download 10.1 s, read+sample 1.6 s
-[   68.3s]   USGS_1m_x74y202_PR_PRVI_D_2018.tif: 6736 points, 5711 accepted, 1025 without any cell; download 10.9 s, read+sample 1.5 s
-[   70.3s]   USGS_1M_19_x84y202_PR_PuertoRicoUSVI_D24.tif: 12420 points, 12420 accepted, 0 without any cell; download 9.0 s, read+sample 1.4 s
-[   77.6s]   USGS_1m_x13y201_PR_PRVI_A_2018.tif: 10943 points, 8610 accepted, 2328 without any cell; download 9.0 s, read+sample 1.5 s
-[   78.9s]   USGS_1m_x16y201_PR_PRVI_H_2018.tif: 22292 points, 16423 accepted, 5842 without any cell; download 9.1 s, read+sample 1.5 s
-[   79.5s]   USGS_1m_x80y204_PR_PRVI_G_2018.tif: 78525 points, 59187 accepted, 19309 without any cell; download 7.8 s, read+sample 1.4 s
-[   87.1s]   USGS_1m_x14y202_PR_PRVI_H_2018.tif: 15469 points, 11891 accepted, 3575 without any cell; download 7.8 s, read+sample 1.6 s
-[   87.1s]   USGS_1m_x74y205_PR_PRVI_F_2018.tif: 13379 points, 13379 accepted, 0 without any cell; download 7.0 s, read+sample 1.0 s
-[   87.3s]   USGS_1M_19_x74y205_PR_PuertoRicoUSVI_D24.tif: 13379 points, 13379 accepted, 0 without any cell; download 6.7 s, read+sample 1.1 s
-[   92.1s]   USGS_1m_x70y202_PR_PRVI_A_2018.tif: 9189 points, 4314 accepted, 4873 without any cell; download 3.9 s, read+sample 1.4 s
-[   92.1s]   USGS_1m_x14y200_PR_PRVI_H_2018.tif: 9809 points, 3444 accepted, 6365 without any cell; download 3.2 s, read+sample 1.5 s
-[   92.1s]   USGS_1M_19_x69y199_PR_PuertoRicoUSVI_D24.tif: 4564 points, 4564 accepted, 0 without any cell; download 3.3 s, read+sample 0.9 s
-[   95.2s]   USGS_1m_x16y199_PR_PRVI_A_2018.tif: 7131 points, 5549 accepted, 1577 without any cell; download 2.9 s, read+sample 0.7 s
-[   95.3s]   USGS_1M_20_x17y205_PR_PuertoRicoUSVI_D24.tif: 29522 points, 29517 accepted, 5 without any cell; download 2.8 s, read+sample 0.7 s
-[   95.3s]   USGS_1m_x18y205_PR_PRVI_E_2018.tif: 6154 points, 6154 accepted, 0 without any cell; download 2.5 s, read+sample 0.6 s
-[   99.2s]   USGS_1m_x69y204_PR_PRVI_E_2018.tif: 25315 points, 8210 accepted, 17101 without any cell; download 2.6 s, read+sample 1.3 s
-[   99.2s]   USGS_1m_x14y202_PR_PRVI_D_2018.tif: 15469 points, 3578 accepted, 11889 without any cell; download 2.6 s, read+sample 1.3 s
-[   99.2s]   USGS_1m_x73y204_PR_PRVI_D_2018.tif: 15485 points, 1401 accepted, 14083 without any cell; download 2.3 s, read+sample 1.2 s
-[  102.3s]   USGS_1m_x18y203_PR_PRVI_H_2018.tif: 25946 points, 9041 accepted, 16897 without any cell; download 2.1 s, read+sample 1.4 s
-[  102.3s]   USGS_1m_x81y204_PR_PRVI_D_2018.tif: 89652 points, 4989 accepted, 84652 without any cell; download 1.8 s, read+sample 1.2 s
-[  102.3s]   USGS_1m_x80y204_PR_PRVI_D_2018.tif: 78525 points, 5499 accepted, 73013 without any cell; download 1.7 s, read+sample 1.4 s
-[  103.8s]   USGS_1m_x22y201_PR_PRVI_C_2018.tif: 4 points, 4 accepted, 0 without any cell; download 1.5 s, read+sample 0.1 s
-[  104.8s]   USGS_1m_x77y204_PR_PRVI_D_2018.tif: 15599 points, 929 accepted, 14667 without any cell; download 1.3 s, read+sample 1.2 s
-[  104.8s]   USGS_1m_x16y199_PR_PRVI_H_2018.tif: 7131 points, 1583 accepted, 5545 without any cell; download 1.2 s, read+sample 0.5 s
-[  106.1s]   USGS_1m_x83y204_PR_PRVI_D_2018.tif: 25453 points, 447 accepted, 25006 without any cell; download 1.0 s, read+sample 1.2 s
-[  106.1s]   USGS_1m_x86y204_PR_PRVI_A_2018.tif: 24 points, 24 accepted, 0 without any cell; download 1.0 s, read+sample 0.2 s
-[  106.1s]   USGS_1m_x19y199_PR_PRVI_H_2018.tif: 24 points, 24 accepted, 0 without any cell; download 1.0 s, read+sample 0.0 s
-[  106.3s] shard 2 done in 106.3 s, ok = True
-[    0.0s] lidar shard run 38112643363 sha 4267c9cff33b3294940307b8c6982ceea05ba357
-[    0.9s] shard 3: 40 tiles, 9.0 GB, 489058 point lookups
-[   16.7s]   USGS_1M_19_x71y200_PR_PuertoRicoUSVI_D24.tif: 10799 points, 10799 accepted, 0 without any cell; download 13.3 s, read+sample 2.4 s
-[   16.7s]   USGS_1M_19_x70y201_PR_PuertoRicoUSVI_D24.tif: 15744 points, 15744 accepted, 0 without any cell; download 13.0 s, read+sample 2.4 s
-[   16.7s]   USGS_1M_19_x70y204_PR_PuertoRicoUSVI_D24.tif: 15477 points, 15477 accepted, 0 without any cell; download 13.0 s, read+sample 1.8 s
-[   30.6s]   USGS_1M_20_x18y200_PR_PuertoRicoUSVI_D24.tif: 10004 points, 10004 accepted, 0 without any cell; download 12.9 s, read+sample 1.9 s
-[   31.0s]   USGS_1M_19_x80y203_PR_PuertoRicoUSVI_D24.tif: 23007 points, 23007 accepted, 0 without any cell; download 12.6 s, read+sample 2.0 s
-[   31.0s]   USGS_1M_20_x16y203_PR_PuertoRicoUSVI_D24.tif: 18955 points, 18955 accepted, 0 without any cell; download 10.9 s, read+sample 1.8 s
-[   44.1s]   USGS_1m_x75y203_PR_PRVI_D_2018.tif: 4583 points, 4583 accepted, 0 without any cell; download 12.6 s, read+sample 1.9 s
-[   44.8s]   USGS_1M_19_x73y204_PR_PuertoRicoUSVI_D24.tif: 15485 points, 15485 accepted, 0 without any cell; download 12.2 s, read+sample 2.0 s
-[   44.8s]   USGS_1M_19_x77y201_PR_PuertoRicoUSVI_D24.tif: 8897 points, 8897 accepted, 0 without any cell; download 10.4 s, read+sample 1.8 s
-[   55.6s]   USGS_1M_20_x15y203_PR_PuertoRicoUSVI_D24.tif: 19109 points, 19109 accepted, 0 without any cell; download 10.5 s, read+sample 1.8 s
-[  118.4s]   USGS_1M_19_x74y201_PR_PuertoRicoUSVI_D24.tif: 6735 points, 6735 accepted, 0 without any cell; download 72.1 s, read+sample 2.1 s
-[  118.4s]   USGS_1M_19_x75y202_PR_PuertoRicoUSVI_D24.tif: 9032 points, 9032 accepted, 0 without any cell; download 11.8 s, read+sample 1.8 s
-[  118.4s]   USGS_1m_x15y202_PR_PRVI_H_2018.tif: 15596 points, 15596 accepted, 0 without any cell; download 11.6 s, read+sample 1.8 s
-[  118.4s]   USGS_1M_20_x14y202_PR_PuertoRicoUSVI_D24.tif: 15469 points, 15469 accepted, 0 without any cell; download 10.1 s, read+sample 1.8 s
-[  118.4s]   USGS_1M_20_x20y204_PR_PuertoRicoUSVI_D24.tif: 15669 points, 15669 accepted, 0 without any cell; download 10.9 s, read+sample 1.6 s
-[  118.4s]   USGS_1M_19_x70y205_PR_PuertoRicoUSVI_D24.tif: 28107 points, 28107 accepted, 0 without any cell; download 9.8 s, read+sample 1.4 s
-[  118.4s]   USGS_1m_x14y203_PR_PRVI_D_2018.tif: 13728 points, 11312 accepted, 2415 without any cell; download 9.9 s, read+sample 1.7 s
-[  118.4s]   USGS_1m_x74y201_PR_PRVI_A_2018.tif: 6735 points, 4793 accepted, 1938 without any cell; download 8.5 s, read+sample 1.6 s
-[  118.4s]   USGS_1M_20_x15y205_PR_PuertoRicoUSVI_D24.tif: 19630 points, 19630 accepted, 0 without any cell; download 7.6 s, read+sample 1.1 s
-[  118.4s]   USGS_1m_x83y203_PR_PRVI_H_2018.tif: 5376 points, 4446 accepted, 926 without any cell; download 7.8 s, read+sample 1.6 s
-[  118.4s]   USGS_1M_19_x72y205_PR_PuertoRicoUSVI_D24.tif: 18406 points, 18406 accepted, 0 without any cell; download 6.5 s, read+sample 1.0 s
-[  118.4s]   USGS_1m_x20y203_PR_PRVI_H_2018.tif: 726 points, 652 accepted, 73 without any cell; download 4.5 s, read+sample 1.4 s
-[  118.4s]   USGS_1m_x79y205_PR_PRVI_G_2018.tif: 18708 points, 18708 accepted, 0 without any cell; download 4.1 s, read+sample 0.9 s
-[  118.4s]   USGS_1m_x85y202_PR_PRVI_H_2018.tif: 3426 points, 3426 accepted, 0 without any cell; download 3.5 s, read+sample 0.7 s
-[  118.4s]   USGS_1m_x85y203_PR_PRVI_H_2018.tif: 14262 points, 10252 accepted, 4000 without any cell; download 3.5 s, read+sample 1.2 s
-[  118.4s]   USGS_1m_x82y205_PR_PRVI_E_2018.tif: 1958 points, 1958 accepted, 0 without any cell; download 3.2 s, read+sample 0.9 s
-[  121.5s]   USGS_1M_19_x85y204_PR_PuertoRicoUSVI_D24.tif: 9462 points, 9436 accepted, 26 without any cell; download 3.5 s, read+sample 0.7 s
-[  121.5s]   USGS_1M_20_x22y203_PR_PuertoRicoUSVI_D24.tif: 7181 points, 7155 accepted, 26 without any cell; download 2.9 s, read+sample 0.6 s
-[  121.9s]   USGS_1m_x80y199_PR_PRVI_A_2018.tif: 8861 points, 4400 accepted, 4459 without any cell; download 2.8 s, read+sample 0.7 s
-[  123.8s]   USGS_1m_x61y200_PR_PRVI_A_2018.tif: 12 points, 12 accepted, 0 without any cell; download 2.4 s, read+sample 0.3 s
-[  124.2s]   USGS_1m_x75y199_PR_PRVI_A_2018.tif: 3032 points, 3032 accepted, 0 without any cell; download 2.3 s, read+sample 0.3 s
-[  125.4s]   USGS_1m_x16y204_PR_PRVI_D_2018.tif: 86285 points, 8553 accepted, 77719 without any cell; download 2.0 s, read+sample 1.4 s
-[  126.0s]   USGS_1M_20_x14y199_PR_PuertoRicoUSVI_D24.tif: 1700 points, 1700 accepted, 0 without any cell; download 1.9 s, read+sample 0.3 s
-[  127.0s]   USGS_1m_x78y204_PR_PRVI_D_2018.tif: 26341 points, 3826 accepted, 22510 without any cell; download 1.6 s, read+sample 1.2 s
-[  127.1s]   USGS_1m_x62y201_PR_PRVI_A_2018.tif: 4 points, 4 accepted, 0 without any cell; download 1.7 s, read+sample 0.0 s
-[  128.6s]   USGS_1m_x83y203_PR_PRVI_D_2018.tif: 5376 points, 839 accepted, 4537 without any cell; download 1.5 s, read+sample 1.2 s
-[  129.1s]   USGS_1m_x15y199_PR_PRVI_H_2018.tif: 4756 points, 720 accepted, 4035 without any cell; download 1.3 s, read+sample 0.7 s
-[  129.1s]   USGS_1m_x68y200_PR_PRVI_A_2018.tif: 77 points, 77 accepted, 0 without any cell; download 1.4 s, read+sample 0.0 s
-[  129.7s]   USGS_1m_x20y205_PR_PRVI_E_2018.tif: 343 points, 343 accepted, 0 without any cell; download 1.1 s, read+sample 0.0 s
-[  129.7s]   USGS_1M_19_x76y198_PR_PuertoRicoUSVI_D24.tif: 5 points, 5 accepted, 0 without any cell; download 1.0 s, read+sample 0.0 s
-[  130.0s] shard 3 done in 130.0 s, ok = True
-[    0.0s] lidar shard run 38112643363 sha 4267c9cff33b3294940307b8c6982ceea05ba357
-[    0.9s] shard 4: 39 tiles, 9.0 GB, 612559 point lookups
-[   15.3s]   USGS_1M_20_x18y204_PR_PuertoRicoUSVI_D24.tif: 70585 points, 70585 accepted, 0 without any cell; download 11.2 s, read+sample 3.1 s
-[   15.3s]   USGS_1m_x69y203_PR_PRVI_E_2018.tif: 21480 points, 21480 accepted, 0 without any cell; download 10.6 s, read+sample 2.5 s
-[   15.3s]   USGS_1M_20_x14y204_PR_PuertoRicoUSVI_D24.tif: 19221 points, 19221 accepted, 0 without any cell; download 10.7 s, read+sample 3.0 s
-[   26.7s]   USGS_1m_x76y200_PR_PRVI_A_2018.tif: 23340 points, 23340 accepted, 0 without any cell; download 10.2 s, read+sample 2.4 s
-[   27.3s]   USGS_1M_19_x70y202_PR_PuertoRicoUSVI_D24.tif: 9189 points, 9189 accepted, 0 without any cell; download 10.0 s, read+sample 2.6 s
-[   28.5s]   USGS_1M_20_x17y200_PR_PuertoRicoUSVI_D24.tif: 20697 points, 20697 accepted, 0 without any cell; download 10.5 s, read+sample 2.7 s
-[   38.6s]   USGS_1M_19_x81y202_PR_PuertoRicoUSVI_D24.tif: 42429 points, 42429 accepted, 0 without any cell; download 9.5 s, read+sample 2.5 s
-[   39.9s]   USGS_1m_x74y203_PR_PRVI_D_2018.tif: 9661 points, 9661 accepted, 0 without any cell; download 10.0 s, read+sample 2.6 s
-[   40.2s]   USGS_1M_19_x80y200_PR_PuertoRicoUSVI_D24.tif: 11306 points, 11306 accepted, 0 without any cell; download 9.1 s, read+sample 2.6 s
-[   50.4s]   USGS_1M_20_x13y201_PR_PuertoRicoUSVI_D24.tif: 10943 points, 10943 accepted, 0 without any cell; download 9.3 s, read+sample 2.4 s
-[   53.3s]   USGS_1M_19_x79y202_PR_PuertoRicoUSVI_D24.tif: 14216 points, 14216 accepted, 0 without any cell; download 11.0 s, read+sample 2.4 s
-[   53.3s]   USGS_1m_x82y202_PR_PRVI_H_2018.tif: 33900 points, 30910 accepted, 2971 without any cell; download 9.4 s, read+sample 2.3 s
-[   62.8s]   USGS_1M_19_x79y201_PR_PuertoRicoUSVI_D24.tif: 16385 points, 16385 accepted, 0 without any cell; download 9.9 s, read+sample 2.5 s
-[   62.8s]   USGS_1M_19_x77y202_PR_PuertoRicoUSVI_D24.tif: 12012 points, 12012 accepted, 0 without any cell; download 8.4 s, read+sample 2.3 s
-[   64.9s]   USGS_1m_x71y204_PR_PRVI_F_2018.tif: 10125 points, 7607 accepted, 2516 without any cell; download 9.2 s, read+sample 2.3 s
-[   72.9s]   USGS_1m_x80y203_PR_PRVI_D_2018.tif: 23007 points, 18130 accepted, 4874 without any cell; download 7.9 s, read+sample 2.2 s
-[   72.9s]   USGS_1M_19_x85y203_PR_PuertoRicoUSVI_D24.tif: 14262 points, 14262 accepted, 0 without any cell; download 7.5 s, read+sample 2.3 s
-[   73.6s]   USGS_1m_x77y205_PR_PRVI_G_2018.tif: 21053 points, 21053 accepted, 0 without any cell; download 6.9 s, read+sample 1.8 s
-[   80.3s]   USGS_1m_x24y201_PR_PRVI_C_2018.tif: 5633 points, 5633 accepted, 0 without any cell; download 6.4 s, read+sample 1.3 s
-[   82.4s]   USGS_1m_x81y201_PR_PRVI_H_2018.tif: 7841 points, 5440 accepted, 2383 without any cell; download 7.3 s, read+sample 2.2 s
-[   82.4s]   USGS_1M_19_x73y205_PR_PuertoRicoUSVI_D24.tif: 26119 points, 26119 accepted, 0 without any cell; download 5.7 s, read+sample 1.5 s
-[   84.8s]   USGS_1m_x23y201_PR_PRVI_C_2018.tif: 2079 points, 2079 accepted, 0 without any cell; download 3.1 s, read+sample 1.3 s
-[   85.2s]   USGS_1M_19_x79y199_PR_PuertoRicoUSVI_D24.tif: 7239 points, 7239 accepted, 0 without any cell; download 2.8 s, read+sample 1.5 s
-[   86.2s]   USGS_1m_x21y204_PR_PRVI_H_2018.tif: 10819 points, 10819 accepted, 0 without any cell; download 2.7 s, read+sample 1.2 s
-[   89.0s]   USGS_1m_x75y201_PR_PRVI_D_2018.tif: 4450 points, 1165 accepted, 3285 without any cell; download 2.1 s, read+sample 2.1 s
-[   89.0s]   USGS_1M_19_x86y201_PR_PuertoRicoUSVI_D24.tif: 151 points, 151 accepted, 0 without any cell; download 2.2 s, read+sample 0.9 s
-[   89.5s]   USGS_1M_19_x77y199_PR_PuertoRicoUSVI_D24.tif: 5837 points, 5837 accepted, 0 without any cell; download 2.5 s, read+sample 0.8 s
-[   92.7s]   USGS_1m_x80y204_PR_PRVI_E_2018.tif: 78525 points, 13842 accepted, 64665 without any cell; download 1.9 s, read+sample 2.4 s
-[   93.5s]   USGS_1m_x77y201_PR_PRVI_D_2018.tif: 8897 points, 804 accepted, 8093 without any cell; download 2.3 s, read+sample 2.2 s
-[   93.5s]   USGS_1m_x81y203_PR_PRVI_H_2018.tif: 29586 points, 10476 accepted, 19108 without any cell; download 1.6 s, read+sample 1.8 s
-[   96.4s]   USGS_1m_x13y201_PR_PRVI_D_2018.tif: 10943 points, 2333 accepted, 8607 without any cell; download 1.7 s, read+sample 1.9 s
-[   96.6s]   USGS_1m_x76y204_PR_PRVI_G_2018.tif: 15386 points, 2683 accepted, 12701 without any cell; download 1.7 s, read+sample 1.9 s
-[   96.6s]   USGS_1M_20_x26y203_PR_PuertoRicoUSVI_D24.tif: 271 points, 271 accepted, 0 without any cell; download 1.2 s, read+sample 0.5 s
-[   97.4s]   USGS_1m_x76y205_PR_PRVI_G_2018.tif: 8971 points, 1425 accepted, 7546 without any cell; download 1.2 s, read+sample 1.0 s
-[   97.9s]   USGS_1m_x84y201_PR_PRVI_H_2018.tif: 468 points, 468 accepted, 0 without any cell; download 1.2 s, read+sample 0.2 s
-[   97.9s]   USGS_1m_x81y199_PR_PRVI_A_2018.tif: 3687 points, 1537 accepted, 2144 without any cell; download 0.9 s, read+sample 0.5 s
-[   98.5s]   USGS_1m_x76y199_PR_PRVI_A_2018.tif: 187 points, 186 accepted, 1 without any cell; download 0.8 s, read+sample 0.4 s
-[   99.4s]   USGS_1m_x22y204_PR_PRVI_A_2018.tif: 1658 points, 24 accepted, 1634 without any cell; download 0.8 s, read+sample 0.7 s
-[   99.4s]   USGS_1m_x65y204_PR_PRVI_A_2018.tif: 1 points, 1 accepted, 0 without any cell; download 0.7 s, read+sample 0.0 s
-[   99.8s] shard 4 done in 99.8 s, ok = True
-[    0.0s] lidar shard run 38112643363 sha 4267c9cff33b3294940307b8c6982ceea05ba357
-[    1.4s] shard 5: 40 tiles, 9.0 GB, 587172 point lookups
-[   19.3s]   USGS_1m_x71y200_PR_PRVI_A_2018.tif: 10799 points, 10799 accepted, 0 without any cell; download 15.1 s, read+sample 2.8 s
-[   19.3s]   USGS_1M_20_x17y204_PR_PuertoRicoUSVI_D24.tif: 90981 points, 90981 accepted, 0 without any cell; download 14.6 s, read+sample 2.9 s
-[   19.3s]   USGS_1m_x70y203_PR_PRVI_E_2018.tif: 8713 points, 8402 accepted, 309 without any cell; download 14.8 s, read+sample 2.2 s
-[   35.1s]   USGS_1M_19_x74y200_PR_PuertoRicoUSVI_D24.tif: 25158 points, 25158 accepted, 0 without any cell; download 14.2 s, read+sample 2.3 s
-[   35.1s]   USGS_1m_x82y200_PR_PRVI_H_2018.tif: 10608 points, 10608 accepted, 0 without any cell; download 12.1 s, read+sample 2.1 s
-[   35.1s]   USGS_1M_19_x79y200_PR_PuertoRicoUSVI_D24.tif: 7656 points, 7656 accepted, 0 without any cell; download 11.8 s, read+sample 2.2 s
-[   48.4s]   USGS_1M_19_x84y203_PR_PuertoRicoUSVI_D24.tif: 2500 points, 2500 accepted, 0 without any cell; download 12.8 s, read+sample 2.3 s
-[   48.4s]   USGS_1m_x73y200_PR_PRVI_A_2018.tif: 14684 points, 14680 accepted, 4 without any cell; download 12.2 s, read+sample 2.1 s
-[   49.4s]   USGS_1M_19_x74y203_PR_PuertoRicoUSVI_D24.tif: 9661 points, 9661 accepted, 0 without any cell; download 12.0 s, read+sample 2.2 s
-[   61.2s]   USGS_1m_x72y201_PR_PRVI_A_2018.tif: 3887 points, 3887 accepted, 0 without any cell; download 11.3 s, read+sample 2.1 s
-[   61.9s]   USGS_1M_20_x20y203_PR_PuertoRicoUSVI_D24.tif: 726 points, 726 accepted, 0 without any cell; download 11.2 s, read+sample 2.2 s
-[   64.9s]   USGS_1M_19_x80y202_PR_PuertoRicoUSVI_D24.tif: 24728 points, 24728 accepted, 0 without any cell; download 13.4 s, read+sample 2.1 s
-[   74.6s]   USGS_1m_x78y200_PR_PRVI_H_2018.tif: 6567 points, 6461 accepted, 106 without any cell; download 11.2 s, read+sample 2.2 s
-[   76.5s]   USGS_1m_x78y202_PR_PRVI_H_2018.tif: 17981 points, 17981 accepted, 0 without any cell; download 12.4 s, read+sample 2.2 s
-[   78.1s]   USGS_1m_x20y204_PR_PRVI_H_2018.tif: 15669 points, 15625 accepted, 41 without any cell; download 11.1 s, read+sample 2.0 s
-[   86.5s]   USGS_1m_x70y205_PR_PRVI_F_2018.tif: 28107 points, 28107 accepted, 0 without any cell; download 10.1 s, read+sample 1.8 s
-[   89.6s]   USGS_1m_x18y203_PR_PRVI_D_2018.tif: 25946 points, 16252 accepted, 9691 without any cell; download 11.0 s, read+sample 2.0 s
-[   90.1s]   USGS_1m_x14y201_PR_PRVI_H_2018.tif: 13039 points, 8777 accepted, 4258 without any cell; download 10.1 s, read+sample 1.9 s
-[   98.1s]   USGS_1m_x82y204_PR_PRVI_G_2018.tif: 38965 points, 29516 accepted, 9438 without any cell; download 9.5 s, read+sample 2.0 s
-[  100.4s]   USGS_1m_x69y204_PR_PRVI_F_2018.tif: 25315 points, 17107 accepted, 8198 without any cell; download 8.9 s, read+sample 1.9 s
-[  100.4s]   USGS_1m_x14y200_PR_PRVI_A_2018.tif: 9809 points, 6365 accepted, 3444 without any cell; download 8.4 s, read+sample 1.8 s
-[  106.1s]   USGS_1m_x19y203_PR_PRVI_D_2018.tif: 13716 points, 8120 accepted, 5595 without any cell; download 5.9 s, read+sample 2.0 s
-[  106.3s]   USGS_1M_19_x71y199_PR_PuertoRicoUSVI_D24.tif: 3660 points, 3660 accepted, 0 without any cell; download 4.8 s, read+sample 1.1 s
-[  106.5s]   USGS_1M_20_x21y204_PR_PuertoRicoUSVI_D24.tif: 10819 points, 10818 accepted, 1 without any cell; download 4.8 s, read+sample 1.3 s
-[  111.7s]   USGS_1m_x16y205_PR_PRVI_G_2018.tif: 25187 points, 19268 accepted, 5914 without any cell; download 4.3 s, read+sample 1.2 s
-[  111.7s]   USGS_1M_19_x68y203_PR_PuertoRicoUSVI_D24.tif: 7781 points, 7781 accepted, 0 without any cell; download 4.2 s, read+sample 1.0 s
-[  111.7s]   USGS_1M_20_x18y205_PR_PuertoRicoUSVI_D24.tif: 6154 points, 6154 accepted, 0 without any cell; download 3.6 s, read+sample 0.7 s
-[  146.8s]   USGS_1m_x70y204_PR_PRVI_E_2018.tif: 15477 points, 5648 accepted, 9823 without any cell; download 34.1 s, read+sample 1.7 s
-[  146.8s]   USGS_1m_x15y203_PR_PRVI_H_2018.tif: 19109 points, 4837 accepted, 14269 without any cell; download 3.6 s, read+sample 1.6 s
-[  146.8s]   USGS_1m_x13y204_PR_PRVI_F_2018.tif: 14350 points, 2842 accepted, 11508 without any cell; download 3.1 s, read+sample 1.6 s
-[  146.8s]   USGS_1m_x19y205_PR_PRVI_E_2018.tif: 3134 points, 3114 accepted, 18 without any cell; download 3.1 s, read+sample 0.5 s
-[  146.8s]   USGS_1m_x82y204_PR_PRVI_D_2018.tif: 38965 points, 3180 accepted, 35782 without any cell; download 3.0 s, read+sample 1.7 s
-[  146.8s]   USGS_1m_x79y199_PR_PRVI_H_2018.tif: 7239 points, 3242 accepted, 3994 without any cell; download 2.3 s, read+sample 1.1 s
-[  146.8s]   USGS_1m_x80y199_PR_PRVI_H_2018.tif: 8861 points, 4461 accepted, 4396 without any cell; download 2.2 s, read+sample 0.8 s
-[  146.8s]   USGS_1m_x13y199_PR_PRVI_A_2018.tif: 2062 points, 2062 accepted, 0 without any cell; download 2.0 s, read+sample 0.1 s
-[  146.8s]   USGS_1M_20_x13y199_PR_PuertoRicoUSVI_D24.tif: 2062 points, 2062 accepted, 0 without any cell; download 1.9 s, read+sample 0.1 s
-[  146.8s]   USGS_1m_x18y199_PR_PRVI_H_2018.tif: 749 points, 749 accepted, 0 without any cell; download 1.6 s, read+sample 0.1 s
-[  146.8s]   USGS_1m_x85y203_PR_PRVI_A_2018.tif: 14262 points, 0 accepted, 14262 without any cell; download 1.4 s, read+sample 1.3 s
-[  146.8s]   USGS_1m_x13y199_PR_PRVI_C_2018.tif: 2062 points, 0 accepted, 2062 without any cell; download 1.5 s, read+sample 0.1 s
-[  146.8s]   USGS_1M_20_x19y199_PR_PuertoRicoUSVI_D24.tif: 24 points, 24 accepted, 0 without any cell; download 1.3 s, read+sample 0.0 s
-[  147.2s] shard 5 done in 147.2 s, ok = True
-[    0.0s] lidar shard run 38112643363 sha 4267c9cff33b3294940307b8c6982ceea05ba357
-[    1.0s] shard 6: 39 tiles, 9.0 GB, 934005 point lookups
-[   15.9s]   USGS_1m_x75y200_PR_PRVI_A_2018.tif: 42609 points, 42609 accepted, 0 without any cell; download 12.3 s, read+sample 2.6 s
-[   15.9s]   USGS_1M_20_x16y204_PR_PuertoRicoUSVI_D24.tif: 86285 points, 86285 accepted, 0 without any cell; download 12.0 s, read+sample 2.6 s
-[   15.9s]   USGS_1M_19_x81y204_PR_PuertoRicoUSVI_D24.tif: 89652 points, 89652 accepted, 0 without any cell; download 12.0 s, read+sample 2.0 s
-[   28.3s]   USGS_1M_19_x83y202_PR_PuertoRicoUSVI_D24.tif: 24674 points, 24674 accepted, 0 without any cell; download 11.5 s, read+sample 1.8 s
-[   28.3s]   USGS_1M_19_x82y202_PR_PuertoRicoUSVI_D24.tif: 33900 points, 33900 accepted, 0 without any cell; download 9.8 s, read+sample 2.0 s
-[   29.4s]   USGS_1M_20_x18y202_PR_PuertoRicoUSVI_D24.tif: 34678 points, 34678 accepted, 0 without any cell; download 11.6 s, read+sample 1.8 s
-[   39.7s]   USGS_1m_x79y200_PR_PRVI_H_2018.tif: 7656 points, 7656 accepted, 0 without any cell; download 10.2 s, read+sample 2.0 s
-[   40.6s]   USGS_1m_x71y201_PR_PRVI_A_2018.tif: 9120 points, 9120 accepted, 0 without any cell; download 10.2 s, read+sample 2.0 s
-[   41.3s]   USGS_1M_19_x77y203_PR_PuertoRicoUSVI_D24.tif: 14500 points, 14500 accepted, 0 without any cell; download 9.9 s, read+sample 1.9 s
-[   52.3s]   USGS_1M_19_x72y202_PR_PuertoRicoUSVI_D24.tif: 4582 points, 4582 accepted, 0 without any cell; download 10.3 s, read+sample 2.2 s
-[   53.1s]   USGS_1m_x77y204_PR_PRVI_G_2018.tif: 15599 points, 14669 accepted, 927 without any cell; download 10.8 s, read+sample 1.7 s
-[   53.5s]   USGS_1m_x83y204_PR_PRVI_H_2018.tif: 25453 points, 19976 accepted, 5473 without any cell; download 10.1 s, read+sample 2.1 s
-[   65.6s]   USGS_1m_x16y202_PR_PRVI_H_2018.tif: 19920 points, 19914 accepted, 6 without any cell; download 11.0 s, read+sample 2.3 s
-[   65.6s]   USGS_1M_19_x78y202_PR_PuertoRicoUSVI_D24.tif: 17981 points, 17981 accepted, 0 without any cell; download 9.4 s, read+sample 1.8 s
-[   65.6s]   USGS_1M_19_x69y204_PR_PuertoRicoUSVI_D24.tif: 25315 points, 25315 accepted, 0 without any cell; download 9.3 s, read+sample 2.1 s
-[   74.2s]   USGS_1m_x73y204_PR_PRVI_F_2018.tif: 15485 points, 14084 accepted, 1396 without any cell; download 7.6 s, read+sample 2.2 s
-[   74.8s]   USGS_1m_x81y203_PR_PRVI_D_2018.tif: 29586 points, 18594 accepted, 10992 without any cell; download 7.7 s, read+sample 2.1 s
-[   74.8s]   USGS_1M_19_x84y204_PR_PuertoRicoUSVI_D24.tif: 12238 points, 12237 accepted, 1 without any cell; download 7.0 s, read+sample 1.4 s
-[   83.6s]   USGS_1m_x75y204_PR_PRVI_F_2018.tif: 16383 points, 11346 accepted, 5036 without any cell; download 7.8 s, read+sample 1.8 s
-[   83.6s]   USGS_1M_19_x71y205_PR_PuertoRicoUSVI_D24.tif: 17077 points, 17077 accepted, 0 without any cell; download 6.9 s, read+sample 1.4 s
-[   83.6s]   USGS_1m_x17y201_PR_PRVI_H_2018.tif: 8253 points, 3762 accepted, 4474 without any cell; download 6.0 s, read+sample 1.5 s
-[   87.1s]   USGS_1M_20_x23y201_PR_PuertoRicoUSVI_D24.tif: 2079 points, 2079 accepted, 0 without any cell; download 3.8 s, read+sample 1.0 s
-[   87.1s]   USGS_1M_19_x69y205_PR_PuertoRicoUSVI_D24.tif: 17606 points, 17605 accepted, 1 without any cell; download 3.3 s, read+sample 0.9 s
-[   87.8s]   USGS_1m_x72y199_PR_PRVI_A_2018.tif: 3993 points, 3993 accepted, 0 without any cell; download 3.5 s, read+sample 0.7 s
-[   90.3s]   USGS_1M_19_x80y199_PR_PuertoRicoUSVI_D24.tif: 8861 points, 8861 accepted, 0 without any cell; download 2.7 s, read+sample 0.8 s
-[   91.4s]   USGS_1m_x19y204_PR_PRVI_H_2018.tif: 34769 points, 10121 accepted, 24636 without any cell; download 2.8 s, read+sample 1.4 s
-[   91.6s]   USGS_1m_x69y202_PR_PRVI_A_2018.tif: 26835 points, 17055 accepted, 9779 without any cell; download 2.7 s, read+sample 1.1 s
-[   94.5s]   USGS_1m_x81y204_PR_PRVI_E_2018.tif: 89652 points, 31294 accepted, 58337 without any cell; download 2.6 s, read+sample 1.7 s
-[   94.5s]   USGS_1m_x25y203_PR_PRVI_C_2018.tif: 1895 points, 1895 accepted, 0 without any cell; download 2.3 s, read+sample 0.5 s
-[   95.1s]   USGS_1m_x77y201_PR_PRVI_H_2018.tif: 8897 points, 3568 accepted, 5324 without any cell; download 2.1 s, read+sample 1.5 s
-[   96.6s]   USGS_1m_x68y204_PR_PRVI_E_2018.tif: 4372 points, 3475 accepted, 897 without any cell; download 1.9 s, read+sample 0.5 s
-[   97.7s]   USGS_1m_x17y204_PR_PRVI_D_2018.tif: 90981 points, 7233 accepted, 83738 without any cell; download 1.7 s, read+sample 1.5 s
-[   97.7s]   USGS_1m_x14y199_PR_PRVI_A_2018.tif: 1700 points, 1614 accepted, 85 without any cell; download 1.5 s, read+sample 0.3 s
-[   99.5s]   USGS_1m_x79y204_PR_PRVI_D_2018.tif: 77628 points, 5425 accepted, 72195 without any cell; download 1.5 s, read+sample 1.4 s
-[   99.5s]   USGS_1M_19_x62y201_PR_PuertoRicoUSVI_D24.tif: 4 points, 4 accepted, 0 without any cell; download 1.4 s, read+sample 0.1 s
-[  100.1s]   USGS_1m_x14y201_PR_PRVI_D_2018.tif: 13039 points, 171 accepted, 12867 without any cell; download 1.2 s, read+sample 1.2 s
-[  100.1s]   USGS_1m_x76y199_PR_PRVI_C_2018.tif: 187 points, 1 accepted, 186 without any cell; download 1.1 s, read+sample 0.3 s
-[  100.5s]   USGS_1m_x82y199_PR_PRVI_H_2018.tif: 484 points, 484 accepted, 0 without any cell; download 1.0 s, read+sample 0.0 s
-[  100.7s]   USGS_1M_19_x68y200_PR_PuertoRicoUSVI_D24.tif: 77 points, 77 accepted, 0 without any cell; download 0.9 s, read+sample 0.0 s
-[  101.3s] shard 6 done in 101.3 s, ok = True
-[    0.0s] lidar shard run 38112643363 sha 4267c9cff33b3294940307b8c6982ceea05ba357
-[    1.3s] shard 7: 40 tiles, 9.0 GB, 572847 point lookups
-[   19.5s]   USGS_1M_19_x80y204_PR_PuertoRicoUSVI_D24.tif: 78525 points, 78525 accepted, 0 without any cell; download 15.2 s, read+sample 2.9 s
-[   19.5s]   USGS_1M_19_x78y204_PR_PuertoRicoUSVI_D24.tif: 26341 points, 26341 accepted, 0 without any cell; download 14.6 s, read+sample 2.8 s
-[   19.5s]   USGS_1M_20_x19y201_PR_PuertoRicoUSVI_D24.tif: 17894 points, 17894 accepted, 0 without any cell; download 14.9 s, read+sample 2.2 s
-[   33.2s]   USGS_1M_20_x15y200_PR_PuertoRicoUSVI_D24.tif: 12012 points, 12012 accepted, 0 without any cell; download 12.2 s, read+sample 2.4 s
-[   33.3s]   USGS_1m_x76y203_PR_PRVI_D_2018.tif: 8155 points, 8155 accepted, 0 without any cell; download 12.3 s, read+sample 2.1 s
-[   34.6s]   USGS_1M_19_x82y201_PR_PuertoRicoUSVI_D24.tif: 12215 points, 12215 accepted, 0 without any cell; download 12.7 s, read+sample 2.4 s
-[   49.0s]   USGS_1M_19_x71y202_PR_PuertoRicoUSVI_D24.tif: 6279 points, 6279 accepted, 0 without any cell; download 13.4 s, read+sample 2.4 s
-[   49.0s]   USGS_1M_20_x18y201_PR_PuertoRicoUSVI_D24.tif: 9487 points, 9487 accepted, 0 without any cell; download 12.5 s, read+sample 2.1 s
-[   49.3s]   USGS_1M_20_x14y201_PR_PuertoRicoUSVI_D24.tif: 13039 points, 13039 accepted, 0 without any cell; download 12.1 s, read+sample 2.5 s
-[   61.8s]   USGS_1m_x18y202_PR_PRVI_H_2018.tif: 34678 points, 33159 accepted, 1497 without any cell; download 11.6 s, read+sample 2.2 s
-[   64.5s]   USGS_1m_x79y202_PR_PRVI_H_2018.tif: 14216 points, 14210 accepted, 6 without any cell; download 13.3 s, read+sample 2.1 s
-[   65.1s]   USGS_1M_19_x76y202_PR_PuertoRicoUSVI_D24.tif: 3275 points, 3275 accepted, 0 without any cell; download 13.5 s, read+sample 2.3 s
-[   75.9s]   USGS_1M_19_x73y202_PR_PuertoRicoUSVI_D24.tif: 5690 points, 5690 accepted, 0 without any cell; download 11.8 s, read+sample 2.2 s
-[   78.3s]   USGS_1M_19_x80y201_PR_PuertoRicoUSVI_D24.tif: 18898 points, 18898 accepted, 0 without any cell; download 11.6 s, read+sample 2.1 s
-[   78.3s]   USGS_1m_x19y200_PR_PRVI_H_2018.tif: 13220 points, 13220 accepted, 0 without any cell; download 11.1 s, read+sample 2.1 s
-[   89.6s]   USGS_1M_20_x14y205_PR_PuertoRicoUSVI_D24.tif: 21974 points, 21974 accepted, 0 without any cell; download 11.8 s, read+sample 1.8 s
-[   91.6s]   USGS_1m_x73y202_PR_PRVI_A_2018.tif: 5690 points, 5045 accepted, 643 without any cell; download 11.3 s, read+sample 2.0 s
-[   91.6s]   USGS_1m_x80y201_PR_PRVI_H_2018.tif: 18898 points, 11629 accepted, 7240 without any cell; download 10.3 s, read+sample 2.1 s
-[  100.6s]   USGS_1m_x75y201_PR_PRVI_A_2018.tif: 4450 points, 3285 accepted, 1165 without any cell; download 9.1 s, read+sample 1.9 s
-[  101.0s]   USGS_1m_x17y204_PR_PRVI_G_2018.tif: 90981 points, 59349 accepted, 31607 without any cell; download 7.9 s, read+sample 2.4 s
-[  101.7s]   USGS_1m_x76y204_PR_PRVI_F_2018.tif: 15386 points, 10161 accepted, 5224 without any cell; download 7.9 s, read+sample 2.1 s
-[  108.1s]   USGS_1m_x72y202_PR_PRVI_D_2018.tif: 4582 points, 2026 accepted, 2556 without any cell; download 5.5 s, read+sample 2.0 s
-[  108.1s]   USGS_1m_x69y205_PR_PRVI_F_2018.tif: 17606 points, 17605 accepted, 1 without any cell; download 5.2 s, read+sample 1.1 s
-[  108.1s]   USGS_1m_x76y205_PR_PRVI_F_2018.tif: 8971 points, 7546 accepted, 1425 without any cell; download 5.1 s, read+sample 1.2 s
-[  113.5s]   USGS_1m_x76y201_PR_PRVI_D_2018.tif: 14759 points, 4137 accepted, 10619 without any cell; download 4.4 s, read+sample 1.8 s
-[  113.5s]   USGS_1m_x85y204_PR_PRVI_H_2018.tif: 9462 points, 9437 accepted, 25 without any cell; download 4.0 s, read+sample 1.1 s
-[  113.6s]   USGS_1M_19_x80y205_PR_PuertoRicoUSVI_D24.tif: 17842 points, 17838 accepted, 4 without any cell; download 4.3 s, read+sample 1.2 s
-[  118.4s]   USGS_1m_x14y201_PR_PRVI_A_2018.tif: 13039 points, 4091 accepted, 8941 without any cell; download 3.6 s, read+sample 1.7 s
-[  118.4s]   USGS_1m_x61y201_PR_PRVI_A_2018.tif: 17 points, 17 accepted, 0 without any cell; download 3.5 s, read+sample 0.2 s
-[  118.5s]   USGS_1m_x73y202_PR_PRVI_D_2018.tif: 5690 points, 645 accepted, 5043 without any cell; download 3.1 s, read+sample 1.7 s
-[  122.1s]   USGS_1m_x79y203_PR_PRVI_H_2018.tif: 19980 points, 2817 accepted, 17162 without any cell; download 3.1 s, read+sample 1.7 s
-[  122.1s]   USGS_1m_x22y202_PR_PRVI_H_2018.tif: 921 points, 880 accepted, 41 without any cell; download 2.9 s, read+sample 0.6 s
-[  122.1s]   USGS_1M_19_x73y199_PR_PuertoRicoUSVI_D24.tif: 117 points, 107 accepted, 9 without any cell; download 2.3 s, read+sample 0.3 s
-[  123.7s]   USGS_1m_x17y199_PR_PRVI_A_2018.tif: 5650 points, 2880 accepted, 2762 without any cell; download 2.2 s, read+sample 0.4 s
-[  124.2s]   USGS_1m_x17y199_PR_PRVI_H_2018.tif: 5650 points, 2771 accepted, 2871 without any cell; download 1.9 s, read+sample 0.4 s
-[  124.3s]   USGS_1m_x81y199_PR_PRVI_H_2018.tif: 3687 points, 2150 accepted, 1530 without any cell; download 1.8 s, read+sample 0.4 s
-[  127.0s]   USGS_1m_x70y203_PR_PRVI_D_2018.tif: 8713 points, 312 accepted, 8400 without any cell; download 1.6 s, read+sample 1.7 s
-[  127.0s]   USGS_1M_19_x86y204_PR_PuertoRicoUSVI_D24.tif: 24 points, 24 accepted, 0 without any cell; download 1.7 s, read+sample 0.2 s
-[  127.0s]   USGS_1m_x14y199_PR_PRVI_H_2018.tif: 1700 points, 86 accepted, 1614 without any cell; download 1.7 s, read+sample 0.4 s
-[  127.8s]   USGS_1m_x19y205_PR_PRVI_H_2018.tif: 3134 points, 20 accepted, 3112 without any cell; download 1.2 s, read+sample 0.4 s
-[  128.2s] shard 7 done in 128.2 s, ok = True
-[    0.0s] lidar shard run 38112643363 sha 4267c9cff33b3294940307b8c6982ceea05ba357
-[    0.8s] shard 8: 40 tiles, 9.0 GB, 519981 point lookups
-[   14.8s]   USGS_1m_x83y201_PR_PRVI_H_2018.tif: 23547 points, 23547 accepted, 0 without any cell; download 11.6 s, read+sample 2.4 s
-[   14.8s]   USGS_1m_x70y201_PR_PRVI_A_2018.tif: 15744 points, 15744 accepted, 0 without any cell; download 11.2 s, read+sample 1.8 s
-[   14.8s]   USGS_1M_19_x74y204_PR_PuertoRicoUSVI_D24.tif: 9372 points, 9372 accepted, 0 without any cell; download 11.5 s, read+sample 2.4 s
-[   27.9s]   USGS_1M_19_x77y200_PR_PuertoRicoUSVI_D24.tif: 12077 points, 12077 accepted, 0 without any cell; download 12.3 s, read+sample 1.7 s
-[   27.9s]   USGS_1M_19_x81y200_PR_PuertoRicoUSVI_D24.tif: 16280 points, 16280 accepted, 0 without any cell; download 10.8 s, read+sample 1.8 s
-[   29.2s]   USGS_1M_19_x76y203_PR_PuertoRicoUSVI_D24.tif: 8155 points, 8155 accepted, 0 without any cell; download 12.5 s, read+sample 1.9 s
-[   41.8s]   USGS_1m_x13y203_PR_PRVI_D_2018.tif: 9614 points, 9614 accepted, 0 without any cell; download 12.5 s, read+sample 1.8 s
-[   41.8s]   USGS_1M_19_x71y204_PR_PuertoRicoUSVI_D24.tif: 10125 points, 10125 accepted, 0 without any cell; download 10.6 s, read+sample 1.8 s
-[   43.2s]   USGS_1m_x80y200_PR_PRVI_H_2018.tif: 11306 points, 11294 accepted, 9 without any cell; download 12.0 s, read+sample 1.9 s
-[   52.5s]   USGS_1m_x78y204_PR_PRVI_G_2018.tif: 26341 points, 22517 accepted, 3819 without any cell; download 10.3 s, read+sample 1.9 s
-[   54.1s]   USGS_1m_x79y204_PR_PRVI_G_2018.tif: 77628 points, 72203 accepted, 5418 without any cell; download 10.4 s, read+sample 1.9 s
-[   55.4s]   USGS_1m_x13y202_PR_PRVI_D_2018.tif: 6666 points, 6666 accepted, 0 without any cell; download 10.4 s, read+sample 1.9 s
-[   66.2s]   USGS_1M_20_x15y202_PR_PuertoRicoUSVI_D24.tif: 15596 points, 15596 accepted, 0 without any cell; download 11.8 s, read+sample 1.8 s
-[   66.2s]   USGS_1M_20_x16y201_PR_PuertoRicoUSVI_D24.tif: 22292 points, 22292 accepted, 0 without any cell; download 9.9 s, read+sample 1.8 s
-[   67.7s]   USGS_1m_x14y204_PR_PRVI_G_2018.tif: 19221 points, 13089 accepted, 6130 without any cell; download 10.5 s, read+sample 1.7 s
-[   76.9s]   USGS_1m_x72y204_PR_PRVI_F_2018.tif: 10679 points, 8306 accepted, 2368 without any cell; download 9.4 s, read+sample 1.7 s
-[   77.6s]   USGS_1m_x15y203_PR_PRVI_D_2018.tif: 19109 points, 14272 accepted, 4836 without any cell; download 9.7 s, read+sample 1.6 s
-[   78.5s]   USGS_1M_19_x69y202_PR_PuertoRicoUSVI_D24.tif: 26835 points, 26835 accepted, 0 without any cell; download 9.3 s, read+sample 1.4 s
-[   85.9s]   USGS_1m_x20y201_PR_PRVI_H_2018.tif: 16807 points, 16807 accepted, 0 without any cell; download 7.5 s, read+sample 1.4 s
-[   87.1s]   USGS_1M_20_x24y201_PR_PuertoRicoUSVI_D24.tif: 5633 points, 5633 accepted, 0 without any cell; download 8.6 s, read+sample 0.9 s
-[   87.1s]   USGS_1m_x72y205_PR_PRVI_F_2018.tif: 18406 points, 18406 accepted, 0 without any cell; download 6.6 s, read+sample 1.1 s
-[   92.1s]   USGS_1m_x71y202_PR_PRVI_A_2018.tif: 6279 points, 2891 accepted, 3386 without any cell; download 4.5 s, read+sample 1.6 s
-[   92.1s]   USGS_1M_19_x79y205_PR_PuertoRicoUSVI_D24.tif: 18708 points, 18708 accepted, 0 without any cell; download 4.3 s, read+sample 1.0 s
-[   92.1s]   USGS_1M_20_x16y199_PR_PuertoRicoUSVI_D24.tif: 7131 points, 7131 accepted, 0 without any cell; download 3.9 s, read+sample 0.9 s
-[   96.8s]   USGS_1m_x13y204_PR_PRVI_D_2018.tif: 14350 points, 5292 accepted, 9058 without any cell; download 3.9 s, read+sample 1.4 s
-[   97.6s]   USGS_1M_20_x15y199_PR_PuertoRicoUSVI_D24.tif: 4756 points, 4756 accepted, 0 without any cell; download 4.7 s, read+sample 0.9 s
-[   97.6s]   USGS_1m_x70y199_PR_PRVI_A_2018.tif: 2221 points, 2221 accepted, 0 without any cell; download 3.2 s, read+sample 0.5 s
-[  100.7s]   USGS_1m_x13y205_PR_PRVI_F_2018.tif: 24854 points, 11326 accepted, 13527 without any cell; download 3.7 s, read+sample 1.1 s
-[  100.9s]   USGS_1m_x17y203_PR_PRVI_H_2018.tif: 29615 points, 10744 accepted, 18870 without any cell; download 2.6 s, read+sample 1.5 s
-[  101.2s]   USGS_1M_19_x78y199_PR_PuertoRicoUSVI_D24.tif: 5909 points, 5909 accepted, 0 without any cell; download 2.8 s, read+sample 0.8 s
-[  103.7s]   USGS_1M_20_x19y205_PR_PuertoRicoUSVI_D24.tif: 3134 points, 3134 accepted, 0 without any cell; download 2.5 s, read+sample 0.5 s
-[  103.7s]   USGS_1M_20_x17y199_PR_PuertoRicoUSVI_D24.tif: 5650 points, 5650 accepted, 0 without any cell; download 2.1 s, read+sample 0.4 s
-[  103.7s]   USGS_1m_x22y204_PR_PRVI_H_2018.tif: 1658 points, 1634 accepted, 24 without any cell; download 1.7 s, read+sample 0.7 s
-[  105.6s]   USGS_1M_19_x81y199_PR_PuertoRicoUSVI_D24.tif: 3687 points, 3687 accepted, 0 without any cell; download 1.7 s, read+sample 0.4 s
-[  105.6s]   USGS_1M_19_x84y201_PR_PuertoRicoUSVI_D24.tif: 468 points, 468 accepted, 0 without any cell; download 1.4 s, read+sample 0.2 s
-[  105.6s]   USGS_1M_20_x20y200_PR_PuertoRicoUSVI_D24.tif: 555 points, 555 accepted, 0 without any cell; download 1.4 s, read+sample 0.3 s
-[  106.7s]   USGS_1M_19_x68y199_PR_PuertoRicoUSVI_D24.tif: 2034 points, 2034 accepted, 0 without any cell; download 1.3 s, read+sample 0.1 s
-[  106.9s]   USGS_1m_x22y203_PR_PRVI_A_2018.tif: 7181 points, 24 accepted, 7157 without any cell; download 1.0 s, read+sample 0.5 s
-[  106.9s]   USGS_1m_x21y201_PR_PRVI_H_2018.tif: 15 points, 15 accepted, 0 without any cell; download 1.1 s, read+sample 0.0 s
-[  107.6s]   USGS_1M_20_x20y205_PR_PuertoRicoUSVI_D24.tif: 343 points, 343 accepted, 0 without any cell; download 0.9 s, read+sample 0.0 s
-[  107.9s] shard 8 done in 107.9 s, ok = True
-[    0.0s] lidar shard run 38112643363 sha 4267c9cff33b3294940307b8c6982ceea05ba357
-[    0.7s] shard 9: 40 tiles, 9.0 GB, 719725 point lookups
-[   13.1s]   USGS_1M_20_x20y202_PR_PuertoRicoUSVI_D24.tif: 15020 points, 15020 accepted, 0 without any cell; download 10.5 s, read+sample 1.8 s
-[   13.8s]   USGS_1M_19_x70y203_PR_PuertoRicoUSVI_D24.tif: 8713 points, 8713 accepted, 0 without any cell; download 10.7 s, read+sample 2.2 s
-[   13.8s]   USGS_1M_19_x72y200_PR_PuertoRicoUSVI_D24.tif: 23707 points, 23707 accepted, 0 without any cell; download 10.1 s, read+sample 2.3 s
-[   25.3s]   USGS_1m_x81y200_PR_PRVI_H_2018.tif: 16280 points, 16280 accepted, 0 without any cell; download 10.1 s, read+sample 2.1 s
-[   25.3s]   USGS_1m_x82y201_PR_PRVI_H_2018.tif: 12215 points, 12215 accepted, 0 without any cell; download 10.1 s, read+sample 1.7 s
-[   26.0s]   USGS_1M_20_x19y202_PR_PuertoRicoUSVI_D24.tif: 33191 points, 33191 accepted, 0 without any cell; download 10.0 s, read+sample 2.2 s
-[   37.0s]   USGS_1M_20_x13y203_PR_PuertoRicoUSVI_D24.tif: 9614 points, 9614 accepted, 0 without any cell; download 10.1 s, read+sample 1.8 s
-[   38.8s]   USGS_1m_x81y202_PR_PRVI_H_2018.tif: 42429 points, 42265 accepted, 162 without any cell; download 11.4 s, read+sample 2.0 s
-[   38.8s]   USGS_1M_19_x73y200_PR_PuertoRicoUSVI_D24.tif: 14684 points, 14679 accepted, 5 without any cell; download 9.3 s, read+sample 1.9 s
-[   48.4s]   USGS_1M_19_x75y201_PR_PuertoRicoUSVI_D24.tif: 4450 points, 4450 accepted, 0 without any cell; download 9.6 s, read+sample 1.8 s
-[   49.2s]   USGS_1m_x73y201_PR_PRVI_A_2018.tif: 3465 points, 3465 accepted, 0 without any cell; download 10.0 s, read+sample 1.9 s
-[   50.5s]   USGS_1m_x77y203_PR_PRVI_D_2018.tif: 14500 points, 14218 accepted, 282 without any cell; download 9.8 s, read+sample 1.9 s
-[   59.1s]   USGS_1M_20_x16y202_PR_PuertoRicoUSVI_D24.tif: 19920 points, 19920 accepted, 0 without any cell; download 8.8 s, read+sample 1.9 s
-[   61.0s]   USGS_1M_20_x15y201_PR_PuertoRicoUSVI_D24.tif: 15181 points, 15181 accepted, 0 without any cell; download 9.8 s, read+sample 1.9 s
-[   61.0s]   USGS_1M_20_x19y200_PR_PuertoRicoUSVI_D24.tif: 13220 points, 13220 accepted, 0 without any cell; download 7.9 s, read+sample 1.7 s
-[   69.6s]   USGS_1m_x14y205_PR_PRVI_G_2018.tif: 21974 points, 21974 accepted, 0 without any cell; download 8.8 s, read+sample 1.6 s
-[   69.6s]   USGS_1m_x16y203_PR_PRVI_D_2018.tif: 18955 points, 16032 accepted, 2919 without any cell; download 6.9 s, read+sample 1.8 s
-[   69.6s]   USGS_1M_19_x77y205_PR_PuertoRicoUSVI_D24.tif: 21053 points, 21053 accepted, 0 without any cell; download 6.6 s, read+sample 1.6 s
-[   77.5s]   USGS_1m_x81y204_PR_PRVI_G_2018.tif: 89652 points, 53371 accepted, 36250 without any cell; download 6.6 s, read+sample 2.0 s
-[   77.6s]   USGS_1m_x21y202_PR_PRVI_H_2018.tif: 9593 points, 8761 accepted, 827 without any cell; download 6.4 s, read+sample 1.7 s
-[   77.6s]   USGS_1M_19_x78y205_PR_PuertoRicoUSVI_D24.tif: 20156 points, 20156 accepted, 0 without any cell; download 6.0 s, read+sample 1.0 s
-[   81.2s]   USGS_1m_x19y204_PR_PRVI_G_2018.tif: 34769 points, 21033 accepted, 13726 without any cell; download 2.8 s, read+sample 1.7 s
-[   81.2s]   USGS_1M_20_x16y205_PR_PuertoRicoUSVI_D24.tif: 25187 points, 25187 accepted, 0 without any cell; download 2.6 s, read+sample 1.2 s
-[   81.7s]   USGS_1m_x83y200_PR_PRVI_H_2018.tif: 6716 points, 6716 accepted, 0 without any cell; download 3.1 s, read+sample 1.1 s
-[   85.0s]   USGS_1m_x75y204_PR_PRVI_D_2018.tif: 16383 points, 5037 accepted, 11344 without any cell; download 2.1 s, read+sample 1.7 s
-[   85.0s]   USGS_1m_x68y203_PR_PRVI_E_2018.tif: 7781 points, 7781 accepted, 0 without any cell; download 2.2 s, read+sample 0.7 s
-[   85.4s]   USGS_1m_x18y204_PR_PRVI_E_2018.tif: 70585 points, 23888 accepted, 46670 without any cell; download 2.0 s, read+sample 1.7 s
-[   87.1s]   USGS_1M_19_x81y205_PR_PuertoRicoUSVI_D24.tif: 22732 points, 22731 accepted, 1 without any cell; download 2.3 s, read+sample 0.6 s
-[   87.1s]   USGS_1m_x25y201_PR_PRVI_C_2018.tif: 23 points, 23 accepted, 0 without any cell; download 1.7 s, read+sample 0.1 s
-[   87.4s]   USGS_1M_19_x61y200_PR_PuertoRicoUSVI_D24.tif: 12 points, 12 accepted, 0 without any cell; download 1.7 s, read+sample 0.3 s
-[   89.9s]   USGS_1m_x14y204_PR_PRVI_D_2018.tif: 19221 points, 6132 accepted, 13085 without any cell; download 1.6 s, read+sample 1.5 s
-[   90.0s]   USGS_1m_x18y204_PR_PRVI_D_2018.tif: 70585 points, 3530 accepted, 67050 without any cell; download 1.3 s, read+sample 1.5 s
-[   90.0s]   USGS_1m_x73y199_PR_PRVI_A_2018.tif: 117 points, 110 accepted, 7 without any cell; download 1.2 s, read+sample 0.3 s
-[   90.2s]   USGS_1M_20_x22y201_PR_PuertoRicoUSVI_D24.tif: 4 points, 4 accepted, 0 without any cell; download 1.0 s, read+sample 0.2 s
-[   92.4s]   USGS_1m_x74y202_PR_PRVI_A_2018.tif: 6736 points, 1025 accepted, 5711 without any cell; download 1.0 s, read+sample 1.5 s
-[   92.4s]   USGS_1m_x68y204_PR_PRVI_F_2018.tif: 4372 points, 897 accepted, 3473 without any cell; download 0.9 s, read+sample 0.4 s
-[   92.4s]   USGS_1m_x83y205_PR_PRVI_H_2018.tif: 5588 points, 2183 accepted, 3398 without any cell; download 0.8 s, read+sample 0.2 s
-[   92.4s]   USGS_1m_x22y202_PR_PRVI_A_2018.tif: 921 points, 0 accepted, 921 without any cell; download 0.8 s, read+sample 0.4 s
-[   92.4s]   USGS_1m_x21y201_PR_PRVI_A_2018.tif: 15 points, 15 accepted, 0 without any cell; download 0.7 s, read+sample 0.0 s
-[   92.8s]   USGS_1M_19_x86y202_PR_PuertoRicoUSVI_D24.tif: 6 points, 6 accepted, 0 without any cell; download 0.7 s, read+sample 0.0 s
-[   93.1s] shard 9 done in 93.1 s, ok = True
-[    0.0s] lidar shard run 38112643363 sha 4267c9cff33b3294940307b8c6982ceea05ba357
-[    1.3s] shard 10: 40 tiles, 9.0 GB, 699596 point lookups
-[   18.2s]   USGS_1M_19_x75y200_PR_PuertoRicoUSVI_D24.tif: 42609 points, 42609 accepted, 0 without any cell; download 14.6 s, read+sample 2.3 s
-[   18.7s]   USGS_1M_19_x69y203_PR_PuertoRicoUSVI_D24.tif: 21480 points, 21480 accepted, 0 without any cell; download 14.5 s, read+sample 2.8 s
-[   19.0s]   USGS_1m_x72y200_PR_PRVI_A_2018.tif: 23707 points, 23707 accepted, 0 without any cell; download 14.7 s, read+sample 2.9 s
-[   32.8s]   USGS_1m_x77y200_PR_PRVI_A_2018.tif: 12077 points, 12077 accepted, 0 without any cell; download 12.4 s, read+sample 2.1 s
-[   35.2s]   USGS_1M_19_x78y200_PR_PuertoRicoUSVI_D24.tif: 6567 points, 6567 accepted, 0 without any cell; download 14.3 s, read+sample 2.1 s
-[   35.2s]   USGS_1M_19_x82y203_PR_PuertoRicoUSVI_D24.tif: 21211 points, 21211 accepted, 0 without any cell; download 13.8 s, read+sample 2.2 s
-[   48.9s]   USGS_1m_x73y203_PR_PRVI_D_2018.tif: 6837 points, 6837 accepted, 0 without any cell; download 14.0 s, read+sample 2.1 s
-[   51.0s]   USGS_1M_20_x19y203_PR_PuertoRicoUSVI_D24.tif: 13716 points, 13716 accepted, 0 without any cell; download 13.6 s, read+sample 2.2 s
-[   51.0s]   USGS_1M_19_x71y201_PR_PuertoRicoUSVI_D24.tif: 9120 points, 9120 accepted, 0 without any cell; download 11.6 s, read+sample 2.2 s
-[   64.9s]   USGS_1M_20_x14y203_PR_PuertoRicoUSVI_D24.tif: 13728 points, 13728 accepted, 0 without any cell; download 14.0 s, read+sample 2.0 s
-[   64.9s]   USGS_1m_x80y202_PR_PRVI_H_2018.tif: 24728 points, 24728 accepted, 0 without any cell; download 11.2 s, read+sample 2.1 s
-[   65.2s]   USGS_1m_x75y202_PR_PRVI_D_2018.tif: 9032 points, 9032 accepted, 0 without any cell; download 12.0 s, read+sample 2.1 s
-[   77.8s]   USGS_1M_19_x78y201_PR_PuertoRicoUSVI_D24.tif: 15600 points, 15600 accepted, 0 without any cell; download 13.1 s, read+sample 2.1 s
-[   78.9s]   USGS_1m_x15y201_PR_PRVI_H_2018.tif: 15181 points, 15081 accepted, 96 without any cell; download 11.8 s, read+sample 2.2 s
-[   79.8s]   USGS_1m_x15y204_PR_PRVI_G_2018.tif: 32839 points, 27505 accepted, 5330 without any cell; download 12.3 s, read+sample 2.2 s
-[   90.8s]   USGS_1m_x16y204_PR_PRVI_G_2018.tif: 86285 points, 76641 accepted, 9630 without any cell; download 10.9 s, read+sample 2.1 s
-[   90.8s]   USGS_1m_x70y204_PR_PRVI_F_2018.tif: 15477 points, 9790 accepted, 5684 without any cell; download 9.3 s, read+sample 2.1 s
-[   91.9s]   USGS_1M_20_x13y205_PR_PuertoRicoUSVI_D24.tif: 24854 points, 24854 accepted, 0 without any cell; download 10.2 s, read+sample 1.8 s
-[  101.0s]   USGS_1M_20_x20y201_PR_PuertoRicoUSVI_D24.tif: 16807 points, 16807 accepted, 0 without any cell; download 8.9 s, read+sample 1.6 s
-[  120.6s]   USGS_1m_x21y203_PR_PRVI_H_2018.tif: 13703 points, 11339 accepted, 2357 without any cell; download 27.9 s, read+sample 1.9 s
-[  120.6s]   USGS_1m_x70y202_PR_PRVI_E_2018.tif: 9189 points, 4846 accepted, 4342 without any cell; download 16.2 s, read+sample 1.9 s
-[  120.6s]   USGS_1M_19_x76y205_PR_PuertoRicoUSVI_D24.tif: 8971 points, 8971 accepted, 0 without any cell; download 5.5 s, read+sample 1.1 s
-[  120.6s]   USGS_1m_x19y203_PR_PRVI_H_2018.tif: 13716 points, 5132 accepted, 8580 without any cell; download 5.3 s, read+sample 1.8 s
-[  120.6s]   USGS_1m_x69y202_PR_PRVI_E_2018.tif: 26835 points, 9781 accepted, 17050 without any cell; download 4.9 s, read+sample 1.6 s
-[  120.6s]   USGS_1m_x79y199_PR_PRVI_A_2018.tif: 7239 points, 3999 accepted, 3237 without any cell; download 4.1 s, read+sample 1.3 s
-[  121.8s]   USGS_1m_x15y199_PR_PRVI_A_2018.tif: 4756 points, 4036 accepted, 718 without any cell; download 4.2 s, read+sample 1.2 s
-[  124.8s]   USGS_1m_x77y199_PR_PRVI_A_2018.tif: 5837 points, 5837 accepted, 0 without any cell; download 3.9 s, read+sample 0.7 s
-[  126.3s]   USGS_1m_x17y204_PR_PRVI_E_2018.tif: 90981 points, 24404 accepted, 66553 without any cell; download 3.7 s, read+sample 1.9 s
-[  126.3s]   USGS_1M_20_x25y201_PR_PuertoRicoUSVI_D24.tif: 23 points, 23 accepted, 0 without any cell; download 3.3 s, read+sample 0.1 s
-[  128.6s]   USGS_1M_19_x68y204_PR_PuertoRicoUSVI_D24.tif: 4372 points, 4372 accepted, 0 without any cell; download 3.1 s, read+sample 0.6 s
-[  128.9s]   USGS_1M_19_x75y199_PR_PuertoRicoUSVI_D24.tif: 3032 points, 3032 accepted, 0 without any cell; download 3.3 s, read+sample 0.4 s
-[  130.8s]   USGS_1m_x78y203_PR_PRVI_H_2018.tif: 18692 points, 2793 accepted, 15896 without any cell; download 2.8 s, read+sample 1.7 s
-[  131.1s]   USGS_1m_x26y203_PR_PRVI_C_2018.tif: 271 points, 271 accepted, 0 without any cell; download 2.1 s, read+sample 0.4 s
-[  132.7s]   USGS_1m_x19y204_PR_PRVI_D_2018.tif: 34769 points, 1845 accepted, 32923 without any cell; download 2.1 s, read+sample 1.7 s
-[  134.6s]   USGS_1m_x83y204_PR_PRVI_G_2018.tif: 25453 points, 4783 accepted, 20665 without any cell; download 2.1 s, read+sample 1.6 s
-[  134.6s]   USGS_1m_x80y205_PR_PRVI_G_2018.tif: 17842 points, 1288 accepted, 16551 without any cell; download 1.9 s, read+sample 0.8 s
-[  134.6s]   USGS_1m_x68y199_PR_PRVI_A_2018.tif: 2034 points, 2034 accepted, 0 without any cell; download 1.7 s, read+sample 0.1 s
-[  135.3s]   USGS_1m_x76y198_PR_PRVI_C_2018.tif: 5 points, 5 accepted, 0 without any cell; download 1.5 s, read+sample 0.0 s
-[  135.9s]   USGS_1m_x86y202_PR_PRVI_H_2018.tif: 6 points, 6 accepted, 0 without any cell; download 1.4 s, read+sample 0.0 s
-[  135.9s]   USGS_1M_20_x21y201_PR_PuertoRicoUSVI_D24.tif: 15 points, 15 accepted, 0 without any cell; download 1.2 s, read+sample 0.0 s
-[  136.3s] shard 10 done in 136.3 s, ok = True
-[    0.0s] lidar shard run 38112643363 sha 4267c9cff33b3294940307b8c6982ceea05ba357
-[    1.3s] shard 11: 40 tiles, 9.0 GB, 696431 point lookups
-[   13.8s]   USGS_1M_19_x83y201_PR_PuertoRicoUSVI_D24.tif: 23547 points, 23547 accepted, 0 without any cell; download 10.3 s, read+sample 2.2 s
-[   14.7s]   USGS_1M_19_x79y204_PR_PuertoRicoUSVI_D24.tif: 77628 points, 77628 accepted, 0 without any cell; download 10.4 s, read+sample 2.8 s
-[   14.7s]   USGS_1M_20_x15y204_PR_PuertoRicoUSVI_D24.tif: 32839 points, 32839 accepted, 0 without any cell; download 10.3 s, read+sample 2.8 s
-[   29.6s]   USGS_1m_x18y200_PR_PRVI_H_2018.tif: 10004 points, 10004 accepted, 0 without any cell; download 13.6 s, read+sample 2.2 s
-[   29.6s]   USGS_1M_19_x76y200_PR_PuertoRicoUSVI_D24.tif: 23340 points, 23340 accepted, 0 without any cell; download 10.8 s, read+sample 2.2 s
-[   29.6s]   USGS_1M_19_x71y203_PR_PuertoRicoUSVI_D24.tif: 15347 points, 15347 accepted, 0 without any cell; download 11.7 s, read+sample 2.2 s
-[   40.9s]   USGS_1M_19_x75y204_PR_PuertoRicoUSVI_D24.tif: 16383 points, 16383 accepted, 0 without any cell; download 11.2 s, read+sample 2.2 s
-[   40.9s]   USGS_1m_x16y200_PR_PRVI_H_2018.tif: 5192 points, 5187 accepted, 3 without any cell; download 9.6 s, read+sample 2.1 s
-[   43.1s]   USGS_1m_x17y202_PR_PRVI_H_2018.tif: 36176 points, 36175 accepted, 1 without any cell; download 11.2 s, read+sample 2.2 s
-[   53.6s]   USGS_1M_19_x74y202_PR_PuertoRicoUSVI_D24.tif: 6736 points, 6736 accepted, 0 without any cell; download 11.1 s, read+sample 2.1 s
-[   53.6s]   USGS_1m_x76y202_PR_PRVI_D_2018.tif: 3275 points, 3275 accepted, 0 without any cell; download 9.8 s, read+sample 2.3 s
-[   55.2s]   USGS_1m_x69y200_PR_PRVI_A_2018.tif: 16334 points, 16334 accepted, 0 without any cell; download 9.9 s, read+sample 2.2 s
-[   65.2s]   USGS_1M_20_x17y201_PR_PuertoRicoUSVI_D24.tif: 8253 points, 8253 accepted, 0 without any cell; download 10.0 s, read+sample 2.1 s
-[   65.7s]   USGS_1m_x83y202_PR_PRVI_H_2018.tif: 24674 points, 21272 accepted, 3392 without any cell; download 9.8 s, read+sample 2.2 s
-[   67.3s]   USGS_1m_x79y201_PR_PRVI_H_2018.tif: 16385 points, 14755 accepted, 1620 without any cell; download 9.8 s, read+sample 2.3 s
-[   75.9s]   USGS_1m_x78y203_PR_PRVI_D_2018.tif: 18692 points, 15899 accepted, 2793 without any cell; download 8.4 s, read+sample 2.2 s
-[   76.5s]   USGS_1M_20_x21y202_PR_PuertoRicoUSVI_D24.tif: 9593 points, 9593 accepted, 0 without any cell; download 8.9 s, read+sample 1.8 s
-[   77.4s]   USGS_1m_x74y204_PR_PRVI_F_2018.tif: 9372 points, 8820 accepted, 552 without any cell; download 7.9 s, read+sample 2.2 s
-[   85.5s]   USGS_1m_x18y204_PR_PRVI_G_2018.tif: 70585 points, 43170 accepted, 27386 without any cell; download 7.2 s, read+sample 2.3 s
-[   85.5s]   USGS_1m_x71y205_PR_PRVI_F_2018.tif: 17077 points, 17077 accepted, 0 without any cell; download 7.4 s, read+sample 1.5 s
-[   85.6s]   USGS_1m_x78y205_PR_PRVI_G_2018.tif: 20156 points, 20156 accepted, 0 without any cell; download 6.6 s, read+sample 1.6 s
-[   91.1s]   USGS_1m_x72y202_PR_PRVI_A_2018.tif: 4582 points, 2556 accepted, 2026 without any cell; download 3.7 s, read+sample 2.0 s
-[   91.1s]   USGS_1m_x71y199_PR_PRVI_A_2018.tif: 3660 points, 3660 accepted, 0 without any cell; download 4.1 s, read+sample 1.3 s
-[   91.1s]   USGS_1M_19_x72y199_PR_PuertoRicoUSVI_D24.tif: 3993 points, 3993 accepted, 0 without any cell; download 3.6 s, read+sample 0.9 s
-[   95.0s]   USGS_1m_x74y204_PR_PRVI_D_2018.tif: 9372 points, 552 accepted, 8819 without any cell; download 3.0 s, read+sample 1.7 s
-[   95.7s]   USGS_1m_x82y204_PR_PRVI_E_2018.tif: 38965 points, 6270 accepted, 32685 without any cell; download 2.7 s, read+sample 2.0 s
-[   95.7s]   USGS_1M_19_x82y205_PR_PuertoRicoUSVI_D24.tif: 1958 points, 1958 accepted, 0 without any cell; download 2.9 s, read+sample 0.9 s
-[   99.6s]   USGS_1m_x19y204_PR_PRVI_E_2018.tif: 34769 points, 1771 accepted, 32987 without any cell; download 2.6 s, read+sample 2.0 s
-[   99.6s]   USGS_1m_x16y203_PR_PRVI_H_2018.tif: 18955 points, 2923 accepted, 16030 without any cell; download 2.4 s, read+sample 1.6 s
-[   99.8s]   USGS_1m_x80y203_PR_PRVI_H_2018.tif: 23007 points, 4877 accepted, 18129 without any cell; download 2.1 s, read+sample 2.0 s
-[  103.1s]   USGS_1m_x82y203_PR_PRVI_H_2018.tif: 21211 points, 6000 accepted, 15202 without any cell; download 2.1 s, read+sample 1.9 s
-[  103.1s]   USGS_1m_x72y204_PR_PRVI_D_2018.tif: 10679 points, 2373 accepted, 8298 without any cell; download 1.8 s, read+sample 1.6 s
-[  103.8s]   USGS_1m_x71y204_PR_PRVI_D_2018.tif: 10125 points, 2518 accepted, 7605 without any cell; download 2.1 s, read+sample 1.8 s
-[  104.6s]   USGS_1M_19_x74y199_PR_PuertoRicoUSVI_D24.tif: 494 points, 494 accepted, 0 without any cell; download 1.3 s, read+sample 0.3 s
-[  106.4s]   USGS_1m_x78y200_PR_PRVI_A_2018.tif: 6567 points, 106 accepted, 6461 without any cell; download 1.8 s, read+sample 1.6 s
-[  106.4s]   USGS_1m_x83y205_PR_PRVI_E_2018.tif: 5588 points, 3407 accepted, 2174 without any cell; download 1.2 s, read+sample 0.2 s
-[  106.4s]   USGS_1M_19_x76y199_PR_PuertoRicoUSVI_D24.tif: 187 points, 187 accepted, 0 without any cell; download 1.1 s, read+sample 0.5 s
-[  107.8s]   USGS_1m_x78y201_PR_PRVI_A_2018.tif: 15600 points, 0 accepted, 15600 without any cell; download 0.9 s, read+sample 1.8 s
-[  107.9s]   USGS_1m_x85y204_PR_PRVI_A_2018.tif: 9462 points, 24 accepted, 9438 without any cell; download 1.0 s, read+sample 0.7 s
-[  109.0s]   USGS_1m_x20y204_PR_PRVI_E_2018.tif: 15669 points, 44 accepted, 15620 without any cell; download 0.9 s, read+sample 1.7 s
-[  109.4s] shard 11 done in 109.4 s, ok = True
-[    0.0s] lidar merge run 38112643363 sha 4267c9cff33b3294940307b8c6982ceea05ba357
-[    0.6s] merge: 12 shard results, missing shards [], tiles sampled 477 of 477, failed []
-[    2.4s] spot {"place": "Old San Juan, Plaza de Armas", "lon": -66.1165, "lat": 18.4655, "expect": "on the ridge of the islet, roughly 20 m", "lidar_m": 20.99, "project": "PR_PuertoRicoUSVI_D24", "by_collection_m": {"2024": 20.99, "2018": 21.01}, "buildings_within_150m": 152, "their_median_lidar_m": 20.3, "their_median_old_m": 20.05}
-[    2.5s] spot {"place": "Cataño, blocks nearest the bay", "lon": -66.1132, "lat": 18.4433, "expect": "bay shore, about 1 m", "lidar_m": 0.83, "project": "PR_PuertoRicoUSVI_D24", "by_collection_m": {"2024": 0.83, "2018": 1.04}, "buildings_within_150m": 143, "their_median_lidar_m": 0.8, "their_median_old_m": 1.1}
-[    2.5s] spot {"place": "Loíza, town plaza", "lon": -65.88, "lat": 18.4313, "expect": "coastal plain, a few metres", "lidar_m": 2.79, "project": "PR_PuertoRicoUSVI_D24", "by_collection_m": {"2024": 2.79, "2018": 2.49}, "buildings_within_150m": 172, "their_median_lidar_m": 2.5, "their_median_old_m": 3.0}
-[    2.5s] spot {"place": "Ponce, La Playa", "lon": -66.617, "lat": 17.98, "expect": "harbour barrio, 1 to 3 m", "lidar_m": 0.93, "project": "PR_PuertoRicoUSVI_D24", "by_collection_m": {"2024": 0.93, "2018": 0.95}, "buildings_within_150m": 214, "their_median_lidar_m": 1.0, "their_median_old_m": 3.0}
-[    2.5s] spot {"place": "Aibonito, town plaza", "lon": -66.266, "lat": 18.14, "expect": "hill town, roughly 600 to 700 m", "lidar_m": 605.22, "project": "PR_PuertoRicoUSVI_D24", "by_collection_m": {"2024": 605.22, "2018": 605.26}, "buildings_within_150m": 191, "their_median_lidar_m": 603.4, "their_median_old_m": 603.1}
-[    2.5s] spot {"place": "San Juan airport (SJU), apron", "lon": -66.0018, "lat": 18.4394, "expect": "published field elevation 9 ft = 2.7 m", "lidar_m": 2.51, "project": "PR_PuertoRicoUSVI_D24", "by_collection_m": {"2024": 2.51, "2018": 2.58}, "buildings_within_150m": 1, "their_median_lidar_m": 2.5, "their_median_old_m": 2.9}
-[    2.5s] spot {"place": "Aguadilla airport (BQN), runway", "lon": -67.1294, "lat": 18.4949, "expect": "published field elevation 237 ft = 72 m is the highest point of the runway; this is the airport reference point, so somewhat lower", "lidar_m": 64.43, "project": "PR_PuertoRicoUSVI_D24", "by_collection_m": {"2024": 64.43, "2018": 64.49}, "buildings_within_150m": 0, "their_median_lidar_m": null, "their_median_old_m": null}
-[    2.6s] spot {"place": "Condado, near Ashford Avenue", "lon": -66.072, "lat": 18.457, "expect": "barrier strip beside the lagoon, 1 to 4 m", "lidar_m": 1.12, "project": "PR_PuertoRicoUSVI_D24", "by_collection_m": {"2024": 1.12, "2018": 0.44}, "buildings_within_150m": 34, "their_median_lidar_m": 4.5, "their_median_old_m": 3.0}
-[    2.6s] qa {"buildings": 1737084, "buildings_with_value": 1737072, "buildings_no_data": 12, "share_with_value": 0.99999, "buildings_no_data_but_some_cells_nearby": 0, "buildings_inside_no_tile": 0, "assets": 3988, "assets_with_value": 3985, "new_elevation_m": {"min": -8.8, "p01": 1.3, "median": 65.4, "p99": 734.6, "max": 1326.2, "below_zero": 276}, "new_minus_old_m": {"n": 1737072, "median": 0.3, "p05": -5.1, "p95": 6.3, "mean": 0.408, "median_abs": 1.7, "share_within_0.25m": 0.0896, "share_within_0.5m": 0.1937, "share_within_1m": 0.3491, "share_beyond_3m": 0.2802, "note": "old = the ground field of tiles/bld today (10 m elevation model, decimetres)"}, "at_or_below": {"0.5m": {"old": 5827, "new": 1854, "old_where_both": 5824, "new_where_both": 1854}, "1m": {"old": 15110, "new": 10907, "old_where_both": 15103, "new_where_both": 10907}, "1.5m": {"old": 20935, "new": 26286, "old_where_both": 20926, "new_where_both": 26286}, "2m": {"old": 30804, "new": 45209, "old_where_both": 30794, "new_where_both": 45209}, "3m": {"old": 117192, "new": 90461, "old_where_both": 117182, "new_where_both": 90461}}, "old_values_known": 1737084, "compared": 1737072, "no_data_buildings": [{"index": 46424, "lon": -67.16073, "lat": 18.445}, {"index": 449537, "lon": -66.76474, "lat": 17.99944}, {"index": 449538, "lon": -66.76527, "lat": 17.99923}, {"index": 449545, "lon": -66.76394, "lat": 17.99934}, {"index": 449575, "lon": -66.76496, "lat": 17.99647}, {"index": 468488, "lon": -66.7425, "lat": 17.98136}, {"index": 468489, "lon": -66.74212, "lat": 17.98087}, {"index": 468490, "lon": -66.74171, "lat": 17.98071}, {"index": 468491, "lon": -66.74137, "lat": 17.98044}, {"index": 468492, "lon": -66.74233, "lat": 17.98134}, {"index": 468493, "lon": -66.74195, "lat": 17.98076}, {"index": 468494, "lon": -66.74157, "lat": 17.98053}], "lowest_buildings": [{"index": 1207143, "lon": -66.08755, "lat": 18.44983, "lidar_m": -8.8}, {"index": 1207133, "lon": -66.08728, "lat": 18.44997, "lidar_m": -8.8}, {"index": 195072, "lon": -67.06116, "lat": 17.97666, "lidar_m": -8.2}, {"index": 64619, "lon": -67.15986, "lat": 18.18872, "lidar_m": -3.5}, {"index": 468568, "lon": -66.75291, "lat": 17.98688, "lidar_m": -2.7}, {"index": 1258351, "lon": -66.0588, "lat": 18.42885, "lidar_m": -2.3}, {"index": 62071, "lon": -67.1571, "lat": 18.2148, "lidar_m": -2.3}, {"index": 39834, "lon": -67.17475, "lat": 18.02875, "lidar_m": -1.4}, {"index": 15, "lon": -67.93567, "lat": 18.09994, "lidar_m": -1.2}, {"index": 892857, "lon": -66.28911, "lat": 17.96435, "lidar_m": -1.2}], "median_minus_centre_cell_m": {"n": 1737072, "median": 0.0, "p05": -0.094, "p95": 0.086, "mean": -0.002, "median_abs": 0.014, "share_within_0.25m": 0.9817, "share_within_0.5m": 0.9979, "share_within_1m": 0.9999, "share_beyond_3m": 0.0}, "collections_compared": {"n": 1711891, "median": -0.025, "p05": -0.336, "p95": 0.231, "mean": -0.03, "median_abs": 0.083, "share_within_0.25m": 0.8742, "share_within_0.5m": 0.9564, "share_within_1m": 0.9845, "share_beyond_3m": 0.0017, "note": "2024 minus 2018 at buildings where both have a value", "only_newest": 25143, "only_older": 38}}
-[    2.6s] counts {"by_project": {"PR_PRVI_A_2018": 37, "PR_PRVI_H_2018": 1, "PR_PuertoRicoUSVI_D24": 1737034, "none": 12}, "by_collection_year": {"none": 12, "2018": 38, "2024": 1737034}}
-[    3.3s] merge done: complete = True
+[    0.0s] lidar plan run 40385549146 sha f4bf51759026ed5e85f07d466faa95aa9ca6b9eb
+[    6.9s] points: 1737161 buildings (2026-10-26T19:16:41.230Z), 3992 assets, 8 spots; old ground known for 1737161
+[    9.7s] projects in the bucket: ['PR_PRVI_A_2018', 'PR_PRVI_C_2018', 'PR_PRVI_D_2018', 'PR_PRVI_E_2018', 'PR_PRVI_F_2018', 'PR_PRVI_G_2018', 'PR_PRVI_H_2018', 'PR_PRVI_VI_B1_2018', 'PR_PRVI_VI_B2_2018', 'PR_PuertoRicoUSVI_D24']
+[   10.1s]   PR_PRVI_A_2018: 67 tiles, 10.7 GB
+[   10.4s]   PR_PRVI_C_2018: 13 tiles, 0.9 GB
+[   10.7s]   PR_PRVI_D_2018: 58 tiles, 10.9 GB
+[   11.0s]   PR_PRVI_E_2018: 26 tiles, 3.2 GB
+[   11.3s]   PR_PRVI_F_2018: 19 tiles, 4.3 GB
+[   11.6s]   PR_PRVI_G_2018: 24 tiles, 5.5 GB
+[   12.0s]   PR_PRVI_H_2018: 86 tiles, 18.2 GB
+[   12.2s]   PR_PRVI_VI_B1_2018: 11 tiles, 0.6 GB
+[   12.5s]   PR_PRVI_VI_B2_2018: 9 tiles, 1.0 GB
+[   12.9s]   PR_PuertoRicoUSVI_D24: 215 tiles, 56.0 GB
+[   20.0s] headers read: 528, failed 0; zones [19, 20]; crs ['NAD83 / UTM zone 19N', 'NAD83 / UTM zone 20N']; nodata ['-3.4028230607370965e+38', '-999999.0']; vertical CRS in the GeoTIFF ['None']; unit type ["''"]; sizes [(10012, 10012)]; pixel [(1.0, -1.0)]
+[   21.1s] projection check zone 19 (EPSG:26919): max difference to PROJ 0.0000 m over 2000 points
+[   21.1s] projection check zone 20 (EPSG:26920): max difference to PROJ 0.0000 m over 2000 points
+[   23.9s] tiles holding at least one point: 477 of 528, 108.1 GB; points inside no tile at all: 0 buildings, 0 assets
+[   23.9s] shard load (GB): [9.8, 9.8, 9.8, 9.8, 9.8, 9.8, 9.8, 9.8, 9.8, 9.8, 9.8, 9.8]
+[   36.4s] vertical reference per USGS WESM: [('PR_PRVI_A_2018', '6641', 'GEOID12B'), ('PR_PRVI_C_2018', '6641', 'GEOID12B'), ('PR_PRVI_D_2018', '6641', 'GEOID12B'), ('PR_PRVI_E_2018', '6641', 'GEOID12B'), ('PR_PRVI_F_2018', '6641', 'GEOID12B'), ('PR_PRVI_G_2018', '6641', 'GEOID12B'), ('PR_PRVI_H_2018', '6641', 'GEOID12B'), ('PR_PuertoRicoUSVI_1_D24', '6641', 'GEOID18'), ('PR_PuertoRicoUSVI_2_D24', '6641', 'GEOID18'), ('PR_PuertoRicoUSVI_3_D24', '6641', 'GEOID18'), ('PR_PuertoRicoUSVI_4_D24', '6641', 'GEOID18'), ('PR_PuertoRicoUSVI_5_D24', '6642', 'GEOID18'), ('PR_PuertoRicoUSVI_6_D24', '6641', 'GEOID18')]
+[   36.4s] vendor DEM metadata: [('PR_PRVI_D_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_D_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_D_2018', ['Puerto Rico Vertical Datum of 2002, Geoid 12B'], ['Meters']), ('PR_PRVI_F_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_F_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_F_2018', ['Puerto Rico Vertical Datum of 2002, Geoid 12B'], ['Meters']), ('PR_PRVI_G_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_G_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_G_2018', ['Puerto Rico Vertical Datum of 2002, Geoid 12B'], ['Meters']), ('PR_PRVI_E_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_E_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_E_2018', ['Puerto Rico Vertical Datum of 2002, Geoid 12B'], ['Meters']), ('PR_PRVI_H_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_H_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_H_2018', ['Puerto Rico Vertical Datum of 2002, Geoid 12B'], ['Meters']), ('PR_PRVI_A_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_A_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_A_2018', ['Puerto Rico Vertical Datum of 2002, Geoid 12B'], ['Meters']), ('PR_PRVI_C_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_C_2018', ['Virgin Islands Vertical Datum of 2009, Geoid 12B'], ['Meters']), ('PR_PRVI_C_2018', ['Puerto Rico Vertical Datum of 2002, Geoid 12B'], ['Meters']), ('PR_PuertoRicoUSVI_4_D24', ['Puerto Rico Vertical Datum of 2002'], ['meters']), ('PR_PuertoRicoUSVI_3_D24', ['Puerto Rico Vertical Datum of 2002'], ['meters']), ('PR_PuertoRicoUSVI_1_D24', ['Puerto Rico Vertical Datum of 2002'], ['meters']), ('PR_PuertoRicoUSVI_2_D24', ['Puerto Rico Vertical Datum of 2002'], ['meters']), ('PR_PuertoRicoUSVI_5_D24', ['Virgin Islands Vertical Datum of 2009'], ['meters'])] errors: []
+[   38.8s] plan written, ok = True
+[    0.0s] lidar shard run 40385549146 sha f4bf51759026ed5e85f07d466faa95aa9ca6b9eb
+[    0.9s] shard 0: 40 tiles, 9.0 GB, 587534 point lookups
+[   16.5s]   USGS_1M_20_x19y204_PR_PuertoRicoUSVI_D24.tif: 34769 points, 34769 accepted, 0 without any cell; download 13.5 s, read+sample 2.1 s
+[   16.5s]   USGS_1m_x70y200_PR_PRVI_A_2018.tif: 15359 points, 15359 accepted, 0 without any cell; download 13.2 s, read+sample 1.8 s
+[   16.5s]   USGS_1m_x74y200_PR_PRVI_A_2018.tif: 25158 points, 25158 accepted, 0 without any cell; download 12.0 s, read+sample 2.1 s
+[   28.8s]   USGS_1m_x15y200_PR_PRVI_H_2018.tif: 12012 points, 12012 accepted, 0 without any cell; download 11.8 s, read+sample 1.8 s
+[   29.9s]   USGS_1m_x71y203_PR_PRVI_D_2018.tif: 15347 points, 15347 accepted, 0 without any cell; download 12.1 s, read+sample 1.8 s
+[   31.2s]   USGS_1M_20_x18y203_PR_PuertoRicoUSVI_D24.tif: 25946 points, 25946 accepted, 0 without any cell; download 12.7 s, read+sample 1.9 s
+[   42.2s]   USGS_1M_19_x73y203_PR_PuertoRicoUSVI_D24.tif: 6837 points, 6837 accepted, 0 without any cell; download 11.5 s, read+sample 1.8 s
+[   43.7s]   USGS_1M_19_x78y203_PR_PuertoRicoUSVI_D24.tif: 18692 points, 18692 accepted, 0 without any cell; download 12.0 s, read+sample 1.8 s
+[   45.1s]   USGS_1M_19_x72y204_PR_PuertoRicoUSVI_D24.tif: 10679 points, 10679 accepted, 0 without any cell; download 12.0 s, read+sample 1.9 s
+[   55.1s]   USGS_1M_19_x72y201_PR_PuertoRicoUSVI_D24.tif: 3887 points, 3887 accepted, 0 without any cell; download 11.0 s, read+sample 1.8 s
+[   55.9s]   USGS_1m_x20y202_PR_PRVI_H_2018.tif: 15020 points, 14245 accepted, 774 without any cell; download 10.3 s, read+sample 1.8 s
+[   59.2s]   USGS_1M_19_x69y200_PR_PuertoRicoUSVI_D24.tif: 16334 points, 16334 accepted, 0 without any cell; download 12.3 s, read+sample 1.8 s
+[   67.2s]   USGS_1m_x78y201_PR_PRVI_H_2018.tif: 15600 points, 15590 accepted, 10 without any cell; download 10.2 s, read+sample 1.8 s
+[   68.4s]   USGS_1m_x18y201_PR_PRVI_H_2018.tif: 9488 points, 8644 accepted, 838 without any cell; download 10.8 s, read+sample 1.7 s
+[   71.3s]   USGS_1M_19_x69y201_PR_PuertoRicoUSVI_D24.tif: 23703 points, 23702 accepted, 1 without any cell; download 10.2 s, read+sample 1.8 s
+[   77.8s]   USGS_1m_x84y202_PR_PRVI_H_2018.tif: 12420 points, 12292 accepted, 127 without any cell; download 8.8 s, read+sample 1.8 s
+[   79.6s]   USGS_1m_x17y203_PR_PRVI_D_2018.tif: 29616 points, 18871 accepted, 10743 without any cell; download 9.4 s, read+sample 1.7 s
+[   80.3s]   USGS_1m_x84y204_PR_PRVI_H_2018.tif: 12238 points, 12238 accepted, 0 without any cell; download 7.4 s, read+sample 1.6 s
+[   86.7s]   USGS_1m_x15y205_PR_PRVI_G_2018.tif: 19625 points, 19625 accepted, 0 without any cell; download 7.7 s, read+sample 1.2 s
+[   88.1s]   USGS_1M_19_x75y205_PR_PuertoRicoUSVI_D24.tif: 14960 points, 14960 accepted, 0 without any cell; download 7.4 s, read+sample 1.1 s
+[   88.3s]   USGS_1m_x73y205_PR_PRVI_F_2018.tif: 26119 points, 26119 accepted, 0 without any cell; download 6.8 s, read+sample 1.2 s
+[   92.2s]   USGS_1m_x84y203_PR_PRVI_H_2018.tif: 2500 points, 1350 accepted, 1149 without any cell; download 3.8 s, read+sample 1.7 s
+[   92.2s]   USGS_1m_x69y199_PR_PRVI_A_2018.tif: 4564 points, 4564 accepted, 0 without any cell; download 2.9 s, read+sample 1.0 s
+[   92.9s]   USGS_1m_x13y205_PR_PRVI_G_2018.tif: 24854 points, 13528 accepted, 11326 without any cell; download 3.1 s, read+sample 1.4 s
+[   95.4s]   USGS_1m_x86y201_PR_PRVI_C_2018.tif: 151 points, 151 accepted, 0 without any cell; download 2.7 s, read+sample 0.7 s
+[   95.4s]   USGS_1m_x17y205_PR_PRVI_E_2018.tif: 29531 points, 29529 accepted, 2 without any cell; download 2.2 s, read+sample 0.9 s
+[   96.5s]   USGS_1M_19_x70y199_PR_PuertoRicoUSVI_D24.tif: 2221 points, 2214 accepted, 7 without any cell; download 3.1 s, read+sample 0.6 s
+[   98.0s]   USGS_1m_x81y205_PR_PRVI_E_2018.tif: 22735 points, 22734 accepted, 1 without any cell; download 2.0 s, read+sample 0.7 s
+[   98.0s]   USGS_1M_19_x61y201_PR_PuertoRicoUSVI_D24.tif: 17 points, 17 accepted, 0 without any cell; download 2.2 s, read+sample 0.2 s
+[   98.9s]   USGS_1M_20_x22y202_PR_PuertoRicoUSVI_D24.tif: 921 points, 920 accepted, 1 without any cell; download 1.8 s, read+sample 0.5 s
+[  101.2s]   USGS_1m_x14y203_PR_PRVI_H_2018.tif: 13728 points, 2416 accepted, 11311 without any cell; download 2.0 s, read+sample 1.5 s
+[  101.2s]   USGS_1m_x78y199_PR_PRVI_A_2018.tif: 5909 points, 2769 accepted, 3138 without any cell; download 1.6 s, read+sample 0.8 s
+[  101.2s]   USGS_1M_20_x22y204_PR_PuertoRicoUSVI_D24.tif: 1658 points, 1658 accepted, 0 without any cell; download 1.4 s, read+sample 0.7 s
+[  101.8s]   USGS_1m_x74y199_PR_PRVI_A_2018.tif: 494 points, 494 accepted, 0 without any cell; download 1.1 s, read+sample 0.2 s
+[  103.6s]   USGS_1m_x16y204_PR_PRVI_E_2018.tif: 86283 points, 1092 accepted, 85188 without any cell; download 1.0 s, read+sample 1.6 s
+[  103.6s]   USGS_1m_x77y203_PR_PRVI_H_2018.tif: 14500 points, 282 accepted, 14217 without any cell; download 1.0 s, read+sample 1.4 s
+[  103.6s]   USGS_1M_20_x18y199_PR_PuertoRicoUSVI_D24.tif: 749 points, 749 accepted, 0 without any cell; download 0.8 s, read+sample 0.1 s
+[  103.7s]   USGS_1M_19_x82y199_PR_PuertoRicoUSVI_D24.tif: 484 points, 484 accepted, 0 without any cell; download 0.9 s, read+sample 0.0 s
+[  105.8s]   USGS_1m_x84y202_PR_PRVI_A_2018.tif: 12420 points, 15 accepted, 12405 without any cell; download 0.8 s, read+sample 1.4 s
+[  105.8s]   USGS_1m_x86y202_PR_PRVI_C_2018.tif: 6 points, 0 accepted, 6 without any cell; download 0.7 s, read+sample 0.0 s
+[  106.1s] shard 0 done in 106.1 s, ok = True
+[    0.0s] lidar shard run 40385549146 sha f4bf51759026ed5e85f07d466faa95aa9ca6b9eb
+[    1.4s] shard 1: 40 tiles, 9.0 GB, 600582 point lookups
+[   66.6s]   USGS_1M_19_x82y204_PR_PuertoRicoUSVI_D24.tif: 38965 points, 38965 accepted, 0 without any cell; download 62.8 s, read+sample 2.3 s
+[   92.7s]   USGS_1m_x19y201_PR_PRVI_H_2018.tif: 17893 points, 17893 accepted, 0 without any cell; download 89.0 s, read+sample 2.3 s
+[   92.7s]   USGS_1M_20_x21y203_PR_PuertoRicoUSVI_D24.tif: 13703 points, 13703 accepted, 0 without any cell; download 53.5 s, read+sample 2.2 s
+[   92.7s]   USGS_1M_20_x13y204_PR_PuertoRicoUSVI_D24.tif: 14350 points, 14350 accepted, 0 without any cell; download 13.3 s, read+sample 2.2 s
+[   92.7s]   USGS_1M_20_x17y203_PR_PuertoRicoUSVI_D24.tif: 29616 points, 29616 accepted, 0 without any cell; download 13.5 s, read+sample 2.2 s
+[   92.7s]   USGS_1M_19_x81y203_PR_PuertoRicoUSVI_D24.tif: 29586 points, 29586 accepted, 0 without any cell; download 14.2 s, read+sample 2.2 s
+[   99.4s]   USGS_1M_19_x75y203_PR_PuertoRicoUSVI_D24.tif: 4583 points, 4583 accepted, 0 without any cell; download 14.8 s, read+sample 2.2 s
+[  107.1s]   USGS_1M_19_x79y203_PR_PuertoRicoUSVI_D24.tif: 19980 points, 19980 accepted, 0 without any cell; download 15.7 s, read+sample 2.2 s
+[  109.9s]   USGS_1m_x72y203_PR_PRVI_D_2018.tif: 15957 points, 15957 accepted, 0 without any cell; download 15.0 s, read+sample 2.2 s
+[  116.9s]   USGS_1M_19_x72y203_PR_PuertoRicoUSVI_D24.tif: 15957 points, 15957 accepted, 0 without any cell; download 15.2 s, read+sample 2.2 s
+[  124.7s]   USGS_1M_19_x73y201_PR_PuertoRicoUSVI_D24.tif: 3465 points, 3465 accepted, 0 without any cell; download 15.4 s, read+sample 2.2 s
+[  124.7s]   USGS_1m_x13y200_PR_PRVI_A_2018.tif: 13049 points, 13049 accepted, 0 without any cell; download 12.7 s, read+sample 2.1 s
+[  132.6s]   USGS_1M_20_x13y200_PR_PuertoRicoUSVI_D24.tif: 13049 points, 13049 accepted, 0 without any cell; download 13.5 s, read+sample 2.1 s
+[  140.7s]   USGS_1m_x69y201_PR_PRVI_A_2018.tif: 23703 points, 23703 accepted, 0 without any cell; download 13.9 s, read+sample 2.0 s
+[  141.8s]   USGS_1m_x19y202_PR_PRVI_H_2018.tif: 33191 points, 27975 accepted, 5206 without any cell; download 14.8 s, read+sample 2.2 s
+[  147.5s]   USGS_1m_x79y203_PR_PRVI_D_2018.tif: 19980 points, 17163 accepted, 2815 without any cell; download 12.6 s, read+sample 2.2 s
+[  154.8s]   USGS_1m_x82y203_PR_PRVI_D_2018.tif: 21211 points, 13689 accepted, 7520 without any cell; download 12.1 s, read+sample 2.0 s
+[  179.3s]   USGS_1m_x77y202_PR_PRVI_D_2018.tif: 12012 points, 8425 accepted, 3585 without any cell; download 35.4 s, read+sample 2.1 s
+[  179.3s]   USGS_1m_x76y201_PR_PRVI_A_2018.tif: 14757 points, 10620 accepted, 4131 without any cell; download 11.8 s, read+sample 2.0 s
+[  179.3s]   USGS_1m_x75y205_PR_PRVI_F_2018.tif: 14960 points, 14960 accepted, 0 without any cell; download 9.8 s, read+sample 1.3 s
+[  179.3s]   USGS_1m_x71y202_PR_PRVI_D_2018.tif: 6279 points, 3388 accepted, 2890 without any cell; download 5.7 s, read+sample 1.9 s
+[  179.3s]   USGS_1m_x77y201_PR_PRVI_A_2018.tif: 8897 points, 4526 accepted, 4367 without any cell; download 5.9 s, read+sample 1.9 s
+[  179.3s]   USGS_1m_x13y204_PR_PRVI_G_2018.tif: 14350 points, 6216 accepted, 8131 without any cell; download 5.4 s, read+sample 1.9 s
+[  181.2s]   USGS_1M_19_x83y200_PR_PuertoRicoUSVI_D24.tif: 6818 points, 6818 accepted, 0 without any cell; download 6.2 s, read+sample 1.3 s
+[  181.6s]   USGS_1M_19_x85y202_PR_PuertoRicoUSVI_D24.tif: 3426 points, 3425 accepted, 1 without any cell; download 4.3 s, read+sample 1.0 s
+[  184.8s]   USGS_1m_x76y204_PR_PRVI_D_2018.tif: 15386 points, 2543 accepted, 12843 without any cell; download 3.8 s, read+sample 1.7 s
+[  186.8s]   USGS_1m_x74y201_PR_PRVI_D_2018.tif: 6735 points, 1942 accepted, 4792 without any cell; download 3.8 s, read+sample 1.7 s
+[  186.8s]   USGS_1m_x80y205_PR_PRVI_E_2018.tif: 17848 points, 16559 accepted, 1288 without any cell; download 3.8 s, read+sample 1.0 s
+[  192.3s]   USGS_1M_20_x25y203_PR_PuertoRicoUSVI_D24.tif: 1895 points, 1895 accepted, 0 without any cell; download 6.8 s, read+sample 0.7 s
+[  192.3s]   USGS_1m_x77y202_PR_PRVI_H_2018.tif: 12012 points, 3588 accepted, 8420 without any cell; download 3.5 s, read+sample 1.7 s
+[  192.3s]   USGS_1m_x15y204_PR_PRVI_D_2018.tif: 32839 points, 5336 accepted, 27498 without any cell; download 2.9 s, read+sample 1.7 s
+[  195.0s]   USGS_1m_x22y203_PR_PRVI_H_2018.tif: 7181 points, 5112 accepted, 2067 without any cell; download 2.8 s, read+sample 0.9 s
+[  195.0s]   USGS_1m_x16y205_PR_PRVI_E_2018.tif: 25185 points, 5919 accepted, 19266 without any cell; download 2.2 s, read+sample 1.0 s
+[  195.4s]   USGS_1m_x78y199_PR_PRVI_H_2018.tif: 5909 points, 3140 accepted, 2769 without any cell; download 2.1 s, read+sample 0.9 s
+[  196.8s]   USGS_1M_19_x83y205_PR_PuertoRicoUSVI_D24.tif: 5588 points, 5588 accepted, 0 without any cell; download 1.8 s, read+sample 0.2 s
+[  197.3s]   USGS_1m_x20y200_PR_PRVI_H_2018.tif: 555 points, 555 accepted, 0 without any cell; download 2.0 s, read+sample 0.3 s
+[  198.6s]   USGS_1m_x83y204_PR_PRVI_E_2018.tif: 25453 points, 247 accepted, 25205 without any cell; download 1.7 s, read+sample 1.5 s
+[  199.7s]   USGS_1m_x70y202_PR_PRVI_D_2018.tif: 9189 points, 29 accepted, 9159 without any cell; download 1.4 s, read+sample 1.5 s
+[  200.3s]   USGS_1m_x70y204_PR_PRVI_D_2018.tif: 15477 points, 39 accepted, 15438 without any cell; download 1.5 s, read+sample 1.5 s
+[  201.4s]   USGS_1m_x21y202_PR_PRVI_A_2018.tif: 9593 points, 0 accepted, 9593 without any cell; download 1.5 s, read+sample 1.3 s
+[  201.7s] shard 1 done in 201.7 s, ok = True
+[    0.0s] lidar shard run 40385549146 sha f4bf51759026ed5e85f07d466faa95aa9ca6b9eb
+[    0.6s] shard 2: 39 tiles, 9.0 GB, 727030 point lookups
+[   51.7s]   USGS_1M_19_x83y204_PR_PuertoRicoUSVI_D24.tif: 25453 points, 25453 accepted, 0 without any cell; download 49.3 s, read+sample 1.8 s
+[   51.7s]   USGS_1M_19_x70y200_PR_PuertoRicoUSVI_D24.tif: 15359 points, 15359 accepted, 0 without any cell; download 10.3 s, read+sample 1.7 s
+[   51.7s]   USGS_1M_19_x76y204_PR_PuertoRicoUSVI_D24.tif: 15386 points, 15386 accepted, 0 without any cell; download 9.6 s, read+sample 1.7 s
+[   51.7s]   USGS_1M_19_x77y204_PR_PuertoRicoUSVI_D24.tif: 15599 points, 15599 accepted, 0 without any cell; download 10.3 s, read+sample 1.7 s
+[  111.1s]   USGS_1m_x17y200_PR_PRVI_H_2018.tif: 20697 points, 20690 accepted, 7 without any cell; download 96.7 s, read+sample 1.6 s
+[  111.1s]   USGS_1M_19_x82y200_PR_PuertoRicoUSVI_D24.tif: 10609 points, 10609 accepted, 0 without any cell; download 9.5 s, read+sample 1.6 s
+[  146.3s]   USGS_1M_20_x14y200_PR_PuertoRicoUSVI_D24.tif: 9809 points, 9809 accepted, 0 without any cell; download 109.5 s, read+sample 1.7 s
+[  146.3s]   USGS_1M_20_x16y200_PR_PuertoRicoUSVI_D24.tif: 5193 points, 5193 accepted, 0 without any cell; download 90.2 s, read+sample 1.7 s
+[  146.3s]   USGS_1M_20_x17y202_PR_PuertoRicoUSVI_D24.tif: 36170 points, 36170 accepted, 0 without any cell; download 10.2 s, read+sample 1.6 s
+[  146.3s]   USGS_1M_19_x81y201_PR_PuertoRicoUSVI_D24.tif: 7839 points, 7839 accepted, 0 without any cell; download 9.9 s, read+sample 1.6 s
+[  146.6s]   USGS_1M_19_x76y201_PR_PuertoRicoUSVI_D24.tif: 14757 points, 14757 accepted, 0 without any cell; download 10.4 s, read+sample 1.7 s
+[  155.4s]   USGS_1M_19_x83y203_PR_PuertoRicoUSVI_D24.tif: 5376 points, 5376 accepted, 0 without any cell; download 10.0 s, read+sample 1.8 s
+[  158.5s]   USGS_1M_20_x13y202_PR_PuertoRicoUSVI_D24.tif: 6666 points, 6666 accepted, 0 without any cell; download 10.4 s, read+sample 1.7 s
+[  158.5s]   USGS_1m_x74y202_PR_PRVI_D_2018.tif: 6736 points, 5711 accepted, 1025 without any cell; download 10.2 s, read+sample 1.6 s
+[  166.8s]   USGS_1M_19_x84y202_PR_PuertoRicoUSVI_D24.tif: 12420 points, 12420 accepted, 0 without any cell; download 9.7 s, read+sample 1.7 s
+[  168.8s]   USGS_1m_x13y201_PR_PRVI_A_2018.tif: 10943 points, 8610 accepted, 2328 without any cell; download 8.8 s, read+sample 1.6 s
+[  241.3s]   USGS_1m_x16y201_PR_PRVI_H_2018.tif: 22292 points, 16423 accepted, 5842 without any cell; download 81.2 s, read+sample 1.6 s
+[  241.3s]   USGS_1m_x80y204_PR_PRVI_G_2018.tif: 78516 points, 59178 accepted, 19309 without any cell; download 7.4 s, read+sample 1.7 s
+[  241.3s]   USGS_1m_x14y202_PR_PRVI_H_2018.tif: 15464 points, 11886 accepted, 3575 without any cell; download 6.8 s, read+sample 1.5 s
+[  241.3s]   USGS_1m_x74y205_PR_PRVI_F_2018.tif: 13379 points, 13379 accepted, 0 without any cell; download 6.4 s, read+sample 1.1 s
+[  241.3s]   USGS_1M_19_x74y205_PR_PuertoRicoUSVI_D24.tif: 13379 points, 13379 accepted, 0 without any cell; download 6.5 s, read+sample 1.0 s
+[  241.3s]   USGS_1m_x70y202_PR_PRVI_A_2018.tif: 9189 points, 4314 accepted, 4873 without any cell; download 3.5 s, read+sample 1.5 s
+[  241.3s]   USGS_1m_x14y200_PR_PRVI_H_2018.tif: 9809 points, 3444 accepted, 6365 without any cell; download 2.9 s, read+sample 1.4 s
+[  241.3s]   USGS_1M_19_x69y199_PR_PuertoRicoUSVI_D24.tif: 4564 points, 4564 accepted, 0 without any cell; download 2.9 s, read+sample 1.0 s
+[  241.3s]   USGS_1m_x16y199_PR_PRVI_A_2018.tif: 7131 points, 5549 accepted, 1577 without any cell; download 2.4 s, read+sample 0.7 s
+[  241.3s]   USGS_1M_20_x17y205_PR_PuertoRicoUSVI_D24.tif: 29531 points, 29526 accepted, 5 without any cell; download 3.7 s, read+sample 0.7 s
+[  241.3s]   USGS_1m_x18y205_PR_PRVI_E_2018.tif: 6154 points, 6154 accepted, 0 without any cell; download 18.2 s, read+sample 0.6 s
+[  241.3s]   USGS_1m_x69y204_PR_PRVI_E_2018.tif: 25315 points, 8210 accepted, 17101 without any cell; download 1.8 s, read+sample 1.3 s
+[  241.3s]   USGS_1m_x14y202_PR_PRVI_D_2018.tif: 15464 points, 3578 accepted, 11884 without any cell; download 1.8 s, read+sample 1.3 s
+[  241.3s]   USGS_1m_x73y204_PR_PRVI_D_2018.tif: 15485 points, 1401 accepted, 14083 without any cell; download 2.0 s, read+sample 1.3 s
+[  241.3s]   USGS_1m_x18y203_PR_PRVI_H_2018.tif: 25946 points, 9041 accepted, 16897 without any cell; download 1.4 s, read+sample 1.3 s
+[  241.3s]   USGS_1m_x81y204_PR_PRVI_D_2018.tif: 89649 points, 4989 accepted, 84649 without any cell; download 1.3 s, read+sample 1.3 s
+[  241.3s]   USGS_1m_x80y204_PR_PRVI_D_2018.tif: 78516 points, 5499 accepted, 73004 without any cell; download 1.4 s, read+sample 1.4 s
+[  241.3s]   USGS_1m_x22y201_PR_PRVI_C_2018.tif: 4 points, 4 accepted, 0 without any cell; download 1.2 s, read+sample 0.1 s
+[  241.3s]   USGS_1m_x77y204_PR_PRVI_D_2018.tif: 15599 points, 929 accepted, 14667 without any cell; download 0.9 s, read+sample 1.2 s
+[  241.3s]   USGS_1m_x16y199_PR_PRVI_H_2018.tif: 7131 points, 1583 accepted, 5545 without any cell; download 0.8 s, read+sample 0.6 s
+[  241.3s]   USGS_1m_x83y204_PR_PRVI_D_2018.tif: 25453 points, 447 accepted, 25006 without any cell; download 0.7 s, read+sample 1.2 s
+[  241.3s]   USGS_1m_x86y204_PR_PRVI_A_2018.tif: 24 points, 24 accepted, 0 without any cell; download 1.1 s, read+sample 0.1 s
+[  241.3s]   USGS_1m_x19y199_PR_PRVI_H_2018.tif: 24 points, 24 accepted, 0 without any cell; download 0.7 s, read+sample 0.0 s
+[  241.5s] shard 2 done in 241.5 s, ok = True
+[    0.0s] lidar shard run 40385549146 sha f4bf51759026ed5e85f07d466faa95aa9ca6b9eb
+[    0.6s] shard 3: 40 tiles, 9.0 GB, 489048 point lookups
+[   17.7s]   USGS_1M_19_x71y200_PR_PuertoRicoUSVI_D24.tif: 10799 points, 10799 accepted, 0 without any cell; download 15.3 s, read+sample 1.6 s
+[   45.7s]   USGS_1M_19_x70y201_PR_PuertoRicoUSVI_D24.tif: 15745 points, 15745 accepted, 0 without any cell; download 43.4 s, read+sample 1.6 s
+[   45.7s]   USGS_1M_19_x70y204_PR_PuertoRicoUSVI_D24.tif: 15477 points, 15477 accepted, 0 without any cell; download 13.9 s, read+sample 1.7 s
+[   45.7s]   USGS_1M_20_x18y200_PR_PuertoRicoUSVI_D24.tif: 10005 points, 10005 accepted, 0 without any cell; download 12.8 s, read+sample 1.6 s
+[   45.7s]   USGS_1M_19_x80y203_PR_PuertoRicoUSVI_D24.tif: 23008 points, 23008 accepted, 0 without any cell; download 13.1 s, read+sample 1.5 s
+[   86.8s]   USGS_1M_20_x16y203_PR_PuertoRicoUSVI_D24.tif: 18955 points, 18955 accepted, 0 without any cell; download 54.6 s, read+sample 1.5 s
+[   86.8s]   USGS_1m_x75y203_PR_PRVI_D_2018.tif: 4583 points, 4583 accepted, 0 without any cell; download 14.4 s, read+sample 1.6 s
+[   86.8s]   USGS_1M_19_x73y204_PR_PuertoRicoUSVI_D24.tif: 15485 points, 15485 accepted, 0 without any cell; download 12.3 s, read+sample 1.6 s
+[   86.8s]   USGS_1M_19_x77y201_PR_PuertoRicoUSVI_D24.tif: 8897 points, 8897 accepted, 0 without any cell; download 12.0 s, read+sample 1.5 s
+[   86.8s]   USGS_1M_20_x15y203_PR_PuertoRicoUSVI_D24.tif: 19109 points, 19109 accepted, 0 without any cell; download 12.1 s, read+sample 1.6 s
+[  147.3s]   USGS_1M_19_x74y201_PR_PuertoRicoUSVI_D24.tif: 6735 points, 6735 accepted, 0 without any cell; download 83.9 s, read+sample 1.5 s
+[  179.8s]   USGS_1M_19_x75y202_PR_PuertoRicoUSVI_D24.tif: 9032 points, 9032 accepted, 0 without any cell; download 104.6 s, read+sample 1.7 s
+[  179.8s]   USGS_1m_x15y202_PR_PRVI_H_2018.tif: 15597 points, 15597 accepted, 0 without any cell; download 77.9 s, read+sample 1.6 s
+[  179.8s]   USGS_1M_20_x14y202_PR_PuertoRicoUSVI_D24.tif: 15464 points, 15464 accepted, 0 without any cell; download 11.8 s, read+sample 1.5 s
+[  179.8s]   USGS_1M_20_x20y204_PR_PuertoRicoUSVI_D24.tif: 15669 points, 15669 accepted, 0 without any cell; download 11.9 s, read+sample 1.4 s
+[  210.4s]   USGS_1M_19_x70y205_PR_PuertoRicoUSVI_D24.tif: 28107 points, 28107 accepted, 0 without any cell; download 42.8 s, read+sample 1.2 s
+[  210.4s]   USGS_1m_x14y203_PR_PRVI_D_2018.tif: 13728 points, 11312 accepted, 2415 without any cell; download 11.0 s, read+sample 1.5 s
+[  210.4s]   USGS_1m_x74y201_PR_PRVI_A_2018.tif: 6735 points, 4793 accepted, 1938 without any cell; download 8.9 s, read+sample 1.5 s
+[  210.4s]   USGS_1M_20_x15y205_PR_PuertoRicoUSVI_D24.tif: 19625 points, 19625 accepted, 0 without any cell; download 8.8 s, read+sample 1.0 s
+[  210.4s]   USGS_1m_x83y203_PR_PRVI_H_2018.tif: 5376 points, 4446 accepted, 926 without any cell; download 7.2 s, read+sample 1.5 s
+[  210.4s]   USGS_1M_19_x72y205_PR_PuertoRicoUSVI_D24.tif: 18406 points, 18406 accepted, 0 without any cell; download 7.8 s, read+sample 0.9 s
+[  210.4s]   USGS_1m_x20y203_PR_PRVI_H_2018.tif: 726 points, 652 accepted, 73 without any cell; download 4.0 s, read+sample 1.4 s
+[  210.4s]   USGS_1m_x79y205_PR_PRVI_G_2018.tif: 18706 points, 18706 accepted, 0 without any cell; download 3.5 s, read+sample 0.9 s
+[  210.4s]   USGS_1m_x85y202_PR_PRVI_H_2018.tif: 3426 points, 3426 accepted, 0 without any cell; download 3.6 s, read+sample 0.6 s
+[  213.0s]   USGS_1m_x85y203_PR_PRVI_H_2018.tif: 14262 points, 10252 accepted, 4000 without any cell; download 3.0 s, read+sample 1.2 s
+[  213.0s]   USGS_1m_x82y205_PR_PRVI_E_2018.tif: 1958 points, 1958 accepted, 0 without any cell; download 3.1 s, read+sample 0.5 s
+[  213.9s]   USGS_1M_19_x85y204_PR_PuertoRicoUSVI_D24.tif: 9462 points, 9436 accepted, 26 without any cell; download 2.9 s, read+sample 0.6 s
+[  215.9s]   USGS_1M_20_x22y203_PR_PuertoRicoUSVI_D24.tif: 7181 points, 7155 accepted, 26 without any cell; download 2.5 s, read+sample 0.6 s
+[  216.4s]   USGS_1m_x80y199_PR_PRVI_A_2018.tif: 8861 points, 4400 accepted, 4459 without any cell; download 2.7 s, read+sample 0.7 s
+[  216.5s]   USGS_1m_x61y200_PR_PRVI_A_2018.tif: 12 points, 12 accepted, 0 without any cell; download 2.4 s, read+sample 0.2 s
+[  218.5s]   USGS_1m_x75y199_PR_PRVI_A_2018.tif: 3032 points, 3032 accepted, 0 without any cell; download 2.3 s, read+sample 0.3 s
+[  219.8s]   USGS_1m_x16y204_PR_PRVI_D_2018.tif: 86283 points, 8553 accepted, 77717 without any cell; download 2.0 s, read+sample 1.4 s
+[  219.8s]   USGS_1M_20_x14y199_PR_PuertoRicoUSVI_D24.tif: 1700 points, 1700 accepted, 0 without any cell; download 1.5 s, read+sample 0.3 s
+[  220.8s]   USGS_1m_x78y204_PR_PRVI_D_2018.tif: 26341 points, 3826 accepted, 22510 without any cell; download 1.3 s, read+sample 1.1 s
+[  220.8s]   USGS_1m_x62y201_PR_PRVI_A_2018.tif: 4 points, 4 accepted, 0 without any cell; download 1.4 s, read+sample 0.0 s
+[  222.3s]   USGS_1m_x83y203_PR_PRVI_D_2018.tif: 5376 points, 839 accepted, 4537 without any cell; download 1.2 s, read+sample 1.2 s
+[  222.3s]   USGS_1m_x15y199_PR_PRVI_H_2018.tif: 4756 points, 720 accepted, 4035 without any cell; download 1.1 s, read+sample 0.7 s
+[  222.3s]   USGS_1m_x68y200_PR_PRVI_A_2018.tif: 77 points, 77 accepted, 0 without any cell; download 1.0 s, read+sample 0.0 s
+[  222.7s]   USGS_1m_x20y205_PR_PRVI_E_2018.tif: 343 points, 343 accepted, 0 without any cell; download 0.9 s, read+sample 0.0 s
+[  222.7s]   USGS_1M_19_x76y198_PR_PuertoRicoUSVI_D24.tif: 5 points, 5 accepted, 0 without any cell; download 0.8 s, read+sample 0.0 s
+[  222.9s] shard 3 done in 222.9 s, ok = True
+[    0.0s] lidar shard run 40385549146 sha f4bf51759026ed5e85f07d466faa95aa9ca6b9eb
+[    0.6s] shard 4: 39 tiles, 9.0 GB, 612544 point lookups
+[   19.0s]   USGS_1M_20_x18y204_PR_PuertoRicoUSVI_D24.tif: 70585 points, 70585 accepted, 0 without any cell; download 16.5 s, read+sample 1.8 s
+[   19.0s]   USGS_1m_x69y203_PR_PRVI_E_2018.tif: 21480 points, 21480 accepted, 0 without any cell; download 14.6 s, read+sample 1.7 s
+[   19.0s]   USGS_1M_20_x14y204_PR_PuertoRicoUSVI_D24.tif: 19221 points, 19221 accepted, 0 without any cell; download 14.6 s, read+sample 1.6 s
+[   30.9s]   USGS_1m_x76y200_PR_PRVI_A_2018.tif: 23340 points, 23340 accepted, 0 without any cell; download 12.3 s, read+sample 1.7 s
+[   32.1s]   USGS_1M_19_x70y202_PR_PuertoRicoUSVI_D24.tif: 9189 points, 9189 accepted, 0 without any cell; download 13.5 s, read+sample 1.6 s
+[   33.0s]   USGS_1M_20_x17y200_PR_PuertoRicoUSVI_D24.tif: 20697 points, 20697 accepted, 0 without any cell; download 12.3 s, read+sample 1.7 s
+[   46.3s]   USGS_1M_19_x81y202_PR_PuertoRicoUSVI_D24.tif: 42423 points, 42423 accepted, 0 without any cell; download 13.7 s, read+sample 1.6 s
+[   46.3s]   USGS_1m_x74y203_PR_PRVI_D_2018.tif: 9661 points, 9661 accepted, 0 without any cell; download 12.4 s, read+sample 1.6 s
+[   47.5s]   USGS_1M_19_x80y200_PR_PuertoRicoUSVI_D24.tif: 11307 points, 11307 accepted, 0 without any cell; download 12.7 s, read+sample 1.8 s
+[   60.9s]   USGS_1M_20_x13y201_PR_PuertoRicoUSVI_D24.tif: 10943 points, 10943 accepted, 0 without any cell; download 13.0 s, read+sample 1.6 s
+[   60.9s]   USGS_1M_19_x79y202_PR_PuertoRicoUSVI_D24.tif: 14216 points, 14216 accepted, 0 without any cell; download 11.0 s, read+sample 1.6 s
+[   62.0s]   USGS_1m_x82y202_PR_PRVI_H_2018.tif: 33900 points, 30910 accepted, 2971 without any cell; download 12.6 s, read+sample 1.7 s
+[   73.1s]   USGS_1M_19_x79y201_PR_PuertoRicoUSVI_D24.tif: 16385 points, 16385 accepted, 0 without any cell; download 12.6 s, read+sample 1.6 s
+[   75.6s]   USGS_1M_19_x77y202_PR_PuertoRicoUSVI_D24.tif: 12012 points, 12012 accepted, 0 without any cell; download 13.0 s, read+sample 1.7 s
+[   75.6s]   USGS_1m_x71y204_PR_PRVI_F_2018.tif: 10125 points, 7607 accepted, 2516 without any cell; download 10.3 s, read+sample 1.6 s
+[   86.2s]   USGS_1m_x80y203_PR_PRVI_D_2018.tif: 23008 points, 18130 accepted, 4875 without any cell; download 11.6 s, read+sample 1.5 s
+[   86.2s]   USGS_1M_19_x85y203_PR_PuertoRicoUSVI_D24.tif: 14262 points, 14262 accepted, 0 without any cell; download 9.3 s, read+sample 1.4 s
+[   86.6s]   USGS_1m_x77y205_PR_PRVI_G_2018.tif: 21053 points, 21053 accepted, 0 without any cell; download 9.8 s, read+sample 1.1 s
+[   94.4s]   USGS_1m_x24y201_PR_PRVI_C_2018.tif: 5633 points, 5633 accepted, 0 without any cell; download 8.8 s, read+sample 0.9 s
+[   96.7s]   USGS_1m_x81y201_PR_PRVI_H_2018.tif: 7839 points, 5441 accepted, 2380 without any cell; download 8.9 s, read+sample 1.5 s
+[   96.7s]   USGS_1M_19_x73y205_PR_PuertoRicoUSVI_D24.tif: 26119 points, 26119 accepted, 0 without any cell; download 7.5 s, read+sample 1.0 s
+[   99.5s]   USGS_1m_x23y201_PR_PRVI_C_2018.tif: 2079 points, 2079 accepted, 0 without any cell; download 4.0 s, read+sample 1.0 s
+[  100.5s]   USGS_1M_19_x79y199_PR_PuertoRicoUSVI_D24.tif: 7239 points, 7239 accepted, 0 without any cell; download 4.3 s, read+sample 1.0 s
+[  101.1s]   USGS_1m_x21y204_PR_PRVI_H_2018.tif: 10819 points, 10819 accepted, 0 without any cell; download 3.6 s, read+sample 0.8 s
+[  104.3s]   USGS_1m_x75y201_PR_PRVI_D_2018.tif: 4450 points, 1165 accepted, 3285 without any cell; download 3.4 s, read+sample 1.4 s
+[  104.8s]   USGS_1M_19_x86y201_PR_PuertoRicoUSVI_D24.tif: 151 points, 151 accepted, 0 without any cell; download 3.7 s, read+sample 0.6 s
+[  104.8s]   USGS_1M_19_x77y199_PR_PuertoRicoUSVI_D24.tif: 5837 points, 5837 accepted, 0 without any cell; download 3.1 s, read+sample 0.5 s
+[  108.2s]   USGS_1m_x80y204_PR_PRVI_E_2018.tif: 78516 points, 13842 accepted, 64656 without any cell; download 2.5 s, read+sample 1.5 s
+[  108.8s]   USGS_1m_x77y201_PR_PRVI_D_2018.tif: 8897 points, 804 accepted, 8093 without any cell; download 2.7 s, read+sample 1.4 s
+[  108.8s]   USGS_1m_x81y203_PR_PRVI_H_2018.tif: 29586 points, 10476 accepted, 19108 without any cell; download 2.5 s, read+sample 1.4 s
+[  111.7s]   USGS_1m_x13y201_PR_PRVI_D_2018.tif: 10943 points, 2333 accepted, 8607 without any cell; download 2.1 s, read+sample 1.3 s
+[  112.3s]   USGS_1m_x76y204_PR_PRVI_G_2018.tif: 15386 points, 2683 accepted, 12701 without any cell; download 2.3 s, read+sample 1.3 s
+[  112.3s]   USGS_1M_20_x26y203_PR_PuertoRicoUSVI_D24.tif: 271 points, 271 accepted, 0 without any cell; download 1.4 s, read+sample 0.3 s
+[  112.9s]   USGS_1m_x76y205_PR_PRVI_G_2018.tif: 8971 points, 1425 accepted, 7546 without any cell; download 1.7 s, read+sample 0.7 s
+[  113.2s]   USGS_1m_x84y201_PR_PRVI_H_2018.tif: 468 points, 468 accepted, 0 without any cell; download 1.3 s, read+sample 0.2 s
+[  113.7s]   USGS_1m_x81y199_PR_PRVI_A_2018.tif: 3687 points, 1537 accepted, 2144 without any cell; download 1.2 s, read+sample 0.3 s
+[  114.3s]   USGS_1m_x76y199_PR_PRVI_A_2018.tif: 187 points, 186 accepted, 1 without any cell; download 1.1 s, read+sample 0.3 s
+[  114.7s]   USGS_1m_x22y204_PR_PRVI_A_2018.tif: 1658 points, 24 accepted, 1634 without any cell; download 1.0 s, read+sample 0.5 s
+[  114.7s]   USGS_1m_x65y204_PR_PRVI_A_2018.tif: 1 points, 1 accepted, 0 without any cell; download 0.9 s, read+sample 0.0 s
+[  114.9s] shard 4 done in 114.9 s, ok = True
+[    0.0s] lidar shard run 40385549146 sha f4bf51759026ed5e85f07d466faa95aa9ca6b9eb
+[    1.4s] shard 5: 40 tiles, 9.0 GB, 587157 point lookups
+[   19.8s]   USGS_1m_x71y200_PR_PRVI_A_2018.tif: 10799 points, 10799 accepted, 0 without any cell; download 15.5 s, read+sample 2.8 s
+[   19.8s]   USGS_1M_20_x17y204_PR_PuertoRicoUSVI_D24.tif: 90971 points, 90971 accepted, 0 without any cell; download 15.3 s, read+sample 2.3 s
+[   19.8s]   USGS_1m_x70y203_PR_PRVI_E_2018.tif: 8713 points, 8402 accepted, 309 without any cell; download 15.1 s, read+sample 2.8 s
+[   35.1s]   USGS_1M_19_x74y200_PR_PuertoRicoUSVI_D24.tif: 25158 points, 25158 accepted, 0 without any cell; download 13.7 s, read+sample 2.2 s
+[   37.6s]   USGS_1m_x82y200_PR_PRVI_H_2018.tif: 10609 points, 10609 accepted, 0 without any cell; download 16.0 s, read+sample 2.1 s
+[   37.6s]   USGS_1M_19_x79y200_PR_PuertoRicoUSVI_D24.tif: 7656 points, 7656 accepted, 0 without any cell; download 15.4 s, read+sample 2.2 s
+[   51.0s]   USGS_1M_19_x84y203_PR_PuertoRicoUSVI_D24.tif: 2500 points, 2500 accepted, 0 without any cell; download 13.7 s, read+sample 2.2 s
+[   55.5s]   USGS_1m_x73y200_PR_PRVI_A_2018.tif: 14684 points, 14680 accepted, 4 without any cell; download 15.9 s, read+sample 2.2 s
+[   55.5s]   USGS_1M_19_x74y203_PR_PuertoRicoUSVI_D24.tif: 9661 points, 9661 accepted, 0 without any cell; download 12.7 s, read+sample 2.1 s
+[   66.5s]   USGS_1m_x72y201_PR_PRVI_A_2018.tif: 3887 points, 3887 accepted, 0 without any cell; download 13.3 s, read+sample 2.2 s
+[   69.7s]   USGS_1M_20_x20y203_PR_PuertoRicoUSVI_D24.tif: 726 points, 726 accepted, 0 without any cell; download 15.1 s, read+sample 2.1 s
+[   73.6s]   USGS_1M_19_x80y202_PR_PuertoRicoUSVI_D24.tif: 24728 points, 24728 accepted, 0 without any cell; download 15.9 s, read+sample 2.2 s
+[   84.0s]   USGS_1m_x78y200_PR_PRVI_H_2018.tif: 6567 points, 6461 accepted, 106 without any cell; download 15.3 s, read+sample 2.2 s
+[   86.1s]   USGS_1m_x78y202_PR_PRVI_H_2018.tif: 17977 points, 17977 accepted, 0 without any cell; download 14.2 s, read+sample 2.1 s
+[   87.9s]   USGS_1m_x20y204_PR_PRVI_H_2018.tif: 15669 points, 15625 accepted, 41 without any cell; download 12.1 s, read+sample 2.0 s
+[   98.3s]   USGS_1m_x70y205_PR_PRVI_F_2018.tif: 28107 points, 28107 accepted, 0 without any cell; download 12.4 s, read+sample 1.8 s
+[  100.4s]   USGS_1m_x18y203_PR_PRVI_D_2018.tif: 25946 points, 16252 accepted, 9691 without any cell; download 12.3 s, read+sample 1.9 s
+[  100.6s]   USGS_1m_x14y201_PR_PRVI_H_2018.tif: 13039 points, 8777 accepted, 4258 without any cell; download 10.8 s, read+sample 1.9 s
+[  111.7s]   USGS_1m_x82y204_PR_PRVI_G_2018.tif: 38965 points, 29516 accepted, 9438 without any cell; download 11.0 s, read+sample 2.3 s
+[  111.7s]   USGS_1m_x69y204_PR_PRVI_F_2018.tif: 25315 points, 17107 accepted, 8198 without any cell; download 9.2 s, read+sample 1.8 s
+[  112.4s]   USGS_1m_x14y200_PR_PRVI_A_2018.tif: 9809 points, 6365 accepted, 3444 without any cell; download 9.7 s, read+sample 2.1 s
+[  118.6s]   USGS_1m_x19y203_PR_PRVI_D_2018.tif: 13716 points, 8120 accepted, 5595 without any cell; download 5.2 s, read+sample 1.8 s
+[  121.9s]   USGS_1M_19_x71y199_PR_PuertoRicoUSVI_D24.tif: 3660 points, 3660 accepted, 0 without any cell; download 9.1 s, read+sample 1.1 s
+[  121.9s]   USGS_1M_20_x21y204_PR_PuertoRicoUSVI_D24.tif: 10819 points, 10818 accepted, 1 without any cell; download 4.5 s, read+sample 1.1 s
+[  123.8s]   USGS_1m_x16y205_PR_PRVI_G_2018.tif: 25185 points, 19266 accepted, 5914 without any cell; download 4.6 s, read+sample 1.1 s
+[  123.8s]   USGS_1M_19_x68y203_PR_PuertoRicoUSVI_D24.tif: 7781 points, 7781 accepted, 0 without any cell; download 4.2 s, read+sample 0.9 s
+[  126.3s]   USGS_1M_20_x18y205_PR_PuertoRicoUSVI_D24.tif: 6154 points, 6154 accepted, 0 without any cell; download 3.6 s, read+sample 0.7 s
+[  129.1s]   USGS_1m_x70y204_PR_PRVI_E_2018.tif: 15477 points, 5648 accepted, 9823 without any cell; download 3.8 s, read+sample 1.7 s
+[  129.1s]   USGS_1m_x15y203_PR_PRVI_H_2018.tif: 19109 points, 4837 accepted, 14269 without any cell; download 3.6 s, read+sample 1.6 s
+[  131.3s]   USGS_1m_x13y204_PR_PRVI_F_2018.tif: 14350 points, 2842 accepted, 11508 without any cell; download 3.2 s, read+sample 1.8 s
+[  132.4s]   USGS_1m_x19y205_PR_PRVI_E_2018.tif: 3134 points, 3114 accepted, 18 without any cell; download 2.8 s, read+sample 0.5 s
+[  133.3s]   USGS_1m_x82y204_PR_PRVI_D_2018.tif: 38965 points, 3180 accepted, 35782 without any cell; download 2.5 s, read+sample 1.7 s
+[  134.8s]   USGS_1m_x79y199_PR_PRVI_H_2018.tif: 7239 points, 3242 accepted, 3994 without any cell; download 2.3 s, read+sample 1.2 s
+[  135.3s]   USGS_1m_x80y199_PR_PRVI_H_2018.tif: 8861 points, 4461 accepted, 4396 without any cell; download 2.1 s, read+sample 0.8 s
+[  135.3s]   USGS_1m_x13y199_PR_PRVI_A_2018.tif: 2062 points, 2062 accepted, 0 without any cell; download 1.8 s, read+sample 0.1 s
+[  136.7s]   USGS_1M_20_x13y199_PR_PuertoRicoUSVI_D24.tif: 2062 points, 2062 accepted, 0 without any cell; download 1.7 s, read+sample 0.1 s
+[  136.9s]   USGS_1m_x18y199_PR_PRVI_H_2018.tif: 749 points, 749 accepted, 0 without any cell; download 1.5 s, read+sample 0.1 s
+[  138.3s]   USGS_1m_x85y203_PR_PRVI_A_2018.tif: 14262 points, 0 accepted, 14262 without any cell; download 1.6 s, read+sample 1.4 s
+[  138.3s]   USGS_1m_x13y199_PR_PRVI_C_2018.tif: 2062 points, 0 accepted, 2062 without any cell; download 1.4 s, read+sample 0.1 s
+[  138.3s]   USGS_1M_20_x19y199_PR_PuertoRicoUSVI_D24.tif: 24 points, 24 accepted, 0 without any cell; download 1.2 s, read+sample 0.0 s
+[  138.7s] shard 5 done in 138.7 s, ok = True
+[    0.0s] lidar shard run 40385549146 sha f4bf51759026ed5e85f07d466faa95aa9ca6b9eb
+[    1.4s] shard 6: 39 tiles, 9.0 GB, 933979 point lookups
+[   15.1s]   USGS_1m_x75y200_PR_PRVI_A_2018.tif: 42609 points, 42609 accepted, 0 without any cell; download 11.3 s, read+sample 2.3 s
+[   15.9s]   USGS_1M_20_x16y204_PR_PuertoRicoUSVI_D24.tif: 86283 points, 86283 accepted, 0 without any cell; download 11.5 s, read+sample 3.0 s
+[   15.9s]   USGS_1M_19_x81y204_PR_PuertoRicoUSVI_D24.tif: 89649 points, 89649 accepted, 0 without any cell; download 11.3 s, read+sample 3.0 s
+[   28.0s]   USGS_1M_19_x83y202_PR_PuertoRicoUSVI_D24.tif: 24674 points, 24674 accepted, 0 without any cell; download 10.7 s, read+sample 2.2 s
+[   28.4s]   USGS_1M_19_x82y202_PR_PuertoRicoUSVI_D24.tif: 33900 points, 33900 accepted, 0 without any cell; download 10.1 s, read+sample 2.5 s
+[   29.4s]   USGS_1M_20_x18y202_PR_PuertoRicoUSVI_D24.tif: 34678 points, 34678 accepted, 0 without any cell; download 10.9 s, read+sample 2.6 s
+[   41.1s]   USGS_1m_x79y200_PR_PRVI_H_2018.tif: 7656 points, 7656 accepted, 0 without any cell; download 10.8 s, read+sample 2.3 s
+[   42.4s]   USGS_1m_x71y201_PR_PRVI_A_2018.tif: 9120 points, 9120 accepted, 0 without any cell; download 11.8 s, read+sample 2.2 s
+[   43.1s]   USGS_1M_19_x77y203_PR_PuertoRicoUSVI_D24.tif: 14500 points, 14500 accepted, 0 without any cell; download 11.3 s, read+sample 2.4 s
+[   54.7s]   USGS_1M_19_x72y202_PR_PuertoRicoUSVI_D24.tif: 4582 points, 4582 accepted, 0 without any cell; download 11.0 s, read+sample 2.4 s
+[   54.7s]   USGS_1m_x77y204_PR_PRVI_G_2018.tif: 15599 points, 14669 accepted, 927 without any cell; download 10.0 s, read+sample 2.1 s
+[   56.0s]   USGS_1m_x83y204_PR_PRVI_H_2018.tif: 25453 points, 19976 accepted, 5473 without any cell; download 10.2 s, read+sample 2.6 s
+[   67.2s]   USGS_1m_x16y202_PR_PRVI_H_2018.tif: 19920 points, 19914 accepted, 6 without any cell; download 10.3 s, read+sample 2.2 s
+[   67.2s]   USGS_1M_19_x78y202_PR_PuertoRicoUSVI_D24.tif: 17977 points, 17977 accepted, 0 without any cell; download 9.5 s, read+sample 2.3 s
+[   68.5s]   USGS_1M_19_x69y204_PR_PuertoRicoUSVI_D24.tif: 25315 points, 25315 accepted, 0 without any cell; download 10.1 s, read+sample 2.3 s
+[   78.3s]   USGS_1m_x73y204_PR_PRVI_F_2018.tif: 15485 points, 14084 accepted, 1396 without any cell; download 9.2 s, read+sample 2.5 s
+[   78.3s]   USGS_1m_x81y203_PR_PRVI_D_2018.tif: 29586 points, 18594 accepted, 10992 without any cell; download 8.6 s, read+sample 2.0 s
+[   78.4s]   USGS_1M_19_x84y204_PR_PuertoRicoUSVI_D24.tif: 12238 points, 12237 accepted, 1 without any cell; download 7.6 s, read+sample 2.3 s
+[   86.6s]   USGS_1m_x75y204_PR_PRVI_F_2018.tif: 16383 points, 11346 accepted, 5036 without any cell; download 6.4 s, read+sample 2.3 s
+[   86.6s]   USGS_1M_19_x71y205_PR_PuertoRicoUSVI_D24.tif: 17077 points, 17077 accepted, 0 without any cell; download 6.3 s, read+sample 1.4 s
+[   87.2s]   USGS_1m_x17y201_PR_PRVI_H_2018.tif: 8250 points, 3762 accepted, 4471 without any cell; download 6.4 s, read+sample 2.3 s
+[   90.6s]   USGS_1M_20_x23y201_PR_PuertoRicoUSVI_D24.tif: 2079 points, 2079 accepted, 0 without any cell; download 3.0 s, read+sample 1.4 s
+[   90.9s]   USGS_1M_19_x69y205_PR_PuertoRicoUSVI_D24.tif: 17605 points, 17604 accepted, 1 without any cell; download 3.2 s, read+sample 1.1 s
+[   90.9s]   USGS_1m_x72y199_PR_PRVI_A_2018.tif: 3993 points, 3993 accepted, 0 without any cell; download 2.6 s, read+sample 1.2 s
+[   93.8s]   USGS_1M_19_x80y199_PR_PuertoRicoUSVI_D24.tif: 8861 points, 8861 accepted, 0 without any cell; download 2.0 s, read+sample 1.2 s
+[   94.7s]   USGS_1m_x19y204_PR_PRVI_H_2018.tif: 34769 points, 10121 accepted, 24636 without any cell; download 1.9 s, read+sample 1.8 s
+[   94.8s]   USGS_1m_x69y202_PR_PRVI_A_2018.tif: 26835 points, 17055 accepted, 9779 without any cell; download 2.1 s, read+sample 1.8 s
+[   97.6s]   USGS_1m_x81y204_PR_PRVI_E_2018.tif: 89649 points, 31293 accepted, 58335 without any cell; download 1.7 s, read+sample 2.1 s
+[   97.6s]   USGS_1m_x25y203_PR_PRVI_C_2018.tif: 1895 points, 1895 accepted, 0 without any cell; download 1.4 s, read+sample 0.8 s
+[   98.4s]   USGS_1m_x77y201_PR_PRVI_H_2018.tif: 8897 points, 3568 accepted, 5324 without any cell; download 1.6 s, read+sample 2.0 s
+[   99.2s]   USGS_1m_x68y204_PR_PRVI_E_2018.tif: 4372 points, 3475 accepted, 897 without any cell; download 1.6 s, read+sample 0.6 s
+[  100.8s]   USGS_1m_x17y204_PR_PRVI_D_2018.tif: 90971 points, 7233 accepted, 83728 without any cell; download 1.2 s, read+sample 2.0 s
+[  100.8s]   USGS_1m_x14y199_PR_PRVI_A_2018.tif: 1700 points, 1614 accepted, 85 without any cell; download 0.9 s, read+sample 0.4 s
+[  102.0s]   USGS_1m_x79y204_PR_PRVI_D_2018.tif: 77628 points, 5425 accepted, 72195 without any cell; download 0.9 s, read+sample 1.9 s
+[  102.0s]   USGS_1M_19_x62y201_PR_PuertoRicoUSVI_D24.tif: 4 points, 4 accepted, 0 without any cell; download 0.7 s, read+sample 0.1 s
+[  103.1s]   USGS_1m_x14y201_PR_PRVI_D_2018.tif: 13039 points, 171 accepted, 12867 without any cell; download 0.8 s, read+sample 1.8 s
+[  103.1s]   USGS_1m_x76y199_PR_PRVI_C_2018.tif: 187 points, 1 accepted, 186 without any cell; download 0.5 s, read+sample 0.5 s
+[  103.1s]   USGS_1m_x82y199_PR_PRVI_H_2018.tif: 484 points, 484 accepted, 0 without any cell; download 0.6 s, read+sample 0.1 s
+[  103.1s]   USGS_1M_19_x68y200_PR_PuertoRicoUSVI_D24.tif: 77 points, 77 accepted, 0 without any cell; download 0.4 s, read+sample 0.0 s
+[  103.7s] shard 6 done in 103.7 s, ok = True
+[    0.0s] lidar shard run 40385549146 sha f4bf51759026ed5e85f07d466faa95aa9ca6b9eb
+[    1.3s] shard 7: 40 tiles, 9.0 GB, 572933 point lookups
+[   22.2s]   USGS_1M_19_x80y204_PR_PuertoRicoUSVI_D24.tif: 78516 points, 78516 accepted, 0 without any cell; download 18.1 s, read+sample 2.8 s
+[   22.2s]   USGS_1M_19_x78y204_PR_PuertoRicoUSVI_D24.tif: 26341 points, 26341 accepted, 0 without any cell; download 17.7 s, read+sample 2.2 s
+[   22.2s]   USGS_1M_20_x19y201_PR_PuertoRicoUSVI_D24.tif: 17893 points, 17893 accepted, 0 without any cell; download 17.6 s, read+sample 2.7 s
+[   38.1s]   USGS_1M_20_x15y200_PR_PuertoRicoUSVI_D24.tif: 12012 points, 12012 accepted, 0 without any cell; download 14.7 s, read+sample 2.1 s
+[   73.7s]   USGS_1m_x76y203_PR_PRVI_D_2018.tif: 8155 points, 8155 accepted, 0 without any cell; download 49.9 s, read+sample 2.1 s
+[   73.7s]   USGS_1M_19_x82y201_PR_PuertoRicoUSVI_D24.tif: 12215 points, 12215 accepted, 0 without any cell; download 16.6 s, read+sample 2.2 s
+[   73.7s]   USGS_1M_19_x71y202_PR_PuertoRicoUSVI_D24.tif: 6279 points, 6279 accepted, 0 without any cell; download 15.3 s, read+sample 2.1 s
+[   73.7s]   USGS_1M_20_x18y201_PR_PuertoRicoUSVI_D24.tif: 9488 points, 9488 accepted, 0 without any cell; download 14.1 s, read+sample 2.2 s
+[   73.7s]   USGS_1M_20_x14y201_PR_PuertoRicoUSVI_D24.tif: 13039 points, 13039 accepted, 0 without any cell; download 13.2 s, read+sample 2.1 s
+[   73.7s]   USGS_1m_x18y202_PR_PRVI_H_2018.tif: 34678 points, 33159 accepted, 1497 without any cell; download 13.6 s, read+sample 2.2 s
+[   88.5s]   USGS_1m_x79y202_PR_PRVI_H_2018.tif: 14216 points, 14210 accepted, 6 without any cell; download 15.4 s, read+sample 2.1 s
+[   91.9s]   USGS_1M_19_x76y202_PR_PuertoRicoUSVI_D24.tif: 3275 points, 3275 accepted, 0 without any cell; download 16.5 s, read+sample 2.1 s
+[   91.9s]   USGS_1M_19_x73y202_PR_PuertoRicoUSVI_D24.tif: 5690 points, 5690 accepted, 0 without any cell; download 14.6 s, read+sample 2.2 s
+[  104.3s]   USGS_1M_19_x80y201_PR_PuertoRicoUSVI_D24.tif: 18898 points, 18898 accepted, 0 without any cell; download 13.5 s, read+sample 2.2 s
+[  106.2s]   USGS_1m_x19y200_PR_PRVI_H_2018.tif: 13322 points, 13322 accepted, 0 without any cell; download 13.5 s, read+sample 2.2 s
+[  106.2s]   USGS_1M_20_x14y205_PR_PuertoRicoUSVI_D24.tif: 21974 points, 21974 accepted, 0 without any cell; download 11.8 s, read+sample 1.8 s
+[  116.4s]   USGS_1m_x73y202_PR_PRVI_A_2018.tif: 5690 points, 5045 accepted, 643 without any cell; download 10.0 s, read+sample 2.0 s
+[  118.8s]   USGS_1m_x80y201_PR_PRVI_H_2018.tif: 18898 points, 11629 accepted, 7240 without any cell; download 11.2 s, read+sample 2.0 s
+[  118.8s]   USGS_1m_x75y201_PR_PRVI_A_2018.tif: 4450 points, 3285 accepted, 1165 without any cell; download 8.9 s, read+sample 1.9 s
+[  128.9s]   USGS_1m_x17y204_PR_PRVI_G_2018.tif: 90971 points, 59340 accepted, 31606 without any cell; download 10.5 s, read+sample 2.1 s
+[  128.9s]   USGS_1m_x76y204_PR_PRVI_F_2018.tif: 15386 points, 10161 accepted, 5224 without any cell; download 8.2 s, read+sample 1.9 s
+[  128.9s]   USGS_1m_x72y202_PR_PRVI_D_2018.tif: 4582 points, 2026 accepted, 2556 without any cell; download 5.6 s, read+sample 1.8 s
+[  132.3s]   USGS_1m_x69y205_PR_PRVI_F_2018.tif: 17605 points, 17604 accepted, 1 without any cell; download 4.9 s, read+sample 1.1 s
+[  133.6s]   USGS_1m_x76y205_PR_PRVI_F_2018.tif: 8971 points, 7546 accepted, 1425 without any cell; download 5.2 s, read+sample 1.1 s
+[  134.8s]   USGS_1m_x76y201_PR_PRVI_D_2018.tif: 14757 points, 4137 accepted, 10617 without any cell; download 4.1 s, read+sample 1.8 s
+[  137.7s]   USGS_1m_x85y204_PR_PRVI_H_2018.tif: 9462 points, 9437 accepted, 25 without any cell; download 4.4 s, read+sample 0.9 s
+[  138.6s]   USGS_1M_19_x80y205_PR_PuertoRicoUSVI_D24.tif: 17848 points, 17844 accepted, 4 without any cell; download 4.0 s, read+sample 1.0 s
+[  140.3s]   USGS_1m_x14y201_PR_PRVI_A_2018.tif: 13039 points, 4091 accepted, 8941 without any cell; download 3.7 s, read+sample 1.8 s
+[  141.2s]   USGS_1m_x61y201_PR_PRVI_A_2018.tif: 17 points, 17 accepted, 0 without any cell; download 3.4 s, read+sample 0.2 s
+[  143.4s]   USGS_1m_x73y202_PR_PRVI_D_2018.tif: 5690 points, 645 accepted, 5043 without any cell; download 3.0 s, read+sample 1.7 s
+[  145.1s]   USGS_1m_x79y203_PR_PRVI_H_2018.tif: 19980 points, 2817 accepted, 17162 without any cell; download 3.0 s, read+sample 1.7 s
+[  145.1s]   USGS_1m_x22y202_PR_PRVI_H_2018.tif: 921 points, 880 accepted, 41 without any cell; download 2.4 s, read+sample 0.5 s
+[  146.1s]   USGS_1M_19_x73y199_PR_PuertoRicoUSVI_D24.tif: 117 points, 107 accepted, 9 without any cell; download 2.4 s, read+sample 0.3 s
+[  146.7s]   USGS_1m_x17y199_PR_PRVI_A_2018.tif: 5650 points, 2880 accepted, 2762 without any cell; download 2.1 s, read+sample 0.4 s
+[  147.4s]   USGS_1m_x17y199_PR_PRVI_H_2018.tif: 5650 points, 2771 accepted, 2871 without any cell; download 2.0 s, read+sample 0.4 s
+[  148.3s]   USGS_1m_x81y199_PR_PRVI_H_2018.tif: 3687 points, 2150 accepted, 1530 without any cell; download 1.8 s, read+sample 0.4 s
+[  149.7s]   USGS_1m_x70y203_PR_PRVI_D_2018.tif: 8713 points, 312 accepted, 8400 without any cell; download 1.4 s, read+sample 1.6 s
+[  150.0s]   USGS_1M_19_x86y204_PR_PuertoRicoUSVI_D24.tif: 24 points, 24 accepted, 0 without any cell; download 2.3 s, read+sample 0.2 s
+[  150.0s]   USGS_1m_x14y199_PR_PRVI_H_2018.tif: 1700 points, 86 accepted, 1614 without any cell; download 1.4 s, read+sample 0.3 s
+[  151.4s]   USGS_1m_x19y205_PR_PRVI_H_2018.tif: 3134 points, 20 accepted, 3112 without any cell; download 1.3 s, read+sample 0.4 s
+[  151.8s] shard 7 done in 151.8 s, ok = True
+[    0.0s] lidar shard run 40385549146 sha f4bf51759026ed5e85f07d466faa95aa9ca6b9eb
+[    1.5s] shard 8: 40 tiles, 9.0 GB, 519982 point lookups
+[   43.6s]   USGS_1m_x83y201_PR_PRVI_H_2018.tif: 23546 points, 23546 accepted, 0 without any cell; download 39.7 s, read+sample 2.4 s
+[   43.6s]   USGS_1m_x70y201_PR_PRVI_A_2018.tif: 15745 points, 15745 accepted, 0 without any cell; download 25.1 s, read+sample 2.4 s
+[   43.6s]   USGS_1M_19_x74y204_PR_PuertoRicoUSVI_D24.tif: 9372 points, 9372 accepted, 0 without any cell; download 36.2 s, read+sample 2.2 s
+[   45.1s]   USGS_1M_19_x77y200_PR_PuertoRicoUSVI_D24.tif: 12077 points, 12077 accepted, 0 without any cell; download 13.7 s, read+sample 2.2 s
+[  121.9s]   USGS_1M_19_x81y200_PR_PuertoRicoUSVI_D24.tif: 16280 points, 16280 accepted, 0 without any cell; download 79.7 s, read+sample 2.2 s
+[  121.9s]   USGS_1M_19_x76y203_PR_PuertoRicoUSVI_D24.tif: 8155 points, 8155 accepted, 0 without any cell; download 16.5 s, read+sample 2.2 s
+[  121.9s]   USGS_1m_x13y203_PR_PRVI_D_2018.tif: 9614 points, 9614 accepted, 0 without any cell; download 15.5 s, read+sample 2.2 s
+[  121.9s]   USGS_1M_19_x71y204_PR_PuertoRicoUSVI_D24.tif: 10125 points, 10125 accepted, 0 without any cell; download 13.2 s, read+sample 2.2 s
+[  121.9s]   USGS_1m_x80y200_PR_PRVI_H_2018.tif: 11307 points, 11295 accepted, 9 without any cell; download 13.6 s, read+sample 2.2 s
+[  121.9s]   USGS_1m_x78y204_PR_PRVI_G_2018.tif: 26341 points, 22517 accepted, 3819 without any cell; download 15.2 s, read+sample 2.2 s
+[  121.9s]   USGS_1m_x79y204_PR_PRVI_G_2018.tif: 77628 points, 72203 accepted, 5418 without any cell; download 14.6 s, read+sample 2.3 s
+[  121.9s]   USGS_1m_x13y202_PR_PRVI_D_2018.tif: 6666 points, 6666 accepted, 0 without any cell; download 15.0 s, read+sample 2.2 s
+[  121.9s]   USGS_1M_20_x15y202_PR_PuertoRicoUSVI_D24.tif: 15597 points, 15597 accepted, 0 without any cell; download 13.1 s, read+sample 2.2 s
+[  127.2s]   USGS_1M_20_x16y201_PR_PuertoRicoUSVI_D24.tif: 22292 points, 22292 accepted, 0 without any cell; download 13.9 s, read+sample 2.2 s
+[  127.2s]   USGS_1m_x14y204_PR_PRVI_G_2018.tif: 19221 points, 13089 accepted, 6130 without any cell; download 11.6 s, read+sample 2.1 s
+[  136.9s]   USGS_1m_x72y204_PR_PRVI_F_2018.tif: 10679 points, 8306 accepted, 2368 without any cell; download 12.9 s, read+sample 2.0 s
+[  139.9s]   USGS_1m_x15y203_PR_PRVI_D_2018.tif: 19109 points, 14272 accepted, 4836 without any cell; download 11.6 s, read+sample 2.0 s
+[  140.3s]   USGS_1M_19_x69y202_PR_PuertoRicoUSVI_D24.tif: 26835 points, 26835 accepted, 0 without any cell; download 11.3 s, read+sample 1.7 s
+[  148.0s]   USGS_1m_x20y201_PR_PRVI_H_2018.tif: 16807 points, 16807 accepted, 0 without any cell; download 9.5 s, read+sample 1.6 s
+[  151.0s]   USGS_1M_20_x24y201_PR_PuertoRicoUSVI_D24.tif: 5633 points, 5633 accepted, 0 without any cell; download 9.9 s, read+sample 1.2 s
+[  151.0s]   USGS_1m_x72y205_PR_PRVI_F_2018.tif: 18406 points, 18406 accepted, 0 without any cell; download 8.1 s, read+sample 1.3 s
+[  155.5s]   USGS_1m_x71y202_PR_PRVI_A_2018.tif: 6279 points, 2891 accepted, 3386 without any cell; download 5.6 s, read+sample 1.9 s
+[  156.5s]   USGS_1M_19_x79y205_PR_PuertoRicoUSVI_D24.tif: 18706 points, 18706 accepted, 0 without any cell; download 5.5 s, read+sample 1.2 s
+[  156.8s]   USGS_1M_20_x16y199_PR_PuertoRicoUSVI_D24.tif: 7131 points, 7131 accepted, 0 without any cell; download 4.8 s, read+sample 0.9 s
+[  161.6s]   USGS_1m_x13y204_PR_PRVI_D_2018.tif: 14350 points, 5292 accepted, 9058 without any cell; download 4.3 s, read+sample 1.8 s
+[  162.2s]   USGS_1M_20_x15y199_PR_PuertoRicoUSVI_D24.tif: 4756 points, 4756 accepted, 0 without any cell; download 4.3 s, read+sample 1.3 s
+[  162.2s]   USGS_1m_x70y199_PR_PRVI_A_2018.tif: 2221 points, 2221 accepted, 0 without any cell; download 3.6 s, read+sample 0.7 s
+[  166.2s]   USGS_1m_x13y205_PR_PRVI_F_2018.tif: 24854 points, 11326 accepted, 13527 without any cell; download 3.6 s, read+sample 1.5 s
+[  167.1s]   USGS_1m_x17y203_PR_PRVI_H_2018.tif: 29616 points, 10745 accepted, 18870 without any cell; download 3.5 s, read+sample 1.9 s
+[  167.1s]   USGS_1M_19_x78y199_PR_PuertoRicoUSVI_D24.tif: 5909 points, 5909 accepted, 0 without any cell; download 3.4 s, read+sample 1.2 s
+[  169.7s]   USGS_1M_20_x19y205_PR_PuertoRicoUSVI_D24.tif: 3134 points, 3134 accepted, 0 without any cell; download 2.8 s, read+sample 0.6 s
+[  170.0s]   USGS_1M_20_x17y199_PR_PuertoRicoUSVI_D24.tif: 5650 points, 5650 accepted, 0 without any cell; download 2.7 s, read+sample 0.6 s
+[  170.0s]   USGS_1m_x22y204_PR_PRVI_H_2018.tif: 1658 points, 1634 accepted, 24 without any cell; download 2.2 s, read+sample 0.7 s
+[  172.3s]   USGS_1M_19_x81y199_PR_PuertoRicoUSVI_D24.tif: 3687 points, 3687 accepted, 0 without any cell; download 2.0 s, read+sample 0.5 s
+[  172.3s]   USGS_1M_19_x84y201_PR_PuertoRicoUSVI_D24.tif: 468 points, 468 accepted, 0 without any cell; download 1.9 s, read+sample 0.3 s
+[  172.3s]   USGS_1M_20_x20y200_PR_PuertoRicoUSVI_D24.tif: 555 points, 555 accepted, 0 without any cell; download 1.9 s, read+sample 0.4 s
+[  173.9s]   USGS_1M_19_x68y199_PR_PuertoRicoUSVI_D24.tif: 2034 points, 2034 accepted, 0 without any cell; download 1.6 s, read+sample 0.1 s
+[  174.4s]   USGS_1m_x22y203_PR_PRVI_A_2018.tif: 7181 points, 24 accepted, 7157 without any cell; download 1.5 s, read+sample 0.7 s
+[  174.4s]   USGS_1m_x21y201_PR_PRVI_H_2018.tif: 15 points, 15 accepted, 0 without any cell; download 1.4 s, read+sample 0.0 s
+[  175.1s]   USGS_1M_20_x20y205_PR_PuertoRicoUSVI_D24.tif: 343 points, 343 accepted, 0 without any cell; download 1.4 s, read+sample 0.0 s
+[  175.5s] shard 8 done in 175.5 s, ok = True
+[    0.0s] lidar shard run 40385549146 sha f4bf51759026ed5e85f07d466faa95aa9ca6b9eb
+[    1.4s] shard 9: 40 tiles, 9.0 GB, 719917 point lookups
+[   19.9s]   USGS_1M_20_x20y202_PR_PuertoRicoUSVI_D24.tif: 15020 points, 15020 accepted, 0 without any cell; download 15.8 s, read+sample 2.7 s
+[   19.9s]   USGS_1M_19_x70y203_PR_PuertoRicoUSVI_D24.tif: 8713 points, 8713 accepted, 0 without any cell; download 15.3 s, read+sample 2.2 s
+[   19.9s]   USGS_1M_19_x72y200_PR_PuertoRicoUSVI_D24.tif: 23708 points, 23708 accepted, 0 without any cell; download 15.6 s, read+sample 2.7 s
+[   37.1s]   USGS_1m_x81y200_PR_PRVI_H_2018.tif: 16280 points, 16280 accepted, 0 without any cell; download 16.0 s, read+sample 2.2 s
+[   37.1s]   USGS_1m_x82y201_PR_PRVI_H_2018.tif: 12215 points, 12215 accepted, 0 without any cell; download 13.9 s, read+sample 2.2 s
+[   38.5s]   USGS_1M_20_x19y202_PR_PuertoRicoUSVI_D24.tif: 33191 points, 33191 accepted, 0 without any cell; download 16.2 s, read+sample 2.3 s
+[   55.5s]   USGS_1M_20_x13y203_PR_PuertoRicoUSVI_D24.tif: 9614 points, 9614 accepted, 0 without any cell; download 17.1 s, read+sample 2.4 s
+[   55.5s]   USGS_1m_x81y202_PR_PRVI_H_2018.tif: 42423 points, 42259 accepted, 162 without any cell; download 14.5 s, read+sample 2.5 s
+[   55.5s]   USGS_1M_19_x73y200_PR_PuertoRicoUSVI_D24.tif: 14684 points, 14679 accepted, 5 without any cell; download 14.2 s, read+sample 2.1 s
+[   71.3s]   USGS_1M_19_x75y201_PR_PuertoRicoUSVI_D24.tif: 4450 points, 4450 accepted, 0 without any cell; download 15.0 s, read+sample 2.1 s
+[   72.4s]   USGS_1m_x73y201_PR_PRVI_A_2018.tif: 3465 points, 3465 accepted, 0 without any cell; download 15.0 s, read+sample 2.4 s
+[   72.4s]   USGS_1m_x77y203_PR_PRVI_D_2018.tif: 14500 points, 14218 accepted, 282 without any cell; download 13.1 s, read+sample 2.4 s
+[   88.3s]   USGS_1M_20_x16y202_PR_PuertoRicoUSVI_D24.tif: 19920 points, 19920 accepted, 0 without any cell; download 15.1 s, read+sample 2.2 s
+[   88.3s]   USGS_1M_20_x15y201_PR_PuertoRicoUSVI_D24.tif: 15181 points, 15181 accepted, 0 without any cell; download 12.8 s, read+sample 2.1 s
+[   88.5s]   USGS_1M_20_x19y200_PR_PuertoRicoUSVI_D24.tif: 13322 points, 13322 accepted, 0 without any cell; download 14.0 s, read+sample 2.0 s
+[  101.3s]   USGS_1m_x14y205_PR_PRVI_G_2018.tif: 21974 points, 21974 accepted, 0 without any cell; download 13.0 s, read+sample 1.9 s
+[  103.1s]   USGS_1m_x16y203_PR_PRVI_D_2018.tif: 18955 points, 16032 accepted, 2919 without any cell; download 12.6 s, read+sample 2.1 s
+[  103.1s]   USGS_1M_19_x77y205_PR_PuertoRicoUSVI_D24.tif: 21053 points, 21053 accepted, 0 without any cell; download 11.8 s, read+sample 1.5 s
+[  113.4s]   USGS_1m_x81y204_PR_PRVI_G_2018.tif: 89649 points, 53369 accepted, 36249 without any cell; download 9.8 s, read+sample 2.3 s
+[  113.4s]   USGS_1m_x21y202_PR_PRVI_H_2018.tif: 9593 points, 8761 accepted, 827 without any cell; download 8.8 s, read+sample 1.7 s
+[  113.4s]   USGS_1M_19_x78y205_PR_PuertoRicoUSVI_D24.tif: 20151 points, 20151 accepted, 0 without any cell; download 8.6 s, read+sample 1.5 s
+[  119.8s]   USGS_1m_x19y204_PR_PRVI_G_2018.tif: 34769 points, 21033 accepted, 13726 without any cell; download 5.2 s, read+sample 2.0 s
+[  120.1s]   USGS_1M_20_x16y205_PR_PuertoRicoUSVI_D24.tif: 25185 points, 25185 accepted, 0 without any cell; download 5.6 s, read+sample 1.3 s
+[  120.1s]   USGS_1m_x83y200_PR_PRVI_H_2018.tif: 6818 points, 6818 accepted, 0 without any cell; download 4.6 s, read+sample 1.3 s
+[  125.6s]   USGS_1m_x75y204_PR_PRVI_D_2018.tif: 16383 points, 5037 accepted, 11344 without any cell; download 4.2 s, read+sample 2.1 s
+[  125.6s]   USGS_1m_x68y203_PR_PRVI_E_2018.tif: 7781 points, 7781 accepted, 0 without any cell; download 4.0 s, read+sample 1.2 s
+[  125.6s]   USGS_1m_x18y204_PR_PRVI_E_2018.tif: 70585 points, 23888 accepted, 46670 without any cell; download 3.6 s, read+sample 1.8 s
+[  129.6s]   USGS_1M_19_x81y205_PR_PuertoRicoUSVI_D24.tif: 22735 points, 22734 accepted, 1 without any cell; download 3.8 s, read+sample 0.8 s
+[  129.6s]   USGS_1m_x25y201_PR_PRVI_C_2018.tif: 23 points, 23 accepted, 0 without any cell; download 3.5 s, read+sample 0.1 s
+[  129.6s]   USGS_1M_19_x61y200_PR_PuertoRicoUSVI_D24.tif: 12 points, 12 accepted, 0 without any cell; download 3.1 s, read+sample 0.4 s
+[  133.8s]   USGS_1m_x14y204_PR_PRVI_D_2018.tif: 19221 points, 6132 accepted, 13085 without any cell; download 3.0 s, read+sample 1.7 s
+[  133.8s]   USGS_1m_x18y204_PR_PRVI_D_2018.tif: 70585 points, 3530 accepted, 67050 without any cell; download 2.6 s, read+sample 1.9 s
+[  133.8s]   USGS_1m_x73y199_PR_PRVI_A_2018.tif: 117 points, 110 accepted, 7 without any cell; download 2.5 s, read+sample 0.3 s
+[  134.9s]   USGS_1M_20_x22y201_PR_PuertoRicoUSVI_D24.tif: 4 points, 4 accepted, 0 without any cell; download 2.4 s, read+sample 0.2 s
+[  137.2s]   USGS_1m_x74y202_PR_PRVI_A_2018.tif: 6736 points, 1025 accepted, 5711 without any cell; download 1.9 s, read+sample 1.6 s
+[  137.2s]   USGS_1m_x68y204_PR_PRVI_F_2018.tif: 4372 points, 897 accepted, 3473 without any cell; download 1.7 s, read+sample 0.5 s
+[  137.2s]   USGS_1m_x83y205_PR_PRVI_H_2018.tif: 5588 points, 2183 accepted, 3398 without any cell; download 1.7 s, read+sample 0.1 s
+[  138.1s]   USGS_1m_x22y202_PR_PRVI_A_2018.tif: 921 points, 0 accepted, 921 without any cell; download 1.6 s, read+sample 0.5 s
+[  138.2s]   USGS_1m_x21y201_PR_PRVI_A_2018.tif: 15 points, 15 accepted, 0 without any cell; download 1.5 s, read+sample 0.0 s
+[  138.5s]   USGS_1M_19_x86y202_PR_PuertoRicoUSVI_D24.tif: 6 points, 6 accepted, 0 without any cell; download 1.3 s, read+sample 0.0 s
+[  139.0s] shard 9 done in 139.0 s, ok = True
+[    0.0s] lidar shard run 40385549146 sha f4bf51759026ed5e85f07d466faa95aa9ca6b9eb
+[    1.6s] shard 10: 40 tiles, 9.0 GB, 699591 point lookups
+[   15.3s]   USGS_1M_19_x75y200_PR_PuertoRicoUSVI_D24.tif: 42609 points, 42609 accepted, 0 without any cell; download 10.8 s, read+sample 2.8 s
+[   15.3s]   USGS_1M_19_x69y203_PR_PuertoRicoUSVI_D24.tif: 21480 points, 21480 accepted, 0 without any cell; download 11.1 s, read+sample 2.2 s
+[   16.0s]   USGS_1m_x72y200_PR_PRVI_A_2018.tif: 23708 points, 23708 accepted, 0 without any cell; download 11.5 s, read+sample 2.8 s
+[   27.3s]   USGS_1m_x77y200_PR_PRVI_A_2018.tif: 12077 points, 12077 accepted, 0 without any cell; download 10.0 s, read+sample 2.2 s
+[   29.5s]   USGS_1M_19_x78y200_PR_PuertoRicoUSVI_D24.tif: 6567 points, 6567 accepted, 0 without any cell; download 12.0 s, read+sample 2.2 s
+[   31.6s]   USGS_1M_19_x82y203_PR_PuertoRicoUSVI_D24.tif: 21211 points, 21211 accepted, 0 without any cell; download 13.2 s, read+sample 2.3 s
+[   39.6s]   USGS_1m_x73y203_PR_PRVI_D_2018.tif: 6837 points, 6837 accepted, 0 without any cell; download 10.0 s, read+sample 2.2 s
+[   42.3s]   USGS_1M_20_x19y203_PR_PuertoRicoUSVI_D24.tif: 13716 points, 13716 accepted, 0 without any cell; download 10.4 s, read+sample 2.3 s
+[   44.1s]   USGS_1M_19_x71y201_PR_PuertoRicoUSVI_D24.tif: 9120 points, 9120 accepted, 0 without any cell; download 10.1 s, read+sample 2.3 s
+[   75.9s]   USGS_1M_20_x14y203_PR_PuertoRicoUSVI_D24.tif: 13728 points, 13728 accepted, 0 without any cell; download 34.0 s, read+sample 2.3 s
+[   75.9s]   USGS_1m_x80y202_PR_PRVI_H_2018.tif: 24728 points, 24728 accepted, 0 without any cell; download 10.9 s, read+sample 2.2 s
+[   75.9s]   USGS_1m_x75y202_PR_PRVI_D_2018.tif: 9032 points, 9032 accepted, 0 without any cell; download 10.4 s, read+sample 2.4 s
+[   75.9s]   USGS_1M_19_x78y201_PR_PuertoRicoUSVI_D24.tif: 15600 points, 15600 accepted, 0 without any cell; download 10.2 s, read+sample 2.2 s
+[   75.9s]   USGS_1m_x15y201_PR_PRVI_H_2018.tif: 15181 points, 15081 accepted, 96 without any cell; download 11.1 s, read+sample 2.4 s
+[   80.3s]   USGS_1m_x15y204_PR_PRVI_G_2018.tif: 32839 points, 27505 accepted, 5330 without any cell; download 10.2 s, read+sample 2.2 s
+[   81.3s]   USGS_1m_x16y204_PR_PRVI_G_2018.tif: 86283 points, 76639 accepted, 9630 without any cell; download 8.4 s, read+sample 2.4 s
+[   86.3s]   USGS_1m_x70y204_PR_PRVI_F_2018.tif: 15477 points, 9790 accepted, 5684 without any cell; download 8.2 s, read+sample 2.1 s
+[   89.5s]   USGS_1M_20_x13y205_PR_PuertoRicoUSVI_D24.tif: 24854 points, 24854 accepted, 0 without any cell; download 7.4 s, read+sample 1.7 s
+[   89.7s]   USGS_1M_20_x20y201_PR_PuertoRicoUSVI_D24.tif: 16807 points, 16807 accepted, 0 without any cell; download 6.6 s, read+sample 1.8 s
+[   95.4s]   USGS_1m_x21y203_PR_PRVI_H_2018.tif: 13703 points, 11339 accepted, 2357 without any cell; download 7.0 s, read+sample 2.1 s
+[  116.4s]   USGS_1m_x70y202_PR_PRVI_E_2018.tif: 9189 points, 4846 accepted, 4342 without any cell; download 25.0 s, read+sample 1.9 s
+[  116.4s]   USGS_1M_19_x76y205_PR_PuertoRicoUSVI_D24.tif: 8971 points, 8971 accepted, 0 without any cell; download 2.9 s, read+sample 1.3 s
+[  116.4s]   USGS_1m_x19y203_PR_PRVI_H_2018.tif: 13716 points, 5132 accepted, 8580 without any cell; download 2.6 s, read+sample 2.1 s
+[  116.4s]   USGS_1m_x69y202_PR_PRVI_E_2018.tif: 26835 points, 9781 accepted, 17050 without any cell; download 2.4 s, read+sample 1.7 s
+[  116.4s]   USGS_1m_x79y199_PR_PRVI_A_2018.tif: 7239 points, 3999 accepted, 3237 without any cell; download 1.9 s, read+sample 1.5 s
+[  116.4s]   USGS_1m_x15y199_PR_PRVI_A_2018.tif: 4756 points, 4036 accepted, 718 without any cell; download 1.7 s, read+sample 1.2 s
+[  116.4s]   USGS_1m_x77y199_PR_PRVI_A_2018.tif: 5837 points, 5837 accepted, 0 without any cell; download 1.8 s, read+sample 0.8 s
+[  116.4s]   USGS_1m_x17y204_PR_PRVI_E_2018.tif: 90971 points, 24403 accepted, 66544 without any cell; download 2.1 s, read+sample 2.1 s
+[  118.7s]   USGS_1M_20_x25y201_PR_PuertoRicoUSVI_D24.tif: 23 points, 23 accepted, 0 without any cell; download 13.9 s, read+sample 0.1 s
+[  118.7s]   USGS_1M_19_x68y204_PR_PuertoRicoUSVI_D24.tif: 4372 points, 4372 accepted, 0 without any cell; download 1.3 s, read+sample 0.7 s
+[  118.7s]   USGS_1M_19_x75y199_PR_PuertoRicoUSVI_D24.tif: 3032 points, 3032 accepted, 0 without any cell; download 1.1 s, read+sample 0.5 s
+[  118.7s]   USGS_1m_x78y203_PR_PRVI_H_2018.tif: 18692 points, 2793 accepted, 15896 without any cell; download 1.1 s, read+sample 1.9 s
+[  118.7s]   USGS_1m_x26y203_PR_PRVI_C_2018.tif: 271 points, 271 accepted, 0 without any cell; download 0.9 s, read+sample 0.4 s
+[  118.7s]   USGS_1m_x19y204_PR_PRVI_D_2018.tif: 34769 points, 1845 accepted, 32923 without any cell; download 0.9 s, read+sample 1.8 s
+[  119.0s]   USGS_1m_x83y204_PR_PRVI_G_2018.tif: 25453 points, 4783 accepted, 20665 without any cell; download 0.8 s, read+sample 1.8 s
+[  119.0s]   USGS_1m_x80y205_PR_PRVI_G_2018.tif: 17848 points, 1288 accepted, 16557 without any cell; download 0.6 s, read+sample 0.9 s
+[  119.5s]   USGS_1m_x68y199_PR_PRVI_A_2018.tif: 2034 points, 2034 accepted, 0 without any cell; download 0.7 s, read+sample 0.1 s
+[  119.5s]   USGS_1m_x76y198_PR_PRVI_C_2018.tif: 5 points, 5 accepted, 0 without any cell; download 0.4 s, read+sample 0.0 s
+[  119.5s]   USGS_1m_x86y202_PR_PRVI_H_2018.tif: 6 points, 6 accepted, 0 without any cell; download 0.5 s, read+sample 0.0 s
+[  119.7s]   USGS_1M_20_x21y201_PR_PuertoRicoUSVI_D24.tif: 15 points, 15 accepted, 0 without any cell; download 0.4 s, read+sample 0.0 s
+[  120.1s] shard 10 done in 120.1 s, ok = True
+[    0.0s] lidar shard run 40385549146 sha f4bf51759026ed5e85f07d466faa95aa9ca6b9eb
+[    0.9s] shard 11: 40 tiles, 9.0 GB, 696419 point lookups
+[   16.4s]   USGS_1M_19_x83y201_PR_PuertoRicoUSVI_D24.tif: 23546 points, 23546 accepted, 0 without any cell; download 12.2 s, read+sample 3.2 s
+[   16.4s]   USGS_1M_19_x79y204_PR_PuertoRicoUSVI_D24.tif: 77628 points, 77628 accepted, 0 without any cell; download 12.4 s, read+sample 2.5 s
+[   16.6s]   USGS_1M_20_x15y204_PR_PuertoRicoUSVI_D24.tif: 32839 points, 32839 accepted, 0 without any cell; download 12.5 s, read+sample 3.1 s
+[   29.4s]   USGS_1m_x18y200_PR_PRVI_H_2018.tif: 10005 points, 10005 accepted, 0 without any cell; download 11.1 s, read+sample 2.4 s
+[   32.0s]   USGS_1M_19_x76y200_PR_PuertoRicoUSVI_D24.tif: 23340 points, 23340 accepted, 0 without any cell; download 13.1 s, read+sample 2.5 s
+[   32.0s]   USGS_1M_19_x71y203_PR_PuertoRicoUSVI_D24.tif: 15347 points, 15347 accepted, 0 without any cell; download 10.6 s, read+sample 2.5 s
+[   46.9s]   USGS_1M_19_x75y204_PR_PuertoRicoUSVI_D24.tif: 16383 points, 16383 accepted, 0 without any cell; download 15.0 s, read+sample 2.4 s
+[   46.9s]   USGS_1m_x16y200_PR_PRVI_H_2018.tif: 5193 points, 5188 accepted, 3 without any cell; download 11.3 s, read+sample 2.5 s
+[   46.9s]   USGS_1m_x17y202_PR_PRVI_H_2018.tif: 36170 points, 36169 accepted, 1 without any cell; download 10.9 s, read+sample 2.4 s
+[   56.8s]   USGS_1M_19_x74y202_PR_PuertoRicoUSVI_D24.tif: 6736 points, 6736 accepted, 0 without any cell; download 10.8 s, read+sample 2.4 s
+[   58.4s]   USGS_1m_x76y202_PR_PRVI_D_2018.tif: 3275 points, 3275 accepted, 0 without any cell; download 10.5 s, read+sample 2.4 s
+[   60.1s]   USGS_1m_x69y200_PR_PRVI_A_2018.tif: 16334 points, 16334 accepted, 0 without any cell; download 10.8 s, read+sample 2.3 s
+[   69.6s]   USGS_1M_20_x17y201_PR_PuertoRicoUSVI_D24.tif: 8250 points, 8250 accepted, 0 without any cell; download 10.3 s, read+sample 2.5 s
+[   71.3s]   USGS_1m_x83y202_PR_PRVI_H_2018.tif: 24674 points, 21272 accepted, 3392 without any cell; download 10.5 s, read+sample 2.5 s
+[   71.5s]   USGS_1m_x79y201_PR_PRVI_H_2018.tif: 16385 points, 14755 accepted, 1620 without any cell; download 8.9 s, read+sample 2.5 s
+[   81.3s]   USGS_1m_x78y203_PR_PRVI_D_2018.tif: 18692 points, 15899 accepted, 2793 without any cell; download 8.9 s, read+sample 2.7 s
+[   81.5s]   USGS_1M_20_x21y202_PR_PuertoRicoUSVI_D24.tif: 9593 points, 9593 accepted, 0 without any cell; download 8.2 s, read+sample 1.9 s
+[   82.4s]   USGS_1m_x74y204_PR_PRVI_F_2018.tif: 9372 points, 8820 accepted, 552 without any cell; download 8.3 s, read+sample 2.6 s
+[   90.5s]   USGS_1m_x18y204_PR_PRVI_G_2018.tif: 70585 points, 43170 accepted, 27386 without any cell; download 6.7 s, read+sample 2.4 s
+[   90.5s]   USGS_1m_x71y205_PR_PRVI_F_2018.tif: 17077 points, 17077 accepted, 0 without any cell; download 6.7 s, read+sample 1.6 s
+[   90.8s]   USGS_1m_x78y205_PR_PRVI_G_2018.tif: 20151 points, 20151 accepted, 0 without any cell; download 6.9 s, read+sample 1.6 s
+[   95.0s]   USGS_1m_x72y202_PR_PRVI_A_2018.tif: 4582 points, 2556 accepted, 2026 without any cell; download 3.1 s, read+sample 2.0 s
+[   95.0s]   USGS_1m_x71y199_PR_PRVI_A_2018.tif: 3660 points, 3660 accepted, 0 without any cell; download 2.9 s, read+sample 1.6 s
+[   95.0s]   USGS_1M_19_x72y199_PR_PuertoRicoUSVI_D24.tif: 3993 points, 3993 accepted, 0 without any cell; download 2.5 s, read+sample 1.4 s
+[  100.6s]   USGS_1m_x74y204_PR_PRVI_D_2018.tif: 9372 points, 552 accepted, 8819 without any cell; download 3.9 s, read+sample 2.0 s
+[  100.6s]   USGS_1m_x82y204_PR_PRVI_E_2018.tif: 38965 points, 6270 accepted, 32685 without any cell; download 2.4 s, read+sample 2.1 s
+[  100.6s]   USGS_1M_19_x82y205_PR_PuertoRicoUSVI_D24.tif: 1958 points, 1958 accepted, 0 without any cell; download 1.9 s, read+sample 0.8 s
+[  101.8s]   USGS_1m_x19y204_PR_PRVI_E_2018.tif: 34769 points, 1771 accepted, 32987 without any cell; download 2.0 s, read+sample 2.0 s
+[  103.7s]   USGS_1m_x16y203_PR_PRVI_H_2018.tif: 18955 points, 2923 accepted, 16030 without any cell; download 2.3 s, read+sample 1.9 s
+[  104.4s]   USGS_1m_x80y203_PR_PRVI_H_2018.tif: 23008 points, 4878 accepted, 18129 without any cell; download 1.8 s, read+sample 1.9 s
+[  105.4s]   USGS_1m_x82y203_PR_PRVI_H_2018.tif: 21211 points, 6000 accepted, 15202 without any cell; download 1.6 s, read+sample 2.0 s
+[  107.1s]   USGS_1m_x72y204_PR_PRVI_D_2018.tif: 10679 points, 2373 accepted, 8298 without any cell; download 1.4 s, read+sample 2.0 s
+[  107.5s]   USGS_1m_x71y204_PR_PRVI_D_2018.tif: 10125 points, 2518 accepted, 7605 without any cell; download 1.3 s, read+sample 1.8 s
+[  107.5s]   USGS_1M_19_x74y199_PR_PuertoRicoUSVI_D24.tif: 494 points, 494 accepted, 0 without any cell; download 1.2 s, read+sample 0.4 s
+[  109.9s]   USGS_1m_x78y200_PR_PRVI_A_2018.tif: 6567 points, 106 accepted, 6461 without any cell; download 1.2 s, read+sample 1.8 s
+[  109.9s]   USGS_1m_x83y205_PR_PRVI_E_2018.tif: 5588 points, 3407 accepted, 2174 without any cell; download 1.0 s, read+sample 0.2 s
+[  109.9s]   USGS_1M_19_x76y199_PR_PuertoRicoUSVI_D24.tif: 187 points, 187 accepted, 0 without any cell; download 0.8 s, read+sample 0.5 s
+[  110.9s]   USGS_1m_x78y201_PR_PRVI_A_2018.tif: 15600 points, 0 accepted, 15600 without any cell; download 0.8 s, read+sample 1.9 s
+[  110.9s]   USGS_1m_x85y204_PR_PRVI_A_2018.tif: 9462 points, 24 accepted, 9438 without any cell; download 0.7 s, read+sample 0.9 s
+[  112.5s]   USGS_1m_x20y204_PR_PRVI_E_2018.tif: 15669 points, 44 accepted, 15620 without any cell; download 0.7 s, read+sample 1.8 s
+[  112.9s] shard 11 done in 112.9 s, ok = True
+[    0.0s] lidar merge run 40385549146 sha f4bf51759026ed5e85f07d466faa95aa9ca6b9eb
+[    0.5s] merge: 12 shard results, missing shards [], tiles sampled 477 of 477, failed []
+[    2.0s] spot {"place": "Old San Juan, Plaza de Armas", "lon": -66.1165, "lat": 18.4655, "expect": "on the ridge of the islet, roughly 20 m", "lidar_m": 20.99, "project": "PR_PuertoRicoUSVI_D24", "by_collection_m": {"2024": 20.99, "2018": 21.01}, "buildings_within_150m": 152, "their_median_lidar_m": 20.3, "their_median_old_m": 20.05}
+[    2.0s] spot {"place": "Cataño, blocks nearest the bay", "lon": -66.1132, "lat": 18.4433, "expect": "bay shore, about 1 m", "lidar_m": 0.83, "project": "PR_PuertoRicoUSVI_D24", "by_collection_m": {"2024": 0.83, "2018": 1.04}, "buildings_within_150m": 143, "their_median_lidar_m": 0.8, "their_median_old_m": 1.1}
+[    2.0s] spot {"place": "Loíza, town plaza", "lon": -65.88, "lat": 18.4313, "expect": "coastal plain, a few metres", "lidar_m": 2.79, "project": "PR_PuertoRicoUSVI_D24", "by_collection_m": {"2024": 2.79, "2018": 2.49}, "buildings_within_150m": 172, "their_median_lidar_m": 2.5, "their_median_old_m": 3.0}
+[    2.0s] spot {"place": "Ponce, La Playa", "lon": -66.617, "lat": 17.98, "expect": "harbour barrio, 1 to 3 m", "lidar_m": 0.93, "project": "PR_PuertoRicoUSVI_D24", "by_collection_m": {"2024": 0.93, "2018": 0.95}, "buildings_within_150m": 214, "their_median_lidar_m": 1.0, "their_median_old_m": 3.0}
+[    2.0s] spot {"place": "Aibonito, town plaza", "lon": -66.266, "lat": 18.14, "expect": "hill town, roughly 600 to 700 m", "lidar_m": 605.22, "project": "PR_PuertoRicoUSVI_D24", "by_collection_m": {"2024": 605.22, "2018": 605.26}, "buildings_within_150m": 191, "their_median_lidar_m": 603.4, "their_median_old_m": 603.1}
+[    2.0s] spot {"place": "San Juan airport (SJU), apron", "lon": -66.0018, "lat": 18.4394, "expect": "published field elevation 9 ft = 2.7 m", "lidar_m": 2.51, "project": "PR_PuertoRicoUSVI_D24", "by_collection_m": {"2024": 2.51, "2018": 2.58}, "buildings_within_150m": 1, "their_median_lidar_m": 2.5, "their_median_old_m": 2.9}
+[    2.1s] spot {"place": "Aguadilla airport (BQN), runway", "lon": -67.1294, "lat": 18.4949, "expect": "published field elevation 237 ft = 72 m is the highest point of the runway; this is the airport reference point, so somewhat lower", "lidar_m": 64.43, "project": "PR_PuertoRicoUSVI_D24", "by_collection_m": {"2024": 64.43, "2018": 64.49}, "buildings_within_150m": 0, "their_median_lidar_m": null, "their_median_old_m": null}
+[    2.1s] spot {"place": "Condado, near Ashford Avenue", "lon": -66.072, "lat": 18.457, "expect": "barrier strip beside the lagoon, 1 to 4 m", "lidar_m": 1.12, "project": "PR_PuertoRicoUSVI_D24", "by_collection_m": {"2024": 1.12, "2018": 0.44}, "buildings_within_150m": 34, "their_median_lidar_m": 4.5, "their_median_old_m": 3.0}
+[    2.1s] qa {"buildings": 1737161, "buildings_with_value": 1737149, "buildings_no_data": 12, "share_with_value": 0.99999, "buildings_no_data_but_some_cells_nearby": 0, "buildings_inside_no_tile": 0, "assets": 3992, "assets_with_value": 3989, "new_elevation_m": {"min": -8.8, "p01": 1.3, "median": 65.4, "p99": 734.6, "max": 1326.2, "below_zero": 276}, "new_minus_old_m": {"n": 1737149, "median": 0.3, "p05": -5.1, "p95": 6.3, "mean": 0.408, "median_abs": 1.7, "share_within_0.25m": 0.0896, "share_within_0.5m": 0.1937, "share_within_1m": 0.3491, "share_beyond_3m": 0.2802, "note": "old = the ground field of tiles/bld today (10 m elevation model, decimetres)"}, "at_or_below": {"0.5m": {"old": 5828, "new": 1855, "old_where_both": 5825, "new_where_both": 1855}, "1m": {"old": 15113, "new": 10907, "old_where_both": 15106, "new_where_both": 10907}, "1.5m": {"old": 20938, "new": 26290, "old_where_both": 20929, "new_where_both": 26290}, "2m": {"old": 30806, "new": 45215, "old_where_both": 30796, "new_where_both": 45215}, "3m": {"old": 117204, "new": 90471, "old_where_both": 117194, "new_where_both": 90471}}, "old_values_known": 1737161, "compared": 1737149, "no_data_buildings": [{"index": 46424, "lon": -67.16073, "lat": 18.445}, {"index": 449537, "lon": -66.76474, "lat": 17.99944}, {"index": 449538, "lon": -66.76527, "lat": 17.99923}, {"index": 449545, "lon": -66.76394, "lat": 17.99934}, {"index": 449575, "lon": -66.76496, "lat": 17.99647}, {"index": 468488, "lon": -66.7425, "lat": 17.98136}, {"index": 468489, "lon": -66.74212, "lat": 17.98087}, {"index": 468490, "lon": -66.74171, "lat": 17.98071}, {"index": 468491, "lon": -66.74137, "lat": 17.98044}, {"index": 468492, "lon": -66.74233, "lat": 17.98134}, {"index": 468493, "lon": -66.74195, "lat": 17.98076}, {"index": 468494, "lon": -66.74157, "lat": 17.98053}], "lowest_buildings": [{"index": 1207136, "lon": -66.08755, "lat": 18.44983, "lidar_m": -8.8}, {"index": 1207126, "lon": -66.08728, "lat": 18.44997, "lidar_m": -8.8}, {"index": 195072, "lon": -67.06116, "lat": 17.97666, "lidar_m": -8.2}, {"index": 64619, "lon": -67.15986, "lat": 18.18872, "lidar_m": -3.5}, {"index": 468568, "lon": -66.75291, "lat": 17.98688, "lidar_m": -2.7}, {"index": 1258339, "lon": -66.0588, "lat": 18.42885, "lidar_m": -2.3}, {"index": 62071, "lon": -67.1571, "lat": 18.2148, "lidar_m": -2.3}, {"index": 39834, "lon": -67.17475, "lat": 18.02875, "lidar_m": -1.4}, {"index": 15, "lon": -67.93567, "lat": 18.09994, "lidar_m": -1.2}, {"index": 892846, "lon": -66.28911, "lat": 17.96435, "lidar_m": -1.2}], "median_minus_centre_cell_m": {"n": 1737149, "median": 0.0, "p05": -0.094, "p95": 0.086, "mean": -0.002, "median_abs": 0.014, "share_within_0.25m": 0.9817, "share_within_0.5m": 0.9979, "share_within_1m": 0.9999, "share_beyond_3m": 0.0}, "collections_compared": {"n": 1711971, "median": -0.025, "p05": -0.336, "p95": 0.231, "mean": -0.03, "median_abs": 0.083, "share_within_0.25m": 0.8742, "share_within_0.5m": 0.9563, "share_within_1m": 0.9844, "share_beyond_3m": 0.0018, "note": "2024 minus 2018 at buildings where both have a value", "only_newest": 25140, "only_older": 38}}
+[    2.1s] counts {"by_project": {"PR_PRVI_A_2018": 37, "PR_PRVI_H_2018": 1, "PR_PuertoRicoUSVI_D24": 1737111, "none": 12}, "by_collection_year": {"none": 12, "2018": 38, "2024": 1737111}}
+[    2.8s] merge done: complete = True
 merge exit code 0 (0 complete, 2 published but incomplete, 1 failed)
-run 38112643363 sha 4267c9cff33b3294940307b8c6982ceea05ba357 finished 2026-10-11T04:50:49Z
+run 40385549146 sha f4bf51759026ed5e85f07d466faa95aa9ca6b9eb finished 2026-10-26T19:45:59Z

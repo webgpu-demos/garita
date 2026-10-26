@@ -90,7 +90,7 @@
    }
   ],
   "licence": "Public domain (U.S. Government work; \"All 3DEP products are public domain\")",
-  "citation": "U.S. Geological Survey, 3D Elevation Program 1-Meter Resolution Digital Elevation Model, accessed 2026-10-11 at https://www.usgs.gov/the-national-map-data-delivery"
+  "citation": "U.S. Geological Survey, 3D Elevation Program 1-Meter Resolution Digital Elevation Model, accessed 2026-10-26 at https://www.usgs.gov/the-national-map-data-delivery"
  },
  "method": "For each building centroid and asset, the median of the 1 m DEM cells whose centre lies within 2 m of the point (11 to 14 cells); accepted only when at least 50 % of those cells hold data, otherwise no data (-32768 in buildings.bin, null in assets.json). The DEMs are bare earth (buildings and vegetation removed, ground under buildings interpolated by the producer, water bodies hydro-flattened), so the value is the ground at the building, not its roof or floor. The newest collection with a value wins (2024, then 2018); within a collection the tile with the most valid cells. Points are WGS 84 longitude/latitude projected to NAD83 / UTM 19N or 20N on GRS 80 without a datum shift (about 1 m). Values are metres above PRVD02; buildings.bin stores them rounded to decimetres as int16, assets.json in metres with two decimals. Nothing is filled or interpolated across gaps.",
  "datum": {
@@ -1248,26 +1248,26 @@
    "by_project": {
     "PR_PRVI_A_2018": 37,
     "PR_PRVI_H_2018": 1,
-    "PR_PuertoRicoUSVI_D24": 1737034,
+    "PR_PuertoRicoUSVI_D24": 1737111,
     "none": 12
    },
    "by_collection_year": {
     "none": 12,
     "2018": 38,
-    "2024": 1737034
+    "2024": 1737111
    }
   },
   "assets": {
    "by_project": {
     "PR_PRVI_E_2018": 3,
     "PR_PRVI_H_2018": 2,
-    "PR_PuertoRicoUSVI_D24": 3980,
+    "PR_PuertoRicoUSVI_D24": 3984,
     "none": 3
    },
    "by_collection_year": {
     "none": 3,
     "2018": 5,
-    "2024": 3980
+    "2024": 3984
    }
   }
  },
@@ -1297,14 +1297,14 @@
  },
  "disclaimer": "There is no guarantee or warranty concerning the accuracy of the data. Users should be aware that temporal changes may have occurred since these data were collected and that some parts of these data may no longer represent actual surface conditions. Users should not use these data for critical applications without a full awareness of its limitations. Acknowledgement of the originating agencies would be appreciated in products derived from these data. Any user who modifies the data is obligated to describe the types of modifications they perform. User specifically agrees not to misrepresent the data, nor to imply that changes made were approved or endorsed by the USGS. Please refer to http://www.usgs.gov/privacy.html for the USGS disclaimer.",
  "qa": {
-  "buildings": 1737084,
-  "buildings_with_value": 1737072,
+  "buildings": 1737161,
+  "buildings_with_value": 1737149,
   "buildings_no_data": 12,
   "share_with_value": 0.99999,
   "buildings_no_data_but_some_cells_nearby": 0,
   "buildings_inside_no_tile": 0,
-  "assets": 3988,
-  "assets_with_value": 3985,
+  "assets": 3992,
+  "assets_with_value": 3989,
   "new_elevation_m": {
    "min": -8.8,
    "p01": 1.3,
@@ -1314,7 +1314,7 @@
    "below_zero": 276
   },
   "new_minus_old_m": {
-   "n": 1737072,
+   "n": 1737149,
    "median": 0.3,
    "p05": -5.1,
    "p95": 6.3,
@@ -1328,38 +1328,38 @@
   },
   "at_or_below": {
    "0.5m": {
-    "old": 5827,
-    "new": 1854,
-    "old_where_both": 5824,
-    "new_where_both": 1854
+    "old": 5828,
+    "new": 1855,
+    "old_where_both": 5825,
+    "new_where_both": 1855
    },
    "1m": {
-    "old": 15110,
+    "old": 15113,
     "new": 10907,
-    "old_where_both": 15103,
+    "old_where_both": 15106,
     "new_where_both": 10907
    },
    "1.5m": {
-    "old": 20935,
-    "new": 26286,
-    "old_where_both": 20926,
-    "new_where_both": 26286
+    "old": 20938,
+    "new": 26290,
+    "old_where_both": 20929,
+    "new_where_both": 26290
    },
    "2m": {
-    "old": 30804,
-    "new": 45209,
-    "old_where_both": 30794,
-    "new_where_both": 45209
+    "old": 30806,
+    "new": 45215,
+    "old_where_both": 30796,
+    "new_where_both": 45215
    },
    "3m": {
-    "old": 117192,
-    "new": 90461,
-    "old_where_both": 117182,
-    "new_where_both": 90461
+    "old": 117204,
+    "new": 90471,
+    "old_where_both": 117194,
+    "new_where_both": 90471
    }
   },
-  "old_values_known": 1737084,
-  "compared": 1737072,
+  "old_values_known": 1737161,
+  "compared": 1737149,
   "no_data_buildings": [
    {
     "index": 46424,
@@ -1424,13 +1424,13 @@
   ],
   "lowest_buildings": [
    {
-    "index": 1207143,
+    "index": 1207136,
     "lon": -66.08755,
     "lat": 18.44983,
     "lidar_m": -8.8
    },
    {
-    "index": 1207133,
+    "index": 1207126,
     "lon": -66.08728,
     "lat": 18.44997,
     "lidar_m": -8.8
@@ -1454,7 +1454,7 @@
     "lidar_m": -2.7
    },
    {
-    "index": 1258351,
+    "index": 1258339,
     "lon": -66.0588,
     "lat": 18.42885,
     "lidar_m": -2.3
@@ -1478,14 +1478,14 @@
     "lidar_m": -1.2
    },
    {
-    "index": 892857,
+    "index": 892846,
     "lon": -66.28911,
     "lat": 17.96435,
     "lidar_m": -1.2
    }
   ],
   "median_minus_centre_cell_m": {
-   "n": 1737072,
+   "n": 1737149,
    "median": 0.0,
    "p05": -0.094,
    "p95": 0.086,
@@ -1497,18 +1497,18 @@
    "share_beyond_3m": 0.0
   },
   "collections_compared": {
-   "n": 1711891,
+   "n": 1711971,
    "median": -0.025,
    "p05": -0.336,
    "p95": 0.231,
    "mean": -0.03,
    "median_abs": 0.083,
    "share_within_0.25m": 0.8742,
-   "share_within_0.5m": 0.9564,
-   "share_within_1m": 0.9845,
-   "share_beyond_3m": 0.0017,
+   "share_within_0.5m": 0.9563,
+   "share_within_1m": 0.9844,
+   "share_beyond_3m": 0.0018,
    "note": "2024 minus 2018 at buildings where both have a value",
-   "only_newest": 25143,
+   "only_newest": 25140,
    "only_older": 38
   },
   "spots": [
@@ -1634,24 +1634,24 @@
    }
   ]
  },
- "generated": "2026-10-11T04:50:48Z",
+ "generated": "2026-10-26T19:45:59Z",
  "run": {
-  "id": "38112643363",
-  "sha": "4267c9cff33b3294940307b8c6982ceea05ba357",
-  "plan_seconds": 29.0,
+  "id": "40385549146",
+  "sha": "f4bf51759026ed5e85f07d466faa95aa9ca6b9eb",
+  "plan_seconds": 38.8,
   "shard_seconds": {
-   "0": 109.1,
-   "1": 94.8,
-   "2": 106.3,
-   "3": 130.0,
-   "4": 99.8,
-   "5": 147.2,
-   "6": 101.3,
-   "7": 128.2,
-   "8": 107.9,
-   "9": 93.1,
-   "10": 136.3,
-   "11": 109.4
+   "0": 106.1,
+   "1": 201.7,
+   "2": 241.5,
+   "3": 222.9,
+   "4": 114.9,
+   "5": 138.7,
+   "6": 103.7,
+   "7": 151.8,
+   "8": 175.5,
+   "9": 139.0,
+   "10": 120.1,
+   "11": 112.9
   }
  },
  "stage": "lidar",
@@ -1659,10 +1659,10 @@
   "file": "buildings.bin",
   "dtype": "<i2",
   "shape": [
-   1737084
+   1737161
   ],
   "order": "tiles/bld/index.json order, then tile order",
-  "bld_generated": "2026-10-11T04:42:03.587Z"
+  "bld_generated": "2026-10-26T19:16:41.230Z"
  },
- "assets": 3988
+ "assets": 3992
 }
