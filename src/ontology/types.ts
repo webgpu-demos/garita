@@ -192,5 +192,8 @@ export interface TwinStore {
   /** User writeback: sets a property with source 'user' and writes the audit log. */
   annotate(objectId: string, key: string, value: PropValue, note?: string): Promise<void>;
   actionLog(limit?: number): Promise<{ t: number; action: string; objectId: string | null; payload: any }[]>;
+  /** Removes everything one source wrote: the objects it created (with all their values, links and history) and its
+   *  values and links on other objects. Used to forget the visitor's own files ('local_file'). */
+  forgetSource(source: string): Promise<{ objects: number; props: number; links: number }>;
   onChange(cb: (e: ChangeEvent) => void): () => void;
 }

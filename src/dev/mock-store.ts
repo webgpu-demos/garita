@@ -187,6 +187,13 @@ export function createMockStore(): TwinStore & { replaySevereAlerts(): Promise<v
       queueMicrotask(() => listeners.forEach((cb) => cb(ev)));
     },
     async actionLog(limit = 100) { return log.slice(0, limit); },
+    async forgetSource(source) {
+      let n = 0; const types = new Set<string>();
+      for (const [id, o] of objects) if (o.rec.source === source) { objects.delete(id); types.add(o.rec.type); n++; }
+      const ev: ChangeEvent = { source, types: [...types], at: Date.now() };
+      queueMicrotask(() => listeners.forEach((cb) => cb(ev)));
+      return { objects: n, props: 0, links: 0 };
+    },
     onChange(cb) { listeners.add(cb); return () => listeners.delete(cb); },
     /** Dev check for toasts: re-issues the recorded Flash Flood Warnings as active, clearly labelled as a replay. */
     async replaySevereAlerts() {

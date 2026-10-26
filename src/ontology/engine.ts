@@ -849,12 +849,32 @@ export function housekeeping(db: SqlDb, ontology: Ontology, now: number = Date.n
   });
 }
 
+export function forgetSource(db: SqlDb, source: string): { objects: number; props: number; links: number } {
+  return db.transaction(() => {
+    const objs = db.all<{ rid: number; id: string }>('SELECT rid, id FROM object WHERE source_id = ?', [source]);
+    for (const o of objs) {
+      for (const t of ['prop', 'prop_history', 'identity', 'obs']) db.exec(`DELETE FROM ${t} WHERE object_id = ?`, [o.id]);
+      db.exec('DELETE FROM link WHERE src = ? OR dst = ?', [o.id, o.id]);
+      db.exec('DELETE FROM object_fts WHERE rowid = ?', [o.rid]);
+      db.exec('DELETE FROM object_rtree WHERE id = ?', [o.rid]);
+      db.exec('DELETE FROM object WHERE rid = ?', [o.rid]);
+    }
+    const props = db.all<{ n: number }>('SELECT COUNT(*) AS n FROM prop WHERE source_id = ?', [source])[0].n;
+    db.exec('DELETE FROM prop WHERE source_id = ?', [source]);
+    db.exec('DELETE FROM prop_history WHERE source_id = ?', [source]);
+    const links = db.all<{ n: number }>('SELECT COUNT(*) AS n FROM link WHERE source_id = ?', [source])[0].n;
+    db.exec('DELETE FROM link WHERE source_id = ?', [source]);
+    db.exec('DELETE FROM ingest_run WHERE source_id = ?', [source]);
+    return { objects: objs.length, props, links };
+  });
+}
+
 export interface CarryOver { actions: any[]; userProps: any[]; obs: any[] }
 /** What a visitor would miss if a new seed version simply replaced their database. */
 export function readCarryOver(db: SqlDb, now: number = Date.now()): CarryOver {
   return {
     actions: db.all('SELECT t, action, object_id, payload FROM action_log ORDER BY id'),
-    userProps: db.all(`SELECT p.object_id, p.key, p.value, p.vtype, p.unit, p.source_id, p.observed_at, p.confidence FROM prop p JOIN source s ON s.id = p.source_id WHERE s.kind = 'user'`),
+    userProps: db.all(`SELECT p.object_id, p.key, p.value, p.vtype, p.unit, p.source_id, p.observed_at, p.confidence FROM prop p JOIN source s ON s.id = p.source_id WHERE s.kind = 'user' AND p.source_id <> 'local_file'`),
     obs: db.all('SELECT object_id, metric, t, value FROM obs WHERE t >= ?', [now - 7 * DAY]),
   };
 }
@@ -906,6 +926,12 @@ export function makeStore(db: SqlDb, ontology: Ontology, info: { persistent: boo
       emit({ source: 'user', types: [type], at: Date.now() });
     }),
     actionLog: (limit) => run(() => actionLog(db, limit)),
+    forgetSource: (source) => run(() => {
+      const types = db.all<{ type: string }>('SELECT DISTINCT type FROM object WHERE source_id = ?', [source]).map((r) => r.type);
+      const r = forgetSource(db, source);
+      emit({ source, types, at: Date.now() });
+      return r;
+    }),
     onChange(cb) { listeners.add(cb); return () => { listeners.delete(cb); }; },
     close() { listeners.clear(); db.close?.(); },
   };

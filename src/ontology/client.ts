@@ -70,7 +70,7 @@ export function createStore(opts: CreateStoreOptions): WorkerStore {
     detail: open.then((o) => o.detail),
     query: call('query'), getObject: call('getObject'), getLinks: call('getLinks'), listObjects: call('listObjects'), search: call('search'),
     series: call('series'), neighborhood: call('neighborhood'), countByType: call('countByType'), sources: call('sources'), ingest: call('ingest'),
-    reportRun: call('reportRun'), annotate: call('annotate'), actionLog: call('actionLog'),
+    reportRun: call('reportRun'), annotate: call('annotate'), actionLog: call('actionLog'), forgetSource: call('forgetSource'),
     onChange(cb) { listeners.add(cb); return () => { listeners.delete(cb); }; },
     terminate() { worker.terminate(); listeners.clear(); },
   };

@@ -85,7 +85,7 @@ export const quality = signal<Quality>('medium');
 export const stats = signal<{ fps: number; tiles: number; pending: number; drawCalls: number; tris: number }>({ fps: 0, tiles: 0, pending: 0, drawCalls: 0, tris: 0 });
 
 // ---- ui chrome ----
-export type RightPanel = 'object' | 'scenario' | 'replay' | 'alerts' | 'explorer' | 'lineage' | 'graph' | 'sql' | null;
+export type RightPanel = 'object' | 'scenario' | 'replay' | 'alerts' | 'explorer' | 'lineage' | 'graph' | 'sql' | 'local' | null;
 export const rightPanel = signal<RightPanel>('alerts');
 export const fixturesMode = signal<boolean>(false);       // ?fixtures=1: read recorded payloads instead of the network
 export const booted = signal<boolean>(false);

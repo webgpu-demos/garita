@@ -1,0 +1,6 @@
+case_id,gers,osm,lat,lon,status,inspected,note
+EX-001,3c7e1178-1189-4241-9eb6-9ca1225b8876,,18.456285,-66.070464,EXAMPLE - not real,2026-05-04,matched by its GERS id
+EX-002,,w279769937,18.455409,-66.070228,EXAMPLE - not real,2026-05-04,matched by its OSM id
+EX-003,,,18.456300,-66.069422,EXAMPLE - not real,2026-05-05,matched by its point
+EX-004,,,18.4581,-66.0752,EXAMPLE - not real,2026-05-05,a point in the lagoon: no building
+EX-005,,,,,EXAMPLE - not real,2026-05-06,no position: kept unmatched

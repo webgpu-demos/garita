@@ -243,6 +243,25 @@ const objectTypes = [
     P('altitude_m', 'Altitude', 'Altitud', 'number', 'm', 'int', true), P('ground_speed_kt', 'Ground speed', 'Velocidad', 'number', 'kt', 'int'), P('track_deg', 'Track', 'Rumbo', 'number', 'deg', 'int'),
     P('vertical_rate_ms', 'Vertical rate', 'Régimen vertical', 'number', 'm/s', 'fixed1'), P('squawk', 'Squawk', 'Squawk', 'string'), P('emergency', 'Emergency', 'Emergencia', 'string'),
   ], { ephemeral: true }),
+  // ---- your own data (ui/panels/local.tsx): loaded from a file into this browser only, never published ----
+  // A structure is a building of the tiles that a record of yours is about, keyed by its Overture GERS id
+  // (tiles/bld/14/{x}/{y}.ids). Its point and figures come from the tile; the records come from the file.
+  T('structure', 'asset', 'local', 'Building with your records', 'Edificio con sus registros', 'Buildings with your records', 'Edificios con sus registros', 'overture:gers', 'housing', '#ffb547', [
+    P('records', 'Your records about it', 'Sus registros sobre él', 'number', 'records', 'int', true),
+    P('height_m', 'Height', 'Altura', 'number', 'm', 'fixed1', true),
+    P('height_source', 'Height from', 'Altura de', 'string'),
+    P('ground_elev_m', 'Ground elevation', 'Elevación del terreno', 'number', 'm', 'fixed1'),
+    P('osm_url', 'OpenStreetMap', 'OpenStreetMap', 'url'),
+    P('gers_id', 'GERS id (Overture Maps)', 'Id GERS (Overture Maps)', 'string'),
+  ]),
+  // One row of a file you loaded, as it was in the file (fields), with how it was matched to a building.
+  T('local_record', 'record', 'local', 'Your record', 'Su registro', 'Your records', 'Sus registros', 'local:file-row', 'note', '#ffb547', [
+    P('file', 'File', 'Archivo', 'string', null, null, true),
+    P('row', 'Row', 'Fila', 'number', null, 'int'),
+    P('matched_by', 'Matched to a building by', 'Unido a un edificio por', 'string', null, null, true),
+    P('summary', 'Summary', 'Resumen', 'string', null, null, true),
+    P('fields', 'Fields as in the file', 'Campos como en el archivo', 'json'),
+  ]),
 ];
 
 const LT = (id, en, es, ien, ies, from, to) => ({ id, label: L(en, es), inverse: L(ien, ies), from, to });
@@ -256,6 +275,7 @@ const linkTypes = [
   LT('record_of', 'is a record of', 'es un registro de', 'has record', 'tiene registro', ['disaster_impact', 'pa_record', 'hma_record'], ['disaster_declaration', 'municipio']),
   LT('same_as', 'may be the same as', 'podría ser igual a', 'may be the same as', 'podría ser igual a', ['*'], ['*']),
   LT('housed_at', 'is housed at', 'se ubica en', 'houses', 'alberga', ['shelter'], ['school', 'public_housing']),
+  LT('describes', 'is about', 'trata de', 'is described by', 'descrito en', ['local_record'], ['structure']),
 ];
 
 const S = (id, name, org, url, license, kind, cadence_s, note) => ({ id, name, org, url, license, kind, ...(cadence_s ? { cadence_s } : {}), ...(note ? { note } : {}) });
@@ -301,6 +321,7 @@ const sources = [
   S('hurdat2', 'Atlantic hurricane best tracks (HURDAT2)', 'NOAA National Hurricane Center', 'https://www.nhc.noaa.gov/data/#hurdat', 'Public domain', 'baked'),
   S('garita_derived', 'Derived by Garita (spatial joins, elevation sampling, scenario counts)', 'Garita', 'https://github.com/webgpu-demos/garita', 'MIT', 'derived', undefined, 'Computed from the sources above. Screening-level; not an engineering model.'),
   S('user', 'Notes and status set in this browser', 'You', '', 'Local to this browser', 'user'),
+  S('local_file', 'Files you loaded (kept in this browser)', 'You', '', 'Yours; never leaves this browser', 'user', undefined, 'Records from a file loaded in the Your data panel. They live in this browser\'s database only: nothing is uploaded, and Forget removes them. Joined to buildings by GERS id, OSM id or position.'),
 ];
 const out = { version: '2026.10.1', objectTypes, linkTypes, sources };
 writeFileSync(new URL('../src/ontology/ontology.json', import.meta.url), JSON.stringify(out, null, 1));

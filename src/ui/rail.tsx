@@ -11,6 +11,7 @@ import { OverlayOptions } from './hover';
 const GROUPS: { id: string; icon: string }[] = [
   { id: 'hazards', icon: 'alert' }, { id: 'water', icon: 'drop' }, { id: 'housing', icon: 'housing' }, { id: 'infrastructure', icon: 'bolt' },
   { id: 'boundaries', icon: 'boundary' }, { id: 'atmosphere', icon: 'wind' }, { id: 'tracks', icon: 'plane' }, { id: 'records', icon: 'fema' },
+  { id: 'local', icon: 'note' },
 ];
 const SCENE: S.SceneLayerId[] = ['buildings', 'clouds', 'labels', 'municipios', 'ocean_detail', 'markers'];
 const OVERLAYS: (S.OverlayId)[] = [null, 'radar', 'goes', 'nightlights', 'nfhl', 'slr', 'surge', 'slide', 'choropleth', 'elevation'];
