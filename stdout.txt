@@ -1,0 +1,30 @@
+Mon Oct 26 14:43:38 UTC 2026
+PR_Structures_20260913 212477595
+Deliverable20250606PR 171051407
+Deliverable20230630PR 369675591
+  bbox [(-67.94165619389494, -65.22760549175398, 17.885994796817414, 18.515088557)]
+PR_Structures_20260913 read 8.1 s
+  all: n, with height>0, median, p95 [(1247633, 153080, 3.0799999237060547, 6.039999961853027)]
+  san juan bbox: [(137402, 72226)]
+  height>0 by occ [('Residential', 1114525, 137294), ('Unclassified', 63113, 665), ('Agriculture', 19192, 1749), ('Government', 16254, 2672), ('Commercial', 12126, 7832), ('Education', 9455, 530)]
+  bbox [(-67.94666609757226, -65.2447284494178, 17.8859563487488, 18.515096849000003)]
+Deliverable20250606PR read 7.3 s
+  all: n, with height>0, median, p95 [(1194236, 234162, 3.309999942779541, 6.650000095367432)]
+  san juan bbox: [(133038, 110536)]
+  height>0 by occ [('Residential', 641491, 190589), ('Unclassified', 309131, 15240), ('Agriculture', 108945, 4996), ('Government', 62429, 5672), ('Commercial', 42226, 11951), ('Industrial', 15724, 3196)]
+  bbox [(-67.94666609757223, -65.24472844941772, 17.88595634874886, 18.51509684900005)]
+Deliverable20230630PR read 6.7 s
+  all: n, with height>0, median, p95 [(1194236, 234162, 3.309999942779541, 6.650000095367432)]
+  san juan bbox: [(133038, 110536)]
+  height>0 by occ [('Residential', 641491, 190589), ('Unclassified', 309131, 15240), ('Agriculture', 108945, 4996), ('Government', 62429, 5672), ('Commercial', 42226, 11951), ('Industrial', 15724, 3196)]
+view PR: count {'count': 1194236} with height {'count': 234162}
+view SJ: count {'count': 133182} with height {'count': 110641}
+view sample null
+view fields ['OBJECTID', 'BUILD_ID', 'OCC_CLS', 'PRIM_OCC', 'SEC_OCC', 'PROP_ADDR', 'PROP_CITY', 'PROP_ST', 'PROP_ZIP', 'OUTBLDG', 'HEIGHT', 'SQMETERS', 'SQFEET', 'H_ADJ_ELEV', 'L_ADJ_ELEV', 'FIPS', 'CENSUSCODE', 'PROD_DATE', 'SOURCE', 'USNG', 'LONGITUDE', 'LATITUDE', 'IMAGE_NAME', 'IMAGE_DATE', 'VAL_METHOD', 'REMARKS', 'UUID', 'STATE_FIPS', 'B_CODE', 'POP_MEDIAN', 'PROP_CNTY', 'GlobalID', 'Shape__Area', 'Shape__Length', 'POP_CI95_LOWER', 'POP_CI95_UPPER']
+join s 1.5
+osm in a USA Structures footprint [(1146517,)] of [(1500399,)]
+osm without height that gain one [(67292,)] of osm without height [(1297339,)]
+agreement where both: n, median |d|, p90 |d|, median (fema - osm) [(101251, 0.4900000572204588, 1.9300001144409178, -0.330000009536743)]
+Mon Oct 26 14:45:48 UTC 2026
+exit code 0
+8.0K	out
