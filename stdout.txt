@@ -1,0 +1,13 @@
+Mon Oct 26 22:18:01 UTC 2026
+loaded 105 s
+title {"waited":0,"r":null,"mode":"explore","loaded":57,"cam":[5968,1951,5399],"hud":"San Juan  18.45084N 66.08816W  2.9 m | San Juan 05:27 · sun -14° | 13 fps (quality step 2) · 927 draws · 3.49M tris | tiles 54/4499 (+4) · 704 buildings"}
+  click "Comenzar": ▶ Comenzar · with sound
+s10 {"waited":0,"r":null,"mode":"explore","loaded":30,"cam":[1307,551,7693],"hud":"San Juan  18.43818N 66.06541W  49.0 m | San Juan 05:28 · sun -13° | 10 fps (quality step 2) · 898 draws · 6.49M tris | tiles 28/4499 (+4) · 2976 buildings"}
+s30 {"waited":0,"r":null,"mode":"explore","loaded":76,"cam":[1341,547,7659],"hud":"San Juan  18.43811N 66.06531W  48.7 m | San Juan 05:28 · sun -13° | 10 fps (quality step 2) · 1286 draws · 5.70M tris | tiles 76/4499 (+4) · 7594 buildings"}
+s60 {"waited":0,"r":null,"mode":"explore","loaded":82,"cam":[1416,537,7584],"hud":"San Juan  18.43796N 66.06510W  47.1 m | San Juan 05:28 · sun -13° | 10 fps (quality step 2) · 1143 draws · 4.56M tris | tiles 82/4499 (+4) · 7625 buildings"}
+s100 {"waited":0,"r":null,"mode":"explore","loaded":86,"cam":[1549,527,7451],"hud":"San Juan  18.43768N 66.06471W  48.0 m | San Juan 05:28 · sun -13° | 11 fps (quality step 2) · 1237 draws · 5.37M tris | tiles 86/4499 (+4) · 8371 buildings"}
+[http 404] https://webgpu-demos.github.io/favicon.ico
+[error] Failed to load resource: the server responded with a status of 404 ()
+Mon Oct 26 22:22:55 UTC 2026
+exit code 0
+784K	out
