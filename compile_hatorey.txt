@@ -1,0 +1,32 @@
+   0.0s area hatorey: 3592 x 2656 m around [-66.0629,18.4236]
+   2.6s   lidar USGS_1M_19_x80y204_PR_PuertoRicoUSVI_D24.tif: 140085 grid cells
+   4.0s   lidar USGS_1M_19_x80y205_PR_PuertoRicoUSVI_D24.tif: 58933 grid cells
+   6.8s   lidar USGS_1M_19_x81y204_PR_PuertoRicoUSVI_D24.tif: 163773 grid cells
+   8.6s   lidar USGS_1M_19_x81y205_PR_PuertoRicoUSVI_D24.tif: 70925 grid cells
+   8.7s lidar: 433716 of 433716 grid cells from 4 tiles (100%), mean change 1.67 m; land cells on a whole metre 40% -> 4%
+   8.7s coastline (OSM): 9 ways in 2 chains, 0 cross the area, 0 islands -> 0 sea polygons
+   8.8s terrain 769 x 564 @ 5 m, 0.2..35.5 m (0 filled; 0 sea cells, 6 lagoons and ponds levelled)
+   8.9s surroundings: 223 x 215 @ 128 m, 62% land
+   9.0s garita: 35793 buildings in 6 tiles, 35793 with ids, 35781 with a GERS id, 3045 with a lidar height
+   9.5s buildings: 9936 kept of 9803 OSM outlines (158 building parts standing for 19 outlines; 2 outlines kept under raised parts) and 244 FEMA-only; 110 dropped, 0 in the sea
+   9.5s   heights from: OSM height 8670, Garita lidar 855, OSM floors 159, FEMA LiDAR 19, default 99 (FEMA has 7888 outlines here)
+   9.5s   GERS ids from Garita: 9792 of 10046 buildings
+   9.6s   height median 4.2 m, p95 9.1 m, max 93.6 m; ground drop under outline p95 0.7 m
+   9.6s   usage codes: 411:4668 461:2002 412:1632 402:1083 421:184 422:174 431:152 401:22 441:11 414:8 (unknown uses settled by the places inside 60, by the name 1)
+  13.5s road surfaces: 2481 streets and 92 expressway edges -> 432 outline pieces, 80 expressway pieces over 157 tiles; 0 FEMA structures in the street dropped
+  13.5s road graph (OSM): 1976 nodes, 2629 edges, 189.2 km
+  13.5s   residential 103.4, service 40.1, tertiary 11.3, primary 9.5, motorway_link 9.4, motorway 8.4, secondary 6.4, primary_link 0.3, secondary_link 0.2, tertiary_link 0.1, living_street 0.1
+  13.5s   bridges 41 (5 street-level spans), tunnels 20, oneway 808
+  13.5s railways (OSM): 11 lines (11 elevated sections), 19 portals where tracks pass through buildings
+  16.3s road outlines: 432 polygons -> 483 carriageway, 1808 sidewalk pieces (0 pedestrian streets, 3 without any OSM way, 3 failed to clip); 0 cobbled
+  16.3s sea: 0 pieces
+  16.3s land cover (OSM): park 640, wood 193, water 6, pitch 62, beach 5
+  16.9s street bridges: 5 decks, 303 polygons on them, 16 parapet segments
+  17.3s OSM extras: footway 117, pedestrian 4, footbridge 4, path 15, plaza 38, bridge stairs 2, stairs 1, canopy 78, platform 7, car park 488, parked car 11091, river 2, fence 256, wall 45, pool 72, stream 1, ditch 3, guard_rail 20, retaining_wall 3, hydrant 11, playground 3
+  19.0s paint: 34750 marks; props: tree 16279, light 1782, pole 3081, decal 838, signal 223, parked 11091, hydrant 11, play 3; wires 2393
+  19.0s OSM building hints: 1 buildings with a mapped colour or material; 0 with a colour in all
+  19.0s landmarks: 0 forts, 0 garitas, 0 domes, 0 lighthouses, 0 other models, 0 triangles in 0 tiles
+  19.3s ads: 7 billboards, 0 screens, 4 rooftop boards, 7 banners
+  19.3s signs: 295 from 614 named places (fascia 231, blade 37, building names 9)
+  19.3s street furniture (OSM): bus_stop 93, bench 3, post_box 7, subway 5, statue 4, bikes 3
+  19.5s wrote 170 tiles (8.5 MB), terrain 1.7 MB, roads 1.1 MB, rails 0.0 MB -> public/tiles/hatorey
