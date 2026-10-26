@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-26T19:05:43.897Z",
- "flood_attached": false,
+ "generated": "2026-10-26T19:16:41.230Z",
+ "flood_attached": true,
  "ids": {
   "osm": 1500646,
   "osm_with_ref": 1500646,
@@ -16,7 +16,7 @@
    "url": "https://fema-femadata.s3.amazonaws.com/Partners/ORNL/USA_Structures/Puerto%20Rico/Deliverable20250606PR.zip",
    "structures": 1194236,
    "with_height": 234162,
-   "fetched": "2026-10-26T18:32:25Z"
+   "fetched": "2026-10-26T19:08:05Z"
   },
   "footprints": 234162,
   "filled_osm": 111417,
@@ -1210,13 +1210,13 @@
       "shared_m2": 1.47
      },
      {
-      "lon": -65.907904,
-      "lat": 18.407995,
+      "lon": -65.907953,
+      "lat": 18.407938,
       "shared_m2": 1.3
      },
      {
-      "lon": -65.907953,
-      "lat": 18.407938,
+      "lon": -65.907904,
+      "lat": 18.407995,
       "shared_m2": 1.3
      }
     ],
@@ -1261,8 +1261,8 @@
  },
  "elevation": {
   "tiles": 1788,
-  "fetched": 1788,
-  "cached": 0,
+  "fetched": 0,
+  "cached": 1788,
   "failed": 0,
   "unknown": 0,
   "below_0": 1553,
@@ -1305,103 +1305,116 @@
  },
  "flood": {
   "nfhl": {
-   "polygons": 0,
+   "polygons": 4894,
    "by_class": {
-    "0": 0,
-    "1": 0,
-    "2": 0,
-    "3": 0
+    "0": 729,
+    "1": 1648,
+    "2": 1978,
+    "3": 539
    },
-   "by_zone": {}
+   "by_zone": {
+    "AE": 1622,
+    "VE": 538,
+    "A": 191,
+    "AE | FLOODWAY": 138,
+    "AO": 24,
+    "AO | FLOODWAY": 1,
+    "AH": 1,
+    "VE | RIVERINE FLOODWAY SHOWN IN COASTAL ZONE": 1,
+    "A99": 1,
+    "X | 0.2 PCT ANNUAL CHANCE FLOOD HAZARD": 1648,
+    "X | AREA OF MINIMAL FLOOD HAZARD": 720,
+    "D": 9
+   }
   },
   "island_zone_counts": {
-   "0": 1737161,
-   "1": 0,
-   "2": 0,
-   "3": 0
+   "0": 1520895,
+   "1": 59025,
+   "2": 153180,
+   "3": 4061
   },
   "top5_zone2": [
    {
-    "geoid": "72001",
-    "name": "Adjuntas",
-    "buildings": 12457,
-    "zone2": 0,
-    "zone3": 0,
-    "sfha": 0
+    "geoid": "72113",
+    "name": "Ponce",
+    "buildings": 69392,
+    "zone2": 15463,
+    "zone3": 106,
+    "sfha": 15569
    },
    {
-    "geoid": "72003",
-    "name": "Aguada",
-    "buildings": 23051,
-    "zone2": 0,
-    "zone3": 0,
-    "sfha": 0
+    "geoid": "72127",
+    "name": "San Juan",
+    "buildings": 111096,
+    "zone2": 15258,
+    "zone3": 90,
+    "sfha": 15348
    },
    {
-    "geoid": "72005",
-    "name": "Aguadilla",
-    "buildings": 32302,
-    "zone2": 0,
-    "zone3": 0,
-    "sfha": 0
+    "geoid": "72031",
+    "name": "Carolina",
+    "buildings": 56583,
+    "zone2": 13906,
+    "zone3": 16,
+    "sfha": 13922
    },
    {
-    "geoid": "72007",
-    "name": "Aguas Buenas",
-    "buildings": 13531,
-    "zone2": 0,
-    "zone3": 0,
-    "sfha": 0
+    "geoid": "72123",
+    "name": "Salinas",
+    "buildings": 20632,
+    "zone2": 9338,
+    "zone3": 234,
+    "sfha": 9572
    },
    {
-    "geoid": "72009",
-    "name": "Aibonito",
-    "buildings": 14949,
-    "zone2": 0,
-    "zone3": 0,
-    "sfha": 0
+    "geoid": "72097",
+    "name": "Mayag\u00fcez",
+    "buildings": 38352,
+    "zone2": 8590,
+    "zone3": 38,
+    "sfha": 8628
    }
   ],
   "top5_sfha": [
    {
-    "geoid": "72001",
-    "name": "Adjuntas",
-    "buildings": 12457,
-    "zone2": 0,
-    "zone3": 0,
-    "sfha": 0
+    "geoid": "72113",
+    "name": "Ponce",
+    "buildings": 69392,
+    "zone2": 15463,
+    "zone3": 106,
+    "sfha": 15569
    },
    {
-    "geoid": "72003",
-    "name": "Aguada",
-    "buildings": 23051,
-    "zone2": 0,
-    "zone3": 0,
-    "sfha": 0
+    "geoid": "72127",
+    "name": "San Juan",
+    "buildings": 111096,
+    "zone2": 15258,
+    "zone3": 90,
+    "sfha": 15348
    },
    {
-    "geoid": "72005",
-    "name": "Aguadilla",
-    "buildings": 32302,
-    "zone2": 0,
-    "zone3": 0,
-    "sfha": 0
+    "geoid": "72031",
+    "name": "Carolina",
+    "buildings": 56583,
+    "zone2": 13906,
+    "zone3": 16,
+    "sfha": 13922
    },
    {
-    "geoid": "72007",
-    "name": "Aguas Buenas",
-    "buildings": 13531,
-    "zone2": 0,
-    "zone3": 0,
-    "sfha": 0
+    "geoid": "72123",
+    "name": "Salinas",
+    "buildings": 20632,
+    "zone2": 9338,
+    "zone3": 234,
+    "sfha": 9572
    },
    {
-    "geoid": "72009",
-    "name": "Aibonito",
-    "buildings": 14949,
-    "zone2": 0,
-    "zone3": 0,
-    "sfha": 0
+    "geoid": "72097",
+    "name": "Mayag\u00fcez",
+    "buildings": 38352,
+    "zone2": 8590,
+    "zone3": 38,
+    "sfha": 8628
    }
   ],
   "reference": {
@@ -1420,13 +1433,13 @@
    "name": "Toa Baja",
    "buildings": 34060,
    "zone_counts": {
-    "0": 34060,
-    "1": 0,
-    "2": 0,
-    "3": 0
+    "0": 16925,
+    "1": 10207,
+    "2": 6882,
+    "3": 46
    },
-   "sfha": 0,
-   "sfha_share": 0,
+   "sfha": 6928,
+   "sfha_share": 0.2034,
    "lt_1m": 554,
    "at_or_below_1m": 627,
    "at_or_below_2m": 1587,
@@ -1437,13 +1450,13 @@
    "name": "Cata\u00f1o",
    "buildings": 9989,
    "zone_counts": {
-    "0": 9989,
-    "1": 0,
-    "2": 0,
-    "3": 0
+    "0": 790,
+    "1": 5497,
+    "2": 3276,
+    "3": 426
    },
-   "sfha": 0,
-   "sfha_share": 0,
+   "sfha": 3702,
+   "sfha_share": 0.3706,
    "lt_1m": 1780,
    "at_or_below_1m": 1904,
    "at_or_below_2m": 3275,
@@ -1454,13 +1467,13 @@
    "name": "San Juan",
    "buildings": 111096,
    "zone_counts": {
-    "0": 111096,
-    "1": 0,
-    "2": 0,
-    "3": 0
+    "0": 92056,
+    "1": 3692,
+    "2": 15258,
+    "3": 90
    },
-   "sfha": 0,
-   "sfha_share": 0,
+   "sfha": 15348,
+   "sfha_share": 0.1382,
    "lt_1m": 1629,
    "at_or_below_1m": 1761,
    "at_or_below_2m": 4251,
@@ -1483,49 +1496,60 @@
   },
   "without_municipio": 0,
   "dropped_outside_puerto_rico": 1,
-  "in_sfha": 0,
-  "in_sfha_by_type": {}
+  "in_sfha": 393,
+  "in_sfha_by_type": {
+   "airport": 8,
+   "clinic": 54,
+   "fire_station": 8,
+   "hospital": 8,
+   "police_station": 25,
+   "power_plant": 11,
+   "school": 181,
+   "seaport": 12,
+   "substation": 70,
+   "water_plant": 16
+  }
  },
  "top5_buildings": [
   {
    "geoid": "72127",
    "name": "San Juan",
    "buildings": 111096,
-   "zone2": 0,
-   "zone3": 0,
-   "sfha": 0
+   "zone2": 15258,
+   "zone3": 90,
+   "sfha": 15348
   },
   {
    "geoid": "72021",
    "name": "Bayam\u00f3n",
    "buildings": 73190,
-   "zone2": 0,
+   "zone2": 2254,
    "zone3": 0,
-   "sfha": 0
+   "sfha": 2254
   },
   {
    "geoid": "72113",
    "name": "Ponce",
    "buildings": 69392,
-   "zone2": 0,
-   "zone3": 0,
-   "sfha": 0
+   "zone2": 15463,
+   "zone3": 106,
+   "sfha": 15569
   },
   {
    "geoid": "72031",
    "name": "Carolina",
    "buildings": 56583,
-   "zone2": 0,
-   "zone3": 0,
-   "sfha": 0
+   "zone2": 13906,
+   "zone3": 16,
+   "sfha": 13922
   },
   {
    "geoid": "72025",
    "name": "Caguas",
    "buildings": 54632,
-   "zone2": 0,
+   "zone2": 4250,
    "zone3": 0,
-   "sfha": 0
+   "sfha": 4250
   }
  ],
  "bottom5_buildings": [
@@ -1533,17 +1557,17 @@
    "geoid": "72049",
    "name": "Culebra",
    "buildings": 2156,
-   "zone2": 0,
-   "zone3": 0,
-   "sfha": 0
+   "zone2": 31,
+   "zone3": 138,
+   "sfha": 169
   },
   {
    "geoid": "72093",
    "name": "Maricao",
    "buildings": 4141,
-   "zone2": 0,
+   "zone2": 67,
    "zone3": 0,
-   "sfha": 0
+   "sfha": 67
   },
   {
    "geoid": "72054",
@@ -1557,17 +1581,17 @@
    "geoid": "72095",
    "name": "Maunabo",
    "buildings": 6581,
-   "zone2": 0,
-   "zone3": 0,
-   "sfha": 0
+   "zone2": 380,
+   "zone3": 1,
+   "sfha": 381
   },
   {
    "geoid": "72083",
    "name": "Las Mar\u00edas",
    "buildings": 6750,
-   "zone2": 0,
+   "zone2": 19,
    "zone3": 0,
-   "sfha": 0
+   "sfha": 19
   }
  ]
 }
