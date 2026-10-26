@@ -152,7 +152,9 @@ jobs:
           retention-days: 14
       - name: Result to the branch heights-out (not the site; for reading without the Actions artifact store)
         run: |
-          cd out/data/hazards/heights && git init -q -b heights-out && git config user.name "garita-pipeline" && git config user.email "actions@users.noreply.github.com"
+          # (from a copy: a repository left inside out/ would be published to gh-pages as an embedded repository)
+          rm -rf /tmp/heights-out && cp -r out/data/hazards/heights /tmp/heights-out
+          cd /tmp/heights-out && git init -q -b heights-out && git config user.name "garita-pipeline" && git config user.email "actions@users.noreply.github.com"
           git add -A && git commit -q -m "heights: run ${GITHUB_RUN_ID}, ${GITHUB_SHA::7}, site ${{ needs.plan.outputs.site_sha }}"
           git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" HEAD:refs/heads/heights-out
       - name: Publish to gh-pages (only when dispatched with publish = yes)
