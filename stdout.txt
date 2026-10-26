@@ -1,0 +1,17 @@
+   above ground+50: 4071 classes (array([1], dtype=uint8), array([4071])) z pct [212.6 260.4 315.9] returns (array([0, 1, 2, 3, 4, 5, 6, 7], dtype=uint8), array([ 225, 1096,  616,  548,  501,  423,  366,  296])) of (array([0, 1, 2, 3, 4, 5, 6, 7], dtype=uint8), array([ 515,  991, 1093,  101,  250,  262,  414,  445]))
+   class 1 last returns, height histogram {-5: 1225, 0: 578, 2: 681, 5: 258, 10: 0, 20: 0, 50: 0, 100: 17, 200: 709, 300: 67}
+   high points xy spread m 17.6 17.3 GpsTime spread s 0.63 PointSourceId [605]
+== i1709211 Fajardo collection H: 10194 points, classes (array([ 1,  2,  7, 18], dtype=uint8), array([4636, 1528,  349, 3681])), ground median 15.9
+   above ground+50: 4769 classes (array([ 1,  7, 18], dtype=uint8), array([ 741,  349, 3679])) z pct [193.2 208.2 222.4] returns (array([0, 1, 2, 3, 4, 5, 6, 7], dtype=uint8), array([249, 930, 795, 724, 657, 568, 479, 367])) of (array([0, 1, 2, 3, 4, 5, 6, 7], dtype=uint8), array([669, 918, 902, 336, 285, 279, 430, 950]))
+   class 1 last returns, height histogram {-5: 284, 0: 602, 2: 1121, 5: 214, 10: 0, 20: 0, 50: 0, 100: 0, 200: 97, 300: 0}
+   high points xy spread m 14.5 12.0 GpsTime spread s 8.97 PointSourceId [512]
+== i808280 p50 244 collection H: 20828 points, classes (array([ 1,  2,  7, 18], dtype=uint8), array([11667,  1578,  5362,  2221])), ground median 676.0
+   above ground+50: 6557 classes (array([ 1,  7, 18], dtype=uint8), array([2304, 2039, 2214])) z pct [133.7 212.7 257.5] returns (array([0, 1, 2, 3, 4, 5, 6, 7], dtype=uint8), array([  21, 2371, 1755, 1149,  696,  338,  167,   60])) of (array([0, 1, 2, 3, 4, 5, 6, 7], dtype=uint8), array([  80,  541, 1298, 1525, 1366,  881,  618,  248]))
+   class 1 last returns, height histogram {-5: 918, 0: 400, 2: 662, 5: 591, 10: 451, 20: 112, 50: 0, 100: 2, 200: 768, 300: 1}
+   high points xy spread m 15.5 14.8 GpsTime spread s 4.34 PointSourceId [563]
+== i935742 collection H: 23513 points, classes (array([ 1,  2,  7, 18], dtype=uint8), array([ 5679,  1771, 11485,  4578])), ground median 559.4
+   above ground+50: 16022 classes (array([ 1,  7, 18], dtype=uint8), array([1632, 9830, 4560])) z pct [ 73.8 130.9 274.4] returns (array([0, 1, 2, 3, 4, 5, 6, 7], dtype=uint8), array([  14, 8803, 3687, 2041,  928,  371,  132,   46])) of (array([0, 1, 2, 3, 4, 5, 6, 7], dtype=uint8), array([ 104,  623, 5362, 4117, 3016, 1673,  807,  320]))
+   class 1 last returns, height histogram {-5: 477, 0: 362, 2: 381, 5: 509, 10: 100, 20: 0, 50: 0, 100: 12, 200: 724, 300: 82}
+   high points xy spread m 15.5 15.9 GpsTime spread s 197966.63 PointSourceId [573 581 582]
+exit code 0
+8.0K	out
