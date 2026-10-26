@@ -1,0 +1,35 @@
+Mon Oct 26 15:24:58 UTC 2026
+1 jpg 198 0.0 GB
+1 txt 1 0.0 GB
+1 vpc 1 0.0 GB
+1 xml 198 0.0 GB
+2 jpg 83 0.0 GB
+2 txt 1 0.0 GB
+2 xml 83 0.0 GB
+3 jpg 78 0.0 GB
+3 txt 1 0.0 GB
+3 xml 78 0.0 GB
+4 jpg 4819 0.1 GB
+4 txt 1 0.0 GB
+4 vpc 1 0.0 GB
+4 xml 4819 0.1 GB
+5 jpg 574 0.0 GB
+5 txt 1 0.0 GB
+5 vpc 1 0.0 GB
+5 xml 574 0.0 GB
+6 jpg 4391 0.0 GB
+6 txt 1 0.0 GB
+6 vpc 1 0.0 GB
+6 xml 4391 0.1 GB
+0 laz keys
+[]
+candidates []
+tile 
+download 1 s 374243
+== ept USGS_LPC_PR_PRVI_A_2018
+{'bounds': [-7564423, 1920979, -134049, -7294365, 2191037, 136009], 'points': 90878087626, 'span': 128, 'dataType': 'laszip'} ['X', 'Y', 'Z', 'Intensity', 'ReturnNumber', 'NumberOfReturns', 'ScanDirectionFlag', 'EdgeOfFlightLine', 'Classification', 'ScanAngleRank', 'UserData', 'PointSourceId', 'GpsTime', 'ScanChannel', 'ClassFlags'] 3857 None
+== ept USGS_LPC_PR_PRVI_D_2018
+{'bounds': [-7460104, 2003242, -61218, -7332130, 2131216, 66756], 'points': 95858824868, 'span': 128, 'dataType': 'laszip'} ['X', 'Y', 'Z', 'Intensity', 'ReturnNumber', 'NumberOfReturns', 'ScanDirectionFlag', 'EdgeOfFlightLine', 'Classification', 'ScanAngleRank', 'UserData', 'PointSourceId', 'GpsTime', 'ScanChannel', 'ClassFlags'] 3857 None
+Mon Oct 26 15:25:15 UTC 2026
+exit code 0
+12K	out

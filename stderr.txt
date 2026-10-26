@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "<stdin>", line 7, in <module>
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+  File "/home/runner/.local/lib/python3.12/site-packages/laspy/lib.py", line 258, in read_las
+    with open_las(
+         ^^^^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/laspy/lib.py", line 148, in open_las
+    return LasReader(
+           ^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/laspy/lasreader.py", line 51, in __init__
+    self.header = LasHeader.read_from(source, read_evlrs=read_evlrs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/laspy/header.py", line 594, in read_from
+    stream = io.BytesIO(cls._prefetch_header_data(original_stream))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/laspy/header.py", line 967, in _prefetch_header_data
+    raise LaspyException(f'Invalid file signature "{file_sig}"')
+laspy.errors.LaspyException: Invalid file signature "b'<?xm'"
