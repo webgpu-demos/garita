@@ -1,0 +1,33 @@
+Mon Oct 26 23:31:05 UTC 2026
+8ffd8ea Merge pull request #6 from webgpu-demos/fix-heights-and-areas
+total 12472
+-rw-r--r-- 1 runner runner   750948 Oct 26 23:31 manifest.json
+-rw-r--r-- 1 runner runner 12016620 Oct 26 23:31 terrain.bin
+  USGS_1M_19_x80y203_PR_PuertoRicoUSVI_D24.tif 401 MB
+  USGS_1M_19_x80y204_PR_PuertoRicoUSVI_D24.tif 421 MB
+  USGS_1M_19_x81y203_PR_PuertoRicoUSVI_D24.tif 396 MB
+  USGS_1M_20_x16y203_PR_PuertoRicoUSVI_D24.tif 396 MB
+  USGS_1M_19_x81y204_PR_PuertoRicoUSVI_D24.tif 409 MB
+  USGS_1M_20_x17y203_PR_PuertoRicoUSVI_D24.tif 399 MB
+  USGS_1M_20_x17y204_PR_PuertoRicoUSVI_D24.tif 414 MB
+  USGS_1M_20_x16y204_PR_PuertoRicoUSVI_D24.tif 415 MB
+  USGS_1M_20_x18y203_PR_PuertoRicoUSVI_D24.tif 395 MB
+  USGS_1M_20_x18y204_PR_PuertoRicoUSVI_D24.tif 422 MB
+  lidar USGS_1M_19_x80y203_PR_PuertoRicoUSVI_D24.tif: 325111 grid cells
+  lidar USGS_1M_19_x80y204_PR_PuertoRicoUSVI_D24.tif: 684440 grid cells
+  lidar USGS_1M_19_x80y205_PR_PuertoRicoUSVI_D24.tif: 183818 grid cells
+  lidar USGS_1M_19_x81y203_PR_PuertoRicoUSVI_D24.tif: 382579 grid cells
+  lidar USGS_1M_19_x81y204_PR_PuertoRicoUSVI_D24.tif: 799593 grid cells
+  lidar USGS_1M_19_x81y205_PR_PuertoRicoUSVI_D24.tif: 203740 grid cells
+  lidar USGS_1M_20_x16y205_PR_PuertoRicoUSVI_D24.tif: 5 grid cells
+  lidar USGS_1M_20_x17y205_PR_PuertoRicoUSVI_D24.tif: 63 grid cells
+  lidar USGS_1M_20_x18y205_PR_PuertoRicoUSVI_D24.tif: 13 grid cells
+{"tiles":9,"cells":3004155,"covered":2579362,"meanAbsChange":3.03,"plateauShareBefore":0.12,"plateauShareAfter":0.04}
+total 11744
+-rw-r--r-- 1 runner runner      856 Oct 26 23:33 lidar_stats.json
+-rw-r--r-- 1 runner runner        0 Oct 26 23:31 stderr.txt
+-rw-r--r-- 1 runner runner     1528 Oct 26 23:33 stdout.txt
+-rw-r--r-- 1 runner runner 12016620 Oct 26 23:33 terrain_lidar.bin
+Mon Oct 26 23:33:58 UTC 2026
+exit code 0
+12M	out
