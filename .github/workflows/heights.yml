@@ -144,7 +144,8 @@ jobs:
           retention-days: 14
       - name: Publish to gh-pages (only when dispatched with publish = yes)
         if: github.event_name == 'workflow_dispatch' && inputs.publish == 'yes'
-        run: GH_TOKEN=${{ github.token }} bash pipeline/hazards/publish.sh heights "heights: building heights from the 3DEP 2018 lidar point clouds (${GITHUB_SHA::7}, run ${GITHUB_RUN_ID})"
+        run: |
+          GH_TOKEN=${{ github.token }} bash pipeline/hazards/publish.sh heights "heights: building heights from the 3DEP 2018 lidar point clouds (${GITHUB_SHA::7}, run ${GITHUB_RUN_ID})"
       - name: Result
         run: |
           tail -30 out/data/hazards/heights/log.txt || true
