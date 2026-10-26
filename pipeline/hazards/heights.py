@@ -15,6 +15,9 @@ Method   For each footprint (the outer ring in tiles/bld):
                    than MIN_H above the ground;
            ground  class 2 points between 1 and NEAR_M outside the ring (out to FAR_M when fewer than MIN_GROUND
                    are found): their median;
+           noise   some flight lines leave returns 100 to 300 m up (birds, haze) in class 1: the roof elevations are
+                   split wherever GAP_M holds no point; a group above the lowest stays only if it is flat (FLAT_M:
+                   a tower over a podium) and more than two points
            height  the 90th percentile of the roof points' elevation minus the ground (the top of the roof with
                    its parapets and tanks, not a stray antenna); the median is kept too (p50: the main roof).
          Accepted only with at least MIN_ROOF roof points and MIN_GROUND ground points, when at least MIN_COVER of
@@ -49,7 +52,6 @@ import re
 import struct
 import sys
 import time
-import traceback
 import urllib.request
 
 import numpy as np
@@ -68,6 +70,8 @@ MIN_GROUND = 3
 MIN_COVER = 0.5
 MIN_H = 2.0
 MAX_H = 250.0
+GAP_M = 10.0     # roof elevations further apart than this, with nothing between, are separate groups
+FLAT_M = 8.0     # a group above the lowest is a roof only if its p95 - p5 is within this
 CELL_Z = 16
 R = 6378137.0
 T0 = time.time()
@@ -317,14 +321,27 @@ def measure(ring_xy, k, P, grid):
     if len(isel) == 0:
         return (np.nan, np.nan, np.nan, 0, len(gz), ground)
     rn, nr = P['ReturnNumber'][cand][isel], P['NumberOfReturns'][cand][isel]
-    last = rn >= nr
+    last = (rn >= nr) & (rn > 0)          # (return number 0 is invalid; some flight lines have it)
     di = seg_dist(X[isel], Y[isel], rx, ry) / k
     inset = last & (di > INSET_M)
+    zi, ci = Z[isel][inset], C[isel][inset]
+    roof = ((ci == 1) | (ci == 6)) & (zi > ground + MIN_H)
+    # Noise left in class 1: in some flight lines returns from 100 to 300 m above the ground (birds, haze) are not
+    # flagged as noise. Split the roof elevations wherever GAP_M is empty: the lowest group is the roof; a group
+    # above is kept only if it is flat (a tower over a podium: p95 - p5 within FLAT_M) and not a few stray points.
+    if roof.any():
+        zs = np.sort(zi[roof])
+        cut = np.nonzero(np.diff(zs) > GAP_M)[0]
+        for lo, hi in zip(np.concatenate([[0], cut + 1])[1:], np.concatenate([cut + 1, [len(zs)]])[1:]):
+            g = zs[lo:hi]
+            if len(g) < 3 or np.percentile(g, 95) - np.percentile(g, 5) > FLAT_M:
+                drop = (zi >= g[0]) & (zi <= g[-1])
+                roof &= ~drop
+                inset[np.nonzero(inset)[0][drop]] = False  # (not counted for cover either)
+                zi, ci, roof = zi[~drop], ci[~drop], roof[~drop]
     n_inset = int(inset.sum())
     if n_inset == 0:
         return (np.nan, np.nan, np.nan, 0, len(gz), ground)
-    zi, ci = Z[isel][inset], C[isel][inset]
-    roof = ((ci == 1) | (ci == 6)) & (zi > ground + MIN_H)
     nroof = int(roof.sum())
     cover = nroof / n_inset
     if nroof < MIN_ROOF or cover < MIN_COVER:
@@ -338,7 +355,7 @@ def measure(ring_xy, k, P, grid):
 
 def read_cell(cols, ds, bounds):
     import pdal
-    readers = [{'type': 'readers.ept', 'filename': cols[j]['url'], 'bounds': bounds, 'resolution': RES_M, 'threads': 6, 'tag': f'r{j}'} for j in ds]
+    readers = [{'type': 'readers.ept', 'filename': cols[j]['url'], 'bounds': bounds, 'resolution': RES_M, 'threads': 4, 'tag': f'r{j}'} for j in ds]
     stages = readers + ([{'type': 'filters.merge', 'inputs': [r['tag'] for r in readers]}] if len(readers) > 1 else [])
     stages.append({'type': 'filters.range', 'limits': 'Classification[1:2],Classification[6:6]'})
     p = pdal.Pipeline(json.dumps({'pipeline': stages}))
@@ -346,24 +363,53 @@ def read_cell(cols, ds, bounds):
     arrs = [x for x in p.arrays if len(x)]
     if not arrs:
         return None
-    return np.concatenate(arrs) if len(arrs) > 1 else arrs[0]
+    a = np.concatenate(arrs) if len(arrs) > 1 else arrs[0]
+    return np.ascontiguousarray(a[['X', 'Y', 'Z', 'Classification', 'ReturnNumber', 'NumberOfReturns']])
+
+
+def timed_read(cols, ds, bounds, tries=3):
+    """read_cell in a worker process, tried again on a network or tile error; (points, seconds)."""
+    t = time.time()
+    for k in range(tries):
+        try:
+            return read_cell(cols, ds, bounds), time.time() - t
+        except Exception:  # noqa: BLE001
+            if k == tries - 1:
+                raise
+            time.sleep(3 + 5 * k)
 
 
 def cmd_shard(a):
+    """One shard's cells. Points are read in worker processes (a crash in PDAL takes one worker, not the shard),
+    measured here, and the results saved every minute: a run that dies is started again and goes on from there."""
     global LOG
     os.makedirs(os.path.join(a.work, 'shard'), exist_ok=True)
     LOG = os.path.join(a.work, 'shard', f'log_shard_{a.shard:02d}.txt')
-    open(LOG, 'w').close()
     plan = json.load(open(os.path.join(a.work, 'plan', 'plan.json')))
     pz = np.load(os.path.join(a.work, 'plan', 'plan.npz'))
     order, ptr = pz['order'], pz['ptr']
     idx, off = tile_offsets(a.site)
     if idx['generated'] != plan['generated']:
         log(f'building tiles are of {idx["generated"]}, the plan of {plan["generated"]}: stopping')
-        return
+        return 0
     cols = plan['collections']
     mine = [i for i, c in enumerate(plan['cells']) if c['shard'] == a.shard]
-    log(f'shard {a.shard}: {len(mine)} cells, {sum(plan["cells"][i]["n"] for i in mine)} buildings; resolution {RES_M} m; budget {a.budget} s')
+    deadline = a.deadline or (time.time() + a.budget)
+    out_file = os.path.join(a.work, 'shard', f'shard_{a.shard:02d}.npz')
+    st_file = os.path.join(a.work, 'shard', f'status_{a.shard:02d}.json')
+    out_i, out = [], []
+    status = {'cells': len(mine), 'done': 0, 'empty': 0, 'failed': 0, 'skipped_for_time': 0, 'points': 0, 'read_s': 0.0, 'measure_s': 0.0, 'readers': a.readers, 'restarts': 0}
+    finished = set()
+    if os.path.exists(out_file) and os.path.exists(st_file):  # a run before this one died: go on from where it saved
+        z = np.load(out_file)
+        out_i, out = list(z['i']), [tuple(r) for r in z['v']]
+        prev = json.load(open(st_file))
+        finished = set(prev.get('finished_cells', []))
+        for k in ('done', 'empty', 'failed', 'points', 'read_s', 'measure_s'):
+            status[k] = prev.get(k, 0)
+        status['restarts'] = prev.get('restarts', 0) + 1
+        log(f'resuming: {len(finished)} cells already done, {len(out_i)} buildings')
+    log(f'shard {a.shard}: {len(mine)} cells, {sum(plan["cells"][i]["n"] for i in mine)} buildings; resolution {RES_M} m; {int(deadline - time.time())} s left')
     tiles = {}
 
     def ring(i):
@@ -373,16 +419,18 @@ def cmd_shard(a):
             tiles[t] = read_tile(a.site, x, y)[0]
         return tiles[t][i - off[t]]
 
-    out_i, out = [], []
-    status = {'cells': len(mine), 'done': 0, 'empty': 0, 'failed': 0, 'skipped_for_time': 0, 'points': 0, 'read_s': 0.0, 'measure_s': 0.0, 'readers': a.readers}
-
-    def timed_read(ds, bounds):
-        t = time.time()
-        P = read_cell(cols, ds, bounds)
-        return P, time.time() - t
+    def save(final=False):
+        arr = np.array(out, dtype=np.float64).reshape(-1, 6)
+        np.savez_compressed(out_file + '.tmp.npz', i=np.array(out_i, dtype=np.int32), v=arr.astype(np.float32))
+        os.replace(out_file + '.tmp.npz', out_file)
+        status['measured'] = int(np.isfinite(arr[:, 0]).sum()) if len(arr) else 0
+        status['buildings'] = len(out_i)
+        status['finished_cells'] = sorted(finished)
+        status['complete'] = final
+        json.dump(status, open(st_file, 'w'))
 
     def prep(ci):
-        """The rings of a cell's buildings in Web Mercator, and the box to read (main thread: the tile cache)."""
+        """The rings of a cell's buildings in Web Mercator, and the box to read."""
         b_idx = order[ptr[ci]:ptr[ci + 1]]
         rings = [merc(*ring(int(i))) for i in b_idx]
         k = scale_at(float(np.mean([ring(int(i))[1].mean() for i in b_idx[:20]])))
@@ -390,67 +438,81 @@ def cmd_shard(a):
         box = (min(r[0].min() for r in rings) - m, min(r[1].min() for r in rings) - m, max(r[0].max() for r in rings) + m, max(r[1].max() for r in rings) + m)
         return b_idx, rings, k, box
 
-    # cells are read a few at a time on threads (PDAL releases the interpreter while it reads) and measured here
+    import multiprocessing as mp
     from collections import deque
-    from concurrent.futures import ThreadPoolExecutor
-    todo, pending, n_seen = deque(mine), deque(), 0
-    with ThreadPoolExecutor(a.readers) as ex:
+    from concurrent.futures import ProcessPoolExecutor
+    from concurrent.futures.process import BrokenProcessPool
+    todo, pending, n_seen, last_save = deque(c for c in mine if c not in finished), deque(), len(finished), time.time()
+    broken = False
+    with ProcessPoolExecutor(a.readers, mp_context=mp.get_context('fork')) as ex:
         def submit():
             while todo:
                 ci = todo.popleft()
                 if not plan['cells'][ci]['ds']:
                     status['empty'] += 1
+                    finished.add(ci)
                     continue
                 try:
                     job = prep(ci)
                 except Exception as e:  # noqa: BLE001
                     status['failed'] += 1
+                    finished.add(ci)
                     log(f'  cell {ci} rings failed: {e}')
                     continue
                 X0, Y0, X1, Y1 = job[3]
-                pending.append((ci, job, ex.submit(timed_read, plan['cells'][ci]['ds'], f'([{X0:.2f}, {X1:.2f}], [{Y0:.2f}, {Y1:.2f}])')))
+                pending.append((ci, job, ex.submit(timed_read, cols, plan['cells'][ci]['ds'], f'([{X0:.2f}, {X1:.2f}], [{Y0:.2f}, {Y1:.2f}])')))
                 return
         for _ in range(a.readers + 1):
             submit()
         while pending:
-            if time.time() - T0 > a.budget:
+            if time.time() > deadline:
                 status['skipped_for_time'] = len(pending) + len(todo)
                 for _, _, f in pending:
                     f.cancel()
-                log(f'time budget reached: {status["skipped_for_time"]} cells left unread')
+                log(f'time is up: {status["skipped_for_time"]} cells left unread')
                 break
             ci, (b_idx, rings, k, box), fut = pending.popleft()
-            submit()
             c = plan['cells'][ci]
             n_seen += 1
             try:
                 P, rs = fut.result()
-                status['read_s'] += rs
-                if P is None:
-                    status['empty'] += 1
-                    continue
-                t2 = time.time()
-                status['points'] += len(P)
-                grid = Grid(P['X'], P['Y'], 4.0 * k)
-                for i, rxy in zip(b_idx, rings):
-                    out_i.append(int(i))
-                    out.append(measure(rxy, k, P, grid))
-                status['measure_s'] += time.time() - t2
-                status['done'] += 1
-                if n_seen % 50 == 1:
-                    area = (box[2] - box[0]) * (box[3] - box[1]) / k / k
-                    log(f'  cell {n_seen}/{len(mine)} {c["x"]}/{c["y"]}: {len(b_idx)} buildings, {len(c["ds"])} collections, {len(P)} points ({len(P) / area:.1f}/m2), read {rs:.1f} s, measure {time.time() - t2:.1f} s')
+            except BrokenProcessPool:
+                log(f'  a reader died at cell {c["x"]}/{c["y"]}: saving, to go on in a new run')
+                broken = True
+                break
             except Exception as e:  # noqa: BLE001
                 status['failed'] += 1
-                log(f'  cell {c["x"]}/{c["y"]} failed: {e}')
-                traceback.print_exc()
-    arr = np.array(out, dtype=np.float64).reshape(-1, 6)
-    np.savez_compressed(os.path.join(a.work, 'shard', f'shard_{a.shard:02d}.npz'), i=np.array(out_i, dtype=np.int32), v=arr.astype(np.float32))
-    status['measured'] = int(np.isfinite(arr[:, 0]).sum()) if len(arr) else 0
-    status['buildings'] = len(out_i)
-    status['elapsed_s'] = round(time.time() - T0, 1)
-    json.dump(status, open(os.path.join(a.work, 'shard', f'status_{a.shard:02d}.json'), 'w'))
-    log('shard done', json.dumps({k: (round(v, 1) if isinstance(v, float) else v) for k, v in status.items()}))
+                finished.add(ci)
+                log(f'  cell {c["x"]}/{c["y"]} failed: {str(e)[:300]}')
+                submit()
+                continue
+            submit()
+            status['read_s'] += rs
+            if P is None:
+                status['empty'] += 1
+                finished.add(ci)
+                continue
+            t2 = time.time()
+            status['points'] += len(P)
+            grid = Grid(P['X'], P['Y'], 4.0 * k)
+            for i, rxy in zip(b_idx, rings):
+                out_i.append(int(i))
+                out.append(measure(rxy, k, P, grid))
+            status['measure_s'] += time.time() - t2
+            status['done'] += 1
+            finished.add(ci)
+            if n_seen % 50 == 1:
+                area = (box[2] - box[0]) * (box[3] - box[1]) / k / k
+                log(f'  cell {n_seen}/{len(mine)} {c["x"]}/{c["y"]}: {len(b_idx)} buildings, {len(c["ds"])} collections, {len(P)} points ({len(P) / area:.1f}/m2), read {rs:.1f} s, measure {time.time() - t2:.1f} s')
+            if time.time() - last_save > 60:
+                save()
+                last_save = time.time()
+        if broken:
+            for _, _, f in pending:
+                f.cancel()
+    save(final=not broken)
+    log(('shard stopped (a reader died); ' if broken else 'shard done ') + json.dumps({k: (round(v, 1) if isinstance(v, float) else v) for k, v in status.items() if k != 'finished_cells'}))
+    return 3 if broken else 0
 
 
 # ---------------------------------------------------------------- merge
@@ -533,15 +595,17 @@ def cmd_merge(a):
     v[:, 3:5] = 0
     seen = np.zeros(total, dtype=bool)
     statuses = []
-    for f in sorted(glob.glob(os.path.join(a.work, 'shard', 'shard_*.npz'))):
+    for f in sorted(f for f in glob.glob(os.path.join(a.work, 'shard', 'shard_*.npz')) if not f.endswith('.tmp.npz')):
         z = np.load(f)
         v[z['i']] = z['v']
         seen[z['i']] = True
     for f in sorted(glob.glob(os.path.join(a.work, 'shard', 'status_*.json'))):
-        statuses.append(json.load(open(f)))
+        st = json.load(open(f))
+        st.pop('finished_cells', None)
+        statuses.append(st)
     shards_in = len(statuses)
     planned = sum(c['n'] for c in plan['cells'])
-    complete = shards_in == plan['shards'] and all(s['failed'] == 0 and s['skipped_for_time'] == 0 for s in statuses) and not plan['only']
+    complete = shards_in == plan['shards'] and all(s['failed'] == 0 and s['skipped_for_time'] == 0 and s.get('complete', True) for s in statuses) and not plan['only']
     h = v[:, 0]
     has = np.isfinite(h)
     log(f'buildings {total}, in the plan {planned}, read {int(seen.sum())}, measured {int(has.sum())}; shards in {shards_in}/{plan["shards"]}; complete {complete}')
@@ -626,13 +690,14 @@ def main():
     p = argparse.ArgumentParser(description=__doc__.split('\n')[0])
     sp = p.add_subparsers(dest='cmd', required=True)
     q = sp.add_parser('plan'); q.add_argument('--site', required=True); q.add_argument('--work', required=True); q.add_argument('--shards', type=int, default=20); q.add_argument('--only', default='')
-    q = sp.add_parser('shard'); q.add_argument('--site', required=True); q.add_argument('--work', required=True); q.add_argument('--shard', type=int, required=True); q.add_argument('--budget', type=float, default=3000); q.add_argument('--readers', type=int, default=3)
+    q = sp.add_parser('shard'); q.add_argument('--site', required=True); q.add_argument('--work', required=True); q.add_argument('--shard', type=int, required=True); q.add_argument('--budget', type=float, default=3000)
+    q.add_argument('--deadline', type=float, default=0, help='unix time to stop reading at (overrides --budget; a resumed run keeps the first one)'); q.add_argument('--readers', type=int, default=3)
     q = sp.add_parser('merge'); q.add_argument('--site', required=True); q.add_argument('--work', required=True); q.add_argument('--out', required=True)
     a = p.parse_args()
     if a.cmd == 'plan':
         cmd_plan(a)
     elif a.cmd == 'shard':
-        cmd_shard(a)
+        sys.exit(cmd_shard(a))
     else:
         sys.exit(cmd_merge(a))
 

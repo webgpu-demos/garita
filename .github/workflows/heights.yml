@@ -95,7 +95,14 @@ jobs:
       - name: Measure
         run: |
           mkdir -p work/shard
-          timeout 55m /tmp/mamba/envs/pd/bin/python pipeline/hazards/heights.py shard --site site --work work --shard ${{ matrix.shard }} --budget 2900 2>&1 | tail -120 || true
+          # a run that dies (PDAL in a reader) saved what it had: start it again, up to the same deadline
+          deadline=$(( $(date +%s) + 2900 ))
+          for attempt in 1 2 3 4; do
+            timeout 55m /tmp/mamba/envs/pd/bin/python pipeline/hazards/heights.py shard --site site --work work --shard ${{ matrix.shard }} --deadline "$deadline" 2>&1 | grep -v "PDAL Error" | tail -60
+            rc=${PIPESTATUS[0]}; echo "attempt $attempt: exit $rc"
+            [ "$rc" = 0 ] && break
+            [ "$(date +%s)" -ge "$deadline" ] && break
+          done
           [ -f "work/shard/log_shard_$(printf %02d ${{ matrix.shard }}).txt" ] || echo "shard ${{ matrix.shard }} wrote no log (run ${GITHUB_RUN_ID})" > "work/shard/log_shard_$(printf %02d ${{ matrix.shard }}).txt"
       - uses: actions/upload-artifact@v4
         if: always()
