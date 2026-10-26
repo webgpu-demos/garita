@@ -1,0 +1,107 @@
+{
+ "instances_per_class": {
+  "real_train": {
+   "building": 40,
+   "blue_tarp": 15,
+   "debris": 14,
+   "vehicle": 38
+  },
+  "real_val": {
+   "building": 31,
+   "blue_tarp": 12,
+   "debris": 9,
+   "vehicle": 8
+  },
+  "real_test": {
+   "building": 7,
+   "blue_tarp": 1,
+   "debris": 0,
+   "vehicle": 21
+  },
+  "synthetic": {
+   "building": 103,
+   "blue_tarp": 29,
+   "debris": 30,
+   "vehicle": 131
+  }
+ },
+ "classes": [
+  "building",
+  "blue_tarp",
+  "debris",
+  "vehicle"
+ ],
+ "real_names": [
+  "building",
+  "blue_tarp",
+  "debris",
+  "vehicle"
+ ],
+ "real": "/tmp/smoke/fake_real",
+ "synth": [
+  "/tmp/smoke/syn"
+ ],
+ "group": "^(flight[0-9]+)_",
+ "flights": {
+  "train": 2,
+  "val": 1,
+  "test": 1
+ },
+ "frames": {
+  "train": 4,
+  "val": 2,
+  "test": 1
+ },
+ "boxes": {
+  "real": 196,
+  "synth": 293
+ },
+ "synth_frames": 7,
+ "conditions": [
+  {
+   "name": "real0.5_synth0_seed0",
+   "real_frac": 0.5,
+   "synth": "0",
+   "seed": 0,
+   "real_train": 2,
+   "synth_train": 0,
+   "data": "/tmp/smoke/exp/data/real0.5_synth0_seed0.yaml"
+  },
+  {
+   "name": "real1_synth0_seed0",
+   "real_frac": 1.0,
+   "synth": "0",
+   "seed": 0,
+   "real_train": 4,
+   "synth_train": 0,
+   "data": "/tmp/smoke/exp/data/real1_synth0_seed0.yaml"
+  },
+  {
+   "name": "real0.5_synth1_seed0",
+   "real_frac": 0.5,
+   "synth": "1",
+   "seed": 0,
+   "real_train": 2,
+   "synth_train": 2,
+   "data": "/tmp/smoke/exp/data/real0.5_synth1_seed0.yaml"
+  },
+  {
+   "name": "real1_synth1_seed0",
+   "real_frac": 1.0,
+   "synth": "1",
+   "seed": 0,
+   "real_train": 4,
+   "synth_train": 4,
+   "data": "/tmp/smoke/exp/data/real1_synth1_seed0.yaml"
+  },
+  {
+   "name": "real0_synthonly_seed0",
+   "real_frac": 0.0,
+   "synth": "only",
+   "seed": 0,
+   "real_train": 0,
+   "synth_train": 7,
+   "data": "/tmp/smoke/exp/data/real0_synthonly_seed0.yaml"
+  }
+ ]
+}
