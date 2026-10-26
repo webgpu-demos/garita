@@ -1,0 +1,38 @@
+Mon Oct 26 15:23:30 UTC 2026
+== usgs-lidar-public prefixes with PR
+1
+<IsTruncated>true
+USGS_LPC_PR_PRVI_A_2018/
+USGS_LPC_PR_PRVI_C_2018/
+USGS_LPC_PR_PRVI_D_2018/
+USGS_LPC_PR_PRVI_E_2018/
+USGS_LPC_PR_PRVI_F_2018/
+USGS_LPC_PR_PRVI_G_2018/
+USGS_LPC_PR_PRVI_H_2018/
+USGS_LPC_PR_PRVI_VI_B1_2018/
+USGS_LPC_PR_PRVI_VI_B2_2018/
+USGS_LPC_PR_PuertoRico_2015_LAS_2018/
+USGS_LPC_PR_PuertoRico_2016_LAS_2017/
+== prd-tnm LPC projects for PR
+StagedProducts/Elevation/LPC/Projects/PR
+StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/
+StagedProducts/Elevation/LPC/Projects/PR_PuertoRico_VirginIslands_2018_D18/
+StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/
+StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_1_D24/
+StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_2_D24/
+StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_3_D24/
+StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_4_D24/
+StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_5_D24/
+StagedProducts/Elevation/LPC/Projects/PR_PuertoRicoUSVI_D24/PR_PuertoRicoUSVI_6_D24/
+== ept PR_PuertoRicoUSVI_D24
+<?xml version="1.0" encoding="UTF-8"?>
+<Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>PR_PuertoRicoUSVI_D24/ept.json</Key><RequestId>65GHK07G6VTPD9AA</RequestId><HostId>rIKRRs8vv3tqOKrk7FmTqB5tV8WJA0D34c3kbJFV8T1AnSLDAGnMTQdyZbA/6esSc5iKHrxhzFA=</HostId></Error>
+== ept PR_PRVI_A_2018
+<?xml version="1.0" encoding="UTF-8"?>
+<Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>PR_PRVI_A_2018/ept.json</Key><RequestId>65GVP45F0K4EW03C</RequestId><HostId>mKUxOOfhbyvOVvywSSm+Wd5xFmOJHRgfCDQKq3TA1JQBJw83JGNNAxj/cUx1rdmun8I5vrRhsNfmH3tbF9KODfit+K7Ev+Dx</HostId></Error>
+== ept PR_PRVI_D_2018
+<?xml version="1.0" encoding="UTF-8"?>
+<Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>PR_PRVI_D_2018/ept.json</Key><RequestId>65GQXVRS5ZKEM910</RequestId><HostId>OsELze7ctuvztuZJmwf1fxLg8vrwamAOjqCldyHdJeU1p/+tL70JhefUjwP9IkFptnTuJpiibw4=</HostId></Error>
+Mon Oct 26 15:23:33 UTC 2026
+exit code 0
+8.0K	out
