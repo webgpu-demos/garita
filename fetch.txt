@@ -1,0 +1,25 @@
+   0.0s area condado: bbox lat 18.44400..18.46550 lon -66.08900..-66.05600
+   0.0s dem terrarium: 16 tiles, 16 to download
+   1.1s aerial photo: 56 tiles, 56 to download
+   1.8s surroundings: 65 tiles, 65 to download
+   3.1s fema structures: 2000
+   6.4s fema structures: 4000
+   6.6s fema structures: 4731
+   6.6s fema structures: 4731 buildings
+   6.6s osm extract: downloading https://download.geofabrik.de/north-america/us/puerto-rico-latest.osm.pbf
+  16.3s osm extract: 74 MB
+  17.6s   extract: 2M elements read, 0.1M nodes kept
+  18.8s   extract: 4M elements read, 0.2M nodes kept
+  20.0s   extract: 6M elements read, 0.2M nodes kept
+  21.1s   extract: 8M elements read, 0.2M nodes kept
+  22.3s   extract: 10M elements read, 0.2M nodes kept
+  26.2s   extract: 12M elements read, 0.3M nodes kept
+  29.1s   extract: 12.9M elements read, 315981 nodes and 39110 ways near the area
+  29.2s osm osm.json: 7094 elements (from the extract)
+  29.3s osm osm_buildings.json: 51541 elements (from the extract)
+  29.3s osm osm_coast.json: 1657 elements (from the extract)
+  29.3s osm osm_land.json: 19816 elements (from the extract)
+  29.3s osm osm_extra.json: 17542 elements (from the extract)
+  29.3s osm osm_poi.json: 2096 elements (from the extract)
+  29.3s garita: 3 building tiles (with ids), 6 files to get
+  29.3s done
