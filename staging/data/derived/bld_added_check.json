@@ -1,0 +1,93 @@
+{
+ "method": "QA of the added (machine-detected) footprints, read back from the tiles build.mjs wrote, not from its memory.\n\n1. Sample check: 2,000 added records drawn at random (fixed seed) and, for comparison, all of them. A failure is\n   an added footprint that (a) intersects an OpenStreetMap footprint of the tiles with a shared area above\n   0.5 m2, (b) has its centroid inside an OSM footprint or contains an OSM centroid, (c) has its centroid outside\n   the land-clipped municipios (in the sea), or (d) intersects another added footprint. Geometry by shapely/GEOS,\n   so it does not share code with the test in build.mjs. Ground elevation at or below 0 m is counted as a hint.",
+ "seed": 20261011,
+ "osm_first_in_every_tile": true,
+ "sample_2000": {
+  "checked": 2000,
+  "intersects_osm_over_0p5_m2": 0,
+  "touches_osm_at_all": 2,
+  "largest_shared_area_m2": 0.0,
+  "centroid_inside_osm": 0,
+  "contains_osm_centroid": 0,
+  "centroid_not_on_land": 0,
+  "intersects_other_added_over_0p5_m2": 0,
+  "largest_area_shared_with_other_added_m2": 0.1,
+  "worst_added_pairs": [],
+  "failures_any": 0,
+  "hint_ground_at_or_below_0m": 2,
+  "hint_ground_unknown": 0
+ },
+ "all_added": {
+  "checked": 236515,
+  "intersects_osm_over_0p5_m2": 0,
+  "touches_osm_at_all": 158,
+  "largest_shared_area_m2": 0.05,
+  "centroid_inside_osm": 0,
+  "contains_osm_centroid": 0,
+  "centroid_not_on_land": 0,
+  "intersects_other_added_over_0p5_m2": 12,
+  "largest_area_shared_with_other_added_m2": 1.48,
+  "worst_added_pairs": [
+   {
+    "lon": -65.907347,
+    "lat": 18.406907,
+    "shared_m2": 1.48
+   },
+   {
+    "lon": -65.907395,
+    "lat": 18.406843,
+    "shared_m2": 1.48
+   },
+   {
+    "lon": -65.907856,
+    "lat": 18.408066,
+    "shared_m2": 1.47
+   },
+   {
+    "lon": -65.9078,
+    "lat": 18.408121,
+    "shared_m2": 1.47
+   },
+   {
+    "lon": -65.907904,
+    "lat": 18.407995,
+    "shared_m2": 1.3
+   },
+   {
+    "lon": -65.907953,
+    "lat": 18.407938,
+    "shared_m2": 1.3
+   }
+  ],
+  "failures_any": 12,
+  "hint_ground_at_or_below_0m": 288,
+  "hint_ground_unknown": 0
+ },
+ "picture": {
+  "file": "data/derived/bld_added_qa.jpg",
+  "panels": [
+   {
+    "geoid": "72131",
+    "name": "San Sebasti\u00e1n",
+    "buildings_osm": 21148,
+    "buildings_added": 6783,
+    "added_share": 0.2428,
+    "closeup_centre": [
+     -66.99514,
+     18.33115
+    ]
+   },
+   {
+    "geoid": "72127",
+    "name": "San Juan",
+    "buildings_osm": 103778,
+    "buildings_added": 7318,
+    "added_share": 0.0659,
+    "closeup_centre": [
+     -66.07191,
+     18.3307
+    ]
+   }
+  ]
+ }
+}
