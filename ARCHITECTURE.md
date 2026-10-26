@@ -1,7 +1,7 @@
 # Garita: architecture
 
-Garita is a live digital twin of Puerto Rico for the Departamento de la Vivienda: disaster response, sea level
-rise, housing. It is a static site (GitHub Pages) with a database in the browser. Guide: `simplifaisoul/osiris`
+Garita is an independent live digital twin of Puerto Rico (not affiliated with any agency): disaster response, sea
+level rise, housing. It is a static site (GitHub Pages) with a database in the browser. Guide: `simplifaisoul/osiris`
 (feed aggregation, HUD, layers), plus the two things Osiris lacks: an ontology and a store. Visual references:
 `webgpu-demos/clear-Vieques` (water optics over real bathymetry) and `webgpu-demos/procedural-sanjuan` (sky,
 aerial perspective, clouds, buildings).
