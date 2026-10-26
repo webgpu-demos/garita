@@ -5,6 +5,7 @@ import * as S from '../../core/state';
 import { t, L } from '../../i18n/index';
 import { Icon } from '../icons';
 import { formatProp, ago, fmtDateTime, fmtTime, dd, dmm, num, unitLabel, DASH } from '../format';
+import { streetViewUrl } from '../../core/streetview';
 import { storeTick, nowTick, useQuery, typeDef, sourceDef, linkDef, propDef, sevClass, paletteOpen, aircraftFixAt } from '../uistate';
 
 function SourceChip({ id }: { id: string }) {
@@ -193,6 +194,7 @@ export function ObjectPanel({ store }: { store: TwinStore }) {
   const userStatus = notes.find((x) => x.key === 'status')?.value;
   const status = (userStatus as string) ?? o.status;
   const fixAt = aircraftFixAt(o);
+  const street = hasPoint ? streetViewUrl(o.lon!, o.lat!, { sea: S.scenario.value.seaLevelM }) : null;
   const copy = () => { navigator.clipboard?.writeText(o.id).then(() => { setCopied(true); setTimeout(() => setCopied(false), 1400); }).catch(() => {}); };
   const save = async () => {
     const v = text.trim(); if (!v || !form) return;
@@ -222,6 +224,7 @@ export function ObjectPanel({ store }: { store: TwinStore }) {
         {fixAt != null && <p class="ob-relay">{t('ac.relayed').replace('{time}', fmtTime(fixAt)).replace('{ago}', ago(fixAt, now))}</p>}
         <div class="ob-actions">
           <button class="btn" onClick={() => { S.pendingFlyToObject.value = o.id; }}><Icon name="fly" size={14} />{t('ob.fly')}</button>
+          {hasPoint && street && <a class="btn" href={street} target="_blank" rel="noopener" title={t('ob.street.help')}><Icon name="external" size={14} />{t('ob.street')}</a>}
           <button class={'btn' + (form === 'note' ? ' on' : '')} onClick={() => { setForm(form === 'note' ? null : 'note'); setText(''); }}><Icon name="note" size={14} />{t('ob.note')}</button>
           <button class={'btn' + (form === 'status' ? ' on' : '')} onClick={() => { setForm(form === 'status' ? null : 'status'); setText(''); }}><Icon name="flag" size={14} />{t('ob.status')}</button>
         </div>

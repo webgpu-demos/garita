@@ -603,3 +603,12 @@ table.grid.rp-bands td.num { font-family: var(--font-mono); font-size: var(--fs-
   .intro-skip { height: 40px; padding: 0 14px; font-size: var(--fs-2) !important; bottom: max(36px, calc(env(safe-area-inset-bottom) + 28px)); }
   .intro-btn span { display: none; }
 }
+
+/* the building card (ui/building.tsx): bottom centre, above the timeline */
+.bcard { position: absolute; left: 50%; transform: translateX(-50%); bottom: calc(var(--timeline-h) + var(--gap)); width: min(340px, calc(100vw - 24px)); padding: 9px 10px; border-radius: var(--radius); z-index: 16; display: grid; gap: 6px; }
+.bcard-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.bcard-head b { font-weight: 600; }
+.bcard-text { font-size: var(--fs-1); line-height: 1.4; overflow-wrap: anywhere; }
+.bcard-pos, .bcard-note { font-size: var(--fs-0); }
+.bcard .btn { justify-self: start; text-decoration: none; }
+.is-narrow .bcard { bottom: calc(var(--dock-top-gap, 0px) + var(--timeline-h) + var(--gap)); }

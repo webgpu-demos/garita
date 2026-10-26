@@ -39,6 +39,10 @@ store; [`clear-Vieques`](https://github.com/webgpu-demos/clear-Vieques) for wate
   María or any of 29 other storms since 1980. For the 19 with wind radii in the record (2004 on), see which
   municipios and how many of today's residents fall inside each wind radius, and which of today's public housing
   developments and listed shelters fall inside the 64 kt radius, hour by hour. Open any object and walk its links.
+- **Down to the street in San Juan.** Click a building to pin it (its card says what the tile knows about it); in
+  the municipio of San Juan the card, and the object view of anything located there, open
+  [procedural San Juan](https://github.com/webgpu-demos/procedural-sanjuan), the same city at street level, at that
+  point and at the scenario's sea level. A building clicked there comes back here (`?pick=lon,lat`).
 
 ## What is real, what is modelled, what is procedural
 
@@ -110,7 +114,7 @@ SITE_DIR=site npm run dev             # http://127.0.0.1:5280
 npm test                              # store and feed mappers, on recorded real payloads
 ```
 
-URL flags: `?cam=lon,lat,range,heading,pitch` · `?t=<ISO time>` · `?sea=<metres>` · `?overlay=radar|goes|nfhl|slr|choropleth|elevation`
+URL flags: `?cam=lon,lat,range,heading,pitch` · `?pick=lon,lat` (pin the building there) · `?t=<ISO time>` · `?sea=<metres>` · `?overlay=radar|goes|nfhl|slr|choropleth|elevation`
 · `?q=low|medium|high` · `?lang=es` · `?ui=0` · `?fixtures=1` (recorded feeds, no network) · `?post=basic` (analytic sky)
 · `?intro=1|0` (force or turn off the intro video).
 

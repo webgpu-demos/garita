@@ -4,6 +4,7 @@ import * as THREE from 'three';
 import * as S from './core/state';
 import { effect } from '@preact/signals';
 import { dataUrl, flag, params } from './core/config';
+import { parsePick } from './core/streetview';
 import { createEngine } from './world/engine';
 import { createTerrain } from './world/terrain/index';
 import { createControls } from './world/controls';
@@ -28,6 +29,7 @@ export function bootApp(opts: BootOptions = {}) {
   const ontology = ontologyJson as unknown as Ontology;
 
   // URL flags: ?fixtures=1 ?q=low|medium|high ?t=<ISO> ?sea=<m> ?lang=es ?ui=0 ?nofeeds=1 ?cam=lon,lat,range,heading,pitch
+  //            ?pick=lon,lat (pin the building there)
   S.fixturesMode.value = flag('fixtures');
   // ?select=<type>:<key> opens an object (a deep link); it flies there unless ?cam= fixes the view
   const sel = params.get('select');
@@ -69,7 +71,14 @@ export function bootApp(opts: BootOptions = {}) {
   const layers: Layer[] = [];
   g.debug = () => ({ stats: S.stats.value, view: S.cameraView.value, terrain: world.terrain.stats(), post: (world.post as any).debug?.(), store: g.dbInfo, feeds: g.feeds?.status.value, layers: layers.map((l: any) => l.debug?.() ?? null) });
   const cam = params.get('cam')?.split(',').map(Number);
-  if (cam && cam.length >= 2 && cam.every(Number.isFinite)) S.flyTo.value = { lon: cam[0], lat: cam[1], range: cam[2], heading: cam[3], pitch: cam[4], seconds: 0 };
+  const camOk = !!cam && cam.length >= 2 && cam.every(Number.isFinite);
+  if (camOk) S.flyTo.value = { lon: cam![0], lat: cam![1], range: cam![2], heading: cam![3], pitch: cam![4], seconds: 0 };
+  // ?pick=lon,lat (the street view's "this building in Garita"): look down on the point and pin the building there
+  const pick = parsePick(params.get('pick'));
+  if (pick) {
+    S.pendingPick.value = { ...pick, at: Date.now() };
+    if (!camOk) S.flyTo.value = { lon: pick.lon, lat: pick.lat, range: 650, heading: 0, pitch: 55, seconds: 0 };
+  }
   engine.start();
 
   // The curtain lifts as soon as the island's coarse tiles are drawn; detail streams in afterwards.

@@ -8,6 +8,7 @@
 // target, zoom 15 beyond), lifted to the roof. PROCEDURAL: all other heights (flagged; the tooltip says
 // "estimated"), wall colours, windows, lit rooms, the parapet rim, and roofs where the photo has no data. The sea-level tint is a bathtub screen: ground elevation against the scenario level.
 import * as THREE from 'three';
+import { effect } from '@preact/signals';
 import * as S from '../../core/state';
 import { dataUrl, UPSTREAM } from '../../core/config';
 import { curveDrop, lonToTileX, latToTileY, xzToLonLat, lonLatToXZ, tileLon, tileLat, AST_OFFSET_H } from '../../core/geo.ts';
@@ -205,10 +206,11 @@ export const createBuildings: LayerFactory = async (ctx) => {
     }
     return inside;
   };
-  const hover = (e: PickEvent): boolean => {
-    if (!group.visible) return false;
+  /** The building the ray meets first (its roof from above, else a wall), or null. */
+  const hitTest = (e: PickEvent): { t: Tile; i: number } | null => {
+    if (!group.visible) return null;
     const g = e.ground();
-    if (!g) return false;
+    if (!g) return null;
     const o = e.origin, d = e.dir;
     const tG = g.distanceTo(o), tA = Math.max(0, tG - 700);
     const ax = o.x + d.x * tA, az = o.z + d.z * tA;
@@ -239,7 +241,10 @@ export const createBuildings: LayerFactory = async (ctx) => {
         }
       }
     }
-    if (!bt || bi < 0) return false;
+    return bt && bi >= 0 ? { t: bt, i: bi } : null;
+  };
+  /** What the tile says about record `bi`: kind, detection, height and where it came from, ground, flood zone. */
+  const describe = (bt: Tile, bi: number): string => {
     const p = bt.pick!, m = p.meta[bi], es = S.lang.value === 'es';
     const kind = (es ? KIND.es : KIND.en)[m & 7], flood = (es ? FLOOD.es : FLOOD.en)[(m >> 3) & 3], est = (m & 32) !== 0, added = (m & 64) !== 0;
     const parts = [(es ? 'Edificio' : 'Building') + (kind ? ` (${kind})` : '')];
@@ -257,12 +262,72 @@ export const createBuildings: LayerFactory = async (ctx) => {
         ? (es ? `: en o bajo el nivel del escenario de +${sea.toFixed(1)} m` : `: at or below the +${sea.toFixed(1)} m scenario level`) : ''));
     }
     if (flood) parts.push(flood);
-    const text = parts.join(' · ');
+    return parts.join(' · ');
+  };
+  const hover = (e: PickEvent): boolean => {
+    const h = hitTest(e);
+    if (!h) return false;
+    const text = describe(h.t, h.i);
     if (S.hoverText.value !== text) S.hoverText.value = text;
     if (S.hoveredId.value) S.hoveredId.value = null;
     return true;
   };
   const offHover = ctx.onHover(10, hover);
+
+  // ---- pinning: a click on a building, or ?pick=lon,lat, opens the building card (ui/building.tsx) and outlines it
+  const outline = new THREE.LineSegments(new THREE.BufferGeometry(), new THREE.LineBasicMaterial({ color: 0xffb547, depthTest: false, transparent: true, opacity: 0.95 }));
+  outline.renderOrder = 50; outline.frustumCulled = false; outline.visible = false;
+  world.scene.add(outline);
+  const ringOf = (p: MeshResult, i: number): [number, number][] => {
+    const out: [number, number][] = [];
+    for (let k = p.ringStart[i]; k < p.ringStart[i + 1]; k++) out.push([p.ring[k * 2] + p.cx, p.ring[k * 2 + 1] + p.cz]);
+    return out;
+  };
+  const pin = (t: Tile, i: number) => {
+    const p = t.pick!, ring = ringOf(p, i);
+    let sx = 0, sz = 0;
+    for (const [x, z] of ring) { sx += x; sz += z; }
+    const [lon, lat] = xzToLonLat(sx / ring.length, sz / ring.length);
+    S.pinnedBuilding.value = { lon, lat, text: describe(t, i), tile: t.key, index: i };
+    // roof and ground rings, joined at the corners, drawn over everything so it reads through other buildings
+    const pos: number[] = [];
+    const drop = curveDrop(sx / ring.length, sz / ring.length), yTop = p.base[i] + p.height[i] - drop + 0.3, yLow = p.base[i] - drop;
+    for (let k = 0; k < ring.length; k++) {
+      const [x1, z1] = ring[k], [x2, z2] = ring[(k + 1) % ring.length];
+      pos.push(x1, yTop, z1, x2, yTop, z2, x1, yLow, z1, x2, yLow, z2, x1, yLow, z1, x1, yTop, z1);
+    }
+    outline.geometry.dispose();
+    outline.geometry = new THREE.BufferGeometry().setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+    outline.visible = true;
+  };
+  const offPick = ctx.onPick(10, (e) => {
+    const h = hitTest(e);
+    if (!h) { if (S.pinnedBuilding.peek()) S.pinnedBuilding.value = null; return false; }
+    pin(h.t, h.i);
+    return true;
+  });
+  const offPinned = effect(() => { if (!S.pinnedBuilding.value) outline.visible = false; });
+  /** ?pick: once the tile under the point is in, the footprint holding the point (else the nearest within 15 m). */
+  const resolvePick = () => {
+    const want = S.pendingPick.peek();
+    if (!want) return;
+    if (Date.now() - want.at > 120000) { S.pendingPick.value = null; return; }   // (never loaded: give up quietly)
+    const key = Math.floor(lonToTileX(want.lon, Z)) + '/' + Math.floor(latToTileY(want.lat, Z));
+    if (!have.has(key)) { S.pendingPick.value = null; return; }                  // no buildings there
+    const t = tiles.get(key);
+    if (!t || t.state !== 'ready' || !t.pick) return;
+    S.pendingPick.value = null;
+    const p = t.pick, [wx, wz] = lonLatToXZ(want.lon, want.lat), x = wx - p.cx, z = wz - p.cz;
+    let best = -1, bestD = 15;
+    for (let i = 0; i < p.count; i++) {
+      const bb = p.bbox;
+      const dx = Math.max(bb[i * 4] - x, 0, x - bb[i * 4 + 2]), dz = Math.max(bb[i * 4 + 1] - z, 0, z - bb[i * 4 + 3]);
+      if (dx === 0 && dz === 0 && inRing(p, i, x, z)) { best = i; break; }
+      const d = Math.hypot(dx, dz);
+      if (d < bestD) { bestD = d; best = i; }
+    }
+    if (best >= 0) pin(t, best);
+  };
 
   const update = (f: Frame) => {
     now = f.now;
@@ -280,7 +345,7 @@ export const createBuildings: LayerFactory = async (ctx) => {
     uniforms.uBLit.value = hr > 6.5 && hr < 17 ? 0.25 : THREE.MathUtils.clamp(0.36 - late * 0.06, 0.07, 0.36) + (hr > 5 && hr <= 6.5 ? 0.1 : 0);
     if (S.overlay.value === 'nightlights') uniforms.uBLit.value = 0;   // observed night lights on the map: no modelled window lights over them
 
-    if (f.index % 8 === 0 || lastScan < 0) { lastScan = f.index; scan(range); }
+    if (f.index % 8 === 0 || lastScan < 0) { lastScan = f.index; scan(range); resolvePick(); }
     for (const t of tiles.values()) {
       if (!t.fading || !t.mesh) continue;
       let s = (now - t.born) / FADE_S;
@@ -297,9 +362,9 @@ export const createBuildings: LayerFactory = async (ctx) => {
     update,
     debug: () => ({ tiles: nReady, buildings: nBuildings, triangles: nTris, pending: loading + [...tiles.values()].filter((t) => t.state === 'queued').length, photos: nPhotos, photoPending: photoTiles, textureMB: +(texBytes / 1048576).toFixed(1) }),
     dispose() {
-      disposed = true; offHover(); worker.terminate();
+      disposed = true; offHover(); offPick(); offPinned(); worker.terminate();
       for (const t of [...tiles.values()]) dropTile(t);
-      world.scene.remove(group);
+      world.scene.remove(group); world.scene.remove(outline); outline.geometry.dispose();
     },
   };
   return layer;
