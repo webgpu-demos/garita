@@ -1,0 +1,51 @@
+{
+ "generatedAt": 1795298051320,
+ "fixtures": false,
+ "files": {
+  "nhc.json": {
+   "ok": true,
+   "fetchedAt": 1795298051040,
+   "lastOkAt": 1795298051040,
+   "source": "https://www.nhc.noaa.gov/CurrentStorms.json",
+   "upstreamBytes": 24,
+   "bytes": 109,
+   "ms": 257
+  },
+  "ndbc.json": {
+   "ok": true,
+   "fetchedAt": 1795298051112,
+   "lastOkAt": 1795298051112,
+   "source": "https://www.ndbc.noaa.gov/data/latest_obs/latest_obs.txt",
+   "upstreamBytes": 99603,
+   "bytes": 3949,
+   "ms": 287
+  },
+  "luma.json": {
+   "ok": true,
+   "fetchedAt": 1795298051047,
+   "lastOkAt": 1795298051047,
+   "source": "https://api.miluma.lumapr.com/miluma-outage-api/outage/regionsWithoutService",
+   "upstreamBytes": 2102,
+   "bytes": 2221,
+   "ms": 220
+  },
+  "adsb.json": {
+   "ok": true,
+   "fetchedAt": 1795298051319,
+   "lastOkAt": 1795298051319,
+   "source": "https://api.adsb.lol/v2/point/18.2/-66.4/160",
+   "upstreamBytes": 17842,
+   "bytes": 6357,
+   "ms": 491
+  },
+  "tsunami.json": {
+   "ok": true,
+   "fetchedAt": 1795298051142,
+   "lastOkAt": 1795298051142,
+   "source": "https://www.tsunami.gov/events/xml/PAAQAtom.xml",
+   "upstreamBytes": 1975,
+   "bytes": 901,
+   "ms": 312
+  }
+ }
+}
